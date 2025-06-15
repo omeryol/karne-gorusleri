@@ -49,17 +49,23 @@
                                 <option value="7">7. Sınıf</option>
                                 <option value="8">8. Sınıf</option>
                             </select>
-                            <select id="sidebar-subclass-filter"> <option value="all">Tüm Şubeler</option>
+                            <select id="sidebar-subclass-filter">
+                                <option value="all">Tüm Şubeler</option>
                                 <option value="A">A Şubesi</option>
                                 <option value="B">B Şubesi</option>
                                 <option value="C">C Şubesi</option>
                                 <option value="D">D Şubesi</option>
                                 <option value="E">E Şubesi</option>
                             </select>
+                            <button id="filter-unassigned-btn" class="secondary-button">Yorum Bekleyenler</button>
                             <input type="text" id="student-search-input" placeholder="Öğrenci ara...">
                         </div>
                         <div id="student-list">
                             <p>Öğrenci listesi yok.</p>
+                        </div>
+                        <div class="student-navigation-buttons">
+                            <button id="prev-student-btn" class="secondary-button">&lt; Önceki</button>
+                            <button id="next-student-btn" class="secondary-button">Sonraki &gt;</button>
                         </div>
                         <button id="view-all-assignments-btn" class="secondary-button">Atanan Tüm Yorumları Görüntüle</button>
                     </section>
@@ -116,7 +122,8 @@
                                     <option value="7">7. Sınıf</option>
                                     <option value="8">8. Sınıf</option>
                                 </select>
-                                <select id="new-student-subclass-select"> <option value="">Şube Seçin</option>
+                                <select id="new-student-subclass-select">
+                                    <option value="">Şube Seçin</option>
                                     <option value="A">A</option>
                                     <option value="B">B</option>
                                     <option value="C">C</option>
@@ -145,7 +152,8 @@
                                 <option value="7">7. Sınıf</option>
                                 <option value="8">8. Sınıf</option>
                             </select>
-                            <select id="management-subclass-filter"> <option value="all">Tüm Şubeler</option>
+                            <select id="management-subclass-filter">
+                                <option value="all">Tüm Şubeler</option>
                                 <option value="A">A</option>
                                 <option value="B">B</option>
                                 <option value="C">C</option>
@@ -169,6 +177,38 @@
     </div>
 
     <div id="toast-container"></div>
+
+    <div id="comment-preview-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-comment-title"></h3>
+            <p id="modal-comment-text"></p>
+            <div class="modal-actions">
+                <button id="modal-copy-btn" class="secondary-button">Kopyala</button>
+                <button id="modal-select-btn">Yorumu Seç ve Düzenle</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Karne Yorum Defteri'ne Hoş Geldiniz!</h3>
+            <p>Bu uygulama, öğrencilerinizin karne yorumlarını kolayca oluşturmanız için tasarlandı. İşte size birkaç ipucu:</p>
+            <ul>
+                <li>**Öğrenci Listesi:** "Öğrenci Yönetimi" sekmesinden öğrencilerinizin adlarını ve şubelerini topluca ekleyebilirsiniz.</li>
+                <li>**Yorum Atama:** "Yorum Atama" sekmesinde sınıf ve döneme göre yorum profillerini seçip öğrencinize atayabilirsiniz.</li>
+                <li>**Otomatik Adlandırma:** Yorum metnindeki `[Öğrenci Adı]` yer tutucusu, seçtiğiniz öğrencinin adıyla otomatik değişir.</li>
+                <li>**Hızlı Gezinme:** Öğrenci listesindeki "Önceki" ve "Sonraki" butonlarıyla öğrenciler arasında hızla geçiş yapabilirsiniz.</li>
+                <li>**Çevrimdışı Kullanım:** Uygulama internet bağlantınız olmasa bile çalışır! Tarayıcınızın menüsünden "Ana ekrana ekle" seçeneğini kullanarak bir uygulama gibi yükleyebilirsiniz.</li>
+            </ul>
+            <label for="do-not-show-welcome-again">
+                <input type="checkbox" id="do-not-show-welcome-again"> Bu mesajı tekrar gösterme
+            </label>
+            <button id="close-welcome-modal">Anladım, Başlayalım!</button>
+        </div>
+    </div>
+
 
     <script src="comment_templates_data.js"></script>
     <script src="script.js"></script>
