@@ -371,8 +371,8 @@ section h2 {
     display: flex; /* İçeriği ortalamak için flex kullan */
     justify-content: center;
     align-items: center;
-    width: 45%; /* Tüm yorumları görüntüle tuşunun genişliğine sığması için ayarlama */
-    max-width: 45%;
+    width: 48%; /* Toplam genişliğin yarısından az, gap'i hesaba katarak */
+    max-width: 48%; /* Maksimum genişlik de aynı oranda */
     height: 40px; /* Butonun yüksekliğini ayarla */
     border-radius: 6px; /* Köşeleri biraz yuvarlak tut */
 }
@@ -466,6 +466,13 @@ button:active {
 .secondary-button:hover {
     background-color: #5a6268;
 }
+.warn-button { /* Yeni eklenen uyarı butonu stili */
+    background-color: #dc3545; /* Kırmızı ton */
+}
+.warn-button:hover {
+    background-color: #c82333; /* Koyu kırmızı */
+}
+
 
 /* Dosya yükleme etiketi için buton stili */
 .file-upload-label {
@@ -645,13 +652,16 @@ button:active {
     margin-top: auto; 
     border-top: 1px solid var(--border-color); 
     padding-top: 15px;
+    display: flex; /* Butonları yan yana hizalamak için flex kullan */
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta geçebilsinler */
+    justify-content: flex-end; /* Sağ tarafa hizala */
+    gap: 10px; /* Butonlar arası boşluk */
 }
 .clear-all-students button {
-    width: auto; 
-    background-color: #dc3545; 
-}
-.clear-all-students button:hover {
-    background-color: #c82333;
+    width: auto; /* Otomatik genişlik */
+    flex-grow: 1; /* Esnek büyüme */
+    max-width: calc(50% - 5px); /* İki buton için yaklaşık yarı yarıya */
+    margin-top: 0; /* Üst marjini sıfırla */
 }
 
 
@@ -1121,44 +1131,8 @@ body[class*="class-"] #student-management-tab {
 }
 
 
-/* Hoş geldin modalı checkbox ve butonu */
-#welcome-modal label {
-    font-size: 0.9em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    color: #555; /* Metin rengi biraz koyultuldu */
-}
-#welcome-modal input[type="checkbox"] {
-    margin-right: 5px;
-    accent-color: var(--default-accent-color); /* Checkbox rengi tema rengiyle uyumlu */
-}
-#close-welcome-modal {
-    width: 100%;
-    margin-top: 20px;
-    background-color: var(--default-accent-color); /* Tema rengiyle buton */
-    color: var(--button-text);
-    font-weight: bold;
-    border: none;
-    border-radius: 8px; /* Köşeler yuvarlak */
-    padding: 12px 20px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-#close-welcome-modal:hover {
-    background-color: var(--default-hover-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-#close-welcome-modal:active {
-    transform: translateY(0);
-}
-
-
-/* --- YENİ EKLENEN/GÜNCELLENEN WELCOME MODAL / HELP MODAL STILLERİ --- */
-#welcome-modal .modal-content, #help-modal .modal-content { /* İki modal için ortak stil */
+/* --- HELP MODAL STILLERİ (eski welcome modal'dan dönüştürüldü) --- */
+#help-modal .modal-content {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2f7 100%); /* Hafif gradyan arka plan */
     border: 2px solid var(--default-accent-color); /* Tema renginde belirgin kenarlık */
     box-shadow: 0 8px 25px rgba(0,0,0,0.25); /* Daha belirgin gölge */
@@ -1176,8 +1150,8 @@ body[class*="class-"] #student-management-tab {
     }
 }
 
-#welcome-modal h3, #help-modal h3 { /* İki modal için ortak başlık stili */
-    color: var(--default-accent-color); /* Başlık rengi tema renginde */
+#help-modal h3 { /* Başlık rengi tema renginde */
+    color: var(--default-accent-color); 
     font-size: 2.2em; /* Başlık boyutu büyütüldü */
     font-weight: 700;
     margin-bottom: 10px;
@@ -1186,14 +1160,14 @@ body[class*="class-"] #student-management-tab {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Hafif metin gölgesi */
 }
 
-#welcome-modal p, #help-modal p { /* İki modal için ortak paragraf stili */
-    color: #444; /* Metin rengi koyulaştırıldı */
+#help-modal p { /* Metin rengi koyulaştırıldı */
+    color: #444; 
     font-size: 1.05em;
     margin-bottom: 15px;
 }
 
-#welcome-modal ul, #help-modal ul { /* İki modal için ortak liste stili */
-    background-color: rgba(var(--default-accent-color-rgb), 0.05); /* Çok hafif tema rengi arka plan */
+#help-modal ul { /* Çok hafif tema rengi arka plan */
+    background-color: rgba(var(--default-accent-color-rgb), 0.05); 
     border-left: 4px solid var(--default-accent-color); /* Sol kenarlık */
     padding: 15px 20px 15px 30px;
     border-radius: 5px;
@@ -1202,14 +1176,14 @@ body[class*="class-"] #student-management-tab {
     text-align: left;
 }
 
-#welcome-modal ul li, #help-modal ul li { /* İki modal için ortak liste öğesi stili */
+#help-modal ul li {
     position: relative;
     padding-left: 25px; /* Madde işaretine yer aç */
     margin-bottom: 10px;
     color: #333;
 }
 
-#welcome-modal ul li::before, #help-modal ul li::before { /* İki modal için ortak liste madde işareti stili */
+#help-modal ul li::before {
     content: counter(welcome-list) "."; /* Numara olarak madde işareti */
     counter-increment: welcome-list;
     color: var(--default-accent-color); /* Numara rengi tema renginde */
@@ -1219,16 +1193,36 @@ body[class*="class-"] #student-management-tab {
     top: 0;
 }
 
-#welcome-modal strong, #help-modal strong { /* İki modal için ortak kalın metin stili */
+#help-modal strong {
     color: var(--default-accent-color); /* Kalın yazılar tema renginde */
 }
 
-#welcome-modal .close-button, #help-modal .close-button { /* İki modal için ortak kapatma butonu stili */
+#help-modal .close-button {
     color: var(--default-accent-color); /* Kapatma butonu tema renginde */
     font-size: 32px; /* Boyutu büyütüldü */
 }
-#welcome-modal .close-button:hover, #help-modal .close-button:hover {
+#help-modal .close-button:hover {
     color: var(--default-hover-color);
+}
+#close-help-modal { /* Yardım modalı kapatma butonu stili */
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--default-accent-color);
+    color: var(--button-text);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+#close-help-modal:hover {
+    background-color: var(--default-hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+#close-help-modal:active {
+    transform: translateY(0);
 }
 
 
@@ -1278,13 +1272,13 @@ body[class*="class-"] #student-management-tab {
         width: 90%; /* Mobil cihazlarda daha geniş */
         padding: 20px;
     }
-    #welcome-modal h3, #help-modal h3 { /* Mobil hoş geldin/yardım başlık boyutu */
+    #help-modal h3 { /* Mobil yardım başlık boyutu */
         font-size: 1.8em;
     }
-    #welcome-modal p, #welcome-modal ul li, #help-modal p, #help-modal ul li { /* Mobil hoş geldin/yardım metin boyutu */
+    #help-modal p, #help-modal ul li { /* Mobil yardım metin boyutu */
         font-size: 0.95em;
     }
-    #welcome-modal ul, #help-modal ul {
+    #help-modal ul {
         padding: 10px 15px 10px 25px; /* Mobil liste padding */
     }
     /* Öğrenci gezinme butonları ve altındaki buton için mobil ayar */
@@ -1361,10 +1355,10 @@ body[class*="class-"] #student-management-tab {
         width: 95%; /* Çok küçük ekranlarda tam genişlik */
         padding: 15px;
     }
-    #welcome-modal h3, #help-modal h3 { /* Mobil hoş geldin/yardım başlık boyutu */
+    #help-modal h3 { /* Mobil yardım başlık boyutu */
         font-size: 1.6em;
     }
-    #welcome-modal p, #welcome-modal ul li, #help-modal p, #help-modal ul li { /* Mobil hoş geldin/yardım metin boyutu */
+    #help-modal p, #help-modal ul li { /* Mobil yardım metin boyutu */
         font-size: 0.9em;
     }
     /* Modal butonları için mobil ayar */
@@ -1379,6 +1373,10 @@ body[class*="class-"] #student-management-tab {
         padding: 6px 10px; /* Küçültüldü */
         font-size: 0.9em; /* Küçültüldü */
         height: auto;
+    }
+    /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
+    .clear-all-students button {
+        max-width: 100%; /* Mobil'de tam genişlik kaplasın */
     }
 }
 
@@ -1407,10 +1405,10 @@ body[class*="class-"] #student-management-tab {
     .modal-content {
         padding: 10px;
     }
-    #welcome-modal h3, #help-modal h3 {
+    #help-modal h3 {
         font-size: 1.2em;
     }
-    #welcome-modal p, #welcome-modal ul li, #help-modal p, #help-modal ul li {
+    #help-modal p, #help-modal ul li {
         font-size: 0.8em;
     }
     .student-navigation-buttons .icon-nav-button {
