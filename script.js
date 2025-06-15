@@ -36,6 +36,8 @@ const appContainer = document.getElementById('app-container');
 const filterUnassignedBtn = document.getElementById('filter-unassigned-btn'); // Yorum Bekleyenler Butonu
 const prevStudentBtn = document.getElementById('prev-student-btn'); // Önceki Öğrenci Butonu
 const nextStudentBtn = document.getElementById('next-student-btn'); // Sonraki Öğrenci Butonu
+const assignCommentBtnEditor = document.getElementById('assign-comment-btn-editor'); // Yorum Düzenle altındaki Yorum Ata/Güncelle tuşu
+
 
 // Yorum Önizleme Modalı
 const commentPreviewModal = document.getElementById('comment-preview-modal');
@@ -179,10 +181,8 @@ function clearCommentEditor() {
 }
 
 // Öğrenciye yorum atama işlemini gerçekleştirir
-function assignCommentToStudent(event) {
-    const targetButton = event.target.closest('.assign-btn');
-    if (!targetButton) return;
-
+function assignCommentToStudent() { // Artık event parametresi doğrudan alınmıyor, tıklanan butondan değil
+                                     // selectedStudent üzerinden işlem yapılıyor
     if (!selectedStudent) {
         showToast('Lütfen önce sol listeden bir öğrenci seçin.', 'error');
         return;
@@ -201,13 +201,12 @@ function assignCommentToStudent(event) {
     studentAssignments[selectedStudent.fullName] = comment;
     showToast(`${selectedStudent.fullName} öğrencisine yorum atandı/güncellendi.`, 'success');
     saveData();
-    loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); // Filtre durumunu koru
+    // Öğrenci listesini ve ilgili butonları güncelleyen satırı çağır
+    loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); 
     updateDashboardCards(); 
 
     if (autoClearCommentCheckbox.checked) {
         clearCommentEditor();
-        // Eğer otomatik temizleme varsa, seçili öğrenciyi sıfırlama.
-        // Bu, yeni öğrenciye geçişte yorum alanının boş gelmesini sağlar.
         selectedStudent = null; 
         selectedStudentNameDisplay.textContent = 'Yok';
     }
@@ -286,24 +285,34 @@ function loadStudentListForAssignment(filterUnassigned = false) { // filterUnass
                 <span class="student-number">${student.num}</span>
                 <span class="student-full-name">${student.fullName} (${student.class}${student.subClass})</span> </span>
             <span class="student-comment-preview">${previewText}</span>
-            <button class="assign-btn" data-student-name="${student.fullName}">${buttonText}</button>
-        `;
+            <button class="assign-btn" data-student-id="${student.id}">${buttonText}</button> `;
         
         studentListDiv.appendChild(studentItem);
     });
 
-    if (selectedStudent && students.some(s => s.id === selectedStudent.id)) { 
+    // Sayfa yüklendiğinde veya filtre değiştiğinde seçili öğrenciyi vurgula
+    if (selectedStudent) {
         const activeItem = studentListDiv.querySelector(`.student-item[data-id="${selectedStudent.id}"]`);
         if (activeItem) {
             activeItem.classList.add('active-student');
-            selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`; 
-        } else { 
-             selectedStudentNameDisplay.textContent = 'Yok';
-             selectedStudent = null;
+            selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`;
+            // Yorum alanını seçili öğrencinin atanmış yorumuyla güncelle
+            const assignedCommentForSelected = studentAssignments[selectedStudent.fullName];
+            if (assignedCommentForSelected) {
+                commentTextarea.value = assignedCommentForSelected.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+            } else {
+                commentTextarea.value = '';
+            }
+            updateCharCount();
+        } else {
+            // Seçili öğrenci filtrelenmiş listede yoksa seçimi sıfırla
+            selectedStudentNameDisplay.textContent = 'Yok';
+            selectedStudent = null;
+            clearCommentEditor();
         }
     } else {
         selectedStudentNameDisplay.textContent = 'Yok';
-        selectedStudent = null;
+        clearCommentEditor(); // Öğrenci yoksa yorum alanını temizle
     }
 }
 
@@ -619,10 +628,36 @@ function handleStudentClickInAssignmentList(event) {
     const studentItem = event.target.closest('.student-item');
     if (!studentItem) return;
 
-    if (!event.target.closest('.assign-btn')) {
-        selectStudentForAssignmentItem(studentItem); 
+    // Eğer tıklanan element assign-btn ise, assignCommentToStudent'i çağır
+    if (event.target.closest('.assign-btn')) {
+        const studentIdToAssign = event.target.closest('.assign-btn').dataset.studentId;
+        selectedStudent = students.find(s => s.id === studentIdToAssign);
+        // Bu tuş için direkt atanmış yorumu alıp yorum düzenleyiciye aktaracağız.
+        // assignCommentToStudent(event) yerine, yorumu doğrudan aktaralım ve then assign'i çağıralım.
+        if (selectedStudent) {
+            const assignedComment = studentAssignments[selectedStudent.fullName] || '';
+            commentTextarea.value = assignedComment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+            updateCharCount();
+            // Bu click event'i assignCommentToStudent'i tetiklemeyecek, sadece yorumu dolduracak.
+            // Ana "Yorumu Ata / Güncelle" butonuyla atama yapılacak.
+            // Bu düğme aracılığıyla atama yapılırsa, atanmış yorumu doldurduktan sonra direkt atama yapılmaz.
+            // Öğrenciyi seçip yorumu düzenlemesi için fırsat verir.
+            // Eğer "Ata" butonuna basınca hemen atama yapmak istersek, bu kısmı değiştirebiliriz.
+            // Ancak şu anki mantık, seçili öğrencinin yorumunu yorum alanına getirmek üzerine kurulu.
+            // Aslında bu butona tıklayınca doğrudan atama yapmak daha mantıklı olabilir.
+            // Şimdilik "selectStudentForAssignmentItem" içinden çağrılacak.
+
+            // Eğer assign-btn'e tıklandığında hemen ata/güncellemek istiyorsak,
+            // aşağıdaki yorum satırlarını kaldırıp direkt assignCommentToStudent() çağırabiliriz:
+            // assignCommentToStudent();
+        }
+
+        // Seçili öğrenciyi vurgula
+        selectStudentForAssignmentItem(studentItem);
+
     } else { 
-        assignCommentToStudent(event);
+        // Eğer assign-btn değilse, sadece öğrenciyi seç
+        selectStudentForAssignmentItem(studentItem);
     }
 }
 
@@ -640,23 +675,23 @@ function selectStudentForAssignmentItem(studentItemElement) {
     if (selectedStudent) {
         selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`; 
         
-        // Eğer mevcut yorum alanı bir şablondan geliyorsa veya atanmış bir yorum ise doldur
+        // Eğer seçili öğrencinin atanmış bir yorumu varsa, onu yükle
         const assignedCommentForSelected = studentAssignments[selectedStudent.fullName];
         if (assignedCommentForSelected) {
             commentTextarea.value = assignedCommentForSelected.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+            // "Yorumu Ata / Güncelle" düğmesinin metnini güncelle
+            assignCommentBtnEditor.textContent = 'Yorumu Güncelle';
         } else {
-            // Öğrenci seçildiğinde, yorum alanı boş gelsin veya son seçilen şablonu getirsin
-            if (currentCommentTemplate) {
-                commentTextarea.value = currentCommentTemplate.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
-            } else {
-                commentTextarea.value = '';
-            }
+            // Atanmış yorum yoksa, yorum alanını temizle ve düğme metnini "Yorumu Ata" yap
+            commentTextarea.value = '';
+            assignCommentBtnEditor.textContent = 'Yorumu Ata';
         }
         updateCharCount();
     } else {
         selectedStudentNameDisplay.textContent = 'Yok';
         commentTextarea.value = ''; 
         updateCharCount();
+        assignCommentBtnEditor.textContent = 'Yorumu Ata / Güncelle'; // Öğrenci seçili değilse varsayılan
     }
 }
 
@@ -851,10 +886,8 @@ function loadData() {
         selectedStudent = null;
     }
 
-    // Hoş Geldin modalının kontrolü:
-    // Şimdi hoş geldin modalı yerine kullanım kılavuzu modalı var.
-    // Bu modalın ilk açılışta otomatik gelmesini istiyorsak, bir Local Storage bayrağı kullanmalıyız.
-    // Eğer 'doNotShowHelpModalAgain' Local Storage'da 'true' değilse göster.
+    // Kullanım kılavuzu modalının kontrolü:
+    // 'doNotShowHelpModalAgain' Local Storage'dan kontrol edilecek.
     const doNotShowHelpAgain = localStorage.getItem('doNotShowHelpModalAgain');
     if (doNotShowHelpAgain === 'true') {
         helpModal.style.display = 'none';
@@ -993,8 +1026,8 @@ function clearAllLocalStorage() {
         updateDashboardCards();
         updateThemeColors(); // Tema renklerini varsayılana döndür (body class'ını temizler)
 
-        // Hoş geldin modalının tekrar gelmesi için Local Storage'daki ayarı kaldır veya 'false' yap
-        localStorage.setItem('doNotShowHelpModalAgain', 'false'); 
+        // Yardımcı modalın tekrar gelmesi için Local Storage'daki ayarı kaldır veya 'false' yap
+        localStorage.removeItem('doNotShowHelpModalAgain'); // En garantili yol
         helpModal.style.display = 'flex'; // Modalı tekrar göster
 
         showToast("Uygulama başarıyla sıfırlandı. Tüm veriler temizlendi.", 'success');
@@ -1016,6 +1049,10 @@ sidebarSubClassFilter.addEventListener('change', () => loadStudentListForAssignm
 studentSearchInput.addEventListener('input', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
 studentListDiv.addEventListener('click', handleStudentClickInAssignmentList); 
 viewAllAssignmentsBtn.addEventListener('click', viewAllAssignments);
+
+// Yorumu Ata / Güncelle butonu için event listener
+assignCommentBtnEditor.addEventListener('click', assignCommentToStudent);
+
 
 // Yeni filtre butonu
 filterUnassignedBtn.addEventListener('click', () => {
