@@ -11,7 +11,11 @@
 
     <div id="app-container">
         <header>
-            <h1>Karne Yorum Defterim</h1>
+            <h1>
+                <span class="colored-char">K</span><span class="colored-char">a</span><span class="colored-char">r</span><span class="colored-char">n</span><span class="colored-char">e</span>
+                <span class="colored-char">Y</span><span class="colored-char">o</span><span class="colored-char">r</span><span class="colored-char">u</span><span class="colored-char">m</span>
+                <span class="colored-char">D</span><span class="colored-char">e</span><span class="colored-char">f</span><span class="colored-char">t</span><span class="colored-char">e</span><span class="colored-char">r</span><span class="colored-char">i</span><span class="colored-char">m</span>
+            </h1>
             <nav class="tabs">
                 <button class="tab-button active" data-tab="comments">Yorum Atama</button>
                 <button class="tab-button" data-tab="student-management">Öğrenci Yönetimi</button>
@@ -63,11 +67,11 @@
                         <div id="student-list">
                             <p>Öğrenci listesi yok.</p>
                         </div>
-                        <div class="student-navigation-buttons">
-                            <button id="prev-student-btn" class="secondary-button">&lt; Önceki</button>
-                            <button id="next-student-btn" class="secondary-button">Sonraki &gt;</button>
+                        <div class="student-bottom-controls">
+                            <div class="student-navigation-buttons">
+                                <button id="prev-student-btn" class="secondary-button icon-nav-button">&lt;</button> <button id="next-student-btn" class="secondary-button icon-nav-button">&gt;</button> </div>
+                            <button id="view-all-assignments-btn" class="secondary-button">Atanan Tüm Yorumları Görüntüle</button>
                         </div>
-                        <button id="view-all-assignments-btn" class="secondary-button">Atanan Tüm Yorumları Görüntüle</button>
                     </section>
 
                     <section id="comment-editor">
@@ -173,7 +177,7 @@
         </main>
         <footer>
             <p>Tasarım: Ömer YOLCU tarafından, Hazırlık: Google Gemini tarafından</p>
-        </footer>
+            <button id="open-help-modal-btn" class="help-button">?</button> </footer>
     </div>
 
     <div id="toast-container"></div>
@@ -181,19 +185,24 @@
     <div id="comment-preview-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h3 id="modal-comment-title"></h3>
+            <h3 id="modal-comment-title">Yorum Başlığı</h3>
             <p id="modal-comment-text"></p>
             <div class="modal-actions">
                 <button id="modal-copy-btn" class="secondary-button">Kopyala</button>
                 <button id="modal-select-btn">Yorumu Seç ve Düzenle</button>
+                <button id="modal-cancel-btn" class="secondary-button">İptal</button>
+            </div>
+            <div class="modal-comment-navigation">
+                <button id="modal-prev-comment-btn" class="small-icon-button">&lt;</button>
+                <button id="modal-next-comment-btn" class="small-icon-button">&gt;</button>
             </div>
         </div>
     </div>
 
-    <div id="welcome-modal" class="modal">
+    <div id="help-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h3>Karne Yorum Defteri'ne Hoş Geldiniz!</h3>
+            <h3>Karne Yorum Defteri Kullanım Kılavuzu</h3>
             <p>Bu uygulama, öğrencilerinizin karne yorumlarını kolayca oluşturmanız için tasarlandı. İşte size birkaç ipucu:</p>
             <ul>
                 <li>**Öğrenci Listesi:** "Öğrenci Yönetimi" sekmesinden öğrencilerinizin adlarını ve şubelerini topluca ekleyebilirsiniz.</li>
@@ -202,10 +211,7 @@
                 <li>**Hızlı Gezinme:** Öğrenci listesindeki "Önceki" ve "Sonraki" butonlarıyla öğrenciler arasında hızla geçiş yapabilirsiniz.</li>
                 <li>**Çevrimdışı Kullanım:** Uygulama internet bağlantınız olmasa bile çalışır! Tarayıcınızın menüsünden "Ana ekrana ekle" seçeneğini kullanarak bir uygulama gibi yükleyebilirsiniz.</li>
             </ul>
-            <label for="do-not-show-welcome-again">
-                <input type="checkbox" id="do-not-show-welcome-again"> Bu mesajı tekrar gösterme
-            </label>
-            <button id="close-welcome-modal">Anladım, Başlayalım!</button>
+            <button id="close-help-modal">Anladım</button>
         </div>
     </div>
 
