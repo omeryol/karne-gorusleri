@@ -43,12 +43,15 @@ const modalCommentTitle = document.getElementById('modal-comment-title');
 const modalCommentText = document.getElementById('modal-comment-text');
 const modalCopyBtn = document.getElementById('modal-copy-btn');
 const modalSelectBtn = document.getElementById('modal-select-btn');
+const modalCancelBtn = document.getElementById('modal-cancel-btn'); // Yeni İptal Butonu
+const modalPrevCommentBtn = document.getElementById('modal-prev-comment-btn'); // Yeni Önceki Yorum Butonu
+const modalNextCommentBtn = document.getElementById('modal-next-comment-btn'); // Yeni Sonraki Yorum Butonu
 const modalCloseButtons = document.querySelectorAll('.modal .close-button'); // Tüm modal kapatma butonları
 
-// Kullanım İpuçları Modalı
-const welcomeModal = document.getElementById('welcome-modal');
-const doNotShowWelcomeAgainCheckbox = document.getElementById('do-not-show-welcome-again');
-const closeWelcomeModalBtn = document.getElementById('close-welcome-modal');
+// Kullanım Kılavuzu Modalı (Eski Welcome Modal yerine)
+const helpModal = document.getElementById('help-modal'); // welcomeModal yerine helpModal
+const openHelpModalBtn = document.getElementById('open-help-modal-btn'); // Yeni yardım butonu
+const closeHelpModalBtn = document.getElementById('close-help-modal'); // Yardım modalı kapatma butonu
 
 
 // Student Management Tab (Öğrenci Yönetimi)
@@ -135,9 +138,17 @@ function selectCommentProfile(commentText, clickedElement, templateId = null) {
     if (currentActive) {
         currentActive.classList.remove('active');
     }
+    // Eğer tıklanan bir element varsa (listeden seçim), onu aktif yap
     if (clickedElement) {
         clickedElement.classList.add('active');
+    } else if (templateId) { // Modal üzerinden seçim yapıldığında ilgili profili aktif yap
+        const profileItem = profileList.querySelector(`.profile-item[data-id="${templateId}"]`);
+        if (profileItem) {
+            profileItem.classList.add('active');
+            profileItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }
+
 
     // Seçilen yorum şablonunu kaydet
     if (templateId) {
@@ -189,16 +200,15 @@ function assignCommentToStudent(event) {
     studentAssignments[selectedStudent.fullName] = comment;
     showToast(`${selectedStudent.fullName} öğrencisine yorum atandı/güncellendi.`, 'success');
     saveData();
-    loadStudentListForAssignment(); 
+    loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); // Filtre durumunu koru
     updateDashboardCards(); 
 
     if (autoClearCommentCheckbox.checked) {
         clearCommentEditor();
-        // Eğer otomatik temizleme varsa, seçili öğrenciyi sıfırlama,
-        // böylece sonraki/önceki öğrenciye geçişte mevcut öğrenci odaklı devam edebiliriz.
-        // selectCommentProfile içinde otomatik temizleme yoksa bu kod çalışmaz.
-        // selectedStudent = null; 
-        // selectedStudentNameDisplay.textContent = 'Yok';
+        // Eğer otomatik temizleme varsa, seçili öğrenciyi sıfırlama.
+        // Bu, yeni öğrenciye geçişte yorum alanının boş gelmesini sağlar.
+        selectedStudent = null; 
+        selectedStudentNameDisplay.textContent = 'Yok';
     }
 }
 
@@ -215,7 +225,7 @@ function switchTab(tabId) {
     document.querySelector(`.tab-button[data-tab="${tabId.replace('-tab', '')}"]`).classList.add('active');
 
     if (tabId === 'comments-tab') {
-        loadStudentListForAssignment(); 
+        loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); // Filtre durumunu koru
         loadCommentTemplates(); 
     } else if (tabId === 'student-management-tab') {
         updateManagedStudentListUI(); 
@@ -344,7 +354,7 @@ function openCommentPreviewModal(template) {
     } else {
         modalCommentText.textContent = template.comment;
     }
-    commentPreviewModal.style.display = 'block';
+    commentPreviewModal.style.display = 'flex'; // Modalı flex olarak göster
 }
 
 // Yorum Önizleme Modalından Yorumu Kopyala
@@ -367,24 +377,98 @@ modalSelectBtn.addEventListener('click', () => {
     }
 });
 
+// Yorum Önizleme Modalından İptal Butonu
+modalCancelBtn.addEventListener('click', () => {
+    commentPreviewModal.style.display = 'none'; // Modalı kapat
+});
+
+// Yorum Önizleme Modalında Sonraki/Önceki Yorum Navigasyonu
+function navigateCommentModal(direction) {
+    const selectedClass = classSelect.value;
+    const selectedTerm = termSelect.value;
+
+    if (!selectedClass || !selectedTerm || !commentsData[selectedClass] || !commentsData[selectedClass][selectedTerm]) {
+        showToast('Yorumlar arasında gezinmek için lütfen sınıf ve dönem seçin.', 'info');
+        return;
+    }
+
+    const templates = commentsData[selectedClass][selectedTerm];
+    if (templates.length === 0) {
+        showToast('Bu sınıf ve dönem için yorum bulunamadı.', 'info');
+        return;
+    }
+
+    let currentIndex = -1;
+    if (currentCommentTemplate) {
+        currentIndex = templates.findIndex(t => t.id === currentCommentTemplate.id);
+    } 
+    // Eğer currentCommentTemplate yoksa veya listeden seçilmemişse,
+    // şu anki profil listesindeki aktif yorumu bulmaya çalış
+    if (currentIndex === -1) {
+        const activeProfileItem = profileList.querySelector('.profile-item.active');
+        if (activeProfileItem) {
+            currentIndex = templates.findIndex(t => t.id === activeProfileItem.dataset.id);
+        }
+    }
+    // Hala -1 ise, varsayılan olarak ilk veya son yoruma git (eğer hiç yorum seçilmemişse)
+    if (currentIndex === -1) {
+        currentIndex = (direction === 1) ? 0 : templates.length - 1; 
+    }
+
+
+    let nextIndex = currentIndex + direction;
+
+    if (nextIndex < 0) {
+        nextIndex = templates.length - 1; // Başa döner
+    } else if (nextIndex >= templates.length) {
+        nextIndex = 0; // Sona döner
+    }
+
+    const nextTemplate = templates[nextIndex];
+    if (nextTemplate) {
+        // Modaldaki yorum metnini ve başlığını güncelle
+        modalCommentTitle.textContent = nextTemplate.title;
+        if (selectedStudent) {
+            modalCommentText.textContent = nextTemplate.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+        } else {
+            modalCommentText.textContent = nextTemplate.comment;
+        }
+        currentCommentTemplate = nextTemplate; // currentCommentTemplate'i güncelle
+        
+        // Yorum listesinde ilgili item'ı aktif yap ve scroll et
+        const profileItem = profileList.querySelector(`.profile-item[data-id="${nextTemplate.id}"]`);
+        if (profileItem) {
+            const currentActive = profileList.querySelector('.profile-item.active');
+            if (currentActive) {
+                currentActive.classList.remove('active');
+            }
+            profileItem.classList.add('active');
+            profileItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }
+}
+modalPrevCommentBtn.addEventListener('click', () => navigateCommentModal(-1));
+modalNextCommentBtn.addEventListener('click', () => navigateCommentModal(1));
+
+
+
 // Modal kapatma butonları için event listener
 modalCloseButtons.forEach(button => {
     button.addEventListener('click', () => {
         commentPreviewModal.style.display = 'none';
-        welcomeModal.style.display = 'none';
+        helpModal.style.display = 'none'; // helpModal'ı kapat
     });
 });
 
 // Modal dışına tıklayınca kapatma
 window.addEventListener('click', (event) => {
+    // commentPreviewModal için dış tıklama
     if (event.target === commentPreviewModal) {
         commentPreviewModal.style.display = 'none';
     }
-    if (event.target === welcomeModal) {
-        // welcomeModal'ı sadece checkbox işaretli değilse dışarı tıklamada kapat
-        if (!doNotShowWelcomeAgainCheckbox.checked) {
-            welcomeModal.style.display = 'none';
-        }
+    // helpModal için dış tıklama (artık checkbox yok, her zaman kapanabilir)
+    if (event.target === helpModal) {
+        helpModal.style.display = 'none';
     }
 });
 
@@ -555,19 +639,17 @@ function selectStudentForAssignmentItem(studentItemElement) {
     if (selectedStudent) {
         selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`; 
         
-        const currentCommentValue = commentTextarea.value;
-        let isTemplateComment = false;
         // Eğer mevcut yorum alanı bir şablondan geliyorsa veya atanmış bir yorum ise doldur
-        if (currentCommentTemplate && currentCommentTemplate.comment === currentCommentValue) {
-            isTemplateComment = true; // Mevcut metin seçili şablonla aynı
-        }
-        
-        if (isTemplateComment) { 
-            commentTextarea.value = currentCommentTemplate.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
-        } else if (studentAssignments[selectedStudent.fullName]) { 
-            commentTextarea.value = studentAssignments[selectedStudent.fullName].replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
-        } else { 
-            commentTextarea.value = ''; 
+        const assignedCommentForSelected = studentAssignments[selectedStudent.fullName];
+        if (assignedCommentForSelected) {
+            commentTextarea.value = assignedCommentForSelected.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+        } else {
+            // Öğrenci seçildiğinde, yorum alanı boş gelsin veya son seçilen şablonu getirsin
+            if (currentCommentTemplate) {
+                commentTextarea.value = currentCommentTemplate.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+            } else {
+                commentTextarea.value = '';
+            }
         }
         updateCharCount();
     } else {
@@ -675,8 +757,8 @@ function saveData() {
     localStorage.setItem('managementClassFilter', managementClassFilter.value);
     localStorage.setItem('managementSubClassFilter', managementSubClassFilter.value);
     
-    // Welcome modal durumunu kaydet
-    localStorage.setItem('doNotShowWelcomeAgain', doNotShowWelcomeAgainCheckbox.checked);
+    // Welcome modal durumunu artık kullanmıyoruz, help modal için farklı bir durum yok.
+    // localStorage.setItem('doNotShowWelcomeAgain', doNotShowWelcomeAgainCheckbox.checked ? 'true' : 'false');
 
 
     if (selectedStudent) {
@@ -749,18 +831,28 @@ function loadData() {
     const savedSelectedStudentId = localStorage.getItem('selectedStudentId');
     if (savedSelectedStudentId) {
         selectedStudent = students.find(s => s.id === savedSelectedStudentId);
+        // Seçili öğrenci listesinde aktifse işaretle
+        if (selectedStudent) {
+            const activeItem = studentListDiv.querySelector(`.student-item[data-id="${selectedStudent.id}"]`);
+            if (activeItem) {
+                activeItem.classList.add('active-student');
+                selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`;
+            } else {
+                selectedStudentNameDisplay.textContent = 'Yok';
+                selectedStudent = null;
+            }
+        } else {
+            selectedStudentNameDisplay.textContent = 'Yok';
+            selectedStudent = null;
+        }
     } else {
+        selectedStudentNameDisplay.textContent = 'Yok';
         selectedStudent = null;
     }
 
-    // Hoş Geldin modalını yükle
-    const doNotShowWelcome = localStorage.getItem('doNotShowWelcomeAgain');
-    if (doNotShowWelcome === 'true') {
-        welcomeModal.style.display = 'none';
-        doNotShowWelcomeAgainCheckbox.checked = true;
-    } else {
-        welcomeModal.style.display = 'block'; // Sadece ilk açılışta göster
-    }
+    // Hoş Geldin modalı artık otomatik açılmayacak, sadece butona basılınca açılacak.
+    // Bu yüzden welcomeModal ile ilgili yükleme ve gösterme mantığı kaldırıldı.
+    // Sadece helpModal'ı açıkça yönetmek için loadData içinde özel bir başlangıç kodu yok.
 
 
     updateThemeColors(); 
@@ -832,7 +924,7 @@ function deleteStudent(event) {
 
         saveData();
         updateManagedStudentListUI(); 
-        loadStudentListForAssignment(); 
+        loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); 
         updateDashboardCards(); 
 
         if (selectedStudent && selectedStudent.id === studentIdToDelete) {
@@ -854,7 +946,7 @@ function clearAllStudentData() {
         studentListUpload.value = '';
         saveData();
         updateManagedStudentListUI();
-        loadStudentListForAssignment();
+        loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter'));
         clearCommentEditor();
         selectedStudentNameDisplay.textContent = 'Yok';
         updateDashboardCards(); 
@@ -872,9 +964,9 @@ tabButtons.forEach(button => {
 });
 
 // Comments Tab Listeners
-sidebarClassFilter.addEventListener('change', () => loadStudentListForAssignment(false)); // False: sadece atanmamışları gösterme
-sidebarSubClassFilter.addEventListener('change', () => loadStudentListForAssignment(false));
-studentSearchInput.addEventListener('input', () => loadStudentListForAssignment(false));
+sidebarClassFilter.addEventListener('change', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
+sidebarSubClassFilter.addEventListener('change', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
+studentSearchInput.addEventListener('input', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
 studentListDiv.addEventListener('click', handleStudentClickInAssignmentList); 
 viewAllAssignmentsBtn.addEventListener('click', viewAllAssignments);
 
@@ -927,10 +1019,13 @@ managementSubClassFilter.addEventListener('change', updateManagedStudentListUI);
 managementStudentSearchInput.addEventListener('input', updateManagedStudentListUI);
 managedStudentListDiv.addEventListener('click', deleteStudent); 
 
-// Welcome modal checkbox ve buton event listener
-doNotShowWelcomeAgainCheckbox.addEventListener('change', saveData);
-closeWelcomeModalBtn.addEventListener('click', () => {
-    welcomeModal.style.display = 'none';
+// Kullanım Kılavuzu Modalı için event listener
+openHelpModalBtn.addEventListener('click', () => {
+    helpModal.style.display = 'flex'; // Modalı göster
+});
+
+closeHelpModalBtn.addEventListener('click', () => {
+    helpModal.style.display = 'none'; // Modalı kapat
 });
 
 
