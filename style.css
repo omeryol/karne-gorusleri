@@ -361,9 +361,8 @@ section h2 {
     justify-content: space-between; /* Butonları uçlara yasla */
     gap: 10px; /* Butonlar arası boşluk */
     width: 100%; /* Kapsayıcı genişliğini al */
-    /* Bu div'in toplam genişliği alttaki butonla aynı olsun */
 }
-.student-navigation-buttons .icon-nav-button { /* Yeni eklenen ikon butonu sınıfı */
+.student-navigation-buttons .icon-nav-button { /* Ok işareti tuşları için yeni stil */
     flex-grow: 1; /* Eşit genişlikte olsunlar */
     padding: 0; /* Padding'i sıfırla */
     font-size: 1.2em; /* Ok işaretlerinin boyutu */
@@ -372,11 +371,12 @@ section h2 {
     display: flex; /* İçeriği ortalamak için flex kullan */
     justify-content: center;
     align-items: center;
-    /* Genişliği ayarla: 100% / 2 - gap/2 */
-    width: calc(50% - 5px); 
+    /* Alttaki butonla aynı genişlikte olması için flex-basis kullanıyoruz.
+       Normal button stiline geri dönüp, bu sınıfa özel min-width/max-width verebiliriz. */
+    width: calc(50% - 5px); /* Kapsayıcının yarısı - boşluk */
     max-width: calc(50% - 5px);
-    height: 40px; /* Butonun yüksekliğini ayarla */
-    border-radius: 6px; /* Köşeleri biraz yuvarlak tut */
+    height: 38px; /* Yüksekliği biraz küçültüldü */
+    border-radius: 6px;
 }
 
 
@@ -485,7 +485,7 @@ button:active {
     background-color: #007bff; 
     color: #fff;
     padding: 10px 18px; /* Genel padding ile uyumlu */
-    border-radius: 6px;
+    border-radius: 6-px;
     margin-top: 10px;
     transition: background-color 0.2s ease;
     box-sizing: border-box;
