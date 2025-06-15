@@ -373,10 +373,10 @@ section h2 {
     align-items: center;
     /* Alttaki butonla aynı genişlikte olması için flex-basis kullanıyoruz.
        Normal button stiline geri dönüp, bu sınıfa özel min-width/max-width verebiliriz. */
-    width: calc(50% - 5px); /* Kapsayıcının yarısı - boşluk */
+    width: calc(50% - 5px); 
     max-width: calc(50% - 5px);
-    height: 38px; /* Yüksekliği biraz küçültüldü */
-    border-radius: 6px;
+    height: 38px; /* Butonun yüksekliğini ayarla */
+    border-radius: 6px; /* Köşeleri biraz yuvarlak tut */
 }
 
 
@@ -485,7 +485,7 @@ button:active {
     background-color: #007bff; 
     color: #fff;
     padding: 10px 18px; /* Genel padding ile uyumlu */
-    border-radius: 6-px;
+    border-radius: 6px;
     margin-top: 10px;
     transition: background-color 0.2s ease;
     box-sizing: border-box;
@@ -1318,13 +1318,32 @@ body[class*="class-"] #student-management-tab {
         padding: 4px 8px; /* Daha da küçük butonlar */
         font-size: 0.75em;
     }
-    #comment-textarea, #student-names-textarea {
-        min-height: 100px; /* Metin kutuları daha kısa */
-        max-height: 250px;
+    /* Yorum Düzenleme alanı mobil için optimize edildi */
+    #comment-editor {
+        order: 1; /* Yorum düzenleme alanı en üste gelsin */
+        min-height: unset; /* Yüksekliği serbest bırak */
+        max-height: unset;
+    }
+    #student-assignment-sidebar {
+        order: 2; /* Öğrenci listesi ortaya gelsin */
+        min-height: unset;
+        max-height: unset;
+    }
+    #comment-profiles {
+        order: 3; /* Yorum profilleri en alta gelsin */
+        min-height: unset;
+        max-height: unset;
+    }
+
+    #comment-textarea {
+        min-height: 180px; /* Mobil görünümde yüksekliği artırıldı */
+        font-size: 1em; /* Okunabilirliği artırmak için font boyutu */
+        max-height: 350px; /* Çok uzun olmasını engelle */
     }
     #profile-list, #student-list, #managed-student-list {
-        max-height: 200px; /* Listeler daha kısa */
+        max-height: 180px; /* Listeler de uygun yükseklikte kalsın */
     }
+
     #toast-container {
         top: 10px;
         right: 10px;
