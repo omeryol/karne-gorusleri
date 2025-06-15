@@ -1167,57 +1167,57 @@ const commentsData = {
                 "comment": "[Öğrenci Adı], yüksek akademik potansiyelini LGS sürecinde tam kapasiteyle kullanarak başarı elde etti. Derslerdeki performansı ve düzenli çalışma alışkanlığı takdire şayandır. Soru çözme ve tekrar alışkanlığını geliştirmesi, potansiyelini tam olarak ortaya çıkarmasını sağladı. LGS hedefi doğrultusunda gösterdiği çaba ve kararlılıkla başarılı oldu. Kendisine güvenimiz tamdır, siz de onunla gurur duyabilirsiniz."
             },
             {
-                "id": "8-1-20",
+                "id": "8-2-20",
                 "title": "20. Disiplin Sorunlarını Aşan, LGS'ye Odaklanan",
                 "comment": "[Öğrenci Adı], LGS sürecinin ciddiyetine uygun olarak disiplin sorunlarını aştı ve ders içi disiplinini sağladı. Bu olumlu değişim, hem kendi öğrenme verimini hem de sınıfın genel düzenini olumlu etkiledi. LGS hedefine ulaşmak için davranışlarını düzenledi ve derslere odaklandı. Evde okul kurallarının önemini vurgulamanız ve olumlu davranışlarını pekiştirmeniz çok önemli. Aile işbirliği ve rehberlik servisimizle iletişim sayesinde bu başarıya ulaştık."
             },
             {
-                "id": "8-1-21",
-                "title": "21. Akademik Becerileri Yetersiz, LGS İçin Temel İhtiyacı",
+                "id": "8-2-21",
+                "title": "21. Akademik Becerileri Gelişen, LGS İçin Temel İhtiyacı",
                 "comment": "[Öğrenci Adı]'nın akademik becerilerinde (okuma anlama, işlem becerileri, problem çözme) LGS için yeterli düzeyde olmadığı gözlemleniyor. Temel konularda ciddi eksiklikleri bulunuyor. Bireysel özel ders veya yoğun etütlerle desteklenmesi gerekmektedir. LGS hedefine ulaşması çok zorlu bir süreç olacaktır ve yoğun çaba gerektirecektir. Ailesiyle işbirliği ve özel bir eğitim planı oluşturmanız çok kritik. Onun potansiyelini ortaya çıkarmak için yanındayız."
             },
             {
-                "id": "8-1-22",
-                "title": "22. Devamlılık Problemleri, LGS Süreci Etkisi",
+                "id": "8-2-22",
+                "title": "22. Devamlılık Problemleri Devam Eden",
                 "comment": "[Öğrenci Adı]'nın okula ve derslere devamlılık konusunda problemleri olduğu gözlemleniyor. Sık sık derslere geç kalma veya devamsızlık yapma eğilimi gösterebiliyor. Bu durum, LGS hazırlık sürecinde konu eksikliklerinin artmasına ve akademik başarısının düşmesine neden olabilir. Ailesi olarak, onun düzenli okula gelmesini sağlamanız, devamsızlık nedenlerini araştırmanız ve okul ile sürekli iletişimde kalmanız kritik öneme sahiptir. LGS başarısı için eğitimin devamlılığı çok önemli."
             },
             {
-                "id": "8-1-23",
-                "title": "23. Öğrenme Güçlüğü Şüphesi, Detaylı İnceleme Gerekiyor",
+                "id": "8-2-23",
+                "title": "23. Öğrenme Güçlüğü Şüphesi, Detaylı İnceleme Önerisi",
                 "comment": "[Öğrenci Adı], bazı akademik alanlarda (okuma, yazma, matematik) yaşıtlarına göre belirgin ve sürekli zorluklar yaşıyor. Derslerde verilen yönergeleri anlamakta güçlük çekebilir ve öğrenme hızı düşüktür. Öğrenme güçlüğü şüphesi bulunmaktadır. Detaylı bir pedagojik değerlendirme ve uzman görüşü alınması acilen gereklidir. Özel eğitim desteği ihtiyacı olabilir. Aileyle işbirliği yaparak gerekli adımları atmanız çok önemli. Okulumuz bu konuda size destek olacaktır."
             },
             {
-                "id": "8-1-24",
-                "title": "24. Saldırgan ve Agresif Davranışlar",
-                "comment": "[Öğrenci Adı], sınıf içinde ve okul ortamında zaman zaman saldırgan ve agresif davranışlar sergileyebiliyor. Arkadaşlarına karşı fiziksel veya sözlü şiddet eğilimi gözlemleniyor. Bu durum, hem kendi hem de çevresi için risk oluşturabiliyor. Acilen davranışsal müdahale, öfke kontrolü eğitimleri ve rehberlik servisimizle yoğun işbirliği gereklidir. Aileyle yakın temas kurularak bu davranışların nedenleri araştırılmalı ve önlenmelidir. LGS sürecinde bu durum daha da önemli hale gelir."
+                "id": "8-2-24",
+                "title": "24. Saldırgan ve Agresif Davranışlar Devam Ediyor",
+                "comment": "[Öğrenci Adı], sınıf içinde ve okul ortamında zaman zaman saldırgan ve agresif davranışlar sergilemeye devam etmektedir. Arkadaşlarına karşı fiziksel veya sözlü şiddet eğilimi gözlemlenmiştir. Bu durum, hem kendi hem de çevresi için risk oluşturmaktadır. Acilen davranışsal müdahale, öfke kontrolü eğitimleri ve rehberlik servisimizle yoğun işbirliği gereklidir. Aileyle yakın temas kurularak bu davranışların nedenleri araştırılmalı ve önlenmelidir. LGS sürecinde bu durum daha da önemli hale gelir."
             },
             {
-                "id": "8-1-25",
-                "title": "25. Aşırı Pasif ve İletişimsiz",
+                "id": "8-2-25",
+                "title": "25. Aşırı Pasiflik ve İletişimsizlik, Özel İletişim",
                 "comment": "[Öğrenci Adı], derslerde ve sosyal ortamlarda aşırı pasif bir tutum sergilemekte, neredeyse hiç iletişim kurmamaktadır. Soru sorulduğunda dahi cevap vermekte güçlük çekiyor, arkadaşlarıyla etkileşim kurmaktan kaçınıyor. Bu durum, onun kendini güvende hissetme ihtiyacına veya psikolojik destek ihtiyacına işaret edebilir. Okul psikologumuzla acilen görüşmeniz ve bireysel rehberlik sağlanması çok önemli. Onun kendini ifade etmesi için sabırla yaklaşmalıyız, LGS öncesi bu durum endişe verici."
             },
             {
-                "id": "8-1-26",
-                "title": "26. Eşyalara Zarar Verme Eğilimi",
+                "id": "8-2-26",
+                "title": "26. Eşyalara Zarar Verme Eğilimi Devam Ediyor",
                 "comment": "[Öğrenci Adı], sınıf veya okul eşyalarına, hatta arkadaşlarına ait eşyalara zarar verme eğilimi gösterebiliyor. Bu davranışlar, sorumluluk bilinci eksikliğine veya dürtü kontrol sorunlarına işaret edebilir. Evde bu konuda ona net sınırlar koymanız, yapılan zararların telafisi konusunda rehberlik etmeniz ve bu davranışların nedenlerini anlamaya çalışmanız çok önemlidir. Okul ve aile işbirliğiyle bu davranışların önüne geçebiliriz, onun için en iyisini istiyoruz."
             },
             {
-                "id": "8-1-27",
+                "id": "8-2-27",
                 "title": "27. Dikkat Eksikliği ve Hiperaktivite (DEHB) İncelemesi Önerilir",
-                "comment": "[Öğrenci Adı], derslerde aşırı hareketlilik, dikkat eksikliği ve dürtüsel davranışlar sergilemesi nedeniyle DEHB şüphesi uyandırmaktadır. Bu durum, LGS hazırlık sürecini ve akademik başarısını ciddi şekilde etkileyebiliyor. Bu konuda profesyonel destek (çocuk psikiyatristi/psikolog) almanız ve gerekli değerlendirmelerin yapılması şiddetle önerilir. Evde ona özel öğrenme stratejileri belirlemeniz ve ders verimini artıracak düzenlemeler yapmanız çok kritik. Okulumuz da bu süreçte size destek olacaktır."
+                "comment": "[Öğrenci Adı], derslerde aşırı hareketlilik, dikkat eksikliği ve dürtüsel davranışlar sergilemesi nedeniyle DEHB şüphesi devam etmektedir. Bu durum, LGS hazırlık sürecini ve akademik başarısını ciddi şekilde etkileyebiliyor. Bu konuda profesyonel destek (çocuk psikiyatristi/psikolog) almanız ve gerekli değerlendirmelerin yapılması şiddetle önerilir. Evde ona özel öğrenme stratejileri belirlemeniz ve ders verimini artıracak düzenlemeler yapmanız çok kritik. Okulumuz da bu süreçte size destek olacaktır."
             },
             {
-                "id": "8-1-28",
+                "id": "8-2-28",
                 "title": "28. Ağır Akademik Zorluklar, Kapsamlı Destek Şart",
                 "comment": "[Öğrenci Adı]'nın akademik başarısı maalesef çok düşüktür ve ciddi bir müdahale gerekmektedir. Temel okuma, yazma ve matematik becerilerinde yaşıtlarının çok gerisindedir. Derslere karşı tamamen isteksiz ve umursamaz bir tutum sergileyebiliyor. Okulda öğrenme motivasyonu neredeyse yoktur. Acilen kapsamlı bir pedagojik değerlendirme, özel eğitim desteği ve aile olarak sizinle yoğun işbirliği şarttır. Onun potansiyelini ortaya çıkarmak için birlikte çabalamalıyız."
             },
             {
-                "id": "8-1-29",
-                "title": "29. Özbakımı Yetersiz, Hijyen Problemi",
+                "id": "8-2-29",
+                "title": "29. Özbakımı Yetersiz, Hijyen Problemi Devam Ediyor",
                 "comment": "[Öğrenci Adı], kişisel öz bakım ve hijyen konusunda yaşıtlarına göre yetersiz kaldığı gözlemlenmiştir. Bu durum, sosyal ilişkilerini ve okula uyumunu olumsuz etkileyebilir. Konu hakkında aileyle hassas bir şekilde iletişime geçilmeli ve rehberlik edilmelidir. Temizlik alışkanlıkları ve kişisel sorumlulukları hakkında bilinçlendirilmelidir. Bu alandaki gelişimi, hem sağlığı hem de sosyal kabulü açısından kritik öneme sahiptir."
             },
             {
-                "id": "8-1-30",
+                "id": "8-2-30",
                 "title": "30. Ciddi Disiplin Problemleri, Acil Müdahale",
                 "comment": "[Öğrenci Adı], LGS sürecinin hassasiyetine rağmen ciddi disiplin problemleri yaşamaktadır. Sınıf kurallarına uymamakta, ders akışını bozmakta ve arkadaşlarıyla sorunlar yaşamaktadır. Bu durum, hem kendi hem de sınıfın genel öğrenme verimini olumsuz etkilemektedir. Acilen davranışsal müdahale, öfke kontrolü eğitimleri ve rehberlik servisimizle yoğun işbirliği gereklidir. Aileyle yakın temas kurularak bu davranışların nedenleri araştırılmalı ve önlenmelidir. LGS başarısı için öncelikle bu sorunların çözülmesi şarttır."
             }
