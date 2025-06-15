@@ -32,12 +32,11 @@
     --class-8-dark: #D32F2F;
 
     /* Dashboard Kart Teması: Her sınıf temasına göre dinamik olarak belirlenecek */
-    /* Bu renkler artık JavaScript tarafından daha iyi kontrol edilip atanacak, buradaki varsayılanlar yedek. */
     --dashboard-card-1-bg: #007bff; /* Total Students */
     --dashboard-card-2-bg: #28a745; /* Assigned Comments */
     --dashboard-card-3-bg: #ffc107; /* Pending Comments */
     --dashboard-card-4-bg: #6f42c1; /* Completion Rate */
-    --dashboard-card-text: #fff; /* Varsayılan kart metin rengi */
+    --dashboard-card-text: #fff;
 
     /* Sekme Arka Plan Renkleri (Dinamik) */
     --tab-comments-bg: #ffffff; /* Varsayılan yorum sekmesi arka planı */
@@ -52,52 +51,52 @@ body {
     background-color: var(--primary-bg);
     color: var(--text-color);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    transition: background-color 0.3s ease;
+    justify-content: center; /* Merkezi hizalama */
+    align-items: flex-start; /* İçeriği yukarıdan başlar */
+    min-height: 100vh; /* Ekranın tamamını kapla */
+    transition: background-color 0.3s ease; /* Renk geçişleri için */
 }
 
 #app-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 1600px;
+    width: 100%; 
+    max-width: 1600px; /* İçeriğin çok geniş ekranlarda dağılmasını engellemek için bir maksimum genişlik */
     background-color: var(--secondary-bg);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    margin: 20px auto;
-    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+    border-radius: 12px; 
+    margin: 20px auto; /* Üstten/alttan 20px boşluk, yatayda ortala */
+    overflow: hidden; 
 }
 
 /* --- Header ve Navigasyon (Tablar) Stilleri --- */
 header {
-    background-color: var(--default-header-bg);
+    background-color: var(--default-header-bg); 
     color: var(--default-header-text);
-    padding: 15px 25px 0;
+    padding: 15px 25px 0; /* Üst ve yan padding, alt padding sıfır */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    align-items: center; /* İçerikleri (h1, tabs, dashboard) yatayda ortala */
+    border-bottom: 1px solid rgba(255,255,255,0.2); 
     transition: background-color 0.3s ease;
     
-    /* Yeni: Header'ı gölgeli bir kart gibi yap */
+    /* Yeni: Header'ı sabit yap */
+    position: sticky;
+    top: 0; /* Sayfanın en üstüne sabitle */
+    z-index: 100; /* Diğer içeriklerin üzerine gelsin */
     border-bottom-left-radius: 12px; /* Köşeleri yuvarlak */
     border-bottom-right-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Daha belirgin gölge */
-    position: relative; /* Z-index için */
-    z-index: 2; /* Main içeriğin üzerinde kalmasını sağla */
-    margin-bottom: 20px; /* Main içerikle arasına boşluk bırak */
 }
 
 header h1 {
-    margin: 0 0 15px 0;
+    margin: 0 0 15px 0; /* Alt boşluk korundu */
     font-size: 2.2em;
     font-weight: 600;
-    text-align: center;
-    width: 100%;
-    padding: 0 25px;
-    box-sizing: border-box;
+    text-align: center; /* Başlığı ortala */
+    width: 100%; /* Kapsayıcısının genişliğini al */
+    padding: 0 25px; /* Yan padding verelim */
+    box-sizing: border-box; /* Padding'i genişliğe dahil et */
     
     /* Yeni: Başlık dinamik renge dönüşecek */
     color: var(--default-header-text); /* Temaya göre başlık metin rengi */
@@ -113,21 +112,21 @@ header h1 .colored-char {
 
 .tabs {
     display: flex;
-    justify-content: center;
-    margin: 10px auto 0 auto;
+    justify-content: center; /* Sekme butonlarını yatayda ortala */
+    margin: 10px auto 0 auto; /* Ortalamak için */
 }
 
 .tab-button {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.1); /* Hafif şeffaf arka plan */
     color: var(--default-header-text);
     border: none;
     padding: 12px 25px;
     font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    border-bottom: none;
-    opacity: 0.8;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Daha fazla transition */
+    border-bottom: none; /* Alt çizgiyi kaldırıyoruz */
+    opacity: 0.8; /* Varsayılan olarak biraz opak */
     border-radius: 8px 8px 0 0;
     margin: 0 5px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -151,12 +150,14 @@ header h1 .colored-char {
 main {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    margin-top: -20px; /* Header'daki boşluğu telafi etmek için */
+    /* margin-top: -20px; -> Bu kural kaldırıldı, artık sticky header ile çakışmayacak */
     position: relative;
     z-index: 1; /* Header'ın altında kalmasını sağla */
 }
 #app-container {
     border-radius: 12px;
+    /* overflow: auto; veya hidden yerine, sadece ana içeriğin kaydırması için gerekirse */
+    /* Kaydırma işlemini body veya html üzerinde yönetmek daha iyi olabilir */
 }
 /* Dashboard ile tabs arası boşluk */
 header {
@@ -188,6 +189,13 @@ header {
     transform: scale(1.02); /* Hafifçe büyüt */
     margin: 10px 0; /* Üstten ve alttan boşluk */
     border-radius: 8px; /* Köşeleri yuvarlak */
+    
+    /* Dashboard'ı da sabit yap (Header'ın altına) */
+    position: sticky;
+    top: 150px; /* Header'ın altında kalacak şekilde (Header yüksekliğine göre ayarlanmalı) */
+    z-index: 99; /* Header'dan biraz daha az z-index */
+    background-color: var(--default-header-bg); /* Header ile aynı arka plan rengi olsun */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Gölge efekti */
 }
 
 .dashboard-card {
@@ -202,33 +210,26 @@ header {
     flex-shrink: 0;
     flex-basis: 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Gölge belirginleşti */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
 }
 
 /* Kartlara özel renkler (JavaScript tarafından body sınıfına göre ayarlanır) */
-.dashboard-card:nth-child(1) { background-color: var(--dashboard-card-1-bg); }
-.dashboard-card:nth-child(2) { background-color: var(--dashboard-card-2-bg); }
-.dashboard-card:nth-child(3) { background-color: var(--dashboard-card-3-bg); }
-.dashboard-card:nth-child(4) { background-color: var(--dashboard-card-4-bg); }
-
-
+/* Kart metin renkleri temaya göre belirlenecek */
 .dashboard-card .card-title {
-    font-size: 0.75em; /* Yazı boyutu artırıldı */
+    font-size: 0.75em;
     opacity: 0.9;
     margin-bottom: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* Yeni: Kart başlık metin rengi dinamik olarak belirginleştirilecek */
-    color: rgba(255,255,255,0.9); /* Beyazın hafif şeffaf tonu */
+    color: rgba(255,255,255,0.9); /* Header metin rengiyle uyumlu olsun */
 }
 
 .dashboard-card .card-value {
-    font-size: 1.2em; /* Yazı boyutu artırıldı */
+    font-size: 1.2em;
     font-weight: 700;
-    /* Yeni: Kart değer metin rengi dinamik olarak belirginleştirilecek */
-    color: #fff; /* Tamamen beyaz */
+    color: #fff; /* Tamamen beyaz veya header metin rengiyle uyumlu olsun */
 }
 
 
@@ -360,18 +361,18 @@ section h2 {
 /* Öğrenci gezinme butonlarının kapsayıcısı */
 .student-bottom-controls {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: auto;
+    flex-direction: column; /* İçindeki öğeler alt alta sıralansın */
+    align-items: stretch; /* Tüm öğeler tam genişlikte olsun */
+    margin-top: auto; /* En alta hizala */
     padding-top: 15px;
     border-top: 1px solid var(--border-color);
     gap: 10px;
 }
 .student-navigation-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Butonları uçlara yasla */
     gap: 10px;
-    width: 100%;
+    width: 100%; /* Kapsayıcı genişliğini al */
 }
 .student-navigation-buttons .icon-nav-button { /* Ok işareti tuşları için yeni stil */
     background-color: var(--current-accent-color, var(--default-accent-color));
@@ -624,7 +625,7 @@ button:active {
     text-overflow: ellipsis;
 }
 
-.assign-btn {
+.assign-btn { /* Öğrenci listesindeki "Ata" butonu */
     background-color: var(--current-accent-color, #6200ea);
     color: var(--button-text);
     padding: 6px 12px;
