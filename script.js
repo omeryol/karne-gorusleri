@@ -61,6 +61,7 @@ const newStudentSubClassSelect = document.getElementById('new-student-subclass-s
 const loadNamesFromTextBtn = document.getElementById('load-names-from-text-btn');
 const studentListUpload = document.getElementById('student-list-upload');
 const clearAllStudentsBtn = document.getElementById('clear-all-students-btn'); 
+const clearLocalStorageBtn = document.getElementById('clear-localstorage-btn'); // Yeni Local Storage temizleme tuşu
 const managementClassFilter = document.getElementById('management-class-filter'); 
 const managementSubClassFilter = document.getElementById('management-subclass-filter'); 
 const managementStudentSearchInput = document.getElementById('management-student-search-input'); 
@@ -757,7 +758,8 @@ function saveData() {
     localStorage.setItem('managementClassFilter', managementClassFilter.value);
     localStorage.setItem('managementSubClassFilter', managementSubClassFilter.value);
     
-    // Welcome modal durumunu artık kullanmıyoruz, help modal için farklı bir durum yok.
+    // Welcome modal durumu artık bu script içinde yönetilmiyor, welcomeModal kaldırıldı.
+    // helpModal'ın durumu Local Storage'a kaydedilmiyor, her zaman butona tıklanarak açılabilir.
     // localStorage.setItem('doNotShowWelcomeAgain', doNotShowWelcomeAgainCheckbox.checked ? 'true' : 'false');
 
 
@@ -850,9 +852,8 @@ function loadData() {
         selectedStudent = null;
     }
 
-    // Hoş Geldin modalı artık otomatik açılmayacak, sadece butona basılınca açılacak.
-    // Bu yüzden welcomeModal ile ilgili yükleme ve gösterme mantığı kaldırıldı.
-    // Sadece helpModal'ı açıkça yönetmek için loadData içinde özel bir başlangıç kodu yok.
+    // Hoş Geldin modalı artık otomatik açılmayacak.
+    // Kullanım kılavuzu modalı sadece butona tıklanınca açılacak.
 
 
     updateThemeColors(); 
@@ -954,6 +955,37 @@ function clearAllStudentData() {
     }
 }
 
+// Local Storage'ı tamamen temizleme fonksiyonu
+function clearAllLocalStorage() {
+    if (confirm("UYARI: Bu işlem, tüm öğrenci verileri, atanan yorumlar ve uygulama ayarları dahil olmak üzere tarayıcınızda kayıtlı olan TÜM verileri silecektir. Bu işlem geri alınamaz! Devam etmek istiyor musunuz?")) {
+        localStorage.clear();
+        students = [];
+        studentAssignments = {};
+        selectedStudent = null;
+        // Varsayılan değerlere sıfırlama (UI'ı da güncellemek için)
+        sidebarClassFilter.value = 'all';
+        sidebarSubClassFilter.value = 'all';
+        studentSearchInput.value = '';
+        classSelect.value = '';
+        termSelect.value = '';
+        autoClearCommentCheckbox.checked = false;
+        newStudentClassSelect.value = '';
+        newStudentSubClassSelect.value = '';
+        managementClassFilter.value = 'all';
+        managementSubClassFilter.value = 'all';
+        managementStudentSearchInput.value = '';
+
+        updateManagedStudentListUI();
+        loadStudentListForAssignment(false); // Filtresiz yükle
+        clearCommentEditor();
+        selectedStudentNameDisplay.textContent = 'Yok';
+        updateDashboardCards();
+        updateThemeColors(); // Tema renklerini varsayılana döndür
+
+        showToast("Local Storage başarıyla temizlendi. Uygulama sıfırlandı.", 'success');
+    }
+}
+
 
 // --- Event Dinleyicileri ---
 // Tab Navigasyon
@@ -1014,6 +1046,7 @@ studentListUpload.addEventListener('change', loadStudentListFromFile);
 newStudentClassSelect.addEventListener('change', saveData); 
 newStudentSubClassSelect.addEventListener('change', saveData); 
 clearAllStudentsBtn.addEventListener('click', clearAllStudentData); 
+clearLocalStorageBtn.addEventListener('click', clearAllLocalStorage); // Local Storage temizleme tuşu event listener'ı
 managementClassFilter.addEventListener('change', updateManagedStudentListUI);
 managementSubClassFilter.addEventListener('change', updateManagedStudentListUI); 
 managementStudentSearchInput.addEventListener('input', updateManagedStudentListUI);
