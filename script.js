@@ -467,7 +467,7 @@ window.addEventListener('click', (event) => {
     if (event.target === commentPreviewModal) {
         commentPreviewModal.style.display = 'none';
     }
-    // helpModal için dış tıklama (artık checkbox yok, her zaman kapanabilir)
+    // helpModal için dış tıklama
     if (event.target === helpModal) {
         helpModal.style.display = 'none';
     }
@@ -758,10 +758,9 @@ function saveData() {
     localStorage.setItem('managementClassFilter', managementClassFilter.value);
     localStorage.setItem('managementSubClassFilter', managementSubClassFilter.value);
     
-    // Welcome modal durumu artık bu script içinde yönetilmiyor, welcomeModal kaldırıldı.
-    // helpModal'ın durumu Local Storage'a kaydedilmiyor, her zaman butona tıklanarak açılabilir.
-    // localStorage.setItem('doNotShowWelcomeAgain', doNotShowWelcomeAgainCheckbox.checked ? 'true' : 'false');
-
+    // "Uygulamayı Sıfırla" butonu Local Storage'ı temizlediği için burada 'doNotShowWelcomeAgain' kaydını kaldırdık.
+    // Ancak, helpModal'ı kapatırken bir ayar kaydetmiyoruz.
+    // 'doNotShowWelcomeAgain' Local Storage'dan kaldırılmış olmalı, dolayısıyla her zaman gösterilecektir.
 
     if (selectedStudent) {
         localStorage.setItem('selectedStudentId', selectedStudent.id);
@@ -852,8 +851,16 @@ function loadData() {
         selectedStudent = null;
     }
 
-    // Hoş Geldin modalı artık otomatik açılmayacak.
-    // Kullanım kılavuzu modalı sadece butona tıklanınca açılacak.
+    // Hoş Geldin modalının kontrolü:
+    // Şimdi hoş geldin modalı yerine kullanım kılavuzu modalı var.
+    // Bu modalın ilk açılışta otomatik gelmesini istiyorsak, bir Local Storage bayrağı kullanmalıyız.
+    // Eğer 'doNotShowHelpModalAgain' Local Storage'da 'true' değilse göster.
+    const doNotShowHelpAgain = localStorage.getItem('doNotShowHelpModalAgain');
+    if (doNotShowHelpAgain === 'true') {
+        helpModal.style.display = 'none';
+    } else {
+        helpModal.style.display = 'flex'; // İlk açılışta veya ayar 'false' ise göster
+    }
 
 
     updateThemeColors(); 
@@ -958,11 +965,14 @@ function clearAllStudentData() {
 // Local Storage'ı tamamen temizleme fonksiyonu
 function clearAllLocalStorage() {
     if (confirm("UYARI: Bu işlem, tüm öğrenci verileri, atanan yorumlar ve uygulama ayarları dahil olmak üzere tarayıcınızda kayıtlı olan TÜM verileri silecektir. Bu işlem geri alınamaz! Devam etmek istiyor musunuz?")) {
-        localStorage.clear();
+        localStorage.clear(); // Tüm Local Storage'ı temizle
+        
+        // Uygulamayı varsayılan durumuna getirmek için gerekli değişkenleri ve UI'ı sıfırla
         students = [];
         studentAssignments = {};
         selectedStudent = null;
-        // Varsayılan değerlere sıfırlama (UI'ı da güncellemek için)
+
+        // UI elementlerini varsayılan hallerine getir
         sidebarClassFilter.value = 'all';
         sidebarSubClassFilter.value = 'all';
         studentSearchInput.value = '';
@@ -974,15 +984,20 @@ function clearAllLocalStorage() {
         managementClassFilter.value = 'all';
         managementSubClassFilter.value = 'all';
         managementStudentSearchInput.value = '';
-
+        
+        // Öğrenci listelerini ve dashboard'ı güncelle
         updateManagedStudentListUI();
-        loadStudentListForAssignment(false); // Filtresiz yükle
+        loadStudentListForAssignment(false); 
         clearCommentEditor();
         selectedStudentNameDisplay.textContent = 'Yok';
         updateDashboardCards();
-        updateThemeColors(); // Tema renklerini varsayılana döndür
+        updateThemeColors(); // Tema renklerini varsayılana döndür (body class'ını temizler)
 
-        showToast("Local Storage başarıyla temizlendi. Uygulama sıfırlandı.", 'success');
+        // Hoş geldin modalının tekrar gelmesi için Local Storage'daki ayarı kaldır veya 'false' yap
+        localStorage.setItem('doNotShowHelpModalAgain', 'false'); 
+        helpModal.style.display = 'flex'; // Modalı tekrar göster
+
+        showToast("Uygulama başarıyla sıfırlandı. Tüm veriler temizlendi.", 'success');
     }
 }
 
