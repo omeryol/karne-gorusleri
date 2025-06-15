@@ -6,17 +6,14 @@
     <title>Karne Yorum Defterim by Ömer YOLCU</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-</head>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon.png"> </head>
 <body>
 
     <div id="app-container">
         <header>
-            <h1>
-                <span class="colored-char">K</span><span class="colored-char">a</span><span class="colored-char">r</span><span class="colored-char">n</span><span class="colored-char">e</span>
-                <span class="colored-char">Y</span><span class="colored-char">o</span><span class="colored-char">r</span><span class="colored-char">u</span><span class="colored-char">m</span>
-                <span class="colored-char">D</span><span class="colored-char">e</span><span class="colored-char">f</span><span class="colored-char">t</span><span class="colored-char">e</span><span class="colored-char">r</span><span class="colored-char">i</span><span class="colored-char">m</span>
-            </h1>
-            <nav class="tabs">
+            <h1>Karne Yorum Defterim</h1> <nav class="tabs">
                 <button class="tab-button active" data-tab="comments">Yorum Atama</button>
                 <button class="tab-button" data-tab="student-management">Öğrenci Yönetimi</button>
             </nav>
@@ -85,6 +82,7 @@
                             <input type="checkbox" id="auto-clear-comment">
                             <label for="auto-clear-comment">Yorum atadıktan sonra temizle</label>
                         </div>
+                        <button id="assign-comment-btn-editor">Yorumu Ata / Güncelle</button>
                         <button id="copy-comment-btn">Yorumu Kopyala</button>
                         <button id="clear-comment-editor-btn" class="secondary-button">Yorumu Temizle</button>
                     </section>
@@ -145,7 +143,8 @@
                         </div>
                         <div class="clear-all-students">
                             <button id="clear-all-students-btn" class="secondary-button">Tüm Öğrenci Verilerini Temizle</button>
-                            <button id="clear-localstorage-btn" class="secondary-button warn-button">Uygulamayı Sıfırla</button> </div>
+                            <button id="clear-localstorage-btn" class="secondary-button warn-button">Uygulamayı Sıfırla</button>
+                        </div>
                     </section>
 
                     <section id="saved-students-section" class="management-column">
