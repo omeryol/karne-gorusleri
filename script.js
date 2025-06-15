@@ -32,6 +32,25 @@ const studentListDiv = document.getElementById('student-list');
 const viewAllAssignmentsBtn = document.getElementById('view-all-assignments-btn');
 const appContainer = document.getElementById('app-container');
 
+// Yeni Eklenen UI Elementleri
+const filterUnassignedBtn = document.getElementById('filter-unassigned-btn'); // Yorum Bekleyenler Butonu
+const prevStudentBtn = document.getElementById('prev-student-btn'); // Önceki Öğrenci Butonu
+const nextStudentBtn = document.getElementById('next-student-btn'); // Sonraki Öğrenci Butonu
+
+// Yorum Önizleme Modalı
+const commentPreviewModal = document.getElementById('comment-preview-modal');
+const modalCommentTitle = document.getElementById('modal-comment-title');
+const modalCommentText = document.getElementById('modal-comment-text');
+const modalCopyBtn = document.getElementById('modal-copy-btn');
+const modalSelectBtn = document.getElementById('modal-select-btn');
+const modalCloseButtons = document.querySelectorAll('.modal .close-button'); // Tüm modal kapatma butonları
+
+// Kullanım İpuçları Modalı
+const welcomeModal = document.getElementById('welcome-modal');
+const doNotShowWelcomeAgainCheckbox = document.getElementById('do-not-show-welcome-again');
+const closeWelcomeModalBtn = document.getElementById('close-welcome-modal');
+
+
 // Student Management Tab (Öğrenci Yönetimi)
 const studentNamesTextarea = document.getElementById('student-names-textarea');
 const newStudentClassSelect = document.getElementById('new-student-class-select'); 
@@ -51,6 +70,7 @@ const toastContainer = document.getElementById('toast-container');
 let students = []; // Tüm öğrenci verileri: { id: "benzersizID", fullName: "Ali Yılmaz", firstName: "Ali", class: "5", subClass: "A", num: 1 }
 let studentAssignments = {}; // Öğrenciye atanan yorumlar: { "Ali Yılmaz": "Yorum metni" }
 let selectedStudent = null; // Şu anda yorum atama tarafında seçili olan öğrenci objesi
+let currentCommentTemplate = null; // Şu anda modalda veya düzenleyicide seçili olan yorum şablonu
 
 // --- Yardımcı Fonksiyonlar ---
 
@@ -94,7 +114,8 @@ function generateUniqueId() {
 // Dashboard kartlarını güncelleyen fonksiyon
 function updateDashboardCards() {
     const totalStudents = students.length;
-    const assignedComments = Object.values(studentAssignments).filter(comment => comment !== '').length;
+    // Yorumu atanmış öğrencileri sayarken, boş string atanmış yorumları hariç tut
+    const assignedComments = Object.values(studentAssignments).filter(comment => comment && comment.trim() !== '').length;
     const pendingComments = totalStudents - assignedComments;
     const completionRate = totalStudents > 0 ? ((assignedComments / totalStudents) * 100).toFixed(0) : 0;
 
@@ -106,7 +127,7 @@ function updateDashboardCards() {
 
 
 // Yorum düzenleme alanındaki yorumu seçer ve aktif stili ayarlar
-function selectCommentProfile(commentText, clickedElement) {
+function selectCommentProfile(commentText, clickedElement, templateId = null) {
     commentTextarea.value = commentText;
     updateCharCount();
 
@@ -117,6 +138,20 @@ function selectCommentProfile(commentText, clickedElement) {
     if (clickedElement) {
         clickedElement.classList.add('active');
     }
+
+    // Seçilen yorum şablonunu kaydet
+    if (templateId) {
+        const selectedClass = classSelect.value;
+        const selectedTerm = termSelect.value;
+        if (commentsData[selectedClass] && commentsData[selectedClass][selectedTerm]) {
+            currentCommentTemplate = commentsData[selectedClass][selectedTerm].find(t => t.id === templateId);
+        }
+    } else {
+        currentCommentTemplate = null; // Manuel girilen yorumlar için şablon yok
+    }
+    
+    // Modalı kapat (eğer açıksa)
+    commentPreviewModal.style.display = 'none';
 }
 
 // Yorum düzenleme alanını temizler
@@ -127,6 +162,7 @@ function clearCommentEditor() {
     if (currentActive) {
         currentActive.classList.remove('active');
     }
+    currentCommentTemplate = null; // Temizlendiğinde şablonu sıfırla
     showToast('Yorum alanı temizlendi.', 'info');
 }
 
@@ -158,8 +194,11 @@ function assignCommentToStudent(event) {
 
     if (autoClearCommentCheckbox.checked) {
         clearCommentEditor();
-        selectedStudent = null; 
-        selectedStudentNameDisplay.textContent = 'Yok';
+        // Eğer otomatik temizleme varsa, seçili öğrenciyi sıfırlama,
+        // böylece sonraki/önceki öğrenciye geçişte mevcut öğrenci odaklı devam edebiliriz.
+        // selectCommentProfile içinde otomatik temizleme yoksa bu kod çalışmaz.
+        // selectedStudent = null; 
+        // selectedStudentNameDisplay.textContent = 'Yok';
     }
 }
 
@@ -186,7 +225,7 @@ function switchTab(tabId) {
 }
 
 // Yorum atama sekmesindeki öğrenci listesini yükleme/filtreleme
-function loadStudentListForAssignment() {
+function loadStudentListForAssignment(filterUnassigned = false) { // filterUnassigned parametresi eklendi
     const filterClass = sidebarClassFilter.value;
     const filterSubClass = sidebarSubClassFilter.value; 
     const searchTerm = studentSearchInput.value.toLowerCase();
@@ -198,6 +237,12 @@ function loadStudentListForAssignment() {
         const matchesSubClass = filterSubClass === 'all' || student.subClass === filterSubClass; 
         const matchesSearch = student.fullName.toLowerCase().includes(searchTerm) ||
                               student.firstName.toLowerCase().includes(searchTerm);
+        const isAssigned = studentAssignments[student.fullName] && studentAssignments[student.fullName].trim() !== '';
+        
+        // Eğer filterUnassigned true ise, sadece atanmamışları göster
+        if (filterUnassigned) {
+            return matchesClass && matchesSubClass && matchesSearch && !isAssigned;
+        }
         return matchesClass && matchesSubClass && matchesSearch; 
     }).sort((a, b) => { 
         if (a.class === b.class) {
@@ -277,8 +322,8 @@ function loadCommentTemplates() {
                 profileItem.dataset.id = template.id;
                 profileItem.textContent = template.title; 
                 profileItem.addEventListener('click', () => {
-                    const commentToLoad = selectedStudent ? template.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName) : template.comment;
-                    selectCommentProfile(commentToLoad, profileItem);
+                    // Yorum modalını aç
+                    openCommentPreviewModal(template);
                 });
                 profileList.appendChild(profileItem);
             });
@@ -287,6 +332,62 @@ function loadCommentTemplates() {
         profileList.innerHTML = '<p>Lütfen sınıf ve dönem seçin.</p>';
     }
 }
+
+// Yorum Önizleme Modalını Açma
+function openCommentPreviewModal(template) {
+    currentCommentTemplate = template; // Seçili şablonu kaydet
+    modalCommentTitle.textContent = template.title;
+    
+    // Eğer öğrenci seçili ise, yorumdaki yer tutucuyu doldur
+    if (selectedStudent) {
+        modalCommentText.textContent = template.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+    } else {
+        modalCommentText.textContent = template.comment;
+    }
+    commentPreviewModal.style.display = 'block';
+}
+
+// Yorum Önizleme Modalından Yorumu Kopyala
+modalCopyBtn.addEventListener('click', () => {
+    const commentToCopy = modalCommentText.textContent;
+    navigator.clipboard.writeText(commentToCopy).then(() => {
+        showToast('Yorum panoya kopyalandı!', 'success');
+        commentPreviewModal.style.display = 'none'; // Modalı kapat
+    }).catch(err => {
+        console.error('Yorum kopyalanamadı:', err);
+        showToast('Yorum kopyalanırken bir hata oluştu.', 'error');
+    });
+});
+
+// Yorum Önizleme Modalından Yorumu Seç ve Düzenle
+modalSelectBtn.addEventListener('click', () => {
+    if (currentCommentTemplate) {
+        selectCommentProfile(modalCommentText.textContent, null, currentCommentTemplate.id); // Yorumu düzenleyiciye aktar
+        commentPreviewModal.style.display = 'none'; // Modalı kapat
+    }
+});
+
+// Modal kapatma butonları için event listener
+modalCloseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        commentPreviewModal.style.display = 'none';
+        welcomeModal.style.display = 'none';
+    });
+});
+
+// Modal dışına tıklayınca kapatma
+window.addEventListener('click', (event) => {
+    if (event.target === commentPreviewModal) {
+        commentPreviewModal.style.display = 'none';
+    }
+    if (event.target === welcomeModal) {
+        // welcomeModal'ı sadece checkbox işaretli değilse dışarı tıklamada kapat
+        if (!doNotShowWelcomeAgainCheckbox.checked) {
+            welcomeModal.style.display = 'none';
+        }
+    }
+});
+
 
 function updateCharCount() {
     const currentLength = commentTextarea.value.length;
@@ -456,20 +557,13 @@ function selectStudentForAssignmentItem(studentItemElement) {
         
         const currentCommentValue = commentTextarea.value;
         let isTemplateComment = false;
-        if (commentsData) { 
-            for (const classKey in commentsData) {
-                for (const termKey in commentsData[classKey]) {
-                    if (commentsData[classKey][termKey].some(t => t.comment === currentCommentValue)) {
-                        isTemplateComment = true;
-                        break;
-                    }
-                }
-                if (isTemplateComment) break;
-            }
+        // Eğer mevcut yorum alanı bir şablondan geliyorsa veya atanmış bir yorum ise doldur
+        if (currentCommentTemplate && currentCommentTemplate.comment === currentCommentValue) {
+            isTemplateComment = true; // Mevcut metin seçili şablonla aynı
         }
-       
+        
         if (isTemplateComment) { 
-            commentTextarea.value = currentCommentValue.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
+            commentTextarea.value = currentCommentTemplate.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
         } else if (studentAssignments[selectedStudent.fullName]) { 
             commentTextarea.value = studentAssignments[selectedStudent.fullName].replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
         } else { 
@@ -482,6 +576,29 @@ function selectStudentForAssignmentItem(studentItemElement) {
         updateCharCount();
     }
 }
+
+// Hızlı öğrenci navigasyonu
+function navigateStudent(direction) {
+    const currentStudentItems = Array.from(studentListDiv.querySelectorAll('.student-item'));
+    if (currentStudentItems.length === 0) return;
+
+    let currentIndex = -1;
+    if (selectedStudent) {
+        currentIndex = currentStudentItems.findIndex(item => item.dataset.id === selectedStudent.id);
+    }
+
+    let nextIndex = currentIndex + direction;
+
+    if (nextIndex < 0) {
+        nextIndex = currentStudentItems.length - 1; // Başa döner
+    } else if (nextIndex >= currentStudentItems.length) {
+        nextIndex = 0; // Sona döner
+    }
+
+    selectStudentForAssignmentItem(currentStudentItems[nextIndex]);
+    currentStudentItems[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' }); // Seçili öğrenciye kaydır
+}
+
 
 // Atanan tüm yorumları görüntüleme (yeni pencerede)
 function viewAllAssignments() {
@@ -505,7 +622,7 @@ function viewAllAssignments() {
             <h1>Atanan Karne Yorumları Listesi</h1>
     `;
 
-    const sortedStudentsWithComments = students.filter(student => studentAssignments[student.fullName])
+    const sortedStudentsWithComments = students.filter(student => studentAssignments[student.fullName] && studentAssignments[student.fullName].trim() !== '') // Boş yorumları dahil etme
                                                .sort((a, b) => a.class.localeCompare(b.class) || a.subClass.localeCompare(b.subClass) || a.num - b.num); 
 
 
@@ -557,12 +674,17 @@ function saveData() {
     localStorage.setItem('sidebarSubClassFilter', sidebarSubClassFilter.value);
     localStorage.setItem('managementClassFilter', managementClassFilter.value);
     localStorage.setItem('managementSubClassFilter', managementSubClassFilter.value);
+    
+    // Welcome modal durumunu kaydet
+    localStorage.setItem('doNotShowWelcomeAgain', doNotShowWelcomeAgainCheckbox.checked);
+
 
     if (selectedStudent) {
         localStorage.setItem('selectedStudentId', selectedStudent.id);
     } else {
         localStorage.removeItem('selectedStudentId');
     }
+    showToast('Veriler otomatik kaydedildi.', 'info'); // Otomatik kaydetme bildirimi
 }
 
 function loadData() {
@@ -623,12 +745,23 @@ function loadData() {
         switchTab('comments-tab'); // Varsayılan sekme
     }
 
+    // Seçili öğrenciyi yükle
     const savedSelectedStudentId = localStorage.getItem('selectedStudentId');
     if (savedSelectedStudentId) {
         selectedStudent = students.find(s => s.id === savedSelectedStudentId);
     } else {
         selectedStudent = null;
     }
+
+    // Hoş Geldin modalını yükle
+    const doNotShowWelcome = localStorage.getItem('doNotShowWelcomeAgain');
+    if (doNotShowWelcome === 'true') {
+        welcomeModal.style.display = 'none';
+        doNotShowWelcomeAgainCheckbox.checked = true;
+    } else {
+        welcomeModal.style.display = 'block'; // Sadece ilk açılışta göster
+    }
+
 
     updateThemeColors(); 
 }
@@ -707,6 +840,7 @@ function deleteStudent(event) {
             selectedStudentNameDisplay.textContent = 'Yok';
             clearCommentEditor();
         }
+        showToast(`${studentToDelete.fullName} başarıyla silindi.`, 'success');
     }
 }
 
@@ -738,11 +872,30 @@ tabButtons.forEach(button => {
 });
 
 // Comments Tab Listeners
-sidebarClassFilter.addEventListener('change', loadStudentListForAssignment);
-sidebarSubClassFilter.addEventListener('change', loadStudentListForAssignment); 
-studentSearchInput.addEventListener('input', loadStudentListForAssignment);
+sidebarClassFilter.addEventListener('change', () => loadStudentListForAssignment(false)); // False: sadece atanmamışları gösterme
+sidebarSubClassFilter.addEventListener('change', () => loadStudentListForAssignment(false));
+studentSearchInput.addEventListener('input', () => loadStudentListForAssignment(false));
 studentListDiv.addEventListener('click', handleStudentClickInAssignmentList); 
 viewAllAssignmentsBtn.addEventListener('click', viewAllAssignments);
+
+// Yeni filtre butonu
+filterUnassignedBtn.addEventListener('click', () => {
+    // Butonun aktif/pasif durumunu toggle et
+    filterUnassignedBtn.classList.toggle('active-filter');
+    if (filterUnassignedBtn.classList.contains('active-filter')) {
+        loadStudentListForAssignment(true); // Sadece atanmamışları göster
+        showToast('Yorum bekleyen öğrenciler filtrelendi.', 'info');
+    } else {
+        loadStudentListForAssignment(false); // Tüm öğrencileri göster
+        showToast('Tüm öğrenciler gösteriliyor.', 'info');
+    }
+});
+
+
+// Hızlı öğrenci navigasyon butonları
+prevStudentBtn.addEventListener('click', () => navigateStudent(-1));
+nextStudentBtn.addEventListener('click', () => navigateStudent(1));
+
 
 classSelect.addEventListener('change', () => {
     updateThemeColors();
@@ -773,6 +926,12 @@ managementClassFilter.addEventListener('change', updateManagedStudentListUI);
 managementSubClassFilter.addEventListener('change', updateManagedStudentListUI); 
 managementStudentSearchInput.addEventListener('input', updateManagedStudentListUI);
 managedStudentListDiv.addEventListener('click', deleteStudent); 
+
+// Welcome modal checkbox ve buton event listener
+doNotShowWelcomeAgainCheckbox.addEventListener('change', saveData);
+closeWelcomeModalBtn.addEventListener('click', () => {
+    welcomeModal.style.display = 'none';
+});
 
 
 // Uygulama yüklendiğinde
