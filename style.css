@@ -361,6 +361,7 @@ section h2 {
     justify-content: space-between; /* Butonları uçlara yasla */
     gap: 10px; /* Butonlar arası boşluk */
     width: 100%; /* Kapsayıcı genişliğini al */
+    /* Bu div'in toplam genişliği alttaki butonla aynı olsun */
 }
 .student-navigation-buttons .icon-nav-button { /* Yeni eklenen ikon butonu sınıfı */
     flex-grow: 1; /* Eşit genişlikte olsunlar */
@@ -371,8 +372,9 @@ section h2 {
     display: flex; /* İçeriği ortalamak için flex kullan */
     justify-content: center;
     align-items: center;
-    width: 48%; /* Toplam genişliğin yarısından az, gap'i hesaba katarak */
-    max-width: 48%; /* Maksimum genişlik de aynı oranda */
+    /* Genişliği ayarla: 100% / 2 - gap/2 */
+    width: calc(50% - 5px); 
+    max-width: calc(50% - 5px);
     height: 40px; /* Butonun yüksekliğini ayarla */
     border-radius: 6px; /* Köşeleri biraz yuvarlak tut */
 }
