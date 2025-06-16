@@ -11,7 +11,7 @@ export function showToast(message, type = 'info') {
 
     // Mevcut tiplere ek olarak success, error, info sınıflarını ekliyoruz
     // CSS'te bu sınıflara göre renkler ayarlandı.
-    toast.classList.add(type); 
+    toast.classList.add(type);
 
     if (toastContainer) {
         toastContainer.appendChild(toast);
@@ -75,7 +75,6 @@ export function hasParent(element, parentSelector) {
 }
 
 // Yeni bir yardımcı fonksiyon: Modal açma/kapatma için ortak mantık
-// Bu fonksiyon modal.js içinde daha spesifik hale getirilebilir, şimdilik burada kalsın.
 export function toggleModal(modalElement, show = true) {
     if (!modalElement) {
         console.error('[utils.js] toggleModal: Geçersiz modal elemanı verildi.');

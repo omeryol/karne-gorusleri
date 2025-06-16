@@ -7,7 +7,7 @@ import { updateDashboardCards } from './dashboard.js';
 import { initializeModalListeners } from './modals.js';
 import { initializeCommentsTabListeners, loadCommentTemplates, loadStudentListForAssignment, updateCharCount } from './comments-tab.js';
 import { initializeStudentManagementTabListeners, updateManagedStudentListUI } from './student-management-tab.js';
-import { headerClassSelect, headerTermSelect, mainHeader, dashboardCardsContainer } from './ui-elements.js'; // Yeni header ve dashboard konteynerları
+import { headerClassSelect, headerTermSelect, mainHeader, dashboardCardsContainer } from './ui-elements.js';
 
 /*
     Hata Ayıklama Notu:
@@ -23,8 +23,8 @@ console.log('[main.js] main.js modülü yükleniyor...');
 // Tema renklerini güncelleyen fonksiyon
 function updateThemeColors() {
     console.log('[main.js] updateThemeColors çağrıldı: Tema renkleri güncelleniyor.');
-    const selectedClass = headerClassSelect.value; // ui-elements'den geldi
-    const selectedTerm = headerTermSelect.value; // ui-elements'den geldi
+    const selectedClass = headerClassSelect.value;
+    const selectedTerm = headerTermSelect.value;
 
     // Body'deki tüm mevcut sınıf ve dönem sınıflarını temizle
     document.body.className = '';

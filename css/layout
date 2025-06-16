@@ -179,6 +179,19 @@ body {
     flex-direction: column;
 }
 
+.form-group-inline { /* Modal içindeki form grubu için yeni sınıf */
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group-inline > * {
+    flex-grow: 1;
+    flex-basis: calc(50% - var(--spacing-xs));
+    max-width: calc(50% - var(--spacing-xs));
+}
+
 .modal-footer-actions {
     display: flex;
     flex-wrap: wrap;

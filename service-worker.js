@@ -5,11 +5,11 @@ console.log('Service Worker: Yükleniyor (Sürüm: karne-yorumu-v4)');
 const CACHE_NAME = 'karne-yorumu-v4'; // Önbellek adını güncelledik (yeni dosya yapısını fark etmesi için)
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/comment_templates_data.js',
-  '/manifest.json',
+  '/index.html', // Ana sayfa
+  '/comment_templates_data.js', // Yorum şablonları
+  '/manifest.json', // Manifest dosyası
 
-  // Yeni İkon Yolları (Mevcut dizin yapınıza göre)
+  // İkon Yolları (Depo kökünden göreceli yollar)
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
   '/icons/apple-touch-icon.png',
@@ -18,19 +18,17 @@ const urlsToCache = [
   '/icons/favicon-32x32.png',
   '/favicon.ico',
 
-  // Yeni CSS Modül Yolları (Değiştirildi)
-  '/css/reset.css',        // Yeni
-  '/css/global.css',       // Yeni
-  '/css/layout.css',       // Güncellendi
-  '/css/components.css',   // Güncellendi
-  '/css/forms.css',        // Yeni
-  '/css/modals.css',       // Güncellendi
-  '/css/theme.css',        // Güncellendi
-  '/css/responsive.css',   // Güncellendi
-  // '/css/base.css',       // Kaldırıldı
-  // '/css/tabs.css',       // Kaldırıldı
+  // Yeni CSS Modül Yolları (Güncellendi)
+  '/css/reset.css',
+  '/css/global.css',
+  '/css/layout.css',
+  '/css/components.css',
+  '/css/forms.css',
+  '/css/modals.css',
+  '/css/theme.css',
+  '/css/responsive.css',
 
-  // Yeni JavaScript Modül Yolları (Mevcut isimler korundu ama doğrulanmalı)
+  // JavaScript Modül Yolları (Mevcut isimler korundu)
   '/js/utils.js',
   '/js/ui-elements.js',
   '/js/data-management.js',

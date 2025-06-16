@@ -1,5 +1,15 @@
 /* css/global.css */
 
+/*
+    Hata Ayıklama Notu:
+    Bu dosya, uygulamanın tüm genel stillerini (fontlar, renk değişkenleri, temel layout elemanları) tanımlar.
+    Bu stillerin doğru uygulandığını doğrulamak için tarayıcının Geliştirici Araçları'nda (Developer Tools)
+    "Elements" (Öğeler) sekmesini kullanarak `body` ve `#app-wrapper` gibi ana elemanların
+    background, font, color gibi özelliklerinin beklenen değerleri alıp almadığını kontrol edin.
+    `:root` içindeki CSS değişkenlerinin doğru tanımlandığından ve diğer CSS dosyalarında bu değişkenlerin
+    başarıyla kullanılabildiğinden emin olun.
+*/
+
 /* --- Genel Tema Renkleri ve Değişkenler --- */
 :root {
     /* Genel Uygulama Renkleri */

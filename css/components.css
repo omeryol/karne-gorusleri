@@ -181,7 +181,7 @@
     border-bottom: 1px solid var(--border-color);
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
-    font-size: var(--font-size-base);
+    font-size: 1em;
     line-height: 1.4;
     user-select: none;
     border-radius: 6px;
@@ -220,7 +220,7 @@
     align-items: center;
     padding: var(--spacing-sm) 0;
     border-bottom: 1px dashed var(--border-color);
-    font-size: var(--font-size-base);
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
     border-radius: 6px;
@@ -255,7 +255,7 @@
 
 .student-number {
     flex-shrink: 0;
-    font-size: var(--font-size-small);
+    font-size: 0.9em;
     color: var(--text-color-light);
     background-color: var(--border-color);
     padding: 2px 7px;
@@ -271,6 +271,41 @@
     text-overflow: ellipsis;
 }
 
+/* Yeni durum göstergesi */
+.student-status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-color-light); /* Varsayılan gri */
+    flex-shrink: 0;
+    margin-left: auto; /* Sağ tarafa hizala */
+}
+
+.student-status-indicator.status-assigned {
+    background-color: var(--accent-color-success); /* Yeşil */
+}
+
+.student-status-indicator.status-pending {
+    background-color: var(--accent-color-error); /* Kırmızı */
+}
+
+
+.assign-btn {
+    background-color: var(--current-primary-color); /* Primary butondan renk alır */
+    color: var(--current-button-text-color);
+    padding: 6px 12px;
+    font-size: 0.85em;
+    margin-top: 0;
+    width: auto;
+    flex-shrink: 0;
+    margin-left: auto; /* Sağ tarafa hizala */
+}
+
+.assign-btn:hover {
+    filter: brightness(1.1);
+}
+
+
 /* --- Öğrenci Yönetimi Modalı İçindeki Liste Stilleri --- */
 #managed-student-list-container-modal {
     border: 1px solid var(--border-color);
@@ -284,9 +319,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-sm) 0;
-    border-bottom: 1px dashed var(--border-color);
-    font-size: var(--font-size-base);
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.95em;
 }
 
 .managed-student-item:last-child {
@@ -295,7 +330,7 @@
 
 .managed-student-info {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 10px;
     align-items: center;
     flex-grow: 1;
     color: var(--text-color-dark);

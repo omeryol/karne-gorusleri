@@ -293,7 +293,7 @@ function clearAllLocalStorage() {
         if (managementClassFilterModal) managementClassFilterModal.value = 'all';
         if (managementSubClassFilterModal) managementSubClassFilterModal.value = 'all';
         if (managementStudentSearchInputModal) managementStudentSearchInputModal.value = '';
-        
+
         // Comments tab UI
         if (selectedStudentNameDisplay) selectedStudentNameDisplay.textContent = 'Yok';
         if (commentTextarea) commentTextarea.value = '';
@@ -306,7 +306,7 @@ function clearAllLocalStorage() {
         updateManagedStudentListUI(); // Yönetilen listeyi boşalt
         loadStudentListForAssignment(false); // Ana öğrenci listesini sıfırla
         updateDashboardCards();
-        
+
         // Tema renklerini varsayılana döndür (body class'ını temizler)
         document.body.className = '';
         console.log('[student-management-tab.js] Body sınıfı (tema) sıfırlandı.');
@@ -329,7 +329,7 @@ function clearAllLocalStorage() {
 // Event dinleyicilerini başlatma fonksiyonu
 export function initializeStudentManagementTabListeners() {
     console.log('[student-management-tab.js] initializeStudentManagementTabListeners çağrıldı: Öğrenci yönetimi dinleyicileri başlatılıyor.');
-    
+
     // Öğrenci Ekle Sekmesi
     loadNamesFromTextBtnModal.addEventListener('click', addNewStudentsFromTextarea);
     studentListUploadModal.addEventListener('change', loadStudentListFromFile);

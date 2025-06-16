@@ -36,6 +36,8 @@ export const studentListSubClassFilter = document.getElementById('student-list-s
 export const studentSearchInput = document.getElementById('student-search-input'); // Mevcut
 export const filterUnassignedBtn = document.getElementById('filter-unassigned-btn'); // Mevcut
 export const studentListContainer = document.getElementById('student-list-container'); // Yeni ID
+export const prevStudentBtn = document.getElementById('prev-student-btn'); // Yeni buton (list-footer-controls içinde)
+export const nextStudentBtn = document.getElementById('next-student-btn'); // Yeni buton (list-footer-controls içinde)
 export const addNewStudentBtn = document.getElementById('add-new-student-btn'); // Yeni buton
 export const manageStudentsBtn = document.getElementById('manage-students-btn'); // Yeni buton
 
@@ -49,6 +51,8 @@ export const autoClearCommentCheckbox = document.getElementById('auto-clear-comm
 export const assignCommentBtn = document.getElementById('assign-comment-btn'); // Yeni ID
 export const copyCommentBtn = document.getElementById('copy-comment-btn'); // Mevcut
 export const clearCommentEditorBtn = document.getElementById('clear-comment-editor-btn'); // Mevcut
+export const viewAllAssignmentsBtn = document.getElementById('view-all-assignments-btn'); // Yeni ID (Yorum düzenleyici altındaki)
+
 
 // Yorum Şablonları Bölümü (Sağ Panel içinde)
 export const profileSearchInput = document.getElementById('profile-search-input'); // Mevcut

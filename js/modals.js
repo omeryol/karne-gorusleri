@@ -262,14 +262,14 @@ export function initializeModalListeners() {
     modalNextCommentBtn.addEventListener('click', () => navigateCommentModal(1));
 
     // Genel kapatma butonları (her modal için ayrı ayrı tanımlandı)
-    commentPreviewModalCloseButton.addEventListener('click', () => toggleModal(commentPreviewModal, false));
-    helpModalCloseButton.addEventListener('click', () => {
+    if (commentPreviewModalCloseButton) commentPreviewModalCloseButton.addEventListener('click', () => toggleModal(commentPreviewModal, false));
+    if (helpModalCloseButton) helpModalCloseButton.addEventListener('click', () => {
         toggleModal(helpModal, false);
         localStorage.setItem('doNotShowHelpModalAgain', 'true'); // Anladım'a basınca bir daha gösterme
         console.log('[modals.js] Yardım modalı kapatıldı ve bir daha göstermemek için ayar kaydedildi.');
     });
-    allAssignmentsModalCloseButton.addEventListener('click', () => toggleModal(allAssignmentsModal, false));
-    
+    if (allAssignmentsModalCloseButton) allAssignmentsModalCloseButton.addEventListener('click', () => toggleModal(allAssignmentsModal, false));
+
     // Öğrenci Yönetimi Modalı kapatma butonları (NodeList olduğu için forEach)
     studentManagementModalCloseButtons.forEach(button => {
         button.addEventListener('click', (event) => {
@@ -308,7 +308,7 @@ export function initializeModalListeners() {
     // Kullanım kılavuzu modalının başlangıçta açılma kontrolü:
     const doNotShowHelpAgain = localStorage.getItem('doNotShowHelpModalAgain');
     if (doNotShowHelpAgain === 'true') {
-        helpModal.style.display = 'none'; // Eğer daha önce 'Anladım' dendi ise gizli kalır
+        if (helpModal) helpModal.style.display = 'none'; // Eğer daha önce 'Anladım' dendi ise gizli kalır
         console.log('[modals.js] Yardım modalı başlangıçta gizlendi (doNotShowHelpModalAgain ayarı aktif).');
     } else {
         // Otomatik açılmaması için bu kısım boş bırakıldı.

@@ -31,12 +31,12 @@ export function saveData() {
     console.log('[data-management.js] saveData çağrıldı: Veriler Local Storage\'a kaydediliyor.');
     localStorage.setItem('students', JSON.stringify(students));
     localStorage.setItem('studentAssignments', JSON.stringify(studentAssignments));
-    
+
     // Yeni header select'lerini kullanıyoruz
     localStorage.setItem('selectedClass', headerClassSelect.value);
     localStorage.setItem('selectedTerm', headerTermSelect.value);
     localStorage.setItem('autoClearChecked', autoClearCommentCheckbox.checked);
-    
+
     // Artık sekme butonu olmadığı için 'activeTab' kaydetmiyoruz.
     // Sekme filtreleri için yeni ID'leri kullanıyoruz.
     localStorage.setItem('studentListClassFilter', studentListClassFilter.value);

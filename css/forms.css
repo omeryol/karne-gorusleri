@@ -1,0 +1,168 @@
+/* css/forms.css */
+
+/*
+    Hata Ayıklama Notu:
+    Bu dosya, uygulamadaki input, select, textarea gibi form elemanlarının stillerini tanımlar.
+    Bu stillerin doğru uygulandığını doğrulamak için tarayıcının Geliştirici Araçları'nda
+    "Elements" sekmesini kullanarak `.control-select`, `.control-input`, `.form-textarea`,
+    `.checkbox-container` gibi elementlerin görsel özelliklerini (padding, border, border-radius,
+    font boyutu, renkler) ve `:focus` etkileşimlerini kontrol edin.
+    Özellikle checkbox'ın özelleştirilmiş görünümünün beklendiği gibi çalıştığından emin olun.
+*/
+
+/* --- Genel Form Elemanları (input, select, textarea) --- */
+.control-select,
+.control-input,
+.form-textarea {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Daha yuvarlak kenarlar */
+    font-size: var(--font-size-base);
+    color: var(--text-color-dark);
+    background-color: var(--secondary-bg-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    box-sizing: border-box; /* padding ve border genişliğe dahil */
+    -webkit-appearance: none; /* iOS'ta varsayılan görünümü kaldır */
+    -moz-appearance: none; /* Firefox'ta varsayılan görünümü kaldır */
+    appearance: none; /* Diğer tarayıcılarda varsayılan görünümü kaldır */
+}
+
+.control-select {
+    /* Özel aşağı ok ikonu için SVG */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236c757d%22%20d%3D%22M287%2C197.917L146.2%2C57.117L5.4%2C197.917H287z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px; /* Ok ikonuna yer açmak için */
+}
+
+.control-select:focus,
+.control-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--current-primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--current-primary-color-rgb), 0.2);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* --- Genel Kontroller Kapsayıcısı --- */
+.controls.filter-search-controls {
+    display: grid; /* Grid kullanarak daha esnek yerleşim */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Esnek kolonlar */
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.controls.filter-search-controls .control-input,
+.controls.filter-search-controls .control-select {
+    flex-grow: 1; /* Grid içinde esnek büyüme */
+    width: auto; /* Grid elemanları için otomatik genişlik */
+}
+
+/* --- Modal İçindeki Form Grupları --- */
+.form-group-inline {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group-inline > * {
+    flex-grow: 1;
+    flex-basis: calc(50% - var(--spacing-xs)); /* İki eleman yan yana */
+    max-width: calc(50% - var(--spacing-xs));
+}
+
+
+/* --- Dosya Yükleme Etiketi (label olarak stilize edilmiş buton) --- */
+.file-upload-label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--accent-color-secondary); /* İkincil buton rengi */
+    color: var(--current-button-text-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 8px;
+    margin-top: var(--spacing-sm);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.file-upload-label:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.file-upload-label:active {
+    transform: translateY(0);
+}
+
+/* --- Checkbox Stili (global.css'ten buraya taşındı) --- */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    user-select: none;
+    color: var(--text-color-light);
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--current-primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

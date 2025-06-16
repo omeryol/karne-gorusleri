@@ -9,7 +9,9 @@ import {
     filterUnassignedBtn, selectedStudentNameDisplay, commentTextarea, assignCommentBtn, // Yorum düzenleyici elementleri
     headerClassSelect, headerTermSelect, commentProfileList, profileSearchInput, // Header'daki ve yorum şablonu bölümündeki yeni ID'ler
     copyCommentBtn, clearCommentEditorBtn, autoClearCommentCheckbox, remainingCharsSpan,
-    addNewStudentBtn, manageStudentsBtn // Yeni öğrenci ekleme/yönetme butonları
+    prevStudentBtn, nextStudentBtn, // Yeni eklenen önceki/sonraki öğrenci butonları
+    addNewStudentBtn, manageStudentsBtn, // Yeni öğrenci ekleme/yönetme butonları
+    viewAllAssignmentsBtn // Yorum düzenleyici altındaki tüm atamaları görüntüle butonu
 } from './ui-elements.js';
 
 /*
@@ -304,7 +306,7 @@ export function selectStudentForAssignmentItem(studentItemElement) {
 }
 
 // Hızlı öğrenci navigasyonu (Editor panelindeki önceki/sonraki butonları)
-function navigateStudent(direction) {
+export function navigateStudent(direction) {
     console.log(`[comments-tab.js] navigateStudent çağrıldı. Yön: ${direction === 1 ? 'Sonraki' : 'Önceki'}`);
     const currentStudentItems = Array.from(studentListContainer.querySelectorAll('.student-item')); // Yeni ID
     if (currentStudentItems.length === 0) {
@@ -370,16 +372,16 @@ export function initializeCommentsTabListeners() {
         }
     });
 
-    // Yorum düzenleme alanındaki butonlar
+    // Öğrenci navigasyon butonları (Öğrenci Listesi Panelinde)
+    if (prevStudentBtn) prevStudentBtn.addEventListener('click', () => navigateStudent(-1));
+    if (nextStudentBtn) nextStudentBtn.addEventListener('click', () => navigateStudent(1));
+
+    // Yorum düzenleyici alanındaki butonlar
     assignCommentBtn.addEventListener('click', assignCommentToStudent);
     copyCommentBtn.addEventListener('click', copyCommentToClipboard);
     clearCommentEditorBtn.addEventListener('click', clearCommentEditor);
     autoClearCommentCheckbox.addEventListener('change', saveData);
-
-    // Öğrenci navigasyon butonları (Yorum düzenleyici panelinde)
-    document.getElementById('prev-student-btn-editor').addEventListener('click', () => navigateStudent(-1)); // Yeni ID
-    document.getElementById('next-student-btn-editor').addEventListener('click', () => navigateStudent(1)); // Yeni ID
-    document.getElementById('view-all-assignments-btn-editor').addEventListener('click', viewAllAssignments); // Yeni ID
+    if (viewAllAssignmentsBtn) viewAllAssignmentsBtn.addEventListener('click', viewAllAssignments);
 
     // Yorum şablonları filtreleri ve arama
     headerClassSelect.addEventListener('change', () => { // Yeni ID
@@ -398,7 +400,7 @@ export function initializeCommentsTabListeners() {
     commentTextarea.addEventListener('input', updateCharCount);
 
     // Yeni öğrenci ekle ve öğrenci yönetimi butonları için listener'lar
-    addNewStudentBtn.addEventListener('click', () => {
+    if (addNewStudentBtn) addNewStudentBtn.addEventListener('click', () => {
         // Modalı aç ve 'Öğrenci Ekle' sekmesini aktif et
         const studentManagementModal = document.getElementById('student-management-modal');
         if (studentManagementModal) {
@@ -410,7 +412,7 @@ export function initializeCommentsTabListeners() {
         }
     });
 
-    manageStudentsBtn.addEventListener('click', () => {
+    if (manageStudentsBtn) manageStudentsBtn.addEventListener('click', () => {
         // Modalı aç ve 'Öğrencileri Görüntüle / Sil' sekmesini aktif et
         const studentManagementModal = document.getElementById('student-management-modal');
         if (studentManagementModal) {
