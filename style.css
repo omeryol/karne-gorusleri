@@ -87,7 +87,7 @@ header {
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     transition: background-color 0.3s ease;
-
+    
     /* Sticky Header */
     position: sticky;
     top: 0;
@@ -105,7 +105,7 @@ header h1 {
     width: 100%;
     padding: 0 25px;
     box-sizing: border-box;
-
+    
     color: var(--default-header-text);
     font-family: 'Georgia', serif;
     letter-spacing: 1.5px;
@@ -191,7 +191,7 @@ header {
     min-height: 55px;
     overflow-x: hidden;
     flex-shrink: 0;
-
+    
     /* Dashboard'u da sabit yap (Header'ın altına) */
     position: sticky;
     top: var(--header-height); /* Dinamik olarak header yüksekliği kadar aşağıda sabitlenecek */
@@ -414,6 +414,31 @@ section h2 {
     font-weight: 700;
     color: #0d47a1;
 }
+
+/* YENİ EKLENEN: Yorum Düzenleyici altındaki öğrenci navigasyon ve görüntüleme kontrolleri */
+.student-editor-controls {
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşmeleri için */
+    gap: 10px;
+    margin-bottom: 15px; /* textarea ile arasına boşluk */
+    justify-content: space-between;
+}
+
+.student-editor-controls .icon-nav-button {
+    flex-grow: 1;
+    flex-basis: calc(50% - 5px); /* İkişerli hizalama */
+    max-width: calc(50% - 5px);
+    height: 38px;
+    margin-top: 0; /* Üstteki buton stili için varsayılan margin'i sıfırla */
+    font-size: 0.95em; /* Daha küçük font */
+}
+
+.student-editor-controls #view-all-assignments-btn-editor {
+    flex-basis: 100%; /* Bu buton tam genişlikte olsun */
+    max-width: 100%;
+    margin-top: 0; /* Diğer butonlarla aynı hizada başlaması için */
+}
+
 
 /* --- Yorum Alanı --- */
 #comment-textarea {
@@ -638,7 +663,7 @@ button:active {
     background-color: var(--current-hover-color, #3700b3);
 }
 
-#view-all-assignments-btn {
+#view-all-assignments-btn { /* Kenar çubuğundaki bu buton şimdi sadece bu stil için kalacak */
     width: 100%;
     margin-top: 15px;
 }
@@ -1154,7 +1179,7 @@ body[class*="class-"] #student-management-tab {
 }
 
 
-/* --- HELP MODAL STILLERİ (eski welcome modal'dan dönüştürüldü) --- */
+/* --- HELP MODAL STILLERI (eski welcome modal'dan dönüştürüldü) --- */
 #help-modal .modal-content {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2f7 100%);
     border: 2px solid var(--default-accent-color);
@@ -1381,6 +1406,13 @@ body[class*="class-"] #student-management-tab {
     }
     /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
     .clear-all-students button {
+        max-width: 100%;
+    }
+
+    /* Yorum Düzenleyici altındaki yeni butonlar için mobil ayar */
+    .student-editor-controls .icon-nav-button,
+    .student-editor-controls #view-all-assignments-btn-editor {
+        flex-basis: 100%; /* Mobil'de tam genişlikte olsun */
         max-width: 100%;
     }
 }
