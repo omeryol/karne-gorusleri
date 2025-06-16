@@ -85,7 +85,7 @@
                             <input type="checkbox" id="auto-clear-comment">
                             <label for="auto-clear-comment">Yorum atadıktan sonra temizle</label>
                         </div>
-                        <button id="assign-comment-btn-editor">Yorumu Ata / Güncelle</button> 
+                        <button id="assign-comment-btn-editor">Yorumu Ata / Güncelle</button>
                         <button id="copy-comment-btn">Yorumu Kopyala</button>
                         <button id="clear-comment-editor-btn" class="secondary-button">Yorumu Temizle</button>
                     </section>
@@ -220,21 +220,16 @@
         </div>
     </div>
 
+    <div id="all-assignments-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-all-assignments-modal">&times;</span>
+            <h3>Atanan Tüm Karne Yorumları</h3>
+            <div id="all-assigned-comments-list">
+                </div>
+            <button id="close-all-assignments-modal-btn">Kapat</button>
+        </div>
+    </div>
+
 
     <script src="comment_templates_data.js"></script>
-    <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('Service Worker başarıyla kaydedildi:', registration);
-                    })
-                    .catch(error => {
-                        console.error('Service Worker kaydı başarısız oldu:', error);
-                    });
-            });
-        }
-    </script>
-</body>
-</html>
+    <script src="
