@@ -5,15 +5,14 @@ import { showToast } from './utils.js';
 import { loadData, saveData } from './data-management.js';
 import { updateDashboardCards } from './dashboard.js';
 import { initializeModalListeners } from './modals.js';
-import { initializeCommentsTabListeners, loadCommentTemplates, loadStudentListForAssignment } from './comments-tab.js';
+import { initializeCommentsTabListeners, loadCommentTemplates, loadStudentListForAssignment, updateCharCount } from './comments-tab.js'; // updateCharCount eklendi
 import { initializeStudentManagementTabListeners, updateManagedStudentListUI } from './student-management-tab.js';
-import { tabButtons } from './ui-elements.js';
+import { tabButtons, classSelect, termSelect } from './ui-elements.js'; // classSelect ve termSelect eklendi
 
-// Global scope'tan commentsData'ya erişim sağlamak için (eğer comment_templates_data.js module olarak export edilmiyorsa)
-// window.commentsData'ya diğer modüllerde erişmek daha güvenli.
 
 // Sekme değiştirme fonksiyonu
 function switchTab(tabId) {
+    console.log(`[main.js] Sekme değiştiriliyor: ${tabId}`);
     // Tüm sekme içeriklerini gizle
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
@@ -29,11 +28,12 @@ function switchTab(tabId) {
 
     // Sekmeye özel yüklemeler/güncellemeler
     if (tabId === 'comments-tab') {
-        // Yorum atama sekmesine geçildiğinde öğrenci listesini ve yorum şablonlarını yeniden yükle
+        console.log('[main.js] Yorum Atama sekmesi aktif. Öğrenci listesi ve yorum şablonları yükleniyor.');
         loadStudentListForAssignment(document.getElementById('filter-unassigned-btn').classList.contains('active-filter'));
         loadCommentTemplates();
+        updateCharCount(); // Yorum alanı için karakter sayacını güncelledik
     } else if (tabId === 'student-management-tab') {
-        // Öğrenci yönetimi sekmesine geçildiğinde öğrenci listesini yeniden yükle
+        console.log('[main.js] Öğrenci Yönetimi sekmesi aktif. Öğrenci listesi güncelleniyor.');
         updateManagedStudentListUI();
     }
     saveData(); // Sekme değişimini kaydet
@@ -42,8 +42,9 @@ function switchTab(tabId) {
 
 // Tema renklerini güncelleyen fonksiyon
 function updateThemeColors() {
-    const selectedClass = document.getElementById('class-select').value;
-    const selectedTerm = document.getElementById('term-select').value;
+    console.log('[main.js] Tema renkleri güncelleniyor.');
+    const selectedClass = classSelect.value; // ui-elements'den geldi
+    const selectedTerm = termSelect.value; // ui-elements'den geldi
 
     document.body.className = ''; // Mevcut sınıfı temizle
 
@@ -54,23 +55,27 @@ function updateThemeColors() {
 
 // Uygulama yüklendiğinde çalışacak ana fonksiyon
 document.addEventListener('DOMContentLoaded', () => {
-    // UI elementlerini initialize eden fonksiyonları çağır (Eğer ui-elements.js sadece export ediyorsa, buradan çağrıya gerek yok)
-    // Eğer ui-elements.js içinde DOM manipülasyonu yapan fonksiyonlar olsaydı, onları burada çağırırdık.
+    console.log('[main.js] DOM içeriği yüklendi. Uygulama başlatılıyor...');
 
     // Verileri Local Storage'dan yükle
     loadData();
+    console.log('[main.js] Veriler yüklendi.');
 
     // Dashboard kartlarını güncelle
     updateDashboardCards();
+    console.log('[main.js] Dashboard güncellendi.');
 
     // Modal event dinleyicilerini başlat
     initializeModalListeners();
+    console.log('[main.js] Modal dinleyicileri başlatıldı.');
 
     // Yorum sekmesi event dinleyicilerini başlat
     initializeCommentsTabListeners();
+    console.log('[main.js] Yorum sekmesi dinleyicileri başlatıldı.');
 
     // Öğrenci Yönetimi sekmesi event dinleyicilerini başlat
     initializeStudentManagementTabListeners();
+    console.log('[main.js] Öğrenci Yönetimi sekmesi dinleyicileri başlatıldı.');
 
     // Sekme navigasyon event dinleyicileri
     tabButtons.forEach(button => {
@@ -83,21 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeTab = localStorage.getItem('activeTab');
     if (activeTab) {
         switchTab(activeTab + '-tab');
+        console.log(`[main.js] Kayıtlı aktif sekme yüklendi: ${activeTab}`);
     } else {
         switchTab('comments-tab'); // Varsayılan sekme
+        console.log('[main.js] Varsayılan sekme: Yorum Atama.');
     }
 
     // Tema renklerini yükle (data-management'dan gelen seçili sınıf ve döneme göre)
     updateThemeColors();
+    console.log('[main.js] Tema renkleri ayarlandı.');
 
     // Service Worker kaydı (zaten index.html'de global script olarak mevcut, burada tekrar etmeye gerek yok)
-    // Ancak modüler yapıya uygun olması için bu kısım burada değil, doğrudan index.html'de kalmalı.
 });
 
 // window objesine global olarak ihtiyaç duyulan fonksiyonları veya değişkenleri ekleyebiliriz
 // Bu, özellikle comment_templates_data.js gibi modül olmayan harici scriptler için faydalı olabilir.
 // Ancak, daha iyi uygulama, commentsData'yı da bir modül yapıp import etmektir.
 // Şimdilik, comments-tab.js içinde window.commentsData kullanıldığı için bu global erişimi koruyoruz.
-
-// Dışa aktarılacak bir şey yoksa bile dosyanın bir modül olduğunu belirtmek için boş export kullanılabilir
-// export {};
