@@ -1379,6 +1379,10 @@ body[class*="class-"] #student-management-tab {
         font-size: 0.95em;
         height: auto;
     }
+    /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
+    .clear-all-students button {
+        max-width: 100%;
+    }
 }
 
 
