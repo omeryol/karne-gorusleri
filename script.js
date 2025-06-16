@@ -14,10 +14,10 @@ const pendingCommentsCountSpan = document.getElementById('pending-comments-count
 const completionRateSpan = document.getElementById('completion-rate');
 
 // Comments Tab (Yorum Atama)
-const sidebarClassFilter = document.getElementById('sidebar-class-filter'); 
-const sidebarSubClassFilter = document.getElementById('sidebar-subclass-filter'); 
-const studentSearchInput = document.getElementById('student-search-input'); 
-const selectedStudentNameDisplay = document.getElementById('selected-student-name-display'); 
+const sidebarClassFilter = document.getElementById('sidebar-class-filter');
+const sidebarSubClassFilter = document.getElementById('sidebar-subclass-filter');
+const studentSearchInput = document.getElementById('student-search-input');
+const selectedStudentNameDisplay = document.getElementById('selected-student-name-display');
 
 const classSelect = document.getElementById('class-select');
 const termSelect = document.getElementById('term-select');
@@ -28,7 +28,7 @@ const remainingCharsSpan = document.getElementById('remaining-chars');
 const copyCommentBtn = document.getElementById('copy-comment-btn');
 const clearCommentEditorBtn = document.getElementById('clear-comment-editor-btn');
 const autoClearCommentCheckbox = document.getElementById('auto-clear-comment');
-const studentListDiv = document.getElementById('student-list'); 
+const studentListDiv = document.getElementById('student-list');
 const viewAllAssignmentsBtn = document.getElementById('view-all-assignments-btn');
 const appContainer = document.getElementById('app-container');
 
@@ -50,6 +50,13 @@ const modalPrevCommentBtn = document.getElementById('modal-prev-comment-btn'); /
 const modalNextCommentBtn = document.getElementById('modal-next-comment-btn'); // Yeni Sonraki Yorum Butonu
 const modalCloseButtons = document.querySelectorAll('.modal .close-button'); // Tüm modal kapatma butonları
 
+// Atanan Tüm Yorumları Görüntüleme Modalı
+const allAssignmentsModal = document.getElementById('all-assignments-modal');
+const allAssignedCommentsList = document.getElementById('all-assigned-comments-list');
+const closeAllAssignmentsModalBtn = document.getElementById('close-all-assignments-modal'); // 'x' butonu
+const closeAllAssignmentsModalBtnBottom = document.getElementById('close-all-assignments-modal-btn'); // Kapat butonu
+
+
 // Kullanım Kılavuzu Modalı (Eski Welcome Modal yerine)
 const helpModal = document.getElementById('help-modal'); // welcomeModal yerine helpModal
 const openHelpModalBtn = document.getElementById('open-help-modal-btn'); // Yeni yardım butonu
@@ -58,19 +65,19 @@ const closeHelpModalBtn = document.getElementById('close-help-modal'); // Yardı
 
 // Student Management Tab (Öğrenci Yönetimi)
 const studentNamesTextarea = document.getElementById('student-names-textarea');
-const newStudentClassSelect = document.getElementById('new-student-class-select'); 
-const newStudentSubClassSelect = document.getElementById('new-student-subclass-select'); 
+const newStudentClassSelect = document.getElementById('new-student-class-select');
+const newStudentSubClassSelect = document.getElementById('new-student-subclass-select');
 const loadNamesFromTextBtn = document.getElementById('load-names-from-text-btn');
 const studentListUpload = document.getElementById('student-list-upload');
-const clearAllStudentsBtn = document.getElementById('clear-all-students-btn'); 
+const clearAllStudentsBtn = document.getElementById('clear-all-students-btn');
 const clearLocalStorageBtn = document.getElementById('clear-localstorage-btn'); // Yeni Local Storage temizleme tuşu
-const managementClassFilter = document.getElementById('management-class-filter'); 
-const managementSubClassFilter = document.getElementById('management-subclass-filter'); 
-const managementStudentSearchInput = document.getElementById('management-student-search-input'); 
-const managedStudentListDiv = document.getElementById('managed-student-list'); 
+const managementClassFilter = document.getElementById('management-class-filter');
+const managementSubClassFilter = document.getElementById('management-subclass-filter');
+const managementStudentSearchInput = document.getElementById('management-student-search-input');
+const managedStudentListDiv = document.getElementById('managed-student-list');
 
 // Bildirim alanı
-const toastContainer = document.getElementById('toast-container'); 
+const toastContainer = document.getElementById('toast-container');
 
 // Veri Yapıları (Local Storage'dan yüklenecek)
 let students = []; // Tüm öğrenci verileri: { id: "benzersizID", fullName: "Ali Yılmaz", firstName: "Ali", class: "5", subClass: "A", num: 1 }
@@ -84,13 +91,13 @@ function showToast(message, type = 'info') {
     const toast = document.createElement('div');
     toast.classList.add('toast');
     toast.textContent = message;
-    
+
     if (type === 'success') {
-        toast.style.backgroundColor = '#28a745'; 
+        toast.style.backgroundColor = '#28a745';
     } else if (type === 'error') {
-        toast.style.backgroundColor = '#dc3545'; 
+        toast.style.backgroundColor = '#dc3545';
     } else {
-        toast.style.backgroundColor = '#333'; 
+        toast.style.backgroundColor = '#333';
     }
 
     toastContainer.appendChild(toast);
@@ -102,17 +109,17 @@ function showToast(message, type = 'info') {
     setTimeout(() => {
         toast.classList.remove('show');
         toast.addEventListener('transitionend', () => toast.remove());
-    }, 3000); 
+    }, 3000);
 }
 
 function getFirstName(fullName) {
     if (!fullName) return '';
     const parts = fullName.trim().split(' ');
-    return parts[0]; 
+    return parts[0];
 }
 
 function generateUniqueId() {
-    return Date.now().toString(36) + Math.random().toString(36).substr(2, 9); 
+    return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
 }
 
 // --- Ana Uygulama Mantığı Fonksiyonları ---
@@ -163,7 +170,7 @@ function selectCommentProfile(commentText, clickedElement, templateId = null) {
     } else {
         currentCommentTemplate = null; // Manuel girilen yorumlar için şablon yok
     }
-    
+
     // Modalı kapat (eğer açıksa)
     commentPreviewModal.style.display = 'none';
 }
@@ -202,12 +209,12 @@ function assignCommentToStudent() { // Artık event parametresi doğrudan alınm
     showToast(`${selectedStudent.fullName} öğrencisine yorum atandı/güncellendi.`, 'success');
     saveData();
     // Öğrenci listesini ve ilgili butonları güncelleyen satırı çağır
-    loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); 
-    updateDashboardCards(); 
+    loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter'));
+    updateDashboardCards();
 
     if (autoClearCommentCheckbox.checked) {
         clearCommentEditor();
-        selectedStudent = null; 
+        selectedStudent = null;
         selectedStudentNameDisplay.textContent = 'Yok';
     }
 }
@@ -226,35 +233,35 @@ function switchTab(tabId) {
 
     if (tabId === 'comments-tab') {
         loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); // Filtre durumunu koru
-        loadCommentTemplates(); 
+        loadCommentTemplates();
     } else if (tabId === 'student-management-tab') {
-        updateManagedStudentListUI(); 
+        updateManagedStudentListUI();
     }
-    saveData(); 
-    updateDashboardCards(); 
+    saveData();
+    updateDashboardCards();
 }
 
 // Yorum atama sekmesindeki öğrenci listesini yükleme/filtreleme
 function loadStudentListForAssignment(filterUnassigned = false) { // filterUnassigned parametresi eklendi
     const filterClass = sidebarClassFilter.value;
-    const filterSubClass = sidebarSubClassFilter.value; 
+    const filterSubClass = sidebarSubClassFilter.value;
     const searchTerm = studentSearchInput.value.toLowerCase();
 
-    studentListDiv.innerHTML = ''; 
+    studentListDiv.innerHTML = '';
 
     const filteredStudents = students.filter(student => {
         const matchesClass = filterClass === 'all' || student.class === filterClass;
-        const matchesSubClass = filterSubClass === 'all' || student.subClass === filterSubClass; 
+        const matchesSubClass = filterSubClass === 'all' || student.subClass === filterSubClass;
         const matchesSearch = student.fullName.toLowerCase().includes(searchTerm) ||
                               student.firstName.toLowerCase().includes(searchTerm);
         const isAssigned = studentAssignments[student.fullName] && studentAssignments[student.fullName].trim() !== '';
-        
+
         // Eğer filterUnassigned true ise, sadece atanmamışları göster
         if (filterUnassigned) {
             return matchesClass && matchesSubClass && matchesSearch && !isAssigned;
         }
-        return matchesClass && matchesSubClass && matchesSearch; 
-    }).sort((a, b) => { 
+        return matchesClass && matchesSubClass && matchesSearch;
+    }).sort((a, b) => {
         if (a.class === b.class) {
             if (a.subClass === b.subClass) {
                 return a.num - b.num;
@@ -266,7 +273,7 @@ function loadStudentListForAssignment(filterUnassigned = false) { // filterUnass
 
     if (filteredStudents.length === 0) {
         studentListDiv.innerHTML = '<p>Filtreye uygun öğrenci bulunamadı.</p>';
-        selectedStudentNameDisplay.textContent = 'Yok'; 
+        selectedStudentNameDisplay.textContent = 'Yok';
         selectedStudent = null;
         return;
     }
@@ -274,9 +281,9 @@ function loadStudentListForAssignment(filterUnassigned = false) { // filterUnass
     filteredStudents.forEach(student => {
         const studentItem = document.createElement('div');
         studentItem.classList.add('student-item');
-        studentItem.dataset.id = student.id; 
+        studentItem.dataset.id = student.id;
 
-        const assignedComment = studentAssignments[student.fullName] || ''; 
+        const assignedComment = studentAssignments[student.fullName] || '';
         const previewText = assignedComment ? assignedComment.substring(0, 50) + (assignedComment.length > 50 ? '...' : '') : 'Yorum atanmadı';
         const buttonText = assignedComment ? 'Güncelle' : 'Ata';
 
@@ -286,7 +293,7 @@ function loadStudentListForAssignment(filterUnassigned = false) { // filterUnass
                 <span class="student-full-name">${student.fullName} (${student.class}${student.subClass})</span> </span>
             <span class="student-comment-preview">${previewText}</span>
             <button class="assign-btn" data-student-id="${student.id}">${buttonText}</button> `;
-        
+
         studentListDiv.appendChild(studentItem);
     });
 
@@ -322,12 +329,12 @@ function loadCommentTemplates() {
     const selectedTerm = termSelect.value;
     const searchTerm = profileSearchInput.value.toLowerCase();
 
-    profileList.innerHTML = ''; 
+    profileList.innerHTML = '';
 
     if (typeof commentsData !== 'undefined' && commentsData[selectedClass] && commentsData[selectedClass][selectedTerm]) {
         const templates = commentsData[selectedClass][selectedTerm];
         const filteredTemplates = templates.filter(template => {
-            return template.title.toLowerCase().includes(searchTerm) || 
+            return template.title.toLowerCase().includes(searchTerm) ||
                    template.comment.toLowerCase().includes(searchTerm);
         });
 
@@ -340,7 +347,7 @@ function loadCommentTemplates() {
                 const profileItem = document.createElement('div');
                 profileItem.classList.add('profile-item');
                 profileItem.dataset.id = template.id;
-                profileItem.textContent = template.title; 
+                profileItem.textContent = template.title;
                 profileItem.addEventListener('click', () => {
                     // Yorum modalını aç
                     openCommentPreviewModal(template);
@@ -357,7 +364,7 @@ function loadCommentTemplates() {
 function openCommentPreviewModal(template) {
     currentCommentTemplate = template; // Seçili şablonu kaydet
     modalCommentTitle.textContent = template.title;
-    
+
     // Eğer öğrenci seçili ise, yorumdaki yer tutucuyu doldur
     if (selectedStudent) {
         modalCommentText.textContent = template.comment.replace(/\[Öğrenci Adı\]/g, selectedStudent.firstName);
@@ -411,7 +418,7 @@ function navigateCommentModal(direction) {
     let currentIndex = -1;
     if (currentCommentTemplate) {
         currentIndex = templates.findIndex(t => t.id === currentCommentTemplate.id);
-    } 
+    }
     // Eğer currentCommentTemplate yoksa veya listeden seçilmemişse,
     // şu anki profil listesindeki aktif yorumu bulmaya çalış
     if (currentIndex === -1) {
@@ -422,7 +429,7 @@ function navigateCommentModal(direction) {
     }
     // Hala -1 ise, varsayılan olarak ilk veya son yoruma git (eğer hiç yorum seçilmemişse)
     if (currentIndex === -1) {
-        currentIndex = (direction === 1) ? 0 : templates.length - 1; 
+        currentIndex = (direction === 1) ? 0 : templates.length - 1;
     }
 
 
@@ -444,7 +451,7 @@ function navigateCommentModal(direction) {
             modalCommentText.textContent = nextTemplate.comment;
         }
         currentCommentTemplate = nextTemplate; // currentCommentTemplate'i güncelle
-        
+
         // Yorum listesinde ilgili item'ı aktif yap ve scroll et
         const profileItem = profileList.querySelector(`.profile-item[data-id="${nextTemplate.id}"]`);
         if (profileItem) {
@@ -480,6 +487,10 @@ window.addEventListener('click', (event) => {
     if (event.target === helpModal) {
         helpModal.style.display = 'none';
     }
+    // allAssignmentsModal için dış tıklama
+    if (event.target === allAssignmentsModal) {
+        allAssignmentsModal.style.display = 'none';
+    }
 });
 
 
@@ -495,8 +506,8 @@ function updateCharCount() {
 }
 
 function copyCommentToClipboard() {
-    commentTextarea.select(); 
-    document.execCommand('copy'); 
+    commentTextarea.select();
+    document.execCommand('copy');
     showToast('Yorum panoya kopyalandı!', 'success');
 }
 
@@ -504,7 +515,7 @@ function copyCommentToClipboard() {
 function addNewStudentsFromTextarea() {
     const text = studentNamesTextarea.value;
     const assignedClass = newStudentClassSelect.value;
-    const assignedSubClass = newStudentSubClassSelect.value; 
+    const assignedSubClass = newStudentSubClassSelect.value;
 
     if (!assignedClass) {
         showToast('Lütfen öğrencilerin sınıfını seçin!', 'error');
@@ -534,8 +545,8 @@ function addNewStudentsFromTextarea() {
                 fullName: fullName,
                 firstName: firstName,
                 class: assignedClass,
-                subClass: assignedSubClass, 
-                num: 0 
+                subClass: assignedSubClass,
+                num: 0
             };
             students.push(newStudent);
             addedCount++;
@@ -546,16 +557,16 @@ function addNewStudentsFromTextarea() {
 
     saveData();
     updateManagedStudentListUI();
-    updateDashboardCards(); 
+    updateDashboardCards();
     if (addedCount > 0) {
         showToast(`${addedCount} öğrenci listeye eklendi!`, 'success');
     } else {
         showToast('Yeni öğrenci eklenmedi (zaten mevcut olabilirler).', 'info');
     }
-    studentNamesTextarea.value = ''; 
+    studentNamesTextarea.value = '';
 }
 
-// CSV dosyasından öğrenci listesi yükleme 
+// CSV dosyasından öğrenci listesi yükleme
 function loadStudentListFromFile(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -572,8 +583,8 @@ function loadStudentListFromFile(event) {
             return;
         }
 
-        const assignedClass = newStudentClassSelect.value || '5'; 
-        const assignedSubClass = newStudentSubClassSelect.value || 'A'; 
+        const assignedClass = newStudentClassSelect.value || '5';
+        const assignedSubClass = newStudentSubClassSelect.value || 'A';
 
         let addedCount = 0;
         names.forEach(fullName => {
@@ -585,8 +596,8 @@ function loadStudentListFromFile(event) {
                     fullName: fullName,
                     firstName: firstName,
                     class: assignedClass,
-                    subClass: assignedSubClass, 
-                    num: 0 
+                    subClass: assignedSubClass,
+                    num: 0
                 };
                 students.push(newStudent);
                 addedCount++;
@@ -597,13 +608,13 @@ function loadStudentListFromFile(event) {
 
         saveData();
         updateManagedStudentListUI();
-        updateDashboardCards(); 
+        updateDashboardCards();
         if (addedCount > 0) {
             showToast(`${addedCount} öğrenci CSV dosyasından listeye eklendi! (Sınıf: ${assignedClass}${assignedSubClass})`, 'success');
         } else {
             showToast('CSV dosyasından yeni öğrenci eklenmedi.', 'info');
         }
-        studentListUpload.value = ''; 
+        studentListUpload.value = '';
     };
     reader.readAsText(file);
 }
@@ -616,7 +627,7 @@ function reassignStudentNumbers() {
         const [cls, subCls] = combo.split('-');
         let currentNum = 1;
         students.filter(s => s.class === cls && s.subClass === subCls)
-                .sort((a,b) => a.num - b.num) 
+                .sort((a,b) => a.num - b.num)
                 .forEach(student => {
                     student.num = currentNum++;
                 });
@@ -655,7 +666,7 @@ function handleStudentClickInAssignmentList(event) {
         // Seçili öğrenciyi vurgula
         selectStudentForAssignmentItem(studentItem);
 
-    } else { 
+    } else {
         // Eğer assign-btn değilse, sadece öğrenciyi seç
         selectStudentForAssignmentItem(studentItem);
     }
@@ -673,8 +684,8 @@ function selectStudentForAssignmentItem(studentItemElement) {
     selectedStudent = students.find(s => s.id === studentId);
 
     if (selectedStudent) {
-        selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`; 
-        
+        selectedStudentNameDisplay.textContent = `${selectedStudent.fullName} (${selectedStudent.class}${selectedStudent.subClass}. Sınıf)`;
+
         // Eğer seçili öğrencinin atanmış bir yorumu varsa, onu yükle
         const assignedCommentForSelected = studentAssignments[selectedStudent.fullName];
         if (assignedCommentForSelected) {
@@ -689,7 +700,7 @@ function selectStudentForAssignmentItem(studentItemElement) {
         updateCharCount();
     } else {
         selectedStudentNameDisplay.textContent = 'Yok';
-        commentTextarea.value = ''; 
+        commentTextarea.value = '';
         updateCharCount();
         assignCommentBtnEditor.textContent = 'Yorumu Ata / Güncelle'; // Öğrenci seçili değilse varsayılan
     }
@@ -720,52 +731,43 @@ function navigateStudent(direction) {
 
 // Atanan tüm yorumları görüntüleme (yeni pencerede)
 function viewAllAssignments() {
-    let output = `
-        <!DOCTYPE html>
-        <html lang="tr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Atanan Karne Yorumları</title>
-            <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                h1 { color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
-                .student-entry { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
-                .student-entry:last-child { border-bottom: none; }
-                h2 { margin-top: 0; margin-bottom: 5px; color: #333; font-size: 1.2em; }
-                p { margin-top: 5px; color: #555; line-height: 1.5; white-space: pre-wrap; }
-            </style>
-        </head>
-        <body>
-            <h1>Atanan Karne Yorumları Listesi</h1>
-    `;
+    allAssignedCommentsList.innerHTML = ''; // Önceki içeriği temizle
 
     const sortedStudentsWithComments = students.filter(student => studentAssignments[student.fullName] && studentAssignments[student.fullName].trim() !== '') // Boş yorumları dahil etme
-                                               .sort((a, b) => a.class.localeCompare(b.class) || a.subClass.localeCompare(b.subClass) || a.num - b.num); 
+                                               .sort((a, b) => a.class.localeCompare(b.class) || a.subClass.localeCompare(b.subClass) || a.num - b.num);
 
 
     if (sortedStudentsWithComments.length === 0) {
-        output += '<p>Henüz hiçbir öğrenciye yorum atanmadı.</p>';
+        allAssignedCommentsList.innerHTML = '<p>Henüz hiçbir öğrenciye yorum atanmadı.</p>';
     } else {
         sortedStudentsWithComments.forEach(student => {
             const assignedComment = studentAssignments[student.fullName];
-            output += `
-                <div class="student-entry">
-                    <h2>${student.fullName} (${student.class}${student.subClass}. Sınıf - No: ${student.num})</h2> 
-                    <p>${assignedComment}</p>
+            const studentEntry = document.createElement('div');
+            studentEntry.classList.add('student-entry-modal'); // Yeni bir sınıf adı
+            studentEntry.innerHTML = `
+                <div class="student-entry-header">
+                    <h2>${student.fullName} (${student.class}${student.subClass}. Sınıf - No: ${student.num})</h2>
+                    <button class="copy-modal-comment-btn" data-comment="${assignedComment}">Kopyala</button>
                 </div>
+                <p>${assignedComment}</p>
             `;
+            allAssignedCommentsList.appendChild(studentEntry);
+        });
+
+        // Yeni kopyala butonları için event listenerları ekle (event delegation kullanarak)
+        allAssignedCommentsList.querySelectorAll('.copy-modal-comment-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const commentToCopy = event.target.dataset.comment;
+                navigator.clipboard.writeText(commentToCopy).then(() => {
+                    showToast('Yorum panoya kopyalandı!', 'success');
+                }).catch(err => {
+                    console.error('Yorum kopyalanamadı:', err);
+                    showToast('Yorum kopyalanırken bir hata oluştu.', 'error');
+                });
+            });
         });
     }
-
-    output += `
-        </body>
-        </html>
-    `;
-
-    const newWindow = window.open('', '_blank');
-    newWindow.document.write(output);
-    newWindow.document.close();
+    allAssignmentsModal.style.display = 'flex'; // Modalı göster
 }
 
 
@@ -786,13 +788,13 @@ function saveData() {
     localStorage.setItem('selectedClass', classSelect.value);
     localStorage.setItem('selectedTerm', termSelect.value);
     localStorage.setItem('autoClearChecked', autoClearCommentCheckbox.checked);
-    localStorage.setItem('activeTab', document.querySelector('.tab-button.active').dataset.tab); 
-    
+    localStorage.setItem('activeTab', document.querySelector('.tab-button.active').dataset.tab);
+
     localStorage.setItem('sidebarClassFilter', sidebarClassFilter.value);
     localStorage.setItem('sidebarSubClassFilter', sidebarSubClassFilter.value);
     localStorage.setItem('managementClassFilter', managementClassFilter.value);
     localStorage.setItem('managementSubClassFilter', managementSubClassFilter.value);
-    
+
     // "Uygulamayı Sıfırla" butonu Local Storage'ı temizlediği için burada 'doNotShowWelcomeAgain' kaydını kaldırdık.
     // Ancak, helpModal'ı kapatırken bir ayar kaydetmiyoruz.
     // 'doNotShowWelcomeAgain' Local Storage'dan kaldırılmış olmalı, dolayısıyla her zaman gösterilecektir.
@@ -815,7 +817,7 @@ function loadData() {
     if (savedAssignments) {
         studentAssignments = JSON.parse(savedAssignments);
     }
-    
+
     if (!students || !Array.isArray(students)) {
         students = [];
     }
@@ -858,7 +860,7 @@ function loadData() {
 
     const activeTab = localStorage.getItem('activeTab');
     if (activeTab) {
-        switchTab(activeTab + '-tab'); 
+        switchTab(activeTab + '-tab');
     } else {
         switchTab('comments-tab'); // Varsayılan sekme
     }
@@ -896,25 +898,25 @@ function loadData() {
     }
 
 
-    updateThemeColors(); 
+    updateThemeColors();
 }
 
 // Öğrenci yönetim sekmesindeki listeyi güncelleme (Silme/Numara Güncelleme için)
 function updateManagedStudentListUI() {
     const filterClass = managementClassFilter.value;
-    const filterSubClass = managementSubClassFilter.value; 
+    const filterSubClass = managementSubClassFilter.value;
     const searchTerm = managementStudentSearchInput.value.toLowerCase();
 
-    managedStudentListDiv.innerHTML = '<p>Kaydedilmiş öğrenci yok.</p>'; 
+    managedStudentListDiv.innerHTML = '<p>Kaydedilmiş öğrenci yok.</p>';
 
     const filteredStudents = students.filter(student => {
         const matchesClass = filterClass === 'all' || student.class === filterClass;
-        const matchesSubClass = filterSubClass === 'all' || student.subClass === filterSubClass; 
+        const matchesSubClass = filterSubClass === 'all' || student.subClass === filterSubClass;
         const matchesSearch = student.fullName.toLowerCase().includes(searchTerm) ||
                               student.firstName.toLowerCase().includes(searchTerm) ||
                               String(student.num).includes(searchTerm);
-        return matchesClass && matchesSubClass && matchesSearch; 
-    }).sort((a, b) => { 
+        return matchesClass && matchesSubClass && matchesSearch;
+    }).sort((a, b) => {
         if (a.class === b.class) {
             if (a.subClass === b.subClass) {
                 return a.num - b.num;
@@ -925,7 +927,7 @@ function updateManagedStudentListUI() {
     });
 
     if (filteredStudents.length > 0) {
-        managedStudentListDiv.innerHTML = ''; 
+        managedStudentListDiv.innerHTML = '';
         filteredStudents.forEach(student => {
             const studentItem = document.createElement('div');
             studentItem.classList.add('managed-student-item');
@@ -935,7 +937,7 @@ function updateManagedStudentListUI() {
                 <div class="managed-student-info">
                     <span class="student-number">${student.num}</span>
                     <span>${student.fullName}</span>
-                    <span>(${student.class}${student.subClass}. Sınıf)</span> 
+                    <span>(${student.class}${student.subClass}. Sınıf)</span>
                 </div>
                 <div class="managed-student-actions">
                     <button class="delete-student-btn" data-id="${student.id}">Sil</button>
@@ -954,19 +956,19 @@ function deleteStudent(event) {
     const studentIdToDelete = targetButton.dataset.id;
     const studentToDelete = students.find(s => s.id === studentIdToDelete);
 
-    if (studentToDelete && confirm(`${studentToDelete.fullName} (${studentToDelete.class}${studentToDelete.subClass}) öğrencisini listeden silmek istediğinize emin misiniz? Bu işlem, atanan yorumunu da siler.`)) { 
+    if (studentToDelete && confirm(`${studentToDelete.fullName} (${studentToDelete.class}${studentToDelete.subClass}) öğrencisini listeden silmek istediğinize emin misiniz? Bu işlem, atanan yorumunu da siler.`)) {
         students = students.filter(s => s.id !== studentIdToDelete);
-        
+
         if (studentAssignments[studentToDelete.fullName]) {
             delete studentAssignments[studentToDelete.fullName];
         }
-        
+
         reassignStudentNumbers();
 
         saveData();
-        updateManagedStudentListUI(); 
-        loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')); 
-        updateDashboardCards(); 
+        updateManagedStudentListUI();
+        loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter'));
+        updateDashboardCards();
 
         if (selectedStudent && selectedStudent.id === studentIdToDelete) {
             selectedStudent = null;
@@ -990,7 +992,7 @@ function clearAllStudentData() {
         loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter'));
         clearCommentEditor();
         selectedStudentNameDisplay.textContent = 'Yok';
-        updateDashboardCards(); 
+        updateDashboardCards();
         showToast("Tüm öğrenci verileri başarıyla temizlendi.", 'success');
     }
 }
@@ -999,7 +1001,7 @@ function clearAllStudentData() {
 function clearAllLocalStorage() {
     if (confirm("UYARI: Bu işlem, tüm öğrenci verileri, atanan yorumlar ve uygulama ayarları dahil olmak üzere tarayıcınızda kayıtlı olan TÜM verileri silecektir. Bu işlem geri alınamaz! Devam etmek istiyor musunuz?")) {
         localStorage.clear(); // Tüm Local Storage'ı temizle
-        
+
         // Uygulamayı varsayılan durumuna getirmek için gerekli değişkenleri ve UI'ı sıfırla
         students = [];
         studentAssignments = {};
@@ -1017,10 +1019,10 @@ function clearAllLocalStorage() {
         managementClassFilter.value = 'all';
         managementSubClassFilter.value = 'all';
         managementStudentSearchInput.value = '';
-        
+
         // Öğrenci listelerini ve dashboard'ı güncelle
         updateManagedStudentListUI();
-        loadStudentListForAssignment(false); 
+        loadStudentListForAssignment(false);
         clearCommentEditor();
         selectedStudentNameDisplay.textContent = 'Yok';
         updateDashboardCards();
@@ -1047,7 +1049,7 @@ tabButtons.forEach(button => {
 sidebarClassFilter.addEventListener('change', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
 sidebarSubClassFilter.addEventListener('change', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
 studentSearchInput.addEventListener('input', () => loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter')));
-studentListDiv.addEventListener('click', handleStudentClickInAssignmentList); 
+studentListDiv.addEventListener('click', handleStudentClickInAssignmentList);
 viewAllAssignmentsBtn.addEventListener('click', viewAllAssignments);
 
 // Yorumu Ata / Güncelle butonu için event listener
@@ -1077,32 +1079,32 @@ classSelect.addEventListener('change', () => {
     updateThemeColors();
     loadCommentTemplates();
     saveData();
-    profileSearchInput.value = ''; 
+    profileSearchInput.value = '';
 });
 termSelect.addEventListener('change', () => {
     updateThemeColors();
     loadCommentTemplates();
     saveData();
-    profileSearchInput.value = ''; 
+    profileSearchInput.value = '';
 });
 profileSearchInput.addEventListener('input', loadCommentTemplates);
 
 commentTextarea.addEventListener('input', updateCharCount);
 copyCommentBtn.addEventListener('click', copyCommentToClipboard);
-clearCommentEditorBtn.addEventListener('click', clearCommentEditor); 
-autoClearCommentCheckbox.addEventListener('change', saveData); 
+clearCommentEditorBtn.addEventListener('click', clearCommentEditor);
+autoClearCommentCheckbox.addEventListener('change', saveData);
 
 // Student Management Tab Listeners
 loadNamesFromTextBtn.addEventListener('click', addNewStudentsFromTextarea);
 studentListUpload.addEventListener('change', loadStudentListFromFile);
-newStudentClassSelect.addEventListener('change', saveData); 
-newStudentSubClassSelect.addEventListener('change', saveData); 
-clearAllStudentsBtn.addEventListener('click', clearAllStudentData); 
+newStudentClassSelect.addEventListener('change', saveData);
+newStudentSubClassSelect.addEventListener('change', saveData);
+clearAllStudentsBtn.addEventListener('click', clearAllStudentData);
 clearLocalStorageBtn.addEventListener('click', clearAllLocalStorage); // Local Storage temizleme tuşu event listener'ı
 managementClassFilter.addEventListener('change', updateManagedStudentListUI);
-managementSubClassFilter.addEventListener('change', updateManagedStudentListUI); 
+managementSubClassFilter.addEventListener('change', updateManagedStudentListUI);
 managementStudentSearchInput.addEventListener('input', updateManagedStudentListUI);
-managedStudentListDiv.addEventListener('click', deleteStudent); 
+managedStudentListDiv.addEventListener('click', deleteStudent);
 
 // Kullanım Kılavuzu Modalı için event listener
 openHelpModalBtn.addEventListener('click', () => {
@@ -1113,9 +1115,17 @@ closeHelpModalBtn.addEventListener('click', () => {
     helpModal.style.display = 'none'; // Modalı kapat
 });
 
+// Atanan Tüm Yorumları Görüntüleme Modalı kapatma butonları
+closeAllAssignmentsModalBtn.addEventListener('click', () => {
+    allAssignmentsModal.style.display = 'none';
+});
+closeAllAssignmentsModalBtnBottom.addEventListener('click', () => {
+    allAssignmentsModal.style.display = 'none';
+});
+
 
 // Uygulama yüklendiğinde
 document.addEventListener('DOMContentLoaded', () => {
-    loadData(); 
-    updateDashboardCards(); 
+    loadData();
+    updateDashboardCards();
 });
