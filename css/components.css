@@ -15,9 +15,8 @@
     overflow-x: hidden;
     flex-shrink: 0;
 
-    /* Dashboard'u da sabit yap (Header'ın altına) */
     position: sticky;
-    top: var(--header-height); /* Dinamik olarak header yüksekliği kadar aşağıda sabitlenecek */
+    top: var(--header-height);
     z-index: 99;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 
@@ -112,9 +111,9 @@ section h2 {
 /* Yorum Düzenleyici altındaki öğrenci navigasyon ve görüntüleme kontrolleri */
 .student-editor-controls {
     display: flex;
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşmeleri için */
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 15px; /* textarea ile arasına boşluk */
+    margin-bottom: 15px;
     justify-content: space-between;
 }
 
@@ -124,16 +123,16 @@ section h2 {
     border: none;
     border-radius: 6px;
     flex-grow: 1;
-    flex-basis: calc(50% - 5px); /* İkişerli hizalama */
+    flex-basis: calc(50% - 5px);
     max-width: calc(50% - 5px);
     height: 38px;
     margin-top: 0;
     font-size: 0.95em;
-    font-weight: 600; /* Kalın yazı */
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: flex; /* İçindeki ok ve metni ortalamak için */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -147,10 +146,10 @@ section h2 {
 }
 
 .student-editor-controls #view-all-assignments-btn-editor {
-    flex-basis: 100%; /* Bu buton tam genişlikte olsun */
+    flex-basis: 100%;
     max-width: 100%;
-    margin-top: 0; /* Diğer butonlarla aynı hizada başlaması için */
-    background-color: #6c757d; /* Secondary-button rengi */
+    margin-top: 0;
+    background-color: #6c757d;
 }
 .student-editor-controls #view-all-assignments-btn-editor:hover {
     background-color: #5a6268;
@@ -391,11 +390,6 @@ button:active {
     background-color: var(--tab-management-bg);
 }
 
-/* Yeni 2 sütunlu düzen için */
-/* .student-management-layout { zaten layout.css'de } */
-
-/* .management-column { zaten layout.css'de } */
-
 /* Clear all students butonu için özel yerleşim */
 .clear-all-students {
     text-align: right;
@@ -559,4 +553,5 @@ footer {
     font-size: 0.85em;
     border-top: 1px solid #555;
     flex-shrink: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fontu belirle */
 }
