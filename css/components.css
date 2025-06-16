@@ -549,3 +549,14 @@ button:active {
 .delete-student-btn:hover {
     background-color: #c82333;
 }
+
+/* Footer Stili */
+footer {
+    background-color: #333;
+    color: #f8f8f8;
+    text-align: center; /* Metni ortala */
+    padding: 15px;
+    font-size: 0.85em;
+    border-top: 1px solid #555;
+    flex-shrink: 0;
+}

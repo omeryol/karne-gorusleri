@@ -78,13 +78,8 @@
     .student-editor-controls #view-all-assignments-btn-editor {
         flex-basis: 100%; /* Mobil'de tam genişlikte olsun */
         max-width: 100%;
-    }
-
-    /* Atanan Tüm Yorumları Görüntüleme Modalı İçindeki Öğrenci Girişleri için Responsive Ayarlar */
-    .copy-modal-comment-btn {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 5px;
+        font-size: 0.9em; /* Mobil için daha küçük font */
+        padding: 8px 12px;
     }
 }
 
@@ -192,6 +187,13 @@
     /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
     .clear-all-students button {
         max-width: 100%;
+    }
+
+    /* Atanan Tüm Yorumları Görüntüleme Modalı İçindeki Öğrenci Girişleri için Responsive Ayarlar */
+    .copy-modal-comment-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
     }
 }
 
