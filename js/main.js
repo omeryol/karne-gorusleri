@@ -5,51 +5,46 @@ import { showToast } from './utils.js';
 import { loadData, saveData } from './data-management.js';
 import { updateDashboardCards } from './dashboard.js';
 import { initializeModalListeners } from './modals.js';
-import { initializeCommentsTabListeners, loadCommentTemplates, loadStudentListForAssignment, updateCharCount } from './comments-tab.js'; // updateCharCount eklendi
+import { initializeCommentsTabListeners, loadCommentTemplates, loadStudentListForAssignment, updateCharCount } from './comments-tab.js';
 import { initializeStudentManagementTabListeners, updateManagedStudentListUI } from './student-management-tab.js';
-import { tabButtons, classSelect, termSelect } from './ui-elements.js'; // classSelect ve termSelect eklendi
+import { headerClassSelect, headerTermSelect, mainHeader, dashboardCardsContainer } from './ui-elements.js'; // Yeni header ve dashboard konteynerları
 
+/*
+    Hata Ayıklama Notu:
+    Bu dosya, uygulamanın ana başlatma noktasıdır ve tüm diğer modüllerin koordinasyonunu sağlar.
+    `DOMContentLoaded` olayının doğru tetiklendiğini ve tüm başlatma fonksiyonlarının
+    beklendiği sırayla çağrıldığını konsol loglarından kontrol edin.
+    Tema rengi güncellemesinin `headerClassSelect` ve `headerTermSelect` değişikliklerinde doğru çalıştığından
+    ve genel UI'ın güncellendiğinden emin olun.
+*/
+console.log('[main.js] main.js modülü yükleniyor...');
 
-// Sekme değiştirme fonksiyonu
-function switchTab(tabId) {
-    console.log(`[main.js] Sekme değiştiriliyor: ${tabId}`);
-    // Tüm sekme içeriklerini gizle
-    document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-    });
-    // Tüm sekme butonlarının aktif stilini kaldır
-    tabButtons.forEach(button => {
-        button.classList.remove('active');
-    });
-
-    // İstenen sekmeyi ve butonunu aktif yap
-    document.getElementById(tabId).classList.add('active');
-    document.querySelector(`.tab-button[data-tab="${tabId.replace('-tab', '')}"]`).classList.add('active');
-
-    // Sekmeye özel yüklemeler/güncellemeler
-    if (tabId === 'comments-tab') {
-        console.log('[main.js] Yorum Atama sekmesi aktif. Öğrenci listesi ve yorum şablonları yükleniyor.');
-        loadStudentListForAssignment(document.getElementById('filter-unassigned-btn').classList.contains('active-filter'));
-        loadCommentTemplates();
-        updateCharCount(); // Yorum alanı için karakter sayacını güncelledik
-    } else if (tabId === 'student-management-tab') {
-        console.log('[main.js] Öğrenci Yönetimi sekmesi aktif. Öğrenci listesi güncelleniyor.');
-        updateManagedStudentListUI();
-    }
-    saveData(); // Sekme değişimini kaydet
-    updateDashboardCards(); // Dashboard'ı güncelle
-}
 
 // Tema renklerini güncelleyen fonksiyon
 function updateThemeColors() {
-    console.log('[main.js] Tema renkleri güncelleniyor.');
-    const selectedClass = classSelect.value; // ui-elements'den geldi
-    const selectedTerm = termSelect.value; // ui-elements'den geldi
+    console.log('[main.js] updateThemeColors çağrıldı: Tema renkleri güncelleniyor.');
+    const selectedClass = headerClassSelect.value; // ui-elements'den geldi
+    const selectedTerm = headerTermSelect.value; // ui-elements'den geldi
 
-    document.body.className = ''; // Mevcut sınıfı temizle
+    // Body'deki tüm mevcut sınıf ve dönem sınıflarını temizle
+    document.body.className = '';
 
     if (selectedClass && selectedTerm) {
         document.body.classList.add(`class-${selectedClass}-term-${selectedTerm}`);
+        console.log(`[main.js] Body sınıfı güncellendi: class-${selectedClass}-term-${selectedTerm}`);
+    } else {
+        console.log('[main.js] Sınıf veya dönem seçili değil, varsayılan tema kullanılıyor.');
+    }
+
+    // Header yüksekliğini dinamik olarak ayarla
+    // Bu, sticky dashboard'un doğru top değerini alması için önemlidir.
+    if (mainHeader && dashboardCardsContainer) {
+        // İlk yüklemede veya yeniden düzenlemede header ve dashboard'ın toplam yüksekliğini al
+        const headerHeight = mainHeader.offsetHeight;
+        const dashboardHeight = dashboardCardsContainer.offsetHeight;
+        const totalHeaderAreaHeight = headerHeight + dashboardHeight;
+        document.documentElement.style.setProperty('--header-height', `${totalHeaderAreaHeight}px`);
+        console.log(`[main.js] CSS değişkeni --header-height güncellendi: ${totalHeaderAreaHeight}px`);
     }
 }
 
@@ -60,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verileri Local Storage'dan yükle
     loadData();
     console.log('[main.js] Veriler yüklendi.');
+
+    // Tema renklerini yükle (data-management'dan gelen seçili sınıf ve döneme göre)
+    // Bu, loadData'dan sonra çağrılmalı ki headerClassSelect ve headerTermSelect değerleri dolu olsun.
+    updateThemeColors();
+    console.log('[main.js] Tema renkleri ilk ayarlandı.');
 
     // Dashboard kartlarını güncelle
     updateDashboardCards();
@@ -74,34 +74,41 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('[main.js] Yorum sekmesi dinleyicileri başlatıldı.');
 
     // Öğrenci Yönetimi sekmesi event dinleyicilerini başlat
+    // (Bu artık modal içinde çalışacağı için initializeStudentManagementTabListeners fonksiyonu
+    // modal açıldığında updateManagedStudentListUI'yi çağıracak.)
     initializeStudentManagementTabListeners();
-    console.log('[main.js] Öğrenci Yönetimi sekmesi dinleyicileri başlatıldı.');
+    console.log('[main.js] Öğrenci Yönetimi dinleyicileri başlatıldı.');
 
-    // Sekme navigasyon event dinleyicileri
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            switchTab(button.dataset.tab + '-tab');
-        });
+    // İlk yüklemede öğrenci listesini ve yorum şablonlarını yükle
+    // filter-unassigned-btn'in aktifliğini başlangıçta kontrol et (false varsayılan)
+    loadStudentListForAssignment(false);
+    loadCommentTemplates();
+    updateCharCount(); // Yorum alanı karakter sayacını ilk yüklemede güncelle
+    console.log('[main.js] Öğrenci listesi ve yorum şablonları ilk yüklendi.');
+
+    // Header'daki sınıf ve dönem seçimi değiştiğinde listeleri ve temayı güncelle
+    headerClassSelect.addEventListener('change', () => {
+        updateThemeColors(); // Tema rengini güncelle
+        loadStudentListForAssignment(false); // Öğrenci listesini yeniden yükle
+        loadCommentTemplates(); // Yorum şablonlarını yeniden yükle
+        saveData(); // Değişikliği kaydet
+        console.log('[main.js] Header Sınıf seçimi değişti, UI güncellendi.');
+    });
+    headerTermSelect.addEventListener('change', () => {
+        updateThemeColors(); // Tema rengini güncelle
+        loadStudentListForAssignment(false); // Öğrenci listesini yeniden yükle
+        loadCommentTemplates(); // Yorum şablonlarını yeniden yükle
+        saveData(); // Değişikliği kaydet
+        console.log('[main.js] Header Dönem seçimi değişti, UI güncellendi.');
     });
 
-    // Kayıtlı aktif sekmeyi yükle ve aç
-    const activeTab = localStorage.getItem('activeTab');
-    if (activeTab) {
-        switchTab(activeTab + '-tab');
-        console.log(`[main.js] Kayıtlı aktif sekme yüklendi: ${activeTab}`);
-    } else {
-        switchTab('comments-tab'); // Varsayılan sekme
-        console.log('[main.js] Varsayılan sekme: Yorum Atama.');
-    }
-
-    // Tema renklerini yükle (data-management'dan gelen seçili sınıf ve döneme göre)
-    updateThemeColors();
-    console.log('[main.js] Tema renkleri ayarlandı.');
-
-    // Service Worker kaydı (zaten index.html'de global script olarak mevcut, burada tekrar etmeye gerek yok)
+    // Header yüksekliğini dinamik olarak ayarla (JS ile güncelleyici)
+    // Bu, `layout.css` ve `dashboard.css`'teki sticky header ve dashboard için önemlidir.
+    // İlk yüklemede ve pencere boyutu değiştiğinde yükseklik ayarlanır.
+    window.addEventListener('resize', updateThemeColors); // Pencere boyutu değiştiğinde tema ve yüksekliği güncelle
 });
 
-// window objesine global olarak ihtiyaç duyulan fonksiyonları veya değişkenleri ekleyebiliriz
-// Bu, özellikle comment_templates_data.js gibi modül olmayan harici scriptler için faydalı olabilir.
-// Ancak, daha iyi uygulama, commentsData'yı da bir modül yapıp import etmektir.
-// Şimdilik, comments-tab.js içinde window.commentsData kullanıldığı için bu global erişimi koruyoruz.
+console.log('[main.js] main.js modülü başarıyla yüklendi.');
+
+// commentsData global olarak index.html'den yüklendiği için window objesi üzerinden erişiyoruz.
+// serviceWorker kaydı da index.html'de zaten mevcut.

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karne Yorum Defterim by Ömer YOLCU</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/tabs.css">
-    <link rel="stylesheet" href="css/modals.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <link rel="manifest" href="manifest.json">
+    <title>Karne Yorum Defterim - Modern Sürüm</title>
+    <link rel="stylesheet" href="css/reset.css"> <link rel="stylesheet" href="css/global.css"> <link rel="stylesheet" href="css/layout.css"> <link rel="stylesheet" href="css/components.css"> <link rel="stylesheet" href="css/forms.css"> <link rel="stylesheet" href="css/modals.css"> <link rel="stylesheet" href="css/responsive.css"> <link rel="stylesheet" href="css/theme.css"> <link rel="manifest" href="manifest.json">
     <link rel="icon" href="./favicon.ico" sizes="any">
-    <link rel="icon" href="./favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="./favicon.png">
+    <link rel="icon" href="./icons/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 </head>
 <body>
 
-    <div id="app-container">
-        <header>
-            <h1>Karne Yorum Defterim</h1>
-            <nav class="tabs">
-                <button class="tab-button active" data-tab="comments">Yorum Atama</button>
-                <button class="tab-button" data-tab="student-management">Öğrenci Yönetimi</button>
-            </nav>
-            <div id="dashboard-cards">
+    <div id="app-wrapper">
+        <header id="main-header">
+            <div class="header-content">
+                <h1 id="app-title">Karne Yorum Defterim</h1>
+                <div class="header-controls">
+                    <select id="header-class-select" class="control-select">
+                        <option value="">Sınıf Seçin</option>
+                        <option value="5">5. Sınıf</option>
+                        <option value="6">6. Sınıf</option>
+                        <option value="7">7. Sınıf</option>
+                        <option value="8">8. Sınıf</option>
+                    </select>
+                    <select id="header-term-select" class="control-select">
+                        <option value="">Dönem Seçin</option>
+                        <option value="1">1. Dönem</option>
+                        <option value="2">2. Dönem</option>
+                    </select>
+                    <button id="open-help-modal-btn" class="icon-button help-button" title="Kullanım Kılavuzu">?</button>
+                </div>
+            </div>
+            <div id="dashboard-cards-container">
                 <div class="dashboard-card">
                     <span class="card-title">Toplam Öğrenci</span>
                     <span class="card-value" id="total-students-count">0</span>
@@ -46,200 +51,188 @@
             </div>
         </header>
 
-        <main>
-            <div id="comments-tab" class="tab-content active">
-                <div class="comments-layout">
-                    <section id="student-assignment-sidebar">
-                        <h2>Öğrenci Listesi</h2>
-                        <div class="controls student-filter-controls">
-                            <select id="sidebar-class-filter">
-                                <option value="all">Tüm Sınıflar</option>
-                                <option value="5">5. Sınıf</option>
-                                <option value="6">6. Sınıf</option>
-                                <option value="7">7. Sınıf</option>
-                                <option value="8">8. Sınıf</option>
-                            </select>
-                            <select id="sidebar-subclass-filter">
-                                <option value="all">Tüm Şubeler</option>
-                                <option value="A">A Şubesi</option>
-                                <option value="B">B Şubesi</option>
-                                <option value="C">C Şubesi</option>
-                                <option value="D">D Şubesi</option>
-                                <option value="E">E Şubesi</option>
-                            </select>
-                            <button id="filter-unassigned-btn" class="secondary-button">Yorum Bekleyenler</button>
-                            <input type="text" id="student-search-input" placeholder="Öğrenci ara...">
-                        </div>
-                        <div id="student-list">
-                            <p>Öğrenci listesi yok.</p>
-                        </div>
-                        <div class="student-bottom-controls">
-                            <div class="student-navigation-buttons">
-                                <button id="prev-student-btn" class="secondary-button icon-nav-button">&lt;</button>
-                                <button id="next-student-btn" class="secondary-button icon-nav-button">&gt;</button>
-                            </div>
-                        </div>
-                    </section>
+        <main id="main-content">
+            <section id="student-comment-dashboard">
+                <div class="panel student-list-panel">
+                    <h2>Öğrenci Listesi</h2>
+                    <div class="controls filter-search-controls">
+                        <select id="student-list-class-filter" class="control-select">
+                            <option value="all">Tüm Sınıflar</option>
+                            <option value="5">5. Sınıf</option>
+                            <option value="6">6. Sınıf</option>
+                            <option value="7">7. Sınıf</option>
+                            <option value="8">8. Sınıf</option>
+                        </select>
+                        <select id="student-list-subclass-filter" class="control-select">
+                            <option value="all">Tüm Şubeler</option>
+                            <option value="A">A Şubesi</option>
+                            <option value="B">B Şubesi</option>
+                            <option value="C">C Şubesi</option>
+                            <option value="D">D Şubesi</option>
+                            <option value="E">E Şubesi</option>
+                        </select>
+                        <button id="filter-unassigned-btn" class="button secondary-button icon-button" title="Yorumu Atanmamış Öğrenciler">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                        </button>
+                        <input type="text" id="student-search-input" class="control-input" placeholder="Öğrenci ara...">
+                    </div>
+                    <div id="student-list-container" class="list-container">
+                        <p class="empty-list-message">Öğrenci listesi yok.</p>
+                    </div>
+                    <div class="list-footer-controls">
+                        <button id="add-new-student-btn" class="button primary-button">Yeni Öğrenci Ekle</button>
+                        <button id="manage-students-btn" class="button secondary-button">Öğrenci Yönetimine Git</button>
+                    </div>
+                </div>
 
-                    <section id="comment-editor">
-                        <h2>Yorum Düzenle</h2>
-                        <div class="student-info-display">Seçili Öğrenci: <span id="selected-student-name-display">Yok</span></div>
-                        <div class="student-editor-controls">
-                            <button id="prev-student-btn-editor" class="secondary-button icon-nav-button">&lt; Önceki Öğrenci</button>
-                            <button id="next-student-btn-editor" class="secondary-button icon-nav-button">Sonraki Öğrenci &gt;</button>
-                            <button id="view-all-assignments-btn-editor" class="secondary-button">Atanan Tüm Yorumları Görüntüle</button>
-                        </div>
-                        <textarea id="comment-textarea" maxlength="500" placeholder="Yorumu buraya yazın veya listeden seçin..."></textarea>
-                        <div class="char-count">Kalan Karakter: <span id="remaining-chars">500</span></div>
-                        <div class="auto-clear-checkbox">
+                <div class="panel comment-editor-panel">
+                    <h2 class="panel-title">Yorum Düzenleyici</h2>
+                    <div class="selected-student-display">Seçili Öğrenci: <span id="selected-student-name-display">Yok</span></div>
+
+                    <textarea id="comment-textarea" maxlength="500" placeholder="Yorumu buraya yazın veya şablonlardan seçin..."></textarea>
+                    <div class="char-count">Kalan Karakter: <span id="remaining-chars">500</span></div>
+
+                    <div class="comment-actions">
+                        <button id="assign-comment-btn" class="button primary-button">Yorumu Ata / Güncelle</button>
+                        <button id="copy-comment-btn" class="button secondary-button">Kopyala</button>
+                        <button id="clear-comment-editor-btn" class="button secondary-button">Temizle</button>
+                        <label class="checkbox-container">
                             <input type="checkbox" id="auto-clear-comment">
-                            <label for="auto-clear-comment">Yorum atadıktan sonra temizle</label>
-                        </div>
-                        <button id="assign-comment-btn-editor">Yorumu Ata / Güncelle</button>
-                        <button id="copy-comment-btn">Yorumu Kopyala</button>
-                        <button id="clear-comment-editor-btn" class="secondary-button">Yorumu Temizle</button>
-                    </section>
+                            <span class="checkmark"></span>
+                            Yorum atadıktan sonra temizle
+                        </label>
+                    </div>
 
-                    <section id="comment-profiles">
-                        <h2>Yorum Profilleri</h2>
-                        <div class="controls comment-profile-controls">
-                            <select id="class-select">
-                                <option value="">Sınıf Seçin</option>
-                                <option value="5">5. Sınıf</option>
-                                <option value="6">6. Sınıf</option>
-                                <option value="7">7. Sınıf</option>
-                                <option value="8">8. Sınıf</option>
-                            </select>
-                            <select id="term-select">
-                                <option value="">Dönem Seçin</option>
-                                <option value="1">1. Dönem</option>
-                                <option value="2">2. Dönem</option>
-                            </select>
-                            <input type="text" id="profile-search-input" placeholder="Yorum ara...">
+                    <div class="comment-template-section">
+                        <h3>Yorum Şablonları</h3>
+                        <input type="text" id="profile-search-input" class="control-input" placeholder="Şablon ara...">
+                        <div id="comment-profile-list" class="list-container profile-list-scroll">
+                            <p class="empty-list-message">Lütfen yukarıdan sınıf ve dönem seçin.</p>
                         </div>
-                        <div id="profile-list">
-                            <p>Lütfen sınıf ve dönem seçin.</p>
-                        </div>
-                    </section>
+                    </div>
                 </div>
-            </div>
-
-            <div id="student-management-tab" class="tab-content">
-                <div class="student-management-layout">
-                    <section id="student-input-section" class="management-column">
-                        <h2>Öğrenci Ekle</h2>
-                        <div class="student-input-area">
-                            <p>Excel, Word veya PDF'ten kopyaladığınız öğrenci isimlerini (her satırda bir isim olacak şekilde) aşağıya yapıştırın.</p>
-                            <textarea id="student-names-textarea" placeholder="Öğrenci isimlerini buraya yapıştırın. Örn: Ali Yılmaz"></textarea>
-                            <div class="student-input-options">
-                                <select id="new-student-class-select">
-                                    <option value="">Sınıf Seçin</option>
-                                    <option value="5">5. Sınıf</option>
-                                    <option value="6">6. Sınıf</option>
-                                    <option value="7">7. Sınıf</option>
-                                    <option value="8">8. Sınıf</option>
-                                </select>
-                                <select id="new-student-subclass-select">
-                                    <option value="">Şube Seçin</option>
-                                    <option value="A">A</option>
-                                    <option value="B">B</option>
-                                    <option value="C">C</option>
-                                    <option value="D">D</option>
-                                    <option value="E">E</option>
-                                    <option value="F">F</option>
-                                    <option value="G">G</option>
-                                </select>
-                                <button id="load-names-from-text-btn">İsimleri Ekle</button>
-                                <label for="student-list-upload" class="button secondary-button file-upload-label">CSV Dosyası Yükle</label>
-                                <input type="file" id="student-list-upload" accept=".csv" style="display: none;">
-                            </div>
-                        </div>
-                        <div class="clear-all-students">
-                            <button id="clear-all-students-btn" class="secondary-button">Tüm Öğrenci Verilerini Temizle</button>
-                            <button id="clear-localstorage-btn" class="secondary-button warn-button">Uygulamayı Sıfırla</button>
-                        </div>
-                    </section>
-
-                    <section id="saved-students-section" class="management-column">
-                        <h2>Kaydedilmiş Öğrenciler</h2>
-                        <div class="controls student-list-filters">
-                            <select id="management-class-filter">
-                                <option value="all">Tüm Sınıflar</option>
-                                <option value="5">5. Sınıf</option>
-                                <option value="6">6. Sınıf</option>
-                                <option value="7">7. Sınıf</option>
-                                <option value="8">8. Sınıf</option>
-                            </select>
-                            <select id="management-subclass-filter">
-                                <option value="all">Tüm Şubeler</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                                <option value="E">E</option>
-                                <option value="F">F</option>
-                                <option value="G">G</option>
-                            </select>
-                            <input type="text" id="management-student-search-input" placeholder="Öğrenci ara...">
-                        </div>
-                        <div id="managed-student-list" class="managed-student-list">
-                            <p>Kaydedilmiş öğrenci yok.</p>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            </section>
         </main>
-        <footer>
-            <p>Tasarım: Ömer YOLCU tarafından, Hazırlık: Google Gemini tarafından</p>
-            <button id="open-help-modal-btn" class="help-button" title="Kullanım Kılavuzu">?</button>
+
+        <footer id="main-footer">
+            <p>Tasarım: Ömer YOLCU | Hazırlık: Google Gemini</p>
         </footer>
     </div>
 
-    <div id="toast-container"></div>
+    <div id="toast-container"></div> <div id="student-management-modal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close-button" data-modal="student-management-modal">&times;</span>
+            <h2>Öğrenci Yönetimi</h2>
+            <div class="modal-tabs">
+                <button class="modal-tab-button active" data-modal-tab="add-student-section">Öğrenci Ekle</button>
+                <button class="modal-tab-button" data-modal-tab="view-students-section">Öğrencileri Görüntüle / Sil</button>
+            </div>
 
-    <div id="comment-preview-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3 id="modal-comment-title">Yorum Başlığı</h3>
-            <p id="modal-comment-text"></p>
-            <div class="modal-actions">
-                <button id="modal-copy-btn" class="secondary-button">Kopyala</button>
-                <button id="modal-select-btn">Yorumu Seç ve Düzenle</button>
-                <button id="modal-cancel-btn" class="secondary-button">İptal</button>
+            <div id="add-student-section" class="modal-tab-content active">
+                <h3>Yeni Öğrenci Ekle</h3>
+                <p>Excel, Word veya PDF'ten kopyaladığınız öğrenci isimlerini (her satırda bir isim olacak şekilde) aşağıya yapıştırın.</p>
+                <textarea id="student-names-textarea-modal" class="form-textarea" placeholder="Öğrenci isimlerini buraya yapıştırın. Örn: Ali Yılmaz"></textarea>
+                <div class="form-group-inline">
+                    <select id="new-student-class-select-modal" class="control-select">
+                        <option value="">Sınıf Seçin</option>
+                        <option value="5">5. Sınıf</option>
+                        <option value="6">6. Sınıf</option>
+                        <option value="7">7. Sınıf</option>
+                        <option value="8">8. Sınıf</option>
+                    </select>
+                    <select id="new-student-subclass-select-modal" class="control-select">
+                        <option value="">Şube Seçin</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                    </select>
+                </div>
+                <button id="load-names-from-text-btn-modal" class="button primary-button">İsimleri Listeye Ekle</button>
+                <label for="student-list-upload-modal" class="button secondary-button file-upload-label">CSV Dosyası Yükle</label>
+                <input type="file" id="student-list-upload-modal" accept=".csv" style="display: none;">
             </div>
-            <div class="modal-comment-navigation">
-                <button id="modal-prev-comment-btn" class="small-icon-button">&lt;</button>
-                <button id="modal-next-comment-btn" class="small-icon-button">&gt;</button>
+
+            <div id="view-students-section" class="modal-tab-content">
+                <h3>Kaydedilmiş Öğrenciler</h3>
+                <div class="controls filter-search-controls">
+                    <select id="management-class-filter-modal" class="control-select">
+                        <option value="all">Tüm Sınıflar</option>
+                        <option value="5">5. Sınıf</option>
+                        <option value="6">6. Sınıf</option>
+                        <option value="7">7. Sınıf</option>
+                        <option value="8">8. Sınıf</option>
+                    </select>
+                    <select id="management-subclass-filter-modal" class="control-select">
+                        <option value="all">Tüm Şubeler</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                    </select>
+                    <input type="text" id="management-student-search-input-modal" class="control-input" placeholder="Öğrenci ara...">
+                </div>
+                <div id="managed-student-list-container-modal" class="list-container">
+                    <p class="empty-list-message">Kaydedilmiş öğrenci yok.</p>
+                </div>
+                <div class="modal-footer-actions">
+                    <button id="clear-all-students-btn-modal" class="button warn-button">Tüm Öğrenci Verilerini Temizle</button>
+                    <button id="clear-localstorage-btn-modal" class="button warn-button">Uygulamayı Sıfırla (Tüm Verileri Sil)</button>
+                </div>
             </div>
+            <button class="button secondary-button close-modal-button" data-modal="student-management-modal">Kapat</button>
         </div>
     </div>
 
-    <div id="help-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3>Karne Yorum Defteri Kullanım Kılavuzu</h3>
-            <p>Bu uygulama, öğrencilerinizin karne yorumlarını kolayca oluşturmanız için tasarlandı. İşte size birkaç ipucu:</p>
-            <ul>
-                <li>**Öğrenci Listesi:** "Öğrenci Yönetimi" sekmesinden öğrencilerinizin adlarını ve şubelerini topluca ekleyebilirsiniz.</li>
-                <li>**Yorum Atama:** "Yorum Atama" sekmesinde sınıf ve döneme göre yorum profillerini seçip öğrencinize atayabilirsiniz.</li>
-                <li>**Otomatik Adlandırma:** Yorum metnindeki `[Öğrenci Adı]` yer tutucusu, seçtiğiniz öğrencinin adıyla otomatik değişir.</li>
-                <li>**Hızlı Gezinme:** Öğrenci listesindeki "Önceki" ve "Sonraki" butonlarıyla öğrenciler arasında hızla geçiş yapabilirsiniz.</li>
-                <li>**Çevrimdışı Kullanım:** Uygulama internet bağlantınız olmasa bile çalışır! Tarayıcınızın menüsünden "Ana ekrana ekle" seçeneğini kullanarak bir uygulama gibi yükleyebilirsiniz.</li>
-            </ul>
-            <button id="close-help-modal">Anladım</button>
+
+    <div id="comment-preview-modal" class="modal">
+        <div class="modal-content small-modal">
+            <span class="close-button" data-modal="comment-preview-modal">&times;</span>
+            <h3 id="modal-comment-title">Yorum Başlığı</h3>
+            <p id="modal-comment-text"></p>
+            <div class="modal-actions">
+                <button id="modal-copy-btn" class="button secondary-button">Kopyala</button>
+                <button id="modal-select-btn" class="button primary-button">Yorumu Seç ve Düzenle</button>
+            </div>
+            <div class="modal-comment-navigation">
+                <button id="modal-prev-comment-btn" class="icon-button round-button">&lt;</button>
+                <button id="modal-next-comment-btn" class="icon-button round-button">&gt;</button>
+            </div>
         </div>
     </div>
 
     <div id="all-assignments-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="close-all-assignments-modal">&times;</span>
-            <h3>Atanan Tüm Karne Yorumları</h3>
-            <div id="all-assigned-comments-list">
-                </div>
-            <button id="close-all-assignments-modal-btn">Kapat</button>
+        <div class="modal-content large-modal">
+            <span class="close-button" data-modal="all-assignments-modal">&times;</span>
+            <h2>Atanan Tüm Karne Yorumları</h2>
+            <div id="all-assigned-comments-list" class="list-container">
+                <p class="empty-list-message">Henüz hiçbir öğrenciye yorum atanmadı.</p>
+            </div>
+            <button class="button secondary-button close-modal-button" data-modal="all-assignments-modal">Kapat</button>
         </div>
     </div>
 
+    <div id="help-modal" class="modal">
+        <div class="modal-content medium-modal">
+            <span class="close-button" data-modal="help-modal">&times;</span>
+            <h2>Karne Yorum Defteri Kullanım Kılavuzu</h2>
+            <p>Bu uygulama, öğrencilerinizin karne yorumlarını kolayca oluşturmanız için tasarlandı. İşte size birkaç ipucu:</p>
+            <ul>
+                <li>**Dashboard:** Ana ekran, genel öğrenci ve yorum atama durumunuzu gösterir.</li>
+                <li>**Öğrenci Listesi:** Sol panelden öğrencilerinizi seçin veya filtreleyin.</li>
+                <li>**Yorum Şablonları:** Sağ panelden sınıf ve döneme uygun hazır yorumları seçin. `[Öğrenci Adı]` otomatik olarak değişir.</li>
+                <li>**Öğrenci Yönetimi:** "Yeni Öğrenci Ekle" veya "Öğrenci Yönetimi" butonlarıyla öğrenci listesini topluca düzenleyin veya CSV'den yükleyin.</li>
+                <li>**Çevrimdışı Kullanım:** Uygulama internet bağlantınız olmasa bile çalışır! Tarayıcınızın menüsünden "Ana ekrana ekle" seçeneğini kullanarak bir uygulama gibi yükleyebilirsiniz.</li>
+            </ul>
+            <button class="button primary-button close-modal-button" data-modal="help-modal">Anladım</button>
+        </div>
+    </div>
 
     <script src="js/utils.js" type="module"></script>
     <script src="js/ui-elements.js" type="module"></script>
@@ -252,6 +245,7 @@
 
     <script src="comment_templates_data.js"></script>
     <script>
+        // Service Worker kaydı
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js')

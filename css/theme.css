@@ -1,136 +1,207 @@
-/* theme.css */
+/* css/theme.css */
 
-/* --- Tema Renklerinin Dinamik Uygulanması --- */
-/* Sınıf ve dönem seçildiğinde body'ye eklenen sınıflara göre renk değişkenleri güncellenir */
+/*
+    Hata Ayıklama Notu:
+    Bu dosya, JavaScript'in `body` etiketine eklediği dinamik sınıflara (`class-X-term-Y`)
+    bağlı olarak CSS değişkenlerini günceller.
+    Bu stillerin doğru çalıştığını doğrulamak için:
+    1. Tarayıcı Geliştirici Araçları'nı açın.
+    2. "Elements" (Öğeler) sekmesinden `<body>` etiketini seçin.
+    3. JavaScript ile sınıf ve dönem seçimi yaptığınızda `<body>` etiketine
+       `class-5-term-1` gibi sınıfların eklenip eklenmediğini kontrol edin.
+    4. Bu sınıflar eklendiğinde, `Computed` (Hesaplanan) sekmesinden CSS değişkenlerinin
+       (örn. `--current-primary-color`, `--default-header-bg` vb.) güncellenip güncellenmediğini kontrol edin.
+    5. Ardından, uygulamadaki ilgili elemanların (örn. butonlar, panel başlıkları, dashboard kartları)
+       bu güncellenen değişkenleri doğru bir şekilde alıp almadığını görsel olarak doğrulayın.
+*/
+
+/* Sınıf Renk Paletleri (Global renklerden farklılaştırılabilir) */
+:root {
+    /* Class 5 - Mavi Teması */
+    --class-5-base: #2196F3; /* Ana Mavi */
+    --class-5-light: #BBDEFB; /* Açık Mavi */
+    --class-5-dark: #1976D2; /* Koyu Mavi */
+
+    /* Class 6 - Yeşil Teması */
+    --class-6-base: #4CAF50; /* Ana Yeşil */
+    --class-6-light: #C8E6C9; /* Açık Yeşil */
+    --class-6-dark: #388E3C; /* Koyu Yeşil */
+
+    /* Class 7 - Turuncu Teması */
+    --class-7-base: #FF9800; /* Ana Turuncu */
+    --class-7-light: #FFE0B2; /* Açık Turuncu */
+    --class-7-dark: #FB8C00; /* Koyu Turuncu */
+
+    /* Class 8 - Kırmızı Teması */
+    --class-8-base: #F44336; /* Ana Kırmızı */
+    --class-8-light: #FFCDD2; /* Açık Kırmızı */
+    --class-8-dark: #D32F2F; /* Koyu Kırmızı */
+}
+
+
+/* --- Dinamik Tema Uygulamaları --- */
+
+/* Sınıf ve Dönem Seçimine Göre Genel Tema Değişkenleri */
+body[class*="class-"] {
+    /* `--current-primary-color` ve `--current-secondary-color` gibi değişkenler burada ayarlanacak */
+}
 
 /* Class 5 - Mavi Teması */
 body.class-5-term-1 {
-    --current-accent-color: var(--class-5-base);
-    --current-hover-color: var(--class-5-dark);
-    --default-header-bg: var(--class-5-base);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #E91E63; /* Pembe (Total Students) */
-    --dashboard-card-2-bg: #FFEB3B; /* Sarı (Assigned Comments) */
-    --dashboard-card-3-bg: #795548; /* Kahverengi (Pending Comments) */
-    --dashboard-card-4-bg: #00BCD4; /* Turkuaz (Completion Rate) */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-5-light) 50%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-5-light) 60%, white);
+    --current-primary-color: var(--class-5-base);
+    --current-secondary-color: color-mix(in srgb, var(--class-5-base) 60%, black);
+    --header-bg-color: var(--class-5-dark);
+    --dashboard-card-bg-1: #E91E63; /* Pembe */
+    --dashboard-card-bg-2: #FFEB3B; /* Sarı */
+    --dashboard-card-bg-3: #795548; /* Kahverengi */
+    --dashboard-card-bg-4: #00BCD4; /* Turkuaz */
 }
 body.class-5-term-2 {
-    --current-accent-color: var(--class-5-dark);
-    --current-hover-color: color-mix(in srgb, var(--class-5-dark) 80%, black);
-    --default-header-bg: var(--class-5-dark);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #f44336; /* Kırmızı */
-    --dashboard-card-2-bg: #ff9800; /* Koyu Turuncu */
-    --dashboard-card-3-bg: #4caf50; /* Yeşil */
-    --dashboard-card-4-bg: #9c27b0; /* Mor */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-5-base) 20%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-5-base) 30%, white);
+    --current-primary-color: var(--class-5-dark);
+    --current-secondary-color: color-mix(in srgb, var(--class-5-dark) 50%, #6C757D);
+    --header-bg-color: var(--class-5-dark); /* Değişkeni kullan */
+    --dashboard-card-bg-1: #f44336; /* Kırmızı */
+    --dashboard-card-bg-2: #ff9800; /* Koyu Turuncu */
+    --dashboard-card-bg-3: #4caf50; /* Yeşil */
+    --dashboard-card-bg-4: #9c27b0; /* Mor */
 }
 
 /* Class 6 - Yeşil Teması */
 body.class-6-term-1 {
-    --current-accent-color: var(--class-6-base);
-    --current-hover-color: var(--class-6-dark);
-    --default-header-bg: var(--class-6-base);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #FF5722; /* Koyu Turuncu/Kırmızımsı */
-    --dashboard-card-2-bg: #00BCD4; /* Turkuaz */
-    --dashboard-card-3-bg: #607D8B; /* Mavi Gri */
-    --dashboard-card-4-bg: #FFEB3B; /* Sarı */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-6-light) 50%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-6-light) 60%, white);
+    --current-primary-color: var(--class-6-base);
+    --current-secondary-color: color-mix(in srgb, var(--class-6-base) 60%, black);
+    --header-bg-color: var(--class-6-dark);
+    --dashboard-card-bg-1: #FF5722; /* Koyu Turuncu/Kırmızımsı */
+    --dashboard-card-bg-2: #00BCD4; /* Turkuaz */
+    --dashboard-card-bg-3: #607D8B; /* Mavi Gri */
+    --dashboard-card-bg-4: #FFEB3B; /* Sarı */
 }
 body.class-6-term-2 {
-    --current-accent-color: var(--class-6-dark);
-    --current-hover-color: color-mix(in srgb, var(--class-6-dark) 80%, black);
-    --default-header-bg: var(--class-6-dark);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #FFC107; /* Sarımsı Turuncu */
-    --dashboard-card-2-bg: #673AB7; /* Koyu Mor */
-    --dashboard-card-3-bg: #795548; /* Kahverengi */
-    --dashboard-card-4-bg: #03A9F4; /* Açık Mavi */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-6-base) 20%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-6-base) 30%, white);
+    --current-primary-color: var(--class-6-dark);
+    --current-secondary-color: color-mix(in srgb, var(--class-6-dark) 50%, #6C757D);
+    --header-bg-color: var(--class-6-dark);
+    --dashboard-card-bg-1: #FFC107; /* Sarımsı Turuncu */
+    --dashboard-card-bg-2: #673AB7; /* Koyu Mor */
+    --dashboard-card-bg-3: #795548; /* Kahverengi */
+    --dashboard-card-bg-4: #03A9F4; /* Açık Mavi */
 }
 
 /* Class 7 - Turuncu Teması */
 body.class-7-term-1 {
-    --current-accent-color: var(--class-7-base);
-    --current-hover-color: var(--class-7-dark);
-    --default-header-bg: var(--class-7-base);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #3F51B5; /* İndigo Mavi */
-    --dashboard-card-2-bg: #E91E63; /* Pembe */
-    --dashboard-card-3-bg: #8BC34A; /* Açık Yeşil */
-    --dashboard-card-4-bg: #9E9E9E; /* Gri */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-7-light) 50%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-7-light) 60%, white);
+    --current-primary-color: var(--class-7-base);
+    --current-secondary-color: color-mix(in srgb, var(--class-7-base) 60%, black);
+    --header-bg-color: var(--class-7-dark);
+    --dashboard-card-bg-1: #3F51B5; /* İndigo Mavi */
+    --dashboard-card-bg-2: #E91E63; /* Pembe */
+    --dashboard-card-bg-3: #8BC34A; /* Açık Yeşil */
+    --dashboard-card-bg-4: #9E9E9E; /* Gri */
 }
 body.class-7-term-2 {
-    --current-accent-color: var(--class-7-dark);
-    --current-hover-color: color-mix(in srgb, var(--class-7-dark) 80%, black);
-    --default-header-bg: var(--class-7-dark);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #424242; /* Koyu Gri */
-    --dashboard-card-2-bg: #009688; /* Teal */
-    --dashboard-card-3-bg: #CDDC39; /* Açık Yeşil-Sarı */
-    --dashboard-card-4-bg: #607D8B; /* Mavi Gri */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-7-base) 20%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-7-base) 30%, white);
+    --current-primary-color: var(--class-7-dark);
+    --current-secondary-color: color-mix(in srgb, var(--class-7-dark) 50%, #6C757D);
+    --header-bg-color: var(--class-7-dark);
+    --dashboard-card-bg-1: #424242; /* Koyu Gri */
+    --dashboard-card-bg-2: #009688; /* Teal */
+    --dashboard-card-bg-3: #CDDC39; /* Açık Yeşil-Sarı */
+    --dashboard-card-bg-4: #607D8B; /* Mavi Gri */
 }
 
 /* Class 8 - Kırmızı Teması */
 body.class-8-term-1 {
-    --current-accent-color: var(--class-8-base);
-    --current-hover-color: var(--class-8-dark);
-    --default-header-bg: var(--class-8-base);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #2196F3; /* Mavi */
-    --dashboard-card-2-bg: #FFC107; /* Sarımsı Turuncu */
-    --dashboard-card-3-bg: #4CAF50; /* Yeşil */
-    --dashboard-card-4-bg: #9C27B0; /* Mor */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-8-light) 50%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-8-light) 60%, white);
+    --current-primary-color: var(--class-8-base);
+    --current-secondary-color: color-mix(in srgb, var(--class-8-base) 60%, black);
+    --header-bg-color: var(--class-8-dark);
+    --dashboard-card-bg-1: #2196F3; /* Mavi */
+    --dashboard-card-bg-2: #FFC107; /* Sarımsı Turuncu */
+    --dashboard-card-bg-3: #4CAF50; /* Yeşil */
+    --dashboard-card-bg-4: #9C27B0; /* Mor */
 }
 body.class-8-term-2 {
-    --current-accent-color: var(--class-8-dark);
-    --current-hover-color: color-mix(in srgb, var(--class-8-dark) 80%, black);
-    --default-header-bg: var(--class-8-dark);
-    /* Dashboard kartları için zıt/farklı renkler */
-    --dashboard-card-1-bg: #00BCD4; /* Turkuaz */
-    --dashboard-card-2-bg: #3F51B5; /* İndigo Mavi */
-    --dashboard-card-3-bg: #795548; /* Kahverengi */
-    --dashboard-card-4-bg: #FFEB3B; /* Sarı */
-    --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-8-base) 20%, white);
-    --tab-management-bg: color-mix(in srgb, var(--class-8-base) 30%, white);
+    --current-primary-color: var(--class-8-dark);
+    --current-secondary-color: color-mix(in srgb, var(--class-8-dark) 50%, #6C757D);
+    --header-bg-color: var(--class-8-dark);
+    --dashboard-card-bg-1: #00BCD4; /* Turkuaz */
+    --dashboard-card-bg-2: #3F51B5; /* İndigo Mavi */
+    --dashboard-card-bg-3: #795548; /* Kahverengi */
+    --dashboard-card-bg-4: #FFEB3B; /* Sarı */
 }
 
-
-/* Sınıf ve dönem seçildiğinde header ve section başlık renkleri güncellenir */
-body[class*="class-"] header {
-    background-color: var(--default-header-bg);
+/* Genel Kural: body'de sınıf olduğunda ilgili elementlerin renklerini dinamik değişkenlerden al */
+body[class*="class-"] #main-header {
+    background-color: var(--header-bg-color);
 }
 
-body[class*="class-"] section h2 {
-    color: var(--current-accent-color);
-    border-color: var(--current-accent-color);
+body[class*="class-"] .panel h2 {
+    color: var(--current-primary-color);
 }
 
-/* Tab İçeriklerinin Arka Planları */
-body[class*="class-"] #comments-tab {
-    background-color: var(--tab-comments-bg);
+body[class*="class-"] .button.primary-button {
+    background-color: var(--current-primary-color);
 }
 
-body[class*="class-"] #student-management-tab {
-    background-color: var(--tab-management-bg);
+body[class*="class-"] .button.primary-button:hover {
+    filter: brightness(1.1);
 }
+
+body[class*="class-"] .button.secondary-button {
+    background-color: var(--current-secondary-color);
+}
+
+body[class*="class-"] .button.secondary-button:hover {
+    filter: brightness(1.1);
+}
+
+body[class*="class-"] .selected-student-display {
+    background-color: color-mix(in srgb, var(--current-primary-color) 10%, var(--secondary-bg-color));
+    border-color: color-mix(in srgb, var(--current-primary-color) 30%, var(--secondary-bg-color));
+    color: color-mix(in srgb, var(--current-primary-color) 80%, black);
+}
+
+body[class*="class-"] .selected-student-display span {
+    color: var(--current-primary-color);
+}
+
+body[class*="class-"] .profile-item.active {
+    background-color: var(--current-primary-color);
+    box-shadow: 0 2px 8px rgba(var(--current-primary-color-rgb, 0, 123, 255), 0.2);
+}
+
+body[class*="class-"] .student-item.active-student {
+    background-color: color-mix(in srgb, var(--current-primary-color) 10%, var(--secondary-bg-color));
+    box-shadow: 0 1px 5px rgba(var(--current-primary-color-rgb, 0, 123, 255), 0.1);
+}
+
+body[class*="class-"] .modal-tab-button.active {
+    color: var(--current-primary-color);
+    border-bottom-color: var(--current-primary-color);
+}
+
+body[class*="class-"] .control-select:focus,
+body[class*="class-"] .control-input:focus,
+body[class*="class-"] .form-textarea:focus {
+    border-color: var(--current-primary-color);
+    /* RGB değerini `global.css`'te tanımlayacağız, şimdilik varsayılan kullanıldı */
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--current-primary-color) 30%, transparent);
+}
+
+body[class*="class-"] .checkbox-container input:checked ~ .checkmark {
+    background-color: var(--current-primary-color);
+}
+
+/* --current-primary-color-rgb değişkeni için:
+   Bu değişkeni JavaScript ile dinamik olarak ayarlamak en sağlıklısı olacaktır.
+   Örneğin, seçili renk (#2196F3) için '33, 150, 243' şeklinde RGB değerini ayrı bir değişken olarak tutmak.
+   Aksi halde 'color-mix' gibi fonksiyonlar CSS değişkenlerinin RGB versiyonlarını doğrudan alamaz.
+   Şimdilik manuel olarak veya JS ile yönetileceği varsayımıyla devam edebiliriz.
+*/
+:root {
+    --class-5-base-rgb: 33, 150, 243;
+    --class-6-base-rgb: 76, 175, 80;
+    --class-7-base-rgb: 255, 152, 0;
+    --class-8-base-rgb: 244, 67, 54;
+}
+
+body.class-5-term-1, body.class-5-term-2 { --current-primary-color-rgb: var(--class-5-base-rgb); }
+body.class-6-term-1, body.class-6-term-2 { --current-primary-color-rgb: var(--class-6-base-rgb); }
+body.class-7-term-1, body.class-7-term-2 { --current-primary-color-rgb: var(--class-7-base-rgb); }
+body.class-8-term-1, body.class-8-term-2 { --current-primary-color-rgb: var(--class-8-base-rgb); }
