@@ -232,4 +232,19 @@
 
 
     <script src="comment_templates_data.js"></script>
-    <script src="
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker başarıyla kaydedildi:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker kaydı başarısız oldu:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
