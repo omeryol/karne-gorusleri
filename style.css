@@ -68,101 +68,101 @@ body {
 #app-container {
     display: flex;
     flex-direction: column;
-    width: 100%; 
+    width: 100%;
     max-width: 1600px;
     background-color: var(--secondary-bg);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
-    border-radius: 12px; 
-    margin: 20px auto; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin: 20px auto;
     /* overflow: hidden; -> Bu kaldırılmalı, ana sayfa kaydırılabilir olsun diye */
 }
 
 /* --- Header ve Navigasyon (Tablar) Stilleri --- */
 header {
-    background-color: var(--default-header-bg); 
+    background-color: var(--default-header-bg);
     color: var(--default-header-text);
-    padding: 15px 25px 0; 
+    padding: 15px 25px 0;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    border-bottom: 1px solid rgba(255,255,255,0.2); 
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     transition: background-color 0.3s ease;
-    
+
     /* Sticky Header */
     position: sticky;
-    top: 0; 
-    z-index: 100; 
-    border-bottom-left-radius: 12px; 
+    top: 0;
+    z-index: 100;
+    border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    margin: 0 0 15px 0; 
+    margin: 0 0 15px 0;
     font-size: 2.2em;
     font-weight: 600;
-    text-align: center; 
-    width: 100%; 
-    padding: 0 25px; 
-    box-sizing: border-box; 
-    
-    color: var(--default-header-text); 
-    font-family: 'Georgia', serif; 
-    letter-spacing: 1.5px; 
+    text-align: center;
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    color: var(--default-header-text);
+    font-family: 'Georgia', serif;
+    letter-spacing: 1.5px;
 }
 
 /* ANA BAŞLIK RENKLENDİRMESİ - Artık tek renk olacağı için bu kısım etkisizdir */
 header h1 .colored-char {
-    color: inherit; 
+    color: inherit;
 }
 
 .tabs {
     display: flex;
-    justify-content: center; 
-    margin: 10px auto 0 auto; 
+    justify-content: center;
+    margin: 10px auto 0 auto;
 }
 
 .tab-button {
-    background-color: rgba(255,255,255,0.1); 
+    background-color: rgba(255,255,255,0.1);
     color: var(--default-header-text);
     border: none;
     padding: 12px 25px;
     font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; 
-    border-bottom: none; 
-    opacity: 0.8; 
-    border-radius: 8px 8px 0 0; 
-    margin: 0 5px; 
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border-bottom: none;
+    opacity: 0.8;
+    border-radius: 8px 8px 0 0;
+    margin: 0 5px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
     text-align: center;
 }
 
 .tab-button:hover {
     opacity: 1;
-    background-color: rgba(255,255,255,0.2); 
-    transform: translateY(-2px); 
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
 }
 
 .tab-button.active {
     opacity: 1;
-    background-color: var(--secondary-bg); 
-    color: var(--text-color); 
-    transform: translateY(0); 
-    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 /* Aktif tabın main içeriği ile görsel olarak birleşmesi için */
 main {
-    border-top-left-radius: 0; 
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
     position: relative;
-    z-index: 1; 
-    padding: 25px; 
+    z-index: 1;
+    padding: 25px;
     flex-grow: 1;
     /* height ve overflow-y kaldırıldı, ana sayfanın kaymasını sağlayacak */
     /* height: calc(100vh - 250px); */
-    /* overflow: hidden; */ 
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
 }
@@ -172,49 +172,49 @@ header {
 }
 #dashboard-cards {
     margin-top: 0;
-    padding-top: 15px; 
-    padding-bottom: 15px; 
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
 /* --- Dashboard Kartları --- */
 #dashboard-cards {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 8px 15px; 
-    background-color: rgba(0,0,0,0.15); 
-    gap: 3px; 
-    flex-wrap: nowrap; 
+    padding: 8px 15px;
+    background-color: rgba(0,0,0,0.15);
+    gap: 3px;
+    flex-wrap: nowrap;
     box-sizing: border-box;
-    min-height: 55px; 
-    overflow-x: hidden; 
-    flex-shrink: 0; 
-    
+    min-height: 55px;
+    overflow-x: hidden;
+    flex-shrink: 0;
+
     /* Dashboard'u da sabit yap (Header'ın altına) */
     position: sticky;
     top: var(--header-height); /* Dinamik olarak header yüksekliği kadar aşağıda sabitlenecek */
-    z-index: 99; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+    z-index: 99;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 
-    margin: 0; 
-    border-radius: 0; 
+    margin: 0;
+    border-radius: 0;
 }
 
 .dashboard-card {
     border-radius: 6px;
-    padding: 5px 8px; 
+    padding: 5px 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--dashboard-card-text);
-    min-width: 70px; 
-    flex-grow: 1; 
-    flex-shrink: 0; 
+    min-width: 70px;
+    flex-grow: 1;
+    flex-shrink: 0;
     flex-basis: 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
 }
 
@@ -226,53 +226,53 @@ header {
 
 
 .dashboard-card .card-title {
-    font-size: 0.75em; 
+    font-size: 0.75em;
     opacity: 0.9;
     margin-bottom: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: rgba(255,255,255,0.9); 
+    color: rgba(255,255,255,0.9);
 }
 
 .dashboard-card .card-value {
     font-size: 1.2em;
     font-weight: 700;
-    color: #fff; 
+    color: #fff;
 }
 
 
 .tab-content {
-    display: none; 
+    display: none;
     height: 100%; /* Tab içeriği hala kendi kapsayıcısının yüksekliğini almalı */
-    overflow: hidden; 
-    padding: 0; 
+    overflow: hidden;
+    padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .tab-content.active {
-    display: block; 
+    display: block;
 }
 
 /* Comments Tab Layout (Üç sütunlu düzen) */
 #comments-tab {
-    background-color: var(--tab-comments-bg); 
+    background-color: var(--tab-comments-bg);
 }
 
 #comments-tab .comments-layout {
     display: flex;
     gap: 25px;
-    height: 100%; 
-    max-width: 1500px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    box-sizing: border-box; 
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 #comments-tab section {
-    flex: 1; 
-    min-width: 300px; 
+    flex: 1;
+    min-width: 300px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -281,28 +281,28 @@ header {
 
 /* Yorum Atama Sütun Oranları */
 #student-assignment-sidebar {
-    flex-grow: 1.2; 
-    flex-basis: 0; 
-    max-width: 450px; 
+    flex-grow: 1.2;
+    flex-basis: 0;
+    max-width: 450px;
 }
 
 #comment-editor {
-    flex-grow: 2.0; 
+    flex-grow: 2.0;
     flex-basis: 0;
-    max-width: 700px; 
+    max-width: 700px;
 }
 
 #comment-profiles {
-    flex-grow: 1.2; 
+    flex-grow: 1.2;
     flex-basis: 0;
-    max-width: 450px; 
+    max-width: 450px;
 }
 
 
 section h2 {
     margin-top: 0;
-    color: var(--default-accent-color); 
-    border-bottom: 2px solid var(--default-accent-color); 
+    color: var(--default-accent-color);
+    border-bottom: 2px solid var(--default-accent-color);
     padding-bottom: 8px;
     margin-bottom: 20px;
     font-size: 1.5em;
@@ -312,7 +312,7 @@ section h2 {
 
 .controls {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -330,7 +330,7 @@ section h2 {
 /* select'ler için esnekliği ayarla, her satırda ikili durmaları için */
 .student-filter-controls select,
 .comment-profile-controls select {
-    flex-basis: calc(50% - 5px); 
+    flex-basis: calc(50% - 5px);
     max-width: calc(50% - 5px);
 }
 /* Arama kutusu tek başına satır kaplasın */
@@ -343,11 +343,11 @@ section h2 {
 .student-filter-controls #filter-unassigned-btn {
     flex-basis: 100%;
     max-width: 100%;
-    margin-top: 0; 
+    margin-top: 0;
 }
 /* Yorum bekleyenler butonu aktif olduğunda farklı stil */
 .student-filter-controls #filter-unassigned-btn.active-filter {
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
 }
 .student-filter-controls #filter-unassigned-btn.active-filter:hover {
@@ -358,27 +358,27 @@ section h2 {
 /* Öğrenci gezinme butonlarının kapsayıcısı */
 .student-bottom-controls {
     display: flex;
-    flex-direction: column; 
-    align-items: stretch; 
-    margin-top: auto; 
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: auto;
     padding-top: 15px;
     border-top: 1px solid var(--border-color);
-    gap: 10px; 
+    gap: 10px;
 }
 .student-navigation-buttons {
     display: flex;
-    justify-content: space-between; 
-    gap: 10px; 
-    width: 100%; 
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 }
-.student-navigation-buttons .icon-nav-button { 
+.student-navigation-buttons .icon-nav-button {
     background-color: var(--current-accent-color, var(--default-accent-color));
     color: var(--button-text);
     border: none;
-    border-radius: 6px; 
-    width: calc(50% - 5px); 
+    border-radius: 6px;
+    width: calc(50% - 5px);
     max-width: calc(50% - 5px);
-    height: 38px; 
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,7 +387,7 @@ section h2 {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    margin-top: 0; 
+    margin-top: 0;
 }
 .student-navigation-buttons .icon-nav-button:hover {
     background-color: var(--current-hover-color, var(--default-hover-color));
@@ -400,7 +400,7 @@ section h2 {
 
 /* --- Öğrenci Bilgisi Gösterimi (Yorum Düzenleyici) --- */
 .student-info-display {
-    background-color: #e0f2f7; 
+    background-color: #e0f2f7;
     border: 1px solid #b3e5fc;
     padding: 10px 15px;
     border-radius: 6px;
@@ -418,7 +418,7 @@ section h2 {
 /* --- Yorum Alanı --- */
 #comment-textarea {
     width: 100%;
-    flex-grow: 1; 
+    flex-grow: 1;
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -426,7 +426,7 @@ section h2 {
     resize: vertical;
     box-sizing: border-box;
     line-height: 1.5;
-    min-height: 150px; 
+    min-height: 150px;
     max-height: 400px;
 }
 
@@ -455,18 +455,18 @@ section h2 {
 
 
 button { /* GENEL BUTON STİLİ KÜÇÜLTÜLDÜ */
-    background-color: var(--current-accent-color, var(--default-accent-color)); 
+    background-color: var(--current-accent-color, var(--default-accent-color));
     color: var(--button-text);
-    padding: 10px 18px; 
+    padding: 10px 18px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1em; 
+    font-size: 1em;
     font-weight: 600;
-    margin-top: 12px; 
-    flex-shrink: 0; 
-    width: 100%; 
-    box-sizing: border-box; 
+    margin-top: 12px;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
@@ -480,14 +480,14 @@ button:active {
 }
 
 .secondary-button {
-    background-color: #6c757d; 
+    background-color: #6c757d;
 }
 
 .secondary-button:hover {
     background-color: #5a6268;
 }
-.warn-button { 
-    background-color: #dc3545; 
+.warn-button {
+    background-color: #dc3545;
 }
 .warn-button:hover {
     background-color: #c82333;
@@ -496,13 +496,13 @@ button:active {
 
 /* Dosya yükleme etiketi için buton stili */
 .file-upload-label {
-    display: block; 
-    width: calc(100% - 24px); 
+    display: block;
+    width: calc(100% - 24px);
     text-align: center;
     cursor: pointer;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: #fff;
-    padding: 10px 18px; 
+    padding: 10px 18px;
     border-radius: 6px;
     margin-top: 10px;
     transition: background-color 0.2s ease;
@@ -517,13 +517,13 @@ button:active {
 /* --- Liste Öğeleri --- */
 #profile-list, #student-list, #managed-student-list {
     flex-grow: 1;
-    overflow-y: auto; 
-    padding-right: 5px; 
-    scrollbar-width: thin; 
-    scrollbar-color: var(--border-color) transparent; 
+    overflow-y: auto;
+    padding-right: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
 }
 
-#profile-list::-webkit-scrollbar, 
+#profile-list::-webkit-scrollbar,
 #student-list::-webkit-scrollbar,
 #managed-student-list::-webkit-scrollbar {
     width: 8px;
@@ -548,7 +548,7 @@ button:active {
     transition: background-color 0.2s ease, color 0.2s ease;
     font-size: 1em;
     line-height: 1.4;
-    user-select: none; 
+    user-select: none;
 }
 
 .profile-item:last-child {
@@ -560,7 +560,7 @@ button:active {
 }
 
 .profile-item.active {
-    background-color: var(--current-accent-color, var(--default-accent-color)); 
+    background-color: var(--current-accent-color, var(--default-accent-color));
     color: var(--button-text);
     font-weight: 600;
 }
@@ -573,9 +573,10 @@ button:active {
     padding: 10px 0;
     border-bottom: 1px dashed #eee;
     font-size: 1em;
-    cursor: pointer; 
-    white-space: nowrap; 
-    overflow: hidden; 
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .student-item:last-child {
@@ -586,23 +587,23 @@ button:active {
     background-color: #f9f9f9;
 }
 
-.student-item.active-student { 
-    background-color: var(--class-5-light); 
+.student-item.active-student {
+    background-color: var(--class-5-light);
 }
 
-.student-info { 
+.student-info {
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-grow: 1; 
+    flex-grow: 1;
     font-weight: 500;
     color: var(--text-color);
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .student-number {
-    flex-shrink: 0; 
+    flex-shrink: 0;
     font-size: 0.9em;
     color: #888;
     background-color: #e9ecef;
@@ -619,18 +620,18 @@ button:active {
     margin-left: 15px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 
 .assign-btn {
-    background-color: var(--current-accent-color, #6200ea); 
+    background-color: var(--current-accent-color, #6200ea);
     color: var(--button-text);
-    padding: 6px 12px; 
+    padding: 6px 12px;
     font-size: 0.85em;
-    margin-top: 0; 
-    width: auto; 
-    flex-shrink: 0; 
-    margin-left: auto; 
+    margin-top: 0;
+    width: auto;
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
 .assign-btn:hover {
@@ -639,24 +640,24 @@ button:active {
 
 #view-all-assignments-btn {
     width: 100%;
-    margin-top: 15px; 
+    margin-top: 15px;
 }
 
 
 /* --- Öğrenci Yönetimi Sekmesi Stilleri --- */
 #student-management-tab {
-    background-color: var(--tab-management-bg); 
+    background-color: var(--tab-management-bg);
 }
 
 /* Yeni 2 sütunlu düzen için */
 .student-management-layout {
     display: flex;
     gap: 25px;
-    height: 100%; 
-    max-width: 1500px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    box-sizing: border-box; 
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .management-column {
@@ -671,24 +672,24 @@ button:active {
 /* Clear all students butonu için özel yerleşim */
 .clear-all-students {
     text-align: right;
-    margin-top: auto; 
-    border-top: 1px solid var(--border-color); 
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
     padding-top: 15px;
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: flex-end; 
-    gap: 10px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
 }
 .clear-all-students button {
-    width: auto; 
-    flex-grow: 1; 
-    max-width: calc(50% - 5px); 
-    margin-top: 0; 
+    width: auto;
+    flex-grow: 1;
+    max-width: calc(50% - 5px);
+    margin-top: 0;
 }
 
 
 .student-input-area {
-    background-color: #e9f7ef; 
+    background-color: #e9f7ef;
     border: 1px solid #c3e6cb;
     border-radius: 8px;
     padding: 20px;
@@ -712,9 +713,9 @@ button:active {
 
 #student-names-textarea {
     width: 100%;
-    height: 150px; 
+    height: 150px;
     padding: 12px;
-    border: 1px solid var(--border-color); 
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 1.05em;
     resize: vertical;
@@ -726,7 +727,7 @@ button:active {
 .student-input-options {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -736,18 +737,18 @@ button:active {
 .student-input-options .file-upload-label {
     flex-grow: 1;
     margin-top: 0;
-    flex-basis: calc(50% - 5px); 
+    flex-basis: calc(50% - 5px);
     max-width: calc(50% - 5px);
 }
 /* Dosya yükleme etiketi tek başına durmasın */
 .file-upload-label {
-    width: auto; 
+    width: auto;
     max-width: calc(50% - 5px);
 }
 
 
 .managed-student-list-container {
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -762,7 +763,7 @@ button:active {
     max-width: calc(50% - 5px);
 }
 .student-list-filters input[type="text"] {
-    flex-basis: 100%; 
+    flex-basis: 100%;
     max-width: 100%;
 }
 
@@ -771,9 +772,9 @@ button:active {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 15px;
-    flex-grow: 1; 
-    min-height: 150px; 
-    max-height: 500px; 
+    flex-grow: 1;
+    min-height: 150px;
+    max-height: 500px;
     overflow-y: auto;
 }
 
@@ -802,7 +803,7 @@ button:active {
 }
 
 .edit-student-btn {
-    background-color: #17a2b8; 
+    background-color: #17a2b8;
     padding: 5px 10px;
     font-size: 0.8em;
     margin-left: 10px;
@@ -812,7 +813,7 @@ button:active {
     background-color: #138496;
 }
 .delete-student-btn {
-    background-color: #dc3545; 
+    background-color: #dc3545;
     padding: 5px 10px;
     font-size: 0.8em;
     margin-left: 5px;
@@ -827,8 +828,8 @@ button:active {
 /* Sınıf ve dönem seçildiğinde body'ye eklenen sınıflara göre renk değişkenleri güncellenir */
 
 /* Class 5 - Mavi Teması */
-body.class-5-term-1 { 
-    --current-accent-color: var(--class-5-base); 
+body.class-5-term-1 {
+    --current-accent-color: var(--class-5-base);
     --current-hover-color: var(--class-5-dark);
     --default-header-bg: var(--class-5-base);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -837,11 +838,11 @@ body.class-5-term-1 {
     --dashboard-card-3-bg: #795548; /* Kahverengi (Pending Comments) */
     --dashboard-card-4-bg: #00BCD4; /* Turkuaz (Completion Rate) */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-5-light) 50%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-5-light) 60%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-5-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-5-light) 60%, white);
 }
-body.class-5-term-2 { 
-    --current-accent-color: var(--class-5-dark); 
+body.class-5-term-2 {
+    --current-accent-color: var(--class-5-dark);
     --current-hover-color: color-mix(in srgb, var(--class-5-dark) 80%, black);
     --default-header-bg: var(--class-5-dark);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -850,13 +851,13 @@ body.class-5-term-2 {
     --dashboard-card-3-bg: #4caf50; /* Yeşil */
     --dashboard-card-4-bg: #9c27b0; /* Mor */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-5-base) 20%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-5-base) 30%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-5-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-5-base) 30%, white);
 }
 
 /* Class 6 - Yeşil Teması */
-body.class-6-term-1 { 
-    --current-accent-color: var(--class-6-base); 
+body.class-6-term-1 {
+    --current-accent-color: var(--class-6-base);
     --current-hover-color: var(--class-6-dark);
     --default-header-bg: var(--class-6-base);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -865,11 +866,11 @@ body.class-6-term-1 {
     --dashboard-card-3-bg: #607D8B; /* Mavi Gri */
     --dashboard-card-4-bg: #FFEB3B; /* Sarı */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-6-light) 50%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-6-light) 60%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-6-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-6-light) 60%, white);
 }
-body.class-6-term-2 { 
-    --current-accent-color: var(--class-6-dark); 
+body.class-6-term-2 {
+    --current-accent-color: var(--class-6-dark);
     --current-hover-color: color-mix(in srgb, var(--class-6-dark) 80%, black);
     --default-header-bg: var(--class-6-dark);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -878,13 +879,13 @@ body.class-6-term-2 {
     --dashboard-card-3-bg: #795548; /* Kahverengi */
     --dashboard-card-4-bg: #03A9F4; /* Açık Mavi */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-6-base) 20%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-6-base) 30%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-6-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-6-base) 30%, white);
 }
 
 /* Class 7 - Turuncu Teması */
-body.class-7-term-1 { 
-    --current-accent-color: var(--class-7-base); 
+body.class-7-term-1 {
+    --current-accent-color: var(--class-7-base);
     --current-hover-color: var(--class-7-dark);
     --default-header-bg: var(--class-7-base);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -893,11 +894,11 @@ body.class-7-term-1 {
     --dashboard-card-3-bg: #8BC34A; /* Açık Yeşil */
     --dashboard-card-4-bg: #9E9E9E; /* Gri */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-7-light) 50%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-7-light) 60%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-7-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-7-light) 60%, white);
 }
-body.class-7-term-2 { 
-    --current-accent-color: var(--class-7-dark); 
+body.class-7-term-2 {
+    --current-accent-color: var(--class-7-dark);
     --current-hover-color: color-mix(in srgb, var(--class-7-dark) 80%, black);
     --default-header-bg: var(--class-7-dark);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -906,13 +907,13 @@ body.class-7-term-2 {
     --dashboard-card-3-bg: #CDDC39; /* Açık Yeşil-Sarı */
     --dashboard-card-4-bg: #607D8B; /* Mavi Gri */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-7-base) 20%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-7-base) 30%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-7-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-7-base) 30%, white);
 }
 
 /* Class 8 - Kırmızı Teması */
-body.class-8-term-1 { 
-    --current-accent-color: var(--class-8-base); 
+body.class-8-term-1 {
+    --current-accent-color: var(--class-8-base);
     --current-hover-color: var(--class-8-dark);
     --default-header-bg: var(--class-8-base);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -921,11 +922,11 @@ body.class-8-term-1 {
     --dashboard-card-3-bg: #4CAF50; /* Yeşil */
     --dashboard-card-4-bg: #9C27B0; /* Mor */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-8-light) 50%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-8-light) 60%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-8-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-8-light) 60%, white);
 }
-body.class-8-term-2 { 
-    --current-accent-color: var(--class-8-dark); 
+body.class-8-term-2 {
+    --current-accent-color: var(--class-8-dark);
     --current-hover-color: color-mix(in srgb, var(--class-8-dark) 80%, black);
     --default-header-bg: var(--class-8-dark);
     /* Dashboard kartları için zıt/farklı renkler */
@@ -934,8 +935,8 @@ body.class-8-term-2 {
     --dashboard-card-3-bg: #795548; /* Kahverengi */
     --dashboard-card-4-bg: #FFEB3B; /* Sarı */
     --dashboard-card-text: #fff;
-    --tab-comments-bg: color-mix(in srgb, var(--class-8-base) 20%, white); 
-    --tab-management-bg: color-mix(in srgb, var(--class-8-base) 30%, white); 
+    --tab-comments-bg: color-mix(in srgb, var(--class-8-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-8-base) 30%, white);
 }
 
 
@@ -992,35 +993,35 @@ body[class*="class-"] #student-management-tab {
 
 /* --- Modallar için genel stil --- */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1001; 
+    display: none;
+    position: fixed;
+    z-index: 1001;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.6); 
-    justify-content: center; 
-    align-items: center; 
-    padding: 20px; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .modal-content {
-    background-color: #fefefe; 
-    margin: auto; 
+    background-color: #fefefe;
+    margin: auto;
     padding: 30px;
     border: 1px solid #888;
     border-radius: 10px;
-    width: 80%; 
-    max-width: 600px; 
+    width: 80%;
+    max-width: 600px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    position: relative; 
-    text-align: center; 
-    display: flex; 
+    position: relative;
+    text-align: center;
+    display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
 }
 
 .modal-content h3 {
@@ -1034,11 +1035,11 @@ body[class*="class-"] #student-management-tab {
 .modal-content p {
     font-size: 1.1em;
     line-height: 1.6;
-    text-align: left; 
+    text-align: left;
 }
 
 .modal-content ul {
-    text-align: left; 
+    text-align: left;
     padding-left: 20px;
     margin-bottom: 20px;
 }
@@ -1049,26 +1050,26 @@ body[class*="class-"] #student-management-tab {
 
 .modal-actions {
     display: flex;
-    justify-content: center; 
-    gap: 10px; 
+    justify-content: center;
+    gap: 10px;
     margin-top: 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .modal-actions button {
-    flex-grow: 1; 
-    padding: 8px 12px; 
-    font-size: 0.9em; 
-    margin-top: 0; 
-    min-width: 100px; 
-    box-sizing: border-box; 
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    margin-top: 0;
+    min-width: 100px;
+    box-sizing: border-box;
 }
 /* İptal tuşu için özel stil */
 #modal-cancel-btn {
-    background-color: #f44336; 
+    background-color: #f44336;
 }
 #modal-cancel-btn:hover {
-    background-color: #d32f2f; 
+    background-color: #d32f2f;
 }
 
 /* Yorum Navigasyon Butonları (Modal İçinde) */
@@ -1083,13 +1084,13 @@ body[class*="class-"] #student-management-tab {
     background-color: var(--default-accent-color);
     color: var(--button-text);
     border: none;
-    border-radius: 50%; 
-    width: 30px; 
+    border-radius: 50%;
+    width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em; 
+    font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -1125,21 +1126,21 @@ body[class*="class-"] #student-management-tab {
 
 /* Kullanım Kılavuzu Butonu (Footer'da) */
 .help-button {
-    background-color: #007bff; 
+    background-color: #007bff;
     color: #fff;
-    border-radius: 50%; 
-    width: 40px; 
+    border-radius: 50%;
+    width: 40px;
     height: 40px;
     font-size: 1.5em;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; 
+    position: fixed;
     bottom: 20px;
     right: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 100; 
+    z-index: 100;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
@@ -1155,10 +1156,10 @@ body[class*="class-"] #student-management-tab {
 
 /* --- HELP MODAL STILLERİ (eski welcome modal'dan dönüştürüldü) --- */
 #help-modal .modal-content {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2f7 100%); 
-    border: 2px solid var(--default-accent-color); 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25); 
-    animation: fadeInScale 0.3s ease-out forwards; 
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2f7 100%);
+    border: 2px solid var(--default-accent-color);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    animation: fadeInScale 0.3s ease-out forwards;
 }
 
 @keyframes fadeInScale {
@@ -1172,36 +1173,36 @@ body[class*="class-"] #student-management-tab {
     }
 }
 
-#help-modal h3 { 
-    color: var(--default-accent-color); 
-    font-size: 2.2em; 
+#help-modal h3 {
+    color: var(--default-accent-color);
+    font-size: 2.2em;
     font-weight: 700;
     margin-bottom: 10px;
     padding-bottom: 8px;
-    border-bottom: 3px solid var(--default-accent-color); 
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+    border-bottom: 3px solid var(--default-accent-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-#help-modal p { 
-    color: #444; 
+#help-modal p {
+    color: #444;
     font-size: 1.05em;
     margin-bottom: 15px;
 }
 
-#help-modal ul { 
-    background-color: rgba(var(--default-accent-color-rgb), 0.05); 
-    border-left: 4px solid var(--default-accent-color); 
+#help-modal ul {
+    background-color: rgba(var(--default-accent-color-rgb), 0.05);
+    border-left: 4px solid var(--default-accent-color);
     padding: 15px 20px 15px 30px;
     border-radius: 5px;
-    list-style-type: none; 
-    counter-reset: welcome-list; 
+    list-style-type: none;
+    counter-reset: welcome-list;
     text-align: left;
 }
 
 #help-modal ul li::before {
-    content: counter(welcome-list) "."; 
+    content: counter(welcome-list) ".";
     counter-increment: welcome-list;
-    color: var(--default-accent-color); 
+    color: var(--default-accent-color);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -1209,17 +1210,17 @@ body[class*="class-"] #student-management-tab {
 }
 
 #help-modal strong {
-    color: var(--default-accent-color); 
+    color: var(--default-accent-color);
 }
 
 #help-modal .close-button {
-    color: var(--default-accent-color); 
-    font-size: 32px; 
+    color: var(--default-accent-color);
+    font-size: 32px;
 }
 #help-modal .close-button:hover {
     color: var(--default-hover-color);
 }
-#close-help-modal { 
+#close-help-modal {
     width: 100%;
     margin-top: 20px;
     background-color: var(--default-accent-color);
@@ -1241,11 +1242,79 @@ body[class*="class-"] #student-management-tab {
 }
 
 
+/* Atanan Tüm Yorumları Görüntüleme Modalı İçindeki Öğrenci Girişleri */
+.student-entry-modal {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e0e0e0;
+    text-align: left; /* Metin sola hizalı olsun */
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.student-entry-modal:last-child {
+    border-bottom: none;
+}
+
+.student-entry-modal .student-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.student-entry-modal h2 {
+    margin: 0;
+    font-size: 1.1em; /* Daha küçük başlık */
+    color: #333;
+    flex-grow: 1; /* Başlık yeterli alanı kaplasın */
+    border-bottom: none; /* Modal içindeki başlıkta alttaki çizgiyi kaldır */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.student-entry-modal p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.4;
+    white-space: pre-wrap; /* Satır sonlarını koru */
+    margin: 0; /* Paragrafın varsayılan marginlerini sıfırla */
+}
+
+/* Modal içindeki Kopyala düğmesi */
+.copy-modal-comment-btn {
+    background-color: #007bff; /* Mavi renk */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 0; /* Üstteki marginleri sıfırla */
+    margin-left: 10px; /* Başlıktan biraz boşluk bırak */
+    white-space: nowrap; /* Metin tek satırda kalsın */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: auto; /* Genişliği içeriğe göre ayarla */
+}
+
+.copy-modal-comment-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+.copy-modal-comment-btn:active {
+    transform: translateY(0);
+}
+
 /* responsive ayarlar */
 @media (max-width: 1024px) { /* Tabletler ve küçük laptoplar */
     #comments-tab .comments-layout {
-        flex-direction: column; 
-        height: auto; 
+        flex-direction: column;
+        height: auto;
     }
     #comments-tab section {
         min-width: unset;
@@ -1271,7 +1340,7 @@ body[class*="class-"] #student-management-tab {
     .student-input-options select,
     .student-input-options button,
     .student-input-options .file-upload-label {
-        flex-basis: calc(50% - 5px); 
+        flex-basis: calc(50% - 5px);
         max-width: calc(50% - 5px);
     }
     .student-list-filters select {
@@ -1283,32 +1352,32 @@ body[class*="class-"] #student-management-tab {
         max-width: 100%;
     }
     .modal-content {
-        width: 90%; 
+        width: 90%;
         padding: 20px;
     }
-    #help-modal h3 { 
+    #help-modal h3 {
         font-size: 1.8em;
     }
-    #help-modal p, #help-modal ul li { 
+    #help-modal p, #help-modal ul li {
         font-size: 0.95em;
     }
     #help-modal ul {
-        padding: 10px 15px 10px 25px; 
+        padding: 10px 15px 10px 25px;
     }
     /* Öğrenci gezinme butonları ve altındaki buton için mobil ayar */
     .student-bottom-controls {
-        flex-direction: column; 
-        gap: 10px; 
+        flex-direction: column;
+        gap: 10px;
     }
     .student-navigation-buttons {
-        width: 100%; 
+        width: 100%;
     }
     .student-navigation-buttons .icon-nav-button {
-        flex-basis: calc(50% - 5px); 
+        flex-basis: calc(50% - 5px);
         max-width: calc(50% - 5px);
-        padding: 8px 12px; 
-        font-size: 0.95em; 
-        height: auto; 
+        padding: 8px 12px;
+        font-size: 0.95em;
+        height: auto;
     }
 }
 
@@ -1327,26 +1396,26 @@ body[class*="class-"] #student-management-tab {
         font-size: 0.95em;
     }
     .assign-btn, .edit-student-btn, .delete-student-btn {
-        padding: 4px 8px; 
+        padding: 4px 8px;
         font-size: 0.75em;
     }
     /* Yorum Düzenleme alanı mobil için optimize edildi */
     #comment-editor {
-        order: 1; 
-        min-height: unset; 
+        order: 1;
+        min-height: unset;
         max-height: unset;
-        flex-basis: auto; 
-        min-width: 100%; 
+        flex-basis: auto;
+        min-width: 100%;
     }
     #student-assignment-sidebar {
-        order: 2; 
+        order: 2;
         min-height: unset;
         max-height: unset;
         flex-basis: auto;
         min-width: 100%;
     }
     #comment-profiles {
-        order: 3; 
+        order: 3;
         min-height: unset;
         max-height: unset;
         flex-basis: auto;
@@ -1354,74 +1423,82 @@ body[class*="class-"] #student-management-tab {
     }
 
     #comment-textarea {
-        min-height: 180px; 
-        font-size: 1em; 
-        max-height: 350px; 
+        min-height: 180px;
+        font-size: 1em;
+        max-height: 350px;
     }
     #profile-list, #student-list, #managed-student-list {
-        max-height: 180px; 
+        max-height: 180px;
     }
 
     #toast-container {
         top: 10px;
         right: 10px;
-        left: 10px; 
-        flex-direction: column-reverse; 
+        left: 10px;
+        flex-direction: column-reverse;
     }
     /* Dashboard kartları burada da tek satır kalmalı */
     .dashboard-card {
-        min-width: 50px; 
-        padding: 2px 4px; 
+        min-width: 50px;
+        padding: 2px 4px;
     }
     .dashboard-card .card-title {
-        font-size: 0.5em; 
+        font-size: 0.5em;
     }
     .dashboard-card .card-value {
-        font-size: 0.8em; 
+        font-size: 0.8em;
     }
     .student-input-options select,
     .student-input-options button,
     .student-input-options .file-upload-label {
-        flex-basis: 100%; 
+        flex-basis: 100%;
         max-width: 100%;
     }
     .student-list-filters select,
     .student-list-filters input[type="text"] {
-        flex-basis: 100%; 
+        flex-basis: 100%;
         max-width: 100%;
     }
     .modal-content {
-        width: 95%; 
+        width: 95%;
         padding: 15px;
     }
-    #help-modal h3 { 
+    #help-modal h3 {
         font-size: 1.6em;
     }
-    #help-modal p, #help-modal ul li { 
+    #help-modal p, #help-modal ul li {
         font-size: 0.9em;
     }
     /* Modal butonları için mobil ayar */
     .modal-actions button {
         padding: 6px 10px;
         font-size: 0.8em;
-        min-width: unset; 
-        flex-basis: 100%; 
+        min-width: unset;
+        flex-basis: 100%;
     }
     /* Öğrenci gezinme butonları mobil için */
     .student-navigation-buttons .icon-nav-button {
-        padding: 6px 10px; 
-        font-size: 0.9em; 
+        padding: 6px 10px;
+        font-size: 0.9em;
         height: auto;
     }
     /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
     .clear-all-students button {
-        max-width: 100%; 
+        max-width: 100%;
+    }
+
+    /* Atanan Tüm Yorumları Görüntüleme Modalı İçindeki Öğrenci Girişleri için Responsive Ayarlar */
+    .copy-modal-comment-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
     }
 }
 
+
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.2em; 
+        font-size: 1.2em;
     }
     .tab-button {
         font-size: 0.9em;
@@ -1432,14 +1509,14 @@ body[class*="class-"] #student-management-tab {
         font-size: 0.9em;
     }
     section {
-        padding: 10px; 
+        padding: 10px;
     }
     .profile-item, .student-item, .managed-student-item {
         font-size: 0.85em;
         padding: 6px 4px;
     }
     #profile-list, #student-list, #managed-student-list {
-        max-height: 150px; 
+        max-height: 150px;
     }
     .modal-content {
         padding: 10px;
@@ -1451,7 +1528,7 @@ body[class*="class-"] #student-management-tab {
         font-size: 0.8em;
     }
     .student-navigation-buttons .icon-nav-button {
-        font-size: 0.8em; 
+        font-size: 0.8em;
     }
 }
 
@@ -1463,5 +1540,5 @@ footer {
     padding: 15px;
     font-size: 0.85em;
     border-top: 1px solid #555;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
