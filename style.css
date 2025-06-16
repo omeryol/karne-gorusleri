@@ -41,49 +41,57 @@
     /* Sekme Arka Plan Renkleri (Dinamik) */
     --tab-comments-bg: #ffffff; /* Varsayılan yorum sekmesi arka planı */
     --tab-management-bg: #ffffff; /* Varsayılan yönetim sekmesi arka planı */
+
+    /* Dinamik Header Yüksekliği */
+    --header-height: 0px; /* JavaScript tarafından güncellenecek */
 }
 
 /* --- Genel Stil Ayarları --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html, body {
+    height: 100%; /* Sayfa yüksekliğini tam kapla */
     margin: 0;
     padding: 0;
+    overflow-y: auto; /* Dikey kaydırmayı etkinleştir */
+    -webkit-overflow-scrolling: touch; /* iOS'ta akıcı kaydırma */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--primary-bg);
     color: var(--text-color);
-    display: flex;
-    justify-content: center; /* Merkezi hizalama */
-    align-items: flex-start; /* İçeriği yukarıdan başlar */
-    min-height: 100vh; /* Ekranın tamamını kapla */
-    transition: background-color 0.3s ease; /* Renk geçişleri için */
+    display: flex; /* app-container'ı ortalamak için */
+    justify-content: center;
+    align-items: flex-start;
+    transition: background-color 0.3s ease;
 }
 
 #app-container {
     display: flex;
     flex-direction: column;
     width: 100%; 
-    max-width: 1600px; /* İçeriğin çok geniş ekranlarda dağılmasını engellemek için bir maksimum genişlik */
+    max-width: 1600px;
     background-color: var(--secondary-bg);
     box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
     border-radius: 12px; 
-    margin: 20px auto; /* Üstten/alttan 20px boşluk, yatayda ortala */
-    /* overflow: hidden; */ /* Bu satır sticky position'ı engelleyebilir, kaldırıldı */
+    margin: 20px auto; 
+    /* overflow: hidden; -> Bu kaldırılmalı, ana sayfa kaydırılabilir olsun diye */
 }
 
 /* --- Header ve Navigasyon (Tablar) Stilleri --- */
 header {
     background-color: var(--default-header-bg); 
     color: var(--default-header-text);
-    padding: 15px 25px 0; /* Üst ve yan padding, alt padding sıfır */
+    padding: 15px 25px 0; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* İçerikleri (h1, tabs, dashboard) yatayda ortala */
+    align-items: center; 
     border-bottom: 1px solid rgba(255,255,255,0.2); 
     transition: background-color 0.3s ease;
     
     /* Sticky Header */
     position: sticky;
-    top: 0; /* Sayfanın en üstüne sabitle */
-    z-index: 100; /* Diğer içeriklerin üzerine gelsin */
+    top: 0; 
+    z-index: 100; 
     border-bottom-left-radius: 12px; 
     border-bottom-right-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15); 
@@ -98,15 +106,14 @@ header h1 {
     padding: 0 25px; 
     box-sizing: border-box; 
     
-    /* Dinamik Başlık Rengi */
-    color: var(--default-header-text); /* Temaya göre başlık metin rengi */
-    font-family: 'Georgia', serif; /* Font değişimi örneği */
-    letter-spacing: 1.5px; /* Harf aralığı */
+    color: var(--default-header-text); 
+    font-family: 'Georgia', serif; 
+    letter-spacing: 1.5px; 
 }
 
 /* ANA BAŞLIK RENKLENDİRMESİ - Artık tek renk olacağı için bu kısım etkisizdir */
 header h1 .colored-char {
-    color: inherit; /* Üst elementin (h1) rengini miras alsın */
+    color: inherit; 
 }
 
 .tabs {
@@ -151,10 +158,11 @@ main {
     border-top-right-radius: 0;
     position: relative;
     z-index: 1; 
-    padding: 25px; /* Ana padding'i koru */
+    padding: 25px; 
     flex-grow: 1;
-    overflow: auto; /* İçerik kaydırılabilir olsun */
-    height: calc(100vh - 250px); /* Kalan yüksekliği doldur */
+    /* height ve overflow-y kaldırıldı, ana sayfanın kaymasını sağlayacak */
+    /* height: calc(100vh - 250px); */
+    /* overflow: hidden; */ 
     display: flex;
     flex-direction: column;
 }
@@ -176,7 +184,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 8px 15px; 
-    background-color: rgba(0,0,0,0.15); /* Eski şeffaf arka plana dönüldü */
+    background-color: rgba(0,0,0,0.15); 
     gap: 3px; 
     flex-wrap: nowrap; 
     box-sizing: border-box;
@@ -186,15 +194,12 @@ header {
     
     /* Dashboard'u da sabit yap (Header'ın altına) */
     position: sticky;
-    top: 150px; /* Header'ın altında kalacak şekilde ayarlanmalı (Header yüksekliğine göre tahmini değer) */
-    z-index: 99; /* Header'dan biraz daha az z-index */
-    /* background-color: var(--default-header-bg); */ /* Bu satır kapatıldı, kartların kendi renkleri belirgin olsun */
+    top: var(--header-height); /* Dinamik olarak header yüksekliği kadar aşağıda sabitlenecek */
+    z-index: 99; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
 
-    /* Dashboard kartlarını büyütme (isteğe bağlı, kaldırıldı) */
-    /* transform: scale(1.02); */ 
-    margin: 0; /* Üstten ve alttan boşluk kaldırıldı, header'ın paddingi ile çakışmasın diye */
-    border-radius: 0; /* Yuvarlaklık kaldırıldı, header zaten yuvarlak */
+    margin: 0; 
+    border-radius: 0; 
 }
 
 .dashboard-card {
@@ -237,14 +242,10 @@ header {
 }
 
 
-/* --- Ana İçerik Bölümü --- */
-/* main elementinin padding'i yukarı taşındı, çünkü artık kendi içinde kaydırılabilir. */
-/* main tanımı yukarıda güncellendi */
-
 .tab-content {
     display: none; 
-    height: 100%; 
-    overflow: hidden; /* Her bir tab içeriği kendi içinde kaydırma yapmayacak, main yapacak */
+    height: 100%; /* Tab içeriği hala kendi kapsayıcısının yüksekliğini almalı */
+    overflow: hidden; 
     padding: 0; 
     box-sizing: border-box;
     transition: background-color 0.3s ease; 
@@ -1197,13 +1198,6 @@ body[class*="class-"] #student-management-tab {
     text-align: left;
 }
 
-#help-modal ul li {
-    position: relative;
-    padding-left: 25px; 
-    margin-bottom: 10px;
-    color: #333;
-}
-
 #help-modal ul li::before {
     content: counter(welcome-list) "."; 
     counter-increment: welcome-list;
@@ -1264,7 +1258,6 @@ body[class*="class-"] #student-management-tab {
         width: 100%;
         max-width: unset;
     }
-    /* main yüksekliği calc ile dinamik olarak ayarlandığı için burada height:auto kaldırıldı, padding 15px korunuyor */
     main {
         padding: 15px;
     }
