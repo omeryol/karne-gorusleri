@@ -14,16 +14,20 @@ export function showToast(message, type = 'info') {
         toast.style.backgroundColor = '#333';
     }
 
-    toastContainer.appendChild(toast);
+    if (toastContainer) { // toastContainer'ın varlığını kontrol et
+        toastContainer.appendChild(toast);
 
-    setTimeout(() => {
-        toast.classList.add('show');
-    }, 100);
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 100);
 
-    setTimeout(() => {
-        toast.classList.remove('show');
-        toast.addEventListener('transitionend', () => toast.remove());
-    }, 3000);
+        setTimeout(() => {
+            toast.classList.remove('show');
+            toast.addEventListener('transitionend', () => toast.remove());
+        }, 3000);
+    } else {
+        console.error('Toast container bulunamadı!');
+    }
 }
 
 export function getFirstName(fullName) {
