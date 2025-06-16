@@ -87,7 +87,7 @@ header {
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     transition: background-color 0.3s ease;
-    
+
     /* Sticky Header */
     position: sticky;
     top: 0;
@@ -105,7 +105,7 @@ header h1 {
     width: 100%;
     padding: 0 25px;
     box-sizing: border-box;
-    
+
     color: var(--default-header-text);
     font-family: 'Georgia', serif;
     letter-spacing: 1.5px;
@@ -191,7 +191,7 @@ header {
     min-height: 55px;
     overflow-x: hidden;
     flex-shrink: 0;
-    
+
     /* Dashboard'u da sabit yap (Header'ın altına) */
     position: sticky;
     top: var(--header-height); /* Dinamik olarak header yüksekliği kadar aşağıda sabitlenecek */
