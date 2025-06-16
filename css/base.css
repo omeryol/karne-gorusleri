@@ -59,7 +59,7 @@ body {
     background-color: var(--primary-bg);
     color: var(--text-color);
     display: flex; /* app-container'ı ortalamak için */
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: center; /* Yatayda ortala */
+    align-items: flex-start; /* Dikeyde en üste hizala */
     transition: background-color 0.3s ease;
 }
