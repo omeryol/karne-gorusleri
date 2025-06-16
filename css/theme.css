@@ -1,0 +1,136 @@
+/* theme.css */
+
+/* --- Tema Renklerinin Dinamik Uygulanması --- */
+/* Sınıf ve dönem seçildiğinde body'ye eklenen sınıflara göre renk değişkenleri güncellenir */
+
+/* Class 5 - Mavi Teması */
+body.class-5-term-1 {
+    --current-accent-color: var(--class-5-base);
+    --current-hover-color: var(--class-5-dark);
+    --default-header-bg: var(--class-5-base);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #E91E63; /* Pembe (Total Students) */
+    --dashboard-card-2-bg: #FFEB3B; /* Sarı (Assigned Comments) */
+    --dashboard-card-3-bg: #795548; /* Kahverengi (Pending Comments) */
+    --dashboard-card-4-bg: #00BCD4; /* Turkuaz (Completion Rate) */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-5-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-5-light) 60%, white);
+}
+body.class-5-term-2 {
+    --current-accent-color: var(--class-5-dark);
+    --current-hover-color: color-mix(in srgb, var(--class-5-dark) 80%, black);
+    --default-header-bg: var(--class-5-dark);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #f44336; /* Kırmızı */
+    --dashboard-card-2-bg: #ff9800; /* Koyu Turuncu */
+    --dashboard-card-3-bg: #4caf50; /* Yeşil */
+    --dashboard-card-4-bg: #9c27b0; /* Mor */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-5-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-5-base) 30%, white);
+}
+
+/* Class 6 - Yeşil Teması */
+body.class-6-term-1 {
+    --current-accent-color: var(--class-6-base);
+    --current-hover-color: var(--class-6-dark);
+    --default-header-bg: var(--class-6-base);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #FF5722; /* Koyu Turuncu/Kırmızımsı */
+    --dashboard-card-2-bg: #00BCD4; /* Turkuaz */
+    --dashboard-card-3-bg: #607D8B; /* Mavi Gri */
+    --dashboard-card-4-bg: #FFEB3B; /* Sarı */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-6-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-6-light) 60%, white);
+}
+body.class-6-term-2 {
+    --current-accent-color: var(--class-6-dark);
+    --current-hover-color: color-mix(in srgb, var(--class-6-dark) 80%, black);
+    --default-header-bg: var(--class-6-dark);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #FFC107; /* Sarımsı Turuncu */
+    --dashboard-card-2-bg: #673AB7; /* Koyu Mor */
+    --dashboard-card-3-bg: #795548; /* Kahverengi */
+    --dashboard-card-4-bg: #03A9F4; /* Açık Mavi */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-6-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-6-base) 30%, white);
+}
+
+/* Class 7 - Turuncu Teması */
+body.class-7-term-1 {
+    --current-accent-color: var(--class-7-base);
+    --current-hover-color: var(--class-7-dark);
+    --default-header-bg: var(--class-7-base);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #3F51B5; /* İndigo Mavi */
+    --dashboard-card-2-bg: #E91E63; /* Pembe */
+    --dashboard-card-3-bg: #8BC34A; /* Açık Yeşil */
+    --dashboard-card-4-bg: #9E9E9E; /* Gri */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-7-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-7-light) 60%, white);
+}
+body.class-7-term-2 {
+    --current-accent-color: var(--class-7-dark);
+    --current-hover-color: color-mix(in srgb, var(--class-7-dark) 80%, black);
+    --default-header-bg: var(--class-7-dark);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #424242; /* Koyu Gri */
+    --dashboard-card-2-bg: #009688; /* Teal */
+    --dashboard-card-3-bg: #CDDC39; /* Açık Yeşil-Sarı */
+    --dashboard-card-4-bg: #607D8B; /* Mavi Gri */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-7-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-7-base) 30%, white);
+}
+
+/* Class 8 - Kırmızı Teması */
+body.class-8-term-1 {
+    --current-accent-color: var(--class-8-base);
+    --current-hover-color: var(--class-8-dark);
+    --default-header-bg: var(--class-8-base);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #2196F3; /* Mavi */
+    --dashboard-card-2-bg: #FFC107; /* Sarımsı Turuncu */
+    --dashboard-card-3-bg: #4CAF50; /* Yeşil */
+    --dashboard-card-4-bg: #9C27B0; /* Mor */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-8-light) 50%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-8-light) 60%, white);
+}
+body.class-8-term-2 {
+    --current-accent-color: var(--class-8-dark);
+    --current-hover-color: color-mix(in srgb, var(--class-8-dark) 80%, black);
+    --default-header-bg: var(--class-8-dark);
+    /* Dashboard kartları için zıt/farklı renkler */
+    --dashboard-card-1-bg: #00BCD4; /* Turkuaz */
+    --dashboard-card-2-bg: #3F51B5; /* İndigo Mavi */
+    --dashboard-card-3-bg: #795548; /* Kahverengi */
+    --dashboard-card-4-bg: #FFEB3B; /* Sarı */
+    --dashboard-card-text: #fff;
+    --tab-comments-bg: color-mix(in srgb, var(--class-8-base) 20%, white);
+    --tab-management-bg: color-mix(in srgb, var(--class-8-base) 30%, white);
+}
+
+
+/* Sınıf ve dönem seçildiğinde header ve section başlık renkleri güncellenir */
+body[class*="class-"] header {
+    background-color: var(--default-header-bg);
+}
+
+body[class*="class-"] section h2 {
+    color: var(--current-accent-color);
+    border-color: var(--current-accent-color);
+}
+
+/* Tab İçeriklerinin Arka Planları */
+body[class*="class-"] #comments-tab {
+    background-color: var(--tab-comments-bg);
+}
+
+body[class*="class-"] #student-management-tab {
+    background-color: var(--tab-management-bg);
+}

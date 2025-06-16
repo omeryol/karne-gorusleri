@@ -1,0 +1,320 @@
+/* modals.css */
+
+/* --- Modallar için genel stil --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: var(--default-accent-color);
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--default-accent-color);
+    padding-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.modal-content ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content ul li {
+    margin-bottom: 8px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.modal-actions button {
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    margin-top: 0;
+    min-width: 100px;
+    box-sizing: border-box;
+}
+/* İptal tuşu için özel stil */
+#modal-cancel-btn {
+    background-color: #f44336;
+}
+#modal-cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Yorum Navigasyon Butonları (Modal İçinde) */
+.modal-comment-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.small-icon-button {
+    background-color: var(--default-accent-color);
+    color: var(--button-text);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.small-icon-button:hover {
+    background-color: var(--default-hover-color);
+    transform: translateY(-1px);
+}
+.small-icon-button:active {
+    transform: translateY(0);
+}
+
+
+/* Kapatma butonu */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Kullanım Kılavuzu Butonu (Footer'da) */
+.help-button {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.help-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+.help-button:active {
+    transform: scale(1);
+}
+
+
+/* --- HELP MODAL STILLERI (eski welcome modal'dan dönüştürüldü) --- */
+#help-modal .modal-content {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2f7 100%);
+    border: 2px solid var(--default-accent-color);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    animation: fadeInScale 0.3s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#help-modal h3 {
+    color: var(--default-accent-color);
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--default-accent-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#help-modal p {
+    color: #444;
+    font-size: 1.05em;
+    margin-bottom: 15px;
+}
+
+#help-modal ul {
+    background-color: rgba(var(--default-accent-color-rgb), 0.05);
+    border-left: 4px solid var(--default-accent-color);
+    padding: 15px 20px 15px 30px;
+    border-radius: 5px;
+    list-style-type: none;
+    counter-reset: welcome-list;
+    text-align: left;
+}
+
+#help-modal ul li::before {
+    content: counter(welcome-list) ".";
+    counter-increment: welcome-list;
+    color: var(--default-accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#help-modal strong {
+    color: var(--default-accent-color);
+}
+
+#help-modal .close-button {
+    color: var(--default-accent-color);
+    font-size: 32px;
+}
+#help-modal .close-button:hover {
+    color: var(--default-hover-color);
+}
+#close-help-modal {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--default-accent-color);
+    color: var(--button-text);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+#close-help-modal:hover {
+    background-color: var(--default-hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+#close-help-modal:active {
+    transform: translateY(0);
+}
+
+
+/* Atanan Tüm Yorumları Görüntüleme Modalı İçindeki Öğrenci Girişleri */
+.student-entry-modal {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e0e0e0;
+    text-align: left; /* Metin sola hizalı olsun */
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.student-entry-modal:last-child {
+    border-bottom: none;
+}
+
+.student-entry-modal .student-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.student-entry-modal h2 {
+    margin: 0;
+    font-size: 1.1em; /* Daha küçük başlık */
+    color: #333;
+    flex-grow: 1; /* Başlık yeterli alanı kaplasın */
+    border-bottom: none; /* Modal içindeki başlıkta alttaki çizgiyi kaldır */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.student-entry-modal p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.4;
+    white-space: pre-wrap; /* Satır sonlarını koru */
+    margin: 0; /* Paragrafın varsayılan marginlerini sıfırla */
+}
+
+/* Modal içindeki Kopyala düğmesi */
+.copy-modal-comment-btn {
+    background-color: #007bff; /* Mavi renk */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 0; /* Üstteki marginleri sıfırla */
+    margin-left: 10px; /* Başlıktan biraz boşluk bırak */
+    white-space: nowrap; /* Metin tek satırda kalsın */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: auto; /* Genişliği içeriğe göre ayarla */
+}
+
+.copy-modal-comment-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+.copy-modal-comment-btn:active {
+    transform: translateY(0);
+}

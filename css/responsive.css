@@ -1,0 +1,233 @@
+/* responsive.css */
+
+@media (max-width: 1024px) { /* Tabletler ve küçük laptoplar */
+    #comments-tab .comments-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    #comments-tab section {
+        min-width: unset;
+        flex-basis: auto;
+        max-width: unset;
+    }
+    .file-upload-label,
+    .student-input-options select,
+    .student-input-options button {
+        width: 100%;
+        max-width: unset;
+    }
+    main {
+        padding: 15px;
+    }
+    .student-management-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    .management-column {
+        min-width: unset;
+    }
+    .student-input-options select,
+    .student-input-options button,
+    .student-input-options .file-upload-label {
+        flex-basis: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+    }
+    .student-list-filters select {
+        flex-basis: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+    }
+    .student-list-filters input[type="text"] {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+    #help-modal h3 {
+        font-size: 1.8em;
+    }
+    #help-modal p, #help-modal ul li {
+        font-size: 0.95em;
+    }
+    #help-modal ul {
+        padding: 10px 15px 10px 25px;
+    }
+    /* Öğrenci gezinme butonları ve altındaki buton için mobil ayar */
+    .student-bottom-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .student-navigation-buttons {
+        width: 100%;
+    }
+    .student-navigation-buttons .icon-nav-button {
+        flex-basis: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+        padding: 8px 12px;
+        font-size: 0.95em;
+        height: auto;
+    }
+    /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
+    .clear-all-students button {
+        max-width: 100%;
+    }
+
+    /* Yorum Düzenleyici altındaki yeni butonlar için mobil ayar */
+    .student-editor-controls .icon-nav-button,
+    .student-editor-controls #view-all-assignments-btn-editor {
+        flex-basis: 100%; /* Mobil'de tam genişlikte olsun */
+        max-width: 100%;
+    }
+
+    /* Atanan Tüm Yorumları Görüntüleme Modalı İçindeki Öğrenci Girişleri için Responsive Ayarlar */
+    .copy-modal-comment-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    .tab-button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    /* Genel buton boyutları mobil için biraz küçültüldü */
+    button {
+        padding: 8px 12px;
+        font-size: 0.95em;
+    }
+    .assign-btn, .edit-student-btn, .delete-student-btn {
+        padding: 4px 8px;
+        font-size: 0.75em;
+    }
+    /* Yorum Düzenleme alanı mobil için optimize edildi */
+    #comment-editor {
+        order: 1;
+        min-height: unset;
+        max-height: unset;
+        flex-basis: auto;
+        min-width: 100%;
+    }
+    #student-assignment-sidebar {
+        order: 2;
+        min-height: unset;
+        max-height: unset;
+        flex-basis: auto;
+        min-width: 100%;
+    }
+    #comment-profiles {
+        order: 3;
+        min-height: unset;
+        max-height: unset;
+        flex-basis: auto;
+        min-width: 100%;
+    }
+
+    #comment-textarea {
+        min-height: 180px;
+        font-size: 1em;
+        max-height: 350px;
+    }
+    #profile-list, #student-list, #managed-student-list {
+        max-height: 180px;
+    }
+
+    #toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        flex-direction: column-reverse;
+    }
+    /* Dashboard kartları burada da tek satır kalmalı */
+    .dashboard-card {
+        min-width: 50px;
+        padding: 2px 4px;
+    }
+    .dashboard-card .card-title {
+        font-size: 0.5em;
+    }
+    .dashboard-card .card-value {
+        font-size: 0.8em;
+    }
+    .student-input-options select,
+    .student-input-options button,
+    .student-input-options .file-upload-label {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .student-list-filters select,
+    .student-list-filters input[type="text"] {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    #help-modal h3 {
+        font-size: 1.6em;
+    }
+    #help-modal p, #help-modal ul li {
+        font-size: 0.9em;
+    }
+    /* Modal butonları için mobil ayar */
+    .modal-actions button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+        min-width: unset;
+        flex-basis: 100%;
+    }
+    /* Öğrenci gezinme butonları mobil için */
+    .student-navigation-buttons .icon-nav-button {
+        padding: 6px 10px;
+        font-size: 0.9em;
+        height: auto;
+    }
+    /* "Tüm öğrencileri temizle" ve "Local Storage'ı temizle" butonları mobil için */
+    .clear-all-students button {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+    .tab-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+    select, button {
+        padding: 7px 10px;
+        font-size: 0.9em;
+    }
+    section {
+        padding: 10px;
+    }
+    .profile-item, .student-item, .managed-student-item {
+        font-size: 0.85em;
+        padding: 6px 4px;
+    }
+    #profile-list, #student-list, #managed-student-list {
+        max-height: 150px;
+    }
+    .modal-content {
+        padding: 10px;
+    }
+    #help-modal h3 {
+        font-size: 1.2em;
+    }
+    #help-modal p, #help-modal ul li {
+        font-size: 0.8em;
+    }
+    .student-navigation-buttons .icon-nav-button {
+        font-size: 0.8em;
+    }
+}

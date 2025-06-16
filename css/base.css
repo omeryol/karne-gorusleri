@@ -1,0 +1,65 @@
+/* base.css */
+
+:root {
+    /* Genel Tema Renkleri */
+    --primary-bg: #f4f7f6; /* Açık Gri */
+    --secondary-bg: #ffffff; /* Beyaz */
+    --text-color: #333; /* Koyu Gri Metin */
+    --border-color: #ddd; /* Açık Gri Kenarlık */
+    --button-text: #fff; /* Buton Metin Rengi */
+
+    /* Varsayılan Yeşil Tema (Sınıf ve Dönem seçilmediğinde veya genel elementler için) */
+    --default-accent-color: #4CAF50; /* Yeşil */
+    --default-hover-color: #45a049; /* Koyu Yeşil */
+    --default-header-bg: var(--default-accent-color);
+    --default-header-text: var(--button-text);
+
+    /* Sınıf Renkleri Paleti */
+    --class-5-base: #2196F3; /* Mavi */
+    --class-5-light: #BBDEFB;
+    --class-5-dark: #1976D2;
+
+    --class-6-base: #4CAF50; /* Yeşil */
+    --class-6-light: #C8E6C9;
+    --class-6-dark: #388E3C;
+
+    --class-7-base: #FF9800; /* Turuncu */
+    --class-7-light: #FFE0B2;
+    --class-7-dark: #FB8C00;
+
+    --class-8-base: #F44336; /* Kırmızı */
+    --class-8-light: #FFCDD2;
+    --class-8-dark: #D32F2F;
+
+    /* Dashboard Kart Teması: Her sınıf temasına göre dinamik olarak belirlenecek */
+    --dashboard-card-1-bg: #007bff; /* Total Students */
+    --dashboard-card-2-bg: #28a745; /* Assigned Comments */
+    --dashboard-card-3-bg: #ffc107; /* Pending Comments */
+    --dashboard-card-4-bg: #6f42c1; /* Completion Rate */
+    --dashboard-card-text: #fff;
+
+    /* Sekme Arka Plan Renkleri (Dinamik) */
+    --tab-comments-bg: #ffffff; /* Varsayılan yorum sekmesi arka planı */
+    --tab-management-bg: #ffffff; /* Varsayılan yönetim sekmesi arka planı */
+
+    /* Dinamik Header Yüksekliği */
+    --header-height: 0px; /* JavaScript tarafından güncellenecek */
+}
+
+html, body {
+    height: 100%; /* Sayfa yüksekliğini tam kapla */
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Dikey kaydırmayı etkinleştir */
+    -webkit-overflow-scrolling: touch; /* iOS'ta akıcı kaydırma */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex; /* app-container'ı ortalamak için */
+    justify-content: center;
+    align-items: flex-start;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,124 @@
+/* layout.css */
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
+    background-color: var(--secondary-bg);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin: 20px auto;
+    /* overflow: hidden; -> Bu kaldırılmalı, ana sayfa kaydırılabilir olsun diye */
+}
+
+header {
+    background-color: var(--default-header-bg);
+    color: var(--default-header-text);
+    padding: 15px 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: background-color 0.3s ease;
+
+    /* Sticky Header */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    color: var(--default-header-text);
+    font-family: 'Georgia', serif;
+    letter-spacing: 1.5px;
+}
+
+/* ANA BAŞLIK RENKLENDİRMESİ - Artık tek renk olacağı için bu kısım etkisizdir */
+header h1 .colored-char {
+    color: inherit;
+}
+
+main {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: relative;
+    z-index: 1;
+    padding: 25px;
+    flex-grow: 1;
+    /* height ve overflow-y kaldırıldı, ana sayfanın kaymasını sağlayacak */
+    /* height: calc(100vh - 250px); */
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Comments Tab Layout (Üç sütunlu düzen) */
+#comments-tab .comments-layout {
+    display: flex;
+    gap: 25px;
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#comments-tab section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Yorum Atama Sütun Oranları */
+#student-assignment-sidebar {
+    flex-grow: 1.2;
+    flex-basis: 0;
+    max-width: 450px;
+}
+
+#comment-editor {
+    flex-grow: 2.0;
+    flex-basis: 0;
+    max-width: 700px;
+}
+
+#comment-profiles {
+    flex-grow: 1.2;
+    flex-basis: 0;
+    max-width: 450px;
+}
+
+/* Öğrenci Yönetimi Sekmesi Stilleri */
+.student-management-layout {
+    display: flex;
+    gap: 25px;
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.management-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
