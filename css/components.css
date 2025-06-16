@@ -109,7 +109,55 @@ section h2 {
     color: #0d47a1;
 }
 
-/* Yorum Alanı */
+/* Yorum Düzenleyici altındaki öğrenci navigasyon ve görüntüleme kontrolleri */
+.student-editor-controls {
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşmeleri için */
+    gap: 10px;
+    margin-bottom: 15px; /* textarea ile arasına boşluk */
+    justify-content: space-between;
+}
+
+.student-editor-controls .icon-nav-button {
+    background-color: var(--current-accent-color, var(--default-accent-color));
+    color: var(--button-text);
+    border: none;
+    border-radius: 6px;
+    flex-grow: 1;
+    flex-basis: calc(50% - 5px); /* İkişerli hizalama */
+    max-width: calc(50% - 5px);
+    height: 38px;
+    margin-top: 0;
+    font-size: 0.95em;
+    font-weight: 600; /* Kalın yazı */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex; /* İçindeki ok ve metni ortalamak için */
+    justify-content: center;
+    align-items: center;
+}
+
+.student-editor-controls .icon-nav-button:hover {
+    background-color: var(--current-hover-color, var(--default-hover-color));
+    transform: translateY(-1px);
+}
+.student-editor-controls .icon-nav-button:active {
+    transform: translateY(0);
+}
+
+.student-editor-controls #view-all-assignments-btn-editor {
+    flex-basis: 100%; /* Bu buton tam genişlikte olsun */
+    max-width: 100%;
+    margin-top: 0; /* Diğer butonlarla aynı hizada başlaması için */
+    background-color: #6c757d; /* Secondary-button rengi */
+}
+.student-editor-controls #view-all-assignments-btn-editor:hover {
+    background-color: #5a6268;
+}
+
+
+/* --- Yorum Alanı --- */
 #comment-textarea {
     width: 100%;
     flex-grow: 1;
@@ -146,6 +194,7 @@ section h2 {
     height: 16px;
     cursor: pointer;
 }
+
 
 button { /* GENEL BUTON STİLİ KÜÇÜLTÜLDÜ */
     background-color: var(--current-accent-color, var(--default-accent-color));
@@ -185,6 +234,7 @@ button:active {
 .warn-button:hover {
     background-color: #c82333;
 }
+
 
 /* Dosya yükleme etiketi için buton stili */
 .file-upload-label {
@@ -231,6 +281,7 @@ button:active {
 #managed-student-list::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
 
 .profile-item {
     padding: 12px 10px;
@@ -329,7 +380,41 @@ button:active {
     background-color: var(--current-hover-color, #3700b3);
 }
 
-/* Öğrenci Yönetimi sekmesindeki stiller */
+#view-all-assignments-btn { /* Kenar çubuğundaki bu buton artık kullanılmayacaksa kaldırılabilir */
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* --- Öğrenci Yönetimi Sekmesi Stilleri --- */
+#student-management-tab {
+    background-color: var(--tab-management-bg);
+}
+
+/* Yeni 2 sütunlu düzen için */
+/* .student-management-layout { zaten layout.css'de } */
+
+/* .management-column { zaten layout.css'de } */
+
+/* Clear all students butonu için özel yerleşim */
+.clear-all-students {
+    text-align: right;
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.clear-all-students button {
+    width: auto;
+    flex-grow: 1;
+    max-width: calc(50% - 5px);
+    margin-top: 0;
+}
+
+
 .student-input-area {
     background-color: #e9f7ef;
     border: 1px solid #c3e6cb;
@@ -388,21 +473,11 @@ button:active {
     max-width: calc(50% - 5px);
 }
 
-.clear-all-students {
-    text-align: right;
-    margin-top: auto;
-    border-top: 1px solid var(--border-color);
-    padding-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 10px;
-}
-.clear-all-students button {
-    width: auto;
+
+.managed-student-list-container {
     flex-grow: 1;
-    max-width: calc(50% - 5px);
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .student-list-filters {
@@ -418,6 +493,7 @@ button:active {
     flex-basis: 100%;
     max-width: 100%;
 }
+
 
 .managed-student-list {
     border: 1px solid var(--border-color);
@@ -472,15 +548,4 @@ button:active {
 }
 .delete-student-btn:hover {
     background-color: #c82333;
-}
-
-/* Footer Stili */
-footer {
-    background-color: #333;
-    color: #f8f8f8;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.85em;
-    border-top: 1px solid #555;
-    flex-shrink: 0;
 }

@@ -8,9 +8,9 @@ import {
     allAssignmentsModal, allAssignedCommentsList, closeAllAssignmentsModalBtn,
     closeAllAssignmentsModalBtnBottom, profileList, classSelect, termSelect,
     selectedStudentNameDisplay, commentTextarea, assignCommentBtnEditor // comments-tab'dan gerekli UI elementleri
-} from './ui-elements.js'; // Bu satırda problem yok, sadece UI elementleri geliyor.
+} from './ui-elements.js';
 
-// DÜZELTME: selectedStudent ve currentCommentTemplate data-management.js'den gelmeli
+// selectedStudent ve currentCommentTemplate data-management.js'den gelmeli
 import { students, studentAssignments, selectedStudent, setSelectedStudent, currentCommentTemplate, setCurrentCommentTemplate } from './data-management.js';
 
 
@@ -162,7 +162,7 @@ export function viewAllAssignments() {
                 navigator.clipboard.writeText(commentToCopy).then(() => {
                     showToast('Yorum panoya kopyalandı!', 'success');
                 }).catch(err => {
-                    console.error('Yorum kopyalanamadı:', err);
+                    console.error('Yorum kopyalanırken bir hata oluştu:', err);
                     showToast('Yorum kopyalanırken bir hata oluştu.', 'error');
                 });
             });
@@ -199,6 +199,8 @@ export function initializeModalListeners() {
         helpModal.style.display = 'flex';
     });
     closeHelpModalBtn.addEventListener('click', () => {
+        // 'Anladım' butonuna basıldığında bir daha göstermemek için local storage'a kaydedebiliriz.
+        // localStorage.setItem('doNotShowHelpModalAgain', 'true'); // İstenirse aktif edilebilir.
         helpModal.style.display = 'none';
     });
 
@@ -216,11 +218,15 @@ export function initializeModalListeners() {
     });
 
     // Kullanım kılavuzu modalının kontrolü:
-    // 'doNotShowHelpModalAgain' Local Storage'dan kontrol edilecek.
+    // Sadece başlangıçta bir kez göstermek veya hiç göstermemek için:
     const doNotShowHelpAgain = localStorage.getItem('doNotShowHelpModalAgain');
     if (doNotShowHelpAgain === 'true') {
         helpModal.style.display = 'none';
     } else {
-        helpModal.style.display = 'flex'; // İlk açılışta veya ayar 'false' ise göster
+        // İlk açılışta veya ayar 'false' ise göster.
+        // Eğer her zaman sadece butona basınca açılmasını istiyorsak, bu else bloğunu tamamen silebiliriz.
+        // İhtiyacınıza göre bu kısmı yorum satırı yapabilir veya silebilirsiniz.
+        // helpModal.style.display = 'flex';
+        // console.log('Kullanım kılavuzu gösterildi.');
     }
 }

@@ -8,13 +8,11 @@ import {
     sidebarClassFilter, sidebarSubClassFilter, studentSearchInput, studentListDiv,
     filterUnassignedBtn, selectedStudentNameDisplay, commentTextarea, assignCommentBtnEditor,
     classSelect, termSelect, profileSearchInput, profileList,
-    copyCommentBtn, clearCommentEditorBtn, autoClearCommentCheckbox,
+    copyCommentBtn, clearCommentEditorBtn, autoClearCommentCheckbox, remainingCharsSpan, // remainingCharsSpan eklendi
     prevStudentBtnEditor, nextStudentBtnEditor, viewAllAssignmentsBtnEditor
 } from './ui-elements.js';
 
 // commentsData global olarak index.html'den yüklendiği için window objesi üzerinden erişiyoruz.
-// Alternatif olarak, comments_templates_data.js dosyasını da bir ES Module yapıp buradan import edebiliriz.
-// Şimdilik global erişimi koruyalım.
 
 // Yorum atama sekmesindeki öğrenci listesini yükleme/filtreleme
 export function loadStudentListForAssignment(filterUnassigned = false) {
@@ -114,8 +112,8 @@ export function loadCommentTemplates() {
 
     profileList.innerHTML = '';
 
-    if (typeof window.commentsData !== 'undefined' && window.commentsData[selectedClass] && window.commentsData[selectedClass][selectedTerm]) { // Global commentsData'ya window.commentsData ile eriş
-        const templates = window.commentsData[selectedClass][selectedTerm]; // Global commentsData'ya window.commentsData ile eriş
+    if (typeof window.commentsData !== 'undefined' && window.commentsData[selectedClass] && window.commentsData[selectedClass][selectedTerm]) {
+        const templates = window.commentsData[selectedClass][selectedTerm];
         const filteredTemplates = templates.filter(template => {
             return template.title.toLowerCase().includes(searchTerm) ||
                    template.comment.toLowerCase().includes(searchTerm);
@@ -192,7 +190,7 @@ function assignCommentToStudent() {
     studentAssignments[selectedStudent.fullName] = comment;
     showToast(`${selectedStudent.fullName} öğrencisine yorum atandı/güncellendi.`, 'success');
     saveData();
-    loadStudentListForAssignment(filterUnassignedBtn.classList.contains('active-filter'));
+    loadStudentListForAssignment(document.getElementById('filter-unassigned-btn').classList.contains('active-filter'));
     updateDashboardCards();
 
     if (autoClearCommentCheckbox.checked) {
@@ -211,7 +209,7 @@ function handleStudentClickInAssignmentList(event) {
         const studentIdToAssign = event.target.closest('.assign-btn').dataset.studentId;
         const student = students.find(s => s.id === studentIdToAssign);
         if (student) {
-            selectStudentForAssignmentItem(studentItem); // Öğrenciyi seç ve vurgula
+            selectStudentForAssignmentItem(studentItem);
         }
     } else {
         selectStudentForAssignmentItem(studentItem);
@@ -296,7 +294,7 @@ export function initializeCommentsTabListeners() {
     // Yorum düzenleme alanındaki butonlar
     prevStudentBtnEditor.addEventListener('click', () => navigateStudent(-1));
     nextStudentBtnEditor.addEventListener('click', () => navigateStudent(1));
-    viewAllAssignmentsBtnEditor.addEventListener('click', viewAllAssignments); // modals.js'den import edildi
+    viewAllAssignmentsBtnEditor.addEventListener('click', viewAllAssignments);
 
     assignCommentBtnEditor.addEventListener('click', assignCommentToStudent);
     copyCommentBtn.addEventListener('click', copyCommentToClipboard);
