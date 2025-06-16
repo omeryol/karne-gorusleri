@@ -1,114 +1,134 @@
 /* css/reset.css */
 /* Modern CSS Reset (Based on Eric Meyer's reset and modern practices) */
 
+/* Universal box-sizing for all elements, including pseudo-elements */
 *, *::before, *::after {
     box-sizing: border-box; /* Tüm elementler için kutu modelini border-box olarak ayarla */
 }
 
+/* HTML ve Body için temel stiller */
 html {
     line-height: 1.15; /* Varsayılan satır yüksekliğini ayarla */
-    -webkit-text-size-adjust: 100%; /* Metin boyutunu ayarlamayı kapat */
-    font-family: sans-serif; /* Yedek font */
+    -webkit-text-size-adjust: 100%; /* Metin boyutunu ayarlamayı kapat (mobil cihazlarda font büyümesini engeller) */
+    font-family: sans-serif; /* Yedek font (genellikle global.css'te daha spesifik bir font tanımlanır) */
 }
 
 body {
     margin: 0; /* Body için varsayılan marginleri sıfırla */
-    -webkit-font-smoothing: antialiased; /* Fontları daha pürüzsüz hale getirir */
-    -moz-osx-font-smoothing: grayscale; /* MacOS'ta fontları pürüzsüz hale getirir */
+    -webkit-font-smoothing: antialiased; /* Fontları daha pürüzsüz hale getirir (Mac/iOS) */
+    -moz-osx-font-smoothing: grayscale; /* MacOS'ta fontları pürüzsüz hale getirir (Firefox) */
 }
 
+/* HTML5 semantik ana içerik elementi */
 main {
     display: block; /* HTML5 main elementi için varsayılan görüntü */
 }
 
+/* Başlıklar, paragraflar, listeler ve diğer blok elementler için marginleri sıfırla */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr {
-    margin: 0; /* Başlıklar, paragraflar vb. için varsayılan marginleri sıfırla */
+    margin: 0;
 }
 
+/* Liste stillerini sıfırla */
 ul, ol {
     padding: 0; /* Listeler için varsayılan paddingleri sıfırla */
     list-style: none; /* Liste işaretleyicilerini kaldır */
 }
 
+/* Bağlantılar (Anchor tags) */
 a {
     background-color: transparent; /* Linkler için varsayılan arka planı kaldır */
     text-decoration: none; /* Linklerin alt çizgisini kaldır */
     color: inherit; /* Linklerin rengini ebeveyninden miras al */
 }
 
+/* Kalın metinler */
 b, strong {
     font-weight: bolder; /* Kalın metinler için standart kalınlık */
 }
 
+/* Küçük metinler */
 small {
     font-size: 80%; /* Küçük metin boyutu */
 }
 
+/* Resimler için responsive ve görsel düzeltmeler */
 img {
     border-style: none; /* Resimler için varsayılan kenarlıkları kaldır */
-    max-width: 100%; /* Resimlerin kapsayıcılarını aşmamasını sağla */
+    max-width: 100%; /* Resimlerin kapsayıcılarını aşmamasını sağla (responsive) */
     height: auto; /* Oranlarını koru */
     vertical-align: middle; /* Resimlerin metinle hizalanmasını iyileştir */
 }
 
+/* Form elemanları için temel stiller ve sıfırlamalar */
 button, input, optgroup, select, textarea {
-    font-family: inherit; /* Form elemanlarının fontunu miras almasını sağla */
+    font-family: inherit; /* Form elemanlarının fontunu ebeveyninden miras almasını sağla */
     font-size: 100%; /* Font boyutunu ayarla */
     line-height: 1.15; /* Satır yüksekliğini ayarla */
     margin: 0; /* Varsayılan marginleri sıfırla */
 }
 
+/* Buton ve input için taşma ayarı */
 button, input {
-    overflow: visible; /* Buton ve input için taşma ayarı */
+    overflow: visible;
 }
 
+/* Buton ve select için metin dönüşümünü kaldır */
 button, select {
-    text-transform: none; /* Buton ve select için metin dönüşümünü kaldır */
+    text-transform: none;
 }
 
+/* Webkit tabanlı tarayıcılarda buton görünümünü ayarla */
 button, [type="button"], [type="reset"], [type="submit"] {
-    -webkit-appearance: button; /* Buton görünümünü ayarla */
+    -webkit-appearance: button;
 }
 
+/* Firefox'ta buton odaklanma stilini kaldır */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-    border-style: none; /* Odaklanma stilini kaldır */
+    border-style: none;
     padding: 0;
 }
 
+/* Firefox'ta varsayılan odaklanma halkasını ayarla */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText; /* Odaklanma stili */
+    outline: 1px dotted ButtonText;
 }
 
+/* Metin alanı (textarea) için taşma ve boyutlandırma */
 textarea {
     overflow: auto; /* Metin alanının taşmasını ayarla */
     resize: vertical; /* Sadece dikey yeniden boyutlandırmaya izin ver */
 }
 
+/* Sayı inputları için spin butonlarını ayarla */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-    height: auto; /* Sayı inputları için spin butonlarını ayarla */
+    height: auto;
 }
 
+/* Arama inputu için görünüm ve ikonları kaldır */
 [type="search"] {
-    -webkit-appearance: textfield; /* Arama inputu için varsayılan görünüm */
+    -webkit-appearance: textfield;
     outline-offset: -2px; /* Odaklanma stilini ayarla */
 }
 
 [type="search"]::-webkit-search-decoration,
 [type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none; /* Arama inputu için varsayılan ikonları kaldır */
+    -webkit-appearance: none;
 }
 
+/* Progress bar için dikey hizalama */
 progress {
-    vertical-align: baseline; /* Progress bar'ı metinle hizala */
+    vertical-align: baseline;
 }
 
+/* Gizli elementleri tamamen gizle */
 [hidden] {
-    display: none; /* Gizli elementleri gizle */
+    display: none;
 }

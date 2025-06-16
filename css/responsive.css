@@ -14,9 +14,156 @@
     - Modalların farklı ekran boyutlarında doğru konumlandığı ve boyutlandığı.
 */
 
-/* --- Masaüstü ve Büyük Ekranlar (Varsayılan) --- */
-/* Bu kısımda genellikle ekstra bir şey yazmaya gerek yoktur, çünkü mobil-first yaklaşımında
-   varsayılan stiller küçük ekranlar için ayarlanır ve büyük ekranlar için üzerine yazılır. */
+/* --- Mobil Cihazlar (Varsayılan - Mobile-First) --- */
+/*
+    Temel stiller (global.css, layout.css, components.css, forms.css, modals.css)
+    varsayılan olarak mobil uyumlu tasarıma odaklanmıştır.
+    Bu bölümde, mobil için özel ayarlamalar veya küçük düzeltmeler yapılır.
+*/
+
+/* Genel uygulama kapsayıcısı için küçük ekran kenar boşlukları */
+#app-wrapper {
+    margin: var(--spacing-sm); /* Daha küçük kenar boşlukları */
+}
+
+/* Header ve İçindeki Elemanlar */
+#main-header {
+    padding: var(--spacing-sm) var(--spacing-md); /* Daha küçük padding */
+}
+
+#app-title {
+    font-size: var(--font-size-large); /* Başlık fontu */
+}
+
+.header-controls {
+    flex-direction: column; /* Header kontrollerini alt alta al */
+    gap: var(--spacing-xs); /* Daha küçük boşluk */
+}
+
+/* Form Elemanları */
+.control-select,
+.control-input {
+    font-size: var(--font-size-small); /* Form elemanları fontu küçült */
+    padding: 8px 10px; /* Padding ayarla */
+}
+
+/* Dashboard Kartları */
+#dashboard-cards-container {
+    flex-wrap: wrap; /* Kartlar alt alta düşebilir */
+    justify-content: center; /* Ortala */
+    padding: var(--spacing-xs) var(--spacing-sm); /* Daha küçük padding */
+    gap: var(--spacing-xs); /* Daha küçük boşluk */
+    min-height: 50px; /* Minimum yükseklik */
+}
+
+.dashboard-card {
+    padding: 3px 5px; /* Daha küçük padding */
+    min-width: 70px; /* Minimum genişlik */
+    flex-basis: calc(50% - var(--spacing-xs)); /* İkişerli kartlar */
+    max-width: calc(50% - var(--spacing-xs)); /* Maksimum genişlik */
+}
+
+.dashboard-card .card-title {
+    font-size: 0.6em; /* Daha da küçük başlık */
+}
+
+.dashboard-card .card-value {
+    font-size: 1em; /* Daha küçük değer fontu */
+}
+
+/* Ana İçerik ve Paneller */
+#main-content {
+    padding: var(--spacing-sm); /* Ana içerik padding'i azalt */
+}
+
+.panel {
+    padding: var(--spacing-md); /* Panel padding'i azalt */
+}
+
+section h2 {
+    font-size: var(--font-size-small); /* Panel başlık fontu */
+    padding-bottom: var(--spacing-xs); /* Padding ayarla */
+    margin-bottom: var(--spacing-md); /* Margin ayarla */
+}
+
+#comment-textarea {
+    min-height: 150px; /* Metin alanının min yüksekliği */
+    font-size: 0.95em; /* Font boyutu */
+}
+
+#student-list-container,
+#comment-profile-list,
+#managed-student-list-container-modal {
+    min-height: 150px; /* Liste yükseklikleri mobil için uygun hale getirildi */
+    max-height: 300px; /* Max yükseklik belirlendi */
+}
+
+/* Butonlar */
+.button {
+    padding: 8px 15px; /* Buton padding'i */
+    font-size: 0.9em; /* Buton fontu */
+}
+
+.icon-button.help-button {
+    width: 35px; /* Sabit genişlik */
+    height: 35px; /* Sabit yükseklik */
+    font-size: 1.2em; /* Font boyutu */
+}
+
+/* Modal Boyutları ve Butonları */
+.modal-content.large-modal,
+.modal-content.medium-modal,
+.modal-content.small-modal {
+    width: 95%; /* Daha küçük genişlik */
+    padding: var(--spacing-lg); /* Padding ayarla */
+}
+
+.modal-actions button {
+    padding: 8px 10px; /* Modal buton padding'i */
+    font-size: 0.85em; /* Font boyutu */
+    flex-basis: 100%; /* Modaldaki butonlar tam genişlikte */
+    max-width: 100%; /* Maksimum genişlik */
+}
+
+.modal-comment-navigation .icon-button.round-button {
+    width: 35px; /* Sabit genişlik */
+    height: 35px; /* Sabit yükseklik */
+    font-size: 1em; /* Font boyutu */
+}
+
+/* Öğrenci Listesi ve Yönetilen Öğrenci Listesi Öğeleri */
+.student-item,
+.managed-student-item {
+    flex-direction: column; /* Bilgileri ve butonları alt alta al */
+    align-items: flex-start; /* Sola hizala */
+    gap: var(--spacing-xs); /* Daha küçük boşluk */
+    padding: var(--spacing-sm); /* Padding ayarla */
+    border: 1px solid var(--border-color); /* Her item'a kenarlık ekle */
+    border-radius: 6px; /* Köşe yuvarlaklığı */
+    margin-bottom: var(--spacing-sm); /* Alt boşluk */
+}
+
+.student-item:last-child,
+.managed-student-item:last-child {
+    border-bottom: 1px solid var(--border-color); /* Son item da kenarlıklı olsun */
+}
+
+.student-info,
+.managed-student-info {
+    width: 100%; /* Tam genişlik */
+    margin-bottom: var(--spacing-xs); /* Alt boşluk */
+}
+
+.assign-btn,
+.managed-student-actions .button {
+    width: 100%; /* Tam genişlik */
+    margin-left: 0; /* Margin sıfırla */
+    margin-top: 0; /* Margin sıfırla */
+}
+
+.student-comment-preview {
+    display: none; /* Mobil'de önizlemeyi gizle, yer kaplamasın */
+}
 
 
 /* --- Tabletler ve Küçük Laptoplar (max-width: 1024px) --- */
@@ -106,138 +253,6 @@
     .modal-footer-actions .button {
         flex-basis: 100%; /* Modal içindeki aksiyon butonları tam genişlik */
         max-width: 100%;
-    }
-}
-
-
-/* --- Mobil Cihazlar (max-width: 768px) --- */
-@media (max-width: 768px) {
-    #app-wrapper {
-        margin: var(--spacing-sm); /* Daha küçük kenar boşlukları */
-    }
-
-    #main-header {
-        padding: var(--spacing-sm) var(--spacing-md);
-    }
-
-    #app-title {
-        font-size: var(--font-size-large);
-    }
-
-    .header-controls {
-        flex-direction: column; /* Header kontrollerini alt alta al */
-        gap: var(--spacing-xs);
-    }
-
-    .control-select, .control-input {
-        font-size: var(--font-size-small); /* Form elemanları fontu küçült */
-        padding: 8px 10px;
-    }
-
-    #dashboard-cards-container {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        gap: var(--spacing-xs);
-        min-height: 50px;
-    }
-
-    .dashboard-card {
-        padding: 3px 5px;
-        min-width: 70px;
-    }
-
-    .dashboard-card .card-title {
-        font-size: 0.65em; /* Daha da küçük başlık */
-    }
-
-    .dashboard-card .card-value {
-        font-size: 1.1em; /* Daha küçük değer fontu */
-    }
-
-    #main-content {
-        padding: var(--spacing-md); /* Ana içerik padding'i azalt */
-    }
-
-    .panel {
-        padding: var(--spacing-md); /* Panel padding'i azalt */
-    }
-
-    section h2 {
-        font-size: var(--font-size-medium);
-        padding-bottom: var(--spacing-xs);
-        margin-bottom: var(--spacing-md);
-    }
-
-    #comment-textarea {
-        min-height: 150px; /* Metin alanının min yüksekliği */
-        font-size: 0.95em;
-    }
-
-    #student-list-container,
-    #comment-profile-list,
-    #managed-student-list-container-modal {
-        min-height: 150px; /* Liste yükseklikleri mobil için uygun hale getirildi */
-        max-height: 300px; /* Max yükseklik belirlendi */
-    }
-
-    .button {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
-
-    .icon-button.help-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2em;
-    }
-
-    .modal-content.large-modal,
-    .modal-content.medium-modal,
-    .modal-content.small-modal {
-        width: 95%;
-        padding: var(--spacing-lg);
-    }
-
-    .modal-actions button {
-        padding: 8px 10px;
-        font-size: 0.85em;
-        flex-basis: 100%; /* Modaldaki butonlar tam genişlikte */
-        max-width: 100%;
-    }
-
-    .modal-comment-navigation .icon-button.round-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1em;
-    }
-
-    /* Özellikle öğrenci item'ları ve yönetilen öğrenci item'ları için responsive düzen */
-    .student-item, .managed-student-item {
-        flex-direction: column; /* Bilgileri ve butonları alt alta al */
-        align-items: flex-start;
-        gap: var(--spacing-xs);
-        padding: var(--spacing-sm);
-        border: 1px solid var(--border-color); /* Mobil'de her item'a kenarlık ekle */
-        border-radius: 6px;
-        margin-bottom: var(--spacing-sm);
-    }
-
-    .student-item:last-child, .managed-student-item:last-child {
-        border-bottom: 1px solid var(--border-color); /* Son item da kenarlıklı olsun */
-    }
-
-    .student-info, .managed-student-info {
-        width: 100%;
-        margin-bottom: var(--spacing-xs);
-    }
-
-    .assign-btn, .managed-student-actions .button {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 0;
-    }
-
-    .student-comment-preview {
-        display: none; /* Mobil'de önizlemeyi gizle, yer kaplamasın */
     }
 }
 

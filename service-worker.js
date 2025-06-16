@@ -2,12 +2,16 @@
 
 // Hata Ayıklama Logu: Service Worker sürümü
 console.log('Service Worker: Yükleniyor (Sürüm: karne-yorumu-v4)');
-const CACHE_NAME = 'karne-yorumu-v4'; // Önbellek adını güncelledik (yeni dosya yapısını fark etmesi için)
+
+// Önbellek adını güncelledik (yeni dosya yapısını ve güncellemeleri fark etmesi için)
+const CACHE_NAME = 'karne-yorumu-v4';
+
+// Önbelleğe alınacak kaynakların listesi
 const urlsToCache = [
-  '/',
-  '/index.html', // Ana sayfa
-  '/comment_templates_data.js', // Yorum şablonları
-  '/manifest.json', // Manifest dosyası
+  '/', // Ana kök dizin
+  '/index.html', // Ana HTML sayfası
+  '/comment_templates_data.js', // Yorum şablonları veri dosyası
+  '/manifest.json', // Web Uygulaması Manifest dosyası
 
   // İkon Yolları (Depo kökünden göreceli yollar)
   '/icons/icon-192x192.png',
@@ -18,7 +22,7 @@ const urlsToCache = [
   '/icons/favicon-32x32.png',
   '/favicon.ico',
 
-  // Yeni CSS Modül Yolları (Güncellendi)
+  // CSS Dosyaları
   '/css/reset.css',
   '/css/global.css',
   '/css/layout.css',
@@ -28,7 +32,7 @@ const urlsToCache = [
   '/css/theme.css',
   '/css/responsive.css',
 
-  // JavaScript Modül Yolları (Mevcut isimler korundu)
+  // JavaScript Modül Yolları
   '/js/utils.js',
   '/js/ui-elements.js',
   '/js/data-management.js',
@@ -39,6 +43,7 @@ const urlsToCache = [
   '/js/main.js'
 ];
 
+// Service Worker kurulum aşaması: statik dosyaları önbelleğe alır
 self.addEventListener('install', event => {
   // Hata Ayıklama Logu: Kurulum aşaması başlıyor
   console.log('Service Worker: Kurulum (install) olayı tetiklendi.');
@@ -49,12 +54,9 @@ self.addEventListener('install', event => {
         // addAll başarısız olursa yakalamak için daha sağlam bir yaklaşım
         return cache.addAll(urlsToCache).then(() => {
           console.log('Service Worker: Tüm dosyalar başarıyla önbelleğe alındı.');
-          // Hata Ayıklama Logu: Kurulum başarılı
           console.log('Service Worker: Kurulum başarıyla tamamlandı.');
         }).catch(error => {
           console.error('Service Worker: Önbelleğe alma sırasında hata:', error);
-          // Hata durumunda bile kurulumu tamamla, böylece service worker aktif olabilir
-          // ve hata ayıklama kolaylaşır.
         });
       })
       .catch(error => {
@@ -63,8 +65,8 @@ self.addEventListener('install', event => {
   );
 });
 
+// Service Worker fetch aşaması: kaynakları önbellekten veya ağdan alır
 self.addEventListener('fetch', event => {
-  // Hata Ayıklama Logu: Fetch isteği dinleniyor
   // console.log('Service Worker: Fetch isteği:', event.request.url); // Çok fazla log üretebilir, dikkatli kullanın
   event.respondWith(
     caches.match(event.request)
@@ -104,7 +106,6 @@ self.addEventListener('fetch', event => {
             // if (event.request.mode === 'navigate') { // Sadece navigasyon istekleri için
             //     return caches.match('/offline.html'); // Eğer böyle bir sayfanız varsa
             // }
-            // Hata durumunda boş yanıt veya başka bir hata fırlatılabilir
             return new Response('Ağ bağlantısı yok veya dosya bulunamadı.', {
                 status: 503,
                 statusText: 'Service Unavailable',
@@ -117,6 +118,7 @@ self.addEventListener('fetch', event => {
   );
 });
 
+// Service Worker aktivasyon aşaması: eski önbellekleri temizler
 self.addEventListener('activate', event => {
   // Hata Ayıklama Logu: Aktivasyon aşaması başlıyor
   console.log('Service Worker: Aktivasyon (activate) olayı tetiklendi.');

@@ -5,11 +5,11 @@ import { students, studentAssignments, selectedStudent, setSelectedStudent, save
 import { updateDashboardCards } from './dashboard.js';
 import { loadStudentListForAssignment } from './comments-tab.js';
 import {
-    studentNamesTextareaModal, newStudentClassSelectModal, newStudentSubClassSelectModal, // Modal içi yeni öğrenci ekleme elementleri
-    loadNamesFromTextBtnModal, studentListUploadModal, // Modal içi butonlar
-    managementClassFilterModal, managementSubClassFilterModal, managementStudentSearchInputModal, // Modal içi yönetim filtreleri
-    managedStudentListContainerModal, // Modal içi öğrenci listesi konteyneri
-    clearAllStudentsBtnModal, clearLocalStorageBtnModal, // Modal içi temizleme butonları
+    studentNamesTextareaModal, newStudentClassSelectModal, newStudentSubClassSelectModal,
+    loadNamesFromTextBtnModal, studentListUploadModal,
+    managementClassFilterModal, managementSubClassFilterModal, managementStudentSearchInputModal,
+    managedStudentListContainerModal,
+    clearAllStudentsBtnModal, clearLocalStorageBtnModal,
     selectedStudentNameDisplay, commentTextarea, assignCommentBtn // Comments tab'dan etkilenen UI elementleri
 } from './ui-elements.js';
 
@@ -30,11 +30,11 @@ console.log('[student-management-tab.js] Öğrenci yönetimi sekmesi modülü y�
 // Öğrenci Yönetimi modalındaki listeyi güncelleme (Silme/Numara Güncelleme için)
 export function updateManagedStudentListUI() {
     console.log('[student-management-tab.js] updateManagedStudentListUI çağrıldı: Yönetilen öğrenci listesi güncelleniyor.');
-    const filterClass = managementClassFilterModal.value; // Yeni ID
-    const filterSubClass = managementSubClassFilterModal.value; // Yeni ID
-    const searchTerm = managementStudentSearchInputModal.value.toLowerCase(); // Yeni ID
+    const filterClass = managementClassFilterModal.value;
+    const filterSubClass = managementSubClassFilterModal.value;
+    const searchTerm = managementStudentSearchInputModal.value.toLowerCase();
 
-    managedStudentListContainerModal.innerHTML = ''; // Yeni ID
+    managedStudentListContainerModal.innerHTML = '';
 
     const filteredStudents = students.filter(student => {
         const matchesClass = filterClass === 'all' || student.class === filterClass;
@@ -121,9 +121,9 @@ function deleteStudent(event) {
 // Öğrenci Yönetimi modalından yeni öğrenci ekleme (textarea'dan)
 function addNewStudentsFromTextarea() {
     console.log('[student-management-tab.js] addNewStudentsFromTextarea çağrıldı.');
-    const text = studentNamesTextareaModal.value; // Yeni ID
-    const assignedClass = newStudentClassSelectModal.value; // Yeni ID
-    const assignedSubClass = newStudentSubClassSelectModal.value; // Yeni ID
+    const text = studentNamesTextareaModal.value;
+    const assignedClass = newStudentClassSelectModal.value;
+    const assignedSubClass = newStudentSubClassSelectModal.value;
 
     if (!assignedClass) {
         showToast('Lütfen öğrencilerin sınıfını seçin!', 'error');
@@ -314,7 +314,6 @@ function clearAllLocalStorage() {
         localStorage.removeItem('doNotShowHelpModalAgain');
         // Help modal'ı burada doğrudan açmıyoruz, main.js'deki loadData içinde kontrol edilecek
         console.log('[student-management-tab.js] doNotShowHelpModalAgain ayarı kaldırıldı.');
-
 
         showToast("Uygulama başarıyla sıfırlandı. Tüm veriler temizlendi.", 'success');
         console.log('[student-management-tab.js] Uygulama sıfırlama işlemi tamamlandı.');

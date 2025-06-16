@@ -6,7 +6,7 @@ import { loadData, saveData } from './data-management.js';
 import { updateDashboardCards } from './dashboard.js';
 import { initializeModalListeners } from './modals.js';
 import { initializeCommentsTabListeners, loadCommentTemplates, loadStudentListForAssignment, updateCharCount } from './comments-tab.js';
-import { initializeStudentManagementTabListeners, updateManagedStudentListUI } from './student-management-tab.js';
+import { initializeStudentManagementTabListeners } from './student-management-tab.js';
 import { headerClassSelect, headerTermSelect, mainHeader, dashboardCardsContainer } from './ui-elements.js';
 
 /*
@@ -32,8 +32,32 @@ function updateThemeColors() {
     if (selectedClass && selectedTerm) {
         document.body.classList.add(`class-${selectedClass}-term-${selectedTerm}`);
         console.log(`[main.js] Body sınıfı güncellendi: class-${selectedClass}-term-${selectedTerm}`);
+
+        // Seçilen sınıfın RGB değerini CSS değişkenine atama
+        // theme.css'te tanımlanan --class-X-base-rgb değerlerini kullanır.
+        // Eğer tema dosyasında belirli bir RGB değeri yoksa, varsayılan bir değer atanabilir.
+        const root = document.documentElement;
+        const computedStyle = getComputedStyle(root);
+        let primaryRGB = '';
+
+        if (selectedClass === '5') primaryRGB = computedStyle.getPropertyValue('--class-5-base-rgb').trim();
+        else if (selectedClass === '6') primaryRGB = computedStyle.getPropertyValue('--class-6-base-rgb').trim();
+        else if (selectedClass === '7') primaryRGB = computedStyle.getPropertyValue('--class-7-base-rgb').trim();
+        else if (selectedClass === '8') primaryRGB = computedStyle.getPropertyValue('--class-8-base-rgb').trim();
+
+        if (primaryRGB) {
+            root.style.setProperty('--current-primary-color-rgb', primaryRGB);
+            console.log(`[main.js] --current-primary-color-rgb güncellendi: ${primaryRGB}`);
+        } else {
+            // Varsayılan veya fallback RGB değeri
+            root.style.setProperty('--current-primary-color-rgb', '0, 123, 255');
+            console.warn('[main.js] Seçilen sınıf için RGB değeri bulunamadı, varsayılan kullanıldı.');
+        }
+
     } else {
         console.log('[main.js] Sınıf veya dönem seçili değil, varsayılan tema kullanılıyor.');
+        // Sınıf veya dönem seçili değilse, varsayılan RGB değerini kullan
+        document.documentElement.style.setProperty('--current-primary-color-rgb', '0, 123, 255');
     }
 
     // Header yüksekliğini dinamik olarak ayarla
@@ -74,13 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('[main.js] Yorum sekmesi dinleyicileri başlatıldı.');
 
     // Öğrenci Yönetimi sekmesi event dinleyicilerini başlat
-    // (Bu artık modal içinde çalışacağı için initializeStudentManagementTabListeners fonksiyonu
-    // modal açıldığında updateManagedStudentListUI'yi çağıracak.)
     initializeStudentManagementTabListeners();
     console.log('[main.js] Öğrenci Yönetimi dinleyicileri başlatıldı.');
 
     // İlk yüklemede öğrenci listesini ve yorum şablonlarını yükle
-    // filter-unassigned-btn'in aktifliğini başlangıçta kontrol et (false varsayılan)
     loadStudentListForAssignment(false);
     loadCommentTemplates();
     updateCharCount(); // Yorum alanı karakter sayacını ilk yüklemede güncelle
@@ -103,8 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Header yüksekliğini dinamik olarak ayarla (JS ile güncelleyici)
-    // Bu, `layout.css` ve `dashboard.css`'teki sticky header ve dashboard için önemlidir.
-    // İlk yüklemede ve pencere boyutu değiştiğinde yükseklik ayarlanır.
     window.addEventListener('resize', updateThemeColors); // Pencere boyutu değiştiğinde tema ve yüksekliği güncelle
 });
 

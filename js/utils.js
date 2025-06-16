@@ -59,7 +59,7 @@ export function generateUniqueId() {
     return uniqueId;
 }
 
-// Yeni bir yardımcı fonksiyon: Bir elemanın belirli bir ata elemanı olup olmadığını kontrol eder
+// Bir elemanın belirli bir ata elemanı olup olmadığını kontrol eder
 export function hasParent(element, parentSelector) {
     console.log(`[utils.js] hasParent çağrıldı: Eleman ${element ? element.tagName : 'null'}, Ata Seçici "${parentSelector}"`);
     let current = element;
@@ -74,7 +74,7 @@ export function hasParent(element, parentSelector) {
     return false;
 }
 
-// Yeni bir yardımcı fonksiyon: Modal açma/kapatma için ortak mantık
+// Modal açma/kapatma için ortak mantık
 export function toggleModal(modalElement, show = true) {
     if (!modalElement) {
         console.error('[utils.js] toggleModal: Geçersiz modal elemanı verildi.');

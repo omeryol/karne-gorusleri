@@ -22,10 +22,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--dashboard-card-text-color);
+    color: var(--dashboard-card-text-color); /* Metin rengi temadan alınır */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Daha belirgin ama zarif gölge */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: default; /* Kartların tıklanabilir olmaması için */
+    flex: 1; /* Esnek büyüme ve eşit dağılım */
+    min-width: 100px; /* Küçük ekranlarda küçülme limiti */
 }
 
 .dashboard-card:hover {
@@ -34,6 +36,7 @@
 }
 
 /* Kartlara özel renkler (theme.css tarafından dinamik olarak ayarlanacak) */
+/* global.css'te varsayılanları tanımlanmış, theme.css'te geçersiz kılınacak */
 .dashboard-card:nth-child(1) { background-color: var(--dashboard-card-bg-1); }
 .dashboard-card:nth-child(2) { background-color: var(--dashboard-card-bg-2); }
 .dashboard-card:nth-child(3) { background-color: var(--dashboard-card-bg-3); }
@@ -43,35 +46,26 @@
     font-size: var(--font-size-small);
     opacity: 0.9;
     margin-bottom: var(--spacing-xs);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: rgba(255,255,255,0.9);
+    white-space: nowrap; /* Başlığın tek satırda kalmasını sağla */
+    overflow: hidden; /* Taşmayı gizle */
+    text-overflow: ellipsis; /* Taşan metni üç nokta ile göster */
+    color: rgba(255,255,255,0.9); /* Beyazın hafif şeffaf tonu */
 }
 
 .dashboard-card .card-value {
     font-size: var(--font-size-large);
     font-weight: 700;
-    color: #fff;
+    color: #fff; /* Değer metni her zaman beyaz */
 }
 
 /* --- Panel Başlıkları ve Genel Kontroller --- */
-.panel-title {
-    margin-top: 0;
-    font-size: var(--font-size-large);
-    font-weight: 600;
-    color: var(--current-primary-color);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: var(--spacing-sm);
-    margin-bottom: var(--spacing-lg);
-    transition: color 0.3s ease;
-}
-
+/* .panel-title global.css'te tanımlandı */
 .controls {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
+    align-items: center; /* Kontrolleri dikeyde ortala */
 }
 
 /* --- Seçili Öğrenci Bilgisi Gösterimi --- */
@@ -83,9 +77,12 @@
     margin-bottom: var(--spacing-md);
     font-size: var(--font-size-base);
     font-weight: 500;
-    color: color-mix(in srgb, var(--current-primary-color) 80%, black);
+    color: color-mix(in srgb, var(--current-primary-color) 80%, black); /* Vurgu renginin koyu tonu */
     text-align: center;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Tek satırda kalmasını sağla */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .selected-student-display span {
@@ -108,11 +105,13 @@
     background-color: var(--secondary-bg-color);
     color: var(--text-color-dark);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box; /* padding ve border genişliğe dahil */
 }
 
 #comment-textarea:focus {
     border-color: var(--current-primary-color);
-    box-shadow: 0 0 0 3px rgba(var(--current-primary-color-rgb, 0, 123, 255), 0.2);
+    /* RGB değeri için global.css'teki değişkeni kullan */
+    box-shadow: 0 0 0 3px rgba(var(--current-primary-color-rgb), 0.2);
     outline: none;
 }
 
@@ -146,7 +145,7 @@
     margin-top: 0; /* Üstteki varsayılan margin'i kaldır */
 }
 
-/* Özelleştirilmiş checkbox için global.css'e bakınız */
+/* Özelleştirilmiş checkbox için forms.css'e bakınız */
 .checkbox-container {
     margin-top: var(--spacing-sm);
     grid-column: 1 / -1; /* Tüm genişliği kaplasın */
@@ -160,7 +159,7 @@
     padding-top: var(--spacing-lg);
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; /* Panel içinde dikeyde kalan alanı doldursun */
 }
 
 .comment-template-section h3 {
@@ -174,6 +173,7 @@
     border: 1px solid var(--border-color); /* Liste için kenarlık */
     border-radius: 8px;
     padding: var(--spacing-sm);
+    background-color: var(--primary-bg-color); /* Şablon listesinin arka planı biraz farklı olsun */
 }
 
 .profile-item {
@@ -183,13 +183,13 @@
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
     font-size: 1em;
     line-height: 1.4;
-    user-select: none;
+    user-select: none; /* Metin seçimi engellendi */
     border-radius: 6px;
     margin-bottom: var(--spacing-xs); /* Item'lar arası boşluk */
 }
 
 .profile-item:last-child {
-    border-bottom: none;
+    border-bottom: none; /* Son öğede kenarlık olmasın */
 }
 
 .profile-item:hover {
@@ -201,7 +201,7 @@
     background-color: var(--current-primary-color);
     color: var(--current-button-text-color);
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(var(--current-primary-color-rgb, 0, 123, 255), 0.2);
+    box-shadow: 0 2px 8px rgba(var(--current-primary-color-rgb), 0.2);
     transform: translateX(0); /* Aktifse kayma olmasın */
 }
 
@@ -211,6 +211,7 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: var(--spacing-sm);
+    background-color: var(--primary-bg-color); /* Öğrenci listesinin arka planı */
 }
 
 .student-item {
@@ -219,7 +220,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) 0;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color); /* Noktalı çizgi */
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
@@ -237,7 +238,7 @@
 
 .student-item.active-student {
     background-color: color-mix(in srgb, var(--current-primary-color) 10%, var(--secondary-bg-color)); /* Vurgu renginin açık tonu */
-    box-shadow: 0 1px 5px rgba(var(--current-primary-color-rgb, 0, 123, 255), 0.1);
+    box-shadow: 0 1px 5px rgba(var(--current-primary-color-rgb), 0.1);
 }
 
 .student-info {
@@ -276,19 +277,30 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--text-color-light); /* Varsayılan gri */
+    background-color: var(--text-color-light); /* Varsayılan gri (yorum atanmamış) */
     flex-shrink: 0;
     margin-left: auto; /* Sağ tarafa hizala */
+    border: 1px solid rgba(0,0,0,0.1); /* Hafif kenarlık */
 }
 
 .student-status-indicator.status-assigned {
-    background-color: var(--accent-color-success); /* Yeşil */
+    background-color: var(--accent-color-success); /* Yeşil (yorum atanmış) */
 }
 
 .student-status-indicator.status-pending {
-    background-color: var(--accent-color-error); /* Kırmızı */
+    background-color: var(--accent-color-error); /* Kırmızı (yorum bekleyen) */
 }
 
+.student-comment-preview {
+    font-size: var(--font-size-small);
+    color: var(--text-color-light);
+    flex-basis: 100%; /* Yeni satırda başla */
+    padding-left: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .assign-btn {
     background-color: var(--current-primary-color); /* Primary butondan renk alır */
@@ -313,6 +325,7 @@
     padding: var(--spacing-sm);
     flex-grow: 1;
     min-height: 200px;
+    background-color: var(--primary-bg-color); /* Arka planı listeye uygun hale getir */
 }
 
 .managed-student-item {
@@ -320,8 +333,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 0;
-    border-bottom: 1px dashed #eee;
+    border-bottom: 1px dashed var(--border-color); /* global.css'ten değişken kullan */
     font-size: 0.95em;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşebilir */
+    gap: var(--spacing-xs); /* Item içi boşluk */
 }
 
 .managed-student-item:last-child {
@@ -334,6 +349,9 @@
     align-items: center;
     flex-grow: 1;
     color: var(--text-color-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .managed-student-info .student-number {
@@ -343,6 +361,7 @@
 .managed-student-actions {
     display: flex;
     gap: var(--spacing-xs);
+    flex-shrink: 0; /* Butonların küçülmesini engelle */
 }
 
 .managed-student-actions .button {
@@ -350,4 +369,51 @@
     font-size: var(--font-size-small);
     margin-top: 0;
     width: auto;
+}
+
+/* Tüm Atanan Yorumlar Modalı içindeki stil */
+#all-assigned-comments-list {
+    background-color: var(--primary-bg-color);
+}
+
+.student-entry-modal {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-sm);
+    border-radius: 6px;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.student-entry-modal:last-child {
+    border-bottom: none;
+}
+
+.student-entry-modal .student-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.student-entry-modal .student-entry-header h2 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--current-primary-color);
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    flex-grow: 1;
+}
+
+.student-entry-modal p {
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+    color: var(--text-color-dark);
+}
+
+.copy-modal-comment-btn {
+    flex-shrink: 0;
 }

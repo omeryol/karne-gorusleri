@@ -11,7 +11,7 @@ import {
     headerClassSelect, headerTermSelect, // Yeni header'daki sınıf/dönem select'leri
     commentTextarea, assignCommentBtn, // comments-tab'dan gerekli UI elementleri
     commentProfileList, // Yorum profili listesi
-    studentListContainer // Öğrenci listesi
+    studentListContainer // Öğrenci listesi (Bu referans burada kullanılmıyor, kaldırılabilir)
 } from './ui-elements.js';
 import { students, studentAssignments, selectedStudent, setSelectedStudent, currentCommentTemplate, setCurrentCommentTemplate } from './data-management.js';
 
@@ -76,7 +76,7 @@ function handleModalSelectComment() {
         commentTextarea.value = modalCommentText.textContent; // Yorumu düzenleyiciye aktar
         console.log(`[modals.js] Yorum "${currentCommentTemplate.title}" yorum alanına aktarıldı.`);
 
-        // İlgili profile item'ı aktif yap ve scroll et (ui-elements.js'den profileList yerine commentProfileList kullanıldı)
+        // İlgili profile item'ı aktif yap ve scroll et
         const profileItem = commentProfileList.querySelector(`.profile-item[data-id="${currentCommentTemplate.id}"]`);
         if (profileItem) {
             const currentActive = commentProfileList.querySelector('.profile-item.active');
@@ -109,9 +109,10 @@ function handleModalSelectComment() {
 // Yorum Önizleme Modalında Sonraki/Önceki Yorum Navigasyonu
 function navigateCommentModal(direction) {
     console.log(`[modals.js] navigateCommentModal çağrıldı. Yön: ${direction === 1 ? 'Sonraki' : 'Önceki'}`);
-    const selectedClass = headerClassSelect.value; // Yeni header select'leri kullanıldı
-    const selectedTerm = headerTermSelect.value; // Yeni header select'leri kullanıldı
+    const selectedClass = headerClassSelect.value;
+    const selectedTerm = headerTermSelect.value;
 
+    // commentsData'ya window üzerinden erişim sağlanır (global olarak yüklenir)
     if (!selectedClass || !selectedTerm || !window.commentsData[selectedClass] || !window.commentsData[selectedClass][selectedTerm]) {
         showToast('Yorumlar arasında gezinmek için lütfen sınıf ve dönem seçin.', 'info');
         console.warn('[modals.js] Yorum navigasyonu için sınıf veya dönem seçili değil.');
@@ -163,7 +164,7 @@ function navigateCommentModal(direction) {
         setCurrentCommentTemplate(nextTemplate); // currentCommentTemplate'i güncelle
         console.log(`[modals.js] Yeni şablon yüklendi: ${nextTemplate.title}`);
 
-        // İlgili profile item'ı aktif yap ve scroll et (ui-elements.js'den profileList yerine commentProfileList kullanıldı)
+        // İlgili profile item'ı aktif yap ve scroll et
         const profileItem = commentProfileList.querySelector(`.profile-item[data-id="${nextTemplate.id}"]`);
         if (profileItem) {
             const currentActive = commentProfileList.querySelector('.profile-item.active');

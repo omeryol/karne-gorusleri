@@ -5,13 +5,13 @@ import { students, studentAssignments, selectedStudent, setSelectedStudent, curr
 import { updateDashboardCards } from './dashboard.js';
 import { openCommentPreviewModal, viewAllAssignments } from './modals.js';
 import {
-    studentListClassFilter, studentListSubClassFilter, studentSearchInput, studentListContainer, // Öğrenci listesi panelindeki yeni ID'ler
-    filterUnassignedBtn, selectedStudentNameDisplay, commentTextarea, assignCommentBtn, // Yorum düzenleyici elementleri
-    headerClassSelect, headerTermSelect, commentProfileList, profileSearchInput, // Header'daki ve yorum şablonu bölümündeki yeni ID'ler
+    studentListClassFilter, studentListSubClassFilter, studentSearchInput, studentListContainer,
+    filterUnassignedBtn, selectedStudentNameDisplay, commentTextarea, assignCommentBtn,
+    headerClassSelect, headerTermSelect, commentProfileList, profileSearchInput,
     copyCommentBtn, clearCommentEditorBtn, autoClearCommentCheckbox, remainingCharsSpan,
-    prevStudentBtn, nextStudentBtn, // Yeni eklenen önceki/sonraki öğrenci butonları
-    addNewStudentBtn, manageStudentsBtn, // Yeni öğrenci ekleme/yönetme butonları
-    viewAllAssignmentsBtn // Yorum düzenleyici altındaki tüm atamaları görüntüle butonu
+    prevStudentBtn, nextStudentBtn,
+    addNewStudentBtn, manageStudentsBtn,
+    viewAllAssignmentsBtn
 } from './ui-elements.js';
 
 /*
@@ -36,11 +36,11 @@ console.log('[comments-tab.js] Yorum Atama sekmesi modülü yükleniyor...');
 // Yorum atama sekmesindeki öğrenci listesini yükleme/filtreleme
 export function loadStudentListForAssignment(filterUnassigned = false) {
     console.log(`[comments-tab.js] loadStudentListForAssignment çağrıldı. Yorum Bekleyenler filtresi: ${filterUnassigned}`);
-    const filterClass = studentListClassFilter.value; // Yeni ID
-    const filterSubClass = studentListSubClassFilter.value; // Yeni ID
-    const searchTerm = studentSearchInput.value.toLowerCase(); // Mevcut
+    const filterClass = studentListClassFilter.value;
+    const filterSubClass = studentListSubClassFilter.value;
+    const searchTerm = studentSearchInput.value.toLowerCase();
 
-    studentListContainer.innerHTML = ''; // Yeni ID
+    studentListContainer.innerHTML = '';
 
     const filteredStudents = students.filter(student => {
         const matchesClass = filterClass === 'all' || student.class === filterClass;
@@ -129,12 +129,13 @@ export function loadStudentListForAssignment(filterUnassigned = false) {
 // Yorum profillerini yükleme/filtreleme
 export function loadCommentTemplates() {
     console.log('[comments-tab.js] loadCommentTemplates çağrıldı: Yorum şablonları yükleniyor.');
-    const selectedClass = headerClassSelect.value; // Yeni ID
-    const selectedTerm = headerTermSelect.value; // Yeni ID
-    const searchTerm = profileSearchInput.value.toLowerCase(); // Mevcut
+    const selectedClass = headerClassSelect.value;
+    const selectedTerm = headerTermSelect.value;
+    const searchTerm = profileSearchInput.value.toLowerCase();
 
-    commentProfileList.innerHTML = ''; // Yeni ID
+    commentProfileList.innerHTML = '';
 
+    // commentsData global olarak index.html'den yüklendiği için window objesi üzerinden erişiyoruz.
     if (typeof window.commentsData !== 'undefined' && window.commentsData[selectedClass] && window.commentsData[selectedClass][selectedTerm]) {
         const templates = window.commentsData[selectedClass][selectedTerm];
         const filteredTemplates = templates.filter(template => {
@@ -204,7 +205,7 @@ function clearCommentEditor() {
     console.log('[comments-tab.js] clearCommentEditor çağrıldı.');
     commentTextarea.value = '';
     updateCharCount();
-    const currentActive = commentProfileList.querySelector('.profile-item.active'); // Yeni ID
+    const currentActive = commentProfileList.querySelector('.profile-item.active');
     if (currentActive) {
         currentActive.classList.remove('active');
         console.log('[comments-tab.js] Aktif yorum profili pasif yapıldı.');
@@ -257,7 +258,7 @@ function handleStudentClickInAssignmentList(event) {
 
     // Eğer "Ata" veya "Güncelle" butonuna tıklandıysa
     if (event.target.classList.contains('assign-btn')) {
-        const studentIdToAssign = event.target.dataset.studentId;
+        const studentIdToAssign = event.target.dataset.id || event.target.dataset.studentId; // Her iki veri-özniteliği için de kontrol et
         const student = students.find(s => s.id === studentIdToAssign);
         if (student) {
             selectStudentForAssignmentItem(studentItem);
@@ -272,7 +273,7 @@ function handleStudentClickInAssignmentList(event) {
 // Öğrenciyi seçme fonksiyonu (studentItemElement parametresi alıyor)
 export function selectStudentForAssignmentItem(studentItemElement) {
     console.log('[comments-tab.js] selectStudentForAssignmentItem çağrıldı.');
-    const previouslySelected = studentListContainer.querySelector('.student-item.active-student'); // Yeni ID
+    const previouslySelected = studentListContainer.querySelector('.student-item.active-student');
     if (previouslySelected) {
         previouslySelected.classList.remove('active-student');
         console.log('[comments-tab.js] Önceki seçili öğrenci pasif yapıldı.');
@@ -301,14 +302,14 @@ export function selectStudentForAssignmentItem(studentItemElement) {
         commentTextarea.value = '';
         updateCharCount();
         assignCommentBtn.textContent = 'Yorumu Ata / Güncelle';
-        console.log('[comments-tab.js] selectedStudent null, UI sıfırlandı.');
+        console.log('[comments-tab.js] Hiçbir öğrenci seçili değil.');
     }
 }
 
 // Hızlı öğrenci navigasyonu (Editor panelindeki önceki/sonraki butonları)
 export function navigateStudent(direction) {
     console.log(`[comments-tab.js] navigateStudent çağrıldı. Yön: ${direction === 1 ? 'Sonraki' : 'Önceki'}`);
-    const currentStudentItems = Array.from(studentListContainer.querySelectorAll('.student-item')); // Yeni ID
+    const currentStudentItems = Array.from(studentListContainer.querySelectorAll('.student-item'));
     if (currentStudentItems.length === 0) {
         showToast('Listede öğrenci bulunamadı.', 'info');
         console.warn('[comments-tab.js] Hızlı gezinme için öğrenci listesi boş.');
@@ -384,13 +385,13 @@ export function initializeCommentsTabListeners() {
     if (viewAllAssignmentsBtn) viewAllAssignmentsBtn.addEventListener('click', viewAllAssignments);
 
     // Yorum şablonları filtreleri ve arama
-    headerClassSelect.addEventListener('change', () => { // Yeni ID
+    headerClassSelect.addEventListener('change', () => {
         loadCommentTemplates();
         saveData();
         profileSearchInput.value = '';
         console.log('[comments-tab.js] Header Sınıf seçimi değişti.');
     });
-    headerTermSelect.addEventListener('change', () => { // Yeni ID
+    headerTermSelect.addEventListener('change', () => {
         loadCommentTemplates();
         saveData();
         profileSearchInput.value = '';
@@ -404,6 +405,7 @@ export function initializeCommentsTabListeners() {
         // Modalı aç ve 'Öğrenci Ekle' sekmesini aktif et
         const studentManagementModal = document.getElementById('student-management-modal');
         if (studentManagementModal) {
+            // Dinamik import ile döngüsel bağımlılıktan kaçınma
             import('./modals.js').then(({ toggleModal, switchModalTab }) => {
                 toggleModal(studentManagementModal, true);
                 switchModalTab('add-student-section'); // Öğrenci Ekle sekmesini aktif et
@@ -416,6 +418,7 @@ export function initializeCommentsTabListeners() {
         // Modalı aç ve 'Öğrencileri Görüntüle / Sil' sekmesini aktif et
         const studentManagementModal = document.getElementById('student-management-modal');
         if (studentManagementModal) {
+            // Dinamik import ile döngüsel bağımlılıktan kaçınma
             import('./modals.js').then(({ toggleModal, switchModalTab }) => {
                 toggleModal(studentManagementModal, true);
                 switchModalTab('view-students-section'); // Öğrencileri Görüntüle / Sil sekmesini aktif et

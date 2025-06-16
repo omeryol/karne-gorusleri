@@ -1,0 +1,183 @@
+/* css/modals.css */
+
+/*
+    Hata Ayıklama Notu:
+    Bu dosyadaki modal stillerinin doğru uygulandığını doğrulamak için:
+    1. Uygulamadaki tüm modalları (Yorum Önizleme, Öğrenci Yönetimi, Atanan Yorumlar, Yardım Kılavuzu) açıp kapatmayı deneyin.
+    2. Modalların ekranın ortasında doğru konumlandığını, arka plan karartmasının çalıştığını kontrol edin.
+    3. Açılma/kapanma animasyonlarının (opacity ve transform) akıcı bir şekilde gerçekleştiğini gözlemleyin.
+    4. Modalların boyutlarının (small-modal, medium-modal, large-modal) farklı ekran boyutlarında doğru davrandığını responsive modda test edin.
+    5. Kapatma butonlarının konumunu ve etkileşimini kontrol edin.
+*/
+
+/* --- Modal Genel Yapısı --- */
+.modal {
+    display: none; /* Varsayılan olarak gizli */
+    position: fixed; /* Ekranı kapla */
+    z-index: 1000; /* Diğer her şeyin üstünde */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* İçerik taşarsa modal içinde kaydırma çubuğu çıksın */
+    background-color: rgba(0,0,0,0.6); /* Yarı şeffaf karartılmış arka plan */
+    display: flex; /* İçeriği ortalamak için Flexbox kullan */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    opacity: 0; /* Geçiş efekti için başlangıçta opaklık 0 */
+    transition: opacity 0.3s ease; /* Opaklık geçişi */
+    /* `display: none` yerine `visibility: hidden` ve `pointer-events: none` daha iyi performans verebilir
+       ancak şu anki `toggleModal` (utils.js) yapısı `display` üzerinden çalıştığı için bu şekilde bırakıldı. */
+}
+
+.modal.show {
+    opacity: 1; /* Modal açıldığında opaklık 1'e gelsin */
+}
+
+/* --- Modal İçerik Kutusu --- */
+.modal-content {
+    background-color: var(--secondary-bg-color); /* Beyaz arkaplan */
+    margin: auto; /* Dikeyde ortalamayı sağlar (flex olmadığı durumlarda yedek) */
+    padding: var(--spacing-xl); /* İç boşluklar */
+    border-radius: 10px; /* Yuvarlak köşeler */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Daha belirgin gölge */
+    position: relative; /* Kapatma butonu için relative konum */
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; /* Ekran yüksekliğinin %90'ını geçmesin */
+    overflow-y: auto; /* İçerik taşarsa modal içinde dikey kaydırma */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Açılış/kapanış animasyonu */
+    transform: translateY(20px); /* Açılırken hafif aşağıdan gelsin efekti */
+}
+
+.modal.show .modal-content {
+    transform: translateY(0); /* Açıldığında normal konuma gelsin */
+}
+
+/* --- Modal Boyutları (Özel Sınıflar) --- */
+.modal-content.small-modal {
+    width: 400px;
+    max-width: 90%; /* Küçük ekranlarda küçülmesini sağlar */
+}
+.modal-content.medium-modal {
+    width: 600px;
+    max-width: 90%;
+}
+.modal-content.large-modal {
+    width: 800px;
+    max-width: 90%;
+}
+
+/* --- Modal Kapatma Butonu --- */
+.close-button {
+    color: var(--text-color-light); /* Açık gri renk */
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-md);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1; /* Tek satırda kalmasını ve hizalanmasını sağlar */
+    z-index: 10; /* Diğer içeriklerin üzerinde olsun */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--accent-color-error); /* Hover ve odaklanmada kırmızı */
+    outline: none; /* Odaklanma çizgisini kaldır */
+}
+
+/* --- Modal İçindeki Genel Başlıklar --- */
+.modal-content h2 {
+    font-size: var(--font-size-xl);
+    color: var(--current-primary-color); /* Dinamik tema rengi */
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.modal-content h3 {
+    font-size: var(--font-size-large);
+    color: var(--text-color-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+/* --- Modal Eylem Butonları (alt kısımlar) --- */
+.modal-actions { /* Küçük modalların alt kısmındaki genel buton grubu */
+    display: flex;
+    justify-content: flex-end; /* Sağ tarafa hizala */
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.modal-footer-actions { /* Bazı modalların (örn. Öğrenci Yönetimi) alt kısmındaki butonlar için */
+    display: flex;
+    justify-content: flex-end; /* Sağ tarafa hizala */
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşsün */
+}
+
+.modal-footer-actions .button {
+    flex-grow: 1; /* Butonların esneyerek boşluğu doldurmasını sağlar */
+    min-width: 150px; /* Minimum genişlik */
+}
+
+/* --- Modal Sekmeleri (Öğrenci Yönetimi Modalı içinde) --- */
+.modal-tabs {
+    display: flex;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color); /* Sekme alt çizgi */
+}
+
+.modal-tab-button {
+    background: none;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--text-color-light);
+    border-bottom: 2px solid transparent; /* Pasif sekme alt çizgisi şeffaf */
+    transition: all 0.2s ease;
+}
+
+.modal-tab-button:hover {
+    color: var(--text-color-dark);
+    border-bottom-color: var(--border-color); /* Hover'da hafif alt çizgi */
+}
+
+.modal-tab-button.active {
+    color: var(--current-primary-color); /* Aktif sekme tema renginde */
+    border-bottom-color: var(--current-primary-color); /* Aktif sekme alt çizgisi tema renginde */
+}
+
+/* Sekme içerikleri */
+.modal-tab-content {
+    display: none; /* Varsayılan olarak gizli */
+    flex-direction: column; /* İçeriği dikeyde düzenle */
+    flex-grow: 1; /* Kalan alanı doldur */
+    padding-top: var(--spacing-md); /* İç üst boşluk */
+}
+
+.modal-tab-content.active {
+    display: flex; /* Aktif olduğunda göster */
+}
+
+/* Yorum Önizleme Modalı navigasyon butonları */
+.modal-comment-navigation {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}

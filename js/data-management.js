@@ -2,10 +2,10 @@
 
 import { showToast, getFirstName } from './utils.js';
 import {
-    headerClassSelect, headerTermSelect, autoClearCommentCheckbox, // Yeni header select'leri
-    studentListClassFilter, studentListSubClassFilter, // Öğrenci listesi filtreleri
-    managementClassFilterModal, managementSubClassFilterModal, // Modal içi yönetim filtreleri
-    studentListContainer, selectedStudentNameDisplay, commentTextarea // Genel UI elementleri
+    headerClassSelect, headerTermSelect, autoClearCommentCheckbox,
+    studentListClassFilter, studentListSubClassFilter,
+    managementClassFilterModal, managementSubClassFilterModal,
+    // studentListContainer, selectedStudentNameDisplay, commentTextarea // Genel UI elementleri (Bu referanslar burada kullanılmıyor, kaldırıldı)
 } from './ui-elements.js';
 
 /*
