@@ -7,9 +7,11 @@ import {
     modalCloseButtons, helpModal, openHelpModalBtn, closeHelpModalBtn,
     allAssignmentsModal, allAssignedCommentsList, closeAllAssignmentsModalBtn,
     closeAllAssignmentsModalBtnBottom, profileList, classSelect, termSelect,
-    selectedStudent, selectedStudentNameDisplay, commentTextarea, assignCommentBtnEditor // comments-tab'dan gerekli
-} from './ui-elements.js';
-import { students, studentAssignments, currentCommentTemplate, setCurrentCommentTemplate, setSelectedStudent } from './data-management.js';
+    selectedStudentNameDisplay, commentTextarea, assignCommentBtnEditor // comments-tab'dan gerekli UI elementleri
+} from './ui-elements.js'; // Bu satırda problem yok, sadece UI elementleri geliyor.
+
+// DÜZELTME: selectedStudent ve currentCommentTemplate data-management.js'den gelmeli
+import { students, studentAssignments, selectedStudent, setSelectedStudent, currentCommentTemplate, setCurrentCommentTemplate } from './data-management.js';
 
 
 // Yorum Önizleme Modalını Açma
@@ -160,7 +162,7 @@ export function viewAllAssignments() {
                 navigator.clipboard.writeText(commentToCopy).then(() => {
                     showToast('Yorum panoya kopyalandı!', 'success');
                 }).catch(err => {
-                    console.error('Yorum kopyalanırken bir hata oluştu:', err);
+                    console.error('Yorum kopyalanamadı:', err);
                     showToast('Yorum kopyalanırken bir hata oluştu.', 'error');
                 });
             });
