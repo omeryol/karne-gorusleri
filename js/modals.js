@@ -4,14 +4,14 @@ import { showToast, toggleModal } from './utils.js'; // toggleModal util'den al�
 import {
     commentPreviewModal, modalCommentTitle, modalCommentText, modalCopyBtn,
     modalSelectBtn, modalPrevCommentBtn, modalNextCommentBtn,
-    commentPreviewModalCloseButton, helpModal, openHelpModalBtn, helpModalCloseButton,
-    allAssignmentsModal, allAssignedCommentsList, allAssignmentsModalCloseButton,
-    studentManagementModal, studentManagementModalCloseButtons, // Yeni modal ve kapatma butonları
+    commentPreviewModalCloseButton, // Artık bir NodeList (liste)
+    helpModal, openHelpModalBtn, helpModalCloseButton, // Artık bir NodeList (liste)
+    allAssignmentsModal, allAssignedCommentsList, allAssignmentsModalCloseButton, // Artık bir NodeList (liste)
+    studentManagementModal, studentManagementModalCloseButtons, // Bu zaten bir NodeList idi
     modalTabButtons, modalTabContents, // Öğrenci Yönetimi Modalı içindeki sekme elemanları
     headerClassSelect, headerTermSelect, // Yeni header'daki sınıf/dönem select'leri
     commentTextarea, assignCommentBtn, // comments-tab'dan gerekli UI elementleri
     commentProfileList, // Yorum profili listesi
-    studentListContainer // Öğrenci listesi (Bu referans burada kullanılmıyor, kaldırılabilir)
 } from './ui-elements.js';
 import { students, studentAssignments, selectedStudent, setSelectedStudent, currentCommentTemplate, setCurrentCommentTemplate } from './data-management.js';
 
@@ -230,7 +230,7 @@ export function viewAllAssignments() {
 }
 
 // Öğrenci Yönetimi modalı içindeki sekme yönetimi
-function switchModalTab(tabId) {
+export function switchModalTab(tabId) {
     console.log(`[modals.js] switchModalTab çağrıldı: Sekme değiştiriliyor -> ${tabId}`);
     modalTabContents.forEach(content => {
         content.classList.remove('active');
@@ -244,7 +244,10 @@ function switchModalTab(tabId) {
     if (targetContent) {
         targetContent.classList.add('active');
         targetContent.style.display = 'flex'; // Flex olarak geri göster
-        document.querySelector(`.modal-tab-button[data-modal-tab="${tabId}"]`).classList.add('active');
+        const correspondingButton = document.querySelector(`.modal-tab-button[data-modal-tab="${tabId}"]`);
+        if(correspondingButton) {
+            correspondingButton.classList.add('active');
+        }
         console.log(`[modals.js] Sekme "${tabId}" aktif yapıldı.`);
     } else {
         console.error(`[modals.js] Hata: "${tabId}" ID'sine sahip sekme içeriği bulunamadı.`);
@@ -255,54 +258,64 @@ function switchModalTab(tabId) {
 // Modal event listener'larını başlatma fonksiyonu
 export function initializeModalListeners() {
     console.log('[modals.js] initializeModalListeners çağrıldı: Modal dinleyicileri başlatılıyor.');
+    
+    // Yardım butonuna tıklandığında modalı aç
+    if(openHelpModalBtn) {
+        openHelpModalBtn.addEventListener('click', () => {
+            if(helpModal) toggleModal(helpModal, true);
+        });
+    }
 
     // Yorum Önizleme Modalı Butonları
-    modalCopyBtn.addEventListener('click', handleModalCopyComment);
-    modalSelectBtn.addEventListener('click', handleModalSelectComment);
-    modalPrevCommentBtn.addEventListener('click', () => navigateCommentModal(-1));
-    modalNextCommentBtn.addEventListener('click', () => navigateCommentModal(1));
+    if (modalCopyBtn) modalCopyBtn.addEventListener('click', handleModalCopyComment);
+    if (modalSelectBtn) modalSelectBtn.addEventListener('click', handleModalSelectComment);
+    if (modalPrevCommentBtn) modalPrevCommentBtn.addEventListener('click', () => navigateCommentModal(-1));
+    if (modalNextCommentBtn) modalNextCommentBtn.addEventListener('click', () => navigateCommentModal(1));
 
-    // Genel kapatma butonları (her modal için ayrı ayrı tanımlandı)
-    if (commentPreviewModalCloseButton) commentPreviewModalCloseButton.addEventListener('click', () => toggleModal(commentPreviewModal, false));
-    if (helpModalCloseButton) helpModalCloseButton.addEventListener('click', () => {
-        toggleModal(helpModal, false);
-        localStorage.setItem('doNotShowHelpModalAgain', 'true'); // Anladım'a basınca bir daha gösterme
-        console.log('[modals.js] Yardım modalı kapatıldı ve bir daha göstermemek için ayar kaydedildi.');
-    });
-    if (allAssignmentsModalCloseButton) allAssignmentsModalCloseButton.addEventListener('click', () => toggleModal(allAssignmentsModal, false));
+    // DÜZELTME: Kapatma butonları artık bir liste (NodeList) olduğu için her birine döngü ile dinleyici ekleniyor.
+    // Bu, konsoldaki çift tıklama hatasını çözer ve tüm kapatma butonlarının çalışmasını garantiler.
+    if (commentPreviewModalCloseButton) {
+        commentPreviewModalCloseButton.forEach(btn => btn.addEventListener('click', () => toggleModal(commentPreviewModal, false)));
+    }
+    if (helpModalCloseButton) {
+        helpModalCloseButton.forEach(btn => btn.addEventListener('click', () => {
+            toggleModal(helpModal, false);
+            localStorage.setItem('doNotShowHelpModalAgain', 'true'); // Anladım'a basınca bir daha gösterme
+            console.log('[modals.js] Yardım modalı kapatıldı ve bir daha göstermemek için ayar kaydedildi.');
+        }));
+    }
+    if (allAssignmentsModalCloseButton) {
+        allAssignmentsModalCloseButton.forEach(btn => btn.addEventListener('click', () => toggleModal(allAssignmentsModal, false)));
+    }
 
-    // Öğrenci Yönetimi Modalı kapatma butonları (NodeList olduğu için forEach)
-    studentManagementModalCloseButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const modalId = event.target.dataset.modal;
-            const modalElement = document.getElementById(modalId);
-            if (modalElement) {
-                toggleModal(modalElement, false);
-                console.log(`[modals.js] Öğrenci Yönetimi Modalı kapatıldı: ${modalId}`);
-            } else {
-                console.warn(`[modals.js] Kapatılacak modal bulunamadı: ${modalId}`);
-            }
+    // Öğrenci Yönetimi Modalı kapatma butonları (Bu zaten doğru şekilde yapılmıştı)
+    if (studentManagementModalCloseButtons) {
+        studentManagementModalCloseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.dataset.modal;
+                const modalElement = document.getElementById(modalId);
+                if (modalElement) {
+                    toggleModal(modalElement, false);
+                    console.log(`[modals.js] Öğrenci Yönetimi Modalı kapatıldı: ${modalId}`);
+                } else {
+                    console.warn(`[modals.js] Kapatılacak modal bulunamadı: ${modalId}`);
+                }
+            });
         });
-    });
+    }
 
     // Öğrenci Yönetimi modalı içindeki sekme butonları
-    modalTabButtons.forEach(button => {
-        button.addEventListener('click', () => switchModalTab(button.dataset.modalTab));
-    });
+    if (modalTabButtons) {
+        modalTabButtons.forEach(button => {
+            button.addEventListener('click', () => switchModalTab(button.dataset.modalTab));
+        });
+    }
 
     // Modal dışına tıklayınca kapatma
     window.addEventListener('click', (event) => {
-        if (event.target === commentPreviewModal) {
-            toggleModal(commentPreviewModal, false);
-        }
-        if (event.target === helpModal) {
-            toggleModal(helpModal, false);
-        }
-        if (event.target === allAssignmentsModal) {
-            toggleModal(allAssignmentsModal, false);
-        }
-        if (event.target === studentManagementModal) { // Yeni modalı da ekle
-            toggleModal(studentManagementModal, false);
+        if (event.target.classList.contains('modal')) {
+             // Tıklanan elementin kendisi bir modal ise (yani karartılmış arkaplan) kapat
+             toggleModal(event.target, false);
         }
     });
 

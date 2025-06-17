@@ -90,17 +90,20 @@ export const modalCopyBtn = document.getElementById('modal-copy-btn');
 export const modalSelectBtn = document.getElementById('modal-select-btn');
 export const modalPrevCommentBtn = document.getElementById('modal-prev-comment-btn');
 export const modalNextCommentBtn = document.getElementById('modal-next-comment-btn');
-export const commentPreviewModalCloseButton = document.querySelector('#comment-preview-modal .close-button, #comment-preview-modal .close-modal-button');
+// DÜZELTME: querySelectorAll kullanılarak hem 'x' hem de 'Kapat' butonları seçiliyor.
+export const commentPreviewModalCloseButton = document.querySelectorAll('#comment-preview-modal .close-button, #comment-preview-modal .close-modal-button');
 
 
 // Atanan Tüm Yorumları Görüntüleme Modalı
 export const allAssignmentsModal = document.getElementById('all-assignments-modal');
 export const allAssignedCommentsList = document.getElementById('all-assigned-comments-list');
-export const allAssignmentsModalCloseButton = document.querySelector('#all-assignments-modal .close-button, #all-assignments-modal .close-modal-button');
+// DÜZELTME: querySelectorAll kullanılarak hem 'x' hem de 'Kapat' butonları seçiliyor.
+export const allAssignmentsModalCloseButton = document.querySelectorAll('#all-assignments-modal .close-button, #all-assignments-modal .close-modal-button');
 
 
 // Kullanım Kılavuzu Modalı
 export const helpModal = document.getElementById('help-modal');
-export const helpModalCloseButton = document.querySelector('#help-modal .close-button, #help-modal .close-modal-button');
+// DÜZELTME: querySelectorAll kullanılarak hem 'x' hem de 'Anladım' butonları seçiliyor.
+export const helpModalCloseButton = document.querySelectorAll('#help-modal .close-button, #help-modal .close-modal-button');
 
 console.log('[ui-elements.js] UI elementleri tanımlama tamamlandı.');
