@@ -264,6 +264,8 @@
         </div>
     </div>
 
+    <script src="/karne-gorusleri/comment_templates_data.js"></script>
+
     <script src="/karne-gorusleri/js/utils.js" type="module"></script>
     <script src="/karne-gorusleri/js/ui-elements.js" type="module"></script>
     <script src="/karne-gorusleri/js/data-management.js" type="module"></script>
@@ -272,13 +274,11 @@
     <script src="/karne-gorusleri/js/comments-tab.js" type="module"></script>
     <script src="/karne-gorusleri/js/student-management-tab.js" type="module"></script>
     <script src="/karne-gorusleri/js/main.js" type="module"></script>
-    <script src="/karne-gorusleri/comment_templates_data.js"></script>
 
     <script>
         // Service Worker kaydı
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                // GitHub Pages'te depo adını içeren doğru yolu kullanıyoruz
                 navigator.serviceWorker.register('/karne-gorusleri/service-worker.js')
                     .then(registration => {
                         console.log('Service Worker başarıyla kaydedildi:', registration);
