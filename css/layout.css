@@ -2,446 +2,51 @@
 
 /*
     Hata Ayıklama Notu:
-    Bu dosya, uygulamanın genel iskeletini ve ana panellerin düzenini tanımlar.
-    CSS kurallarının doğru uygulandığını doğrulamak için tarayıcının Geliştirici Araçları'nda (Developer Tools)
-    "Elements" (Öğeler) sekmesini kullanarak `#app-wrapper`, `#main-header`, `#main-content`,
-    `#student-comment-dashboard`, `.panel` gibi ana elemanların Flexbox/Grid özelliklerini
-    ve boyutlandırmalarını kontrol edebilirsiniz.
-    Özellikle yatay ve dikey hizalamaları, boşlukları (gap) ve esneklik (flex) ayarlarını
-    doğru görselleştirildiğinden emin olun.
+    Bu dosya, uygulamanın ana yapısal düzenini kontrol eder.
+    #student-comment-dashboard'un içindeki panellerin (`student-list-panel`, `comment-editor-panel`)
+    genişliklerini ve esnek davranışlarını tanımlar. Bu kurallar olmadan, paneller
+    içeriklerine göre düzensiz bir şekilde boyutlanabilir.
 */
 
-/* Genel Düzen Ayarları */
-body {
-    /* global.css'te flex ayarları yapıldı, burada tekrar etmiyoruz */
-}
-
-#app-wrapper {
-    /* global.css'te temel ayarları yapıldı */
-    /* Ekstra düzen ayarları: flex-direction: column olarak ayarlandı */
-}
-
-/* --- Başlık (Header) Düzeni --- */
-#main-header {
-    /* global.css'te temel stil ve position: sticky ayarları yapıldı */
-    /* Ek düzen ayarları */
-}
-
-.header-content {
-    /* global.css'te temel flex ayarları yapıldı */
-}
-
-.header-controls {
-    /* global.css'te temel flex ayarları yapıldı */
-}
-
-/* Dashboard Kartları Kapsayıcısı */
-#dashboard-cards-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background-color: rgba(0,0,0,0.1); /* Hafif şeffaf arka plan */
-    gap: var(--spacing-sm);
-    flex-wrap: nowrap; /* Kartların tek satırda kalmasını sağlar */
-    box-sizing: border-box;
-    min-height: 60px; /* Minimum yükseklik */
-    overflow-x: auto; /* Küçük ekranlarda yatay kaydırma */
-    -webkit-overflow-scrolling: touch;
-    flex-shrink: 0;
-
-    /* Sticky Header altında sabit durması için */
-    position: sticky;
-    top: var(--header-height, 70px); /* JS tarafından güncellenecek, şimdilik varsayılan */
-    z-index: 99;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Hafif gölge */
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-/* Dashboard kartlarının kendileri (components.css'te daha detaylı) */
-.dashboard-card {
-    flex-grow: 1;
-    flex-basis: 0; /* İçeriğe göre genişlemesini sağlar */
-    min-width: 90px; /* Kartlar için minimum genişlik */
-    padding: var(--spacing-xs) var(--spacing-sm);
-}
-
-
-/* --- Ana İçerik Alanı Düzeni --- */
-#main-content {
-    flex-grow: 1;
-    display: flex; /* İçindeki section'ları düzenlemek için flex kullanıyoruz */
-    padding: var(--spacing-lg);
-}
-
-/* Öğrenci ve Yorum Ana Paneli */
+/* --- Ana İçerik Konteyneri --- */
 #student-comment-dashboard {
-    display: flex;
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşmesini sağlar */
-    gap: var(--spacing-lg);
-    width: 100%;
-    min-height: calc(100vh - var(--header-height, 130px) - var(--spacing-xl) * 2); /* Ekran yüksekliğine göre ayarla */
-}
-
-.panel {
-    background-color: var(--secondary-bg-color);
-    border-radius: 8px;
-    padding: var(--spacing-lg);
-    box-shadow: 0 3px 15px var(--shadow-color); /* Daha belirgin gölge */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Sol Panel (Öğrenci Listesi) */
-.student-list-panel {
-    flex: 1.2; /* Yorum paneline göre biraz daha dar */
-    min-width: 300px; /* Minimum genişlik */
-    max-width: 400px; /* Maksimum genişlik */
-}
-
-/* Sağ Panel (Yorum Düzenleyici ve Şablonlar) */
-.comment-editor-panel {
-    flex: 2; /* Daha geniş alan kaplar */
-    min-width: 450px; /* Minimum genişlik */
-    flex-grow: 1; /* Mevcut alanı doldurmasını sağlar */
-}
-
-/* Liste alanları için flex ayarları */
-#student-list-container,
-#comment-profile-list {
-    flex-grow: 1; /* İçeriğin kalan alanı doldurmasını sağlar */
-    min-height: 150px; /* Minimum yükseklik */
-}
-
-.list-footer-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
-    justify-content: center;
-}
-
-.list-footer-controls .button {
-    flex-grow: 1;
-    flex-basis: calc(50% - var(--spacing-xs)); /* Yarı yarıya bölüşsün */
-    max-width: calc(50% - var(--spacing-xs));
-}
-
-
-/* --- Öğrenci Yönetimi Modalı İçindeki Düzen --- */
-#student-management-modal .modal-content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.modal-tabs {
-    display: flex;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: var(--spacing-md);
-}
-
-.modal-tab-button {
-    flex-grow: 1;
-    padding: var(--spacing-sm);
-    background-color: transparent;
-    border: none;
-    border-bottom: 3px solid transparent;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--text-color-light);
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.modal-tab-button:hover {
-    color: var(--text-color-dark);
-    background-color: var(--primary-bg-color);
-}
-
-.modal-tab-button.active {
-    color: var(--current-primary-color);
-    border-bottom-color: var(--current-primary-color);
-    font-weight: 600;
-}
-
-.modal-tab-content {
-    display: none;
-    flex-grow: 1; /* İçeriğin kalanı doldurmasını sağlar */
-    padding-top: var(--spacing-md); /* Tab butonu ile içeriği ayır */
-    overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu */
-}
-
-.modal-tab-content.active {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group-inline { /* Modal içindeki form grubu için yeni sınıf */
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-md);
-}
-
-.form-group-inline > * {
-    flex-grow: 1;
-    flex-basis: calc(50% - var(--spacing-xs));
-    max-width: calc(50% - var(--spacing-xs));
-}
-
-.modal-footer-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
-    justify-content: flex-end;
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-md);
-}
-
-.modal-footer-actions .button {
-    flex-grow: 1;
-    flex-basis: calc(50% - var(--spacing-xs));
-    max-width: calc(50% - var(--spacing-xs));
-}/* css/layout.css */
-
-/*
-    Hata Ayıklama Notu:
-    Bu dosya, uygulamanın ana yerleşim düzenini (header, main, footer ve ana panellerin sıralanışı) belirler.
-    Tarayıcının Geliştirici Araçları'ndaki "Layout" veya "Computed" sekmesini kullanarak
-    Flexbox veya Grid özelliklerinin doğru uygulandığını kontrol edin.
-    Özellikle elemanların hizalanması, boşlukları ve responsive davranışları test edilmelidir.
-    `--header-height` değişkeninin `main.js` tarafından dinamik olarak doğru hesaplandığından emin olun,
-    çünkü bu, sticky dashboard'un konumunu etkiler.
-*/
-
-/* --- Ana Uygulama Yapısı --- */
-/*
-    #app-wrapper: global.css'te tanımlanmış, merkezi konumlandırma ve genel gölge/radius
-    #main-header: global.css'te tanımlanmış, genel stil, yapışkanlık ve arka plan
-    #main-content: global.css'te tanımlanmış, flex-grow ile ana alanı doldurur
-    #main-footer: global.css'te tanımlanmış, genel stil
-*/
-
-/* Ana içerik alanının flex yapısı */
-#main-content {
-    flex-grow: 1;
-    display: flex; /* İçindeki section ve panelleri hizalamak için */
-    flex-direction: column; /* Mobil'de alt alta, masaüstünde yan yana yerleşebilir */
-    padding: var(--spacing-lg);
-    gap: var(--spacing-lg); /* Ana bölümler (sectionlar) arası boşluk */
-}
-
-/* Öğrenci listesi ve yorum düzenleyici panellerini içeren ana bölüm */
-#student-comment-dashboard {
-    display: flex; /* Panelleri yan yana hizala */
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşmelerini sağlar */
+    display: flex; /* İçindeki panelleri yan yana hizala */
+    flex-wrap: nowrap; /* Panellerin alt satıra düşmesini engelle (geniş ekranlarda) */
     gap: var(--spacing-lg); /* Paneller arası boşluk */
-    flex-grow: 1; /* Ana içeriğin kalan alanını doldurur */
-    align-items: flex-start; /* Panelleri yukarı hizala */
-    /* Min yükseklik, header ve footer'dan sonra kalan alanı doldurması için global.css'te ayarlandı */
-    /* main.js'teki --header-height hesaplaması burayı etkileyecek */
+    align-items: stretch; /* Panellerin yüksekliğini eşitle */
+    width: 100%;
 }
 
-/* Panel genel stilleri (hem öğrenci listesi hem yorum düzenleyici için) */
-.panel {
-    background-color: var(--secondary-bg-color);
-    border-radius: 8px;
-    padding: var(--spacing-lg);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+/* --- Öğrenci Listesi Paneli (Sol Panel) --- */
+.student-list-panel {
+    flex: 1 1 40%; /* Temel genişlik %40, büyüme ve küçülmeye izin ver */
+    min-width: 320px; /* Panelin çok fazla küçülmesini engelle */
+    display: flex;
+    flex-direction: column; /* İçeriği dikeyde sırala */
+    max-height: calc(100vh - var(--header-height, 150px) - 60px); /* Maksimum yükseklik */
+}
+
+/* --- Yorum Düzenleyici Paneli (Sağ Panel) --- */
+.comment-editor-panel {
+    flex: 1 1 60%; /* Temel genişlik %60 */
+    min-width: 400px;
     display: flex;
     flex-direction: column;
-    flex-basis: calc(50% - (var(--spacing-lg) / 2)); /* Yan yana 2 panel, aradaki boşluk çıkarıldı */
-    flex-grow: 1; /* Esnek büyüme */
-    min-width: 300px; /* Panellerin küçüleceği minimum boyut */
-    height: 100%; /* İçeriklerinin tam yüksekliğini almasını sağlar */
+    max-height: calc(100vh - var(--header-height, 150px) - 60px); /* Maksimum yükseklik */
 }
 
-.student-list-panel {
-    /* Özel stil gerekirse buraya */
+/* --- Panel İçi Liste Konteynerleri --- */
+.list-container {
+    flex-grow: 1; /* Mevcut dikey alanı doldurur */
+    overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu çıkar */
 }
 
-.comment-editor-panel {
-    /* Özel stil gerekirse buraya */
-}
-
-/* Dashboard Kartları Düzeni */
-#dashboard-cards-container {
-    display: flex;
-    justify-content: space-around; /* Kartlar arasına eşit boşluk */
-    align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    background-color: color-mix(in srgb, var(--header-bg-color) 80%, black); /* Header renginin biraz daha koyusu */
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 -2px 8px rgba(0,0,0,0.1);
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşebilir */
-    gap: var(--spacing-md); /* Kartlar arası boşluk */
-    position: sticky; /* Yapışkan hale getir */
-    top: var(--header-height, 0); /* Dinamik olarak main.js tarafından belirlenecek yükseklik */
-    z-index: 99; /* Header'ın altında, diğer içeriklerin üstünde */
-}
-
-/* Liste Footer Kontrolleri (Öğrenci Listesi Altındaki Butonlar) */
+/* --- Panel Altbilgileri (Footer) --- */
 .list-footer-controls {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşebilir */
+    flex-wrap: wrap; /* Butonlar sığmazsa alt satıra düşsün */
     gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
     padding-top: var(--spacing-md);
     border-top: 1px solid var(--border-color);
-}
-
-.list-footer-controls .button {
-    flex-grow: 1; /* Butonların esneyerek boşluğu doldurmasını sağlar */
-    min-width: 120px; /* Butonların minimum genişliği */
-}
-
-
-/* Modal Genel Yapısı (modals.css'te daha detaylı stiller) */
-.modal {
-    display: none; /* Varsayılan olarak gizli */
-    position: fixed; /* Ekranı kapla */
-    z-index: 1000; /* Diğer her şeyin üstünde */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* İçerik taşarsa kaydırma çubuğu */
-    background-color: rgba(0,0,0,0.6); /* Yarı şeffaf arka plan */
-    justify-content: center; /* Yatayda ortala */
-    align-items: center; /* Dikeyde ortala */
-    opacity: 0; /* Geçiş efekti için */
-    transition: opacity 0.3s ease;
-}
-
-.modal.show {
-    opacity: 1;
-}
-
-.modal-content {
-    background-color: var(--secondary-bg-color);
-    margin: auto;
-    padding: var(--spacing-xl);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-height: 90vh; /* Maksimum yükseklik */
-    overflow-y: auto; /* İçerik taşarsa modal içinde kaydırma */
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    transform: translateY(20px); /* Açılırken hafif aşağıdan gelsin */
-}
-
-.modal.show .modal-content {
-    transform: translateY(0);
-}
-
-/* Modal Boyutları */
-.modal-content.small-modal {
-    width: 400px;
-    max-width: 90%;
-}
-.modal-content.medium-modal {
-    width: 600px;
-    max-width: 90%;
-}
-.modal-content.large-modal {
-    width: 800px;
-    max-width: 90%;
-}
-
-/* Modal kapatma butonu */
-.close-button {
-    color: var(--text-color-light);
-    font-size: var(--font-size-xxl);
-    font-weight: bold;
-    position: absolute;
-    top: var(--spacing-sm);
-    right: var(--spacing-md);
-    cursor: pointer;
-    transition: color 0.2s ease;
-    background: none;
-    border: none;
-    padding: 0;
-    line-height: 1;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: var(--accent-color-error);
-    outline: none;
-}
-
-/* Modal içerisindeki genel başlıklar */
-.modal-content h2 {
-    font-size: var(--font-size-xl);
-    color: var(--current-primary-color);
-    margin-bottom: var(--spacing-lg);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: var(--spacing-sm);
-}
-
-.modal-content h3 {
-    font-size: var(--font-size-large);
-    color: var(--text-color-dark);
-    margin-bottom: var(--spacing-md);
-}
-
-/* Modal aksiyon butonları */
-.modal-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--border-color);
-}
-
-.modal-footer-actions { /* Bazı modalların alt kısmındaki butonlar için */
-    display: flex;
-    justify-content: flex-end;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-xl);
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--border-color);
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşsün */
-}
-
-.modal-footer-actions .button {
-    flex-grow: 1;
-    min-width: 150px;
-}
-
-/* Modal sekmeleri (Öğrenci Yönetimi Modalı içinde) */
-.modal-tabs {
-    display: flex;
-    margin-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.modal-tab-button {
-    background: none;
-    border: none;
-    padding: var(--spacing-sm) var(--spacing-md);
-    cursor: pointer;
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    color: var(--text-color-light);
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.modal-tab-button:hover {
-    color: var(--text-color-dark);
-    border-bottom-color: var(--border-color);
-}
-
-.modal-tab-button.active {
-    color: var(--current-primary-color);
-    border-bottom-color: var(--current-primary-color);
+    margin-top: auto; /* Kendini panelin en altına iter */
 }

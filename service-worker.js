@@ -1,149 +1,124 @@
 // service-worker.js
 
-// Hata Ayıklama Logu: Service Worker sürümü
-console.log('Service Worker: Yükleniyor (Sürüm: karne-yorumu-v4)');
+// Hata Ayıklama Logu: Service Worker sürümü ve önbellek adı
+const CACHE_NAME = 'karne-yorumu-v5'; // Önbellek sürümünü artırarak eski önbelleklerin temizlenmesini sağlıyoruz.
+console.log(`Service Worker: Yükleniyor (Sürüm: ${CACHE_NAME})`);
 
-// Önbellek adını güncelledik (yeni dosya yapısını ve güncellemeleri fark etmesi için)
-const CACHE_NAME = 'karne-yorumu-v4';
-
-// Önbelleğe alınacak kaynakların listesi
+// Önbelleğe alınacak kaynakların listesi (GitHub Pages için tam yollarla güncellendi)
+// Projenizin depo adı: /karne-gorusleri
 const urlsToCache = [
-  '/', // Ana kök dizin
-  '/index.html', // Ana HTML sayfası
-  '/comment_templates_data.js', // Yorum şablonları veri dosyası
-  '/manifest.json', // Web Uygulaması Manifest dosyası
+  '/karne-gorusleri/',
+  '/karne-gorusleri/index.html',
+  '/karne-gorusleri/comment_templates_data.js',
+  '/karne-gorusleri/manifest.json',
 
-  // İkon Yolları (Depo kökünden göreceli yollar)
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  '/icons/apple-touch-icon.png',
-  '/icons/favicon.png',
-  '/icons/favicon-16x16.png',
-  '/icons/favicon-32x32.png',
-  '/favicon.ico',
+  // İkon Yolları
+  '/karne-gorusleri/icons/icon-192x192.png',
+  '/karne-gorusleri/icons/icon-512x512.png',
+  '/karne-gorusleri/icons/apple-touch-icon.png',
+  '/karne-gorusleri/icons/favicon.png',
+  '/karne-gorusleri/icons/favicon-16x16.png',
+  '/karne-gorusleri/icons/favicon-32x32.png',
+  '/karne-gorusleri/favicon.ico',
 
   // CSS Dosyaları
-  '/css/reset.css',
-  '/css/global.css',
-  '/css/layout.css',
-  '/css/components.css',
-  '/css/forms.css',
-  '/css/modals.css',
-  '/css/theme.css',
-  '/css/responsive.css',
+  '/karne-gorusleri/css/reset.css',
+  '/karne-gorusleri/css/global.css',
+  '/karne-gorusleri/css/layout.css',
+  '/karne-gorusleri/css/components.css',
+  '/karne-gorusleri/css/forms.css',
+  '/karne-gorusleri/css/modals.css',
+  '/karne-gorusleri/css/theme.css',
+  '/karne-gorusleri/css/responsive.css',
 
   // JavaScript Modül Yolları
-  '/js/utils.js',
-  '/js/ui-elements.js',
-  '/js/data-management.js',
-  '/js/dashboard.js',
-  '/js/modals.js',
-  '/js/comments-tab.js',
-  '/js/student-management-tab.js',
-  '/js/main.js'
+  '/karne-gorusleri/js/utils.js',
+  '/karne-gorusleri/js/ui-elements.js',
+  '/karne-gorusleri/js/data-management.js',
+  '/karne-gorusleri/js/dashboard.js',
+  '/karne-gorusleri/js/modals.js',
+  '/karne-gorusleri/js/comments-tab.js',
+  '/karne-gorusleri/js/student-management-tab.js',
+  '/karne-gorusleri/js/main.js'
 ];
 
 // Service Worker kurulum aşaması: statik dosyaları önbelleğe alır
 self.addEventListener('install', event => {
-  // Hata Ayıklama Logu: Kurulum aşaması başlıyor
   console.log('Service Worker: Kurulum (install) olayı tetiklendi.');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Service Worker: Dosyalar önbelleğe alınıyor:', urlsToCache);
-        // addAll başarısız olursa yakalamak için daha sağlam bir yaklaşım
-        return cache.addAll(urlsToCache).then(() => {
-          console.log('Service Worker: Tüm dosyalar başarıyla önbelleğe alındı.');
-          console.log('Service Worker: Kurulum başarıyla tamamlandı.');
-        }).catch(error => {
-          console.error('Service Worker: Önbelleğe alma sırasında hata:', error);
-        });
+        return cache.addAll(urlsToCache);
+      })
+      .then(() => {
+        console.log('Service Worker: Tüm dosyalar başarıyla önbelleğe alındı.');
+        // Yeni Service Worker'ın beklemeden aktif olmasını sağla
+        return self.skipWaiting();
       })
       .catch(error => {
-        console.error('Service Worker: Önbelleği açma başarısız oldu:', error);
-      })
-  );
-});
-
-// Service Worker fetch aşaması: kaynakları önbellekten veya ağdan alır
-self.addEventListener('fetch', event => {
-  // console.log('Service Worker: Fetch isteği:', event.request.url); // Çok fazla log üretebilir, dikkatli kullanın
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Önbellekte varsa önbellekten döndür, yoksa ağı kullan
-        if (response) {
-          console.log('Service Worker: Önbellekten yanıt veriliyor:', event.request.url);
-          return response;
-        }
-        console.log('Service Worker: Önbellekte yok, ağdan getirilmeye çalışılıyor:', event.request.url);
-        return fetch(event.request).then(
-          function(response) {
-            // Yanıt geçerli değilse
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              console.warn('Service Worker: Geçersiz ağ yanıtı:', event.request.url, response.status, response.type);
-              return response;
-            }
-
-            // Yanıtı klonla çünkü yanıt akışı sadece bir kez tüketilebilir
-            var responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                // Sadece GET isteklerini önbelleğe al
-                if (event.request.method === 'GET') {
-                    console.log('Service Worker: Ağdan getirilen yanıt önbelleğe alınıyor:', event.request.url);
-                    cache.put(event.request, responseToCache);
-                }
-              });
-
-            return response;
-          }
-        ).catch(error => {
-            console.error('Service Worker: Ağdan dosya getirme hatası:', event.request.url, error);
-            // Ağ hatası durumunda alternatif bir yanıt döndürmek isteyebilirsiniz,
-            // örneğin bir çevrimdışı sayfası.
-            // if (event.request.mode === 'navigate') { // Sadece navigasyon istekleri için
-            //     return caches.match('/offline.html'); // Eğer böyle bir sayfanız varsa
-            // }
-            return new Response('Ağ bağlantısı yok veya dosya bulunamadı.', {
-                status: 503,
-                statusText: 'Service Unavailable',
-                headers: new Headers({
-                    'Content-Type': 'text/plain'
-                })
-            });
-        });
+        console.error('Service Worker: Önbelleğe alma sırasında hata:', error);
       })
   );
 });
 
 // Service Worker aktivasyon aşaması: eski önbellekleri temizler
 self.addEventListener('activate', event => {
-  // Hata Ayıklama Logu: Aktivasyon aşaması başlıyor
   console.log('Service Worker: Aktivasyon (activate) olayı tetiklendi.');
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.filter(cacheName => cacheName !== CACHE_NAME)
-          .map(cacheName => {
-            console.log('Service Worker: Eski önbellek siliniyor:', cacheName);
-            return caches.delete(cacheName);
-          })
+        cacheNames.filter(cacheName => {
+          // Mevcut önbellek dışındaki tüm eski önbellekleri sil
+          return cacheName !== CACHE_NAME;
+        }).map(cacheName => {
+          console.log('Service Worker: Eski önbellek siliniyor:', cacheName);
+          return caches.delete(cacheName);
+        })
       );
     }).then(() => {
         console.log('Service Worker: Eski önbellekler başarıyla temizlendi.');
+        // Aktif olan service worker'ın kontrolü hemen ele almasını sağla
+        return self.clients.claim();
     })
   );
-  // Service Worker'ın anında kontrolü ele almasını sağlar
-  event.waitUntil(clients.claim());
-  console.log('Service Worker: Kontrol anında devralındı.');
 });
 
-// Yeni: Debugging için loglar
-self.addEventListener('message', event => {
-    if (event.data && event.data.type === 'SKIP_WAITING') {
-        self.skipWaiting();
-        console.log('Service Worker: skipWaiting() mesajı alındı, yeni SW hemen aktif ediliyor.');
-    }
+// Service Worker fetch aşaması: kaynakları önbellekten veya ağdan alır
+self.addEventListener('fetch', event => {
+  // Sadece GET isteklerine yanıt ver, diğerlerini (POST vb.) atla
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  event.respondWith(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(event.request).then(response => {
+        // Önbellekte varsa önbellekten döndür (Cache-First stratejisi)
+        if (response) {
+          // console.log('Service Worker: Önbellekten yanıt veriliyor:', event.request.url);
+          return response;
+        }
+
+        // Önbellekte yoksa ağdan getir
+        // console.log('Service Worker: Önbellekte yok, ağdan getiriliyor:', event.request.url);
+        return fetch(event.request).then(networkResponse => {
+          // Yanıtı klonla çünkü yanıt akışı sadece bir kez tüketilebilir
+          const responseToCache = networkResponse.clone();
+          
+          // Ağa yapılan isteği önbelleğe al
+          // Sadece başarılı (200 OK) yanıtları ve temel (basic) türdeki istekleri önbelleğe al
+          if (networkResponse.ok && networkResponse.type === 'basic') {
+            cache.put(event.request, responseToCache);
+          }
+          
+          return networkResponse;
+        }).catch(error => {
+            console.error('Service Worker: Ağdan dosya getirme hatası:', event.request.url, error);
+            // Ağ hatası durumunda çevrimdışı bir sayfa gösterilebilir (opsiyonel)
+            // return caches.match('/karne-gorusleri/offline.html');
+        });
+      });
+    })
+  );
 });
