@@ -18,6 +18,10 @@ import {
 */
 console.log('[dashboard.js] Dashboard modülü yükleniyor...');
 
+/**
+ * Ana ekrandaki istatistik kartlarını (Toplam Öğrenci, Atanan Yorum vb.) günceller.
+ * Bu fonksiyon, öğrenci verisi değiştiğinde çağrılır.
+ */
 export function updateDashboardCards() {
     console.log('[dashboard.js] updateDashboardCards çağrıldı: Dashboard kartları güncelleniyor.');
 
@@ -25,31 +29,32 @@ export function updateDashboardCards() {
     // Yorumu atanmış öğrencileri sayarken, boş string atanmış yorumları hariç tut
     const assignedComments = Object.values(studentAssignments).filter(comment => comment && comment.trim() !== '').length;
     const pendingComments = totalStudents - assignedComments;
+    // Sıfıra bölme hatasını engellemek için kontrol
     const completionRate = totalStudents > 0 ? ((assignedComments / totalStudents) * 100).toFixed(0) : 0;
 
-    // Hata Ayıklama Logu: Hesaplanan değerleri göster
     console.log(`[dashboard.js] Hesaplanan değerler: Toplam: ${totalStudents}, Atanan: ${assignedComments}, Bekleyen: ${pendingComments}, Oran: ${completionRate}%`);
 
-    // UI elementlerinin varlığını kontrol etmeden değer ataması yapma
+    // İYİLEŞTİRME: UI elemanlarının varlığını kontrol ederek "null" hatalarını önle.
+    // Bu, HTML'den bir ID silinse bile uygulamanın çökmesini engeller.
     if (totalStudentsCountSpan) {
         totalStudentsCountSpan.textContent = totalStudents;
     } else {
-        console.warn('[dashboard.js] totalStudentsCountSpan bulunamadı.');
+        console.error('[dashboard.js] totalStudentsCountSpan bulunamadı.');
     }
     if (assignedCommentsCountSpan) {
         assignedCommentsCountSpan.textContent = assignedComments;
     } else {
-        console.warn('[dashboard.js] assignedCommentsCountSpan bulunamadı.');
+        console.error('[dashboard.js] assignedCommentsCountSpan bulunamadı.');
     }
     if (pendingCommentsCountSpan) {
         pendingCommentsCountSpan.textContent = pendingComments;
     } else {
-        console.warn('[dashboard.js] pendingCommentsCountSpan bulunamadı.');
+        console.error('[dashboard.js] pendingCommentsCountSpan bulunamadı.');
     }
     if (completionRateSpan) {
         completionRateSpan.textContent = `${completionRate}%`;
     } else {
-        console.warn('[dashboard.js] completionRateSpan bulunamadı.');
+        console.error('[dashboard.js] completionRateSpan bulunamadı.');
     }
 
     console.log('[dashboard.js] Dashboard kartları güncellemesi tamamlandı.');
