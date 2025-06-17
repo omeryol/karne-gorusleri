@@ -3,288 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karne Yorum Defterim - Modern Sürüm</title>
-    <link rel="stylesheet" href="/karne-gorusleri/css/reset.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/global.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/layout.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/components.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/forms.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/modals.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/responsive.css">
-    <link rel="stylesheet" href="/karne-gorusleri/css/theme.css">
-
-    <link rel="manifest" href="/karne-gorusleri/manifest.json">
-    </head>
+    <title>Öğrenci Yorumları Yönetim Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-
-    <div id="app-wrapper">
-        <header id="main-header">
-            <div class="header-content">
-                <h1 id="app-title">Karne Yorum Defterim</h1>
-                <div class="header-controls">
-                    <label for="header-class-select" class="visually-hidden">Sınıf Seçimi</label>
-                    <select id="header-class-select" class="control-select">
-                        <option value="">Sınıf Seçin</option>
-                        <option value="5">5. Sınıf</option>
-                        <option value="6">6. Sınıf</option>
-                        <option value="7">7. Sınıf</option>
-                        <option value="8">8. Sınıf</option>
-                    </select>
-                    <label for="header-term-select" class="visually-hidden">Dönem Seçimi</label>
-                    <select id="header-term-select" class="control-select">
-                        <option value="">Dönem Seçin</option>
-                        <option value="1">1. Dönem</option>
-                        <option value="2">2. Dönem</option>
-                    </select>
-                    <button id="open-help-modal-btn" class="icon-button help-button" aria-label="Kullanım Kılavuzu" title="Kullanım Kılavuzu">?</button>
-                </div>
-            </div>
-            <div id="dashboard-cards-container" role="group" aria-label="Uygulama İstatistikleri">
-                <div class="dashboard-card">
-                    <span class="card-title">Toplam Öğrenci</span>
-                    <span class="card-value" id="total-students-count">0</span>
-                </div>
-                <div class="dashboard-card">
-                    <span class="card-title">Yorum Atanan</span>
-                    <span class="card-value" id="assigned-comments-count">0</span>
-                </div>
-                <div class="dashboard-card">
-                    <span class="card-title">Yorum Bekleyen</span>
-                    <span class="card-value" id="pending-comments-count">0</span>
-                </div>
-                <div class="dashboard-card">
-                    <span class="card-title">Tamamlanma Oranı</span>
-                    <span class="card-value" id="completion-rate">0%</span>
-                </div>
+    <div class="container-fluid">
+        <!-- Header -->
+        <header class="text-white py-4 mb-4" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; margin: 20px;">
+            <div class="container">
+                <h1 class="h2 mb-2 fw-bold">
+                    <i class="fas fa-graduation-cap me-3"></i>
+                    Öğrenci Yorumları Yönetim Sistemi
+                </h1>
+                <p class="mb-0 opacity-90 fs-6">Pedagojik standartlara uygun öğrenci değerlendirme yorumları</p>
             </div>
         </header>
 
-        <main id="main-content">
-            <section id="student-comment-dashboard" aria-labelledby="student-comment-dashboard-title">
-                <div class="panel student-list-panel">
-                    <h2 id="student-comment-dashboard-title">Öğrenci Listesi</h2>
-                    <div class="controls filter-search-controls" role="search">
-                        <label for="student-list-class-filter" class="visually-hidden">Sınıfa göre filtrele</label>
-                        <select id="student-list-class-filter" class="control-select">
-                            <option value="all">Tüm Sınıflar</option>
-                            <option value="5">5. Sınıf</option>
-                            <option value="6">6. Sınıf</option>
-                            <option value="7">7. Sınıf</option>
-                            <option value="8">8. Sınıf</option>
-                        </select>
-                        <label for="student-list-subclass-filter" class="visually-hidden">Şubeye göre filtrele</label>
-                        <select id="student-list-subclass-filter" class="control-select">
-                            <option value="all">Tüm Şubeler</option>
-                            <option value="A">A Şubesi</option>
-                            <option value="B">B Şubesi</option>
-                            <option value="C">C Şubesi</option>
-                            <option value="D">D Şubesi</option>
-                            <option value="E">E Şubesi</option>
-                        </select>
-                        <button id="filter-unassigned-btn" class="button secondary-button icon-button" aria-label="Yorumu atanmamış öğrencileri filtrele" title="Yorumu Atanmamış Öğrenciler">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-                        </button>
-                        <label for="student-search-input" class="visually-hidden">Öğrenci ara</label>
-                        <input type="text" id="student-search-input" class="control-input" placeholder="Öğrenci ara..." aria-label="Öğrenci adı veya numarasına göre arama yapın">
-                    </div>
-                    <div id="student-list-container" class="list-container" role="region" aria-live="polite" aria-atomic="true">
-                        <p class="empty-list-message">Öğrenci listesi yok.</p>
-                    </div>
-                    <div class="list-footer-controls">
-                        <button id="prev-student-btn" class="button secondary-button icon-button" aria-label="Önceki Öğrenci" title="Önceki Öğrenci">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                        </button>
-                        <button id="next-student-btn" class="button secondary-button icon-button" aria-label="Sonraki Öğrenci" title="Sonraki Öğrenci">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                        </button>
-                        <button id="add-new-student-btn" class="button primary-button">Yeni Öğrenci Ekle</button>
-                        <button id="manage-students-btn" class="button secondary-button">Öğrenci Yönetimine Git</button>
-                    </div>
-                </div>
-
-                <div class="panel comment-editor-panel">
-                    <h2 class="panel-title">Yorum Düzenleyici</h2>
-                    <div class="selected-student-display" aria-live="polite">Seçili Öğrenci: <span id="selected-student-name-display">Yok</span></div>
-
-                    <label for="comment-textarea" class="visually-hidden">Öğrenci yorum alanı</label>
-                    <textarea id="comment-textarea" maxlength="500" placeholder="Yorumu buraya yazın veya şablonlardan seçin..." aria-describedby="remaining-chars"></textarea>
-                    <div class="char-count">Kalan Karakter: <span id="remaining-chars" aria-live="polite">500</span></div>
-
-                    <div class="comment-actions">
-                        <button id="assign-comment-btn" class="button primary-button">Yorumu Ata / Güncelle</button>
-                        <button id="copy-comment-btn" class="button secondary-button">Kopyala</button>
-                        <button id="clear-comment-editor-btn" class="button secondary-button">Temizle</button>
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="auto-clear-comment">
-                            <span class="checkmark"></span>
-                            Yorum atadıktan sonra temizle
-                        </label>
-                        <button id="view-all-assignments-btn" class="button secondary-button">Atanan Tüm Yorumları Görüntüle</button>
-                    </div>
-
-                    <div class="comment-template-section">
-                        <h3>Yorum Şablonları</h3>
-                        <label for="profile-search-input" class="visually-hidden">Şablon ara</label>
-                        <input type="text" id="profile-search-input" class="control-input" placeholder="Şablon ara..." aria-label="Yorum şablonları içinde arama yapın">
-                        <div id="comment-profile-list" class="list-container profile-list-scroll">
-                            <p class="empty-list-message">Lütfen yukarıdan sınıf ve dönem seçin.</p>
+        <div class="container">
+            <!-- Filter Controls -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="card" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">
+                                <i class="fas fa-filter me-2"></i>
+                                Filtrele ve Ara
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label for="gradeSelect" class="form-label">Sınıf Seviyesi</label>
+                                    <select id="gradeSelect" class="form-select">
+                                        <option value="">Tüm Sınıflar</option>
+                                        <option value="5">5. Sınıf</option>
+                                        <option value="6">6. Sınıf</option>
+                                        <option value="7">7. Sınıf</option>
+                                        <option value="8">8. Sınıf</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="termSelect" class="form-label">Dönem</label>
+                                    <select id="termSelect" class="form-select">
+                                        <option value="">Tüm Dönemler</option>
+                                        <option value="1">1. Dönem</option>
+                                        <option value="2">2. Dönem</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="searchInput" class="form-label">Arama</label>
+                                    <input type="text" id="searchInput" class="form-control" placeholder="Yorum içeriğinde ara...">
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button id="clearFilters" class="btn btn-outline-secondary d-block w-100">
+                                        <i class="fas fa-eraser me-1"></i>
+                                        Temizle
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-
-        <footer id="main-footer">
-            <p>Tasarım: Ömer YOLCU | Hazırlık: Google Gemini</p>
-        </footer>
-    </div>
-
-    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
-
-    <div id="student-management-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="student-management-modal-title">
-        <div class="modal-content large-modal">
-            <button class="close-button" data-modal="student-management-modal" aria-label="Öğrenci Yönetimi modalını kapat">&times;</button>
-            <h2 id="student-management-modal-title">Öğrenci Yönetimi</h2>
-            <div class="modal-tabs" role="tablist">
-                <button class="modal-tab-button active" data-modal-tab="add-student-section" role="tab" aria-selected="true" aria-controls="add-student-section">Öğrenci Ekle</button>
-                <button class="modal-tab-button" data-modal-tab="view-students-section" role="tab" aria-selected="false" aria-controls="view-students-section">Öğrencileri Görüntüle / Sil</button>
             </div>
 
-            <div id="add-student-section" class="modal-tab-content active" role="tabpanel" aria-labelledby="add-student-section">
-                <h3>Yeni Öğrenci Ekle</h3>
-                <p>Excel, Word veya PDF'ten kopyaladığınız öğrenci isimlerini (her satırda bir isim olacak şekilde) aşağıya yapıştırın.</p>
-                <label for="student-names-textarea-modal" class="visually-hidden">Öğrenci isimlerini yapıştırın</label>
-                <textarea id="student-names-textarea-modal" class="form-textarea" placeholder="Öğrenci isimlerini buraya yapıştırın. Örn: Ali Yılmaz" aria-label="Her satıra bir öğrenci adı gelecek şekilde isimleri girin."></textarea>
-                <div class="form-group-inline">
-                    <label for="new-student-class-select-modal" class="visually-hidden">Yeni öğrenci sınıfı seçin</label>
-                    <select id="new-student-class-select-modal" class="control-select">
-                        <option value="">Sınıf Seçin</option>
-                        <option value="5">5. Sınıf</option>
-                        <option value="6">6. Sınıf</option>
-                        <option value="7">7. Sınıf</option>
-                        <option value="8">8. Sınıf</option>
-                    </select>
-                    <label for="new-student-subclass-select-modal" class="visually-hidden">Yeni öğrenci şubesi seçin</label>
-                    <select id="new-student-subclass-select-modal" class="control-select">
-                        <option value="">Şube Seçin</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
-                        <option value="F">F</option>
-                        <option value="G">G</option>
-                    </select>
+            <!-- Statistics -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card text-white" style="background: linear-gradient(135deg, #28a745, #20c997); border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="card-title fw-bold">Toplam Yorum</h6>
+                                    <h3 id="totalComments" class="fw-bold">0</h3>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-comments fa-2x opacity-75"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button id="load-names-from-text-btn-modal" class="button primary-button">İsimleri Listeye Ekle</button>
-                <label for="student-list-upload-modal" class="button secondary-button file-upload-label" tabindex="0" role="button">CSV Dosyası Yükle</label>
-                <input type="file" id="student-list-upload-modal" accept=".csv" class="visually-hidden">
+                <div class="col-md-3">
+                    <div class="card text-white" style="background: linear-gradient(135deg, #17a2b8, #6f42c1); border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(23, 162, 184, 0.3);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="card-title fw-bold">Olumlu Yorumlar</h6>
+                                    <h3 id="positiveComments" class="fw-bold">0</h3>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-thumbs-up fa-2x opacity-75"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white" style="background: linear-gradient(135deg, #ffc107, #fd7e14); border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="card-title fw-bold">Gelişim Yorumları</h6>
+                                    <h3 id="developmentComments" class="fw-bold">0</h3>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-chart-line fa-2x opacity-75"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white" style="background: linear-gradient(135deg, #dc3545, #e83e8c); border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(220, 53, 69, 0.3);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="card-title fw-bold">Dikkat Gerektiren</h6>
+                                    <h3 id="attentionComments" class="fw-bold">0</h3>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-exclamation-triangle fa-2x opacity-75"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="view-students-section" class="modal-tab-content" role="tabpanel" aria-labelledby="view-students-section">
-                <h3>Kaydedilmiş Öğrenciler</h3>
-                <div class="controls filter-search-controls" role="search">
-                    <label for="management-class-filter-modal" class="visually-hidden">Sınıfa göre filtrele</label>
-                    <select id="management-class-filter-modal" class="control-select">
-                        <option value="all">Tüm Sınıflar</option>
-                        <option value="5">5. Sınıf</option>
-                        <option value="6">6. Sınıf</option>
-                        <option value="7">7. Sınıf</option>
-                        <option value="8">8. Sınıf</option>
-                    </select>
-                    <label for="management-subclass-filter-modal" class="visually-hidden">Şubeye göre filtrele</label>
-                    <select id="management-subclass-filter-modal" class="control-select">
-                        <option value="all">Tüm Şubeler</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
-                        <option value="F">F</option>
-                        <option value="G">G</option>
-                    </select>
-                    <label for="management-student-search-input-modal" class="visually-hidden">Öğrenci ara</label>
-                    <input type="text" id="management-student-search-input-modal" class="control-input" placeholder="Öğrenci ara..." aria-label="Öğrenci adı veya numarasına göre arama yapın">
-                </div>
-                <div id="managed-student-list-container-modal" class="list-container" role="region" aria-live="polite" aria-atomic="true">
-                    <p class="empty-list-message">Kaydedilmiş öğrenci yok.</p>
-                </div>
-                <div class="modal-footer-actions">
-                    <button id="clear-all-students-btn-modal" class="button warn-button">Tüm Öğrenci Verilerini Temizle</button>
-                    <button id="clear-localstorage-btn-modal" class="button warn-button">Uygulamayı Sıfırla (Tüm Verileri Sil)</button>
+            <!-- Comments Display -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: none; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
+                        <div class="card-header" style="background: rgba(255, 255, 255, 0.1); border: none; border-radius: 15px 15px 0 0;">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-primary fw-bold">
+                                    <i class="fas fa-list me-2"></i>
+                                    Yorumlar
+                                </h5>
+                                <div>
+                                    <button id="exportBtn" class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-download me-1"></i>
+                                        Dışa Aktar
+                                    </button>
+                                    <span class="badge bg-primary" id="resultCount">0 sonuç</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="commentsContainer" class="comments-container">
+                                <!-- Comments will be loaded here -->
+                            </div>
+                            <div id="loadingSpinner" class="text-center py-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="spinner-border text-primary mb-3" role="status">
+                                        <span class="visually-hidden">Yükleniyor...</span>
+                                    </div>
+                                    <h6 class="text-muted">Yorumlar yükleniyor...</h6>
+                                    <small class="text-muted">Lütfen bekleyiniz</small>
+                                </div>
+                            </div>
+                            <div id="noResults" class="text-center py-4 d-none">
+                                <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">Sonuç bulunamadı</h5>
+                                <p class="text-muted">Arama kriterlerinizi değiştirip tekrar deneyin.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="button secondary-button close-modal-button" data-modal="student-management-modal" aria-label="Öğrenci Yönetimi modalını kapat">Kapat</button>
+        </div>
+
+        <!-- Comment Modal -->
+        <div class="modal fade" id="commentModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Yorum Detayları</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Sınıf ve Dönem</h6>
+                                <p id="modalGradeTerm" class="text-muted"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Karakter Sayısı</h6>
+                                <p id="modalCharCount" class="text-muted"></p>
+                            </div>
+                        </div>
+                        <h6>Başlık</h6>
+                        <p id="modalTitle" class="fw-bold"></p>
+                        <h6>Yorum</h6>
+                        <div id="modalComment" class="border p-3 bg-light rounded"></div>
+                        <div class="mt-3">
+                            <h6>Özelleştirme</h6>
+                            <div class="input-group">
+                                <input type="text" id="studentNameInput" class="form-control" placeholder="Öğrenci adını girin...">
+                                <button class="btn btn-outline-secondary" type="button" id="previewBtn">
+                                    <i class="fas fa-eye me-1"></i>
+                                    Önizle
+                                </button>
+                            </div>
+                            <div id="previewComment" class="mt-2 p-2 bg-warning bg-opacity-10 border border-warning rounded d-none"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary" id="copyCommentBtn">
+                            <i class="fas fa-copy me-1"></i>
+                            Kopyala
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="comment-preview-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-comment-title">
-        <div class="modal-content small-modal">
-            <button class="close-button" data-modal="comment-preview-modal" aria-label="Yorum önizleme modalını kapat">&times;</button>
-            <h3 id="modal-comment-title">Yorum Başlığı</h3>
-            <p id="modal-comment-text"></p>
-            <div class="modal-actions">
-                <button id="modal-copy-btn" class="button secondary-button">Kopyala</button>
-                <button id="modal-select-btn" class="button primary-button">Yorumu Seç ve Düzenle</button>
-            </div>
-            <div class="modal-comment-navigation" role="group" aria-label="Yorum şablonları arasında gezinme">
-                <button id="modal-prev-comment-btn" class="icon-button round-button" aria-label="Önceki yorum şablonu">&lt;</button>
-                <button id="modal-next-comment-btn" class="icon-button round-button" aria-label="Sonraki yorum şablonu">&gt;</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="all-assignments-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="all-assignments-modal-title">
-        <div class="modal-content large-modal">
-            <button class="close-button" data-modal="all-assignments-modal" aria-label="Atanan yorumlar modalını kapat">&times;</button>
-            <h2 id="all-assignments-modal-title">Atanan Tüm Karne Yorumları</h2>
-            <div id="all-assigned-comments-list" class="list-container" role="region" aria-live="polite" aria-atomic="true">
-                <p class="empty-list-message">Henüz hiçbir öğrenciye yorum atanmadı.</p>
-            </div>
-            <button class="button secondary-button close-modal-button" data-modal="all-assignments-modal" aria-label="Atanan yorumlar modalını kapat">Kapat</button>
-        </div>
-    </div>
-
-    <div id="help-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
-        <div class="modal-content medium-modal">
-            <button class="close-button" data-modal="help-modal" aria-label="Yardım modalını kapat">&times;</button>
-            <h2 id="help-modal-title">Karne Yorum Defteri Kullanım Kılavuzu</h2>
-            <p>Bu uygulama, öğrencilerinizin karne yorumlarını kolayca oluşturmanız için tasarlandı. İşte size birkaç ipucu:</p>
-            <ul>
-                <li><strong>Dashboard:</strong> Ana ekran, genel öğrenci ve yorum atama durumunuzu gösterir.</li>
-                <li><strong>Öğrenci Listesi:</strong> Sol panelden öğrencilerinizi seçin veya filtreleyin.</li>
-                <li><strong>Yorum Şablonları:</strong> Sağ panelden sınıf ve döneme uygun hazır yorumları seçin. `[Öğrenci Adı]` otomatik olarak değişir.</li>
-                <li><strong>Öğrenci Yönetimi:</strong> "Yeni Öğrenci Ekle" veya "Öğrenci Yönetimi" butonlarıyla öğrenci listesini topluca düzenleyin veya CSV'den yükleyin.</li>
-                <li><strong>Çevrimdışı Kullanım:</strong> Uygulama internet bağlantınız olmasa bile çalışır! Tarayıcınızın menüsünden "Ana ekrana ekle" seçeneğini kullanarak bir uygulama gibi yükleyebilirsiniz.</li>
-            </ul>
-            <button class="button primary-button close-modal-button" data-modal="help-modal" aria-label="Yardım kılavuzunu anladım ve kapat">Anladım</button>
-        </div>
-    </div>
-
-    <script src="/karne-gorusleri/comment_templates_data.js"></script>
-
-    <script src="/karne-gorusleri/js/utils.js" type="module"></script>
-    <script src="/karne-gorusleri/js/ui-elements.js" type="module"></script>
-    <script src="/karne-gorusleri/js/data-management.js" type="module"></script>
-    <script src="/karne-gorusleri/js/dashboard.js" type="module"></script>
-    <script src="/karne-gorusleri/js/modals.js" type="module"></script>
-    <script src="/karne-gorusleri/js/comments-tab.js" type="module"></script>
-    <script src="/karne-gorusleri/js/student-management-tab.js" type="module"></script>
-    <script src="/karne-gorusleri/js/main.js" type="module"></script>
-
-    <script>
-        // Service Worker kaydı
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/karne-gorusleri/service-worker.js')
-                    .then(registration => {
-                        console.log('Service Worker başarıyla kaydedildi:', registration);
-                    })
-                    .catch(error => {
-                        console.error('Service Worker kaydı başarısız oldu:', error);
-                    });
-            });
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="commentsData_expanded.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

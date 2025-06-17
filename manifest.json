@@ -1,9 +1,0 @@
-{
-  "name": "Karne Yorum Defteri",
-  "short_name": "Karne Defteri",
-  "description": "Öğretmenler için çevrimdışı karne yorumu oluşturma uygulaması.",
-  "start_url": "https://omeryol.github.io/karne-gorusleri/index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4CAF50"
-}
