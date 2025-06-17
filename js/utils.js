@@ -1,5 +1,10 @@
 // js/utils.js
 
+/**
+ * Ekranda bilgilendirme mesajı (toast) gösterir.
+ * @param {string} message Gösterilecek mesaj.
+ * @param {string} type Mesajın türü ('info', 'success', 'error'). CSS sınıflarını belirler.
+ */
 export function showToast(message, type = 'info') {
     // Hata Ayıklama Logu: showToast fonksiyonunun çağrıldığını ve mesajını kaydet
     console.log(`[utils.js] showToast çağrıldı: Mesaj "${message}", Tip "${type}"`);
@@ -9,35 +14,38 @@ export function showToast(message, type = 'info') {
     toast.classList.add('toast');
     toast.textContent = message;
 
-    // Mevcut tiplere ek olarak success, error, info sınıflarını ekliyoruz
-    // CSS'te bu sınıflara göre renkler ayarlandı.
+    // Mesaj türüne göre CSS sınıfı ekler (renklendirme için).
     toast.classList.add(type);
 
     if (toastContainer) {
         toastContainer.appendChild(toast);
 
-        // Toast'un görünür olmasını sağlayan animasyon sınıfı
+        // Toast'un görünür olmasını sağlayan animasyon sınıfını küçük bir gecikmeyle ekler.
         setTimeout(() => {
             toast.classList.add('show');
         }, 100);
 
-        // Toast'u belirli bir süre sonra gizle ve DOM'dan kaldır
+        // Toast'u 3 saniye sonra gizle ve DOM'dan kaldır.
         setTimeout(() => {
             toast.classList.remove('show');
+            // 'transitionend' olayı, CSS geçişi tamamlandığında tetiklenir.
+            // Bu, animasyon bitmeden elemanın DOM'dan kaldırılmasını engeller.
             toast.addEventListener('transitionend', () => {
-                // Hata Ayıklama Logu: Toast kaldırıldı
                 console.log(`[utils.js] Toast kaldırıldı: "${message}"`);
                 toast.remove();
-            }, { once: true }); // Event dinleyicisini bir kez çalıştıktan sonra kaldır
-        }, 3000); // 3 saniye sonra kaybolmaya başlar
+            }, { once: true }); // 'once: true' dinleyicinin bir kez çalışıp kendini otomatik kaldırmasını sağlar.
+        }, 3000);
     } else {
-        // Hata Ayıklama Logu: Toast container bulunamadığında hata ver
         console.error('[utils.js] Hata: Toast container bulunamadı! Lütfen index.html dosyasında #toast-container elementinin var olduğundan emin olun.');
     }
 }
 
+/**
+ * Tam isimden sadece ilk ismi alır.
+ * @param {string} fullName Tam isim (örn: "Ali Yılmaz").
+ * @returns {string} İlk isim (örn: "Ali").
+ */
 export function getFirstName(fullName) {
-    // Hata Ayıklama Logu: getFirstName fonksiyonunun çağrıldığını ve tam adını kaydet
     console.log(`[utils.js] getFirstName çağrıldı: Tam Ad "${fullName}"`);
 
     if (!fullName) {
@@ -45,21 +53,27 @@ export function getFirstName(fullName) {
         return '';
     }
     const parts = fullName.trim().split(' ');
-    // Hata Ayıklama Logu: Çıkarılan ilk ad
     console.log(`[utils.js] getFirstName: Çıkarılan ilk ad "${parts[0]}"`);
     return parts[0];
 }
 
+/**
+ * Rastgele ve benzersiz bir ID oluşturur.
+ * @returns {string} Benzersiz ID.
+ */
 export function generateUniqueId() {
-    // Hata Ayıklama Logu: generateUniqueId fonksiyonunun çağrıldığını kaydet
     console.log('[utils.js] generateUniqueId çağrıldı.');
     const uniqueId = Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
-    // Hata Ayıklama Logu: Oluşturulan benzersiz ID
     console.log(`[utils.js] generateUniqueId: Oluşturulan ID "${uniqueId}"`);
     return uniqueId;
 }
 
-// Bir elemanın belirli bir ata elemanı olup olmadığını kontrol eder
+/**
+ * Bir elemanın belirtilen seçiciye sahip bir ata elemanı olup olmadığını kontrol eder.
+ * @param {HTMLElement} element Kontrol edilecek başlangıç elemanı.
+ * @param {string} parentSelector Aranacak ata elemanın CSS seçicisi.
+ * @returns {boolean} Ata eleman varsa true, yoksa false döner.
+ */
 export function hasParent(element, parentSelector) {
     console.log(`[utils.js] hasParent çağrıldı: Eleman ${element ? element.tagName : 'null'}, Ata Seçici "${parentSelector}"`);
     let current = element;
@@ -74,7 +88,11 @@ export function hasParent(element, parentSelector) {
     return false;
 }
 
-// Modal açma/kapatma için ortak mantık
+/**
+ * Bir modal penceresini açar veya kapatır.
+ * @param {HTMLElement} modalElement Açılacak/kapatılacak modal elemanı.
+ * @param {boolean} show True ise açar, false ise kapatır.
+ */
 export function toggleModal(modalElement, show = true) {
     if (!modalElement) {
         console.error('[utils.js] toggleModal: Geçersiz modal elemanı verildi.');
@@ -84,16 +102,18 @@ export function toggleModal(modalElement, show = true) {
 
     if (show) {
         modalElement.style.display = 'flex';
-        // Küçük bir gecikme ile 'show' sınıfı ekleyerek CSS geçişini tetikle
+        // CSS animasyonunun tetiklenmesi için 'show' sınıfı küçük bir gecikme ile eklenir.
         setTimeout(() => {
             modalElement.classList.add('show');
         }, 10);
     } else {
         modalElement.classList.remove('show');
-        // Geçişin tamamlanmasını bekleyip sonra display: none yap
+        // 'transitionend' olayı, CSS geçiş animasyonu bittiğinde tetiklenir.
+        // Bu, modalın animasyon bitmeden aniden kaybolmasını engeller.
         modalElement.addEventListener('transitionend', function handler() {
             modalElement.style.display = 'none';
-            modalElement.removeEventListener('transitionend', handler);
+            // NOT: { once: true } sayesinde bu dinleyici ilk çalışmadan sonra otomatik olarak kaldırılır.
+            // Bu, birden fazla event dinleyicisi birikmesini önler.
             console.log(`[utils.js] toggleModal: Modal "${modalElement.id}" kapatıldı ve DOM'dan gizlendi.`);
         }, { once: true });
     }
