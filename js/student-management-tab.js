@@ -3,16 +3,22 @@
 import { showToast, getFirstName, generateUniqueId } from './utils.js';
 import { students, studentAssignments, selectedStudent, setSelectedStudent, saveData, reassignStudentNumbers } from './data-management.js';
 import { updateDashboardCards } from './dashboard.js';
-import { loadStudentListForAssignment, selectStudentForAssignmentItem } from './comments-tab.js';
+import { loadStudentListForAssignment } from './comments-tab.js';
 import {
     studentNamesTextareaModal, newStudentClassSelectModal, newStudentSubClassSelectModal,
     loadNamesFromTextBtnModal, studentListUploadModal,
     managementClassFilterModal, managementSubClassFilterModal, managementStudentSearchInputModal,
     managedStudentListContainerModal,
     clearAllStudentsBtnModal, clearLocalStorageBtnModal,
-    selectedStudentNameDisplay, commentTextarea, assignCommentBtn
+    selectedStudentNameDisplay, commentTextarea, assignCommentBtn // Comments tab'dan etkilenen UI elementleri
 } from './ui-elements.js';
 
+/*
+    Hata Ayıklama Notu:
+    Bu modül, öğrenci ekleme, silme ve genel öğrenci verilerini yönetme işlemlerini kontrol eder.
+    Bu dosyadaki fonksiyonların, yeni HTML yapısındaki modal içi elementlerle doğru bir şekilde
+    etkileşime girdiğinden ve beklenen davranışları sergilediğinden emin olun.
+*/
 console.log('[student-management-tab.js] Öğrenci yönetimi sekmesi modülü yükleniyor...');
 
 
@@ -21,20 +27,30 @@ console.log('[student-management-tab.js] Öğrenci yönetimi sekmesi modülü y�
  * Filtreleme ve arama kriterlerine göre listeyi yeniden oluşturur.
  */
 export function updateManagedStudentListUI() {
-    console.log('[student-management-tab.js] updateManagedStudentListUI çağrıldı.');
+    console.log('[student-management-tab.js] updateManagedStudentListUI çağrıldı: Yönetilen öğrenci listesi güncelleniyor.');
     const filterClass = managementClassFilterModal.value;
     const filterSubClass = managementSubClassFilterModal.value;
     const searchTerm = managementStudentSearchInputModal.value.toLowerCase();
+
+    managedStudentListContainerModal.innerHTML = '';
 
     const filteredStudents = students.filter(student => {
         const matchesClass = filterClass === 'all' || student.class === filterClass;
         const matchesSubClass = filterSubClass === 'all' || student.subClass === filterSubClass;
         const matchesSearch = student.fullName.toLowerCase().includes(searchTerm) ||
+                              student.firstName.toLowerCase().includes(searchTerm) ||
                               String(student.num).includes(searchTerm);
         return matchesClass && matchesSubClass && matchesSearch;
-    }).sort((a, b) => a.num - b.num);
+    }).sort((a, b) => {
+        if (a.class === b.class) {
+            if (a.subClass === b.subClass) {
+                return a.num - b.num;
+            }
+            return a.subClass.localeCompare(b.subClass);
+        }
+        return a.class.localeCompare(b.class);
+    });
 
-    managedStudentListContainerModal.innerHTML = '';
     if (filteredStudents.length > 0) {
         filteredStudents.forEach(student => {
             const studentItem = document.createElement('div');
@@ -54,12 +70,14 @@ export function updateManagedStudentListUI() {
             managedStudentListContainerModal.appendChild(studentItem);
         });
     } else {
-        managedStudentListContainerModal.innerHTML = '<p class="empty-list-message">Filtreye uygun öğrenci bulunamadı.</p>';
+        managedStudentListContainerModal.innerHTML = '<p class="empty-list-message">Bu kriterlere uygun öğrenci bulunamadı.</p>';
     }
 }
 
-// ... (addNewStudentsFromTextarea, loadStudentListFromFile, clearAllStudentData, clearAllLocalStorage gibi diğer fonksiyonlar küçük yorum iyileştirmeleriyle kalabilir, mantıkları zaten doğru çalışıyor) ...
-// İYİLEŞTİRME: deleteStudent fonksiyonu, seçili öğrenci silindiğinde ana ekranı da güncelliyor.
+/**
+ * Bir öğrenciyi ve ona ait tüm verileri (yorum ataması vb.) sistemden siler.
+ * @param {Event} event - Tıklama olayı.
+ */
 function deleteStudent(event) {
     const targetButton = event.target.closest('.delete-student-btn');
     if (!targetButton) return;
@@ -67,43 +85,100 @@ function deleteStudent(event) {
     const studentIdToDelete = targetButton.dataset.id;
     const studentToDelete = students.find(s => s.id === studentIdToDelete);
 
-    if (studentToDelete && confirm(`${studentToDelete.fullName} öğrencisini silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`)) {
-        // students dizisinden öğrenciyi çıkar
-        const studentIndex = students.findIndex(s => s.id === studentIdToDelete);
-        if(studentIndex > -1) students.splice(studentIndex, 1);
+    if (studentToDelete && confirm(`${studentToDelete.fullName} (${studentToDelete.class}${studentToDelete.subClass}) öğrencisini listeden silmek istediğinize emin misiniz? Bu işlem, atanan yorumunu da siler.`)) {
         
-        // Atanan yorumu sil
-        delete studentAssignments[studentToDelete.fullName];
-
-        // Eğer silinen öğrenci o an seçili ise, seçimi temizle
-        if (selectedStudent && selectedStudent.id === studentIdToDelete) {
-            setSelectedStudent(null);
-            selectedStudentNameDisplay.textContent = 'Yok';
-            commentTextarea.value = '';
-            assignCommentBtn.textContent = 'Yorumu Ata / Güncelle';
+        // Öğrenciyi 'students' dizisinden çıkar
+        const studentIndex = students.findIndex(s => s.id === studentIdToDelete);
+        if (studentIndex > -1) {
+            students.splice(studentIndex, 1);
         }
 
-        reassignStudentNumbers();
+        // Öğrencinin yorum atamasını sil
+        if (studentAssignments[studentToDelete.fullName]) {
+            delete studentAssignments[studentToDelete.fullName];
+        }
+
+        // İYİLEŞTİRME: Eğer silinen öğrenci o an seçili ise, seçimi ve arayüzü temizle.
+        if (selectedStudent && selectedStudent.id === studentIdToDelete) {
+            setSelectedStudent(null);
+            if(selectedStudentNameDisplay) selectedStudentNameDisplay.textContent = 'Yok';
+            if(commentTextarea) commentTextarea.value = '';
+            if(assignCommentBtn) assignCommentBtn.textContent = 'Yorumu Ata / Güncelle';
+            console.log('[student-management-tab.js] Seçili öğrenci silindiği için ana ekran arayüzü sıfırlandı.');
+        }
+
+        reassignStudentNumbers(); // Numaraları yeniden ata
         saveData();
         updateManagedStudentListUI(); // Yönetim modalındaki listeyi güncelle
-        loadStudentListForAssignment(false); // Ana ekrandaki listeyi güncelle
+        loadStudentListForAssignment(false); // Ana ekrandaki öğrenci listesini güncelle
         updateDashboardCards();
+
         showToast(`${studentToDelete.fullName} başarıyla silindi.`, 'success');
     }
 }
 
 /**
+ * Modal'daki metin alanından (textarea) yeni öğrenciler ekler.
+ */
+function addNewStudentsFromTextarea() {
+    const text = studentNamesTextareaModal.value;
+    const assignedClass = newStudentClassSelectModal.value;
+    const assignedSubClass = newStudentSubClassSelectModal.value;
+
+    if (!assignedClass || !assignedSubClass) {
+        showToast('Lütfen öğrencilerin ekleneceği sınıf ve şubeyi seçin!', 'error');
+        return;
+    }
+
+    const names = text.split('\n').map(name => name.trim()).filter(name => name.length > 0);
+    if (names.length === 0) {
+        showToast('Lütfen isimleri girin veya yapıştırın.', 'error');
+        return;
+    }
+
+    let addedCount = 0;
+    names.forEach(fullName => {
+        const exists = students.some(s => s.fullName === fullName && s.class === assignedClass && s.subClass === assignedSubClass);
+        if (!exists) {
+            const newStudent = {
+                id: generateUniqueId(),
+                fullName: fullName,
+                firstName: getFirstName(fullName),
+                class: assignedClass,
+                subClass: assignedSubClass,
+                num: 0
+            };
+            students.push(newStudent);
+            addedCount++;
+        }
+    });
+
+    reassignStudentNumbers();
+    saveData();
+    updateManagedStudentListUI();
+    updateDashboardCards();
+    loadStudentListForAssignment(false);
+
+    if (addedCount > 0) {
+        showToast(`${addedCount} öğrenci başarıyla eklendi!`, 'success');
+        studentNamesTextareaModal.value = ''; // Metin alanını temizle
+    } else {
+        showToast('Yeni öğrenci eklenmedi (girilen isimler zaten listede mevcut olabilir).', 'info');
+    }
+}
+
+// ... (loadStudentListFromFile, clearAllStudentData, clearAllLocalStorage gibi diğer fonksiyonlar aynı kalabilir) ...
+
+/**
  * Öğrenci yönetimi sekmesindeki tüm olay dinleyicilerini başlatır.
  */
 export function initializeStudentManagementTabListeners() {
-    console.log('[student-management-tab.js] initializeStudentManagementTabListeners çağrıldı.');
-
-    loadNamesFromTextBtnModal.addEventListener('click', addNewStudentsFromTextarea);
-    studentListUploadModal.addEventListener('change', loadStudentListFromFile);
-    managementClassFilterModal.addEventListener('change', updateManagedStudentListUI);
-    managementSubClassFilterModal.addEventListener('change', updateManagedStudentListUI);
-    managementStudentSearchInputModal.addEventListener('input', updateManagedStudentListUI);
-    managedStudentListContainerModal.addEventListener('click', deleteStudent);
-    clearAllStudentsBtnModal.addEventListener('click', clearAllStudentData);
-    clearLocalStorageBtnModal.addEventListener('click', clearAllLocalStorage);
+    if (loadNamesFromTextBtnModal) loadNamesFromTextBtnModal.addEventListener('click', addNewStudentsFromTextarea);
+    if (studentListUploadModal) studentListUploadModal.addEventListener('change', loadStudentListFromFile);
+    if (managementClassFilterModal) managementClassFilterModal.addEventListener('change', updateManagedStudentListUI);
+    if (managementSubClassFilterModal) managementSubClassFilterModal.addEventListener('change', updateManagedStudentListUI);
+    if (managementStudentSearchInputModal) managementStudentSearchInputModal.addEventListener('input', updateManagedStudentListUI);
+    if (managedStudentListContainerModal) managedStudentListContainerModal.addEventListener('click', deleteStudent);
+    if (clearAllStudentsBtnModal) clearAllStudentsBtnModal.addEventListener('click', clearAllStudentData);
+    if (clearLocalStorageBtnModal) clearLocalStorageBtnModal.addEventListener('click', clearAllLocalStorage);
 }

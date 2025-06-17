@@ -39,22 +39,25 @@ export function updateDashboardCards() {
     if (totalStudentsCountSpan) {
         totalStudentsCountSpan.textContent = totalStudents;
     } else {
-        console.error('[dashboard.js] totalStudentsCountSpan bulunamadı.');
+        console.error('[dashboard.js] Hata: totalStudentsCountSpan ID\'li element bulunamadı.');
     }
+
     if (assignedCommentsCountSpan) {
         assignedCommentsCountSpan.textContent = assignedComments;
     } else {
-        console.error('[dashboard.js] assignedCommentsCountSpan bulunamadı.');
+        console.error('[dashboard.js] Hata: assignedCommentsCountSpan ID\'li element bulunamadı.');
     }
+
     if (pendingCommentsCountSpan) {
         pendingCommentsCountSpan.textContent = pendingComments;
     } else {
-        console.error('[dashboard.js] pendingCommentsCountSpan bulunamadı.');
+        console.error('[dashboard.js] Hata: pendingCommentsCountSpan ID\'li element bulunamadı.');
     }
+
     if (completionRateSpan) {
         completionRateSpan.textContent = `${completionRate}%`;
     } else {
-        console.error('[dashboard.js] completionRateSpan bulunamadı.');
+        console.error('[dashboard.js] Hata: completionRateSpan ID\'li element bulunamadı.');
     }
 
     console.log('[dashboard.js] Dashboard kartları güncellemesi tamamlandı.');

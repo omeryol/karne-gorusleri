@@ -7,31 +7,37 @@ import {
     managementClassFilterModal, managementSubClassFilterModal
 } from './ui-elements.js';
 
+/*
+    Hata Ayıklama Notu:
+    Bu dosya, uygulamanın tüm önemli verilerini (öğrenciler, yorum atamaları) Local Storage'a kaydeder ve buradan yükler.
+    loadData fonksiyonundaki JSON.parse işlemleri, bozuk veriye karşı uygulamayı korumak için try-catch blokları içine alınmıştır.
+*/
 console.log('[data-management.js] Veri yönetimi modülü yükleniyor...');
 
-// Uygulamanın ana veri yapıları
-export let students = []; // Tüm öğrencilerin listesi
-export let studentAssignments = {}; // Öğrenci yorum eşleşmeleri
-export let selectedStudent = null; // Şu an seçili olan öğrenci
-export let currentCommentTemplate = null; // Şu an seçili olan yorum şablonu
+// Uygulamanın ana veri yapıları (Local Storage'dan yüklenecek)
+export let students = []; // Tüm öğrenci verileri: { id: "benzersizID", fullName: "Ali Yılmaz", firstName: "Ali", class: "5", subClass: "A", num: 1 }
+export let studentAssignments = {}; // Öğrenciye atanan yorumlar: { "Ali Yılmaz": "Yorum metni" }
+export let selectedStudent = null; // Şu anda yorum atama tarafında seçili olan öğrenci objesi
+export let currentCommentTemplate = null; // Şu anda modalda veya düzenleyicide seçili olan yorum şablonu
+
 
 /**
- * Tüm uygulama verilerini tarayıcının yerel deposuna (localStorage) kaydeder.
+ * Tüm uygulama verilerini ve kullanıcı ayarlarını tarayıcının yerel deposuna (localStorage) kaydeder.
+ * Depolama doluysa veya erişim engellenirse hata yakalamak için try-catch bloğu kullanır.
  */
 export function saveData() {
     console.log('[data-management.js] saveData çağrıldı: Veriler Local Storage\'a kaydediliyor.');
-    // İYİLEŞTİRME: localStorage işlemleri, depolama doluysa veya erişim engellenirse
-    // hata verebilir. Bu nedenle try-catch bloğu içine alındı.
     try {
         localStorage.setItem('students', JSON.stringify(students));
         localStorage.setItem('studentAssignments', JSON.stringify(studentAssignments));
-        localStorage.setItem('selectedClass', headerClassSelect.value);
-        localStorage.setItem('selectedTerm', headerTermSelect.value);
-        localStorage.setItem('autoClearChecked', autoClearCommentCheckbox.checked);
-        localStorage.setItem('studentListClassFilter', studentListClassFilter.value);
-        localStorage.setItem('studentListSubClassFilter', studentListSubClassFilter.value);
-        localStorage.setItem('managementClassFilterModal', managementClassFilterModal.value);
-        localStorage.setItem('managementSubClassFilterModal', managementSubClassFilterModal.value);
+
+        if (headerClassSelect) localStorage.setItem('selectedClass', headerClassSelect.value);
+        if (headerTermSelect) localStorage.setItem('selectedTerm', headerTermSelect.value);
+        if (autoClearCommentCheckbox) localStorage.setItem('autoClearChecked', autoClearCommentCheckbox.checked);
+        if (studentListClassFilter) localStorage.setItem('studentListClassFilter', studentListClassFilter.value);
+        if (studentListSubClassFilter) localStorage.setItem('studentListSubClassFilter', studentListSubClassFilter.value);
+        if (managementClassFilterModal) localStorage.setItem('managementClassFilterModal', managementClassFilterModal.value);
+        if (managementSubClassFilterModal) localStorage.setItem('managementSubClassFilterModal', managementSubClassFilterModal.value);
 
         if (selectedStudent) {
             localStorage.setItem('selectedStudentId', selectedStudent.id);
@@ -47,48 +53,56 @@ export function saveData() {
 
 /**
  * Uygulama verilerini localStorage'dan yükler.
- * Hatalı veya bozuk veriye karşı koruma içerir.
+ * Hatalı veya bozuk veriye karşı koruma içerir. Her veri parçası ayrı ayrı yüklenir.
  */
 export function loadData() {
     console.log('[data-management.js] loadData çağrıldı: Veriler Local Storage\'dan yükleniyor.');
     
+    // İYİLEŞTİRME: Her bir veri parçası için ayrı try-catch bloğu.
     try {
         const savedStudents = localStorage.getItem('students');
         if (savedStudents) {
-            // İYİLEŞTİRME: Verinin bir dizi olduğundan emin ol
             const parsedStudents = JSON.parse(savedStudents);
             students = Array.isArray(parsedStudents) ? parsedStudents : [];
         }
-
-        const savedAssignments = localStorage.getItem('studentAssignments');
-        if (savedAssignments) {
-            // İYİLEŞTİRME: Verinin bir nesne olduğundan emin ol
-            const parsedAssignments = JSON.parse(savedAssignments);
-            studentAssignments = typeof parsedAssignments === 'object' && parsedAssignments !== null ? parsedAssignments : {};
-        }
     } catch (error) {
-        console.error('[data-management.js] Local Storage\'dan veri yüklenirken JSON parse hatası:', error);
-        showToast('Kaydedilmiş veriler yüklenemedi, varsayılana dönülüyor.', 'error');
-        students = [];
-        studentAssignments = {};
+        console.error('[data-management.js] Kayıtlı öğrenci verisi yüklenirken hata oluştu (veri bozuk olabilir):', error);
+        students = []; // Hata durumunda veriyi güvenli bir şekilde sıfırla
     }
 
-    // Eski kayıtlarda eksik olabilecek alanlar için veri bütünlüğünü sağla
+    try {
+        const savedAssignments = localStorage.getItem('studentAssignments');
+        if (savedAssignments) {
+            const parsedAssignments = JSON.parse(savedAssignments);
+            studentAssignments = (typeof parsedAssignments === 'object' && parsedAssignments !== null) ? parsedAssignments : {};
+        }
+    } catch (error) {
+        console.error('[data-management.js] Kayıtlı yorum atamaları yüklenirken hata oluştu (veri bozuk olabilir):', error);
+        studentAssignments = {}; // Hata durumunda veriyi güvenli bir şekilde sıfırla
+    }
+
+    // Eski kayıtlarda `subClass` veya `firstName` gibi alanlar yoksa ekleyerek veri bütünlüğünü sağla
     students.forEach(s => {
-        if (!s.firstName) s.firstName = getFirstName(s.fullName);
-        if (!s.subClass) s.subClass = 'A'; // Varsayılan şube
-        if (!s.id) s.id = Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+        if (!s.firstName) {
+            s.firstName = getFirstName(s.fullName);
+        }
+        if (!s.subClass) {
+            s.subClass = 'A'; // Varsayılan şube
+        }
+        if (!s.id) {
+            s.id = Date.now().toString(36) + Math.random().toString(36).substr(2, 9); // Eksik ID'ler için yeni ID oluştur
+        }
     });
     reassignStudentNumbers();
 
-    // UI Ayarlarını yükle
-    headerClassSelect.value = localStorage.getItem('selectedClass') || '';
-    headerTermSelect.value = localStorage.getItem('selectedTerm') || '';
-    autoClearCommentCheckbox.checked = JSON.parse(localStorage.getItem('autoClearChecked') || 'false');
-    studentListClassFilter.value = localStorage.getItem('studentListClassFilter') || 'all';
-    studentListSubClassFilter.value = localStorage.getItem('studentListSubClassFilter') || 'all';
-    managementClassFilterModal.value = localStorage.getItem('managementClassFilterModal') || 'all';
-    managementSubClassFilterModal.value = localStorage.getItem('managementSubClassFilterModal') || 'all';
+    // UI Ayarlarını yükle (elemanların varlığını kontrol ederek)
+    if (headerClassSelect) headerClassSelect.value = localStorage.getItem('selectedClass') || '';
+    if (headerTermSelect) headerTermSelect.value = localStorage.getItem('selectedTerm') || '';
+    if (autoClearCommentCheckbox) autoClearCommentCheckbox.checked = JSON.parse(localStorage.getItem('autoClearChecked') || 'false');
+    if (studentListClassFilter) studentListClassFilter.value = localStorage.getItem('studentListClassFilter') || 'all';
+    if (studentListSubClassFilter) studentListSubClassFilter.value = localStorage.getItem('studentListSubClassFilter') || 'all';
+    if (managementClassFilterModal) managementClassFilterModal.value = localStorage.getItem('managementClassFilterModal') || 'all';
+    if (managementSubClassFilterModal) managementSubClassFilterModal.value = localStorage.getItem('managementSubClassFilterModal') || 'all';
 
     // Seçili öğrenciyi yükle
     const savedSelectedStudentId = localStorage.getItem('selectedStudentId');
@@ -96,10 +110,13 @@ export function loadData() {
         selectedStudent = students.find(s => s.id === savedSelectedStudentId) || null;
     }
     
-    console.log('[data-management.js] Veriler Local Storage\'dan başarıyla yüklendi.');
+    console.log('[data-management.js] Veriler Local Storage\'dan yükleme işlemi tamamlandı.');
 }
 
-// Öğrenci numaralarını sınıf ve şubeye göre yeniden atayan yardımcı fonksiyon
+/**
+ * Öğrenci numaralarını sınıf ve şubeye göre alfabetik olarak yeniden atar.
+ * Bu, yeni öğrenci eklendiğinde veya silindiğinde listenin tutarlı kalmasını sağlar.
+ */
 export function reassignStudentNumbers() {
     console.log('[data-management.js] reassignStudentNumbers çağrıldı: Öğrenci numaraları yeniden atanıyor.');
     const classSubClassCombinations = [...new Set(students.map(s => `${s.class}-${s.subClass}`))].sort();
@@ -108,7 +125,7 @@ export function reassignStudentNumbers() {
         const [cls, subCls] = combo.split('-');
         let currentNum = 1;
         students.filter(s => s.class === cls && s.subClass === subCls)
-                .sort((a, b) => a.fullName.localeCompare(b.fullName, 'tr', { sensitivity: 'base' }))
+                .sort((a, b) => a.fullName.localeCompare(b.fullName, 'tr', { sensitivity: 'base' })) // Türkçe karakterlere duyarlı sıralama
                 .forEach(student => {
                     student.num = currentNum++;
                 });
@@ -116,11 +133,14 @@ export function reassignStudentNumbers() {
     console.log('[data-management.js] Öğrenci numaraları yeniden atama tamamlandı.');
 }
 
+// Global state'i güncelleyen yardımcı fonksiyonlar
 export function setSelectedStudent(student) {
     selectedStudent = student;
-    saveData();
+    saveData(); // Seçili öğrenci değiştiğinde kaydet
 }
 
 export function setCurrentCommentTemplate(template) {
     currentCommentTemplate = template;
 }
+
+console.log('[data-management.js] Veri yönetimi modülü başarıyla yüklendi.');

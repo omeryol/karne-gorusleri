@@ -3,118 +3,102 @@
 /**
  * Ekranda bilgilendirme mesajı (toast) gösterir.
  * @param {string} message Gösterilecek mesaj.
- * @param {string} type Mesajın türü ('info', 'success', 'error'). CSS sınıflarını belirler.
+ * @param {string} type Mesajın türü ('info', 'success', 'error'). Bu, CSS ile rengi belirler.
  */
 export function showToast(message, type = 'info') {
-    // Hata Ayıklama Logu: showToast fonksiyonunun çağrıldığını ve mesajını kaydet
     console.log(`[utils.js] showToast çağrıldı: Mesaj "${message}", Tip "${type}"`);
 
     const toastContainer = document.getElementById('toast-container');
-    const toast = document.createElement('div');
-    toast.classList.add('toast');
-    toast.textContent = message;
-
-    // Mesaj türüne göre CSS sınıfı ekler (renklendirme için).
-    toast.classList.add(type);
-
-    if (toastContainer) {
-        toastContainer.appendChild(toast);
-
-        // Toast'un görünür olmasını sağlayan animasyon sınıfını küçük bir gecikmeyle ekler.
-        setTimeout(() => {
-            toast.classList.add('show');
-        }, 100);
-
-        // Toast'u 3 saniye sonra gizle ve DOM'dan kaldır.
-        setTimeout(() => {
-            toast.classList.remove('show');
-            // 'transitionend' olayı, CSS geçişi tamamlandığında tetiklenir.
-            // Bu, animasyon bitmeden elemanın DOM'dan kaldırılmasını engeller.
-            toast.addEventListener('transitionend', () => {
-                console.log(`[utils.js] Toast kaldırıldı: "${message}"`);
-                toast.remove();
-            }, { once: true }); // 'once: true' dinleyicinin bir kez çalışıp kendini otomatik kaldırmasını sağlar.
-        }, 3000);
-    } else {
-        console.error('[utils.js] Hata: Toast container bulunamadı! Lütfen index.html dosyasında #toast-container elementinin var olduğundan emin olun.');
+    
+    // İYİLEŞTİRME: Toast konteyneri DOM'da yoksa hata ver ve işlemi durdur.
+    if (!toastContainer) {
+        console.error('[utils.js] Hata: Toast container (#toast-container) bulunamadı!');
+        return;
     }
+
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`; // Sınıfları tek seferde ata
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+
+    // Toast'un görünür olmasını sağlayan animasyon sınıfını küçük bir gecikmeyle ekle.
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 100);
+
+    // Toast'u 3 saniye sonra gizle ve DOM'dan kaldır.
+    setTimeout(() => {
+        toast.classList.remove('show');
+        // 'transitionend' olayı, CSS geçişi tamamlandığında tetiklenir.
+        // Bu, animasyon bitmeden elemanın DOM'dan kaldırılmasını engeller.
+        toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+    }, 3000);
 }
 
 /**
- * Tam isimden sadece ilk ismi alır.
- * @param {string} fullName Tam isim (örn: "Ali Yılmaz").
- * @returns {string} İlk isim (örn: "Ali").
+ * Verilen tam isimden (örn: "Ahmet Yılmaz") sadece ilk ismi ("Ahmet") alır.
+ * @param {string} fullName - İşlenecek tam isim.
+ * @returns {string} - İlk isim.
  */
 export function getFirstName(fullName) {
-    console.log(`[utils.js] getFirstName çağrıldı: Tam Ad "${fullName}"`);
-
-    if (!fullName) {
-        console.warn('[utils.js] getFirstName: Boş veya tanımsız tam ad verildi.');
+    if (!fullName || typeof fullName !== 'string') {
+        console.warn('[utils.js] getFirstName: Geçersiz veya boş bir tam ad verildi.');
         return '';
     }
-    const parts = fullName.trim().split(' ');
-    console.log(`[utils.js] getFirstName: Çıkarılan ilk ad "${parts[0]}"`);
-    return parts[0];
+    return fullName.trim().split(' ')[0];
 }
 
 /**
- * Rastgele ve benzersiz bir ID oluşturur.
+ * Zaman damgası ve rastgele bir dize kullanarak benzersiz bir ID oluşturur.
  * @returns {string} Benzersiz ID.
  */
 export function generateUniqueId() {
-    console.log('[utils.js] generateUniqueId çağrıldı.');
-    const uniqueId = Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
-    console.log(`[utils.js] generateUniqueId: Oluşturulan ID "${uniqueId}"`);
-    return uniqueId;
+    return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
 }
 
 /**
- * Bir elemanın belirtilen seçiciye sahip bir ata elemanı olup olmadığını kontrol eder.
- * @param {HTMLElement} element Kontrol edilecek başlangıç elemanı.
- * @param {string} parentSelector Aranacak ata elemanın CSS seçicisi.
- * @returns {boolean} Ata eleman varsa true, yoksa false döner.
+ * Bir HTML elemanının, belirtilen CSS seçicisine uyan bir üst elemanı olup olmadığını kontrol eder.
+ * @param {HTMLElement} element - Kontrol edilecek başlangıç elemanı.
+ * @param {string} parentSelector - Aranacak üst elemanın CSS seçicisi.
+ * @returns {boolean} Üst eleman bulunursa true, bulunmazsa false döner.
  */
 export function hasParent(element, parentSelector) {
-    console.log(`[utils.js] hasParent çağrıldı: Eleman ${element ? element.tagName : 'null'}, Ata Seçici "${parentSelector}"`);
     let current = element;
     while (current) {
         if (current.matches(parentSelector)) {
-            console.log(`[utils.js] hasParent: "${parentSelector}" bulundu.`);
             return true;
         }
         current = current.parentElement;
     }
-    console.log(`[utils.js] hasParent: "${parentSelector}" bulunamadı.`);
     return false;
 }
 
 /**
- * Bir modal penceresini açar veya kapatır.
- * @param {HTMLElement} modalElement Açılacak/kapatılacak modal elemanı.
- * @param {boolean} show True ise açar, false ise kapatır.
+ * Bir modal penceresini (açılır pencere) açar veya kapatır.
+ * @param {HTMLElement} modalElement - Açılacak veya kapatılacak modal HTML elemanı.
+ * @param {boolean} show - True ise modalı açar, false ise kapatır.
  */
 export function toggleModal(modalElement, show = true) {
+    // İYİLEŞTİRME: Fonksiyonun en başında, verilen modal elemanının geçerli olup olmadığını kontrol eder.
+    // Eğer `modalElement` null veya undefined ise, hata vermeden fonksiyondan çıkar.
     if (!modalElement) {
-        console.error('[utils.js] toggleModal: Geçersiz modal elemanı verildi.');
+        console.error('[utils.js] toggleModal: Geçersiz veya null bir modal elemanı verildi. İşlem durduruldu.');
         return;
     }
+
     console.log(`[utils.js] toggleModal çağrıldı: Modal ID "${modalElement.id}", Durum: ${show ? 'Açılıyor' : 'Kapatılıyor'}`);
 
     if (show) {
         modalElement.style.display = 'flex';
-        // CSS animasyonunun tetiklenmesi için 'show' sınıfı küçük bir gecikme ile eklenir.
         setTimeout(() => {
             modalElement.classList.add('show');
-        }, 10);
+        }, 10); // CSS animasyonunun tetiklenmesi için küçük bir gecikme.
     } else {
         modalElement.classList.remove('show');
-        // 'transitionend' olayı, CSS geçiş animasyonu bittiğinde tetiklenir.
-        // Bu, modalın animasyon bitmeden aniden kaybolmasını engeller.
+        // Animasyonun bitmesini bekle ve sonra display: none yap.
+        // { once: true } sayesinde bu dinleyici sadece bir kez çalışır ve kendini kaldırır.
         modalElement.addEventListener('transitionend', function handler() {
             modalElement.style.display = 'none';
-            // NOT: { once: true } sayesinde bu dinleyici ilk çalışmadan sonra otomatik olarak kaldırılır.
-            // Bu, birden fazla event dinleyicisi birikmesini önler.
-            console.log(`[utils.js] toggleModal: Modal "${modalElement.id}" kapatıldı ve DOM'dan gizlendi.`);
         }, { once: true });
     }
 }
