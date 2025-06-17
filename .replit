@@ -15,8 +15,21 @@ author = "agent"
 task = "workflow.run"
 args = "Student Comments System"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Student Management System"
+
 [[workflows.workflow]]
 name = "Student Comments System"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m http.server 5000"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Student Management System"
 author = "agent"
 
 [[workflows.workflow.tasks]]

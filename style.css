@@ -198,6 +198,41 @@ body {
     }
 }
 
+/* Comment item animations */
+.comment-item {
+    animation: slideInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Back to top button */
+#backToTop {
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+}
+
+/* Notification improvements */
+.alert {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+}
+
 /* Loading improvements */
 #loadingSpinner {
     background: rgba(255, 255, 255, 0.95);
