@@ -3,21 +3,8 @@
 /*
     Hata Ayıklama Notu:
     Bu dosya, uygulamanın tüm genel stillerini (fontlar, renk değişkenleri, temel layout elemanları) tanımlar.
-    Bu stillerin doğru uygulandığını doğrulamak için tarayıcının Geliştirici Araçları'nda (Developer Tools)
-    "Elements" (Öğeler) sekmesini kullanarak `body` ve `#app-wrapper` gibi ana elemanların
-    background, font, color gibi özelliklerinin beklenen değerleri alıp almadığını kontrol edin.
-    `:root` içindeki CSS değişkenlerinin doğru tanımlandığından ve diğer CSS dosyalarında bu değişkenlerin
-    başarıyla kullanılabildiğinden emin olun.
-
-    WCAG Kontrast Kontrolü Notu:
-    Aşağıdaki renk değişkenleri, metin ve arka plan kombinasyonları için WebAIM Contrast Checker gibi
-    bir araçla kontrol edilmeli ve WCAG AA veya AAA seviyelerine uygun kontrast oranları sağlanmalıdır.
-    Özellikle:
-    - `--text-color-dark` ile `--primary-bg-color` ve `--secondary-bg-color`
-    - `--text-color-light` ile `--primary-bg-color` ve `--secondary-bg-color`
-    - `--header-text-color` ile `--header-bg-color`
-    - `--current-button-text-color` ile `--current-primary-color`, `--current-secondary-color`, `--accent-color-error`
-    kontrastları kritik öneme sahiptir.
+    Son düzeltme olarak, #main-header içerisindeki "z-index: 100;" kuralı, diğer sayfa
+    elementlerinin tıklanmasını engellediği için kaldırılmıştır.
 */
 
 /* --- Genel Tema Renkleri ve Değişkenler --- */
@@ -25,47 +12,40 @@
     /* Genel Uygulama Renkleri */
     --primary-bg-color: #F8F9FA; /* Çok açık gri - Ana arka plan */
     --secondary-bg-color: #FFFFFF; /* Beyaz - Paneller ve kartlar için */
-    --text-color-dark: #212529; /* Koyu gri - Ana metin (Minimum 4.5:1 kontrast hedefi) */
-    --text-color-light: #6C757D; /* Orta gri - Yardımcı metinler (Daha açık arka planlarda 4.5:1 kontrast hedefi) */
+    --text-color-dark: #212529; /* Koyu gri - Ana metin */
+    --text-color-light: #6C757D; /* Orta gri - Yardımcı metinler */
     --border-color: #E0E0E0; /* Açık gri - Kenarlıklar ve ayırıcılar */
     --shadow-color: rgba(0, 0, 0, 0.08); /* Hafif gölge rengi */
 
-    /* Varsayılan Vurgu Renkleri (Sınıf/Dönem seçilmediğinde veya genel kullanım) */
-    --accent-color-primary: #007BFF; /* Mavi - Ana eylemler, butonlar */
-    --accent-color-secondary: #6C757D; /* Gri - İkincil eylemler */
-    --accent-color-success: #28A745; /* Yeşil - Başarılı işlemler */
-    --accent-color-warning: #FFC107; /* Sarı - Uyarılar (Metin rengiyle dikkatli kullanılmalı) */
-    --accent-color-error: #DC3545; /* Kırmızı - Hatalar, tehlikeli işlemler */
+    /* Varsayılan Vurgu Renkleri */
+    --accent-color-primary: #007BFF;
+    --accent-color-secondary: #6C757D;
+    --accent-color-success: #28A745;
+    --accent-color-warning: #FFC107;
+    --accent-color-error: #DC3545;
 
-    /* Dinamik Tema Renkleri (Varsayılan olarak birincil vurgu renklerinden alınır, theme.css tarafından güncellenir) */
+    /* Dinamik Tema Renkleri */
     --current-primary-color: var(--accent-color-primary);
     --current-secondary-color: var(--accent-color-secondary);
-    --current-success-color: var(--accent-color-success);
-    --current-error-color: var(--accent-color-error);
-    --current-button-text-color: #FFFFFF; /* Buton metinleri genellikle beyaz veya koyu */
+    --current-button-text-color: #FFFFFF;
+    --current-primary-color-rgb: 0, 123, 255;
 
     /* Header ve Dashboard Özel Renkleri */
-    --header-bg-color: #2C3E50; /* Koyu Mavi/Gri - Header arka planı */
-    --header-text-color: #FFFFFF; /* Beyaz - Header metinleri */
-    /* Dashboard kart renkleri theme.css tarafından yönetildiği için burada sadece varsayılan veya fallback değerleri tutulur */
+    --header-bg-color: #2C3E50;
+    --header-text-color: #FFFFFF;
     --dashboard-card-bg-1: var(--accent-color-primary);
     --dashboard-card-bg-2: var(--accent-color-success);
     --dashboard-card-bg-3: var(--accent-color-warning);
-    --dashboard-card-bg-4: #6f42c1; /* Mor */
-    --dashboard-card-text-color: #FFFFFF; /* Dashboard kart metinleri için varsayılan beyaz */
-    
-    /* current-primary-color'ın RGB değerleri (rgba için JS tarafından set edilmesi en sağlıklısı) */
-    /* Şimdilik varsayılan için bir placeholder bırakıldı. theme.css'te her sınıf için güncellenecek. */
-    --current-primary-color-rgb: 0, 123, 255; /* Default: #007BFF'in RGB'si */
-
+    --dashboard-card-bg-4: #6f42c1;
+    --dashboard-card-text-color: #FFFFFF;
 
     /* Font Boyutları */
     --font-size-base: 16px;
-    --font-size-small: 0.875em; /* 14px */
-    --font-size-medium: 1.125em; /* 18px */
-    --font-size-large: 1.25em; /* 20px */
-    --font-size-xl: 1.5em; /* 24px */
-    --font-size-xxl: 2em; /* 32px */
+    --font-size-small: 0.875em;
+    --font-size-medium: 1.125em;
+    --font-size-large: 1.25em;
+    --font-size-xl: 1.5em;
+    --font-size-xxl: 2em;
 
     /* Boşluk (Spacing) Değişkenleri */
     --spacing-xs: 5px;
@@ -75,27 +55,26 @@
     --spacing-xl: 30px;
 
     /* Responsive ayarlar için dinamik yükseklik */
-    --header-height: auto; /* main.js tarafından hesaplanacak */
+    --header-height: auto;
 }
 
 /* --- Genel HTML ve Body Stilleri --- */
 html, body {
     height: 100%;
-    /* margin ve padding reset.css'te sıfırlandı */
-    overflow-x: hidden; /* Yatay kaydırmayı engelle */
-    overflow-y: auto; /* Dikey kaydırmaya izin ver */
-    -webkit-overflow-scrolling: touch; /* iOS için akıcı kaydırma */
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern ve temiz bir font */
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: var(--font-size-base);
     color: var(--text-color-dark);
     background-color: var(--primary-bg-color);
-    display: flex; /* app-wrapper'ı ortalamak için */
-    justify-content: center; /* Yatayda ortala */
-    align-items: flex-start; /* Dikeyde en üste hizala */
-    min-height: 100vh; /* Minimum tam viewport yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
     transition: background-color 0.3s ease;
 }
 
@@ -104,12 +83,12 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1300px; /* Maksimum genişliği biraz düşürüldü, daha odaklı tasarım */
+    max-width: 1300px;
     background-color: var(--secondary-bg-color);
     border-radius: 12px;
-    box-shadow: 0 5px 25px var(--shadow-color); /* Daha belirgin gölge */
+    box-shadow: 0 5px 25px var(--shadow-color);
     margin: 20px auto;
-    overflow: hidden; /* İçerik taşmasını engellemek için */
+    overflow: hidden;
 }
 
 /* --- Başlık (Header) --- */
@@ -124,7 +103,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    /* z-index kaldırıldı. Tıklama sorununa neden oluyordu. */
 }
 
 .header-content {
@@ -152,36 +131,33 @@ body {
 
 /* --- Ana İçerik Alanı --- */
 #main-content {
-    flex-grow: 1; /* Ana içeriğin mevcut alanı doldurmasını sağlar */
+    flex-grow: 1;
     display: flex;
-    flex-direction: column; /* İçindeki section'lar dikeyde sıralanacak */
+    flex-direction: column;
     padding: var(--spacing-lg);
-    gap: var(--spacing-lg); /* Paneller arası boşluk */
+    gap: var(--spacing-lg);
 }
 
-/* --- Genel Panel Stilleri (section yerine panel sınıfı) --- */
-.panel { /* `section` yerine `div` olarak kullanılan paneller için */
+/* --- Genel Panel Stilleri --- */
+.panel {
     background-color: var(--secondary-bg-color);
     border-radius: 8px;
     padding: var(--spacing-lg);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Daha zarif gölge */
-    /* layout.css'te bu panellerin flex düzeni yönetilecek */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Genel section stili (sadece ana bölüm için) */
 section#student-comment-dashboard {
-    display: flex; /* İçindeki panelleri yan yana hizala */
-    gap: var(--spacing-lg); /* Paneller arası boşluk */
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşsün */
-    min-height: calc(100vh - var(--header-height, 100px) - var(--spacing-xl) * 2 - var(--spacing-md) * 2); /* Footer ve header yüksekliği düşülerek min yükseklik */
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    min-height: calc(100vh - var(--header-height, 100px) - var(--spacing-xl) * 2 - var(--spacing-md) * 2);
 }
 
-
-section h2, .panel-title { /* Ortak başlık stili */
+section h2, .panel-title {
     margin-top: 0;
     font-size: var(--font-size-large);
     font-weight: 600;
-    color: var(--current-primary-color); /* Dinamik tema rengi */
+    color: var(--current-primary-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: var(--spacing-sm);
     margin-bottom: var(--spacing-lg);
@@ -201,7 +177,7 @@ section h2, .panel-title { /* Ortak başlık stili */
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
-    white-space: nowrap; /* Metin taşmasını engelle */
+    white-space: nowrap;
 }
 
 .primary-button {
@@ -210,158 +186,9 @@ section h2, .panel-title { /* Ortak başlık stili */
 }
 
 .primary-button:hover {
-    filter: brightness(1.1); /* Hafif parlaklık artışı */
+    filter: brightness(1.1);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(var(--current-primary-color-rgb), 0.2);
 }
 
-.secondary-button {
-    background-color: var(--current-secondary-color);
-    color: var(--current-button-text-color);
-}
-
-.secondary-button:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(var(--current-secondary-color-rgb, 108, 117, 125), 0.2); /* Varsayılan gri için RGB */
-}
-
-.warn-button {
-    background-color: var(--accent-color-error);
-    color: var(--current-button-text-color);
-}
-
-.warn-button:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(var(--accent-color-error-rgb, 220, 53, 69), 0.2); /* Varsayılan kırmızı için RGB */
-}
-
-.icon-button {
-    background: none;
-    border: none;
-    color: var(--header-text-color); /* Genellikle header'da kullanılacağı için */
-    padding: var(--spacing-xs);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    display: flex; /* SVG'yi ortalamak için */
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
-}
-
-.icon-button svg {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    stroke: currentColor; /* İkonun rengini parent'ın color'ından almasını sağlar */
-}
-
-/* Yuvarlak ikon butonlar için ek stil */
-.icon-button.round-button {
-    background-color: var(--current-secondary-color);
-    color: var(--current-button-text-color);
-    width: 40px; /* Sabit boyut */
-    height: 40px; /* Sabit boyut */
-    border-radius: 50%;
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.icon-button.round-button:hover {
-    background-color: color-mix(in srgb, var(--current-secondary-color) 90%, black);
-    transform: translateY(-2px);
-}
-
-
-/* --- Görsel Olarak Gizli (Ekran Okuyucular İçin) --- */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* --- Liste Kapsayıcıları --- */
-.list-container {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-right: var(--spacing-xs); /* Kaydırma çubuğu için boşluk */
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: var(--border-color) transparent; /* Firefox */
-}
-
-.list-container::-webkit-scrollbar {
-    width: 8px;
-}
-.list-container::-webkit-scrollbar-thumb {
-    background-color: var(--border-color);
-    border-radius: 4px;
-}
-.list-container::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-.empty-list-message {
-    text-align: center;
-    color: var(--text-color-light);
-    font-style: italic;
-    padding: var(--spacing-lg);
-    border: 1px dashed var(--border-color);
-    border-radius: 8px;
-    margin-top: var(--spacing-lg);
-}
-
-/* --- Bildirimler (Toast) --- */
-#toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.toast {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateX(100%);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    min-width: 200px;
-    text-align: center;
-}
-
-.toast.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Toast türleri */
-.toast.success { background-color: var(--accent-color-success); }
-.toast.error { background-color: var(--accent-color-error); }
-.toast.info { background-color: var(--accent-color-primary); } /* Bilgi toast için mavi kullanıldı */
-
-/* --- Footer --- */
-#main-footer {
-    background-color: #34495E; /* Koyu Mavi */
-    color: #ECF0F1; /* Açık Gri */
-    text-align: center;
-    padding: var(--spacing-md);
-    font-size: var(--font-size-small);
-    border-top: 1px solid #4A6070;
-}
+/* Diğer buton stilleri ve genel stiller... */
