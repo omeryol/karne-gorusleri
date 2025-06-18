@@ -1,3 +1,4 @@
+// omeryol/karne-gorusleri/karne-gorusleri-7be580864cf894b02555a07c341fcf6344ae8978/server/basic-server.js
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -115,9 +116,18 @@ app.get('/api/students', (req, res) => {
 });
 
 app.post('/api/students', (req, res) => {
+  const validSections = ["A", "B", "C", "D", "E"];
+  const studentData = req.body;
+
+  // Validate section
+  if (!validSections.includes(studentData.section)) {
+    studentData.section = 'A'; // Default to A if invalid
+  }
+
   const student = {
     id: generateId(),
-    ...req.body
+    // studentNumber can be undefined if not provided in req.body
+    ...studentData
   };
   students.push(student);
   res.status(201).json(student);
@@ -129,7 +139,13 @@ app.post('/api/students/bulk', (req, res) => {
     return res.status(400).json({ error: "Students must be an array" });
   }
 
+  const validSections = ["A", "B", "C", "D", "E"];
+
   const createdStudents = newStudents.map(studentData => {
+    // Validate section for bulk upload
+    if (!validSections.includes(studentData.section)) {
+      studentData.section = 'A'; // Default to A if invalid
+    }
     const student = {
       id: generateId(),
       ...studentData
@@ -181,6 +197,30 @@ app.delete('/api/student-comments/:id', (req, res) => {
     studentComments.splice(index, 1);
   }
   res.status(204).send();
+});
+
+// New PUT endpoint for updating students
+app.put('/api/students/:id', (req, res) => {
+  const studentId = req.params.id;
+  const updatedData = req.body;
+  const index = students.findIndex(s => s.id === studentId);
+
+  if (index === -1) {
+    return res.status(404).json({ error: "Student not found" });
+  }
+
+  const validSections = ["A", "B", "C", "D", "E"];
+  if (updatedData.section && !validSections.includes(updatedData.section)) {
+    updatedData.section = students[index].section; // Keep old section if new is invalid
+  }
+
+  // If studentNumber is explicitly set to an empty string, convert it to undefined
+  if (updatedData.studentNumber === "") {
+    updatedData.studentNumber = undefined;
+  }
+
+  students[index] = { ...students[index], ...updatedData };
+  res.json(students[index]);
 });
 
 app.get('/api/statistics', (req, res) => {

@@ -1,3 +1,4 @@
+// omeryol/karne-gorusleri/karne-gorusleri-7be580864cf894b02555a07c341fcf6344ae8978/client/src/lib/utils.ts
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -40,7 +41,7 @@ export function copyToClipboard(text: string): Promise<void> {
 export function parseStudentData(text: string): Array<{
   name: string
   surname: string
-  studentNumber: string
+  studentNumber?: string // studentNumber opsiyonel hale getirildi
   grade: number
   section: string
 }> {
@@ -48,10 +49,12 @@ export function parseStudentData(text: string): Array<{
   const students: Array<{
     name: string
     surname: string
-    studentNumber: string
+    studentNumber?: string // studentNumber opsiyonel hale getirildi
     grade: number
     section: string
   }> = []
+
+  const validSections = ["A", "B", "C", "D", "E"]; // Geçerli şube değerleri
 
   for (const line of lines) {
     // Parse different formats: "Ad Soyad 123 5A" or "Ad,Soyad,123,5,A"
@@ -59,25 +62,42 @@ export function parseStudentData(text: string): Array<{
       ? line.split(',').map(p => p.trim())
       : line.trim().split(/\s+/)
 
-    if (parts.length >= 4) {
-      const name = parts[0]
-      const surname = parts[1]
-      const studentNumber = parts[2]
-      const gradeStr = parts[3]
-      const section = parts[4] || 'A'
+    // Adjusted logic for optional studentNumber and strict section parsing
+    let name: string, surname: string, studentNumber: string | undefined, gradeStr: string, section: string;
+
+    if (parts.length >= 4) { // Minimum required fields: name, surname, grade, section (studentNumber can be missing)
+      name = parts[0];
+      surname = parts[1];
+      
+      // Determine if studentNumber is present
+      const potentialStudentNumber = parts[2];
+      const potentialGradeStr = parts[3];
+
+      if (potentialGradeStr.match(/(\d+)/)) { // Assuming if the 4th part is a grade, then 3rd part is studentNumber
+        studentNumber = potentialStudentNumber;
+        gradeStr = potentialGradeStr;
+        section = parts[4] || ''; // section can be empty if not provided, will default to 'A' later
+      } else { // If 4th part is not a grade, then 3rd part is grade, and studentNumber is missing
+        studentNumber = undefined; // Student number is optional
+        gradeStr = potentialStudentNumber;
+        section = parts[3] || ''; // section is 4th part if studentNumber is missing
+      }
 
       // Extract grade number
       const gradeMatch = gradeStr.match(/(\d+)/)
       if (gradeMatch) {
         const grade = parseInt(gradeMatch[1])
-        if (grade >= 5 && grade <= 8) {
+        const finalSection = (section.replace(/\d+/, '').toUpperCase() || 'A'); // Extract only alpha part for section and default to 'A'
+        
+        // Validate section against allowed values
+        if (grade >= 5 && grade <= 8 && validSections.includes(finalSection)) {
           students.push({
             name,
             surname,
-            studentNumber,
+            studentNumber: studentNumber, // studentNumber could be undefined
             grade,
-            section: section.replace(/\d+/, '').toUpperCase() || 'A'
-          })
+            section: finalSection
+          });
         }
       }
     }

@@ -1,3 +1,4 @@
+// omeryol/karne-gorusleri/karne-gorusleri-7be580864cf894b02555a07c341fcf6344ae8978/shared/schema.ts
 import { z } from "zod";
 
 // Student schema
@@ -5,9 +6,9 @@ export const studentSchema = z.object({
   id: z.string(),
   name: z.string().min(1, "Öğrenci adı gerekli"),
   surname: z.string().min(1, "Öğrenci soyadı gerekli"),
-  studentNumber: z.string().min(1, "Öğrenci numarası gerekli"),
+  studentNumber: z.string().optional(), // Öğrenci numarası opsiyonel yapıldı
   grade: z.number().min(5).max(8),
-  section: z.string().min(1, "Şube bilgisi gerekli"),
+  section: z.enum(["A", "B", "C", "D", "E"]), // Şube A-E arası kısıtlandı
 });
 
 export const insertStudentSchema = studentSchema.omit({ id: true });

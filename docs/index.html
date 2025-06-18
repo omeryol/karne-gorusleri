@@ -10,7 +10,6 @@
     <meta property="og:type" content="website" />
     <title>Karne Yorumları Yönetim Sistemi</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
@@ -109,7 +108,6 @@
 </head>
 <body class="animated-gradient">
     <div id="app" class="min-h-screen">
-        <!-- Navigation -->
         <nav class="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between h-16">
@@ -160,7 +158,6 @@
         </nav>
 
         <main class="container mx-auto px-4 py-8">
-            <!-- Dashboard Page -->
             <div id="dashboard-page" class="page">
                 <div class="fade-in space-y-8">
                     <div class="text-center">
@@ -176,16 +173,14 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="stats-cards">
-                        <!-- Stats will be populated by JavaScript -->
-                    </div>
+                        </div>
 
                     <div class="glass-effect rounded-lg p-6" id="grade-stats">
                         <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
                             🎯 Sınıf Bazında İstatistikler
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="grade-stats-content">
-                            <!-- Grade stats will be populated by JavaScript -->
-                        </div>
+                            </div>
                     </div>
 
                     <div class="glass-effect rounded-lg p-6">
@@ -219,7 +214,6 @@
                 </div>
             </div>
 
-            <!-- Student Management Page -->
             <div id="students-page" class="page hidden">
                 <div class="fade-in space-y-6">
                     <div class="flex items-center justify-between">
@@ -243,8 +237,7 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4" id="student-grade-stats">
-                        <!-- Grade stats will be populated by JavaScript -->
-                    </div>
+                        </div>
 
                     <div class="glass-effect rounded-lg p-4">
                         <div class="flex flex-col md:flex-row gap-4">
@@ -267,13 +260,11 @@
                     <div class="glass-effect rounded-lg p-6">
                         <h3 class="text-lg font-semibold mb-4">Öğrenci Listesi (<span id="student-count">0</span>)</h3>
                         <div id="students-list" class="space-y-4">
-                            <!-- Students will be populated by JavaScript -->
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Comment Assignment Page -->
             <div id="comments-page" class="page hidden">
                 <div class="fade-in space-y-6">
                     <div class="flex items-center justify-between">
@@ -292,7 +283,6 @@
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <!-- Student Selection -->
                         <div class="space-y-4">
                             <div class="glass-effect rounded-lg p-6">
                                 <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -314,17 +304,14 @@
                                     </div>
 
                                     <div id="comment-students-list" class="space-y-2 max-h-96 overflow-y-auto">
-                                        <!-- Students will be populated by JavaScript -->
-                                    </div>
+                                        </div>
                                 </div>
                             </div>
 
                             <div id="selected-student-info" class="glass-effect rounded-lg p-6 hidden">
-                                <!-- Selected student info will be populated by JavaScript -->
-                            </div>
+                                </div>
                         </div>
 
-                        <!-- Template Selection -->
                         <div class="space-y-4">
                             <div class="glass-effect rounded-lg p-6">
                                 <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -352,13 +339,11 @@
                                     </div>
 
                                     <div id="templates-list" class="space-y-2 max-h-96 overflow-y-auto">
-                                        <!-- Templates will be populated by JavaScript -->
-                                    </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Comment Editor -->
                         <div class="space-y-4">
                             <div class="glass-effect rounded-lg p-6">
                                 <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -405,9 +390,6 @@
         </footer>
     </div>
 
-    <!-- Modals -->
-    
-    <!-- Add Student Modal -->
     <div id="add-student-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
         <div class="w-full max-w-md glass-effect rounded-lg p-6">
             <h3 class="text-lg font-semibold mb-4">Yeni Öğrenci Ekle</h3>
@@ -458,7 +440,6 @@
         </div>
     </div>
 
-    <!-- Bulk Upload Modal -->
     <div id="bulk-upload-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
         <div class="w-full max-w-2xl glass-effect rounded-lg p-6">
             <h3 class="text-lg font-semibold mb-4">Toplu Öğrenci Yükleme</h3>
@@ -487,7 +468,6 @@
         </div>
     </div>
 
-    <!-- All Comments Modal -->
     <div id="all-comments-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
         <div class="w-full max-w-4xl max-h-[80vh] glass-effect rounded-lg p-6">
             <div class="flex items-center justify-between mb-4">
@@ -497,12 +477,10 @@
                 </button>
             </div>
             <div id="all-comments-content" class="space-y-4 max-h-[60vh] overflow-y-auto">
-                <!-- Comments will be populated by JavaScript -->
-            </div>
+                </div>
         </div>
     </div>
 
-    <!-- Toast Notification -->
     <div id="toast" class="fixed top-4 right-4 z-50 hidden">
         <div class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
             <div id="toast-content"></div>
@@ -635,35 +613,50 @@
         function parseStudentData(text) {
             const lines = text.split('\n').filter(line => line.trim());
             const students = [];
+            const validSections = ["A", "B", "C", "D", "E"]; // Moved here for local usage
 
             for (const line of lines) {
                 const parts = line.includes(',') 
                     ? line.split(',').map(p => p.trim())
                     : line.trim().split(/\s+/);
 
-                if (parts.length >= 4) {
+                if (parts.length >= 4) { // Adjusted to allow for missing student number
                     const name = parts[0];
                     const surname = parts[1];
-                    const studentNumber = parts[2];
-                    const gradeStr = parts[3];
-                    const section = parts[4] || 'A';
+                    let studentNumber;
+                    let gradeStr;
+                    let section;
 
+                    // Logic to determine if studentNumber is present or skipped
+                    if (parts.length === 5) { // Assuming format: Name Surname StudentNumber Grade Section
+                        studentNumber = parts[2];
+                        gradeStr = parts[3];
+                        section = parts[4];
+                    } else if (parts.length === 4) { // Assuming format: Name Surname Grade Section (studentNumber skipped)
+                        studentNumber = undefined; // Student number is optional
+                        gradeStr = parts[2];
+                        section = parts[3];
+                    } else {
+                        continue; // Skip invalid formats
+                    }
+                    
                     const gradeMatch = gradeStr.match(/(\d+)/);
                     if (gradeMatch) {
                         const grade = parseInt(gradeMatch[1]);
-                        if (grade >= 5 && grade <= 8) {
+                        const finalSection = (section || 'A').toUpperCase(); // Default to 'A' if empty/null, then to upper case
+
+                        if (grade >= 5 && grade <= 8 && validSections.includes(finalSection)) {
                             students.push({
                                 name,
                                 surname,
-                                studentNumber,
+                                studentNumber: studentNumber,
                                 grade,
-                                section: section.replace(/\d+/, '').toUpperCase() || 'A'
+                                section: finalSection
                             });
                         }
                     }
                 }
             }
-
             return students;
         }
 
@@ -834,7 +827,7 @@
                 const matchesSearch = searchTerm === "" || 
                     student.name.toLowerCase().includes(searchTerm) ||
                     student.surname.toLowerCase().includes(searchTerm) ||
-                    student.studentNumber.includes(searchTerm);
+                    (student.studentNumber && student.studentNumber.includes(searchTerm)); // studentNumber kontrolü eklendi
                 
                 const matchesGrade = currentGradeFilter === null || student.grade === currentGradeFilter;
                 
@@ -870,7 +863,7 @@
                                     ${student.name} ${student.surname}
                                 </div>
                                 <div class="text-sm text-gray-500">
-                                    No: ${student.studentNumber} | ${student.grade}.${student.section}
+                                    ${student.studentNumber ? `No: ${student.studentNumber} | ` : ''}${student.grade}.${student.section}
                                 </div>
                             </div>
                             ${hasComment ? '<span class="ml-2 text-green-500">✅</span>' : ''}
@@ -918,6 +911,12 @@
 
         // Student CRUD operations
         function showAddStudent() {
+            // Clear form and set to add mode
+            const form = document.getElementById('add-student-form');
+            form.reset();
+            form.onsubmit = (event) => addStudent(event); // Ensure it's add mode
+            document.querySelector('#add-student-modal h3').textContent = 'Yeni Öğrenci Ekle';
+            document.querySelector('#add-student-modal button[type="submit"]').textContent = 'Ekle';
             document.getElementById('add-student-modal').classList.remove('hidden');
         }
 
@@ -934,10 +933,17 @@
                 id: generateId(),
                 name: formData.get('name'),
                 surname: formData.get('surname'),
-                studentNumber: formData.get('studentNumber'),
+                studentNumber: formData.get('studentNumber') || undefined, // Opsiyonel hale getirildi
                 grade: parseInt(formData.get('grade')),
                 section: formData.get('section'),
             };
+
+            // Section validation for client-side (redundant with server but good practice)
+            const validSections = ["A", "B", "C", "D", "E"];
+            if (!validSections.includes(student.section)) {
+                showToast('Geçersiz şube! Şube A-E arasında olmalı.', 'error');
+                return;
+            }
 
             students.push(student);
             saveData();
@@ -956,7 +962,7 @@
             const form = document.getElementById('add-student-form');
             form.name.value = student.name;
             form.surname.value = student.surname;
-            form.studentNumber.value = student.studentNumber;
+            form.studentNumber.value = student.studentNumber || ''; // Handle undefined studentNumber
             form.grade.value = student.grade;
             form.section.value = student.section;
             
@@ -965,7 +971,7 @@
             document.querySelector('#add-student-modal h3').textContent = 'Öğrenci Düzenle';
             document.querySelector('#add-student-modal button[type="submit"]').textContent = 'Güncelle';
             
-            showAddStudent();
+            document.getElementById('add-student-modal').classList.remove('hidden');
         }
 
         function updateStudent(event, id) {
@@ -975,13 +981,24 @@
             const studentIndex = students.findIndex(s => s.id === id);
             if (studentIndex === -1) return;
             
-            students[studentIndex] = {
-                ...students[studentIndex],
+            const updatedStudentData = {
                 name: formData.get('name'),
                 surname: formData.get('surname'),
-                studentNumber: formData.get('studentNumber'),
+                studentNumber: formData.get('studentNumber') || undefined, // Opsiyonel hale getirildi
                 grade: parseInt(formData.get('grade')),
                 section: formData.get('section'),
+            };
+
+            // Section validation for client-side (redundant with server but good practice)
+            const validSections = ["A", "B", "C", "D", "E"];
+            if (!validSections.includes(updatedStudentData.section)) {
+                showToast('Geçersiz şube! Şube A-E arasında olmalı.', 'error');
+                return;
+            }
+
+            students[studentIndex] = {
+                ...students[studentIndex],
+                ...updatedStudentData
             };
 
             saveData();
@@ -991,11 +1008,7 @@
             renderStudentsList();
             updateStats();
             
-            // Reset form to add mode
-            const form = document.getElementById('add-student-form');
-            form.onsubmit = addStudent;
-            document.querySelector('#add-student-modal h3').textContent = 'Yeni Öğrenci Ekle';
-            document.querySelector('#add-student-modal button[type="submit"]').textContent = 'Ekle';
+            // Reset form to add mode (handled in showAddStudent on next click)
         }
 
         function deleteStudent(id) {
@@ -1041,7 +1054,7 @@
                 renderStudentsList();
                 updateStats();
             } else {
-                showToast('Geçerli öğrenci verisi bulunamadı. Format: Ad Soyad Numara Sınıf Şube', 'error');
+                showToast('Geçerli öğrenci verisi bulunamadı. Format: Ad Soyad Numara Sınıf Şube (numara opsiyonel)', 'error');
             }
         }
 
@@ -1053,7 +1066,7 @@
                 const matchesSearch = searchTerm === "" || 
                     student.name.toLowerCase().includes(searchTerm) ||
                     student.surname.toLowerCase().includes(searchTerm) ||
-                    student.studentNumber.includes(searchTerm);
+                    (student.studentNumber && student.studentNumber.includes(searchTerm)); // studentNumber kontrolü eklendi
                 
                 const hasComment = studentComments.some(comment => comment.studentId === student.id);
                 const matchesPending = !showPendingOnly || !hasComment;
@@ -1086,7 +1099,7 @@
                                     ${student.name} ${student.surname}
                                 </div>
                                 <div class="text-sm opacity-70">
-                                    ${student.grade}.${student.section} - No: ${student.studentNumber}
+                                    ${student.studentNumber ? `No: ${student.studentNumber} | ` : ''}${student.grade}.${student.section}
                                 </div>
                             </div>
                             ${hasComment ? '<span class="text-green-500">✅</span>' : ''}
@@ -1147,7 +1160,7 @@
                             ${selectedStudent.grade}. Sınıf ${selectedStudent.section} Şubesi
                         </div>
                         <div class="text-white/80">
-                            Öğrenci No: ${selectedStudent.studentNumber}
+                            ${selectedStudent.studentNumber ? `Öğrenci No: ${selectedStudent.studentNumber}` : 'Öğrenci Numarası Yok'}
                         </div>
                     </div>
                 </div>
@@ -1327,7 +1340,7 @@
                                 ${student.name} ${student.surname}
                             </div>
                             <div class="text-sm text-gray-500">
-                                ${student.grade}.${student.section} - No: ${student.studentNumber}
+                                ${student.grade}.${student.section} - No: ${student.studentNumber || 'Yok'}
                             </div>
                         </div>
                         

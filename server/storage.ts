@@ -1,3 +1,4 @@
+// omeryol/karne-gorusleri/karne-gorusleri-7be580864cf894b02555a07c341fcf6344ae8978/server/storage.ts
 import type { Student, InsertStudent, CommentTemplate, InsertCommentTemplate, StudentComment, InsertStudentComment } from "@shared/schema";
 
 export interface IStorage {
@@ -44,9 +45,15 @@ export class MemStorage implements IStorage {
   }
 
   async createStudent(student: InsertStudent): Promise<Student> {
+    // Ensure section is one of A-E, default to 'A' if invalid/missing
+    const validSections = ["A", "B", "C", "D", "E"];
+    const finalSection = validSections.includes(student.section) ? student.section : 'A';
+
     const newStudent: Student = {
       ...student,
       id: crypto.randomUUID(),
+      // studentNumber is already optional thanks to InsertStudent type from Zod schema
+      section: finalSection // Use validated/defaulted section
     };
     this.students.push(newStudent);
     return newStudent;
@@ -56,7 +63,18 @@ export class MemStorage implements IStorage {
     const index = this.students.findIndex(s => s.id === id);
     if (index === -1) throw new Error("Student not found");
     
-    this.students[index] = { ...this.students[index], ...student };
+    // Validate and potentially update section if provided
+    let updatedSection = this.students[index].section;
+    if (student.section !== undefined) {
+      const validSections = ["A", "B", "C", "D", "E"];
+      updatedSection = validSections.includes(student.section) ? student.section : this.students[index].section;
+    }
+
+    this.students[index] = { 
+      ...this.students[index], 
+      ...student,
+      section: updatedSection // Use validated/existing section
+    };
     return this.students[index];
   }
 
@@ -191,7 +209,7 @@ export class MemStorage implements IStorage {
 
     const allComments = [
       // 5. Sınıf 2. Dönem örnekleri
-      { grade: 5, semester: 2, text: "Sevgili [Öğrenci Adı], ikinci dönemde gösterdiğin gelişim gerçekten takdire şayan. Matematik derslerinde kesirler konusunda ustalaştın. Problem çözme becerilerinde önemli ilerleme kaydettiniz. Sınıf içi etkinliklerde liderlik vasfın öne çıkıyor. Arkadaşlarınla olan iletişimin güçlü ve olumlu. Ödev disiplinin örnek teşkil ediyor. Bu başarılı dönemin sonunda hedeflediğin noktaya ulaştın. Üçüncü sınıfa hazır olduğunu düşünüyorum." },
+      { grade: 5, semester: 2, text: "Sevgili [Öğrenci Adı], ikinci dönemde gösterdiğin gelişim gerçekten takdire şayan. Matematik derslerinde kesirler konusunda ustalaştın. Problem çözme becerilerinde önemli ilerleme kaydettiniz. Sınıf içi etkinliklerde liderlik vasfın öne çıkıyor. Arkadaşlarınla olan iletişimin güçlü ve olumlu. Ödev disiplinin örnek teşkil ediyor. Bu başarılı dönemin sonunda hedeflediğin noktaya ulaştın. Yeni döneme hazır olduğunu düşünüyorum." },
       
       // 6. Sınıf örnekleri
       { grade: 6, semester: 1, text: "Merhaba [Öğrenci Adı], altıncı sınıfa geçiş sürecinde adaptasyon yeteneğin dikkat çekici. Artan ders yükü karşısında sorumluluklarını yerine getiriyorsun. Fen bilimleri dersinde laboratuvar çalışmalarına olan ilgin ve başarın övgüye değer. Hipotez kurma ve deney tasarlama becerilerinde gelişim gösteriyorsun. Grup çalışmalarında aktif rol alıyorsun. Araştırma projelerinde yaratıcı fikirler üretiyorsun. Bu bilimsel yaklaşımın gelecekte sana büyük avantajlar sağlayacak." },

@@ -24,7 +24,7 @@ interface Student {
   id: string;
   name: string;
   surname: string;
-  studentNumber: string;
+  studentNumber?: string; // studentNumber opsiyonel yapıldı
   grade: number;
   section: string;
 }
@@ -109,7 +109,7 @@ export default function StudentManagement() {
     const matchesSearch = searchTerm === "" || 
       student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       student.surname.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      student.studentNumber.includes(searchTerm);
+      (student.studentNumber && student.studentNumber.includes(searchTerm)); // studentNumber kontrolü eklendi
     
     const matchesGrade = gradeFilter === null || student.grade === gradeFilter;
     
@@ -132,18 +132,23 @@ export default function StudentManagement() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const student = {
+    const studentData: Omit<Student, 'id'> = {
       name: formData.get('name') as string,
       surname: formData.get('surname') as string,
-      studentNumber: formData.get('studentNumber') as string,
       grade: parseInt(formData.get('grade') as string),
       section: formData.get('section') as string,
     };
+    // Öğrenci numarası sadece boş değilse eklenir
+    const studentNumber = formData.get('studentNumber') as string;
+    if (studentNumber) {
+      studentData.studentNumber = studentNumber;
+    }
+
 
     if (editingStudent) {
-      updateStudentMutation.mutate({ ...student, id: editingStudent.id });
+      updateStudentMutation.mutate({ ...studentData, id: editingStudent.id });
     } else {
-      createStudentMutation.mutate(student);
+      createStudentMutation.mutate(studentData);
     }
   };
 
@@ -158,6 +163,8 @@ export default function StudentManagement() {
       </div>
     );
   }
+
+  const sections = ["A", "B", "C", "D", "E"]; // Şube seçenekleri
 
   return (
     <motion.div
@@ -188,7 +195,10 @@ export default function StudentManagement() {
             Toplu Yükle
           </Button>
           <Button 
-            onClick={() => setShowAddForm(true)}
+            onClick={() => {
+              setEditingStudent(null); // Yeni öğrenci eklerken düzenleme modunu kapat
+              setShowAddForm(true);
+            }}
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
           >
             <UserPlus className="h-4 w-4 mr-2" />
@@ -281,7 +291,7 @@ export default function StudentManagement() {
                         {student.name} {student.surname}
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        No: {student.studentNumber} | {student.grade}.{student.section}
+                        {student.studentNumber && `No: ${student.studentNumber} | `}{student.grade}.{student.section}
                       </div>
                     </div>
                   </div>
@@ -290,7 +300,10 @@ export default function StudentManagement() {
                     <Button
                       size="sm"
                       variant="outline"
-                      onClick={() => setEditingStudent(student)}
+                      onClick={() => {
+                        setEditingStudent(student);
+                        setShowAddForm(true); // Düzenleme modunda modalı aç
+                      }}
                     >
                       <Edit className="h-4 w-4" />
                     </Button>
@@ -365,11 +378,11 @@ export default function StudentManagement() {
                     </div>
                     
                     <div>
-                      <label className="text-sm font-medium">Öğrenci Numarası</label>
+                      <label className="text-sm font-medium">Öğrenci Numarası (Opsiyonel)</label> {/* Opsiyonel belirtildi */}
                       <Input
                         name="studentNumber"
                         defaultValue={editingStudent?.studentNumber || ""}
-                        required
+                        type="text" // Tip metin olarak ayarlandı
                       />
                     </div>
                     
@@ -390,12 +403,16 @@ export default function StudentManagement() {
                       </div>
                       <div>
                         <label className="text-sm font-medium">Şube</label>
-                        <Input
+                        <select
                           name="section"
                           defaultValue={editingStudent?.section || "A"}
-                          placeholder="A"
+                          className="w-full h-10 px-3 py-2 text-sm rounded-md border border-input bg-background"
                           required
-                        />
+                        >
+                          {sections.map(sec => (
+                            <option key={sec} value={sec}>{sec}</option>
+                          ))}
+                        </select>
                       </div>
                     </div>
                     
@@ -451,13 +468,14 @@ export default function StudentManagement() {
                     Öğrenci bilgilerini aşağıdaki formatlardan birinde yapıştırın:
                     <br />• Ad Soyad Numara Sınıf Şube (örn: Ahmet Yılmaz 123 5 A)
                     <br />• Ad,Soyad,Numara,Sınıf,Şube (virgülle ayrılmış)
+                    <br />• Ad Soyad Sınıf Şube (numara olmadan)
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Textarea
                     placeholder={`Ahmet Yılmaz 123 5 A
 Ayşe Demir 124 5 A
-Mehmet Kaya 125 5 B`}
+Mehmet Kaya 5 B`} {/* Numara olmadan örnek eklendi */}
                     value={bulkData}
                     onChange={(e) => setBulkData(e.target.value)}
                     rows={10}
