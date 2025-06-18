@@ -613,48 +613,69 @@
         function parseStudentData(text) {
             const lines = text.split('\n').filter(line => line.trim());
             const students = [];
-            const validSections = ["A", "B", "C", "D", "E"]; // Moved here for local usage
+            const validSections = ["A", "B", "C", "D", "E"];
 
             for (const line of lines) {
                 const parts = line.includes(',') 
                     ? line.split(',').map(p => p.trim())
                     : line.trim().split(/\s+/);
 
-                if (parts.length >= 4) { // Adjusted to allow for missing student number
-                    const name = parts[0];
-                    const surname = parts[1];
-                    let studentNumber;
-                    let gradeStr;
-                    let section;
+                let name, surname, studentNumber, grade, section;
 
-                    // Logic to determine if studentNumber is present or skipped
-                    if (parts.length === 5) { // Assuming format: Name Surname StudentNumber Grade Section
-                        studentNumber = parts[2];
-                        gradeStr = parts[3];
-                        section = parts[4];
-                    } else if (parts.length === 4) { // Assuming format: Name Surname Grade Section (studentNumber skipped)
-                        studentNumber = undefined; // Student number is optional
-                        gradeStr = parts[2];
-                        section = parts[3];
-                    } else {
-                        continue; // Skip invalid formats
-                    }
-                    
-                    const gradeMatch = gradeStr.match(/(\d+)/);
-                    if (gradeMatch) {
-                        const grade = parseInt(gradeMatch[1]);
-                        const finalSection = (section || 'A').toUpperCase(); // Default to 'A' if empty/null, then to upper case
+                if (parts.length >= 2) {
+                    name = parts[0];
+                    surname = parts[1];
+                    studentNumber = undefined; // Default to undefined
+                    grade = 5; // Default grade
+                    section = 'A'; // Default section
 
-                        if (grade >= 5 && grade <= 8 && validSections.includes(finalSection)) {
-                            students.push({
-                                name,
-                                surname,
-                                studentNumber: studentNumber,
-                                grade,
-                                section: finalSection
-                            });
+                    // Check for optional studentNumber, grade, section
+                    // Case 1: "Ad Soyad"
+                    if (parts.length === 2) {
+                        // All defaults apply
+                    } 
+                    // Case 2: "Ad Soyad Numara" or "Ad Soyad Sınıf" (if Sınıf is not numeric, treat as part of student number/name)
+                    // This scenario is tricky, we prioritize finding grade/section if present
+                    // To simplify, let's assume if there are more than 2 parts,
+                    // we first try to parse as "Ad Soyad Numara Sınıf Şube" or "Ad Soyad Sınıf Şube"
+                    else if (parts.length >= 4) { // Try "Ad Soyad Numara Sınıf Şube" or "Ad Soyad Sınıf Şube"
+                        const potentialGradePart = parts[parts.length - 2]; // Second to last
+                        const potentialSectionPart = parts[parts.length - 1]; // Last
+
+                        const gradeMatch = potentialGradePart.match(/(\d+)/);
+
+                        if (gradeMatch) {
+                            grade = parseInt(gradeMatch[1]);
+                            section = (potentialSectionPart || 'A').toUpperCase();
+
+                            if (parts.length === 5) { // Assuming Ad Soyad Numara Sınıf Şube
+                                studentNumber = parts[2];
+                            } else if (parts.length === 4) { // Assuming Ad Soyad Sınıf Şube (no number)
+                                studentNumber = undefined;
+                            }
+                        } else { // Fallback if grade/section not at expected positions, treat as just name/surname for now
+                            // If it's not a clear format, we'll use defaults
                         }
                     }
+                     // Else (parts.length === 3), it's ambiguous. e.g., "Ad Soyad X", X could be anything.
+                     // For simplicity, if 3 parts, assume it's "Ad Soyad Grade/SectionCombined" (e.g. "5A") or just a random third word.
+                     // Let's stick to the 4 or 5 part parsing for structured data beyond name/surname.
+
+                    // Validate grade and section (after parsing attempts)
+                    if (grade < 5 || grade > 8) {
+                        grade = 5; // Default to 5th grade if invalid
+                    }
+                    if (!validSections.includes(section)) {
+                        section = 'A'; // Default to 'A' section if invalid
+                    }
+
+                    students.push({
+                        name,
+                        surname,
+                        studentNumber,
+                        grade,
+                        section
+                    });
                 }
             }
             return students;
@@ -827,7 +848,7 @@
                 const matchesSearch = searchTerm === "" || 
                     student.name.toLowerCase().includes(searchTerm) ||
                     student.surname.toLowerCase().includes(searchTerm) ||
-                    (student.studentNumber && student.studentNumber.includes(searchTerm)); // studentNumber kontrolü eklendi
+                    (student.studentNumber && student.studentNumber.includes(searchTerm));
                 
                 const matchesGrade = currentGradeFilter === null || student.grade === currentGradeFilter;
                 
@@ -933,12 +954,11 @@
                 id: generateId(),
                 name: formData.get('name'),
                 surname: formData.get('surname'),
-                studentNumber: formData.get('studentNumber') || undefined, // Opsiyonel hale getirildi
+                studentNumber: formData.get('studentNumber') || undefined,
                 grade: parseInt(formData.get('grade')),
                 section: formData.get('section'),
             };
 
-            // Section validation for client-side (redundant with server but good practice)
             const validSections = ["A", "B", "C", "D", "E"];
             if (!validSections.includes(student.section)) {
                 showToast('Geçersiz şube! Şube A-E arasında olmalı.', 'error');
@@ -962,7 +982,7 @@
             const form = document.getElementById('add-student-form');
             form.name.value = student.name;
             form.surname.value = student.surname;
-            form.studentNumber.value = student.studentNumber || ''; // Handle undefined studentNumber
+            form.studentNumber.value = student.studentNumber || '';
             form.grade.value = student.grade;
             form.section.value = student.section;
             
@@ -984,12 +1004,11 @@
             const updatedStudentData = {
                 name: formData.get('name'),
                 surname: formData.get('surname'),
-                studentNumber: formData.get('studentNumber') || undefined, // Opsiyonel hale getirildi
+                studentNumber: formData.get('studentNumber') || undefined,
                 grade: parseInt(formData.get('grade')),
                 section: formData.get('section'),
             };
 
-            // Section validation for client-side (redundant with server but good practice)
             const validSections = ["A", "B", "C", "D", "E"];
             if (!validSections.includes(updatedStudentData.section)) {
                 showToast('Geçersiz şube! Şube A-E arasında olmalı.', 'error');
@@ -1007,8 +1026,6 @@
             renderStudentGradeStats();
             renderStudentsList();
             updateStats();
-            
-            // Reset form to add mode (handled in showAddStudent on next click)
         }
 
         function deleteStudent(id) {
@@ -1054,7 +1071,7 @@
                 renderStudentsList();
                 updateStats();
             } else {
-                showToast('Geçerli öğrenci verisi bulunamadı. Format: Ad Soyad Numara Sınıf Şube (numara opsiyonel)', 'error');
+                showToast('Geçerli öğrenci verisi bulunamadı. Format: Ad Soyad, Ad Soyad Numara Sınıf Şube (numara opsiyonel)', 'error');
             }
         }
 
@@ -1066,7 +1083,7 @@
                 const matchesSearch = searchTerm === "" || 
                     student.name.toLowerCase().includes(searchTerm) ||
                     student.surname.toLowerCase().includes(searchTerm) ||
-                    (student.studentNumber && student.studentNumber.includes(searchTerm)); // studentNumber kontrolü eklendi
+                    (student.studentNumber && student.studentNumber.includes(searchTerm));
                 
                 const hasComment = studentComments.some(comment => comment.studentId === student.id);
                 const matchesPending = !showPendingOnly || !hasComment;

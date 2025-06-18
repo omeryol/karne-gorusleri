@@ -1,4 +1,3 @@
-// omeryol/karne-gorusleri/karne-gorusleri-7be580864cf894b02555a07c341fcf6344ae8978/client/src/lib/utils.ts
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -57,49 +56,57 @@ export function parseStudentData(text: string): Array<{
   const validSections = ["A", "B", "C", "D", "E"]; // Geçerli şube değerleri
 
   for (const line of lines) {
-    // Parse different formats: "Ad Soyad 123 5A" or "Ad,Soyad,123,5,A"
+    // Parse different formats: "Ad Soyad 123 5A" or "Ad,Soyad,123,5,A" or "Ad Soyad"
     const parts = line.includes(',') 
       ? line.split(',').map(p => p.trim())
       : line.trim().split(/\s+/)
 
-    // Adjusted logic for optional studentNumber and strict section parsing
-    let name: string, surname: string, studentNumber: string | undefined, gradeStr: string, section: string;
+    let name: string, surname: string, studentNumber: string | undefined, grade: number, section: string;
 
-    if (parts.length >= 4) { // Minimum required fields: name, surname, grade, section (studentNumber can be missing)
+    if (parts.length >= 2) { // Minimum required fields: name, surname
       name = parts[0];
       surname = parts[1];
       
-      // Determine if studentNumber is present
-      const potentialStudentNumber = parts[2];
-      const potentialGradeStr = parts[3];
+      // Default values if not provided
+      studentNumber = undefined;
+      grade = 5; // Default grade
+      section = 'A'; // Default section
 
-      if (potentialGradeStr.match(/(\d+)/)) { // Assuming if the 4th part is a grade, then 3rd part is studentNumber
-        studentNumber = potentialStudentNumber;
-        gradeStr = potentialGradeStr;
-        section = parts[4] || ''; // section can be empty if not provided, will default to 'A' later
-      } else { // If 4th part is not a grade, then 3rd part is grade, and studentNumber is missing
-        studentNumber = undefined; // Student number is optional
-        gradeStr = potentialStudentNumber;
-        section = parts[3] || ''; // section is 4th part if studentNumber is missing
-      }
+      if (parts.length >= 3) { // Potentially studentNumber, grade, section or just grade, section
+        const thirdPart = parts[2];
+        const fourthPart = parts[3]; // Could be section or grade
 
-      // Extract grade number
-      const gradeMatch = gradeStr.match(/(\d+)/)
-      if (gradeMatch) {
-        const grade = parseInt(gradeMatch[1])
-        const finalSection = (section.replace(/\d+/, '').toUpperCase() || 'A'); // Extract only alpha part for section and default to 'A'
-        
-        // Validate section against allowed values
-        if (grade >= 5 && grade <= 8 && validSections.includes(finalSection)) {
-          students.push({
-            name,
-            surname,
-            studentNumber: studentNumber, // studentNumber could be undefined
-            grade,
-            section: finalSection
-          });
+        if (thirdPart.match(/^\d+$/) && parts.length >= 4) { // Assumed StudentNumber, Grade, Section
+          studentNumber = thirdPart;
+          const gradeMatch = fourthPart.match(/(\d+)/);
+          if (gradeMatch) {
+            grade = parseInt(gradeMatch[1]);
+          }
+          section = (parts[4] || 'A').toUpperCase(); // If 5 parts, 5th is section
+        } else { // Assumed Grade, Section (studentNumber skipped)
+          const gradeMatch = thirdPart.match(/(\d+)/);
+          if (gradeMatch) {
+            grade = parseInt(gradeMatch[1]);
+          }
+          section = (fourthPart || 'A').toUpperCase(); // If 4 parts, 4th is section
         }
       }
+
+      // Final validation and default assignment for grade and section
+      if (grade < 5 || grade > 8) {
+          grade = 5; // Default to 5th grade if invalid
+      }
+      if (!validSections.includes(section)) {
+          section = 'A'; // Default to 'A' section if invalid
+      }
+
+      students.push({
+        name,
+        surname,
+        studentNumber,
+        grade,
+        section
+      });
     }
   }
 
