@@ -1,0 +1,33 @@
+Karne Yorumları Yönetim Sistemi: İşlevsel Rapor
+Bu uygulama, öğretmenlerin öğrenci karne yorumlarını etkili bir şekilde oluşturmalarına, düzenlemelerine, yönetmelerine ve depolamalarına olanak tanıyan, tek sayfalık, web tabanlı ve çevrimdışı çalışabilen kapsamlı bir araçtır.
+1. Genel Mimari ve Kullanım Deneyimi
+Uygulama, tüm işlevselliği tek bir HTML sayfası üzerinden sunan Tek Sayfa Uygulaması (SPA) prensibiyle geliştirilmiştir. Bu yapı, kullanıcıların farklı bölümler arasında hızlı ve kesintisiz bir şekilde geçiş yapmasını sağlar. İnternet bağlantısı olmasa bile sorunsuz çalışabilen Çevrimdışı Çalışabilirlik (PWA) özelliği sayesinde, öğretmenler internet erişiminin kısıtlı olduğu durumlarda bile işlerini aksatmadan yürütebilirler.
+Tüm ekran boyutlarına otomatik olarak uyum sağlayan Duyarlı Tasarım, tablet, mobil ve masaüstü gibi farklı cihazlarda rahat bir kullanım imkanı sunar. Öğrenci ve yorum verileri, kullanıcının tarayıcısında yerel olarak depolanır, bu da veri gizliliği ve güvenlik açısından önemli bir avantaj sağlar. Ayrıca, sınıf ve döneme göre değişen dinamik tema renkleri, uygulamanın görsel olarak daha zengin ve ayırt edici olmasını sağlar. Veriler yüklenirken veya işlemler yapılırken gösterilen yükleme animasyonları ve bildirim sistemleri, kullanıcının etkileşimde olduğu her anı bilgilendirici ve sorunsuz hale getirir.
+2. Öğrenci Yönetimi
+Öğrenci yönetimi bölümü, öğretmenlere öğrenci bilgilerini kolayca yönetme imkanı sunar:
+ * Öğrenci Ekleme:
+   * Manuel Giriş: Öğrenci adı, soyadı, sınıfı, şubesi ve numarası gibi bilgiler manuel olarak girilebilir.
+   * Toplu Yükleme: Öğrenci listeleri, metin kutusuna kopyalanarak veya bir dosya yüklenerek toplu bir şekilde sisteme aktarılabilir. Bu özellik, özellikle kalabalık sınıfları olan öğretmenler için büyük zaman tasarrufu sağlar.
+ * Listeleme, Filtreleme ve Arama: Eklenen tüm öğrenciler detaylı bir şekilde listelenir. Öğrenciler sınıf (5, 6, 7, 8) ve şubeye göre filtrelenebilir. Ayrıca, öğrenci listesi içinde isim veya numaraya göre anlık arama yapılabilir.
+ * Düzenleme ve Silme: Mevcut öğrenci bilgilerinde kolayca değişiklik yapılabilir. Tekil öğrencilerin yanı sıra, tüm öğrenci listesini tek bir tıklama ile temizleme veya uygulamanın tüm verilerini sıfırlama seçenekleri de mevcuttur.
+3. Yorum Oluşturma ve Atama
+Bu bölüm, uygulamanın ana işlevini oluşturan, öğrenciye özel karne yorumları hazırlama sürecini yönetir:
+ * Akıllı Öğrenci Seçimi: Yorum atanacak öğrenci, sol paneldeki filtrelenebilir ve aranabilir listeden kolayca seçilir. Seçilen öğrencinin temel bilgileri otomatik olarak görüntülenir.
+ * Kapsamlı Yorum Şablonları: Uygulama, 5., 6., 7. ve 8. sınıflar için ayrı ayrı, her sınıfın 1. ve 2. dönemi için özel olarak hazırlanmış binlerce yorum şablonu içerir. Bu şablonlar, öğrencilerin akademik başarısı, sosyal gelişimi, derse katılımı, tutum ve davranışları, özel yetenekleri, dikkat ve odaklanma becerileri, ödev alışkanlıkları, işbirliği becerileri gibi geniş bir yelpazedeki özelliklerini kapsar. Bu sayede, öğretmenler her türlü öğrenci profiline ve gelişim düzeyine uygun yorumları bulabilirler.
+ * Dinamik Yorum Oluşturma: Seçilen şablon yorumu, öğrencinin adına göre dinamik olarak kişiselleştirilir (örneğin, [Öğrenci Adı] alanı otomatik olarak öğrencinin adıyla dolar). Öğretmenler bu yorum üzerinde istediği gibi manuel düzenleme yapabilir.
+ * Karakter Sınırı Kontrolü: Yorumlar hazırlanırken, 500 karakterlik sınıra uyulup uyulmadığı anlık olarak bir karakter sayacı ile takip edilir. Bu, yorumların öz ve etkili kalmasını sağlar.
+ * Atanan Yorumların Yönetimi: Öğrenciye atanan yorumlar, ana ekranda listelenir ve bu yorumlar tek tek kaldırılabilir.
+ * Hızlı Kopyalama: Oluşturulan veya düzenlenmiş yorum metni, tek bir tıklamayla panoya kopyalanabilir, böylece e-okul gibi başka sistemlere kolayca aktarılabilir.
+ * Açılır Pencerede Atanan Yorumlar: Tüm öğrencilere atanmış yorumları görüntülemek için bir kullanım kılavuzu butonu bulunur. Bu butona tıklandığında, açılır bir pencerede (popup) tüm atanmış yorumlar öğrenci adlarına göre listelenir. Bu pencerede yorumların ekrana sığması sağlanmış olup, her bir yorum tek tek kopyalanabilir durumdadır. Bu sayede öğretmenler, toplu çıktı almadan veya tüm listeyi görüntülemeden de belirli yorumlara hızlıca erişip kopyalayabilirler.
+ * Filtreleme Özelliği: Henüz yorum atanmamış öğrencileri kolayca filtreleyerek eksik kalanların hızla tamamlanması sağlanır.
+4. Dashboard (Gösterge Paneli)
+Dashboard, karne süreci hakkında öğretmene hızlı ve görsel bir genel bakış sunar:
+ * Genel İstatistikler:
+   * Sisteme kayıtlı toplam öğrenci sayısı gösterilir.
+   * Yorumu tamamlanmış yorum atanan öğrenci sayısı net bir şekilde belirtilir.
+   * Henüz yorum atanmamış yorum bekleyen öğrenci sayısı kolayca görüntülenebilir.
+ * Tamamlanma Oranı: Tüm sürecin yüzde kaçının tamamlandığını gösteren görsel bir ilerleme çubuğu veya oran sunulur.
+ * Etkileşimli Özellikler: Dashboard üzerindeki istatistiklere tıklama özelliği eklenmiştir. Örneğin, "Yorum Bekleyen Öğrenci Sayısı"na tıklandığında, doğrudan yorum atama ekranına yönlendirilerek bu öğrencilerin listesi gösterilebilir. Bu, öğretmenin iş akışını hızlandırır ve eksik kalan alanlara odaklanmasını sağlar.
+ * Sınıf Bazında Özet: Hangi sınıfta kaç öğrencinin bulunduğu ve bu sınıflardaki yorum tamamlama oranları gibi özet istatistikler sunulur (Bu kısım, detaylı analitik için daha da geliştirilebilir).
+Bu Karne Yorumları Yönetim Sistemi, öğretmenlerin yoğun karne dönemlerinde yaşadığı zaman ve emek kaybını en aza indirmek, daha tutarlı ve kişiselleştirilmiş yorumlar oluşturmalarını sağlamak amacıyla titizlikle tasarlanmış güçlü bir araçtır.
+Uygulamanın bu işlevleri hakkında eklemek veya sormak istediğiniz başka bir şey var mı?

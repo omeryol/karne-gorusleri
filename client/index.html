@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/generated-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Karne Yorumları Yönetim Sistemi - Öğretmenlerin karne yorumlarını kolayca oluşturması ve yönetmesi için tasarlanmış modern web uygulaması" />
+    <meta name="keywords" content="karne yorumları, öğrenci değerlendirme, eğitim yönetimi, öğretmen araçları" />
+    <meta property="og:title" content="Karne Yorumları Yönetim Sistemi" />
+    <meta property="og:description" content="Öğretmenlerin karne yorumlarını etkili bir şekilde oluşturmalarına yardımcı olan kapsamlı araç" />
+    <meta property="og:type" content="website" />
+    <title>Karne Yorumları Yönetim Sistemi</title>
+    <style>
+      :root {
+        --primary: 217 91% 60%;
+        --primary-foreground: 222 84% 5%;
+        --secondary: 217 32% 17%;
+        --secondary-foreground: 210 40% 98%;
+        --accent: 217 91% 60%;
+        --accent-foreground: 222 84% 5%;
+        --background: 0 0% 100%;
+        --foreground: 222 84% 5%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 84% 5%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 84% 5%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215 16% 47%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 217 91% 60%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+        --radius: 0.5rem;
+      }
+
+      .dark {
+        --primary: 217 91% 60%;
+        --primary-foreground: 222 84% 5%;
+        --secondary: 217 32% 17%;
+        --secondary-foreground: 210 40% 98%;
+        --accent: 217 91% 60%;
+        --accent-foreground: 222 84% 5%;
+        --background: 222 84% 5%;
+        --foreground: 210 40% 98%;
+        --card: 222 84% 5%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222 84% 5%;
+        --popover-foreground: 210 40% 98%;
+        --muted: 217 32% 17%;
+        --muted-foreground: 215 16% 65%;
+        --border: 217 32% 17%;
+        --input: 217 32% 17%;
+        --ring: 217 91% 60%;
+        --destructive: 0 62% 30%;
+        --destructive-foreground: 210 40% 98%;
+      }
+
+      * {
+        border-color: hsl(var(--border));
+      }
+
+      body {
+        color: hsl(var(--foreground));
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        min-height: 100vh;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      .grade-5 { --theme-color: #4f46e5; }
+      .grade-6 { --theme-color: #059669; }
+      .grade-7 { --theme-color: #dc2626; }
+      .grade-8 { --theme-color: #7c2d12; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
