@@ -1,43 +1,48 @@
-// omeryol/karne-gorusleri/karne-gorusleri-7be580864cf894b02555a07c341fcf6344ae8978/shared/schema.ts
 import { z } from "zod";
 
-// Student schema
 export const studentSchema = z.object({
   id: z.string(),
-  name: z.string().min(1, "Öğrenci adı gerekli"),
-  surname: z.string().min(1, "Öğrenci soyadı gerekli"),
-  studentNumber: z.string().optional(), // Öğrenci numarası opsiyonel yapıldı
-  grade: z.number().min(5).max(8),
-  section: z.enum(["A", "B", "C", "D", "E"]), // Şube A-E arası kısıtlandı
+  name: z.string().min(1, "İsim gereklidir"),
+  class: z.enum(["5", "6", "7", "8"]),
+  section: z.enum(["A", "B", "C", "D"]),
+  createdAt: z.date().default(() => new Date()),
 });
 
-export const insertStudentSchema = studentSchema.omit({ id: true });
-export type InsertStudent = z.infer<typeof insertStudentSchema>;
-export type Student = z.infer<typeof studentSchema>;
-
-// Comment template schema
-export const commentTemplateSchema = z.object({
-  id: z.string(),
-  text: z.string().min(400).max(500), // 450-500 karakter arası
-  grade: z.number().min(5).max(8),
-  semester: z.number().min(1).max(2),
-  category: z.string(), // akademik, sosyal, davranış vb.
-  number: z.number(), // numara
-});
-
-export const insertCommentTemplateSchema = commentTemplateSchema.omit({ id: true });
-export type InsertCommentTemplate = z.infer<typeof insertCommentTemplateSchema>;
-export type CommentTemplate = z.infer<typeof commentTemplateSchema>;
-
-// Student comment (assigned comment) schema
-export const studentCommentSchema = z.object({
+export const commentSchema = z.object({
   id: z.string(),
   studentId: z.string(),
-  commentText: z.string().max(500),
-  originalTemplateId: z.string().optional(),
-  createdAt: z.date(),
+  class: z.enum(["5", "6", "7", "8"]),
+  section: z.enum(["A", "B", "C", "D"]),
+  semester: z.enum(["1", "2"]),
+  text: z.string().min(1, "Yorum metni gereklidir").max(500, "Yorum 500 karakteri geçemez"),
+  tone: z.enum(["positive", "neutral", "negative"]),
+  tags: z.array(z.string()).default([]),
+  createdAt: z.date().default(() => new Date()),
+  updatedAt: z.date().default(() => new Date()),
 });
 
-export const insertStudentCommentSchema = studentCommentSchema.omit({ id: true, createdAt: true });
-export type InsertStudentComment = z.infer<typeof insertStudentCommentSchema>;
-export type StudentComment = z.infer<typeof studentCommentSchema>;
+export const templateSchema = z.object({
+  id: z.string(),
+  text: z.string(),
+  tone: z.enum(["positive", "neutral", "negative"]),
+  tags: z.array(z.string()),
+  category: z.string(),
+});
+
+export type Student = z.infer<typeof studentSchema>;
+export type Comment = z.infer<typeof commentSchema>;
+export type Template = z.infer<typeof templateSchema>;
+
+export type InsertStudent = z.infer<typeof studentSchema>;
+export type InsertComment = z.infer<typeof commentSchema>;
+export type InsertTemplate = z.infer<typeof templateSchema>;
+
+// User schema for authentication (if needed)
+export const userSchema = z.object({
+  id: z.number(),
+  username: z.string(),
+  password: z.string(),
+});
+
+export type User = z.infer<typeof userSchema>;
+export type InsertUser = Omit<User, "id">;
