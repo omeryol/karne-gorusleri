@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karne Asistanı - Öğretmen Yardımcısı</title>
+    <meta name="description" content="Öğretmenlerin karne yorumlarını hızla oluşturabilmeleri için sınıf bazlı şablonlar sunan öğretmen asistanı." />
+    <meta name="theme-color" content="#3b82f6" />
+    <link rel="manifest" href="./manifest.json" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: 'hsl(var(--primary))',
+              'primary-foreground': 'hsl(var(--primary-foreground))',
+              secondary: 'hsl(var(--secondary))',
+              'secondary-foreground': 'hsl(var(--secondary-foreground))',
+              muted: 'hsl(var(--muted))',
+              'muted-foreground': 'hsl(var(--muted-foreground))',
+              card: 'hsl(var(--card))',
+              'card-foreground': 'hsl(var(--card-foreground))'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 20 14.3% 4.1%;
+        --card: 0 0% 100%;
+        --card-foreground: 20 14.3% 4.1%;
+        --border: 20 5.9% 90%;
+        --primary: 207 90% 54%;
+        --primary-foreground: 211 100% 99%;
+        --secondary: 60 4.8% 95.9%;
+        --secondary-foreground: 24 9.8% 10%;
+        --muted: 60 4.8% 95.9%;
+        --muted-foreground: 25 5.3% 44.7%;
+      }
+      .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --primary: 207 90% 54%;
+        --primary-foreground: 211 100% 99%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      const { createElement: h, useState, useEffect } = React;
+      
+      // Storage yardımcı fonksiyonları
+      const storage = {
+        getStudents: (classNum, section) => {
+          const key = `students_${classNum}`;
+          const students = JSON.parse(localStorage.getItem(key) || '[]');
+          return students.filter(s => s.section === section);
+        },
+        saveStudent: (student) => {
+          const key = `students_${student.class}`;
+          const students = JSON.parse(localStorage.getItem(key) || '[]');
+          const index = students.findIndex(s => s.id === student.id);
+          if (index >= 0) {
+            students[index] = student;
+          } else {
+            students.push(student);
+          }
+          localStorage.setItem(key, JSON.stringify(students));
+        },
+        getComments: (classNum, section, semester) => {
+          const key = `comments_${classNum}_${semester}`;
+          const comments = JSON.parse(localStorage.getItem(key) || '[]');
+          return comments.filter(c => c.section === section);
+        },
+        saveComment: (comment) => {
+          const key = `comments_${comment.class}_${comment.semester}`;
+          const comments = JSON.parse(localStorage.getItem(key) || '[]');
+          const index = comments.findIndex(c => c.id === comment.id);
+          if (index >= 0) {
+            comments[index] = comment;
+          } else {
+            comments.push(comment);
+          }
+          localStorage.setItem(key, JSON.stringify(comments));
+        }
+      };
+
+      // Ana uygulama bileşeni
+      const KarneAsistani = () => {
+        const [selectedClass, setSelectedClass] = useState('5');
+        const [selectedSection, setSelectedSection] = useState('A');
+        const [selectedSemester, setSelectedSemester] = useState('1');
+        const [activeTab, setActiveTab] = useState('dashboard');
+        const [students, setStudents] = useState([]);
+        const [comments, setComments] = useState([]);
+        const [theme, setTheme] = useState('light');
+
+        useEffect(() => {
+          const savedTheme = localStorage.getItem('theme') || 'light';
+          setTheme(savedTheme);
+          document.documentElement.className = savedTheme === 'dark' ? 'dark' : '';
+        }, []);
+
+        useEffect(() => {
+          setStudents(storage.getStudents(selectedClass, selectedSection));
+          setComments(storage.getComments(selectedClass, selectedSection, selectedSemester));
+        }, [selectedClass, selectedSection, selectedSemester]);
+
+        const toggleTheme = () => {
+          const newTheme = theme === 'light' ? 'dark' : 'light';
+          setTheme(newTheme);
+          document.documentElement.className = newTheme === 'dark' ? 'dark' : '';
+          localStorage.setItem('theme', newTheme);
+        };
+
+        const addStudent = (name) => {
+          const student = {
+            id: Date.now().toString(),
+            name,
+            class: selectedClass,
+            section: selectedSection,
+            createdAt: new Date().toISOString()
+          };
+          storage.saveStudent(student);
+          setStudents(prev => [...prev, student]);
+        };
+
+        const addComment = (studentId, text, tone) => {
+          const comment = {
+            id: Date.now().toString(),
+            studentId,
+            text,
+            tone,
+            class: selectedClass,
+            section: selectedSection,
+            semester: selectedSemester,
+            createdAt: new Date().toISOString()
+          };
+          storage.saveComment(comment);
+          setComments(prev => [...prev, comment]);
+        };
+
+        return h('div', { className: 'min-h-screen bg-background text-foreground' }, [
+          // Header
+          h('header', { 
+            key: 'header',
+            className: 'bg-card border-b border-border p-4'
+          }, [
+            h('div', {
+              key: 'header-content',
+              className: 'max-w-7xl mx-auto flex justify-between items-center'
+            }, [
+              h('h1', {
+                key: 'title',
+                className: 'text-2xl font-bold text-primary'
+              }, 'Karne Asistanı'),
+              h('button', {
+                key: 'theme-toggle',
+                onClick: toggleTheme,
+                className: 'p-2 rounded-lg bg-secondary hover:bg-muted transition-colors'
+              }, theme === 'light' ? '🌙' : '☀️')
+            ])
+          ]),
+
+          // Navigation
+          h('nav', {
+            key: 'nav',
+            className: 'bg-card border-b border-border p-4'
+          }, [
+            h('div', {
+              key: 'nav-content',
+              className: 'max-w-7xl mx-auto flex gap-4'
+            }, [
+              h('select', {
+                key: 'class-select',
+                value: selectedClass,
+                onChange: (e) => setSelectedClass(e.target.value),
+                className: 'px-3 py-2 border border-border rounded-md bg-background'
+              }, [
+                h('option', { key: '5', value: '5' }, '5. Sınıf'),
+                h('option', { key: '6', value: '6' }, '6. Sınıf'),
+                h('option', { key: '7', value: '7' }, '7. Sınıf'),
+                h('option', { key: '8', value: '8' }, '8. Sınıf')
+              ]),
+              h('select', {
+                key: 'section-select',
+                value: selectedSection,
+                onChange: (e) => setSelectedSection(e.target.value),
+                className: 'px-3 py-2 border border-border rounded-md bg-background'
+              }, [
+                h('option', { key: 'A', value: 'A' }, 'A Şubesi'),
+                h('option', { key: 'B', value: 'B' }, 'B Şubesi'),
+                h('option', { key: 'C', value: 'C' }, 'C Şubesi'),
+                h('option', { key: 'D', value: 'D' }, 'D Şubesi')
+              ]),
+              h('select', {
+                key: 'semester-select',
+                value: selectedSemester,
+                onChange: (e) => setSelectedSemester(e.target.value),
+                className: 'px-3 py-2 border border-border rounded-md bg-background'
+              }, [
+                h('option', { key: '1', value: '1' }, '1. Dönem'),
+                h('option', { key: '2', value: '2' }, '2. Dönem')
+              ])
+            ])
+          ]),
+
+          // Tabs
+          h('div', {
+            key: 'tabs',
+            className: 'bg-card border-b border-border'
+          }, [
+            h('div', {
+              key: 'tab-buttons',
+              className: 'max-w-7xl mx-auto flex'
+            }, [
+              h('button', {
+                key: 'dashboard-tab',
+                onClick: () => setActiveTab('dashboard'),
+                className: `px-6 py-3 font-medium ${activeTab === 'dashboard' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`
+              }, 'Genel Bakış'),
+              h('button', {
+                key: 'students-tab',
+                onClick: () => setActiveTab('students'),
+                className: `px-6 py-3 font-medium ${activeTab === 'students' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`
+              }, 'Öğrenciler'),
+              h('button', {
+                key: 'comments-tab',
+                onClick: () => setActiveTab('comments'),
+                className: `px-6 py-3 font-medium ${activeTab === 'comments' ? 'border-b-2 border-primary text-primary' : 'text-muted-foreground hover:text-foreground'}`
+              }, 'Yorumlar')
+            ])
+          ]),
+
+          // Content
+          h('main', {
+            key: 'main',
+            className: 'max-w-7xl mx-auto p-6'
+          }, [
+            // Dashboard Tab
+            activeTab === 'dashboard' && h('div', {
+              key: 'dashboard',
+              className: 'space-y-6'
+            }, [
+              h('div', {
+                key: 'stats',
+                className: 'grid grid-cols-1 md:grid-cols-3 gap-6'
+              }, [
+                h('div', {
+                  key: 'students-stat',
+                  className: 'bg-card border border-border rounded-lg p-6'
+                }, [
+                  h('h3', { key: 'stat-title', className: 'text-lg font-semibold mb-2' }, 'Toplam Öğrenci'),
+                  h('p', { key: 'stat-number', className: 'text-3xl font-bold text-primary' }, students.length)
+                ]),
+                h('div', {
+                  key: 'comments-stat',
+                  className: 'bg-card border border-border rounded-lg p-6'
+                }, [
+                  h('h3', { key: 'stat-title', className: 'text-lg font-semibold mb-2' }, 'Toplam Yorum'),
+                  h('p', { key: 'stat-number', className: 'text-3xl font-bold text-primary' }, comments.length)
+                ]),
+                h('div', {
+                  key: 'class-stat',
+                  className: 'bg-card border border-border rounded-lg p-6'
+                }, [
+                  h('h3', { key: 'stat-title', className: 'text-lg font-semibold mb-2' }, 'Aktif Sınıf'),
+                  h('p', { key: 'stat-number', className: 'text-3xl font-bold text-primary' }, `${selectedClass}${selectedSection}`)
+                ])
+              ])
+            ]),
+
+            // Students Tab
+            activeTab === 'students' && h('div', {
+              key: 'students',
+              className: 'space-y-6'
+            }, [
+              h('div', {
+                key: 'add-student',
+                className: 'bg-card border border-border rounded-lg p-6'
+              }, [
+                h('h3', { key: 'add-title', className: 'text-lg font-semibold mb-4' }, 'Yeni Öğrenci Ekle'),
+                h('div', {
+                  key: 'add-form',
+                  className: 'flex gap-4'
+                }, [
+                  h('input', {
+                    key: 'student-name',
+                    type: 'text',
+                    placeholder: 'Öğrenci adı...',
+                    className: 'flex-1 px-3 py-2 border border-border rounded-md bg-background',
+                    onKeyPress: (e) => {
+                      if (e.key === 'Enter' && e.target.value.trim()) {
+                        addStudent(e.target.value.trim());
+                        e.target.value = '';
+                      }
+                    }
+                  }),
+                  h('button', {
+                    key: 'add-btn',
+                    onClick: (e) => {
+                      const input = e.target.parentElement.querySelector('input');
+                      if (input.value.trim()) {
+                        addStudent(input.value.trim());
+                        input.value = '';
+                      }
+                    },
+                    className: 'px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90'
+                  }, 'Ekle')
+                ])
+              ]),
+              h('div', {
+                key: 'students-list',
+                className: 'bg-card border border-border rounded-lg p-6'
+              }, [
+                h('h3', { key: 'list-title', className: 'text-lg font-semibold mb-4' }, 'Öğrenci Listesi'),
+                students.length === 0 ? 
+                  h('p', { key: 'no-students', className: 'text-muted-foreground' }, 'Henüz öğrenci eklenmemiş.') :
+                  h('div', {
+                    key: 'students-grid',
+                    className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+                  }, students.map(student => 
+                    h('div', {
+                      key: student.id,
+                      className: 'p-4 border border-border rounded-lg'
+                    }, [
+                      h('p', { key: 'name', className: 'font-medium' }, student.name),
+                      h('p', { key: 'class', className: 'text-sm text-muted-foreground' }, `${student.class}${student.section}`)
+                    ])
+                  ))
+              ])
+            ]),
+
+            // Comments Tab
+            activeTab === 'comments' && h('div', {
+              key: 'comments',
+              className: 'space-y-6'
+            }, [
+              h('div', {
+                key: 'add-comment',
+                className: 'bg-card border border-border rounded-lg p-6'
+              }, [
+                h('h3', { key: 'comment-title', className: 'text-lg font-semibold mb-4' }, 'Yeni Yorum Ekle'),
+                students.length === 0 ? 
+                  h('p', { key: 'no-students-warning', className: 'text-muted-foreground' }, 'Önce öğrenci eklemelisiniz.') :
+                  h('div', {
+                    key: 'comment-form',
+                    className: 'space-y-4'
+                  }, [
+                    h('select', {
+                      key: 'student-select',
+                      className: 'w-full px-3 py-2 border border-border rounded-md bg-background',
+                      id: 'selected-student'
+                    }, [
+                      h('option', { key: 'default', value: '' }, 'Öğrenci seçin...'),
+                      ...students.map(student =>
+                        h('option', { key: student.id, value: student.id }, student.name)
+                      )
+                    ]),
+                    h('textarea', {
+                      key: 'comment-text',
+                      placeholder: 'Yorumunuzu yazın...',
+                      className: 'w-full px-3 py-2 border border-border rounded-md bg-background',
+                      rows: 4,
+                      id: 'comment-textarea'
+                    }),
+                    h('div', {
+                      key: 'tone-buttons',
+                      className: 'flex gap-2'
+                    }, [
+                      h('button', {
+                        key: 'positive',
+                        onClick: () => {
+                          const studentSelect = document.getElementById('selected-student');
+                          const textarea = document.getElementById('comment-textarea');
+                          if (studentSelect.value && textarea.value.trim()) {
+                            addComment(studentSelect.value, textarea.value.trim(), 'positive');
+                            studentSelect.value = '';
+                            textarea.value = '';
+                          }
+                        },
+                        className: 'px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700'
+                      }, 'Pozitif'),
+                      h('button', {
+                        key: 'neutral',
+                        onClick: () => {
+                          const studentSelect = document.getElementById('selected-student');
+                          const textarea = document.getElementById('comment-textarea');
+                          if (studentSelect.value && textarea.value.trim()) {
+                            addComment(studentSelect.value, textarea.value.trim(), 'neutral');
+                            studentSelect.value = '';
+                            textarea.value = '';
+                          }
+                        },
+                        className: 'px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700'
+                      }, 'Nötr'),
+                      h('button', {
+                        key: 'negative',
+                        onClick: () => {
+                          const studentSelect = document.getElementById('selected-student');
+                          const textarea = document.getElementById('comment-textarea');
+                          if (studentSelect.value && textarea.value.trim()) {
+                            addComment(studentSelect.value, textarea.value.trim(), 'negative');
+                            studentSelect.value = '';
+                            textarea.value = '';
+                          }
+                        },
+                        className: 'px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700'
+                      }, 'Negatif')
+                    ])
+                  ])
+              ]),
+              h('div', {
+                key: 'comments-list',
+                className: 'bg-card border border-border rounded-lg p-6'
+              }, [
+                h('h3', { key: 'comments-title', className: 'text-lg font-semibold mb-4' }, 'Yorumlar'),
+                comments.length === 0 ? 
+                  h('p', { key: 'no-comments', className: 'text-muted-foreground' }, 'Henüz yorum eklenmemiş.') :
+                  h('div', {
+                    key: 'comments-grid',
+                    className: 'space-y-4'
+                  }, comments.map(comment => {
+                    const student = students.find(s => s.id === comment.studentId);
+                    return h('div', {
+                      key: comment.id,
+                      className: 'p-4 border border-border rounded-lg'
+                    }, [
+                      h('div', {
+                        key: 'comment-header',
+                        className: 'flex justify-between items-start mb-2'
+                      }, [
+                        h('p', { key: 'student-name', className: 'font-medium' }, student?.name || 'Bilinmeyen Öğrenci'),
+                        h('span', {
+                          key: 'tone-badge',
+                          className: `px-2 py-1 rounded text-xs ${
+                            comment.tone === 'positive' ? 'bg-green-100 text-green-800' :
+                            comment.tone === 'negative' ? 'bg-red-100 text-red-800' :
+                            'bg-gray-100 text-gray-800'
+                          }`
+                        }, comment.tone === 'positive' ? 'Pozitif' : comment.tone === 'negative' ? 'Negatif' : 'Nötr')
+                      ]),
+                      h('p', { key: 'comment-text', className: 'text-muted-foreground' }, comment.text)
+                    ]);
+                  }))
+              ])
+            ])
+          ])
+        ]);
+      };
+
+      // Uygulamayı başlat
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(h(KarneAsistani));
+    </script>
+  </body>
+</html>

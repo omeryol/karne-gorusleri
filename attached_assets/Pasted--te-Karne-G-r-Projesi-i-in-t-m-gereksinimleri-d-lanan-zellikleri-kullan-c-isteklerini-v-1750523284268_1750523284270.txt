@@ -1,0 +1,94 @@
+İşte **Karne Görüşü Projesi** için tüm gereksinimleri, dışlanan özellikleri, kullanıcı isteklerini ve tasarım tercihlerini kapsayan kapsamlı bir **teknik rapor** ve buna karşılık gelen bir **prompt**:
+
+---
+
+## 📄 Karne Görüşü Projesi Yeniden Üretim Raporu
+
+### 🎯 **Proje Amacı**
+
+Öğretmenlerin karne dönemlerinde öğrencilere ait değerlendirme görüşlerini kolayca yazabilmeleri, özelleştirebilmeleri ve sınıf/dönem bazlı kategorize edilmiş şekilde düzenleyebilmeleri için sade, hızlı ve kullanıcı dostu bir uygulama sunmak.
+
+---
+
+### ✅ **Gerekli Özellikler ve Tasarım İlkeleri**
+
+#### 1. **Sınıf ve Dönem Bazlı Kategorilendirme**
+
+* 5., 6., 7. ve 8. sınıf düzeyleri için ayrı klasörler.
+* Her sınıf altında *1. dönem* ve *2. dönem* olmak üzere alt kategoriler.
+* JSON / JS dosyaları düzeyinde yapılandırılmış yorum profili veri dosyaları.
+
+#### 2. **Tek Yorum Politikası**
+
+* Her öğrenciye yalnızca bir aktif yorum kaydı.
+* Aynı sınıf ve dönem için birden fazla tekrar veya çakışma engellenir.
+* Kopyalama yapıldığında, hedef sınıf ve dönemde mevcut yorum olup olmadığı kontrol edilir.
+
+#### 3. **Yorum Düzenleme ve Kopyalama Pratikleri**
+
+* Var olan yorumların kolayca düzenlenebilmesi.
+* Bir yorumun başka bir sınıf veya döneme kopyalanabilmesi.
+* Düzenleme geçmişi veya sürüm kontrolü sistemi isteğe bağlı olarak pasif kalsın.
+
+#### 4. **Filtreleme ve Arama**
+
+* Sınıfa, döneme ve anahtar kelimeye göre filtreleme.
+* Öğrencinin adıyla hızlı arama yapabilme.
+
+#### 5. **Tasarım ve Kullanıcı Arayüzü**
+
+* Mobil uyumlu, sade ve erişilebilir arayüz (TailwindCSS kullanımı önerilir).
+* Renkli ama dikkat dağıtmayan, öğretmenler için ergonomik tasarım.
+* Tema değiştirilebilir (açık/koyu mod).
+
+#### 6. **Yorum Öneri Motoru (AI Destekli)**
+
+* Yazım sırasında benzer veya örnek yorum önerileri sunulması.
+* AI motoru, sınıf ve dönem kontekstine göre özelleştirilmiş öneri üretir.
+* AI önerisi yalnızca istenirse kullanılır; otomatik yazma özelliği aktif değildir.
+
+#### 7. **Veri Yapısı ve Yönetimi**
+
+* Yorumlar lokal dosya (örneğin `comment_templates_data.js`) üzerinden çekilir.
+* Firebase gibi bir bulut servisi entegrasyonu şimdilik tercih edilmez (lokal çalışma hedefleniyor).
+* Dosya yapısı sade tutulmalı, karmaşık modül bağımlılığı olmamalı.
+
+#### 8. **Kullanım Kolaylığı ve Pratiklik**
+
+* Yeni yorum ekleme, var olanı düzenleme ve silme adımları sadeleştirilmiş olmalı.
+* Tek tıkla belirli sınıf ve döneme kopyalama işlemi.
+* Öğretmenlerin sistemle ilk karşılaşmasında rehber niteliğinde kısa yardım arayüzü.
+
+---
+
+### ❌ **Dışlanan / Gereksiz Görülen Özellikler**
+
+* Kullanıcı oturum açma / yetkilendirme sistemi (projede bireysel lokal kullanım hedefleniyor).
+* Gelişmiş analiz / istatistiksel raporlama ekranları.
+* Ağır ve yavaş yüklenen modern JS frameworkleri (React, Vue gibi) şimdilik dışlandı.
+* Öğrenciye özel bireysel performans verisi girişi.
+
+---
+
+### 📦 **Ek Özellik Talepleri**
+
+* Yorumlar arası etkileşim engellenmeli (birbirini tetikleyen yorum zinciri istenmiyor).
+* Offline çalışmaya uygunluk.
+* Kod dosyaları açıklamalı olmalı ve yeniden üretilebilirliğe açık yapıda tutulmalı.
+* Projenin gelecekte Firestore ya da başka servislere açılması için açık uçlu yapılandırma.
+
+---
+
+## 🧠 Prompt Formatı
+
+Aşağıdaki prompt, yukarıdaki raporu temel alarak bir yapay zekaya ya da geliştiriciye direkt olarak iletilebilecek şekilde hazırlanmıştır:
+
+---
+
+**Prompt:**
+
+> Sınıf ve döneme göre kategorilendirilmiş, sade, mobil uyumlu bir karne görüşü uygulaması üret. Her öğrenciye yalnızca tek yorum kaydı girilebilsin. Yorumlar 5, 6, 7, 8. sınıflara göre, her biri 1. ve 2. dönem şeklinde dosya bazlı ayrılmış olsun. Kullanıcı, var olan yorumları düzenleyebilsin veya başka sınıf ve döneme kolayca kopyalayabilsin. Kopyalamalarda tekrar kontrolü yapılsın. Firebase gibi servisler şimdilik kullanılmasın, sistem tamamen lokal çalışacak şekilde tasarlansın. TailwindCSS ile sade ve öğretmen dostu bir arayüz tasarlanmalı. AI destekli öneri motoru, sınıf ve döneme uygun öneriler sunsun ama otomatik yazma yerine kullanıcı kontrolünde çalışsın. Oturum açma sistemi, gelişmiş analiz raporları ve öğrenciye özel bireysel veri giriş ekranları dahil edilmesin. Proje yorum dosyaları (örneğin `comment_templates_data.js`) üzerinden çalışmalı. Yorum arama ve filtreleme sistemi sınıf, dönem ve anahtar kelimeye göre çalışmalı. Kodlar modüler, yorumlu ve yeniden üretilebilir olmalı.
+
+---
+
+İstersen bu raporu `.pdf` veya `.md` formatında dışa aktarılabilir hale de getirebilirim ya da GitHub'daki bir proje dökümanına uyarlayabilirim. Devam edelim mi?
