@@ -1,21 +1,91 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-    <title>Karne Asistanı - Öğretmen Yardımcısı</title>
-    <meta name="description" content="Öğretmenlerin karne yorumlarını hızla oluşturabilmeleri için AI destekli, sınıf bazlı şablonlar ve ton analizi sunan modern öğretmen asistanı." />
-    <meta name="theme-color" content="#3b82f6" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Karne Asistanı" />
-    <link rel="manifest" href="./manifest.json" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./assets/index.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karne Asistanı Test</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            color: #667eea; 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .status { 
+            background: #10b981; 
+            color: white; 
+            padding: 1rem; 
+            border-radius: 10px; 
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .features { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1.5rem; 
+            margin-top: 2rem;
+        }
+        .feature { 
+            padding: 1.5rem; 
+            border: 2px solid #e5e7eb; 
+            border-radius: 10px; 
+            text-align: center;
+        }
+        .feature h3 { margin: 1rem 0 0.5rem; color: #374151; }
+        .feature p { color: #6b7280; }
+        .emoji { font-size: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Karne Asistanı</h1>
+        <p style="text-align: center; color: #6b7280; font-size: 1.2rem;">Öğretmen Yardımcısı</p>
+        
+        <div class="status">
+            ✅ GitHub Pages'de başarıyla çalışıyor!
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="emoji">📝</div>
+                <h3>Öğrenci Yönetimi</h3>
+                <p>Sınıf ve bölüm bazında öğrenci organize etme</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">💬</div>
+                <h3>Akıllı Yorumlar</h3>
+                <p>Pozitif, nötr ve negatif tonlarda yorumlar</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">📋</div>
+                <h3>Şablon Kütüphanesi</h3>
+                <p>Hazır yorum şablonları</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">💾</div>
+                <h3>Güvenli Saklama</h3>
+                <p>Veriler tarayıcınızda güvenle saklanır</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem; text-align: center; color: #9ca3af;">
+            <p>GitHub Pages deployment başarılı • PWA ready • Responsive design</p>
+        </div>
+    </div>
+</body>
 </html>

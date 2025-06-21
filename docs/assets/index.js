@@ -1,7 +1,5 @@
 // GitHub Pages static deployment - Client-side only app
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+// Using React via CDN for simplicity
 
 // Simple static app for GitHub Pages
 const App = () => {
