@@ -5,6 +5,7 @@ class TemplateManager {
         this.templates = {};
         this.currentToneFilter = 'olumlu';
         this.selectedTags = [];
+        this.aiModalToneFilter = 'olumlu'; // AI modal için ayrı ton filtresi
         this.init();
     }
 
@@ -37,6 +38,13 @@ class TemplateManager {
                 window.ui.hideModal('aiSuggestionsModal');
             });
         }
+
+        // AI modal ton filtreleri
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('ai-tone-filter')) {
+                this.handleAIToneFilterChange(e);
+            }
+        });
     }
 
     async loadTemplates() {
@@ -151,6 +159,19 @@ class TemplateManager {
         `;
     }
 
+    handleAIToneFilterChange(e) {
+        const tone = e.target.dataset.tone;
+        
+        // Aktif filtreyi güncelle
+        document.querySelectorAll('.ai-tone-filter').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        e.target.classList.add('active');
+
+        this.aiModalToneFilter = tone;
+        this.renderSuggestions(); // Önerileri yeniden render et
+    }
+
     showAISuggestions() {
         this.renderTagFilters();
         this.renderSuggestions();
@@ -241,14 +262,29 @@ class TemplateManager {
     }
 
     getFilteredSuggestions() {
-        const allTemplates = this.getFilteredTemplates();
+        // AI modal için ayrı filtreleme mantığı
+        const allTemplates = [];
         
+        // Tüm şablonları birleştir
+        Object.values(this.templates).forEach(gradeTemplates => {
+            if (gradeTemplates && gradeTemplates.yorumlar) {
+                allTemplates.push(...gradeTemplates.yorumlar);
+            }
+        });
+
+        // AI modal ton filtresini uygula
+        let filteredByTone = allTemplates;
+        if (this.aiModalToneFilter !== 'all') {
+            filteredByTone = allTemplates.filter(template => template.ton === this.aiModalToneFilter);
+        }
+
+        // Etiket filtresi uygula
         if (this.selectedTags.length === 0) {
-            return allTemplates.slice(0, 10); // İlk 10 öneriyi göster
+            return filteredByTone.slice(0, 10); // İlk 10 öneriyi göster
         }
 
         // Seçili etiketlere uygun şablonları filtrele
-        return allTemplates.filter(template => {
+        return filteredByTone.filter(template => {
             if (!template.etiketler || template.etiketler.length === 0) return false;
             
             return this.selectedTags.some(selectedTag => 
