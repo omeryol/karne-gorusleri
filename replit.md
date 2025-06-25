@@ -87,9 +87,18 @@ The application follows a full-stack architecture with a clear separation betwee
 
 ## Changelog
 
-Changelog:
-- June 25, 2025. Initial setup
+- June 25, 2025: Initial project setup with full-stack architecture
+- June 25, 2025: Implemented complete comment management system with auto-placeholder replacement
+- June 25, 2025: Added emoji-enhanced tone system (😊 Olumlu, 😐 Nötr, 😕 Olumsuz)
+- June 25, 2025: Created AI suggestion system with automatic name replacement
+- June 25, 2025: Added application reset functionality and improved UX
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+Preferred communication style: Simple, everyday language
+Features completed successfully:
+- ✓ Auto-placeholder replacement for student names (first name only)
+- ✓ Smart comment editing with proper validation
+- ✓ Emoji-enhanced tone indicators
+- ✓ AI template suggestions with name auto-application
+- ✓ Application reset functionality
