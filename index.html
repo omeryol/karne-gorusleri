@@ -1,365 +1,218 @@
 <!DOCTYPE html>
-<html lang="tr" class="h-full">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karne Asistanı - Öğrenci Değerlendirme Sistemi</title>
-    <meta name="description" content="Bu sistem hiçbir veriyi servere göndermez, tüm veriler cihazınızda yerel olarak saklanır.">
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="./manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Karne Asistanı">
-    <meta name="theme-color" content="#7c3aed">
-
-    <style>
-        /* Utility classes */
-        .hidden { display: none !important; }
-        .block { display: block !important; }
-        .flex { display: flex !important; }
-        .grid { display: grid !important; }
-        .bg-primary { background-color: hsl(var(--primary)) !important; }
-        .text-primary { color: hsl(var(--primary)) !important; }
-        .border-primary { border-color: hsl(var(--primary)) !important; }
-        .text-white { color: white !important; }
-        .text-gray-500 { color: rgb(107 114 128) !important; }
-        .text-gray-400 { color: rgb(156 163 175) !important; }
-        .border-transparent { border-color: transparent !important; }
-        .hover\:bg-purple-700:hover { background-color: rgb(126 34 206) !important; }
-        .hover\:text-gray-600:hover { color: rgb(75 85 99) !important; }
-        .hover\:text-gray-300:hover { color: rgb(209 213 219) !important; }
-        .hover\:scale-105:hover { transform: scale(1.05) !important; }
-        .transition-all { transition: all 0.15s ease-in-out !important; }
-        .transition-colors { transition-property: color, background-color, border-color !important; }
-        .duration-200 { transition-duration: 200ms !important; }
-        .transform { transform: translateZ(0) !important; }
-        .dark .dark\:text-white { color: white !important; }
-        .dark .dark\:text-gray-400 { color: rgb(156 163 175) !important; }
-        .dark .dark\:bg-gray-800 { background-color: rgb(31 41 55) !important; }
-        .dark .dark\:border-gray-700 { border-color: rgb(55 65 81) !important; }
-    </style>
+    <title>Karne Asistanı</title>
+    <meta name="description" content="Öğretmenler için karne yorum yardımcısı">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#f1f5f9'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200 min-h-full" style="background-color: hsl(var(--background)); color: hsl(var(--foreground));">
-    <!-- Navigation -->
-    <nav style="background-color: hsl(var(--card)); border-bottom: 1px solid hsl(var(--border));" class="shadow-sm sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo ve başlık -->
-                <div class="flex items-center cursor-pointer" onclick="window.app?.tabs?.switchTo('dashboard')">
-                    <div class="flex-shrink-0">
-                        <span class="text-2xl">📊</span>
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <!-- Ana Container -->
+    <div id="app" class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white dark:bg-gray-800 shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo ve Başlık -->
+                    <div class="flex items-center cursor-pointer" onclick="showDashboard()">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-primary text-2xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Karne Asistanı</h1>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Öğretmenler için yorum yardımcısı</p>
+                        </div>
                     </div>
-                    <div class="ml-3">
-                        <h1 class="text-xl font-semibold" style="color: hsl(var(--foreground));">Karne Asistanı</h1>
-                        <p class="text-xs" style="color: hsl(var(--muted-foreground));">Yerel Veri - Güvenli</p>
-                    </div>
-                </div>
 
-                <!-- Navigation tabs -->
-                <div class="hidden sm:block">
-                    <div style="border-bottom: 1px solid hsl(var(--border));">
-                        <nav class="-mb-px flex space-x-8">
-                            <button data-tab="dashboard" class="border-primary text-primary py-2 px-1 border-b-2 font-medium text-sm">
-                                <i class="fas fa-chart-line mr-2"></i>
-                                Dashboard
+                    <!-- Araçlar -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Bildirimler -->
+                        <div class="relative">
+                            <button onclick="toggleNotifications()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                                <i class="fas fa-bell text-gray-600 dark:text-gray-300"></i>
+                                <span id="notificationBadge" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
                             </button>
-                            <button data-tab="students" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 border-b-2 font-medium text-sm transition-colors duration-200" style="color: hsl(var(--muted-foreground));">
-                                <i class="fas fa-users mr-2"></i>
-                                Öğrenciler
-                            </button>
-                            <button data-tab="comments" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 border-b-2 font-medium text-sm transition-colors duration-200" style="color: hsl(var(--muted-foreground));">
-                                <i class="fas fa-comments mr-2"></i>
-                                Yorumlar
-                            </button>
-                            <button data-tab="templates" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 border-b-2 font-medium text-sm transition-colors duration-200" style="color: hsl(var(--muted-foreground));">
-                                <i class="fas fa-file-text mr-2"></i>
-                                Şablonlar
-                            </button>
-                        </nav>
+
+                            <!-- Bildirim Paneli -->
+                            <div id="notificationPanel" class="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border z-50 hidden">
+                                <div class="p-4 border-b">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Bildirimler</h3>
+                                </div>
+                                <div id="notificationList" class="max-h-96 overflow-y-auto">
+                                    <div class="p-4 text-center text-gray-500 dark:text-gray-400">
+                                        Henüz bildirim bulunmuyor
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tema Değiştirici -->
+                        <button onclick="toggleTheme()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                            <i id="themeIcon" class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+                        </button>
+
+                        <!-- Yardım -->
+                        <button onclick="toggleWelcomeModal()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                            <i class="fas fa-question-circle text-gray-600 dark:text-gray-300"></i>
+                        </button>
                     </div>
-                </div>
-
-                <!-- Sağ taraf butonlar -->
-                <div class="flex items-center space-x-3">
-                    <!-- Karşılama mesajı butonu -->
-                    <button id="welcomeToggleBtn" class="text-gray-400 hover:text-gray-600 transition-colors duration-200" title="Karşılama mesajını göster" style="color: hsl(var(--muted-foreground));">
-                        <i class="fas fa-info-circle text-lg"></i>
-                    </button>
-
-                    <!-- Yardım butonu -->
-                    <button id="helpBtn" class="text-gray-400 hover:text-gray-600 transition-colors duration-200" title="Yardım ve Kılavuz" style="color: hsl(var(--muted-foreground));">
-                        <i class="fas fa-question-circle text-lg"></i>
-                    </button>
-
-                    <!-- Tema değiştirici -->
-                    <button id="themeToggle" class="text-gray-400 hover:text-gray-600 transition-colors duration-200" title="Tema Değiştir" style="color: hsl(var(--muted-foreground));">
-                        <i class="fas fa-moon dark:hidden text-lg"></i>
-                        <i class="fas fa-sun hidden dark:block text-lg"></i>
-                    </button>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- Mobile navigation -->
-        <div class="sm:hidden" style="border-top: 1px solid hsl(var(--border));">
-            <nav class="flex justify-around py-2">
-                <button data-tab="dashboard" class="flex-1 flex flex-col items-center py-2 text-primary">
-                    <i class="fas fa-chart-line text-lg"></i>
-                    <span class="text-xs mt-1">Dashboard</span>
-                </button>
-                <button data-tab="students" class="flex-1 flex flex-col items-center py-2 text-gray-500" style="color: hsl(var(--muted-foreground));">
-                    <i class="fas fa-users text-lg"></i>
-                    <span class="text-xs mt-1">Öğrenciler</span>
-                </button>
-                <button data-tab="comments" class="flex-1 flex flex-col items-center py-2 text-gray-500" style="color: hsl(var(--muted-foreground));">
-                    <i class="fas fa-comments text-lg"></i>
-                    <span class="text-xs mt-1">Yorumlar</span>
-                </button>
-                <button data-tab="templates" class="flex-1 flex flex-col items-center py-2 text-gray-500" style="color: hsl(var(--muted-foreground));">
-                    <i class="fas fa-file-text text-lg"></i>
-                    <span class="text-xs mt-1">Şablonlar</span>
-                </button>
-            </nav>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <!-- Dashboard Tab -->
-        <div id="dashboard-tab" class="tab-content">
-            <!-- İstatistik kartları -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border));" class="rounded-xl p-6 shadow-lg">
-                    <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-blue-100">
-                            <i class="fas fa-users text-blue-600 text-xl"></i>
-                        </div>
-                        <div class="ml-4">
-                            <p class="text-sm font-medium" style="color: hsl(var(--muted-foreground));">Toplam Öğrenci</p>
-                            <p id="totalStudents" class="text-2xl font-semibold" style="color: hsl(var(--foreground));">0</p>
+        <!-- Ana İçerik -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Dashboard -->
+            <div id="dashboard" class="space-y-6">
+                <!-- İstatistikler -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-users text-blue-600 text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">Toplam Öğrenci</dt>
+                                    <dd id="totalStudents" class="text-2xl font-bold text-gray-900 dark:text-white">0</dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border));" class="rounded-xl p-6 shadow-lg">
-                    <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-green-100">
-                            <i class="fas fa-check-circle text-green-600 text-xl"></i>
-                        </div>
-                        <div class="ml-4">
-                            <p class="text-sm font-medium" style="color: hsl(var(--muted-foreground));">Tamamlanan</p>
-                            <p id="completedComments" class="text-2xl font-semibold" style="color: hsl(var(--foreground));">0</p>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-comments text-green-600 text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">Yazılan Yorum</dt>
+                                    <dd id="totalComments" class="text-2xl font-bold text-gray-900 dark:text-white">0</dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border));" class="rounded-xl p-6 shadow-lg">
-                    <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-yellow-100">
-                            <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">Bu Hafta</dt>
+                                    <dd id="weeklyComments" class="text-2xl font-bold text-gray-900 dark:text-white">0</dd>
+                                </dl>
+                            </div>
                         </div>
-                        <div class="ml-4">
-                            <p class="text-sm font-medium" style="color: hsl(var(--muted-foreground));">Bekleyen</p>
-                            <p id="pendingComments" class="text-2xl font-semibold" style="color: hsl(var(--foreground));">0</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-star text-yellow-600 text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">Şablon Sayısı</dt>
+                                    <dd id="totalTemplates" class="text-2xl font-bold text-gray-900 dark:text-white">0</dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border));" class="rounded-xl p-6 shadow-lg">
-                    <div class="flex items-center">
-                        <div class="p-3 rounded-full bg-purple-100">
-                            <i class="fas fa-percentage text-purple-600 text-xl"></i>
-                        </div>
-                        <div class="ml-4">
-                            <p class="text-sm font-medium" style="color: hsl(var(--muted-foreground));">Tamamlanma</p>
-                            <p id="completionRate" class="text-2xl font-semibold" style="color: hsl(var(--foreground));">0%</p>
+                <!-- Hızlı İşlemler -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Hızlı İşlemler</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button onclick="showAddStudent()" class="flex items-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+                            <i class="fas fa-user-plus text-blue-600 text-xl mr-3"></i>
+                            <div class="text-left">
+                                <div class="font-medium text-blue-900 dark:text-blue-300">Öğrenci Ekle</div>
+                                <div class="text-sm text-blue-600 dark:text-blue-400">Yeni öğrenci kaydı oluştur</div>
+                            </div>
+                        </button>
+
+                        <button onclick="showStudents()" class="flex items-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors">
+                            <i class="fas fa-list text-green-600 text-xl mr-3"></i>
+                            <div class="text-left">
+                                <div class="font-medium text-green-900 dark:text-green-300">Öğrenci Listesi</div>
+                                <div class="text-sm text-green-600 dark:text-green-400">Tüm öğrencileri görüntüle</div>
+                            </div>
+                        </button>
+
+                        <button onclick="showTemplates()" class="flex items-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors">
+                            <i class="fas fa-file-text text-purple-600 text-xl mr-3"></i>
+                            <div class="text-left">
+                                <div class="font-medium text-purple-900 dark:text-purple-300">Yorum Şablonları</div>
+                                <div class="text-sm text-purple-600 dark:text-purple-400">Hazır yorumları incele</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Son Eklenen Öğrenciler -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Son Eklenen Öğrenciler</h3>
+                    <div id="recentStudents" class="space-y-3">
+                        <div class="text-center text-gray-500 dark:text-gray-400 py-8">
+                            Henüz öğrenci eklenmemiş
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Analiz bölümü -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <!-- Ton analizi -->
-                <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border));" class="rounded-xl p-6 shadow-lg">
-                    <h3 class="text-lg font-semibold mb-4" style="color: hsl(var(--foreground));">
-                        <i class="fas fa-chart-pie mr-2 text-primary"></i>
-                        Ton Analizi
-                    </h3>
-                    <div id="toneAnalysis" class="space-y-4">
-                        <div class="text-center py-4">
-                            <p style="color: hsl(var(--muted-foreground));">Henüz yorum bulunmuyor</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Popüler etiketler -->
-                <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border));" class="rounded-xl p-6 shadow-lg">
-                    <h3 class="text-lg font-semibold mb-4" style="color: hsl(var(--foreground));">
-                        <i class="fas fa-tags mr-2 text-primary"></i>
-                        Popüler Etiketler
-                    </h3>
-                    <div id="popularTags" class="flex flex-wrap gap-2">
-                        <div class="text-center py-4 w-full">
-                            <p style="color: hsl(var(--muted-foreground));">Henüz etiket bulunmuyor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Students Tab -->
-        <div id="students-tab" class="tab-content hidden">
-            <!-- Öğrenci yönetimi header -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-4 sm:space-y-0">
-                <div>
-                    <h2 class="text-2xl font-bold" style="color: hsl(var(--foreground));">Öğrenci Yönetimi</h2>
-                    <p style="color: hsl(var(--muted-foreground));">Öğrencilerinizi ekleyin ve yönetin</p>
-                </div>
-                <button id="addStudentBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-plus mr-2"></i>
-                    Öğrenci Ekle
-                </button>
+            <!-- Öğrenci Yönetimi -->
+            <div id="studentManagement" class="hidden">
+                <!-- İçerik dinamik olarak yüklenecek -->
             </div>
 
-            <!-- Sınıf filtreleri -->
-            <div class="mb-6">
-                <div class="flex flex-wrap gap-2">
-                    <button class="student-grade-filter active bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-grade="all">
-                        Tümü
-                    </button>
-                    <button class="student-grade-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-grade="5" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        5. Sınıf
-                    </button>
-                    <button class="student-grade-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-grade="6" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        6. Sınıf
-                    </button>
-                    <button class="student-grade-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-grade="7" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        7. Sınıf
-                    </button>
-                    <button class="student-grade-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-grade="8" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        8. Sınıf
-                    </button>
-                </div>
+            <!-- Yorum Yönetimi -->
+            <div id="commentManagement" class="hidden">
+                <!-- İçerik dinamik olarak yüklenecek -->
             </div>
 
-            <!-- Öğrenci grid -->
-            <div id="studentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Öğrenci kartları buraya dinamik olarak eklenecek -->
+            <!-- Şablon Yönetimi -->
+            <div id="templateManagement" class="hidden">
+                <!-- İçerik dinamik olarak yüklenecek -->
             </div>
-        </div>
+        </main>
+    </div>
 
-        <!-- Comments Tab -->
-        <div id="comments-tab" class="tab-content hidden">
-            <!-- Yorum yönetimi header -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-4 sm:space-y-0">
-                <div>
-                    <h2 class="text-2xl font-bold" style="color: hsl(var(--foreground));">Yorum Yönetimi</h2>
-                    <p style="color: hsl(var(--muted-foreground));">Öğrenci yorumlarını görüntüleyin ve düzenleyin</p>
-                </div>
-                <button id="viewAllCommentsBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-list mr-2"></i>
-                    Tüm Yorumlar
-                </button>
-            </div>
-
-            <!-- Yorum grid -->
-            <div id="commentsGrid" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                <!-- Yorum kartları buraya dinamik olarak eklenecek -->
-            </div>
-        </div>
-
-        <!-- Templates Tab -->
-        <div id="templates-tab" class="tab-content hidden">
-            <!-- Şablon yönetimi header -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-4 sm:space-y-0">
-                <div>
-                    <h2 class="text-2xl font-bold" style="color: hsl(var(--foreground));">Yorum Şablonları</h2>
-                    <p style="color: hsl(var(--muted-foreground));">Hazır yorum şablonlarını kullanın</p>
-                </div>
-                <button id="aiSuggestionsBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-magic mr-2"></i>
-                    AI Önerileri
-                </button>
-            </div>
-
-            <!-- Ton filtreleri -->
-            <div class="mb-6">
-                <div class="flex flex-wrap gap-2">
-                    <button class="tone-filter active bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-tone="olumlu">
-                        <i class="fas fa-smile mr-1"></i>
-                        Olumlu
-                    </button>
-                    <button class="tone-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-tone="notr" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        <i class="fas fa-meh mr-1"></i>
-                        Nötr
-                    </button>
-                    <button class="tone-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-tone="olumsuz" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        <i class="fas fa-frown mr-1"></i>
-                        Olumsuz
-                    </button>
-                    <button class="tone-filter px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-tone="all" style="background-color: hsl(var(--secondary)); color: hsl(var(--secondary-foreground));">
-                        <i class="fas fa-list mr-1"></i>
-                        Tümü
-                    </button>
-                </div>
-            </div>
-
-            <!-- Şablon grid -->
-            <div id="templatesGrid" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                <!-- Şablon kartları buraya dinamik olarak eklenecek -->
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer style="background-color: hsl(var(--card)); border-top: 1px solid hsl(var(--border));" class="mt-12">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div class="text-sm" style="color: hsl(var(--muted-foreground));">
-                    <p>Geliştirici: <strong>Ömer YOLCU</strong> | AI Asistan: <strong>Replit Assistant</strong></p>
-                    <p class="mt-1">Bu sistem hiçbir veriyi servere göndermez, tüm veriler cihazınızda yerel olarak saklanır.</p>
-                </div>
-                <div class="flex items-center space-x-4 text-sm" style="color: hsl(var(--muted-foreground));">
-                    <span>v1.0.0</span>
-                    <span>•</span>
-                    <span>Güvenli & Yerel</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modals -->
     <!-- Karşılama Modalı -->
     <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div style="background-color: hsl(var(--card));" class="rounded-2xl p-8 m-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 m-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div class="text-center">
                 <div class="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
                     <i class="fas fa-graduation-cap text-white text-2xl"></i>
                 </div>
-                <h2 class="text-2xl font-bold mb-4" style="color: hsl(var(--foreground));">Karne Asistanı'na Hoş Geldiniz!</h2>
-                <div class="text-left space-y-4" style="color: hsl(var(--muted-foreground));">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Karne Asistanı'na Hoş Geldiniz!</h2>
+                <div class="text-left space-y-4 text-gray-600 dark:text-gray-300">
                     <p>Bu sistem öğrenci değerlendirmelerinizi kolaylaştırmak için tasarlanmıştır.</p>
 
-                    <div class="p-4 rounded-lg" style="background-color: hsl(var(--accent));">
-                        <h3 class="font-semibold mb-2" style="color: hsl(var(--accent-foreground));">🔒 Gizlilik ve Güvenlik</h3>
-                        <p style="color: hsl(var(--accent-foreground));">Bu sistem hiçbir veriyi servere göndermez. Tüm öğrenci bilgileri ve yorumlar sadece cihazınızda yerel olarak saklanır.</p>
+                    <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">🔒 Gizlilik ve Güvenlik</h3>
+                        <p class="text-blue-700 dark:text-blue-300">Bu sistem hiçbir veriyi servere göndermez. Tüm öğrenci bilgileri ve yorumlar sadece cihazınızda yerel olarak saklanır.</p>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-4">
@@ -369,125 +222,69 @@
                                 <li>• Öğrenci yönetimi</li>
                                 <li>• Yorum yazma ve düzenleme</li>
                                 <li>• Hazır şablonlar</li>
-                                <li>• İstatistik analizi</li>
+                                <li>• Çevrimdışı çalışma</li>
                             </ul>
                         </div>
                         <div>
-                            <h3 class="font-semibold mb-2">🎯 Nasıl Kullanılır:</h3>
+                            <h3 class="font-semibold mb-2">🎯 Başlangıç:</h3>
                             <ul class="text-sm space-y-1">
-                                <li>1. Öğrencilerinizi ekleyin</li>
+                                <li>1. Öğrenci ekleyin</li>
                                 <li>2. Yorumları yazın</li>
                                 <li>3. Şablonları kullanın</li>
-                                <li>4. İstatistikleri takip edin</li>
+                                <li>4. Dışa aktarın</li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <button id="welcomeStartBtn" class="w-full bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 mt-6">
-                    Başlayalım
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Yardım Modalı -->
-    <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div style="background-color: hsl(var(--card));" class="rounded-2xl p-8 m-4 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold" style="color: hsl(var(--foreground));">Yardım ve Kılavuz</h2>
-                <button id="helpCloseBtn" class="text-2xl" style="color: hsl(var(--muted-foreground));">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="space-y-6">
-                <div class="p-4 rounded-lg" style="background-color: hsl(var(--accent));">
-                    <h3 class="font-semibold mb-2" style="color: hsl(var(--accent-foreground));">🔒 Gizlilik Bilgisi</h3>
-                    <p style="color: hsl(var(--accent-foreground));">Bu sistem tamamen yerel çalışır. Hiçbir veri internet üzerinden gönderilmez ve tüm bilgiler cihazınızda güvenle saklanır.</p>
+                    <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg">
+                        <h3 class="font-semibold text-amber-800 dark:text-amber-300 mb-2">ℹ️ Sistem Bilgisi</h3>
+                        <p class="text-amber-700 dark:text-amber-300">Bu uygulama tamamen cihazınızda çalışır ve internet gerektirmez. Verileriniz güvenle tarayıcınızda saklanır.</p>
+                    </div>
                 </div>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="font-semibold mb-3" style="color: hsl(var(--foreground));">📚 Temel Kullanım</h3>
-                        <ul class="space-y-2 text-sm" style="color: hsl(var(--muted-foreground));">
-                            <li><strong>Dashboard:</strong> Genel istatistikleri görüntüleyin</li>
-                            <li><strong>Öğrenciler:</strong> Öğrenci bilgilerini yönetin</li>
-                            <li><strong>Yorumlar:</strong> Öğrenci yorumlarını yazın</li>
-                            <li><strong>Şablonlar:</strong> Hazır yorumları kullanın</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-3" style="color: hsl(var(--foreground));">⌨️ Kısayollar</h3>
-                        <ul class="space-y-2 text-sm" style="color: hsl(var(--muted-foreground));">
-                            <li><kbd style="background-color: hsl(var(--secondary)); padding: 4px 8px; border-radius: 4px;">Ctrl+1</kbd> Dashboard</li>
-                            <li><kbd style="background-color: hsl(var(--secondary)); padding: 4px 8px; border-radius: 4px;">Ctrl+2</kbd> Öğrenciler</li>
-                            <li><kbd style="background-color: hsl(var(--secondary)); padding: 4px 8px; border-radius: 4px;">Ctrl+3</kbd> Yorumlar</li>
-                            <li><kbd style="background-color: hsl(var(--secondary)); padding: 4px 8px; border-radius: 4px;">Ctrl+4</kbd> Şablonlar</li>
-                            <li><kbd style="background-color: hsl(var(--secondary)); padding: 4px 8px; border-radius: 4px;">ESC</kbd> Modal Kapat</li>
-                        </ul>
-                    </div>
+                <div class="flex justify-center mt-6">
+                    <button onclick="closeWelcomeModal()" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        Başlayalım
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Öğrenci Ekleme Modalı -->
-    <div id="addStudentModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div style="background-color: hsl(var(--card));" class="rounded-2xl p-8 m-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold" style="color: hsl(var(--foreground));">Öğrenci Ekle</h2>
-                <button id="addStudentCloseBtn" class="text-2xl" style="color: hsl(var(--muted-foreground));">
-                    <i class="fas fa-times"></i>
-                </button>
+    <!-- Modal Backdrop -->
+    <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" onclick="closeAllModals()"></div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 border-t mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="text-center text-sm text-gray-600 dark:text-gray-400">
+                <p>Karne Asistanı - Öğretmenler için yorum yardımcısı</p>
+                <p class="mt-1">Geliştirici: <span class="font-semibold">Ömer YOLCU</span> | AI Yardımcısı: <span class="font-semibold">Replit Assistant</span></p>
+                <p class="mt-1 text-xs">Tüm veriler cihazınızda güvenle saklanır • Açık kaynak • Ücretsiz</p>
             </div>
+        </div>
+    </footer>
 
-            <!-- Tab butonları -->
-            <div class="flex mb-6 p-1 rounded-lg" style="background-color: hsl(var(--muted));">
-                <button id="singleStudentTab" class="flex-1 py-2 px-4 rounded-md font-medium text-sm" style="background-color: hsl(var(--card)); color: hsl(var(--foreground));">
-                    Tekil Öğrenci
-                </button>
-                <button id="bulkStudentTab" class="flex-1 py-2 px-4 rounded-md font-medium text-sm" style="color: hsl(var(--muted-foreground));">
-                    Toplu Ekleme
-                </button>
-            </div>
+    <!-- Scripts -->
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/templates.js"></script>
+    <script src="assets/js/students.js"></script>
+    <script src="assets/js/comments.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/app.js"></script>
 
-            <!-- Tekil öğrenci formu -->
-            <form id="singleStudentForm" class="space-y-4">
-                <div>
-                    <label for="name" class="block text-sm font-medium mb-2" style="color: hsl(var(--foreground));">Öğrenci Adı</label>
-                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" style="background-color: hsl(var(--background)); border: 1px solid hsl(var(--border)); color: hsl(var(--foreground));">
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label for="grade" class="block text-sm font-medium mb-2" style="color: hsl(var(--foreground));">Sınıf</label>
-                        <select id="grade" name="grade" required class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" style="background-color: hsl(var(--background)); border: 1px solid hsl(var(--border)); color: hsl(var(--foreground));">
-                            <option value="">Seçiniz</option>
-                            <option value="5">5. Sınıf</option>
-                            <option value="6">6. Sınıf</option>
-                            <option value="7">7. Sınıf</option>
-                            <option value="8">8. Sınıf</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="section" class="block text-sm font-medium mb-2" style="color: hsl(var(--foreground));">Şube</label>
-                        <select id="section" name="section" required class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" style="background-color: hsl(var(--background)); border: 1px solid hsl(var(--border)); color: hsl(var(--foreground));">
-                            <option value="">Seçiniz</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
-                            <option value="E">E</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button type="submit" class="w-full bg-primary hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
-                    <i class="fas fa-plus mr-2"></i>
-                    Öğrenci Ekle
-                </button>
-            </form>
-
-            <!-- Toplu ekleme formu -->
-            <form id="bulkStudentForm" class="space-y-4 hidden">
-                <div>
-                    <label for="studentList" class="block
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

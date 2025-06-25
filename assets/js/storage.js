@@ -1,163 +1,131 @@
-
-// Yerel depolama yönetimi
-class LocalStorage {
+// Veri depolama yöneticisi
+class StorageManager {
     constructor() {
         this.prefix = 'karneAsistani_';
         this.init();
     }
 
     init() {
-        try {
-            // Test localStorage availability
-            const test = 'test';
-            localStorage.setItem(test, test);
-            localStorage.removeItem(test);
-        } catch (e) {
-            console.warn('LocalStorage kullanılamıyor, geçici depolama kullanılacak');
-            this.fallbackStorage = new Map();
+        // İlk kurulum kontrolü
+        if (!this.get('initialized')) {
+            this.set('initialized', true);
+            this.set('students', []);
+            this.set('comments', {});
+            this.set('settings', {
+                theme: 'light',
+                showWelcome: true
+            });
         }
     }
 
-    getKey(key) {
-        return this.prefix + key;
-    }
-
+    // Veri kaydetme
     set(key, value) {
         try {
-            if (this.fallbackStorage) {
-                this.fallbackStorage.set(this.getKey(key), JSON.stringify(value));
-            } else {
-                localStorage.setItem(this.getKey(key), JSON.stringify(value));
-            }
+            localStorage.setItem(this.prefix + key, JSON.stringify(value));
             return true;
-        } catch (e) {
-            console.error('Veri kaydedilemedi:', e);
+        } catch (error) {
+            console.error('Veri kaydedilemedi:', error);
             return false;
         }
     }
 
-    get(key, defaultValue = null) {
+    // Veri okuma
+    get(key) {
         try {
-            let data;
-            if (this.fallbackStorage) {
-                data = this.fallbackStorage.get(this.getKey(key));
-            } else {
-                data = localStorage.getItem(this.getKey(key));
-            }
-            return data ? JSON.parse(data) : defaultValue;
-        } catch (e) {
-            console.error('Veri okunamadı:', e);
-            return defaultValue;
+            const item = localStorage.getItem(this.prefix + key);
+            return item ? JSON.parse(item) : null;
+        } catch (error) {
+            console.error('Veri okunamadı:', error);
+            return null;
         }
     }
 
+    // Veri silme
     remove(key) {
         try {
-            if (this.fallbackStorage) {
-                this.fallbackStorage.delete(this.getKey(key));
-            } else {
-                localStorage.removeItem(this.getKey(key));
-            }
+            localStorage.removeItem(this.prefix + key);
             return true;
-        } catch (e) {
-            console.error('Veri silinemedi:', e);
+        } catch (error) {
+            console.error('Veri silinemedi:', error);
             return false;
         }
     }
 
+    // Tüm verileri temizleme
     clear() {
         try {
-            if (this.fallbackStorage) {
-                this.fallbackStorage.clear();
-            } else {
-                const keys = Object.keys(localStorage).filter(key => key.startsWith(this.prefix));
-                keys.forEach(key => localStorage.removeItem(key));
-            }
+            Object.keys(localStorage).forEach(key => {
+                if (key.startsWith(this.prefix)) {
+                    localStorage.removeItem(key);
+                }
+            });
+            this.init();
             return true;
-        } catch (e) {
-            console.error('Veriler temizlenemedi:', e);
+        } catch (error) {
+            console.error('Veriler temizlenemedi:', error);
             return false;
         }
     }
 
-    // Students operations
+    // Öğrenci işlemleri
     getStudents() {
-        return this.get('students', []);
+        return this.get('students') || [];
     }
 
-    saveStudents(students) {
+    saveStudent(student) {
+        const students = this.getStudents();
+        const existingIndex = students.findIndex(s => s.id === student.id);
+
+        if (existingIndex >= 0) {
+            students[existingIndex] = student;
+        } else {
+            student.id = Date.now().toString();
+            student.createdAt = new Date().toISOString();
+            students.push(student);
+        }
+
         return this.set('students', students);
     }
 
-    addStudent(student) {
+    deleteStudent(studentId) {
         const students = this.getStudents();
-        student.id = Date.now().toString();
-        student.createdAt = new Date().toISOString();
-        students.push(student);
-        return this.saveStudents(students) ? student : null;
+        const filtered = students.filter(s => s.id !== studentId);
+
+        // Öğrenci yorumlarını da sil
+        this.remove(`comments_${studentId}`);
+
+        return this.set('students', filtered);
     }
 
-    updateStudent(id, updates) {
-        const students = this.getStudents();
-        const index = students.findIndex(s => s.id === id);
-        if (index !== -1) {
-            students[index] = { ...students[index], ...updates, updatedAt: new Date().toISOString() };
-            return this.saveStudents(students) ? students[index] : null;
+    // Yorum işlemleri
+    getComments(studentId) {
+        return this.get(`comments_${studentId}`) || [];
+    }
+
+    saveComment(studentId, comment) {
+        const comments = this.getComments(studentId);
+        const existingIndex = comments.findIndex(c => c.id === comment.id);
+
+        if (existingIndex >= 0) {
+            comments[existingIndex] = comment;
+        } else {
+            comment.id = Date.now().toString();
+            comment.createdAt = new Date().toISOString();
+            comments.push(comment);
         }
-        return null;
+
+        return this.set(`comments_${studentId}`, comments);
     }
 
-    deleteStudent(id) {
-        const students = this.getStudents();
-        const filtered = students.filter(s => s.id !== id);
-        return this.saveStudents(filtered);
+    deleteComment(studentId, commentId) {
+        const comments = this.getComments(studentId);
+        const filtered = comments.filter(c => c.id !== commentId);
+        return this.set(`comments_${studentId}`, filtered);
     }
 
-    // Comments operations
-    getComments() {
-        return this.get('comments', []);
-    }
-
-    saveComments(comments) {
-        return this.set('comments', comments);
-    }
-
-    addComment(comment) {
-        const comments = this.getComments();
-        comment.id = Date.now().toString();
-        comment.createdAt = new Date().toISOString();
-        comments.push(comment);
-        return this.saveComments(comments) ? comment : null;
-    }
-
-    updateComment(id, updates) {
-        const comments = this.getComments();
-        const index = comments.findIndex(c => c.id === id);
-        if (index !== -1) {
-            comments[index] = { ...comments[index], ...updates, updatedAt: new Date().toISOString() };
-            return this.saveComments(comments) ? comments[index] : null;
-        }
-        return null;
-    }
-
-    deleteComment(id) {
-        const comments = this.getComments();
-        const filtered = comments.filter(c => c.id !== id);
-        return this.saveComments(filtered);
-    }
-
-    getCommentsByStudent(studentId) {
-        const comments = this.getComments();
-        return comments.filter(c => c.studentId === studentId);
-    }
-
-    // Settings operations
+    // Ayarlar
     getSettings() {
-        return this.get('settings', {
-            theme: 'light',
-            welcomeShown: false,
-            lastBackup: null
-        });
+        return this.get('settings') || { theme: 'light', showWelcome: true };
     }
 
     saveSetting(key, value) {
@@ -166,69 +134,71 @@ class LocalStorage {
         return this.set('settings', settings);
     }
 
-    // Statistics
+    // İstatistikler
     getStats() {
         const students = this.getStudents();
-        const comments = this.getComments();
-        
-        const totalStudents = students.length;
-        const totalComments = comments.length;
-        const completedComments = comments.filter(c => c.content && c.content.trim().length > 0).length;
-        const pendingComments = totalStudents - completedComments;
-        const completionRate = totalStudents > 0 ? Math.round((completedComments / totalStudents) * 100) : 0;
+        let totalComments = 0;
+        let weeklyComments = 0;
+        const oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
-        // Ton analizi
-        const toneAnalysis = {
-            olumlu: comments.filter(c => c.tone === 'olumlu').length,
-            notr: comments.filter(c => c.tone === 'notr').length,
-            olumsuz: comments.filter(c => c.tone === 'olumsuz').length
-        };
+        students.forEach(student => {
+            const comments = this.getComments(student.id);
+            totalComments += comments.length;
 
-        // Popüler etiketler
-        const allTags = comments.flatMap(c => c.tags || []);
-        const tagCounts = {};
-        allTags.forEach(tag => {
-            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+            weeklyComments += comments.filter(comment => 
+                new Date(comment.createdAt) > oneWeekAgo
+            ).length;
         });
-        const popularTags = Object.entries(tagCounts)
-            .sort(([,a], [,b]) => b - a)
-            .slice(0, 10);
 
         return {
-            totalStudents,
+            totalStudents: students.length,
             totalComments,
-            completedComments,
-            pendingComments,
-            completionRate,
-            toneAnalysis,
-            popularTags
+            weeklyComments
         };
     }
 
-    // Export/Import
+    // Veri dışa aktarma
     exportData() {
         const data = {
             students: this.getStudents(),
-            comments: this.getComments(),
+            comments: {},
             settings: this.getSettings(),
-            exportDate: new Date().toISOString(),
-            version: '1.0.0'
+            exportDate: new Date().toISOString()
         };
+
+        // Tüm yorumları topla
+        data.students.forEach(student => {
+            data.comments[student.id] = this.getComments(student.id);
+        });
+
         return data;
     }
 
+    // Veri içe aktarma
     importData(data) {
         try {
-            if (data.students) this.saveStudents(data.students);
-            if (data.comments) this.saveComments(data.comments);
-            if (data.settings) this.set('settings', data.settings);
+            if (data.students) {
+                this.set('students', data.students);
+            }
+
+            if (data.comments) {
+                Object.keys(data.comments).forEach(studentId => {
+                    this.set(`comments_${studentId}`, data.comments[studentId]);
+                });
+            }
+
+            if (data.settings) {
+                this.set('settings', data.settings);
+            }
+
             return true;
-        } catch (e) {
-            console.error('Veri içe aktarılamadı:', e);
+        } catch (error) {
+            console.error('Veri içe aktarılamadı:', error);
             return false;
         }
     }
 }
 
 // Global instance
-window.storage = new LocalStorage();
+window.storage = new StorageManager();
