@@ -156,7 +156,11 @@ class TemplateManager {
         const allTags = this.getAllTags();
 
         container.innerHTML = allTags.map(tag => `
-            <button class="tag-filter-btn bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200" data-tag="${tag}">
+            <button class="tag-filter-btn px-3 py-1 rounded-full text-sm transition-colors duration-200 ${
+                this.selectedTags.includes(tag) 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800'
+            }" data-tag="${tag}">
                 ${tag}
             </button>
         `).join('');
@@ -165,8 +169,8 @@ class TemplateManager {
         container.querySelectorAll('.tag-filter-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 this.toggleTagFilter(e.target.dataset.tag);
-                e.target.classList.toggle('selected');
-                this.renderSuggestions();
+                this.renderTagFilters(); // Re-render to update visual state
+                this.renderSuggestions(); // Re-render suggestions
             });
         });
     }
@@ -256,30 +260,51 @@ class TemplateManager {
         return Array.from(allTags).sort();
     }
 
+    setCurrentStudent(student) {
+        this.currentStudent = student;
+    }
+
     selectSuggestion(id) {
         const allTemplates = this.getFilteredTemplates();
         const suggestion = allTemplates.find(t => (t.id || Date.now().toString()) === id);
         
-        if (suggestion && window.comments.currentEditingId !== null) {
-            // Yorum düzenleme modalına içeriği aktar
-            const textarea = document.querySelector('#commentEditForm textarea[name="content"]');
-            const toneSelect = document.querySelector('#commentEditForm select[name="tone"]');
+        if (suggestion) {
+            window.ui.hideModal('aiSuggestionsModal');
             
+            // Check if we're in comment edit mode
+            const editModal = document.getElementById('commentEditModal');
+            const editTextarea = document.querySelector('#commentEditForm textarea[name="content"]');
+            
+            if (editModal && editModal.style.display !== 'none' && editTextarea) {
+                // Edit mode - populate edit textarea
+                editTextarea.value = suggestion.icerik;
+                window.comments.updateCharacterCount(suggestion.icerik.length);
+                
+                const toneSelect = document.querySelector('#commentEditForm select[name="tone"]');
+                if (toneSelect) {
+                    toneSelect.value = suggestion.ton;
+                }
+
+                if (suggestion.etiketler && suggestion.etiketler.length > 0) {
+                    window.comments.renderCurrentTags(suggestion.etiketler);
+                }
+                
+                window.ui.showToast('Öneri yorum düzenleme alanına aktarıldı!', 'success');
+                return;
+            }
+            
+            // Regular comment mode
+            const textarea = document.getElementById('commentText');
             if (textarea) {
                 textarea.value = suggestion.icerik;
+                textarea.focus();
+                
                 window.comments.updateCharacterCount(suggestion.icerik.length);
+                
+                if (suggestion.etiketler) {
+                    suggestion.etiketler.forEach(tag => window.comments.addTag(tag));
+                }
             }
-            
-            if (toneSelect) {
-                toneSelect.value = suggestion.ton;
-            }
-
-            if (suggestion.etiketler && suggestion.etiketler.length > 0) {
-                window.comments.renderCurrentTags(suggestion.etiketler);
-            }
-
-            window.ui.hideModal('aiSuggestionsModal');
-            window.ui.showToast('Öneri yorum düzenleme alanına aktarıldı!', 'success');
         }
     }
 

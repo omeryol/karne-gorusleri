@@ -40,6 +40,22 @@ class CommentManager {
             window.templates.showAISuggestions();
         });
 
+        // Edit modal AI suggestions and placeholder buttons
+        if (document.getElementById('editAISuggestionsBtn')) {
+            document.getElementById('editAISuggestionsBtn').addEventListener('click', () => {
+                if (this.currentEditStudent) {
+                    window.templates.setCurrentStudent(this.currentEditStudent);
+                }
+                window.templates.showAISuggestions();
+            });
+        }
+
+        if (document.getElementById('editPlaceholderBtn')) {
+            document.getElementById('editPlaceholderBtn').addEventListener('click', () => {
+                this.showPlaceholderModal();
+            });
+        }
+
         // Karakter sayacı
         const textarea = document.querySelector('#commentEditForm textarea[name="content"]');
         if (textarea) {
@@ -81,7 +97,44 @@ class CommentManager {
         this.showEditModal(student, comments[0]);
     }
 
+    showPlaceholderModal() {
+        const student = this.currentEditStudent;
+        if (!student) return;
+
+        const modal = document.createElement('div');
+        modal.id = 'placeholderModal';
+        modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+        modal.innerHTML = `
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Yer Tutucu Yönetimi</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    [Öğrenci Adı] yer tutucusu "<strong>${student.name.split(' ')[0]}</strong>" ile değiştirilecek.
+                </p>
+                <div class="flex gap-3">
+                    <button onclick="this.closest('#placeholderModal').remove()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                        İptal
+                    </button>
+                    <button onclick="window.comments.autoApplyPlaceholder(); this.closest('#placeholderModal').remove()" class="flex-1 bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                        Otomatik Uygula
+                    </button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    autoApplyPlaceholder() {
+        const textarea = document.querySelector('#commentEditForm textarea[name="content"]');
+        if (textarea && this.currentEditStudent) {
+            const firstName = this.currentEditStudent.name.split(' ')[0];
+            textarea.value = textarea.value.replace(/\[Öğrenci Adı\]/g, firstName);
+            this.updateCharacterCount(textarea.value.length);
+            window.ui.showToast('Yer tutucu başarıyla uygulandı!', 'success');
+        }
+    }
+
     showEditModal(student, comment) {
+        this.currentEditStudent = student;
         // Öğrenci bilgilerini doldur
         document.getElementById('editStudentName').textContent = student.name;
         document.getElementById('editStudentGradeSection').textContent = `${student.grade}-${student.section}`;
