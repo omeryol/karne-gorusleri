@@ -230,8 +230,8 @@ class CommentManager {
 
     handleCommentSuccess(message) {
         this.render();
-        window.students.render();
-        window.app.dashboard.updateStats();
+        window.students && window.students.render();
+        window.app && window.app.dashboard && window.app.dashboard.updateStats();
         window.ui.hideModal('commentEditModal');
         window.ui.showToast(message, 'success');
     }
@@ -391,7 +391,7 @@ class CommentManager {
                         ? 'Seçili filtrelere uygun yorum bulunamadı' 
                         : 'Öğrenci yorumları ekleyerek başlayın'}
                 </p>
-                <button onclick="window.app.tabs.switchTo('students')" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
+                <button onclick="window.app && window.app.tabs && window.app.tabs.switchTo('students')" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
                     <i class="fas fa-users mr-2"></i>
                     Öğrencilere Git
                 </button>
@@ -454,8 +454,8 @@ class CommentManager {
         if (confirm(`${student.name} için yazılan yorum silinecek. Emin misiniz?`)) {
             if (this.storage.deleteComment(id)) {
                 this.render();
-                window.students.render();
-                window.app.dashboard.updateStats();
+                window.students && window.students.render();
+                window.app && window.app.dashboard && window.app.dashboard.updateStats();
                 window.ui.showToast('Yorum başarıyla silindi!', 'success');
             } else {
                 window.ui.showToast('Silme işlemi sırasında hata oluştu!', 'error');
@@ -494,5 +494,4 @@ class CommentManager {
     }
 }
 
-// Global comment manager instance
-window.comments = new CommentManager(window.storage);
+// Global comment manager instance will be created in app.js

@@ -251,5 +251,4 @@ class Storage {
     }
 }
 
-// Global storage instance
-window.storage = new Storage();
+// Global storage instance will be created in app.js

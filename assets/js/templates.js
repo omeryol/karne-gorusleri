@@ -353,5 +353,4 @@ class TemplateManager {
     }
 }
 
-// Global template manager instance
-window.templates = new TemplateManager(window.storage);
+// Global template manager instance will be created in app.js

@@ -117,13 +117,13 @@ class UIManager {
 
     createToast(message, type) {
         const toast = document.createElement('div');
-        toast.className = `transform translate-x-full opacity-0 transition-all duration-300 max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden`;
+        toast.className = `transform translate-x-full opacity-0 transition-all duration-300 max-w-sm w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden`;
 
         const colors = {
-            success: 'bg-green-500',
-            error: 'bg-red-500',
-            warning: 'bg-yellow-500',
-            info: 'bg-blue-500'
+            success: 'bg-positive',
+            error: 'bg-negative', 
+            warning: 'bg-neutral',
+            info: 'bg-primary'
         };
 
         const icons = {
@@ -134,19 +134,19 @@ class UIManager {
         };
 
         toast.innerHTML = `
-            <div class="p-4">
-                <div class="flex items-start">
+            <div class="p-3">
+                <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <div class="${colors[type]} w-8 h-8 rounded-full flex items-center justify-center">
-                            <i class="${icons[type]} text-white text-sm"></i>
+                        <div class="${colors[type]} w-6 h-6 rounded-full flex items-center justify-center">
+                            <i class="${icons[type]} text-white text-xs"></i>
                         </div>
                     </div>
-                    <div class="ml-3 w-0 flex-1 pt-0.5">
-                        <p class="text-sm font-medium text-gray-900 dark:text-white leading-relaxed">${message}</p>
+                    <div class="ml-3 flex-1">
+                        <p class="text-sm font-medium text-gray-900 dark:text-white truncate">${message}</p>
                     </div>
-                    <div class="ml-4 flex-shrink-0 flex">
-                        <button onclick="window.ui.removeToast(this.closest('.transform'))" class="bg-white dark:bg-gray-800 rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                            <i class="fas fa-times text-sm"></i>
+                    <div class="ml-2 flex-shrink-0">
+                        <button onclick="window.ui.removeToast(this.closest('.transform'))" class="bg-white dark:bg-gray-800 rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none">
+                            <i class="fas fa-times text-xs"></i>
                         </button>
                     </div>
                 </div>
@@ -341,5 +341,6 @@ class UIManager {
     }
 }
 
-// Global UI manager instance
-window.ui = new UIManager();
+// Global UI manager instance will be created in app.js
+
+// Global UI manager instance will be created in app.js

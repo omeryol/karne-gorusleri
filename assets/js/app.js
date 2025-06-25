@@ -13,7 +13,9 @@ class App {
         this.showWelcomeModal();
 
         // İlk yükleme
-        this.dashboard.updateStats();
+        setTimeout(() => {
+            this.dashboard.updateStats();
+        }, 100);
     }
 
     initializeComponents() {
@@ -22,6 +24,9 @@ class App {
 
         // Dashboard yönetimi
         this.dashboard = new DashboardManager();
+
+        // Global referansları ayarla
+        window.app = this;
     }
 
     setupTheme() {
@@ -81,27 +86,89 @@ class App {
     }
 
     setupNavigationHandlers() {
+        // Welcome modal handlers
+        const welcomeStartBtn = document.getElementById('welcomeStartBtn');
+        if (welcomeStartBtn) {
+            welcomeStartBtn.addEventListener('click', () => {
+                window.storage.setSetting('hasSeenWelcome', true);
+                window.ui.hideModal('welcomeModal');
+            });
+        }
+
+        const welcomeCloseBtn = document.getElementById('welcomeCloseBtn');
+        if (welcomeCloseBtn) {
+            welcomeCloseBtn.addEventListener('click', () => {
+                window.storage.setSetting('hasSeenWelcome', true);
+                window.ui.hideModal('welcomeModal');
+            });
+        }
+
+        const welcomeDontShowAgain = document.getElementById('welcomeDontShowAgain');
+        if (welcomeDontShowAgain) {
+            welcomeDontShowAgain.addEventListener('click', () => {
+                window.storage.setSetting('hasSeenWelcome', true);
+                window.ui.hideModal('welcomeModal');
+            });
+        }
+
+        // Welcome butonu
+        const showWelcomeBtn = document.getElementById('showWelcomeBtn');
+        if (showWelcomeBtn) {
+            showWelcomeBtn.addEventListener('click', () => {
+                window.ui.showModal('welcomeModal');
+            });
+        }
+
         // Yardım butonu
-        document.getElementById('helpBtn').addEventListener('click', () => {
-            window.ui.showModal('helpModal');
-        });
+        const helpBtn = document.getElementById('helpBtn');
+        if (helpBtn) {
+            helpBtn.addEventListener('click', () => {
+                window.ui.showModal('helpModal');
+            });
+        }
 
         // Modal kapatma butonları
-        document.getElementById('helpCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('helpModal');
-        });
+        const helpCloseBtn = document.getElementById('helpCloseBtn');
+        if (helpCloseBtn) {
+            helpCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('helpModal');
+            });
+        }
 
-        document.getElementById('addStudentCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('addStudentModal');
-        });
+        const addStudentCloseBtn = document.getElementById('addStudentCloseBtn');
+        if (addStudentCloseBtn) {
+            addStudentCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('addStudentModal');
+            });
+        }
 
-        document.getElementById('commentEditCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('commentEditModal');
-        });
+        const commentEditCloseBtn = document.getElementById('commentEditCloseBtn');
+        if (commentEditCloseBtn) {
+            commentEditCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('commentEditModal');
+            });
+        }
 
-        document.getElementById('allCommentsCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('allCommentsModal');
-        });
+        const allCommentsCloseBtn = document.getElementById('allCommentsCloseBtn');
+        if (allCommentsCloseBtn) {
+            allCommentsCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('allCommentsModal');
+            });
+        }
+
+        const aiSuggestionsCloseBtn = document.getElementById('aiSuggestionsCloseBtn');
+        if (aiSuggestionsCloseBtn) {
+            aiSuggestionsCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('aiSuggestionsModal');
+            });
+        }
+
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        if (cancelEditBtn) {
+            cancelEditBtn.addEventListener('click', () => {
+                window.ui.hideModal('commentEditModal');
+            });
+        }
 
         // Modal dış alan tıklama
         const modals = [
@@ -128,12 +195,6 @@ class App {
                 window.ui.showModal('welcomeModal');
             }, 500);
         }
-
-        // Başlayalım butonu
-        document.getElementById('welcomeStartBtn').addEventListener('click', () => {
-            window.storage.setSetting('hasSeenWelcome', true);
-            window.ui.hideModal('welcomeModal');
-        });
     }
 }
 
@@ -314,5 +375,12 @@ class DashboardManager {
     }
 }
 
-// Global app instance
+// Global instances
+window.storage = new Storage();
+window.ui = new UIManager();
+window.students = new StudentManager(window.storage);
+window.comments = new CommentManager(window.storage);
+window.templates = new TemplateManager(window.storage);
+
+// Initialize app
 window.app = new App();

@@ -186,10 +186,10 @@ class StudentManager {
                         </div>
                     </div>
                     <div class="flex space-x-2">
-                        <button onclick="window.students.editStudent('${student.id}')" class="text-gray-400 hover:text-primary transition-colors duration-200" title="Düzenle">
+                        <button onclick="window.students && window.students.editStudent('${student.id}')" class="text-gray-400 hover:text-primary transition-colors duration-200" title="Düzenle">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button onclick="window.students.deleteStudent('${student.id}')" class="text-gray-400 hover:text-red-500 transition-colors duration-200" title="Sil">
+                        <button onclick="window.students && window.students.deleteStudent('${student.id}')" class="text-gray-400 hover:text-red-500 transition-colors duration-200" title="Sil">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
@@ -208,11 +208,11 @@ class StudentManager {
                 </div>
                 
                 <div class="flex space-x-2">
-                    <button onclick="window.students.handleCommentAction('${student.id}', ${hasComment})" class="flex-1 bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200">
+                    <button onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})" class="flex-1 bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200">
                         <i class="fas fa-${hasComment ? 'comment-dots' : 'plus'} mr-1"></i>
                         ${hasComment ? 'Yorum Düzenle' : 'Yorum Ekle'}
                     </button>
-                    <button onclick="window.students.copyStudentInfo('${student.id}')" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg text-sm transition-all duration-200" title="Kopyala">
+                    <button onclick="window.students && window.students.copyStudentInfo('${student.id}')" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg text-sm transition-all duration-200" title="Kopyala">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -230,7 +230,7 @@ class StudentManager {
                 <p class="text-gray-500 dark:text-gray-400 mb-4">
                     ${this.currentFilter === 'all' ? 'İlk öğrencinizi ekleyerek başlayın' : `${this.currentFilter}. sınıfta öğrenci bulunmuyor`}
                 </p>
-                <button onclick="window.students.showAddModal()" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
+                <button onclick="window.students && window.students.showAddModal()" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
                     <i class="fas fa-plus mr-2"></i>
                     Öğrenci Ekle
                 </button>
@@ -303,7 +303,7 @@ class StudentManager {
         if (confirm(`${student.name} adlı öğrenci${commentText} silinecek. Emin misiniz?`)) {
             if (this.storage.deleteStudent(id)) {
                 this.render();
-                window.app.dashboard.updateStats();
+                window.app && window.app.dashboard && window.app.dashboard.updateStats();
                 window.ui.showToast('Öğrenci başarıyla silindi!', 'success');
             } else {
                 window.ui.showToast('Silme işlemi sırasında hata oluştu!', 'error');
@@ -347,5 +347,4 @@ class StudentManager {
     }
 }
 
-// Global student manager instance
-window.students = new StudentManager(window.storage);
+// Global student manager instance will be created in app.js
