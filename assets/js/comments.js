@@ -183,7 +183,7 @@ class CommentManager {
             
             textarea.value = content;
             this.updateCharacterCount(content.length);
-            // Uyarı mesajı çıkarma
+            window.ui.showToast('[Öğrenci Adı] yer tutucusu silinecektir', 'info');
         }
     }
 
@@ -224,7 +224,11 @@ class CommentManager {
         } else {
             form.reset();
             form.period.value = '1'; // Varsayılan dönem
-            this.updateCharacterCount(0);
+            
+            // Yeni yorum için otomatik isim uygulama
+            const firstName = student.name.split(' ')[0];
+            form.content.value = `Derslere karşı ${firstName} `;
+            this.updateCharacterCount(form.content.value.length);
             this.renderCurrentTags([]);
         }
 

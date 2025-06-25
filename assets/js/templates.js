@@ -212,6 +212,13 @@ class TemplateManager {
     renderSuggestionCard(suggestion) {
         const toneColor = this.getToneColor(suggestion.ton);
         const toneText = this.getToneText(suggestion.ton);
+        
+        // Seçili öğrenci varsa ismi uygula
+        let content = suggestion.icerik;
+        if (this.currentStudent) {
+            const firstName = this.currentStudent.name.split(' ')[0];
+            content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+        }
 
         return `
             <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200 cursor-pointer animate-fade-in" onclick="window.templates.selectSuggestion('${suggestion.id || Date.now()}')">
@@ -221,7 +228,7 @@ class TemplateManager {
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
-                <p class="text-gray-700 dark:text-gray-300 mb-3">${suggestion.icerik}</p>
+                <p class="text-gray-700 dark:text-gray-300 mb-3">${content}</p>
                 ${suggestion.etiketler && suggestion.etiketler.length > 0 ? `
                     <div class="flex flex-wrap gap-1">
                         ${suggestion.etiketler.map(tag => `
