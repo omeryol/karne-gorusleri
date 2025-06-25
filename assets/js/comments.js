@@ -165,12 +165,25 @@ class CommentManager {
     autoApplyPlaceholder() {
         const textarea = document.querySelector('#commentEditForm textarea[name="content"]');
         if (textarea && this.currentEditStudent) {
-            // [Öğrenci Adı] placeholder'ını tamamen kaldır
-            textarea.value = textarea.value.replace(/\[Öğrenci Adı\]/g, '');
-            // Çift boşlukları tek boşluk yap
-            textarea.value = textarea.value.replace(/\s+/g, ' ').trim();
-            this.updateCharacterCount(textarea.value.length);
-            window.ui.showToast('Yer tutucu kaldırıldı!', 'success');
+            // [Öğrenci Adı] placeholder'ını ve etrafındaki noktalama işaretlerini kaldır
+            let content = textarea.value;
+            
+            // Farklı kombinasyonları temizle
+            content = content.replace(/,\s*\[Öğrenci Adı\]\s*/g, ' ');
+            content = content.replace(/\[Öğrenci Adı\]\s*,\s*/g, ' ');
+            content = content.replace(/\[Öğrenci Adı\]/g, '');
+            
+            // Çift boşlukları tek boşluk yap ve trim
+            content = content.replace(/\s+/g, ' ').trim();
+            
+            // İlk harfi büyük yap
+            if (content.length > 0) {
+                content = content.charAt(0).toUpperCase() + content.slice(1);
+            }
+            
+            textarea.value = content;
+            this.updateCharacterCount(content.length);
+            // Uyarı mesajı çıkarma
         }
     }
 
