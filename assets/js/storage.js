@@ -1,136 +1,133 @@
-// LocalStorage yönetimi için ana sınıf
-class KarneStorage {
+
+// Yerel depolama yönetimi
+class LocalStorage {
     constructor() {
-        this.keys = {
-            students: 'karne_students',
-            comments: 'karne_comments',
-            templates: 'karne_templates',
-            settings: 'karne_settings'
-        };
+        this.prefix = 'karneAsistani_';
         this.init();
     }
 
     init() {
-        // İlk kurulum kontrolü
-        if (!this.get(this.keys.students)) {
-            this.set(this.keys.students, []);
-        }
-        if (!this.get(this.keys.comments)) {
-            this.set(this.keys.comments, []);
-        }
-        if (!this.get(this.keys.settings)) {
-            this.set(this.keys.settings, {
-                theme: 'light',
-                hasSeenWelcome: false
-            });
-        }
-    }
-
-    // Veri okuma
-    get(key) {
         try {
-            const data = localStorage.getItem(key);
-            return data ? JSON.parse(data) : null;
-        } catch (error) {
-            console.error('Storage get error:', error);
-            return null;
+            // Test localStorage availability
+            const test = 'test';
+            localStorage.setItem(test, test);
+            localStorage.removeItem(test);
+        } catch (e) {
+            console.warn('LocalStorage kullanılamıyor, geçici depolama kullanılacak');
+            this.fallbackStorage = new Map();
         }
     }
 
-    // Veri yazma
+    getKey(key) {
+        return this.prefix + key;
+    }
+
     set(key, value) {
         try {
-            localStorage.setItem(key, JSON.stringify(value));
+            if (this.fallbackStorage) {
+                this.fallbackStorage.set(this.getKey(key), JSON.stringify(value));
+            } else {
+                localStorage.setItem(this.getKey(key), JSON.stringify(value));
+            }
             return true;
-        } catch (error) {
-            console.error('Storage set error:', error);
+        } catch (e) {
+            console.error('Veri kaydedilemedi:', e);
             return false;
         }
     }
 
-    // Veri silme
+    get(key, defaultValue = null) {
+        try {
+            let data;
+            if (this.fallbackStorage) {
+                data = this.fallbackStorage.get(this.getKey(key));
+            } else {
+                data = localStorage.getItem(this.getKey(key));
+            }
+            return data ? JSON.parse(data) : defaultValue;
+        } catch (e) {
+            console.error('Veri okunamadı:', e);
+            return defaultValue;
+        }
+    }
+
     remove(key) {
         try {
-            localStorage.removeItem(key);
+            if (this.fallbackStorage) {
+                this.fallbackStorage.delete(this.getKey(key));
+            } else {
+                localStorage.removeItem(this.getKey(key));
+            }
             return true;
-        } catch (error) {
-            console.error('Storage remove error:', error);
+        } catch (e) {
+            console.error('Veri silinemedi:', e);
             return false;
         }
     }
 
-    // Tüm verileri temizleme
     clear() {
         try {
-            Object.values(this.keys).forEach(key => {
-                localStorage.removeItem(key);
-            });
-            this.init();
+            if (this.fallbackStorage) {
+                this.fallbackStorage.clear();
+            } else {
+                const keys = Object.keys(localStorage).filter(key => key.startsWith(this.prefix));
+                keys.forEach(key => localStorage.removeItem(key));
+            }
             return true;
-        } catch (error) {
-            console.error('Storage clear error:', error);
+        } catch (e) {
+            console.error('Veriler temizlenemedi:', e);
             return false;
         }
     }
 
-    // Öğrenci işlemleri
+    // Students operations
     getStudents() {
-        return this.get(this.keys.students) || [];
+        return this.get('students', []);
     }
 
-    setStudents(students) {
-        return this.set(this.keys.students, students);
+    saveStudents(students) {
+        return this.set('students', students);
     }
 
     addStudent(student) {
         const students = this.getStudents();
-        student.id = this.generateId();
+        student.id = Date.now().toString();
+        student.createdAt = new Date().toISOString();
         students.push(student);
-        return this.setStudents(students);
+        return this.saveStudents(students) ? student : null;
     }
 
     updateStudent(id, updates) {
         const students = this.getStudents();
         const index = students.findIndex(s => s.id === id);
         if (index !== -1) {
-            students[index] = { ...students[index], ...updates };
-            return this.setStudents(students);
+            students[index] = { ...students[index], ...updates, updatedAt: new Date().toISOString() };
+            return this.saveStudents(students) ? students[index] : null;
         }
-        return false;
+        return null;
     }
 
     deleteStudent(id) {
         const students = this.getStudents();
         const filtered = students.filter(s => s.id !== id);
-
-        // Öğrenciye ait yorumları da sil
-        const comments = this.getComments();
-        const filteredComments = comments.filter(c => c.studentId !== id);
-        this.setComments(filteredComments);
-
-        return this.setStudents(filtered);
+        return this.saveStudents(filtered);
     }
 
-    getStudentById(id) {
-        const students = this.getStudents();
-        return students.find(s => s.id === id);
-    }
-
-    // Yorum işlemleri
+    // Comments operations
     getComments() {
-        return this.get(this.keys.comments) || [];
+        return this.get('comments', []);
     }
 
-    setComments(comments) {
-        return this.set(this.keys.comments, comments);
+    saveComments(comments) {
+        return this.set('comments', comments);
     }
 
     addComment(comment) {
         const comments = this.getComments();
-        comment.id = this.generateId();
+        comment.id = Date.now().toString();
         comment.createdAt = new Date().toISOString();
         comments.push(comment);
-        return this.setComments(comments);
+        return this.saveComments(comments) ? comment : null;
     }
 
     updateComment(id, updates) {
@@ -138,118 +135,100 @@ class KarneStorage {
         const index = comments.findIndex(c => c.id === id);
         if (index !== -1) {
             comments[index] = { ...comments[index], ...updates, updatedAt: new Date().toISOString() };
-            return this.setComments(comments);
+            return this.saveComments(comments) ? comments[index] : null;
         }
-        return false;
+        return null;
     }
 
     deleteComment(id) {
         const comments = this.getComments();
         const filtered = comments.filter(c => c.id !== id);
-        return this.setComments(filtered);
+        return this.saveComments(filtered);
     }
 
-    getCommentById(id) {
-        const comments = this.getComments();
-        return comments.find(c => c.id === id);
-    }
-
-    getCommentsByStudentId(studentId) {
+    getCommentsByStudent(studentId) {
         const comments = this.getComments();
         return comments.filter(c => c.studentId === studentId);
     }
 
-    // Ayar işlemleri
+    // Settings operations
     getSettings() {
-        return this.get(this.keys.settings) || {};
+        return this.get('settings', {
+            theme: 'light',
+            welcomeShown: false,
+            lastBackup: null
+        });
     }
 
-    updateSettings(updates) {
-        const settings = this.getSettings();
-        const newSettings = { ...settings, ...updates };
-        return this.set(this.keys.settings, newSettings);
-    }
-
-    getSetting(key) {
-        const settings = this.getSettings();
-        return settings[key];
-    }
-
-    setSetting(key, value) {
+    saveSetting(key, value) {
         const settings = this.getSettings();
         settings[key] = value;
-        return this.set(this.keys.settings, settings);
+        return this.set('settings', settings);
     }
 
-    // Yardımcı fonksiyonlar
-    generateId() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
-    }
-
-    // Veri analizi
-    getStatistics() {
+    // Statistics
+    getStats() {
         const students = this.getStudents();
         const comments = this.getComments();
+        
+        const totalStudents = students.length;
+        const totalComments = comments.length;
+        const completedComments = comments.filter(c => c.content && c.content.trim().length > 0).length;
+        const pendingComments = totalStudents - completedComments;
+        const completionRate = totalStudents > 0 ? Math.round((completedComments / totalStudents) * 100) : 0;
 
-        const stats = {
-            totalStudents: students.length,
-            totalComments: comments.length,
-            completedComments: comments.length,
-            pendingComments: students.length - comments.length,
-            completionRate: students.length > 0 ? Math.round((comments.length / students.length) * 100) : 0,
-            toneAnalysis: {
-                olumlu: comments.filter(c => c.tone === 'olumlu').length,
-                notr: comments.filter(c => c.tone === 'notr').length,
-                olumsuz: comments.filter(c => c.tone === 'olumsuz').length
-            },
-            gradeDistribution: {},
-            popularTags: {}
+        // Ton analizi
+        const toneAnalysis = {
+            olumlu: comments.filter(c => c.tone === 'olumlu').length,
+            notr: comments.filter(c => c.tone === 'notr').length,
+            olumsuz: comments.filter(c => c.tone === 'olumsuz').length
         };
-
-        // Sınıf dağılımı
-        students.forEach(student => {
-            const grade = student.grade;
-            stats.gradeDistribution[grade] = (stats.gradeDistribution[grade] || 0) + 1;
-        });
 
         // Popüler etiketler
-        comments.forEach(comment => {
-            if (comment.tags && comment.tags.length > 0) {
-                comment.tags.forEach(tag => {
-                    stats.popularTags[tag] = (stats.popularTags[tag] || 0) + 1;
-                });
-            }
+        const allTags = comments.flatMap(c => c.tags || []);
+        const tagCounts = {};
+        allTags.forEach(tag => {
+            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
         });
+        const popularTags = Object.entries(tagCounts)
+            .sort(([,a], [,b]) => b - a)
+            .slice(0, 10);
 
-        return stats;
-    }
-
-    // Veri dışa aktarma
-    exportData() {
         return {
-            students: this.getStudents(),
-            comments: this.getComments(),
-            exportDate: new Date().toISOString(),
-            version: '1.0'
+            totalStudents,
+            totalComments,
+            completedComments,
+            pendingComments,
+            completionRate,
+            toneAnalysis,
+            popularTags
         };
     }
 
-    // Veri içe aktarma
+    // Export/Import
+    exportData() {
+        const data = {
+            students: this.getStudents(),
+            comments: this.getComments(),
+            settings: this.getSettings(),
+            exportDate: new Date().toISOString(),
+            version: '1.0.0'
+        };
+        return data;
+    }
+
     importData(data) {
         try {
-            if (data.students && Array.isArray(data.students)) {
-                this.setStudents(data.students);
-            }
-            if (data.comments && Array.isArray(data.comments)) {
-                this.setComments(data.comments);
-            }
+            if (data.students) this.saveStudents(data.students);
+            if (data.comments) this.saveComments(data.comments);
+            if (data.settings) this.set('settings', data.settings);
             return true;
-        } catch (error) {
-            console.error('Import data error:', error);
+        } catch (e) {
+            console.error('Veri içe aktarılamadı:', e);
             return false;
         }
     }
 }
 
-// Global storage instance
-window.storage = new KarneStorage();
+// Global instance
+window.storage = new LocalStorage();

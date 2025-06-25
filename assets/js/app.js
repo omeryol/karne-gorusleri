@@ -1,283 +1,197 @@
-
-// Ana uygulama koordinatörü
+// Ana uygulama sınıfı
 class App {
     constructor() {
         this.currentTab = 'dashboard';
+        this.storage = window.storage;
         this.init();
     }
 
     init() {
-        this.initializeComponents();
-        this.setupTheme();
-        this.setupKeyboardShortcuts();
-        this.setupNavigationHandlers();
-        this.showWelcomeModal();
-
-        // İlk yükleme
-        this.dashboard.updateStats();
+        try {
+            this.initializeComponents();
+            this.bindEvents();
+            this.showWelcomeIfFirstTime();
+            this.updateDashboard();
+            console.log('Uygulama başarıyla başlatıldı');
+        } catch (error) {
+            console.error('Uygulama başlatılırken hata:', error);
+            this.showErrorState();
+        }
     }
 
     initializeComponents() {
-        // Tab yönetimi
-        this.tabs = new TabManager();
+        // Initialize managers
+        window.studentManager = new StudentManager(this.storage);
+        window.commentManager = new CommentManager(this.storage);
+        window.templateManager = new TemplateManager(this.storage);
 
-        // Dashboard yönetimi
-        this.dashboard = new DashboardManager();
+        // Initialize tabs
+        this.tabs = {
+            switchTo: (tabName) => this.switchTab(tabName)
+        };
     }
 
-    setupTheme() {
-        const savedTheme = window.storage.getSetting('theme') || 'light';
-        const htmlElement = document.documentElement;
-
-        if (savedTheme === 'dark') {
-            htmlElement.classList.add('dark');
-        }
-
+    bindEvents() {
+        // Theme toggle
         const themeToggle = document.getElementById('themeToggle');
         if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                htmlElement.classList.toggle('dark');
-                const isDark = htmlElement.classList.contains('dark');
-                window.storage.setSetting('theme', isDark ? 'dark' : 'light');
-            });
+            themeToggle.addEventListener('click', () => this.toggleTheme());
         }
-    }
 
-    setupKeyboardShortcuts() {
-        document.addEventListener('keydown', (e) => {
-            // ESC tuşu - modalleri kapat
-            if (e.key === 'Escape') {
-                const openModals = [
-                    'welcomeModal', 'helpModal', 'addStudentModal', 
-                    'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
-                ];
-
-                openModals.forEach(modalId => {
-                    const modal = document.getElementById(modalId);
-                    if (modal && modal.style.display === 'flex') {
-                        window.ui.hideModal(modalId);
-                    }
-                });
-            }
-
-            // Ctrl+Enter - kaydet
-            if (e.ctrlKey && e.key === 'Enter') {
-                e.preventDefault();
-                const activeForm = document.querySelector('form:focus-within');
-                if (activeForm) {
-                    activeForm.dispatchEvent(new Event('submit'));
-                }
-            }
-
-            // Tab navigation (Ctrl+1, Ctrl+2, etc.)
-            if (e.ctrlKey && ['1', '2', '3', '4'].includes(e.key)) {
-                e.preventDefault();
-                const tabMap = {
-                    '1': 'dashboard',
-                    '2': 'students', 
-                    '3': 'comments',
-                    '4': 'templates'
-                };
-                this.tabs.switchTo(tabMap[e.key]);
-            }
+        // Tab navigation
+        const tabButtons = document.querySelectorAll('[data-tab]');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                this.switchTab(button.dataset.tab);
+            });
         });
-    }
 
-    setupNavigationHandlers() {
-        // Yardım butonu
-        const helpBtn = document.getElementById('helpBtn');
-        if (helpBtn) {
-            helpBtn.addEventListener('click', () => {
-                window.ui.showModal('helpModal');
-            });
-        }
-
-        // Modal kapatma butonları
-        const helpCloseBtn = document.getElementById('helpCloseBtn');
-        if (helpCloseBtn) {
-            helpCloseBtn.addEventListener('click', () => {
-                window.ui.hideModal('helpModal');
-            });
-        }
-
-        const addStudentCloseBtn = document.getElementById('addStudentCloseBtn');
-        if (addStudentCloseBtn) {
-            addStudentCloseBtn.addEventListener('click', () => {
-                window.ui.hideModal('addStudentModal');
-            });
-        }
-
-        const commentEditCloseBtn = document.getElementById('commentEditCloseBtn');
-        if (commentEditCloseBtn) {
-            commentEditCloseBtn.addEventListener('click', () => {
-                window.ui.hideModal('commentEditModal');
-            });
-        }
-
-        const allCommentsCloseBtn = document.getElementById('allCommentsCloseBtn');
-        if (allCommentsCloseBtn) {
-            allCommentsCloseBtn.addEventListener('click', () => {
-                window.ui.hideModal('allCommentsModal');
-            });
-        }
-
-        // Modal dış alan tıklama
-        const modals = [
-            'welcomeModal', 'helpModal', 'addStudentModal', 
-            'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
-        ];
-
-        modals.forEach(modalId => {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        window.ui.hideModal(modalId);
-                    }
-                });
-            }
-        });
-    }
-
-    showWelcomeModal() {
-        const hasSeenWelcome = window.storage.getSetting('hasSeenWelcome');
-        if (!hasSeenWelcome) {
-            setTimeout(() => {
-                window.ui.showModal('welcomeModal');
-            }, 500);
-        }
-
-        // Başlayalım butonu
+        // Welcome modal
+        const welcomeToggleBtn = document.getElementById('welcomeToggleBtn');
+        const welcomeModal = document.getElementById('welcomeModal');
         const welcomeStartBtn = document.getElementById('welcomeStartBtn');
+
+        if (welcomeToggleBtn) {
+            welcomeToggleBtn.addEventListener('click', () => {
+                if (welcomeModal) welcomeModal.style.display = 'flex';
+            });
+        }
+
         if (welcomeStartBtn) {
             welcomeStartBtn.addEventListener('click', () => {
-                window.storage.setSetting('hasSeenWelcome', true);
-                window.ui.hideModal('welcomeModal');
+                if (welcomeModal) welcomeModal.style.display = 'none';
+                this.storage.saveSetting('welcomeShown', true);
             });
         }
-    }
-}
 
-// Tab yönetimi sınıfı
-class TabManager {
-    constructor() {
-        this.currentTab = 'dashboard';
-        this.init();
-    }
+        // Help modal
+        const helpBtn = document.getElementById('helpBtn');
+        const helpModal = document.getElementById('helpModal');
+        const helpCloseBtn = document.getElementById('helpCloseBtn');
 
-    init() {
-        this.bindEvents();
-    }
+        if (helpBtn) {
+            helpBtn.addEventListener('click', () => {
+                if (helpModal) helpModal.style.display = 'flex';
+            });
+        }
 
-    bindEvents() {
-        document.querySelectorAll('[data-tab]').forEach(button => {
-            button.addEventListener('click', () => {
-                this.switchTo(button.dataset.tab);
+        if (helpCloseBtn) {
+            helpCloseBtn.addEventListener('click', () => {
+                if (helpModal) helpModal.style.display = 'none';
+            });
+        }
+
+        // Close modals on outside click
+        const modals = document.querySelectorAll('.fixed.inset-0');
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
             });
         });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                switch (e.key) {
+                    case '1':
+                        e.preventDefault();
+                        this.switchTab('dashboard');
+                        break;
+                    case '2':
+                        e.preventDefault();
+                        this.switchTab('students');
+                        break;
+                    case '3':
+                        e.preventDefault();
+                        this.switchTab('comments');
+                        break;
+                    case '4':
+                        e.preventDefault();
+                        this.switchTab('templates');
+                        break;
+                }
+            }
+            if (e.key === 'Escape') {
+                // Close all modals
+                modals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
+            }
+        });
     }
 
-    switchTo(tabName) {
-        if (this.currentTab === tabName) return;
-
-        // Button state güncellemesi
-        document.querySelectorAll('[data-tab]').forEach(btn => {
-            btn.classList.remove('border-primary', 'text-primary');
-            btn.classList.add('border-transparent', 'text-gray-500', 'dark:text-gray-400');
-        });
-
-        const activeButton = document.querySelector(`[data-tab="${tabName}"]`);
-        if (activeButton) {
-            activeButton.classList.remove('border-transparent', 'text-gray-500', 'dark:text-gray-400');
-            activeButton.classList.add('border-primary', 'text-primary');
-        }
-
-        // Content görünürlük güncellemesi
-        document.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.add('hidden');
-        });
-
-        const targetContent = document.getElementById(`${tabName}-tab`);
-        if (targetContent) {
-            targetContent.classList.remove('hidden');
-        }
-
+    switchTab(tabName) {
         this.currentTab = tabName;
 
-        // Tab değişikliğinde refresh
-        if (tabName === 'dashboard' && window.app && window.app.dashboard) {
-            window.app.dashboard.updateStats();
-        } else if (tabName === 'students' && window.students) {
-            window.students.render();
-        } else if (tabName === 'comments' && window.comments) {
-            window.comments.render();
-        } else if (tabName === 'templates' && window.templates) {
-            window.templates.render();
+        // Update tab buttons
+        const tabButtons = document.querySelectorAll('[data-tab]');
+        tabButtons.forEach(button => {
+            if (button.dataset.tab === tabName) {
+                button.classList.add('border-primary', 'text-primary');
+                button.classList.remove('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+            } else {
+                button.classList.remove('border-primary', 'text-primary');
+                button.classList.add('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+            }
+        });
+
+        // Show/hide tab content
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(content => {
+            if (content.id === `${tabName}-tab`) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        });
+
+        // Update content based on tab
+        switch (tabName) {
+            case 'dashboard':
+                this.updateDashboard();
+                break;
+            case 'students':
+                if (window.studentManager) window.studentManager.render();
+                break;
+            case 'comments':
+                if (window.commentManager) window.commentManager.render();
+                break;
+            case 'templates':
+                if (window.templateManager) window.templateManager.render();
+                break;
         }
     }
-}
 
-// Dashboard yönetimi sınıfı
-class DashboardManager {
-    constructor() {
-        this.currentGradeFilter = 'all';
-        this.init();
+    updateDashboard() {
+        const stats = this.storage.getStats();
+
+        // Update stat cards
+        const elements = {
+            totalStudents: document.getElementById('totalStudents'),
+            completedComments: document.getElementById('completedComments'),
+            pendingComments: document.getElementById('pendingComments'),
+            completionRate: document.getElementById('completionRate')
+        };
+
+        if (elements.totalStudents) elements.totalStudents.textContent = stats.totalStudents;
+        if (elements.completedComments) elements.completedComments.textContent = stats.completedComments;
+        if (elements.pendingComments) elements.pendingComments.textContent = stats.pendingComments;
+        if (elements.completionRate) elements.completionRate.textContent = `${stats.completionRate}%`;
+
+        // Update tone analysis
+        this.updateToneAnalysis(stats.toneAnalysis);
+
+        // Update popular tags
+        this.updatePopularTags(stats.popularTags);
     }
 
-    init() {
-        this.bindEvents();
-    }
-
-    bindEvents() {
-        // Grade filtreleri
-        document.querySelectorAll('.grade-filter').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                this.handleGradeFilterChange(e);
-            });
-        });
-    }
-
-    handleGradeFilterChange(e) {
-        const grade = e.target.dataset.grade;
-
-        // Aktif filtreyi güncelle
-        document.querySelectorAll('.grade-filter').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        e.target.classList.add('active');
-
-        this.currentGradeFilter = grade;
-        this.updateStats();
-    }
-
-    updateStats() {
-        const stats = window.storage.getStatistics();
-
-        // Temel istatistikler
-        const totalStudentsEl = document.getElementById('totalStudents');
-        if (totalStudentsEl) totalStudentsEl.textContent = stats.totalStudents;
-
-        const completedCommentsEl = document.getElementById('completedComments');
-        if (completedCommentsEl) completedCommentsEl.textContent = stats.completedComments;
-
-        const pendingCommentsEl = document.getElementById('pendingComments');
-        if (pendingCommentsEl) pendingCommentsEl.textContent = stats.pendingComments;
-
-        const completionRateEl = document.getElementById('completionRate');
-        if (completionRateEl) completionRateEl.textContent = `${stats.completionRate}%`;
-
-        // Ton analizi
-        this.renderToneAnalysis(stats.toneAnalysis);
-
-        // Popüler etiketler
-        this.renderPopularTags(stats.popularTags);
-    }
-
-    renderToneAnalysis(toneData) {
+    updateToneAnalysis(toneAnalysis) {
         const container = document.getElementById('toneAnalysis');
         if (!container) return;
 
-        const total = toneData.olumlu + toneData.notr + toneData.olumsuz;
+        const total = toneAnalysis.olumlu + toneAnalysis.notr + toneAnalysis.olumsuz;
 
         if (total === 0) {
             container.innerHTML = `
@@ -289,92 +203,110 @@ class DashboardManager {
         }
 
         const tones = [
-            { key: 'olumlu', label: 'Olumlu', color: 'bg-positive', count: toneData.olumlu },
-            { key: 'notr', label: 'Nötr', color: 'bg-neutral', count: toneData.notr },
-            { key: 'olumsuz', label: 'Olumsuz', color: 'bg-negative', count: toneData.olumsuz }
+            { name: 'Olumlu', count: toneAnalysis.olumlu, color: 'bg-green-500', icon: 'fas fa-smile' },
+            { name: 'Nötr', count: toneAnalysis.notr, color: 'bg-yellow-500', icon: 'fas fa-meh' },
+            { name: 'Olumsuz', count: toneAnalysis.olumsuz, color: 'bg-red-500', icon: 'fas fa-frown' }
         ];
 
         container.innerHTML = tones.map(tone => {
             const percentage = Math.round((tone.count / total) * 100);
             return `
                 <div class="flex items-center justify-between">
-                    <span class="text-sm font-medium text-gray-600 dark:text-gray-400">${tone.label}</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 ${tone.color} rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">
+                            <i class="${tone.icon} mr-2"></i>
+                            ${tone.name}
+                        </span>
+                    </div>
                     <div class="flex items-center space-x-2">
-                        <div class="w-32 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                            <div class="${tone.color} h-2 rounded-full transition-all duration-500" style="width: ${percentage}%"></div>
-                        </div>
-                        <span class="text-sm font-medium text-gray-900 dark:text-white w-8">${tone.count}</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">${tone.count}</span>
+                        <span class="text-sm font-medium text-gray-900 dark:text-white">${percentage}%</span>
                     </div>
                 </div>
             `;
         }).join('');
     }
 
-    renderPopularTags(tagsData) {
+    updatePopularTags(popularTags) {
         const container = document.getElementById('popularTags');
         if (!container) return;
 
-        const tags = Object.entries(tagsData)
-            .sort((a, b) => b[1] - a[1])
-            .slice(0, 8);
-
-        if (tags.length === 0) {
+        if (popularTags.length === 0) {
             container.innerHTML = `
-                <div class="text-center py-4">
+                <div class="text-center py-4 w-full">
                     <p class="text-gray-500 dark:text-gray-400">Henüz etiket bulunmuyor</p>
                 </div>
             `;
             return;
         }
 
-        const colors = [
-            'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
-            'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
-            'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
-            'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200',
-            'bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200',
-            'bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200',
-            'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
-            'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
-        ];
-
-        container.innerHTML = tags.map(([tag, count], index) => `
-            <span class="${colors[index % colors.length]} px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:scale-105 transition-transform duration-200" title="${count} kullanım">
+        container.innerHTML = popularTags.map(([tag, count]) => `
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
                 ${tag}
+                <span class="ml-2 px-2 py-0.5 rounded-full bg-primary/20 text-xs">${count}</span>
             </span>
         `).join('');
     }
+
+    toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.classList.contains('dark');
+
+        if (isDark) {
+            html.classList.remove('dark');
+            this.storage.saveSetting('theme', 'light');
+        } else {
+            html.classList.add('dark');
+            this.storage.saveSetting('theme', 'dark');
+        }
+    }
+
+    showWelcomeIfFirstTime() {
+        const settings = this.storage.getSettings();
+        if (!settings.welcomeShown) {
+            const welcomeModal = document.getElementById('welcomeModal');
+            if (welcomeModal) {
+                setTimeout(() => {
+                    welcomeModal.style.display = 'flex';
+                }, 500);
+            }
+        }
+    }
+
+    showErrorState() {
+        const main = document.querySelector('main');
+        if (main) {
+            main.innerHTML = `
+                <div class="flex items-center justify-center min-h-96">
+                    <div class="text-center">
+                        <div class="text-red-500 mb-4">
+                            <i class="fas fa-exclamation-triangle text-4xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                            Uygulama Yüklenemedi
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Sayfa yenilenmesi gerekiyor
+                        </p>
+                        <button onclick="location.reload()" class="bg-primary hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium">
+                            Sayfayı Yenile
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+    }
 }
 
-// Uygulama başlatma - DOM yüklendikten sonra
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize app when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
     try {
         // Storage'ı önce başlat
         if (!window.storage) {
             window.storage = new KarneStorage();
         }
-
-        // Component'leri sırayla başlat
-        if (!window.ui) {
-            window.ui = new UIManager();
-        }
-
-        if (!window.comments && window.storage) {
-            window.comments = new CommentManager(window.storage);
-        }
-
-        if (!window.students && window.storage) {
-            window.students = new StudentManager(window.storage);
-        }
-
-        if (!window.templates && window.storage) {
-            window.templates = new TemplateManager(window.storage);
-        }
-
-        // App'i en son başlat
         window.app = new App();
-
-        console.log('Tüm component\'ler başarıyla yüklendi');
     } catch (error) {
         console.error('Uygulama başlatılırken hata:', error);
     }
