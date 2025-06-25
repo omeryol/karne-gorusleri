@@ -349,9 +349,9 @@ class TemplateManager {
 
     getToneText(tone) {
         const texts = {
-            'olumlu': 'Olumlu',
-            'notr': 'Nötr',
-            'olumsuz': 'Olumsuz'
+            'olumlu': '😊 Olumlu',
+            'notr': '😐 Nötr',
+            'olumsuz': '😕 Olumsuz'
         };
         return texts[tone] || 'Bilinmiyor';
     }
