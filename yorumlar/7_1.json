@@ -4,93 +4,63 @@
     "yorumlar": [
         {
             "id": "7_1_001",
-            "icerik": "[Öğrenci Adı], yedinci sınıfın ilk döneminde soyut düşünme becerilerinde önemli gelişim göstermiştir. Akademik başarısı takdire şayandır.",
+            "icerik": "[Öğrenci Adı] matematik dersinde üstün performans sergileyerek sınıfın en başarılı öğrencilerinden biridir.",
             "ton": "olumlu",
-            "etiketler": ["soyut düşünme", "önemli gelişim", "akademik başarı", "takdire şayan"]
+            "etiketler": ["mükemmel performans", "matematik", "sınıf lideri", "üstün başarı"]
         },
         {
             "id": "7_1_002",
-            "icerik": "[Öğrenci Adı], matematik derslerinde cebirsel ifadeleri anlama konusunda yeteneklidir. Problem çözme yaklaşımları çeşitlenmiştir.",
+            "icerik": "[Öğrenci Adı] edebiyat derslerinde derin analiz yapabilme yeteneği göstermektedir.",
             "ton": "olumlu",
-            "etiketler": ["matematik", "cebirsel ifade", "problem çözme", "yaklaşım çeşitliliği"]
+            "etiketler": ["derin analiz", "edebiyat", "eleştirel düşünme", "kavramsal anlama"]
         },
         {
             "id": "7_1_003",
-            "icerik": "[Öğrenci Adı], Türkçe derslerinde edebiyat metinlerini anlama ve yorumlama becerileri gelişmiştir. Estetik algısı güçlüdür.",
-            "ton": "olumlu",
-            "etiketler": ["Türkçe", "edebiyat", "metin yorumlama", "estetik algı"]
+            "icerik": "[Öğrenci Adı] ders çalışma alışkanlıklarını geliştirmesi gerekmektedir.",
+            "ton": "notr",
+            "etiketler": ["çalışma alışkanlığı", "gelişim gerektiren", "plan ihtiyacı", "düzenleme sorunu"]
         },
         {
             "id": "7_1_004",
-            "icerik": "[Öğrenci Adı], fen bilimleri derslerinde bilimsel araştırma yöntemlerini öğrenmeye başlamıştır. Deneysel çalışmalarda başarılıdır.",
-            "ton": "olumlu",
-            "etiketler": ["fen bilimleri", "bilimsel araştırma", "deneysel çalışma", "yöntem"]
+            "icerik": "[Öğrenci Adı] sürekli çalışma reddi göstermekte ve derse katılmak istememektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["çalışma reddi", "katılım reddi", "motivasyon kaybı", "ciddi akademik sorun"]
         },
         {
             "id": "7_1_005",
-            "icerik": "[Öğrenci Adı], sosyal bilgiler derslerinde tarihsel düşünme becerilerini geliştirmiştir. Neden-sonuç ilişkilerini kurabilmektedir.",
+            "icerik": "[Öğrenci Adı] fen bilimleri projelerinde yaratıcı çözümler üretmektedir.",
             "ton": "olumlu",
-            "etiketler": ["sosyal bilgiler", "tarihsel düşünme", "neden-sonuç", "ilişki kurma"]
+            "etiketler": ["yaratıcı çözümler", "fen bilimleri", "proje başarısı", "bilimsel düşünce"]
         },
         {
             "id": "7_1_006",
-            "icerik": "[Öğrenci Adı], ergenlik döneminin zorluklarıyla başa çıkmaya çalışmaktadır. Duygusal destek gerekli görülmektedir.",
-            "ton": "notr",
-            "etiketler": ["ergenlik", "duygusal zorluk", "destek", "başa çıkma"]
+            "icerik": "[Öğrenci Adı] arkadaşlarını dışlayıcı davranışlar sergilemektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["dışlayıcı davranış", "sosyal zorbalık", "empati eksikliği", "sosyal problem"]
         },
         {
             "id": "7_1_007",
-            "icerik": "[Öğrenci Adı], yabancı dil derslerinde dil bilgisi kurallarını anlama konusunda gelişim göstermektedir. Yazılı anlatım becerileri güçlenmektedir.",
+            "icerik": "[Öğrenci Adı] sosyal sorumluluk projelerinde öncülük etmektedir.",
             "ton": "olumlu",
-            "etiketler": ["yabancı dil", "dil bilgisi", "yazılı anlatım", "güçlenme"]
+            "etiketler": ["sosyal sorumluluk", "önderlik", "toplumsal bilinç", "örnek davranış"]
         },
         {
             "id": "7_1_008",
-            "icerik": "[Öğrenci Adı], teknoloji ve tasarım derslerinde problem tanımlama ve çözüm üretme becerilerini geliştirmiştir.",
-            "ton": "olumlu",
-            "etiketler": ["teknoloji tasarım", "problem tanımlama", "çözüm üretme", "beceri"]
+            "icerik": "[Öğrenci Adı] zaman zaman konsantrasyon sorunu yaşamakta ancak çaba göstermektedir.",
+            "ton": "notr",
+            "etiketler": ["konsantrasyon sorunu", "çaba gösteriyor", "aralıklı dikkat", "gelişim potansiyeli"]
         },
         {
             "id": "7_1_009",
-            "icerik": "[Öğrenci Adı], bu dönemde arkadaş gruplarının etkisinde kalmaya başlamıştır. Bireysel kararlar alma konusunda yönlendirilmelidir.",
-            "ton": "notr",
-            "etiketler": ["arkadaş etkisi", "grup etkisi", "bireysel karar", "yönlendirme"]
+            "icerik": "[Öğrenci Adı] spor müsabakalarında takım ruhunu geliştirmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["takım ruhu", "spor başarısı", "işbirliği", "fair play"]
         },
         {
             "id": "7_1_010",
-            "icerik": "[Öğrenci Adı], müzik derslerinde müzik teorisi konularında ilerleme kaydetmiştir. Kompozisyon yapmaya ilgi göstermektedir.",
-            "ton": "olumlu",
-            "etiketler": ["müzik teorisi", "kompozisyon", "ilgi", "ilerleme"]
-        },
-        {
-            "id": "7_1_011",
-            "icerik": "[Öğrenci Adı], sanat çalışmalarında perspektif ve oran-orantı konularında beceri geliştirmiştir. Teknik bilgisi artmıştır.",
-            "ton": "olumlu",
-            "etiketler": ["sanat", "perspektif", "oran-orantı", "teknik bilgi"]
-        },
-        {
-            "id": "7_1_012",
-            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde bireysel sporlarda yetenek göstermektedir. Kişisel rekorlarını geliştirmektedir.",
-            "ton": "olumlu",
-            "etiketler": ["beden eğitimi", "bireysel spor", "yetenek", "kişisel rekor"]
-        },
-        {
-            "id": "7_1_013",
-            "icerik": "[Öğrenci Adı], derslerde konsantrasyon sorunu yaşamaya başlamıştır. Dikkat süresi kısalmıştır.",
+            "icerik": "[Öğrenci Adı] aldatma girişimlerinde bulunmuş, güven sorunu oluşmuştur.",
             "ton": "olumsuz",
-            "etiketler": ["konsantrasyon sorunu", "dikkat süresi", "kısalma"]
-        },
-        {
-            "id": "7_1_014",
-            "icerik": "[Öğrenci Adı], proje çalışmalarında araştırma becerilerini geliştirmiştir. Kaynak kullanımı konusunda bilinçlidir.",
-            "ton": "olumlu",
-            "etiketler": ["proje çalışması", "araştırma becerisi", "kaynak kullanımı", "bilinç"]
-        },
-        {
-            "id": "7_1_015",
-            "icerik": "[Öğrenci Adı], sınıf içi tartışmalarda görüşlerini ifade etmekten çekinmektedir. Özgüven gelişimi desteklenmelidir.",
-            "ton": "olumsuz",
-            "etiketler": ["tartışma", "görüş ifadesi", "çekingenlik", "özgüven"]
+            "etiketler": ["aldatma eğilimi", "güven sorunu", "dürüstlük problemi", "etik ihlal"]
         }
     ]
 }
