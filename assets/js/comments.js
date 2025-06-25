@@ -344,14 +344,6 @@ class CommentManager {
             } else {
                 charCount.className += ' text-red-600';
             }
-            
-            if (count > 450) {
-                parent.classList.add('text-red-500');
-            } else if (count > 350) {
-                parent.classList.add('text-yellow-500');
-            } else {
-                parent.classList.add('text-gray-500');
-            }
         }
     }
 
