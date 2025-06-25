@@ -1,0 +1,147 @@
+**Karne Asistanı - Detaylı Özellik ve Tasarım Raporu**
+
+---
+
+### 📋 Genel Bakış
+
+Karne Asistanı, Ortaokul öğretmenlerinin karne dönemlerinde öğrenci değerlendirme yorumlarını **hızlı**, **etkili** ve **güvenli** bir şekilde oluşturabilmeleri için geliştirilmiş modern bir web uygulamasıdır. Uygulama tamamen **client-side** çalışır, **offline desteği** vardır ve **GitHub Pages uyumludur**. `index.html` dosyası **kök dizin** veya **docs** klasöründe olmalıdır. Bu, GitHub Pages yapısı için **olmazsa olmaz bir koşuldur**.
+
+---
+
+### 🎯 Temel Özellikler
+
+#### 1. Sınıf Bazlı Organizasyon
+
+* 5., 6., 7. ve 8. sınıflar için **ayrı kategoriler**
+* **Sınıf bazlı özgün renk temaları**, sade ve göze hoş gelen güncellenmiş skalada:
+
+  * 5\. Sınıf → Mavi (#2980b9)
+  * 6. Sınıf → Yeşil (#27ae60)
+  * 7. Sınıf → Mor (#8e44ad)
+  * 8. Sınıf → Lacivert (#2c3e50)
+
+#### 2. Öğrenci Yönetim Sistemi
+
+* **Tekil veya toplu öğrenci ekleme** (tek popup, sekmeli yapı)
+* **Sadece ad bilgisi** ile kayıt, sınıf ve şube seçimi (5-8, A-E)
+* **Filtreleme, düzenleme ve silme** işlemleri
+* **Kart bazlı, responsive görünüm** (mobilde tam ekran adaptif kartlar)
+* Butonlar: `PlusCircle`, `Trash2`, `Edit3` ikonları ile desteklenir
+
+#### 3. Yorum Sistemi
+
+* **Her öğrenciye yalnızca bir aktif yorum** atanabilir
+* **Dönem bazlı filtreleme yalnızca yorumlarda geçerlidir**
+* **Ton analizi**: olumlu (yeşil), nötr (sarı), olumsuz (kırmızı)
+* **Etiketleme desteği**:
+
+  * Her yorum birden fazla etiket içerir (örn: "katılım", "iletişim")
+  * Etiketler gösterilir, tıklanarak filtreleme yapılabilir
+* **AI destekli öneri sistemi**:
+
+  * Tamamen **offline**, **ücretsiz**, **API gerektirmeyen** yapı
+  * Etiket filtreleme popup’ı ile çalışır
+  * Kullanıcı yorumlardan birini seçtiğinde doğrudan düzenleme popup'ına aktarılır
+* **Karakter sayacı (maks. 500 karakter)**
+* **\[Öğrenci Adı] placeholder'ı** sadece ad kısmını getirir (örneğin "Ayşe Yıldız" → "Ayşe")
+* **Navigasyon kontrolleri**: Öğrenci ve yorumlar arasında kolay geçiş
+* **Toplu yorum görüntüleme popup'ı**: Her yorumda kopyala, düzenle, sil butonları ile
+
+#### 4. Şablon Sistemi
+
+* Yorum şablonları `/yorumlar/` klasöründe **JSON dosyalarında** tutulur:
+
+  * Yapı: `/yorumlar/5_1.json`, `7_2.json` vb.
+  * Kolay güncellenebilir ve manuel düzenlenebilir
+* **Tona göre filtreleme**, renk kodlaması
+* **Etiketli AI önerileri popup’ı**:
+
+  * Açılır popup ile çalışır
+  * Tıklanılan etiketlerle tüm uygun yorumlar listelenir
+  * En az 3 değil, **tüm eşleşen yorumlar** gösterilir
+  * Seçilen yorum düzenleme ekranına aktarılır
+
+#### 5. Gelişmiş UI/UX
+
+* **Dark/Light tema desteği** ve sağ üstte geçiş tuşu (`Moon` / `Sun` ikonu)
+* **Glassmorphism etkili popup/modallar**, `rgba(255,255,255,0.2)` arka planla
+* **Modern renk paleti**:
+
+  * Arka Plan: `#f8f9fa`
+  * Başlık: `#2c3e50`
+  * Pozitif: `#2ecc71` / Nötr: `#f1c40f` / Negatif: `#e74c3c`
+  * Butonlar: `#5f27cd` / Cam: `rgba(255,255,255,0.2)`
+* **Animasyonlar**:
+
+  * Hover'da scale ve glow (`scale(1.05)` + `box-shadow`)
+  * Modal açılış: fade + slide
+  * Yorum kaydetme: küçük yazma animasyonu ikonlu
+* **Dashboard tıklanabilir**: Öğrenci sayısı, yorum dağılımı, tonlara göre analiz kartları
+* **Başlık fontu farklı** (`Playfair Display`, `Inter`, `Poppins` önerilir)
+* **Butonlar ikonlarla** desteklenir (örn: `Copy`, `Filter`, `Brain`)
+* **Klavye kısayolları**: ESC (kapat), Ctrl+Enter (kaydet), ←/→ (geçiş)
+
+#### 6. PWA Özellikleri (GitHub Pages ile uyumlu yapı)
+
+* `manifest.json` ve `service-worker.js` kök dizindedir
+* Tüm sayfa ve dosya yolları **relative path** ile tanımlanır
+* **Offline desteği** aktiftir, mobil cihazlara yüklenebilir
+
+---
+
+### 📊 Teknik Mimari (GitHub Pages Uyumu Garantili)
+
+* **Framework**: Vanilla JS + HTML/CSS (React, npm, Vite YOK)
+* **Stil**: TailwindCSS
+* **Veri Depolama**: localStorage
+* **Yorum Dosyaları**: `/yorumlar/` klasöründe JSON yapılar
+* **Build GEREKMEZ**, doğrudan GitHub Pages ile uyumludur
+
+#### Türkçeleştirilmiş Veri Yapıları ve Etiketli Örnekler
+
+```ts
+interface Ogrenci {
+  id: string;
+  ad: string;
+  sinif: string; // "5"–"8"
+  sube: string;  // "A"–"E"
+}
+
+interface Yorum {
+  id: string;
+  ogrenciId: string;
+  icerik: string;
+  ton: 'olumlu' | 'notr' | 'olumsuz';
+  donem: '1' | '2';
+  etiketler?: string[]; // örn: ["katılım", "özgüven"]
+}
+```
+
+---
+
+### 📘 Kullanım Kılavuzu
+
+* Ana sayfada sabit bir **Kullanım Kılavuzu** düğmesi vardır
+* Tıklanınca açılan şeffaf, cam efektli popup içerir:
+
+  * Öğrenci nasıl eklenir?
+  * Yorum nasıl atanır?
+  * Şablonlar nasıl kullanılır?
+  * AI önerisi nasıl çalışır?
+  * Etiket filtreleme nasıl yapılır?
+  * Yorumlar nasıl kopyalanır ve silinir?
+* Görselli, anlaşılır örnekli içerik
+
+### 👋 İlk Giriş Tanıtımı
+
+* Uygulama ilk açıldığında, tanıtıcı bir **karşılama popup'ı** gelir
+* İçeriği:
+
+  * Hoş geldiniz mesajı
+  * Kısa bilgilendirme ve "Başlayalım" tuşu
+  * Tek seferlik gösterilir (localStorage flag)
+
+---
+
+**Hazırlayan: Ömer Yolcu**
+**Yapay Zeka Asistanı: Sen**
