@@ -147,7 +147,7 @@ class CommentManager {
             <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Yer Tutucu Yönetimi</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                    [Öğrenci Adı] yer tutucusu "<strong>${student.name.split(' ')[0]}</strong>" ile değiştirilecek.
+                    "<strong>${student.name.split(' ')[0]}</strong>" adı yorumdan silinecek silinecek.
                 </p>
                 <div class="flex gap-3">
                     <button onclick="this.closest('#placeholderModal').remove()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
