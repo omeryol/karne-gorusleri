@@ -24,26 +24,34 @@ class App {
         debugLog('App.init() completed');
     }
 
-    resetApplication() {
-        const confirmed = window.ui.confirmDialog(
-            'Bu işlem tüm öğrenci verilerini, yorumları ve ayarları silecektir. Bu işlem geri alınamaz. Emin misiniz?',
-            'Uygulamayı Sıfırla'
-        );
-        
-        if (confirmed) {
-            try {
-                // Tüm localStorage verilerini sil
-                window.storage.clear();
+    async resetApplication() {
+        try {
+            const confirmed = await window.ui.confirmDialog(
+                'Bu işlem tüm öğrenci verilerini, yorumları ve ayarları kalıcı olarak silecektir. Bu işlem geri alınamaz!\n\nEmin misiniz?',
+                'Uygulamayı Sıfırla'
+            );
+            
+            if (confirmed) {
+                // İkinci onay
+                const doubleConfirmed = await window.ui.confirmDialog(
+                    'Son uyarı! Tüm verileriniz silinecek. Bu işlemi gerçekten yapmak istiyor musunuz?',
+                    'Son Onay'
+                );
                 
-                // Sayfayı yenile
-                setTimeout(() => {
-                    window.location.reload();
-                }, 500);
-                
-                window.ui.showToast('Uygulama başarıyla sıfırlandı!', 'success');
-            } catch (error) {
-                window.ui.showToast('Sıfırlama sırasında hata oluştu!', 'error');
+                if (doubleConfirmed) {
+                    // Tüm localStorage verilerini sil
+                    window.storage.clear();
+                    
+                    window.ui.showToast('Uygulama başarıyla sıfırlandı!', 'success');
+                    
+                    // Sayfayı yenile
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000);
+                }
             }
+        } catch (error) {
+            window.ui.showToast('Sıfırlama sırasında hata oluştu!', 'error');
         }
     }
 

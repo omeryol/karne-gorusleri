@@ -335,9 +335,15 @@ class CommentManager {
         if (charCount) {
             charCount.textContent = count;
             
-            // Renk güncelleme
-            const parent = charCount.parentElement;
-            parent.classList.remove('text-red-500', 'text-yellow-500', 'text-gray-500');
+            // Karakter sayısına göre renk değiştir
+            charCount.className = 'transition-colors duration-200';
+            if (count < 250) {
+                charCount.className += ' text-green-600';
+            } else if (count < 400) {
+                charCount.className += ' text-yellow-600';
+            } else {
+                charCount.className += ' text-red-600';
+            }
             
             if (count > 450) {
                 parent.classList.add('text-red-500');
