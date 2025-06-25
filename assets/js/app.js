@@ -6,14 +6,19 @@ class App {
     }
 
     init() {
-        this.initializeComponents();
-        this.setupTheme();
-        this.setupKeyboardShortcuts();
-        this.setupNavigationHandlers();
-        this.showWelcomeModal();
+        try {
+            this.initializeComponents();
+            this.setupTheme();
+            this.setupKeyboardShortcuts();
+            this.setupNavigationHandlers();
+            this.showWelcomeModal();
 
-        // İlk yükleme
-        this.dashboard.updateStats();
+            // İlk yükleme
+            this.dashboard.updateStats();
+        } catch (error) {
+            console.error('Uygulama başlatılırken hata:', error);
+            window.ui.showToast('Uygulama başlatılamadı. Sayfayı yenilemeyi deneyin.', 'error');
+        }
     }
 
     initializeComponents() {

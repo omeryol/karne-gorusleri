@@ -574,13 +574,36 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="./assets/js/storage.js"></script>
-    <script src="./assets/js/students.js"></script>
-    <script src="./assets/js/comments.js"></script>
-    <script src="./assets/js/templates.js"></script>
-    <script src="./assets/js/ui.js"></script>
-    <script src="./assets/js/app.js"></script>
+    <!-- Scripts - doğru sırada yükle -->
+    <script>
+        // Storage instance'ını bir kez oluştur
+        if (!window.storageLoaded) {
+            window.storageLoaded = true;
+        }
+    </script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/comments.js"></script>
+    <script src="assets/js/students.js"></script>
+    <script src="assets/js/templates.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        // Sayfa yüklendiğinde başlat
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Uygulama başlatılıyor...');
+            try {
+                if (window.app && typeof window.app.init === 'function') {
+                    window.app.init();
+                } else {
+                    throw new Error('App instance bulunamadı');
+                }
+            } catch (error) {
+                console.error('Uygulama başlatılırken hata:', error);
+                console.log('Uygulama başlatılamadı. Sayfayı yenilemeyi deneyin.');
+            }
+        });
+    </script>
 
     <!-- Service Worker Registration -->
     <script>
