@@ -24,6 +24,29 @@ class App {
         debugLog('App.init() completed');
     }
 
+    resetApplication() {
+        const confirmed = window.ui.confirmDialog(
+            'Bu işlem tüm öğrenci verilerini, yorumları ve ayarları silecektir. Bu işlem geri alınamaz. Emin misiniz?',
+            'Uygulamayı Sıfırla'
+        );
+        
+        if (confirmed) {
+            try {
+                // Tüm localStorage verilerini sil
+                window.storage.clear();
+                
+                // Sayfayı yenile
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+                
+                window.ui.showToast('Uygulama başarıyla sıfırlandı!', 'success');
+            } catch (error) {
+                window.ui.showToast('Sıfırlama sırasında hata oluştu!', 'error');
+            }
+        }
+    }
+
     initializeComponents() {
         // Tab yönetimi
         this.tabs = new TabManager();
@@ -131,6 +154,14 @@ class App {
         if (showWelcomeBtn) {
             showWelcomeBtn.addEventListener('click', () => {
                 window.ui.showModal('welcomeModal');
+            });
+        }
+
+        // Reset butonu
+        const resetAppBtn = document.getElementById('resetAppBtn');
+        if (resetAppBtn) {
+            resetAppBtn.addEventListener('click', () => {
+                this.resetApplication();
             });
         }
 
