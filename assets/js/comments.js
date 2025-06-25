@@ -22,30 +22,45 @@ class CommentManager {
 
     bindEvents() {
         // Yorum düzenleme formı
-        document.getElementById('commentEditForm').addEventListener('submit', (e) => {
-            this.handleCommentSubmit(e);
-        });
+        const commentEditForm = document.getElementById('commentEditForm');
+        if (commentEditForm) {
+            commentEditForm.addEventListener('submit', (e) => {
+                this.handleCommentSubmit(e);
+            });
+        }
 
         // Filtreler
-        document.getElementById('periodFilter').addEventListener('change', (e) => {
-            this.currentPeriodFilter = e.target.value;
-            this.render();
-        });
+        const periodFilter = document.getElementById('periodFilter');
+        if (periodFilter) {
+            periodFilter.addEventListener('change', (e) => {
+                this.currentPeriodFilter = e.target.value;
+                this.render();
+            });
+        }
 
-        document.getElementById('commentToneFilter').addEventListener('change', (e) => {
-            this.currentToneFilter = e.target.value;
-            this.render();
-        });
+        const commentToneFilter = document.getElementById('commentToneFilter');
+        if (commentToneFilter) {
+            commentToneFilter.addEventListener('change', (e) => {
+                this.currentToneFilter = e.target.value;
+                this.render();
+            });
+        }
 
         // Tüm yorumları görüntüle
-        document.getElementById('viewAllCommentsBtn').addEventListener('click', () => {
-            this.showAllCommentsModal();
-        });
+        const viewAllCommentsBtn = document.getElementById('viewAllCommentsBtn');
+        if (viewAllCommentsBtn) {
+            viewAllCommentsBtn.addEventListener('click', () => {
+                this.showAllCommentsModal();
+            });
+        }
 
         // AI önerisi
-        document.getElementById('aiSuggestBtn').addEventListener('click', () => {
-            window.templates.showAISuggestions();
-        });
+        const aiSuggestBtn = document.getElementById('aiSuggestBtn');
+        if (aiSuggestBtn) {
+            aiSuggestBtn.addEventListener('click', () => {
+                window.templates.showAISuggestions();
+            });
+        }
 
         // Edit modal AI suggestions and placeholder buttons
         const editAISuggestionsBtn = document.getElementById('editAISuggestionsBtn');
@@ -64,6 +79,8 @@ class CommentManager {
                 this.showPlaceholderModal();
             });
         }
+        
+        debugLog('CommentManager.bindEvents() completed successfully');
 
         // Karakter sayacı
         const textarea = document.querySelector('#commentEditForm textarea[name="content"]');
@@ -74,18 +91,24 @@ class CommentManager {
         }
 
         // Etiket ekleme
-        document.getElementById('newTagInput').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                this.addTag(e.target.value.trim());
-                e.target.value = '';
-            }
-        });
+        const newTagInput = document.getElementById('newTagInput');
+        if (newTagInput) {
+            newTagInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.addTag(e.target.value.trim());
+                    e.target.value = '';
+                }
+            });
+        }
 
         // İptal butonu
-        document.getElementById('cancelEditBtn').addEventListener('click', () => {
-            window.ui.hideModal('commentEditModal');
-        });
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        if (cancelEditBtn) {
+            cancelEditBtn.addEventListener('click', () => {
+                window.ui.hideModal('commentEditModal');
+            });
+        }
     }
 
     addComment(studentId) {

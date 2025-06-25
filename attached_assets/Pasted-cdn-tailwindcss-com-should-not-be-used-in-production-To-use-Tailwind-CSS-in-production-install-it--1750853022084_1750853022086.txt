@@ -1,0 +1,59 @@
+cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+[DEBUG] DOM Content Loaded - Starting initialization null
+[DEBUG] Creating Storage instance null
+[DEBUG] Storage created successfully null
+[DEBUG] Creating UI Manager instance null
+[DEBUG] UI Manager created successfully null
+[DEBUG] Creating Student Manager instance null
+[DEBUG] StudentManager constructor called null
+[DEBUG] StudentManager.init() started null
+[DEBUG] StudentManager.init() completed successfully null
+[DEBUG] StudentManager constructor completed null
+[DEBUG] Student Manager created successfully null
+[DEBUG] Creating Comment Manager instance null
+[DEBUG] CommentManager.init() started null
+[DEBUG] ERROR in CommentManager.init(): Cannot read properties of null (reading 'addEventListener')
+[ERROR] Failed to initialize: 
+TypeError {}
+
+[ERROR] Error details: Cannot read properties of null (reading 'addEventListener') TypeError: Cannot read properties of null (reading 'addEventListener')
+    at CommentManager.bindEvents (https://8186fccc-fd1a-402a-8b58-df5b5175a5a3-00-5tbjulm8ug7a.pike.replit.dev/assets/js/comments.js:46:48)
+    at CommentManager.init (https://8186fccc-fd1a-402a-8b58-df5b5175a5a3-00-5tbjulm8ug7a.pike.replit.dev/assets/js/comments.js:14:18)
+    at new CommentManager (https://8186fccc-fd1a-402a-8b58-df5b5175a5a3-00-5tbjulm8ug7a.pike.replit.dev/assets/js/comments.js:8:14)
+    at HTMLDocument.<anonymous> (https://8186fccc-fd1a-402a-8b58-df5b5175a5a3-00-5tbjulm8ug7a.pike.replit.dev/assets/js/app.js:425:27)
+SW registered:  
+ServiceWorkerRegistration {installing: ServiceWorker, waiting: null, active: null, navigationPreload: NavigationPreloadManager, scope: "https://8186fccc-fd1a-402a-8b58-df5b5175a5a3-00-5tbjulm8ug7a.pike.replit.dev/", …}
+active: null
+get active: ƒ get active()
+backgroundFetch: BackgroundFetchManager
+get backgroundFetch: ƒ get backgroundFetch()
+cookies: CookieStoreManager
+get cookies: ƒ get cookies()
+getNotifications: ƒ getNotifications()
+installing: null
+get installing: ƒ get installing()
+navigationPreload: NavigationPreloadManager
+get navigationPreload: ƒ get navigationPreload()
+onupdatefound: null
+get onupdatefound: ƒ get onupdatefound()
+set onupdatefound: ƒ set onupdatefound()
+paymentManager: PaymentManager
+get paymentManager: ƒ get paymentManager()
+periodicSync: PeriodicSyncManager
+get periodicSync: ƒ get periodicSync()
+pushManager: PushManager
+get pushManager: ƒ get pushManager()
+scope: "https://8186fccc-fd1a-402a-8b58-df5b5175a5a3-00-5tbjulm8ug7a.pike.replit.dev/"
+get scope: ƒ get scope()
+showNotification: ƒ showNotification()
+sync: SyncManager
+get sync: ƒ get sync()
+unregister: ƒ unregister()
+update: ƒ update()
+updateViaCache: "imports"
+get updateViaCache: ƒ get updateViaCache()
+waiting: null
+get waiting: ƒ get waiting()
+constructor: ƒ ServiceWorkerRegistration()
+Symbol(Symbol.toStringTag): undefined
+[[Prototype]]: EventTarget
