@@ -47,6 +47,25 @@ class App {
         }
     }
 
+    exportToExcel() {
+        try {
+            const csvContent = window.storage.exportToExcel();
+            if (csvContent) {
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", `karne_yorumlari_${new Date().toLocaleDateString('tr-TR').replace(/\./g, '_')}.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                window.ui.showToast('Veriler Excel dosyasına aktarıldı!', 'success');
+            }
+        } catch (error) {
+            window.ui.showToast('Excel aktarımı başarısız!', 'error');
+        }
+    }
+
     initializeComponents() {
         // Tab yönetimi
         this.tabs = new TabManager();
@@ -154,6 +173,14 @@ class App {
         if (showWelcomeBtn) {
             showWelcomeBtn.addEventListener('click', () => {
                 window.ui.showModal('welcomeModal');
+            });
+        }
+
+        // Export butonu
+        const exportBtn = document.getElementById('exportBtn');
+        if (exportBtn) {
+            exportBtn.addEventListener('click', () => {
+                this.exportToExcel();
             });
         }
 
