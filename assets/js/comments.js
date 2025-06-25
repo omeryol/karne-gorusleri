@@ -225,10 +225,14 @@ class CommentManager {
             form.reset();
             form.period.value = '1'; // Varsayılan dönem
             
-            // Yeni yorum için otomatik isim uygulama
-            const firstName = student.name.split(' ')[0];
-            form.content.value = `Derslere karşı ${firstName} `;
-            this.updateCharacterCount(form.content.value.length);
+            // Yeni yorum için boş başlat
+            form.content.value = '';
+            
+            // Placeholder ekle
+            const textarea = form.content;
+            textarea.placeholder = `${student.name.split(' ')[0]} için yorumu buraya yazın...`;
+            
+            this.updateCharacterCount(0);
             this.renderCurrentTags([]);
         }
 
