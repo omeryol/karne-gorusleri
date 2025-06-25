@@ -347,8 +347,5 @@ class StudentManager {
     }
 }
 
-// DOM yüklendikten sonra student manager'ı başlat
-document.addEventListener('DOMContentLoaded', function() {
-    // Global student manager instance
-    window.students = new StudentManager(window.storage);
-});
+// Student Manager global olarak kullanılabilir
+// Başlatma app.js'de yapılıyor

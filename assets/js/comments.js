@@ -494,8 +494,5 @@ class CommentManager {
     }
 }
 
-// DOM yüklendikten sonra comment manager'ı başlat
-document.addEventListener('DOMContentLoaded', function() {
-    // Global comment manager instance
-    window.comments = new CommentManager(window.storage);
-});
+// Comment Manager global olarak kullanılabilir
+// Başlatma app.js'de yapılıyor

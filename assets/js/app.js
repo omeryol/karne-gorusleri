@@ -314,23 +314,36 @@ class DashboardManager {
     }
 }
 
-// Uygulama başlatma
+// Uygulama başlatma - DOM yüklendikten sonra
 document.addEventListener('DOMContentLoaded', function() {
-    // Storage'ı önce başlat
-    if (!window.storage) {
-        window.storage = new Storage();
-    }
+    try {
+        // Storage'ı önce başlat
+        if (!window.storage) {
+            window.storage = new Storage();
+        }
 
-    // Ardından diğer component'leri başlat
-    window.app = new App();
+        // Component'leri sırayla başlat
+        if (!window.ui) {
+            window.ui = new UIManager();
+        }
 
-    // Comment ve Student manager'ları biraz gecikmeyle başlat
-    setTimeout(() => {
         if (!window.comments && window.storage) {
             window.comments = new CommentManager(window.storage);
         }
+
         if (!window.students && window.storage) {
             window.students = new StudentManager(window.storage);
         }
-    }, 100);
+
+        if (!window.templates && window.storage) {
+            window.templates = new TemplateManager(window.storage);
+        }
+
+        // App'i en son başlat
+        window.app = new App();
+
+        console.log('Tüm component\'ler başarıyla yüklendi');
+    } catch (error) {
+        console.error('Uygulama başlatılırken hata:', error);
+    }
 });
