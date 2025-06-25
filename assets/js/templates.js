@@ -290,8 +290,16 @@ class TemplateManager {
             
             if (editModal && editModal.style.display !== 'none' && editTextarea) {
                 // Edit mode - populate edit textarea
-                editTextarea.value = suggestion.icerik;
-                window.comments.updateCharacterCount(suggestion.icerik.length);
+                let content = suggestion.icerik;
+                
+                // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
+                if (this.currentStudent) {
+                    const firstName = this.currentStudent.name.split(' ')[0];
+                    content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                }
+                
+                editTextarea.value = content;
+                window.comments.updateCharacterCount(content.length);
                 
                 const toneSelect = document.querySelector('#commentEditForm select[name="tone"]');
                 if (toneSelect) {
@@ -302,7 +310,7 @@ class TemplateManager {
                     window.comments.renderCurrentTags(suggestion.etiketler);
                 }
                 
-                window.ui.showToast('Öneri yorum düzenleme alanına aktarıldı!', 'success');
+                window.ui.showToast('Öneri aktarıldı ve isim uygulandı!', 'success');
                 return;
             }
             
