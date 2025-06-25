@@ -1,0 +1,96 @@
+{
+    "sinif": "7",
+    "donem": "2",
+    "yorumlar": [
+        {
+            "id": "7_2_001",
+            "icerik": "[Öğrenci Adı], ikinci dönemde eleştirel düşünme becerilerini güçlendirmiştir. Analitik yaklaşımları gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["eleştirel düşünme", "analitik yaklaşım", "güçlenme", "gelişim"]
+        },
+        {
+            "id": "7_2_002",
+            "icerik": "[Öğrenci Adı], matematik derslerinde fonksiyon kavramını anlamaya başlamıştır. Matematiksel modelleme becerisi gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["matematik", "fonksiyon kavramı", "matematiksel modelleme", "anlama"]
+        },
+        {
+            "id": "7_2_003",
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde metin türleri arasındaki farkları ayırt edebilmektedir. Yazma becerileri çeşitlenmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "metin türleri", "ayırt etme", "yazma becerisi"]
+        },
+        {
+            "id": "7_2_004",
+            "icerik": "[Öğrenci Adı], fen bilimleri derslerinde laboratuvar güvenlik kurallarını öğrenmiştir. Deneysel tasarım becerisi gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["fen bilimleri", "laboratuvar güvenliği", "deneysel tasarım", "kural bilinci"]
+        },
+        {
+            "id": "7_2_005",
+            "icerik": "[Öğrenci Adı], bu dönemde çalışma motivasyonunda dalgalanmalar görülmektedir. Hedef odaklı çalışma alışkanlığı kazandırılmalıdır.",
+            "ton": "notr",
+            "etiketler": ["motivasyon dalgalanması", "hedef odaklı", "çalışma alışkanlığı"]
+        },
+        {
+            "id": "7_2_006",
+            "icerik": "[Öğrenci Adı], sosyal bilgiler derslerinde coğrafi analiz becerilerini geliştirmiştir. Harita okuma konusunda başarılıdır.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal bilgiler", "coğrafi analiz", "harita okuma", "başarı"]
+        },
+        {
+            "id": "7_2_007",
+            "icerik": "[Öğrenci Adı], yabancı dil derslerinde dinleme becerilerinde gelişim göstermiştir. Kültürlerarası farkındalık kazanmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["yabancı dil", "dinleme becerisi", "kültürlerarası farkındalık"]
+        },
+        {
+            "id": "7_2_008",
+            "icerik": "[Öğrenci Adı], teknoloji kullanımında etik değerleri benimsemiştir. Dijital içerik üretme becerileri gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["teknoloji etiği", "dijital içerik", "üretme becerisi", "değer"]
+        },
+        {
+            "id": "7_2_009",
+            "icerik": "[Öğrenci Adı], akran ilişkilerinde liderlik özelliklerini göstermektedir. Empati becerisi gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["akran ilişkileri", "liderlik", "empati", "beceri"]
+        },
+        {
+            "id": "7_2_010",
+            "icerik": "[Öğrenci Adı], müzik derslerinde farklı kültürlerin müziklerini tanımaya başlamıştır. Müzikal çeşitlilik anlayışı gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik", "kültürel çeşitlilik", "müzikal anlayış", "tanıma"]
+        },
+        {
+            "id": "7_2_011",
+            "icerik": "[Öğrenci Adı], sanat çalışmalarında sembolik anlatım tekniklerini kullanmaya başlamıştır. Sanatsal ifade gücü artmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["sanat", "sembolik anlatım", "sanatsal ifade", "güç artışı"]
+        },
+        {
+            "id": "7_2_012",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde takım stratejilerini anlama konusunda gelişim göstermiştir.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "takım stratejisi", "anlama", "gelişim"]
+        },
+        {
+            "id": "7_2_013",
+            "icerik": "[Öğrenci Adı], bu dönemde sınav kaygısı yaşamaya başlamıştır. Stres yönetimi teknikleri öğretilmelidir.",
+            "ton": "olumsuz",
+            "etiketler": ["sınav kaygısı", "stres yönetimi", "teknik öğretimi"]
+        },
+        {
+            "id": "7_2_014",
+            "icerik": "[Öğrenci Adı], araştırma projelerinde bilimsel yöntem basamaklarını uygulayabilmektedir. Sistematik düşünme becerisi gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["araştırma projesi", "bilimsel yöntem", "sistematik düşünme"]
+        },
+        {
+            "id": "7_2_015",
+            "icerik": "[Öğrenci Adı], okuma listesini çeşitlendirmiştir. Farklı yazarları ve düşünce sistemlerini tanımaya başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["okuma çeşitliliği", "yazar tanıma", "düşünce sistemi"]
+        }
+    ]
+}

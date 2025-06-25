@@ -1,0 +1,96 @@
+{
+    "sinif": "6",
+    "donem": "1", 
+    "yorumlar": [
+        {
+            "id": "6_1_001",
+            "icerik": "[Öğrenci Adı], altıncı sınıfın ilk döneminde akademik açıdan çok başarılıdır. Analitik düşünme becerileri gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["akademik başarı", "analitik düşünme", "beceri gelişimi", "altıncı sınıf"]
+        },
+        {
+            "id": "6_1_002",
+            "icerik": "[Öğrenci Adı], matematik derslerinde soyut kavramları anlama konusunda yeteneklidir. Geometri konularında özellikle başarılıdır.",
+            "ton": "olumlu",
+            "etiketler": ["matematik", "soyut kavram", "geometri", "yetenek"]
+        },
+        {
+            "id": "6_1_003", 
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde eleştirel okuma becerilerini geliştirmiştir. Metin analizi konusunda başarılıdır.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "eleştirel okuma", "metin analizi", "beceri gelişimi"]
+        },
+        {
+            "id": "6_1_004",
+            "icerik": "[Öğrenci Adı], fen bilimleri derslerinde bilimsel düşünme yöntemlerini kullanmaya başlamıştır. Hipotez kurma konusunda başarılıdır.",
+            "ton": "olumlu", 
+            "etiketler": ["fen bilimleri", "bilimsel düşünme", "hipotez kurma", "yöntem"]
+        },
+        {
+            "id": "6_1_005",
+            "icerik": "[Öğrenci Adı], sosyal bilgiler derslerinde tarih ve coğrafya konularını ilgiyle takip etmektedir. Araştırma becerisi gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal bilgiler", "tarih", "coğrafya", "araştırma becerisi"]
+        },
+        {
+            "id": "6_1_006",
+            "icerik": "[Öğrenci Adı], bu dönemde çalışma düzeninde istikrarsızlık göstermektedir. Motivasyon konusunda destek gereklidir.",
+            "ton": "notr",
+            "etiketler": ["çalışma düzeni", "istikrarsızlık", "motivasyon", "destek"]
+        },
+        {
+            "id": "6_1_007",
+            "icerik": "[Öğrenci Adı], ergenlik döneminin etkisiyle davranışlarında değişiklikler gözlenmektedir. Rehberlik desteği faydalı olacaktır.",
+            "ton": "notr",
+            "etiketler": ["ergenlik", "davranış değişikliği", "rehberlik", "gelişim dönemi"]
+        },
+        {
+            "id": "6_1_008",
+            "icerik": "[Öğrenci Adı], yabancı dil derslerinde kelime dağarcığını geliştirmiştir. Konuşma pratiğine odaklanması önerilir.",
+            "ton": "olumlu",
+            "etiketler": ["yabancı dil", "kelime dağarcığı", "konuşma pratiği", "gelişim"]
+        },
+        {
+            "id": "6_1_009",
+            "icerik": "[Öğrenci Adı], teknoloji ve tasarım derslerinde yaratıcı projeler üretmektedir. El becerisi ve hayal gücü gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["teknoloji tasarım", "yaratıcı proje", "el becerisi", "hayal gücü"]
+        },
+        {
+            "id": "6_1_010",
+            "icerik": "[Öğrenci Adı], derslerde dikkat dağınıklığı yaşamaya başlamıştır. Konsantrasyon süresi kısalmıştır.",
+            "ton": "olumsuz",
+            "etiketler": ["dikkat dağınıklığı", "konsantrasyon", "süre kısalması"]
+        },
+        {
+            "id": "6_1_011",
+            "icerik": "[Öğrenci Adı], müzik derslerinde enstrüman çalmaya ilgi göstermektedir. Ritim duygusu gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik", "enstrüman", "ritim duygusu", "ilgi"]
+        },
+        {
+            "id": "6_1_012",
+            "icerik": "[Öğrenci Adı], sanat çalışmalarında farklı teknikleri denemeye başlamıştır. Yaratıcılığını özgürce ifade etmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["sanat", "farklı teknik", "yaratıcılık", "özgür ifade"]
+        },
+        {
+            "id": "6_1_013",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde takım sporlarında başarılıdır. Liderlik vasfı göstermektedir.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "takım sporları", "liderlik", "başarı"]
+        },
+        {
+            "id": "6_1_014",
+            "icerik": "[Öğrenci Adı], arkadaş ilişkilerinde sorunlar yaşamaktadır. Sosyal uyum konusunda rehberlik desteği almalıdır.",
+            "ton": "olumsuz",
+            "etiketler": ["arkadaş ilişkileri", "sosyal uyum", "rehberlik", "sorun"]
+        },
+        {
+            "id": "6_1_015",
+            "icerik": "[Öğrenci Adı], proje ödevlerinde sistematik yaklaşım sergilemektedir. Araştırma ve sunum becerileri gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["proje ödevleri", "sistematik yaklaşım", "araştırma", "sunum"]
+        }
+    ]
+}

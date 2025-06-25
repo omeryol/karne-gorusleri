@@ -1,0 +1,96 @@
+{
+    "sinif": "6",
+    "donem": "2",
+    "yorumlar": [
+        {
+            "id": "6_2_001",
+            "icerik": "[Öğrenci Adı], ikinci dönemde akademik performansını daha da geliştirmiştir. Öz değerlendirme becerisi kazanmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["akademik performans", "gelişim", "öz değerlendirme", "beceri"]
+        },
+        {
+            "id": "6_2_002",
+            "icerik": "[Öğrenci Adı], matematik derslerinde problem çözme stratejilerini çeşitlendirmiştir. Mantıklı çıkarımlar yapabilmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["matematik", "problem çözme", "strateji çeşitliliği", "mantıklı çıkarım"]
+        },
+        {
+            "id": "6_2_003",
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde kompozisyon yazma becerileri gelişmiştir. Dil bilgisi kurallarını doğru kullanmaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "kompozisyon", "dil bilgisi", "doğru kullanım"]
+        },
+        {
+            "id": "6_2_004",
+            "icerik": "[Öğrenci Adı], fen bilimleri derslerinde deney tasarlama konusunda yaratıcılık göstermektedir. Bilimsel süreç becerilerini kullanmaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["fen bilimleri", "deney tasarlama", "yaratıcılık", "bilimsel süreç"]
+        },
+        {
+            "id": "6_2_005",
+            "icerik": "[Öğrenci Adı], bu dönemde sınıf içi etkinliklerde daha pasif kalmayı tercih etmektedir. Katılımı teşvik edilmelidir.",
+            "ton": "notr",
+            "etiketler": ["pasif katılım", "sınıf etkinlikleri", "teşvik", "tercih"]
+        },
+        {
+            "id": "6_2_006",
+            "icerik": "[Öğrenci Adı], sosyal bilgiler derslerinde güncel olayları takip etmektedir. Eleştirel düşünme becerileri gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal bilgiler", "güncel olaylar", "eleştirel düşünme", "takip"]
+        },
+        {
+            "id": "6_2_007",
+            "icerik": "[Öğrenci Adı], yabancı dil derslerinde telaffuz konusunda gelişim göstermiştir. Özgüvenle konuşmaya başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["yabancı dil", "telaffuz", "özgüven", "konuşma"]
+        },
+        {
+            "id": "6_2_008",
+            "icerik": "[Öğrenci Adı], teknoloji kullanımında etik kuralları öğrenmiştir. Dijital vatandaşlık bilinci gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["teknoloji etiği", "dijital vatandaşlık", "bilinç", "kural"]
+        },
+        {
+            "id": "6_2_009",
+            "icerik": "[Öğrenci Adı], bu dönemde ödev teslim konusunda düzensizlik göstermektedir. Zaman yönetimi becerisi geliştirilmelidir.",
+            "ton": "olumsuz",
+            "etiketler": ["ödev teslimi", "düzensizlik", "zaman yönetimi", "beceri gelişimi"]
+        },
+        {
+            "id": "6_2_010",
+            "icerik": "[Öğrenci Adı], müzik derslerinde farklı müzik türlerini tanımaya başlamıştır. Estetik beğeni gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik", "müzik türleri", "estetik beğeni", "tanıma"]
+        },
+        {
+            "id": "6_2_011",
+            "icerik": "[Öğrenci Adı], sanat çalışmalarında kişisel tarzını geliştirmeye başlamıştır. Özgün eserler üretmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["sanat", "kişisel tarz", "özgünlük", "eser üretimi"]
+        },
+        {
+            "id": "6_2_012",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde fair play anlayışını benimsemiştir. Sportmenlik ruhu gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "fair play", "sportmenlik", "ruh"]
+        },
+        {
+            "id": "6_2_013",
+            "icerik": "[Öğrenci Adı], grup projelerinde liderlik ve işbirliği dengesini kurabilmektedir. Takım ruhu gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["grup projesi", "liderlik", "işbirliği", "takım ruhu"]
+        },
+        {
+            "id": "6_2_014",
+            "icerik": "[Öğrenci Adı], bu dönemde motivasyon düşüklüğü yaşamıştır. Hedef belirleme konusunda yönlendirilmelidir.",
+            "ton": "olumsuz",
+            "etiketler": ["motivasyon düşüklüğü", "hedef belirleme", "yönlendirme"]
+        },
+        {
+            "id": "6_2_015",
+            "icerik": "[Öğrenci Adı], okuma alışkanlığını geliştirmiştir. Farklı türde kitapları okumaya başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["okuma alışkanlığı", "kitap türleri", "gelişim", "çeşitlilik"]
+        }
+    ]
+}

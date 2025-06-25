@@ -1,0 +1,96 @@
+{
+    "sinif": "5",
+    "donem": "1",
+    "yorumlar": [
+        {
+            "id": "5_1_001",
+            "icerik": "[Öğrenci Adı], derslerimizde oldukça başarılı ve katılımcı bir öğrencimizdir. Özgüveni yüksek, arkadaşlarıyla iletişimi çok iyi seviyededir.",
+            "ton": "olumlu",
+            "etiketler": ["katılım", "özgüven", "iletişim", "başarı"]
+        },
+        {
+            "id": "5_1_002", 
+            "icerik": "[Öğrenci Adı], derslerde yaratıcı fikirleriyle dikkat çeken, çalışkan ve kararlı bir öğrencimizdir. Grup çalışmalarında liderlik özelliği göstermektedir.",
+            "ton": "olumlu",
+            "etiketler": ["yaratıcılık", "çalışkanlık", "liderlik", "grup çalışması"]
+        },
+        {
+            "id": "5_1_003",
+            "icerik": "[Öğrenci Adı], matematik derslerinde çok başarılı olup, problem çözme konusunda arkadaşlarına örnek teşkil etmektedir. Düzenli çalışma alışkanlığı kazanmıştır.",
+            "ton": "olumlu", 
+            "etiketler": ["matematik", "problem çözme", "örnek davranış", "düzen"]
+        },
+        {
+            "id": "5_1_004",
+            "icerik": "[Öğrenci Adı], derslerimizde orta seviyede performans göstermektedir. Çalışma konusunda biraz daha gayret göstermesi gerekiyor.",
+            "ton": "notr",
+            "etiketler": ["orta seviye", "gelişim", "çalışma"]
+        },
+        {
+            "id": "5_1_005",
+            "icerik": "[Öğrenci Adı], ders işleyişini takip etmekte zorlanmaktadır. Ev ödevlerini düzenli yapması ve daha fazla pratik yapması önerilir.",
+            "ton": "notr",
+            "etiketler": ["takip güçlüğü", "ödev", "pratik", "gelişim"]
+        },
+        {
+            "id": "5_1_006",
+            "icerik": "[Öğrenci Adı], okuma yazma becerilerinde gelişim göstermektedir. Sesli okuma konusunda kendini geliştirmesi teşvik edilmelidir.",
+            "ton": "notr",
+            "etiketler": ["okuma yazma", "gelişim", "sesli okuma", "teşvik"]
+        },
+        {
+            "id": "5_1_007",
+            "icerik": "[Öğrenci Adı], derslerde daha fazla dikkat göstermesi ve ev ödevlerini düzenli yapması gerekiyor. Ders katılımını artırması önemlidir.",
+            "ton": "olumsuz",
+            "etiketler": ["dikkat", "ödev", "katılım"]
+        },
+        {
+            "id": "5_1_008",
+            "icerik": "[Öğrenci Adı], arkadaşlarıyla iletişim konusunda sorun yaşamaktadır. Sosyal becerilerini geliştirmesi için destek verilmelidir.",
+            "ton": "olumsuz",
+            "etiketler": ["iletişim sorunu", "sosyal beceri", "destek"]
+        },
+        {
+            "id": "5_1_009",
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde okuma anlama konusunda başarılıdır. Yaratıcı yazma çalışmalarında özgün fikirler üretmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "okuma anlama", "yaratıcı yazma", "özgünlük"]
+        },
+        {
+            "id": "5_1_010",
+            "icerik": "[Öğrenci Adı], fen bilimleri dersinde meraklı ve soru soran bir öğrencimizdir. Deney yapmayı çok seviyor ve gözlem becerisi gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["fen bilimleri", "merak", "soru sorma", "deney", "gözlem"]
+        },
+        {
+            "id": "5_1_011",
+            "icerik": "[Öğrenci Adı], sanat etkinliklerinde yetenekli olup, el becerisi gelişmiştir. Renk kullanımında başarılı ve estetik duygusu vardır.",
+            "ton": "olumlu",
+            "etiketler": ["sanat", "yetenek", "el becerisi", "estetik"]
+        },
+        {
+            "id": "5_1_012",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde aktif katılım göstermektedir. Takım oyunlarında arkadaşlarıyla işbirliği içinde çalışır.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "aktif katılım", "takım oyunları", "işbirliği"]
+        },
+        {
+            "id": "5_1_013",
+            "icerik": "[Öğrenci Adı], müzik derslerinde ritim tutma konusunda yeteneklidir. Şarkı söylemeyi sever ve ses tonu güzeldir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik", "ritim", "şarkı", "ses tonu"]
+        },
+        {
+            "id": "5_1_014",
+            "icerik": "[Öğrenci Adı], sosyal bilgiler dersinde tarih konularını merak etmektedir. Araştırma yapmayı sever ve bilgilerini arkadaşlarıyla paylaşır.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal bilgiler", "tarih", "merak", "araştırma", "paylaşım"]
+        },
+        {
+            "id": "5_1_015",
+            "icerik": "[Öğrenci Adı], ödev yapma konusunda isteksiz davranmaktadır. Motivasyonunu artıracak çalışmalar yapılması gerekmektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["ödev isteksizliği", "motivasyon", "destek gerekli"]
+        }
+    ]
+}

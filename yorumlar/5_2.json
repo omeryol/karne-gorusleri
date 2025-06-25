@@ -1,0 +1,96 @@
+{
+    "sinif": "5", 
+    "donem": "2",
+    "yorumlar": [
+        {
+            "id": "5_2_001",
+            "icerik": "[Öğrenci Adı], ikinci dönemde akademik başarısını sürdürmektedir. Kendine olan güveni artmış, liderlik özelliklerini göstermeye başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["akademik başarı", "özgüven artışı", "liderlik", "süreklilik"]
+        },
+        {
+            "id": "5_2_002",
+            "icerik": "[Öğrenci Adı], bu dönemde matematik becerilerinde belirgin gelişim kaydetmiştir. Problemleri analiz etme yeteneği güçlenmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["matematik", "belirgin gelişim", "analiz yeteneği", "problem çözme"]
+        },
+        {
+            "id": "5_2_003",
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde yazılı anlatım becerileri gelişmiştir. Paragraf düzeni konusunda başarılı olmaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "yazılı anlatım", "paragraf düzeni", "beceri gelişimi"]
+        },
+        {
+            "id": "5_2_004",
+            "icerik": "[Öğrenci Adı], bu dönemde derse katılım konusunda daha istekli olmaktadır. Ancak ev ödevlerinde düzensizlik devam etmektedir.",
+            "ton": "notr",
+            "etiketler": ["katılım artışı", "istek", "ödev düzensizliği", "kısmi gelişim"]
+        },
+        {
+            "id": "5_2_005",
+            "icerik": "[Öğrenci Adı], fen bilimleri konularında merakını sürdürmektedir. Deney sonuçlarını yorumlama becerisi gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["fen bilimleri", "merak", "deney yorumlama", "beceri gelişimi"]
+        },
+        {
+            "id": "5_2_006",
+            "icerik": "[Öğrenci Adı], sosyal becerilerinde önemli gelişim göstermiştir. Arkadaşlarıyla daha iyi iletişim kurmaya başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal beceri", "önemli gelişim", "iletişim", "arkadaşlık"]
+        },
+        {
+            "id": "5_2_007",
+            "icerik": "[Öğrenci Adı], ikinci dönemde konsantrasyon sorunu yaşamaya devam etmektedir. Dikkatini toplamada güçlük çekmektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["konsantrasyon sorunu", "dikkat dağınıklığı", "süreklilik"]
+        },
+        {
+            "id": "5_2_008",
+            "icerik": "[Öğrenci Adı], sanat çalışmalarında yaratıcılığını göstermektedir. Renk uyumu konusunda gelişim kaydetmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["sanat", "yaratıcılık", "renk uyumu", "gelişim"]
+        },
+        {
+            "id": "5_2_009",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde sportif becerilerini geliştirmiştir. Fair play kurallarına uymaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "sportif beceri", "fair play", "kural bilinci"]
+        },
+        {
+            "id": "5_2_010",
+            "icerik": "[Öğrenci Adı], müzik derslerinde nota okuma konusunda ilerleme kaydetmiştir. Çalgı çalmaya ilgi göstermektedir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik", "nota okuma", "ilerleme", "çalgı ilgisi"]
+        },
+        {
+            "id": "5_2_011",
+            "icerik": "[Öğrenci Adı], bu dönemde okuma hızında gelişim göstermiştir. Sesli okuma tekniği düzelmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["okuma hızı", "gelişim", "sesli okuma", "teknik"]
+        },
+        {
+            "id": "5_2_012",
+            "icerik": "[Öğrenci Adı], grup çalışmalarında sorumluluk almaktan kaçınmaktadır. Bireysel çalışmalarda daha başarılıdır.",
+            "ton": "notr",
+            "etiketler": ["grup çalışması", "sorumluluktan kaçış", "bireysel başarı"]
+        },
+        {
+            "id": "5_2_013",
+            "icerik": "[Öğrenci Adı], problem çözme stratejilerini öğrenmiştir. Mantıklı çözümler üretmeye başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["problem çözme", "strateji", "mantık", "çözüm üretme"]
+        },
+        {
+            "id": "5_2_014",
+            "icerik": "[Öğrenci Adı], zamanını verimli kullanma konusunda gelişim göstermektedir. Planlı çalışma alışkanlığı edinmeye başlamıştır.",
+            "ton": "olumlu",
+            "etiketler": ["zaman yönetimi", "verimlilik", "planlı çalışma", "alışkanlık"]
+        },
+        {
+            "id": "5_2_015",
+            "icerik": "[Öğrenci Adı], bu dönemde devamsızlık sorunu yaşamıştır. Düzenli okula gelme konusunda teşvik edilmelidir.",
+            "ton": "olumsuz",
+            "etiketler": ["devamsızlık", "düzensizlik", "teşvik gerekli"]
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "sinif": "8",
+    "donem": "2",
+    "yorumlar": [
+        {
+            "id": "8_2_001",
+            "icerik": "[Öğrenci Adı], son dönemde LGS hazırlıklarını başarıyla sürdürmektedir. Hedeflediği liseye yönelik sistematik çalışma yapımaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["LGS hazırlığı", "başarılı", "hedefli çalışma", "sistematik"]
+        },
+        {
+            "id": "8_2_002",
+            "icerik": "[Öğrenci Adı], matematik derslerinde tüm konuları kavramıştır. Sınav tekniklerini etkin kullanmaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["matematik", "kavrama", "sınav tekniği", "etkinlik"]
+        },
+        {
+            "id": "8_2_003",
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde metin yorumlama ve dil bilgisi konularında ustalaşmıştır. Sınav başarısı yüksektir.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "metin yorumlama", "dil bilgisi", "ustalaşma"]
+        },
+        {
+            "id": "8_2_004",
+            "icerik": "[Öğrenci Adı], fen bilimleri derslerinde bilimsel süreç becerilerini mükemmel seviyede kullanmaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["fen bilimleri", "bilimsel süreç", "mükemmel seviye"]
+        },
+        {
+            "id": "8_2_005",
+            "icerik": "[Öğrenci Adı], sosyal bilgiler derslerinde sentez yapma becerisi geliştirmiştir. Çoklu bakış açısından değerlendirme yapabilmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal bilgiler", "sentez", "çoklu bakış açısı", "değerlendirme"]
+        },
+        {
+            "id": "8_2_006",
+            "icerik": "[Öğrenci Adı], LGS yaklaştıkça sınav kaygısı artmıştır. Gevşeme teknikleri öğrenmelidir.",
+            "ton": "notr",
+            "etiketler": ["LGS kaygısı", "sınav yaklaştı", "gevşeme tekniği"]
+        },
+        {
+            "id": "8_2_007",
+            "icerik": "[Öğrenci Adı], yabancı dil derslerinde dört temel beceriyi dengeli olarak geliştirmiştir. Dil kullanım yeterliliği artmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["yabancı dil", "dört temel beceri", "denge", "yeterlilik"]
+        },
+        {
+            "id": "8_2_008",
+            "icerik": "[Öğrenci Adı], mezuniyet projesi kapsamında özgün çalışma üretmiştir. Sunum becerileri gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["mezuniyet projesi", "özgün çalışma", "sunum becerisi"]
+        },
+        {
+            "id": "8_2_009",
+            "icerik": "[Öğrenci Adı], lise tercih sürecinde bilinçli kararlar almaktadır. Gelecek planlaması realistiktir.",
+            "ton": "olumlu",
+            "etiketler": ["lise tercihi", "bilinçli karar", "gelecek planlaması", "realistik"]
+        },
+        {
+            "id": "8_2_010",
+            "icerik": "[Öğrenci Adı], müzik derslerinde kompozisyon çalışmalarını başarıyla tamamlamıştır. Yaratıcılığını müzik yoluyla ifade etmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik", "kompozisyon", "yaratıcılık", "ifade"]
+        },
+        {
+            "id": "8_2_011",
+            "icerik": "[Öğrenci Adı], sanat portföyünü tamamlamıştır. Kişisel sanat anlayışını geliştirmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["sanat portföyü", "kişisel anlayış", "gelişim"]
+        },
+        {
+            "id": "8_2_012",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde liderlik ve takım ruhu sergilemiştir. Spor ahlakı gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "liderlik", "takım ruhu", "spor ahlakı"]
+        },
+        {
+            "id": "8_2_013",
+            "icerik": "[Öğrenci Adı], son dönemde aşırı sınav odaklı çalışma nedeniyle sosyal becerilerinde gerileme görülmektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["aşırı odaklanma", "sosyal beceri", "gerileme"]
+        },
+        {
+            "id": "8_2_014",
+            "icerik": "[Öğrenci Adı], akademik yazma becerilerini mükemmelleştirmiştir. Eleştirel değerlendirme yeteneği gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["akademik yazma", "mükemmelleştirme", "eleştirel değerlendirme"]
+        },
+        {
+            "id": "8_2_015",
+            "icerik": "[Öğrenci Adı], ortaokul sürecini başarıyla tamamlamıştır. Lise yaşamı için gerekli becerileri kazanmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["ortaokul tamamlama", "başarılı", "lise hazırlığı", "beceri kazanımı"]
+        }
+    ]
+}

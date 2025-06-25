@@ -1,0 +1,96 @@
+{
+    "sinif": "8",
+    "donem": "1",
+    "yorumlar": [
+        {
+            "id": "8_1_001",
+            "icerik": "[Öğrenci Adı], sekizinci sınıfın ilk döneminde lise hazırlık sürecine uyum sağlamıştır. Akademik hedefleri belirgin ve gerçekçidir.",
+            "ton": "olumlu",
+            "etiketler": ["lise hazırlığı", "uyum", "akademik hedef", "gerçekçilik"]
+        },
+        {
+            "id": "8_1_002",
+            "icerik": "[Öğrenci Adı], matematik derslerinde LGS konularında sistematik çalışma yaklaşımı sergilemektedir. Problem çözme hızı artmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["matematik", "LGS", "sistematik çalışma", "hız artışı"]
+        },
+        {
+            "id": "8_1_003",
+            "icerik": "[Öğrenci Adı], Türkçe derslerinde paragraf ve metin düzenleme becerilerini mükemmelleştirmiştir. Analitik okuma konusunda başarılıdır.",
+            "ton": "olumlu",
+            "etiketler": ["Türkçe", "metin düzenleme", "analitik okuma", "mükemmelleştirme"]
+        },
+        {
+            "id": "8_1_004",
+            "icerik": "[Öğrenci Adı], fen bilimleri derslerinde teorik bilgileri pratik uygulamalarla birleştirme konusunda yeteneklidir.",
+            "ton": "olumlu",
+            "etiketler": ["fen bilimleri", "teorik-pratik", "birleştirme", "yetenek"]
+        },
+        {
+            "id": "8_1_005",
+            "icerik": "[Öğrenci Adı], sosyal bilgiler derslerinde güncel olayları tarihsel perspektifle değerlendirme becerisi geliştirmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["sosyal bilgiler", "güncel olaylar", "tarihsel perspektif", "değerlendirme"]
+        },
+        {
+            "id": "8_1_006",
+            "icerik": "[Öğrenci Adı], LGS sınav stresi nedeniyle motivasyon düşüklüğü yaşamaktadır. Psikolojik destek faydalı olacaktır.",
+            "ton": "notr",
+            "etiketler": ["LGS stresi", "motivasyon düşüklüğü", "psikolojik destek"]
+        },
+        {
+            "id": "8_1_007",
+            "icerik": "[Öğrenci Adı], yabancı dil derslerinde okuma anlama becerilerini geliştirmiştir. Kelime dağarcığı genişlemiştir.",
+            "ton": "olumlu",
+            "etiketler": ["yabancı dil", "okuma anlama", "kelime dağarcığı", "genişleme"]
+        },
+        {
+            "id": "8_1_008",
+            "icerik": "[Öğrenci Adı], teknoloji ve tasarım derslerinde problem çözme süreçlerini sistematik olarak yönetebilmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["teknoloji tasarım", "problem çözme", "sistematik yönetim"]
+        },
+        {
+            "id": "8_1_009",
+            "icerik": "[Öğrenci Adı], kariyer planlama konusunda farkındalık geliştirmiştir. Kendi yeteneklerini objektif olarak değerlendirmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["kariyer planlama", "farkındalık", "yetenek değerlendirme", "objektiflik"]
+        },
+        {
+            "id": "8_1_010",
+            "icerik": "[Öğrenci Adı], müzik derslerinde müzik tarihi konularında bilgi sahibi olmuştur. Estetik yargı geliştirmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["müzik tarihi", "bilgi", "estetik yargı", "gelişim"]
+        },
+        {
+            "id": "8_1_011",
+            "icerik": "[Öğrenci Adı], sanat çalışmalarında kişisel tarzını bulmuştur. Sanat tarihi bilgilerini uygulamalarında kullanmaktadır.",
+            "ton": "olumlu",
+            "etiketler": ["sanat", "kişisel tarz", "sanat tarihi", "uygulama"]
+        },
+        {
+            "id": "8_1_012",
+            "icerik": "[Öğrenci Adı], beden eğitimi derslerinde antrenman disiplini kazanmıştır. Fiziksel kondisyonu gelişmiştir.",
+            "ton": "olumlu",
+            "etiketler": ["beden eğitimi", "antrenman disiplini", "fiziksel kondisyon"]
+        },
+        {
+            "id": "8_1_013",
+            "icerik": "[Öğrenci Adı], sınav odaklı çalışma nedeniyle sosyal aktivitelerden uzaklaşmıştır. Sosyal gelişim desteklenmelidir.",
+            "ton": "olumsuz",
+            "etiketler": ["sınav odaklılık", "sosyal uzaklaşma", "sosyal gelişim"]
+        },
+        {
+            "id": "8_1_014",
+            "icerik": "[Öğrenci Adı], araştırma metodolojisi konusunda yetkinlik kazanmıştır. Bilimsel makale yazma becerisi gelişmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["araştırma metodolojisi", "yetkinlik", "bilimsel yazma"]
+        },
+        {
+            "id": "8_1_015",
+            "icerik": "[Öğrenci Adı], zaman yönetimi konusunda önemli gelişim göstermiştir. Önceliklendirme becerisi kazanmıştır.",
+            "ton": "olumlu",
+            "etiketler": ["zaman yönetimi", "önceliklendirme", "önemli gelişim"]
+        }
+    ]
+}
