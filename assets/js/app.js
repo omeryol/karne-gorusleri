@@ -314,5 +314,23 @@ class DashboardManager {
     }
 }
 
-// Global app instance
-window.app = new App();
+// Uygulama başlatma
+document.addEventListener('DOMContentLoaded', function() {
+    // Storage'ı önce başlat
+    if (!window.storage) {
+        window.storage = new Storage();
+    }
+
+    // Ardından diğer component'leri başlat
+    window.app = new App();
+
+    // Comment ve Student manager'ları biraz gecikmeyle başlat
+    setTimeout(() => {
+        if (!window.comments && window.storage) {
+            window.comments = new CommentManager(window.storage);
+        }
+        if (!window.students && window.storage) {
+            window.students = new StudentManager(window.storage);
+        }
+    }, 100);
+});

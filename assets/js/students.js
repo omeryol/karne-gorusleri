@@ -347,5 +347,8 @@ class StudentManager {
     }
 }
 
-// Global student manager instance
-window.students = new StudentManager(window.storage);
+// DOM yüklendikten sonra student manager'ı başlat
+document.addEventListener('DOMContentLoaded', function() {
+    // Global student manager instance
+    window.students = new StudentManager(window.storage);
+});

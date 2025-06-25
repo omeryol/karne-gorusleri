@@ -494,5 +494,8 @@ class CommentManager {
     }
 }
 
-// Global comment manager instance
-window.comments = new CommentManager(window.storage);
+// DOM yüklendikten sonra comment manager'ı başlat
+document.addEventListener('DOMContentLoaded', function() {
+    // Global comment manager instance
+    window.comments = new CommentManager(window.storage);
+});
