@@ -1,315 +1,318 @@
-
-// Ana uygulama sınıfı
+// Ana uygulama koordinatörü
 class App {
     constructor() {
-        this.storage = null;
-        this.students = null;
-        this.comments = null;
-        this.templates = null;
-        this.ui = null;
-        this.currentView = 'dashboard';
-        this.currentStudent = null;
+        this.currentTab = 'dashboard';
+        this.init();
     }
 
-    async init() {
-        try {
-            console.log('Uygulama başlatılıyor...');
-            
-            // Storage'ı başlat
-            this.storage = new StorageManager();
-            
-            // Diğer yöneticileri başlat
-            this.students = new StudentManager(this.storage);
-            this.comments = new CommentManager(this.storage);
-            this.templates = new TemplateManager();
-            this.ui = new UIManager();
+    init() {
+        this.initializeComponents();
+        this.setupTheme();
+        this.setupKeyboardShortcuts();
+        this.setupNavigationHandlers();
+        this.showWelcomeModal();
 
-            // Şablonları yükle
-            await this.templates.loadTemplates();
-            
-            // UI'yi başlat
-            this.initializeUI();
-            
-            // İlk yükleme kontrolü
-            this.checkFirstTime();
-            
-            console.log('Uygulama başarıyla başlatıldı');
-        } catch (error) {
-            console.error('Uygulama başlatılırken hata:', error);
-            this.showError('Uygulama başlatılamadı. Sayfayı yenilemeyi deneyin.');
+        // İlk yükleme
+        this.dashboard.updateStats();
+    }
+
+    initializeComponents() {
+        // Tab yönetimi
+        this.tabs = new TabManager();
+
+        // Dashboard yönetimi
+        this.dashboard = new DashboardManager();
+    }
+
+    setupTheme() {
+        const savedTheme = window.storage.getSetting('theme') || 'light';
+        const htmlElement = document.documentElement;
+
+        if (savedTheme === 'dark') {
+            htmlElement.classList.add('dark');
         }
+
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            const isDark = htmlElement.classList.contains('dark');
+            window.storage.setSetting('theme', isDark ? 'dark' : 'light');
+        });
     }
 
-    initializeUI() {
-        // Tema uygula
-        this.applyTheme();
-        
-        // Dashboard'u göster
-        this.showDashboard();
-        
-        // İstatistikleri güncelle
-        this.updateStats();
-        
-        // Event listener'ları ekle
-        this.addEventListeners();
-    }
-
-    addEventListeners() {
-        // Tema değiştirme
+    setupKeyboardShortcuts() {
         document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'l') {
-                e.preventDefault();
-                this.toggleTheme();
-            }
-        });
+            // ESC tuşu - modalleri kapat
+            if (e.key === 'Escape') {
+                const openModals = [
+                    'welcomeModal', 'helpModal', 'addStudentModal', 
+                    'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
+                ];
 
-        // Modal dışı tıklama
-        document.addEventListener('click', (e) => {
-            if (e.target.id === 'modalBackdrop') {
-                this.closeAllModals();
+                openModals.forEach(modalId => {
+                    const modal = document.getElementById(modalId);
+                    if (modal && modal.style.display === 'flex') {
+                        window.ui.hideModal(modalId);
+                    }
+                });
+            }
+
+            // Ctrl+Enter - kaydet
+            if (e.ctrlKey && e.key === 'Enter') {
+                e.preventDefault();
+                const activeForm = document.querySelector('form:focus-within');
+                if (activeForm) {
+                    activeForm.dispatchEvent(new Event('submit'));
+                }
+            }
+
+            // Tab navigation (Ctrl+1, Ctrl+2, etc.)
+            if (e.ctrlKey && ['1', '2', '3', '4'].includes(e.key)) {
+                e.preventDefault();
+                const tabMap = {
+                    '1': 'dashboard',
+                    '2': 'students', 
+                    '3': 'comments',
+                    '4': 'templates'
+                };
+                this.tabs.switchTo(tabMap[e.key]);
             }
         });
     }
 
-    checkFirstTime() {
-        const settings = this.storage.getSettings();
-        if (settings.showWelcome) {
-            this.showWelcomeModal();
-        }
+    setupNavigationHandlers() {
+        // Yardım butonu
+        document.getElementById('helpBtn').addEventListener('click', () => {
+            window.ui.showModal('helpModal');
+        });
+
+        // Modal kapatma butonları
+        document.getElementById('helpCloseBtn').addEventListener('click', () => {
+            window.ui.hideModal('helpModal');
+        });
+
+        document.getElementById('addStudentCloseBtn').addEventListener('click', () => {
+            window.ui.hideModal('addStudentModal');
+        });
+
+        document.getElementById('commentEditCloseBtn').addEventListener('click', () => {
+            window.ui.hideModal('commentEditModal');
+        });
+
+        document.getElementById('allCommentsCloseBtn').addEventListener('click', () => {
+            window.ui.hideModal('allCommentsModal');
+        });
+
+        // Modal dış alan tıklama
+        const modals = [
+            'welcomeModal', 'helpModal', 'addStudentModal', 
+            'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
+        ];
+
+        modals.forEach(modalId => {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        window.ui.hideModal(modalId);
+                    }
+                });
+            }
+        });
     }
 
     showWelcomeModal() {
-        const modal = document.getElementById('welcomeModal');
-        if (modal) {
-            modal.classList.remove('hidden');
+        const hasSeenWelcome = window.storage.getSetting('hasSeenWelcome');
+        if (!hasSeenWelcome) {
+            setTimeout(() => {
+                window.ui.showModal('welcomeModal');
+            }, 500);
         }
+
+        // Başlayalım butonu
+        document.getElementById('welcomeStartBtn').addEventListener('click', () => {
+            window.storage.setSetting('hasSeenWelcome', true);
+            window.ui.hideModal('welcomeModal');
+        });
+    }
+}
+
+// Tab yönetimi sınıfı
+class TabManager {
+    constructor() {
+        this.currentTab = 'dashboard';
+        this.init();
     }
 
-    closeWelcomeModal() {
-        const modal = document.getElementById('welcomeModal');
-        if (modal) {
-            modal.classList.add('hidden');
-            this.storage.saveSetting('showWelcome', false);
-        }
+    init() {
+        this.bindEvents();
     }
 
-    toggleWelcomeModal() {
-        const modal = document.getElementById('welcomeModal');
-        if (modal) {
-            modal.classList.toggle('hidden');
-        }
-    }
-
-    applyTheme() {
-        const settings = this.storage.getSettings();
-        const theme = settings.theme || 'light';
-        
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-            const icon = document.getElementById('themeIcon');
-            if (icon) {
-                icon.className = 'fas fa-sun text-gray-600 dark:text-gray-300';
-            }
-        } else {
-            document.documentElement.classList.remove('dark');
-            const icon = document.getElementById('themeIcon');
-            if (icon) {
-                icon.className = 'fas fa-moon text-gray-600 dark:text-gray-300';
-            }
-        }
-    }
-
-    toggleTheme() {
-        const settings = this.storage.getSettings();
-        const newTheme = settings.theme === 'dark' ? 'light' : 'dark';
-        this.storage.saveSetting('theme', newTheme);
-        this.applyTheme();
-    }
-
-    showDashboard() {
-        this.hideAllViews();
-        document.getElementById('dashboard').classList.remove('hidden');
-        this.currentView = 'dashboard';
-        this.updateStats();
-        this.updateRecentStudents();
-    }
-
-    showStudents() {
-        this.hideAllViews();
-        document.getElementById('studentManagement').classList.remove('hidden');
-        this.currentView = 'students';
-        this.students.render();
-    }
-
-    showTemplates() {
-        this.hideAllViews();
-        document.getElementById('templateManagement').classList.remove('hidden');
-        this.currentView = 'templates';
-        this.templates.render();
-    }
-
-    showAddStudent() {
-        this.students.showAddForm();
-    }
-
-    hideAllViews() {
-        const views = ['dashboard', 'studentManagement', 'commentManagement', 'templateManagement'];
-        views.forEach(view => {
-            const element = document.getElementById(view);
-            if (element) {
-                element.classList.add('hidden');
-            }
+    bindEvents() {
+        document.querySelectorAll('[data-tab]').forEach(button => {
+            button.addEventListener('click', () => {
+                this.switchTo(button.dataset.tab);
+            });
         });
     }
 
-    updateStats() {
-        const stats = this.storage.getStats();
-        const templates = this.templates.getAllTemplates();
-        
-        // İstatistikleri güncelle
-        this.updateElement('totalStudents', stats.totalStudents);
-        this.updateElement('totalComments', stats.totalComments);
-        this.updateElement('weeklyComments', stats.weeklyComments);
-        this.updateElement('totalTemplates', templates.length);
-    }
+    switchTo(tabName) {
+        if (this.currentTab === tabName) return;
 
-    updateElement(id, value) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.textContent = value;
+        // Button state güncellemesi
+        document.querySelectorAll('[data-tab]').forEach(btn => {
+            btn.classList.remove('border-primary', 'text-primary');
+            btn.classList.add('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+        });
+
+        const activeButton = document.querySelector(`[data-tab="${tabName}"]`);
+        if (activeButton) {
+            activeButton.classList.remove('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+            activeButton.classList.add('border-primary', 'text-primary');
+        }
+
+        // Content görünürlük güncellemesi
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+
+        const targetContent = document.getElementById(`${tabName}-tab`);
+        if (targetContent) {
+            targetContent.classList.remove('hidden');
+        }
+
+        this.currentTab = tabName;
+
+        // Tab değişikliğinde refresh
+        if (tabName === 'dashboard') {
+            window.app.dashboard.updateStats();
+        } else if (tabName === 'students') {
+            window.students.render();
+        } else if (tabName === 'comments') {
+            window.comments.render();
+        } else if (tabName === 'templates') {
+            window.templates.render();
         }
     }
+}
 
-    updateRecentStudents() {
-        const students = this.storage.getStudents()
-            .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-            .slice(0, 5);
+// Dashboard yönetimi sınıfı
+class DashboardManager {
+    constructor() {
+        this.currentGradeFilter = 'all';
+        this.init();
+    }
 
-        const container = document.getElementById('recentStudents');
-        if (!container) return;
+    init() {
+        this.bindEvents();
+    }
 
-        if (students.length === 0) {
+    bindEvents() {
+        // Grade filtreleri
+        document.querySelectorAll('.grade-filter').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                this.handleGradeFilterChange(e);
+            });
+        });
+    }
+
+    handleGradeFilterChange(e) {
+        const grade = e.target.dataset.grade;
+
+        // Aktif filtreyi güncelle
+        document.querySelectorAll('.grade-filter').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        e.target.classList.add('active');
+
+        this.currentGradeFilter = grade;
+        this.updateStats();
+    }
+
+    updateStats() {
+        const stats = window.storage.getStatistics();
+
+        // Temel istatistikler
+        document.getElementById('totalStudents').textContent = stats.totalStudents;
+        document.getElementById('completedComments').textContent = stats.completedComments;
+        document.getElementById('pendingComments').textContent = stats.pendingComments;
+        document.getElementById('completionRate').textContent = `${stats.completionRate}%`;
+
+        // Ton analizi
+        this.renderToneAnalysis(stats.toneAnalysis);
+
+        // Popüler etiketler
+        this.renderPopularTags(stats.popularTags);
+    }
+
+    renderToneAnalysis(toneData) {
+        const container = document.getElementById('toneAnalysis');
+        const total = toneData.olumlu + toneData.notr + toneData.olumsuz;
+
+        if (total === 0) {
             container.innerHTML = `
-                <div class="text-center text-gray-500 dark:text-gray-400 py-8">
-                    Henüz öğrenci eklenmemiş
+                <div class="text-center py-4">
+                    <p class="text-gray-500 dark:text-gray-400">Henüz yorum bulunmuyor</p>
                 </div>
             `;
             return;
         }
 
-        container.innerHTML = students.map(student => `
-            <div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                <div class="flex items-center">
-                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                        <span class="text-white font-semibold">${student.name.charAt(0)}</span>
-                    </div>
-                    <div class="ml-3">
-                        <p class="font-medium text-gray-900 dark:text-white">${student.name}</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">${student.grade}/${student.section}</p>
+        const tones = [
+            { key: 'olumlu', label: 'Olumlu', color: 'bg-positive', count: toneData.olumlu },
+            { key: 'notr', label: 'Nötr', color: 'bg-neutral', count: toneData.notr },
+            { key: 'olumsuz', label: 'Olumsuz', color: 'bg-negative', count: toneData.olumsuz }
+        ];
+
+        container.innerHTML = tones.map(tone => {
+            const percentage = Math.round((tone.count / total) * 100);
+            return `
+                <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium text-gray-600 dark:text-gray-400">${tone.label}</span>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-32 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                            <div class="${tone.color} h-2 rounded-full transition-all duration-500" style="width: ${percentage}%"></div>
+                        </div>
+                        <span class="text-sm font-medium text-gray-900 dark:text-white w-8">${tone.count}</span>
                     </div>
                 </div>
-                <button onclick="app.viewStudent('${student.id}')" class="text-primary hover:text-blue-600 text-sm">
-                    Görüntüle
-                </button>
-            </div>
+            `;
+        }).join('');
+    }
+
+    renderPopularTags(tagsData) {
+        const container = document.getElementById('popularTags');
+        const tags = Object.entries(tagsData)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 8);
+
+        if (tags.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-4">
+                    <p class="text-gray-500 dark:text-gray-400">Henüz etiket bulunmuyor</p>
+                </div>
+            `;
+            return;
+        }
+
+        const colors = [
+            'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+            'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+            'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
+            'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200',
+            'bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200',
+            'bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200',
+            'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
+            'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
+        ];
+
+        container.innerHTML = tags.map(([tag, count], index) => `
+            <span class="${colors[index % colors.length]} px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:scale-105 transition-transform duration-200" title="${count} kullanım">
+                ${tag}
+            </span>
         `).join('');
     }
-
-    viewStudent(studentId) {
-        this.currentStudent = studentId;
-        this.hideAllViews();
-        document.getElementById('commentManagement').classList.remove('hidden');
-        this.currentView = 'comments';
-        this.comments.render(studentId);
-    }
-
-    closeAllModals() {
-        const modals = document.querySelectorAll('.fixed.inset-0:not(#modalBackdrop)');
-        modals.forEach(modal => {
-            modal.classList.add('hidden');
-        });
-        
-        const backdrop = document.getElementById('modalBackdrop');
-        if (backdrop) {
-            backdrop.classList.add('hidden');
-        }
-    }
-
-    showError(message) {
-        console.error(message);
-        // Basit bir hata gösterimi
-        alert(message);
-    }
-
-    showSuccess(message) {
-        console.log(message);
-        // Basit bir başarı gösterimi
-        alert(message);
-    }
 }
 
-// Global fonksiyonlar
-function showDashboard() {
-    if (window.app) {
-        window.app.showDashboard();
-    }
-}
-
-function showStudents() {
-    if (window.app) {
-        window.app.showStudents();
-    }
-}
-
-function showTemplates() {
-    if (window.app) {
-        window.app.showTemplates();
-    }
-}
-
-function showAddStudent() {
-    if (window.app) {
-        window.app.showAddStudent();
-    }
-}
-
-function toggleTheme() {
-    if (window.app) {
-        window.app.toggleTheme();
-    }
-}
-
-function toggleWelcomeModal() {
-    if (window.app) {
-        window.app.toggleWelcomeModal();
-    }
-}
-
-function closeWelcomeModal() {
-    if (window.app) {
-        window.app.closeWelcomeModal();
-    }
-}
-
-function closeAllModals() {
-    if (window.app) {
-        window.app.closeAllModals();
-    }
-}
-
-function toggleNotifications() {
-    const panel = document.getElementById('notificationPanel');
-    if (panel) {
-        panel.classList.toggle('hidden');
-    }
-}
-
-// Uygulamayı başlat
-document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        window.app = new App();
-        await window.app.init();
-    } catch (error) {
-        console.error('Uygulama başlatılırken hata:', error);
-    }
-});
+// Global app instance
+window.app = new App();

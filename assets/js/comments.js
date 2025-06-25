@@ -494,5 +494,5 @@ class CommentManager {
     }
 }
 
-// Comment Manager global olarak kullanılabilir
-// Başlatma app.js'de yapılıyor
+// Global comment manager instance
+window.comments = new CommentManager(window.storage);
