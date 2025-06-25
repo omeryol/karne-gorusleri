@@ -1,3 +1,4 @@
+
 // Ana uygulama koordinatörü
 class App {
     constructor() {
@@ -33,11 +34,13 @@ class App {
         }
 
         const themeToggle = document.getElementById('themeToggle');
-        themeToggle.addEventListener('click', () => {
-            htmlElement.classList.toggle('dark');
-            const isDark = htmlElement.classList.contains('dark');
-            window.storage.setSetting('theme', isDark ? 'dark' : 'light');
-        });
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                const isDark = htmlElement.classList.contains('dark');
+                window.storage.setSetting('theme', isDark ? 'dark' : 'light');
+            });
+        }
     }
 
     setupKeyboardShortcuts() {
@@ -82,26 +85,41 @@ class App {
 
     setupNavigationHandlers() {
         // Yardım butonu
-        document.getElementById('helpBtn').addEventListener('click', () => {
-            window.ui.showModal('helpModal');
-        });
+        const helpBtn = document.getElementById('helpBtn');
+        if (helpBtn) {
+            helpBtn.addEventListener('click', () => {
+                window.ui.showModal('helpModal');
+            });
+        }
 
         // Modal kapatma butonları
-        document.getElementById('helpCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('helpModal');
-        });
+        const helpCloseBtn = document.getElementById('helpCloseBtn');
+        if (helpCloseBtn) {
+            helpCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('helpModal');
+            });
+        }
 
-        document.getElementById('addStudentCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('addStudentModal');
-        });
+        const addStudentCloseBtn = document.getElementById('addStudentCloseBtn');
+        if (addStudentCloseBtn) {
+            addStudentCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('addStudentModal');
+            });
+        }
 
-        document.getElementById('commentEditCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('commentEditModal');
-        });
+        const commentEditCloseBtn = document.getElementById('commentEditCloseBtn');
+        if (commentEditCloseBtn) {
+            commentEditCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('commentEditModal');
+            });
+        }
 
-        document.getElementById('allCommentsCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('allCommentsModal');
-        });
+        const allCommentsCloseBtn = document.getElementById('allCommentsCloseBtn');
+        if (allCommentsCloseBtn) {
+            allCommentsCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('allCommentsModal');
+            });
+        }
 
         // Modal dış alan tıklama
         const modals = [
@@ -130,10 +148,13 @@ class App {
         }
 
         // Başlayalım butonu
-        document.getElementById('welcomeStartBtn').addEventListener('click', () => {
-            window.storage.setSetting('hasSeenWelcome', true);
-            window.ui.hideModal('welcomeModal');
-        });
+        const welcomeStartBtn = document.getElementById('welcomeStartBtn');
+        if (welcomeStartBtn) {
+            welcomeStartBtn.addEventListener('click', () => {
+                window.storage.setSetting('hasSeenWelcome', true);
+                window.ui.hideModal('welcomeModal');
+            });
+        }
     }
 }
 
@@ -184,13 +205,13 @@ class TabManager {
         this.currentTab = tabName;
 
         // Tab değişikliğinde refresh
-        if (tabName === 'dashboard') {
+        if (tabName === 'dashboard' && window.app && window.app.dashboard) {
             window.app.dashboard.updateStats();
-        } else if (tabName === 'students') {
+        } else if (tabName === 'students' && window.students) {
             window.students.render();
-        } else if (tabName === 'comments') {
+        } else if (tabName === 'comments' && window.comments) {
             window.comments.render();
-        } else if (tabName === 'templates') {
+        } else if (tabName === 'templates' && window.templates) {
             window.templates.render();
         }
     }
@@ -233,10 +254,17 @@ class DashboardManager {
         const stats = window.storage.getStatistics();
 
         // Temel istatistikler
-        document.getElementById('totalStudents').textContent = stats.totalStudents;
-        document.getElementById('completedComments').textContent = stats.completedComments;
-        document.getElementById('pendingComments').textContent = stats.pendingComments;
-        document.getElementById('completionRate').textContent = `${stats.completionRate}%`;
+        const totalStudentsEl = document.getElementById('totalStudents');
+        if (totalStudentsEl) totalStudentsEl.textContent = stats.totalStudents;
+
+        const completedCommentsEl = document.getElementById('completedComments');
+        if (completedCommentsEl) completedCommentsEl.textContent = stats.completedComments;
+
+        const pendingCommentsEl = document.getElementById('pendingComments');
+        if (pendingCommentsEl) pendingCommentsEl.textContent = stats.pendingComments;
+
+        const completionRateEl = document.getElementById('completionRate');
+        if (completionRateEl) completionRateEl.textContent = `${stats.completionRate}%`;
 
         // Ton analizi
         this.renderToneAnalysis(stats.toneAnalysis);
@@ -247,6 +275,8 @@ class DashboardManager {
 
     renderToneAnalysis(toneData) {
         const container = document.getElementById('toneAnalysis');
+        if (!container) return;
+
         const total = toneData.olumlu + toneData.notr + toneData.olumsuz;
 
         if (total === 0) {
@@ -282,6 +312,8 @@ class DashboardManager {
 
     renderPopularTags(tagsData) {
         const container = document.getElementById('popularTags');
+        if (!container) return;
+
         const tags = Object.entries(tagsData)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 8);
@@ -319,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
         // Storage'ı önce başlat
         if (!window.storage) {
-            window.storage = new Storage();
+            window.storage = new KarneStorage();
         }
 
         // Component'leri sırayla başlat
