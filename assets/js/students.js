@@ -339,24 +339,11 @@ class StudentManager {
     }
 
     handleCommentAction(studentId, hasComment) {
-        // comments manager'ın yüklenip yüklenmediğini kontrol et
-        if (!window.comments) {
-            console.error('Comments manager yüklenmemiş');
-            window.ui.showToast('Sistem henüz hazır değil, lütfen bekleyin...', 'warning');
-            return;
+        if (hasComment) {
+            window.comments.editComment(studentId);
+        } else {
+            window.comments.addComment(studentId);
         }
-
-        try {
-            if (hasComment) {
-                window.comments.editComment(studentId);
-            } else {
-                window.comments.addComment(studentId);
-            }
-        } catch (error) {
-            console.error('Yorum işlemi hatası:', error);
-            window.ui.showToast('Yorum işleminde hata oluştu!', 'error');
-        }
-    }
     }
 }
 
