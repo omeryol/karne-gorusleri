@@ -11,7 +11,7 @@ class App {
         this.setupKeyboardShortcuts();
         this.setupNavigationHandlers();
         this.showWelcomeModal();
-        
+
         // İlk yükleme
         this.dashboard.updateStats();
     }
@@ -19,7 +19,7 @@ class App {
     initializeComponents() {
         // Tab yönetimi
         this.tabs = new TabManager();
-        
+
         // Dashboard yönetimi
         this.dashboard = new DashboardManager();
     }
@@ -27,7 +27,7 @@ class App {
     setupTheme() {
         const savedTheme = window.storage.getSetting('theme') || 'light';
         const htmlElement = document.documentElement;
-        
+
         if (savedTheme === 'dark') {
             htmlElement.classList.add('dark');
         }
@@ -48,7 +48,7 @@ class App {
                     'welcomeModal', 'helpModal', 'addStudentModal', 
                     'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
                 ];
-                
+
                 openModals.forEach(modalId => {
                     const modal = document.getElementById(modalId);
                     if (modal && modal.style.display === 'flex') {
@@ -108,7 +108,7 @@ class App {
             'welcomeModal', 'helpModal', 'addStudentModal', 
             'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
         ];
-        
+
         modals.forEach(modalId => {
             const modal = document.getElementById(modalId);
             if (modal) {
@@ -218,7 +218,7 @@ class DashboardManager {
 
     handleGradeFilterChange(e) {
         const grade = e.target.dataset.grade;
-        
+
         // Aktif filtreyi güncelle
         document.querySelectorAll('.grade-filter').forEach(btn => {
             btn.classList.remove('active');
@@ -231,7 +231,7 @@ class DashboardManager {
 
     updateStats() {
         const stats = window.storage.getStatistics();
-        
+
         // Temel istatistikler
         document.getElementById('totalStudents').textContent = stats.totalStudents;
         document.getElementById('completedComments').textContent = stats.completedComments;
@@ -240,7 +240,7 @@ class DashboardManager {
 
         // Ton analizi
         this.renderToneAnalysis(stats.toneAnalysis);
-        
+
         // Popüler etiketler
         this.renderPopularTags(stats.popularTags);
     }
@@ -248,7 +248,7 @@ class DashboardManager {
     renderToneAnalysis(toneData) {
         const container = document.getElementById('toneAnalysis');
         const total = toneData.olumlu + toneData.notr + toneData.olumsuz;
-        
+
         if (total === 0) {
             container.innerHTML = `
                 <div class="text-center py-4">

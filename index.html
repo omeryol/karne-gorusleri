@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karne Asistanı - Öğretmen Değerlendirme Sistemi</title>
     <meta name="description" content="Türk ortaokul öğretmenleri için offline çalışan, AI destekli karne yorum sistemi. Hızlı, etkili ve güvenli öğrenci değerlendirme aracı.">
-    
+
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#5f27cd">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Karne Asistanı">
     <link rel="manifest" href="./manifest.json">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Karne Asistanı - Öğretmen Değerlendirme Sistemi">
     <meta property="og:description" content="Türk ortaokul öğretmenleri için offline çalışan, AI destekli karne yorum sistemi.">
     <meta property="og:type" content="website">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -58,13 +58,13 @@
             darkMode: 'class',
         };
     </script>
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 font-body transition-colors duration-300 min-h-screen">
     <!-- Navigation Header -->
-    <nav class="bg-white dark:bg-gray-800 shadow-lg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
+    <header class="bg-white dark:bg-gray-800 shadow-lg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo and Title -->
@@ -73,11 +73,11 @@
                         <i class="fas fa-graduation-cap text-white text-xl"></i>
                     </div>
                     <div>
-                        <h1 class="text-xl font-display font-semibold text-gray-900 dark:text-white">Karne Asistanı</h1>
+                        <h1 class="text-xl font-display font-semibold text-gray-900 dark:text-white cursor-pointer hover:text-primary transition-colors" onclick="window.app.tabs.switchTo('dashboard')">Karne Asistanı</h1>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Ortaokul öğretmenleri için AI destekli karne yorum sistemi</p>
                     </div>
                 </div>
-                
+
                 <!-- Right Side Controls -->
                 <div class="flex items-center space-x-4">
                     <!-- Help Button -->
@@ -85,7 +85,7 @@
                         <i class="fas fa-question-circle"></i>
                         Kullanım Kılavuzu
                     </button>
-                    
+
                     <!-- Theme Toggle -->
                     <button id="themeToggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-primary transition-colors duration-200" title="Tema Değiştir">
                         <i class="fas fa-moon dark:hidden text-lg"></i>
@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Welcome Modal -->
     <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
@@ -121,7 +121,7 @@
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
-            
+
             <div class="space-y-6">
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
@@ -130,7 +130,7 @@
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Öğrenci Yönetimi sekmesinden "Öğrenci Ekle" butonuna tıklayın. Tek tek veya toplu ekleme yapabilirsiniz.</p>
                 </div>
-                
+
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
                         <i class="fas fa-comment-dots text-primary mr-2"></i>
@@ -138,7 +138,7 @@
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Öğrenci kartında "Yorum Ekle" butonuna tıklayın. AI önerilerinden yararlanabilir veya kendi yorumunuzu yazabilirsiniz.</p>
                 </div>
-                
+
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
                         <i class="fas fa-brain text-primary mr-2"></i>
@@ -146,7 +146,7 @@
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Etiket filtresi ile istediğiniz kategorilerde hazır yorumları görüntüleyebilir ve düzenleyebilirsiniz.</p>
                 </div>
-                
+
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
                         <i class="fas fa-keyboard text-primary mr-2"></i>
@@ -216,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.app.tabs.switchTo('comments')">
                     <div class="flex items-center">
                         <div class="bg-positive p-3 rounded-lg">
@@ -228,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
                     <div class="flex items-center">
                         <div class="bg-neutral p-3 rounded-lg">
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
                     <div class="flex items-center">
                         <div class="bg-primary p-3 rounded-lg">
@@ -289,7 +289,7 @@
                     <button class="student-grade-filter bg-grade-8 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="8">8. Sınıf</button>
                     <button class="student-grade-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="all">Tümü</button>
                 </div>
-                
+
                 <button id="addStudentBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center">
                     <i class="fas fa-plus-circle mr-2"></i>
                     Öğrenci Ekle
@@ -312,7 +312,7 @@
                         <option value="1">1. Dönem</option>
                         <option value="2">2. Dönem</option>
                     </select>
-                    
+
                     <!-- Tone Filter -->
                     <select id="commentToneFilter" class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm">
                         <option value="all">Tüm Tonlar</option>
@@ -321,7 +321,7 @@
                         <option value="olumsuz">Olumsuz</option>
                     </select>
                 </div>
-                
+
                 <button id="viewAllCommentsBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center">
                     <i class="fas fa-eye mr-2"></i>
                     Tüm Yorumları Görüntüle
@@ -344,7 +344,7 @@
                     <button class="tone-filter bg-negative text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumsuz">Olumsuz</button>
                     <button class="tone-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="all">Tümü</button>
                 </div>
-                
+
                 <button id="aiSuggestionsBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center">
                     <i class="fas fa-brain mr-2"></i>
                     AI Önerileri
@@ -367,7 +367,7 @@
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
-            
+
             <!-- Tab Navigation -->
             <div class="flex space-x-4 mb-6 border-b border-gray-200 dark:border-gray-700">
                 <button class="student-tab-btn active pb-2 px-1 text-sm font-medium border-b-2 border-primary text-primary" data-tab="single">
@@ -461,7 +461,7 @@
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
-            
+
             <form id="commentEditForm" class="space-y-6">
                 <div class="flex items-center space-x-4 mb-4">
                     <div class="w-12 h-12 rounded-full flex items-center justify-center" id="editStudentAvatar">

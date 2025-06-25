@@ -117,7 +117,7 @@ class UIManager {
 
     createToast(message, type) {
         const toast = document.createElement('div');
-        toast.className = `transform translate-x-full opacity-0 transition-all duration-300 max-w-sm w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden`;
+        toast.className = `transform translate-x-full opacity-0 transition-all duration-300 max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden`;
 
         const colors = {
             success: 'bg-green-500',
@@ -142,7 +142,7 @@ class UIManager {
                         </div>
                     </div>
                     <div class="ml-3 w-0 flex-1 pt-0.5">
-                        <p class="text-sm font-medium text-gray-900 dark:text-white">${message}</p>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white leading-relaxed">${message}</p>
                     </div>
                     <div class="ml-4 flex-shrink-0 flex">
                         <button onclick="window.ui.removeToast(this.closest('.transform'))" class="bg-white dark:bg-gray-800 rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">

@@ -208,7 +208,7 @@ class StudentManager {
                 </div>
                 
                 <div class="flex space-x-2">
-                    <button onclick="window.comments.${hasComment ? 'editComment' : 'addComment'}('${student.id}')" class="flex-1 bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200">
+                    <button onclick="window.students.handleCommentAction('${student.id}', ${hasComment})" class="flex-1 bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200">
                         <i class="fas fa-${hasComment ? 'comment-dots' : 'plus'} mr-1"></i>
                         ${hasComment ? 'Yorum Düzenle' : 'Yorum Ekle'}
                     </button>
@@ -336,6 +336,14 @@ class StudentManager {
     getStudentsByGrade(grade) {
         const students = this.storage.getStudents();
         return students.filter(student => student.grade === grade);
+    }
+
+    handleCommentAction(studentId, hasComment) {
+        if (hasComment) {
+            window.comments.editComment(studentId);
+        } else {
+            window.comments.addComment(studentId);
+        }
     }
 }
 
