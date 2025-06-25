@@ -48,8 +48,9 @@ class CommentManager {
         });
 
         // Edit modal AI suggestions and placeholder buttons
-        if (document.getElementById('editAISuggestionsBtn')) {
-            document.getElementById('editAISuggestionsBtn').addEventListener('click', () => {
+        const editAISuggestionsBtn = document.getElementById('editAISuggestionsBtn');
+        if (editAISuggestionsBtn) {
+            editAISuggestionsBtn.addEventListener('click', () => {
                 if (this.currentEditStudent) {
                     window.templates.setCurrentStudent(this.currentEditStudent);
                 }
@@ -57,8 +58,9 @@ class CommentManager {
             });
         }
 
-        if (document.getElementById('editPlaceholderBtn')) {
-            document.getElementById('editPlaceholderBtn').addEventListener('click', () => {
+        const editPlaceholderBtn = document.getElementById('editPlaceholderBtn');
+        if (editPlaceholderBtn) {
+            editPlaceholderBtn.addEventListener('click', () => {
                 this.showPlaceholderModal();
             });
         }

@@ -22,18 +22,27 @@ class StudentManager {
 
     bindEvents() {
         // Öğrenci ekleme butonları
-        document.getElementById('addStudentBtn').addEventListener('click', () => {
-            this.showAddModal();
-        });
+        const addStudentBtn = document.getElementById('addStudentBtn');
+        if (addStudentBtn) {
+            addStudentBtn.addEventListener('click', () => {
+                this.showAddModal();
+            });
+        }
 
         // Form gönderme olayları
-        document.getElementById('singleStudentForm').addEventListener('submit', (e) => {
-            this.handleSingleStudentSubmit(e);
-        });
+        const singleStudentForm = document.getElementById('singleStudentForm');
+        if (singleStudentForm) {
+            singleStudentForm.addEventListener('submit', (e) => {
+                this.handleSingleStudentSubmit(e);
+            });
+        }
 
-        document.getElementById('bulkStudentForm').addEventListener('submit', (e) => {
-            this.handleBulkStudentSubmit(e);
-        });
+        const bulkStudentForm = document.getElementById('bulkStudentForm');
+        if (bulkStudentForm) {
+            bulkStudentForm.addEventListener('submit', (e) => {
+                this.handleBulkStudentSubmit(e);
+            });
+        }
 
         // Sınıf filtreleri
         document.querySelectorAll('.student-grade-filter').forEach(btn => {

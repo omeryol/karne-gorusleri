@@ -31,9 +31,12 @@ class TemplateManager {
         }
 
         // AI önerileri modal kapatma
-        document.getElementById('aiSuggestionsCloseBtn').addEventListener('click', () => {
-            window.ui.hideModal('aiSuggestionsModal');
-        });
+        const aiSuggestionsCloseBtn = document.getElementById('aiSuggestionsCloseBtn');
+        if (aiSuggestionsCloseBtn) {
+            aiSuggestionsCloseBtn.addEventListener('click', () => {
+                window.ui.hideModal('aiSuggestionsModal');
+            });
+        }
     }
 
     async loadTemplates() {
