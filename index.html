@@ -212,70 +212,75 @@
         <!-- Dashboard Tab -->
         <div id="dashboard-tab" class="tab-content">
             <!-- Grade Filter -->
-            <div class="flex flex-wrap gap-4 mb-8">
-                <button class="grade-filter active bg-grade-5 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105" data-grade="5">
+            <div class="flex flex-wrap gap-3 mb-8">
+                <button class="grade-filter active bg-grade-5 hover:bg-blue-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl" data-grade="5">
+                    <i class="fas fa-users mr-2"></i>
                     5. Sınıf
                 </button>
-                <button class="grade-filter bg-grade-6 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105" data-grade="6">
+                <button class="grade-filter bg-grade-6 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl" data-grade="6">
+                    <i class="fas fa-users mr-2"></i>
                     6. Sınıf
                 </button>
-                <button class="grade-filter bg-grade-7 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105" data-grade="7">
+                <button class="grade-filter bg-grade-7 hover:bg-purple-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl" data-grade="7">
+                    <i class="fas fa-users mr-2"></i>
                     7. Sınıf
                 </button>
-                <button class="grade-filter bg-grade-8 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105" data-grade="8">
+                <button class="grade-filter bg-grade-8 hover:bg-gray-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl" data-grade="8">
+                    <i class="fas fa-users mr-2"></i>
                     8. Sınıf
                 </button>
-                <button class="grade-filter bg-gray-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105" data-grade="all">
+                <button class="grade-filter bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl" data-grade="all">
+                    <i class="fas fa-globe mr-2"></i>
                     Tümü
                 </button>
             </div>
 
             <!-- Statistics Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.app.tabs.switchTo('students')">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl border border-blue-200 dark:border-gray-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group" onclick="window.app && window.app.tabs && window.app.tabs.switchTo('students')">
                     <div class="flex items-center">
-                        <div class="bg-blue-500 p-3 rounded-lg">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <i class="fas fa-users text-white text-xl"></i>
                         </div>
                         <div class="ml-4">
-                            <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Toplam Öğrenci</p>
-                            <p class="text-2xl font-bold text-gray-900 dark:text-white" id="totalStudents">0</p>
+                            <p class="text-sm font-medium text-blue-600 dark:text-blue-400">Toplam Öğrenci</p>
+                            <p class="text-3xl font-bold text-blue-800 dark:text-blue-200" id="totalStudents">0</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.app.tabs.switchTo('comments')">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl border border-green-200 dark:border-gray-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group" onclick="window.app && window.app.tabs && window.app.tabs.switchTo('comments')">
                     <div class="flex items-center">
-                        <div class="bg-positive p-3 rounded-lg">
+                        <div class="bg-gradient-to-br from-positive to-green-600 p-4 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <i class="fas fa-comment-dots text-white text-xl"></i>
                         </div>
                         <div class="ml-4">
-                            <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Tamamlanan Yorumlar</p>
-                            <p class="text-2xl font-bold text-gray-900 dark:text-white" id="completedComments">0</p>
+                            <p class="text-sm font-medium text-green-600 dark:text-green-400">Tamamlanan Yorumlar</p>
+                            <p class="text-3xl font-bold text-green-800 dark:text-green-200" id="completedComments">0</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl border border-yellow-200 dark:border-gray-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group">
                     <div class="flex items-center">
-                        <div class="bg-neutral p-3 rounded-lg">
+                        <div class="bg-gradient-to-br from-neutral to-yellow-600 p-4 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <i class="fas fa-clock text-white text-xl"></i>
                         </div>
                         <div class="ml-4">
-                            <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Bekleyen Yorumlar</p>
-                            <p class="text-2xl font-bold text-gray-900 dark:text-white" id="pendingComments">0</p>
+                            <p class="text-sm font-medium text-yellow-600 dark:text-yellow-400">Bekleyen Yorumlar</p>
+                            <p class="text-3xl font-bold text-yellow-800 dark:text-yellow-200" id="pendingComments">0</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-gray-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group">
                     <div class="flex items-center">
-                        <div class="bg-primary p-3 rounded-lg">
+                        <div class="bg-gradient-to-br from-primary to-purple-600 p-4 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <i class="fas fa-percentage text-white text-xl"></i>
                         </div>
                         <div class="ml-4">
-                            <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Tamamlanma Oranı</p>
-                            <p class="text-2xl font-bold text-gray-900 dark:text-white" id="completionRate">0%</p>
+                            <p class="text-sm font-medium text-primary dark:text-purple-400">Tamamlanma Oranı</p>
+                            <p class="text-3xl font-bold text-purple-800 dark:text-purple-200" id="completionRate">0%</p>
                         </div>
                     </div>
                 </div>
@@ -283,9 +288,11 @@
 
             <!-- Tone Analysis Chart -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <i class="fas fa-chart-pie text-primary mr-2"></i>
+                <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <div class="bg-gradient-to-r from-primary to-purple-600 p-2 rounded-lg mr-3">
+                            <i class="fas fa-chart-pie text-white"></i>
+                        </div>
                         Yorum Ton Analizi
                     </h3>
                     <div class="space-y-4" id="toneAnalysis">
@@ -293,9 +300,11 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <i class="fas fa-tags text-primary mr-2"></i>
+                <div class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <div class="bg-gradient-to-r from-primary to-purple-600 p-2 rounded-lg mr-3">
+                            <i class="fas fa-tags text-white"></i>
+                        </div>
                         Popüler Etiketler
                     </h3>
                     <div class="flex flex-wrap gap-2" id="popularTags">
@@ -317,7 +326,7 @@
                     <button class="student-grade-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="all">Tümü</button>
                 </div>
 
-                <button id="addStudentBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center">
+                <button id="addStudentBtn" class="bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 flex items-center shadow-lg hover:shadow-xl">
                     <i class="fas fa-plus-circle mr-2"></i>
                     Öğrenci Ekle
                 </button>
@@ -625,24 +634,24 @@
     </script>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center gap-3 mb-4 md:mb-0">
-                    <div class="bg-gradient-to-r from-primary to-purple-600 p-2 rounded-lg">
-                        <i class="fas fa-graduation-cap text-white text-lg"></i>
+                    <div class="bg-gradient-to-r from-primary to-purple-600 p-3 rounded-xl shadow-lg">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-900 dark:text-white">Karne Asistanı</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white text-lg">Karne Asistanı</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400">Öğretmenler için AI destekli yorum sistemi</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-6 text-sm text-gray-600 dark:text-gray-400">
+                <div class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                     <span>© 2025 Karne Asistanı</span>
-                    <span>•</span>
-                    <span>Ömer YOLCU & Claude AI</span>
-                    <span>•</span>
-                    <span>v1.0</span>
+                    <span class="text-gray-300 dark:text-gray-600">•</span>
+                    <span class="font-medium text-primary">Ömer YOLCU & Claude AI</span>
+                    <span class="text-gray-300 dark:text-gray-600">•</span>
+                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">v1.0</span>
                 </div>
             </div>
         </div>

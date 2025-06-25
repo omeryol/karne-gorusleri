@@ -12,9 +12,10 @@ class App {
         this.setupNavigationHandlers();
         this.showWelcomeModal();
 
-        // İlk yükleme
+        // İlk yükleme ve tab navigation setup
         setTimeout(() => {
             this.dashboard.updateStats();
+            this.tabs.switchTo('dashboard');
         }, 100);
     }
 
@@ -38,11 +39,13 @@ class App {
         }
 
         const themeToggle = document.getElementById('themeToggle');
-        themeToggle.addEventListener('click', () => {
-            htmlElement.classList.toggle('dark');
-            const isDark = htmlElement.classList.contains('dark');
-            window.storage.setSetting('theme', isDark ? 'dark' : 'light');
-        });
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                const isDark = htmlElement.classList.contains('dark');
+                window.storage.setSetting('theme', isDark ? 'dark' : 'light');
+            });
+        }
     }
 
     setupKeyboardShortcuts() {
@@ -375,12 +378,15 @@ class DashboardManager {
     }
 }
 
-// Global instances
-window.storage = new Storage();
-window.ui = new UIManager();
-window.students = new StudentManager(window.storage);
-window.comments = new CommentManager(window.storage);
-window.templates = new TemplateManager(window.storage);
-
-// Initialize app
-window.app = new App();
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Create global instances in order
+    window.storage = new Storage();
+    window.ui = new UIManager();
+    window.students = new StudentManager(window.storage);
+    window.comments = new CommentManager(window.storage);
+    window.templates = new TemplateManager(window.storage);
+    
+    // Initialize app last
+    window.app = new App();
+});

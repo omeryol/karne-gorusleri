@@ -23,9 +23,12 @@ class TemplateManager {
         });
 
         // AI önerileri butonu
-        document.getElementById('aiSuggestionsBtn').addEventListener('click', () => {
-            this.showAISuggestions();
-        });
+        const aiSuggestionsBtn = document.getElementById('aiSuggestionsBtn');
+        if (aiSuggestionsBtn) {
+            aiSuggestionsBtn.addEventListener('click', () => {
+                this.showAISuggestions();
+            });
+        }
 
         // AI önerileri modal kapatma
         document.getElementById('aiSuggestionsCloseBtn').addEventListener('click', () => {
