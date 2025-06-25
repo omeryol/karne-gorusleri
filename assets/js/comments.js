@@ -9,8 +9,15 @@ class CommentManager {
     }
 
     init() {
-        this.bindEvents();
-        this.render();
+        debugLog('CommentManager.init() started');
+        try {
+            this.bindEvents();
+            this.render();
+            debugLog('CommentManager.init() completed successfully');
+        } catch (error) {
+            debugLog('ERROR in CommentManager.init():', error.message);
+            throw error;
+        }
     }
 
     bindEvents() {

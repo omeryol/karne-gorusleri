@@ -411,25 +411,32 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create global instances in order
         debugLog('Creating Storage instance');
         window.storage = new Storage();
+        debugLog('Storage created successfully');
         
         debugLog('Creating UI Manager instance');
         window.ui = new UIManager();
+        debugLog('UI Manager created successfully');
         
         debugLog('Creating Student Manager instance');
         window.students = new StudentManager(window.storage);
+        debugLog('Student Manager created successfully');
         
         debugLog('Creating Comment Manager instance');
         window.comments = new CommentManager(window.storage);
+        debugLog('Comment Manager created successfully');
         
         debugLog('Creating Template Manager instance');
         window.templates = new TemplateManager(window.storage);
+        debugLog('Template Manager created successfully');
         
         // Initialize app last
         debugLog('Creating App instance');
         window.app = new App();
+        debugLog('App created successfully');
         
         debugLog('All instances created successfully');
     } catch (error) {
         console.error('[ERROR] Failed to initialize:', error);
+        console.error('[ERROR] Error details:', error.message, error.stack);
     }
 });

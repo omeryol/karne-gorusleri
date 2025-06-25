@@ -1,14 +1,23 @@
 // Öğrenci yönetimi sınıfı
 class StudentManager {
     constructor(storage) {
+        debugLog('StudentManager constructor called');
         this.storage = storage;
         this.currentFilter = 'all';
         this.init();
+        debugLog('StudentManager constructor completed');
     }
 
     init() {
-        this.bindEvents();
-        this.render();
+        debugLog('StudentManager.init() started');
+        try {
+            this.bindEvents();
+            this.render();
+            debugLog('StudentManager.init() completed successfully');
+        } catch (error) {
+            debugLog('ERROR in StudentManager.init():', error.message);
+            throw error;
+        }
     }
 
     bindEvents() {
