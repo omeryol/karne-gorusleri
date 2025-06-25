@@ -6,6 +6,8 @@ class App {
     }
 
     init() {
+        debugLog('App.init() started');
+        
         this.initializeComponents();
         this.setupTheme();
         this.setupKeyboardShortcuts();
@@ -14,9 +16,12 @@ class App {
 
         // İlk yükleme ve tab navigation setup
         setTimeout(() => {
+            debugLog('Running delayed initialization');
             this.dashboard.updateStats();
             this.tabs.switchTo('dashboard');
         }, 100);
+        
+        debugLog('App.init() completed');
     }
 
     initializeComponents() {
@@ -28,6 +33,11 @@ class App {
 
         // Global referansları ayarla
         window.app = this;
+        
+        debugLog('App components initialized', {
+            tabs: !!this.tabs,
+            dashboard: !!this.dashboard
+        });
     }
 
     setupTheme() {
@@ -91,8 +101,10 @@ class App {
     setupNavigationHandlers() {
         // Welcome modal handlers
         const welcomeStartBtn = document.getElementById('welcomeStartBtn');
+        debugLog('Welcome start button found:', !!welcomeStartBtn);
         if (welcomeStartBtn) {
             welcomeStartBtn.addEventListener('click', () => {
+                debugLog('Welcome start button clicked');
                 window.storage.setSetting('hasSeenWelcome', true);
                 window.ui.hideModal('welcomeModal');
             });
@@ -213,11 +225,19 @@ class TabManager {
     }
 
     bindEvents() {
-        document.querySelectorAll('[data-tab]').forEach(button => {
+        debugLog('TabManager.bindEvents() started');
+        const tabButtons = document.querySelectorAll('[data-tab]');
+        debugLog('Found tab buttons:', tabButtons.length);
+        
+        tabButtons.forEach((button, index) => {
+            debugLog(`Setting up tab button ${index}:`, button.dataset.tab);
             button.addEventListener('click', () => {
+                debugLog('Tab button clicked:', button.dataset.tab);
                 this.switchTo(button.dataset.tab);
             });
         });
+        
+        debugLog('TabManager.bindEvents() completed');
     }
 
     switchTo(tabName) {
@@ -378,15 +398,38 @@ class DashboardManager {
     }
 }
 
+// Debug function
+function debugLog(message, data = null) {
+    console.log(`[DEBUG] ${message}`, data);
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Create global instances in order
-    window.storage = new Storage();
-    window.ui = new UIManager();
-    window.students = new StudentManager(window.storage);
-    window.comments = new CommentManager(window.storage);
-    window.templates = new TemplateManager(window.storage);
+    debugLog('DOM Content Loaded - Starting initialization');
     
-    // Initialize app last
-    window.app = new App();
+    try {
+        // Create global instances in order
+        debugLog('Creating Storage instance');
+        window.storage = new Storage();
+        
+        debugLog('Creating UI Manager instance');
+        window.ui = new UIManager();
+        
+        debugLog('Creating Student Manager instance');
+        window.students = new StudentManager(window.storage);
+        
+        debugLog('Creating Comment Manager instance');
+        window.comments = new CommentManager(window.storage);
+        
+        debugLog('Creating Template Manager instance');
+        window.templates = new TemplateManager(window.storage);
+        
+        // Initialize app last
+        debugLog('Creating App instance');
+        window.app = new App();
+        
+        debugLog('All instances created successfully');
+    } catch (error) {
+        console.error('[ERROR] Failed to initialize:', error);
+    }
 });

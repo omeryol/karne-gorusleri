@@ -339,9 +339,18 @@ class StudentManager {
     }
 
     handleCommentAction(studentId, hasComment) {
+        debugLog('handleCommentAction called:', { studentId, hasComment });
+        
+        if (!window.comments) {
+            debugLog('ERROR: Comments manager not available');
+            return;
+        }
+        
         if (hasComment) {
+            debugLog('Editing existing comment');
             window.comments.editComment(studentId);
         } else {
+            debugLog('Adding new comment');
             window.comments.addComment(studentId);
         }
     }

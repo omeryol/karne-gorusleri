@@ -80,10 +80,17 @@ class CommentManager {
     }
 
     addComment(studentId) {
+        debugLog('CommentManager.addComment called with studentId:', studentId);
+        
         const student = this.storage.getStudentById(studentId);
-        if (!student) return;
+        debugLog('Student found:', !!student);
+        if (!student) {
+            debugLog('ERROR: Student not found');
+            return;
+        }
 
         this.currentEditingId = null;
+        debugLog('Showing edit modal for new comment');
         this.showEditModal(student, null);
     }
 
@@ -134,14 +141,30 @@ class CommentManager {
     }
 
     showEditModal(student, comment) {
-        this.currentEditStudent = student;
-        // Öğrenci bilgilerini doldur
-        document.getElementById('editStudentName').textContent = student.name;
-        document.getElementById('editStudentGradeSection').textContent = `${student.grade}-${student.section}`;
-        document.getElementById('editStudentInitials').textContent = window.students.getInitials(student.name);
+        debugLog('CommentManager.showEditModal called', { student: student.name, hasComment: !!comment });
         
+        this.currentEditStudent = student;
+        
+        // Öğrenci bilgilerini doldur
+        const editStudentName = document.getElementById('editStudentName');
+        const editStudentGradeSection = document.getElementById('editStudentGradeSection');
+        const editStudentInitials = document.getElementById('editStudentInitials');
         const avatar = document.getElementById('editStudentAvatar');
-        avatar.className = `w-12 h-12 ${window.students.getGradeColor(student.grade)} rounded-full flex items-center justify-center`;
+        
+        debugLog('Modal elements found:', {
+            name: !!editStudentName,
+            gradeSection: !!editStudentGradeSection,
+            initials: !!editStudentInitials,
+            avatar: !!avatar
+        });
+        
+        if (editStudentName) editStudentName.textContent = student.name;
+        if (editStudentGradeSection) editStudentGradeSection.textContent = `${student.grade}-${student.section}`;
+        if (editStudentInitials) editStudentInitials.textContent = window.students.getInitials(student.name);
+        
+        if (avatar) {
+            avatar.className = `w-12 h-12 ${window.students.getGradeColor(student.grade)} rounded-full flex items-center justify-center`;
+        }
 
         // Form verilerini doldur
         const form = document.getElementById('commentEditForm');
@@ -158,6 +181,7 @@ class CommentManager {
             this.renderCurrentTags([]);
         }
 
+        debugLog('Calling showModal for commentEditModal');
         window.ui.showModal('commentEditModal');
     }
 

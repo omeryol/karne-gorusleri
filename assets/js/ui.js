@@ -48,8 +48,15 @@ class UIManager {
     }
 
     showModal(modalId) {
+        debugLog('UIManager.showModal called with:', modalId);
+        
         const modal = document.getElementById(modalId);
-        if (!modal) return;
+        debugLog('Modal element found:', !!modal);
+        
+        if (!modal) {
+            debugLog('ERROR: Modal not found:', modalId);
+            return;
+        }
 
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
@@ -68,6 +75,8 @@ class UIManager {
         if (firstInput) {
             setTimeout(() => firstInput.focus(), 100);
         }
+        
+        debugLog('Modal shown successfully:', modalId);
     }
 
     hideModal(modalId) {
