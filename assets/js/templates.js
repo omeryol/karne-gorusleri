@@ -181,16 +181,49 @@ class TemplateManager {
     renderTagFilters() {
         const container = document.getElementById('tagFilterButtons');
         const allTags = this.getAllTags();
+        const categorizedTags = this.categorizeTagsForFilters(allTags);
 
-        container.innerHTML = allTags.map(tag => `
-            <button class="tag-filter-btn px-3 py-1 rounded-full text-sm transition-colors duration-200 ${
-                this.selectedTags.includes(tag) 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800'
-            }" data-tag="${tag}">
-                ${tag}
-            </button>
+        container.innerHTML = Object.entries(categorizedTags).map(([category, tags]) => `
+            <div class="tag-category-group mb-4">
+                <button class="category-toggle w-full flex items-center justify-between bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors duration-200" data-category="${category}">
+                    <span class="flex items-center gap-2">
+                        <i class="${this.getCategoryIcon(category)}"></i>
+                        ${category} (${tags.length})
+                    </span>
+                    <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                </button>
+                <div class="category-tags mt-2 hidden">
+                    <div class="flex flex-wrap gap-2 pl-4">
+                        ${tags.map(tag => `
+                            <button class="tag-filter-btn px-3 py-1 rounded-full text-sm transition-colors duration-200 ${
+                                this.selectedTags.includes(tag) 
+                                    ? 'bg-blue-500 text-white' 
+                                    : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800'
+                            }" data-tag="${tag}">
+                                ${tag}
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
         `).join('');
+
+        // Category toggle event listeners
+        container.querySelectorAll('.category-toggle').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const categoryTags = btn.nextElementSibling;
+                const chevron = btn.querySelector('.fa-chevron-down');
+                
+                if (categoryTags.classList.contains('hidden')) {
+                    categoryTags.classList.remove('hidden');
+                    chevron.style.transform = 'rotate(180deg)';
+                } else {
+                    categoryTags.classList.add('hidden');
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
 
         // Tag filter event listeners
         container.querySelectorAll('.tag-filter-btn').forEach(btn => {
@@ -307,6 +340,67 @@ class TemplateManager {
         });
 
         return Array.from(allTags).sort();
+    }
+
+    categorizeTagsForFilters(tags) {
+        const categories = {
+            'Akademik Başarı': [],
+            'Davranış': [],
+            'Sosyal Beceriler': [],
+            'Katılım': [],
+            'Çalışma Alışkanlıkları': [],
+            'Kişisel Gelişim': [],
+            'Diğer': []
+        };
+
+        tags.forEach(tag => {
+            const lowerTag = tag.toLowerCase();
+            
+            if (lowerTag.includes('başarı') || lowerTag.includes('not') || lowerTag.includes('akademik') || 
+                lowerTag.includes('ders') || lowerTag.includes('sınav') || lowerTag.includes('ödev') || 
+                lowerTag.includes('performans') || lowerTag.includes('yetenek')) {
+                categories['Akademik Başarı'].push(tag);
+            } else if (lowerTag.includes('davranış') || lowerTag.includes('disiplin') || lowerTag.includes('kurallara') ||
+                      lowerTag.includes('saygı') || lowerTag.includes('nezaket') || lowerTag.includes('uyum')) {
+                categories['Davranış'].push(tag);
+            } else if (lowerTag.includes('sosyal') || lowerTag.includes('arkadaş') || lowerTag.includes('iletişim') ||
+                      lowerTag.includes('takım') || lowerTag.includes('işbirliği') || lowerTag.includes('empati')) {
+                categories['Sosyal Beceriler'].push(tag);
+            } else if (lowerTag.includes('katılım') || lowerTag.includes('aktif') || lowerTag.includes('etkinlik') ||
+                      lowerTag.includes('söz') || lowerTag.includes('gönüllü') || lowerTag.includes('ilgi')) {
+                categories['Katılım'].push(tag);
+            } else if (lowerTag.includes('çalışma') || lowerTag.includes('düzen') || lowerTag.includes('organize') ||
+                      lowerTag.includes('plan') || lowerTag.includes('zaman') || lowerTag.includes('düzenli')) {
+                categories['Çalışma Alışkanlıkları'].push(tag);
+            } else if (lowerTag.includes('gelişim') || lowerTag.includes('güven') || lowerTag.includes('özgüven') ||
+                      lowerTag.includes('yaratıcı') || lowerTag.includes('liderlik') || lowerTag.includes('sorumluluk')) {
+                categories['Kişisel Gelişim'].push(tag);
+            } else {
+                categories['Diğer'].push(tag);
+            }
+        });
+
+        // Boş kategorileri kaldır
+        Object.keys(categories).forEach(key => {
+            if (categories[key].length === 0) {
+                delete categories[key];
+            }
+        });
+
+        return categories;
+    }
+
+    getCategoryIcon(category) {
+        const icons = {
+            'Akademik Başarı': 'fas fa-graduation-cap text-blue-500',
+            'Davranış': 'fas fa-user-check text-green-500',
+            'Sosyal Beceriler': 'fas fa-users text-purple-500',
+            'Katılım': 'fas fa-hand-paper text-orange-500',
+            'Çalışma Alışkanlıkları': 'fas fa-clock text-red-500',
+            'Kişisel Gelişim': 'fas fa-star text-yellow-500',
+            'Diğer': 'fas fa-tag text-gray-500'
+        };
+        return icons[category] || 'fas fa-tag text-gray-500';
     }
 
     setCurrentStudent(student) {
