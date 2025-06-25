@@ -192,7 +192,7 @@ class StudentManager {
         const initials = this.getInitials(student.name);
         
         return `
-            <div class="student-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div class="student-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center space-x-3">
                         <div class="w-12 h-12 ${gradeColor} rounded-full flex items-center justify-center">

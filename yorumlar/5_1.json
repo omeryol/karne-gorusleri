@@ -1,216 +1,277 @@
+
 {
     "sinif": "5",
     "donem": "1",
     "yorumlar": [
         {
             "id": "5_1_001",
-            "icerik": "[Öğrenci Adı], ortaokula uyum sürecini başarıyla tamamladı. Sınıf içi davranışları ve akademik çabası takdir edilesi. Özellikle derslere olan ilgisi ve sorumluluk bilinciyle örnek bir öğrenci profili çiziyor.",
+            "icerik": "[Öğrenci Adı] ortaokula geçiş sürecinde mükemmel bir uyum göstererek hem akademik hem de sosyal açıdan başarılı bir performans sergilemektedir. Yeni ortamına çabuk adapte olmuş, arkadaşlıklar kurmuş ve derslerde aktif katılım sağlamaktadır.",
             "ton": "olumlu",
-            "etiketler": ["yüksek başarı", "üstün yetenek"]
+            "etiketler": ["ortaokula uyum", "mükemmel adaptasyon", "sosyal başarı", "aktif katılım"]
         },
         {
             "id": "5_1_002",
-            "icerik": "[Öğrenci Adı], okul kurallarına uyma konusunda zaman zaman zorluk yaşıyor. Arkadaş ilişkilerinde dengeli davranması ve ders saatlerine daha fazla odaklanması gerekiyor. Bu konularda gelişim göstermesi bekleniyor.",
-            "ton": "olumsuz",
-            "etiketler": ["disiplin sorunu", "kurallara uymama"]
+            "icerik": "[Öğrenci Adı] ilkokuldan gelen güçlü temel becerilerini ortaokulda da sürdürerek derslerde istikrarlı bir başarı göstermektedir. Öğretmen talimatlarını dikkatle dinler, ödevlerini zamanında tamamlar ve sınıf kurallarına uyum sağlar.",
+            "ton": "olumlu",
+            "etiketler": ["güçlü temel", "istikrarlı başarı", "kurallara uyum", "sorumluluk"]
         },
         {
             "id": "5_1_003",
-            "icerik": "[Öğrenci Adı], akademik performansı orta düzeyde seyrediyor. Daha başarılı olabilmesi için derslere katılımını artırması ve ödevlerini daha düzenli yapması gerekiyor. Potansiyelini ortaya çıkarması için teşvik ediliyor.",
-            "ton": "notr",
-            "etiketler": ["orta düzey katılım", "teşvik edilmeli"]
+            "icerik": "[Öğrenci Adı] merak duygusu yüksek bir öğrencidir. Derslerde soru sorar, yeni konuları öğrenmeye istekli davranır ve özellikle fen bilimleri ve matematik derslerinde yaratıcı çözümler üretmeye çalışır.",
+            "ton": "olumlu",
+            "etiketler": ["yüksek merak", "öğrenme isteği", "yaratıcı düşünme", "soru sorma"]
         },
         {
             "id": "5_1_004",
-            "icerik": "[Öğrenci Adı], sınıf içinde oldukça uyumlu ve sevilen bir öğrenci. Sosyal becerileri güçlü, arkadaşlarıyla iletişimi çok iyi. Akademik performansını daha da geliştirmesi halinde çok daha başarılı olacağına şüphe yok.",
+            "icerik": "[Öğrenci Adı] grup çalışmalarında işbirlikçi bir tutum sergiler, arkadaşlarına yardım etmekten çekinmez ve takım ruhunu geliştirmiştir. Sosyal becerilerinin yanı sıra liderlik potansiyeli de göstermektedir.",
             "ton": "olumlu",
-            "etiketler": ["güçlü iletişim", "sosyal beceri"]
+            "etiketler": ["işbirlikçi", "yardımsever", "takım ruhu", "liderlik potansiyeli"]
         },
         {
             "id": "5_1_005",
-            "icerik": "[Öğrenci Adı], derslere karşı ilgisiz davranıyor ve ödev sorumluluklarını yerine getirmekte zorlanıyor. Aile desteğiyle bu konuda daha fazla çaba göstermesi gerekiyor. Akademik başarısı için acil önlem alınmalı.",
-            "ton": "olumsuz",
-            "etiketler": ["ödev yapmama alışkanlığı", "akademik sorun"]
+            "icerik": "[Öğrenci Adı] sanat ve müzik etkinliklerinde yaratıcılığını ortaya koyar, özgün fikirler üretir ve estetik duygusu gelişmiştir. El becerisi gerektiren çalışmalarda da başarılı sonuçlar elde etmektedir.",
+            "ton": "olumlu",
+            "etiketler": ["yaratıcılık", "estetik duygu", "el becerisi", "özgün fikirler"]
         },
         {
             "id": "5_1_006",
-            "icerik": "[Öğrenci Adı], derslerdeki konsantrasyonu zaman zaman değişkenlik gösteriyor. Daha verimli çalışma yöntemleri geliştirmesi ve dikkatini toparlaması için rehberlik servisiyle işbirliği yapılması faydalı olacaktır.",
-            "ton": "notr",
-            "etiketler": ["dikkat dağınıklığı", "destek gerektiren"]
+            "icerik": "[Öğrenci Adı] okuma alışkanlığı gelişmiş bir öğrencidir. Türkçe derslerinde anlama becerileri yüksek, kelime dağarcığı zengin ve yazılı ifade becerilerinde gelişim göstermektedir.",
+            "ton": "olumlu",
+            "etiketler": ["okuma alışkanlığı", "anlama becerisi", "zengin kelime", "yazılı ifade"]
         },
         {
             "id": "5_1_007",
-            "icerik": "[Öğrenci Adı], yaratıcılık gerektiren çalışmalarda öne çıkıyor. Özgün fikirleri ve farklı bakış açısıyla sınıfa katkı sağlıyor. Bu yeteneğini tüm derslerde kullanması için yönlendiriliyor.",
+            "icerik": "[Öğrenci Adı] spor ve fiziksel etkinliklerde aktif katılım gösterir, fair play anlayışını benimser ve takım oyunlarında uyumlu bir performans sergiler. Sağlıklı yaşam konusunda bilinçlidir.",
             "ton": "olumlu",
-            "etiketler": ["yaratıcılık", "özgün yaklaşım"]
+            "etiketler": ["spor aktifliği", "fair play", "takım uyumu", "sağlıklı yaşam"]
         },
         {
             "id": "5_1_008",
-            "icerik": "[Öğrenci Adı], grup çalışmalarında pasif kalmayı tercih ediyor. Bireysel çalışmalardaki başarısını grup etkinliklerine de yansıtması için cesaretlendirilmeli. Sosyal gelişiminin desteklenmesi gerekiyor.",
-            "ton": "notr",
-            "etiketler": ["grup çalışmasında pasif", "sosyal gelişim gerektiren"]
+            "icerik": "[Öğrenci Adı] problem çözme becerileri gelişmiş, analitik düşünebilen bir öğrencidir. Matematik ve mantık gerektiren konularda başarılı, sistematik yaklaşım sergilemektedir.",
+            "ton": "olumlu",
+            "etiketler": ["problem çözme", "analitik düşünme", "matematik başarısı", "sistematik yaklaşım"]
         },
         {
             "id": "5_1_009",
-            "icerik": "[Öğrenci Adı], okula düzenli devam ediyor ve derslere zamanında geliyor. Ancak sınıf içi katılımını artırması ve kendini daha fazla ifade etmesi gerekiyor. Potansiyelini ortaya çıkarması bekleniyor.",
-            "ton": "notr",
-            "etiketler": ["düzenli devam", "gelişim halinde"]
+            "icerik": "[Öğrenci Adı] teknoloji kullanımında bilinçli davranır, araştırma projelerinde dijital kaynakları etkili şekilde kullanır ve bilgi teknolojileri dersinde yaratıcı çalışmalar üretir.",
+            "ton": "olumlu",
+            "etiketler": ["teknoloji kullanımı", "dijital araştırma", "bilinçli yaklaşım", "yaratıcı projeler"]
         },
         {
             "id": "5_1_010",
-            "icerik": "[Öğrenci Adı], sınıf içinde liderlik vasıfları gösteriyor. Arkadaşlarına karşı yardımsever tavrı ve sorumluluk bilinciyle örnek oluyor. Akademik ve sosyal anlamda çok başarılı bir dönem geçirdi.",
+            "icerik": "[Öğrenci Adı] çevre bilinci gelişmiş, doğa sevgisi olan bir öğrencidir. Geri dönüşüm projelerinde aktif rol alır ve sınıf arkadaşlarını da çevreye duyarlı olmaya teşvik eder.",
             "ton": "olumlu",
-            "etiketler": ["yardımsever", "sosyal beceri"]
+            "etiketler": ["çevre bilinci", "doğa sevgisi", "geri dönüşüm", "teşvik edici"]
         },
         {
             "id": "5_1_011",
-            "icerik": "[Öğrenci Adı], derslerde sık sık dalgınlık yaşıyor ve konuları takip etmekte zorlanıyor. Evde düzenli tekrar yapması ve derslere daha hazırlıklı gelmesi için aile desteği gerekiyor.",
-            "ton": "olumsuz",
-            "etiketler": ["dikkat dağınıklığı", "konsantrasyon sorunu"]
+            "icerik": "[Öğrenci Adı] empati kurabilen, arkadaşlarının duygularını anlayabilen ve çatışma anlarında arabuluculuk yapabilen sosyal becerileri gelişmiş bir öğrencidir.",
+            "ton": "olumlu",
+            "etiketler": ["empati kurma", "duygusal zeka", "arabuluculuk", "sosyal beceri"]
         },
         {
             "id": "5_1_012",
-            "icerik": "[Öğrenci Adı], okul kurallarına uyum konusunda örnek bir öğrenci. Ders araç-gereçlerini eksiksiz getiriyor ve sınıf düzenine katkı sağlıyor. Bu olumlu davranışlarının akademik başarısına da yansıdığı gözlemleniyor.",
+            "icerik": "[Öğrenci Adı] düzenli çalışma alışkanlığı edinmiş, zamanını etkili kullanabilen ve öz disiplin sahibi bir öğrencidir. Planlı yaklaşımı ile hedeflerine ulaşmaya odaklanmıştır.",
             "ton": "olumlu",
-            "etiketler": ["düzenli devam", "sosyal beceri"]
+            "etiketler": ["düzenli çalışma", "zaman yönetimi", "öz disiplin", "planlı yaklaşım"]
         },
         {
             "id": "5_1_013",
-            "icerik": "[Öğrenci Adı], ödevlerini düzenli yapma konusunda sorumluluk almalı. Verilen görevleri zamanında tamamlaması ve derslere daha hazırlıklı gelmesi gerekiyor. Bu konuda aile işbirliği önem taşıyor.",
-            "ton": "olumsuz",
-            "etiketler": ["ödev yapmama alışkanlığı", "takip gerektiren"]
+            "icerik": "[Öğrenci Adı] özgüven sahibi, kendini ifade etmekte başarılı ve sunum becerilerini geliştirmiş bir öğrencidir. Sınıf önünde konuşmaktan çekinmez ve fikirlerini net şekilde aktarır.",
+            "ton": "olumlu",
+            "etiketler": ["özgüven", "kendini ifade", "sunum becerisi", "net iletişim"]
         },
         {
             "id": "5_1_014",
-            "icerik": "[Öğrenci Adı], sınıf içinde dengeli bir performans sergiliyor. Bazı alanlarda daha başarılı olabilecek potansiyeli var. Kendini daha fazla geliştirmesi için çaba göstermesi bekleniyor.",
-            "ton": "notr",
-            "etiketler": ["orta düzey katılım", "gelişim halinde"]
+            "icerik": "[Öğrenci Adı] yardımlaşma duygusunu benimsemiş, sınıf içinde dayanışmayı destekleyen ve arkadaşlarının başarısından mutluluk duyan sosyal değerleri güçlü bir öğrencidir.",
+            "ton": "olumlu",
+            "etiketler": ["yardımlaşma", "dayanışma", "sosyal değerler", "başkasının başarısından mutluluk"]
         },
         {
             "id": "5_1_015",
-            "icerik": "[Öğrenci Adı], arkadaşlarıyla iletişimi oldukça iyi. Ancak zaman zaman söz hakkı beklemeden konuştuğu ve ders akışını bozduğu gözlemleniyor. Bu konuda daha dikkatli davranması gerekiyor.",
-            "ton": "notr",
-            "etiketler": ["sosyal beceri", "teşvik edilmeli"]
+            "icerik": "[Öğrenci Adı] eleştirel düşünme becerisini geliştirmeye başlamış, farklı bakış açılarını değerlendirebilen ve kendi görüşlerini gerekçeleriyle savunabilen bir öğrencidir.",
+            "ton": "olumlu",
+            "etiketler": ["eleştirel düşünme", "farklı bakış açısı", "görüş savunma", "gerekçelendirme"]
         },
         {
             "id": "5_1_016",
-            "icerik": "[Öğrenci Adı], okul yaşamına uyum sağlamış durumda. Derslere ilgisi ve katılımı memnuniyet verici. Özellikle sorumluluk bilinci ve öz disiplini takdir edilesi düzeyde.",
-            "ton": "olumlu",
-            "etiketler": ["yüksek başarı", "üstün yetenek"]
+            "icerik": "[Öğrenci Adı] ortaokula uyum sürecinde bazı zorluklar yaşamakla birlikte çaba göstermektedir. Zaman zaman derse odaklanmakta güçlük çeker ancak destekle başarı gösterebilir.",
+            "ton": "notr",
+            "etiketler": ["uyum zorluğu", "çaba gösterme", "odaklanma güçlüğü", "destekle başarı"]
         },
         {
             "id": "5_1_017",
-            "icerik": "[Öğrenci Adı], sınıf içinde zaman zaman huzursuzluk çıkarıyor ve arkadaşlarının dikkatini dağıtıyor. Okul kurallarına uyma konusunda daha fazla çaba göstermesi gerekiyor.",
-            "ton": "olumsuz",
-            "etiketler": ["disiplin sorunu", "davranış sorunu"]
+            "icerik": "[Öğrenci Adı] akademik performansı orta seviyededir. Bazı derslerde başarılı olurken bazılarında ek çalışmaya ihtiyaç duymaktadır. Düzenli tekrar yapması gerekir.",
+            "ton": "notr",
+            "etiketler": ["orta seviye", "değişken performans", "ek çalışma", "düzenli tekrar"]
         },
         {
             "id": "5_1_018",
-            "icerik": "[Öğrenci Adı], akademik performansı giderek artıyor. Derslere olan ilgisi ve çabası takdir ediliyor. Bu olumlu gelişmenin devam etmesi bekleniyor.",
-            "ton": "olumlu",
-            "etiketler": ["gelişim halinde", "teşvik edilmeli"]
+            "icerik": "[Öğrenci Adı] sosyal çevresine uyum sağlamaya çalışmakta ancak zaman zaman çekingen davranabilmektedir. Grup çalışmalarında daha aktif olmaya teşvik edilmelidir.",
+            "ton": "notr",
+            "etiketler": ["sosyal uyum", "çekingenlik", "grup pasifliği", "teşvik gerekli"]
         },
         {
             "id": "5_1_019",
-            "icerik": "[Öğrenci Adı], sınıf içinde sessiz ve içe dönük bir profil çiziyor. Kendini ifade etmesi ve daha aktif katılım göstermesi için cesaretlendirilmeli. Potansiyelini ortaya çıkarması bekleniyor.",
+            "icerik": "[Öğrenci Adı] ödev yapma konusunda düzensizlik göstermektedir. Bazen zamanında teslim eder bazen geciktirir. Sorumluluk bilincini geliştirmesi gerekmektedir.",
             "ton": "notr",
-            "etiketler": ["orta düzey katılım", "sosyal gelişim gerektiren"]
+            "etiketler": ["ödev düzensizliği", "zaman yönetimi", "sorumluluk bilinci", "gelişim gerekli"]
         },
         {
             "id": "5_1_020",
-            "icerik": "[Öğrenci Adı], derslerde gösterdiği performansla öne çıkıyor. Özellikle analitik düşünme becerisi ve problem çözme yeteneği oldukça gelişmiş. Bu yeteneklerini tüm alanlarda kullanması teşvik ediliyor.",
-            "ton": "olumlu",
-            "etiketler": ["yüksek başarı", "problem çözme"]
+            "icerik": "[Öğrenci Adı] derslerde motivasyon dalgalanmaları yaşamaktadır. İlgi alanlarına yönelik konularda aktif, diğer alanlarda pasif kalabilmektedir.",
+            "ton": "notr",
+            "etiketler": ["motivasyon dalgalanması", "seçici ilgi", "aktif-pasif", "gelişim potansiyeli"]
         },
         {
             "id": "5_1_021",
-            "icerik": "[Öğrenci Adı], okul eşyalarına ve arkadaşlarının özel eşyalarına özen göstermesi gerekiyor. Zaman zaman sınıf içinde istenmeyen davranışlar sergilediği gözlemleniyor. Bu konuda daha dikkatli olmalı.",
-            "ton": "olumsuz",
-            "etiketler": ["davranış sorunu", "müdahale gerekli"]
+            "icerik": "[Öğrenci Adı] okuma hızı ve anlama becerilerinde gelişime ihtiyaç vardır. Türkçe derslerinde destekleyici çalışmalar yapması önerilmektedir.",
+            "ton": "notr",
+            "etiketler": ["okuma hızı", "anlama becerisi", "Türkçe desteği", "gelişim ihtiyacı"]
         },
         {
             "id": "5_1_022",
-            "icerik": "[Öğrenci Adı], derslere katılımı ve akademik performansı orta düzeyde. Daha başarılı olabilmesi için düzenli çalışma alışkanlığı kazanması ve ödevlerini zamanında yapması gerekiyor.",
+            "icerik": "[Öğrenci Adı] matematik işlemlerinde bazen hata yapmakta, dikkat eksikliği gösterebilmektedir. Daha dikkatli çalışma alışkanlığı edinmelidir.",
             "ton": "notr",
-            "etiketler": ["orta düzey katılım", "gelişim halinde"]
+            "etiketler": ["matematik hataları", "dikkat eksikliği", "çalışma alışkanlığı", "gelişim gerekli"]
         },
         {
             "id": "5_1_023",
-            "icerik": "[Öğrenci Adı], sınıf içinde oldukça saygılı ve seviyeli davranışlar sergiliyor. Öğretmenlerine ve arkadaşlarına karşı tutumu örnek alınası düzeyde. Bu olumlu davranışlarının devamı bekleniyor.",
-            "ton": "olumlu",
-            "etiketler": ["sosyal beceri", "yardımsever"]
+            "icerik": "[Öğrenci Adı] arkadaş seçiminde kararsızlık yaşayabilmekte, sosyal gruplar arasında gidip gelebilmektedir. Sosyal kimliğini henüz tam oluşturamamıştır.",
+            "ton": "notr",
+            "etiketler": ["arkadaş seçimi", "sosyal kararsızlık", "kimlik arayışı", "gelişim süreci"]
         },
         {
             "id": "5_1_024",
-            "icerik": "[Öğrenci Adı], derslere hazırlıksız geldiği ve ödevlerini eksik yaptığı sıkça gözlemleniyor. Akademik başarısı için bu konuda acil önlem alınması gerekiyor. Aile desteği şart.",
-            "ton": "olumsuz",
-            "etiketler": ["ödev yapmama alışkanlığı", "akademik sorun"]
+            "icerik": "[Öğrenci Adı] teknoloji kullanımında sınır belirleme konusunda rehberliğe ihtiyaç duymaktadır. Ders dışı teknoloji kullanımını kontrol etmelidir.",
+            "ton": "notr",
+            "etiketler": ["teknoloji kontrolü", "sınır belirleme", "rehberlik ihtiyacı", "öz kontrol"]
         },
         {
             "id": "5_1_025",
-            "icerik": "[Öğrenci Adı], sınıf içinde dengeli bir performans sergiliyor. Bazı alanlarda daha fazla potansiyel gösterebileceği düşünülüyor. Kendine güvenmesi ve daha aktif olması teşvik ediliyor.",
+            "icerik": "[Öğrenci Adı] not tutma ve organize olma becerilerini geliştirmesi gerekmektedir. Ders materyallerini düzenli tutma konusunda destek almalıdır.",
             "ton": "notr",
-            "etiketler": ["orta düzey katılım", "teşvik edilmeli"]
+            "etiketler": ["not tutma", "organizasyon", "düzen", "destek gerekli"]
         },
         {
             "id": "5_1_026",
-            "icerik": "[Öğrenci Adı], yaratıcı fikirleri ve özgün yaklaşımlarıyla sınıfa renk katıyor. Grup çalışmalarında bu yeteneğini kullanması ve arkadaşlarına liderlik etmesi takdir ediliyor.",
-            "ton": "olumlu",
-            "etiketler": ["yaratıcılık", "özgün yaklaşım"]
+            "icerik": "[Öğrenci Adı] zamanı etkili kullanma konusunda zorlanmakta, oyun ve çalışma arasındaki dengeyi kurmakta güçlük çekmektedir.",
+            "ton": "notr",
+            "etiketler": ["zaman kullanımı", "oyun-çalışma dengesi", "öncelik belirleme", "gelişim gerekli"]
         },
         {
             "id": "5_1_027",
-            "icerik": "[Öğrenci Adı], derslerde sık sık hayal kurduğu ve dikkatinin dağıldığı gözlemleniyor. Konuları takip etmekte zorlandığı için özel ilgi gösterilmesi gerekiyor.",
-            "ton": "olumsuz",
-            "etiketler": ["dikkat dağınıklığı", "destek gerektiren"]
+            "icerik": "[Öğrenci Adı] kendini ifade etmekte zaman zaman zorlanabilmekte, fikirlerini paylaşmaya çekinebilmektedir. Özgüven gelişimine ihtiyaç vardır.",
+            "ton": "notr",
+            "etiketler": ["kendini ifade", "çekingenlik", "özgüven geliştirme", "fikirlerini paylaşma"]
         },
         {
             "id": "5_1_028",
-            "icerik": "[Öğrenci Adı], okul yaşamına uyum sağlamış durumda. Derslere ilgisi ve arkadaşlarıyla iletişimi oldukça iyi. Akademik başarısını daha da artırması bekleniyor.",
-            "ton": "olumlu",
-            "etiketler": ["sosyal beceri", "gelişim halinde"]
+            "icerik": "[Öğrenci Adı] grup projelerinde rol dağılımını anlamakta zorlanabilmekte, takım çalışması becerilerini geliştirmesi gerekmektedir.",
+            "ton": "notr",
+            "etiketler": ["grup çalışması", "rol anlama", "takım becerisi", "gelişim gerekli"]
         },
         {
             "id": "5_1_029",
-            "icerik": "[Öğrenci Adı], zaman yönetimi konusunda zorluk yaşıyor. Ödevlerini yetiştiremediği ve derslere hazırlıksız geldiği gözlemleniyor. Bu konuda rehberlik servisinden destek alması faydalı olacaktır.",
+            "icerik": "[Öğrenci Adı] sanatsal etkinliklerde ilgi göstermekle birlikte henüz yeteneklerini tam olarak keşfedememiştir. Farklı sanat dallarını denemelidir.",
             "ton": "notr",
-            "etiketler": ["orta düzey katılım", "takip gerektiren"]
+            "etiketler": ["sanatsal ilgi", "yetenek keşfi", "farklı dallar", "deneyim gerekli"]
         },
         {
             "id": "5_1_030",
-            "icerik": "[Öğrenci Adı], sınıf içinde oldukça uyumlu ve saygılı bir öğrenci. Akademik performansı giderek artıyor. Öz disiplini ve çalışma azmi takdir ediliyor.",
-            "ton": "olumlu",
-            "etiketler": ["yüksek başarı", "sosyal beceri"]
+            "icerik": "[Öğrenci Adı] sınıf kurallarını genel olarak kabul etmekle birlikte bazen unutabilmekte, hatırlatmalara ihtiyaç duymaktadır.",
+            "ton": "notr",
+            "etiketler": ["kural kabul", "unutkanlık", "hatırlatma", "alışkanlık oluşturma"]
         },
         {
             "id": "5_1_031",
-            "icerik": "[Öğrenci Adı], arkadaş ilişkilerinde zaman zaman sorun yaşıyor. Sınıf içinde huzursuzluk çıkardığı gözlemleniyor. Sosyal becerilerini geliştirmesi için rehberlik servisiyle çalışması öneriliyor.",
+            "icerik": "[Öğrenci Adı] ortaokula uyum sağlamakta ciddi zorluklar yaşamaktadır. Sürekli geç kalma, ödev yapmama ve derslere katılmama gibi problemler göstermektedir.",
             "ton": "olumsuz",
-            "etiketler": ["davranış sorunu", "müdahale gerekli"]
+            "etiketler": ["uyum zorluğu", "sürekli geç kalma", "ödev yapmama", "katılım reddi"]
         },
         {
             "id": "5_1_032",
-            "icerik": "[Öğrenci Adı], derslere katılımı ve akademik performansı orta düzeyde seyrediyor. Daha başarılı olabilmesi için düzenli çalışma alışkanlığı kazanması gerekiyor.",
-            "ton": "notr",
-            "etiketler": ["orta düzey katılım", "gelişim halinde"]
+            "icerik": "[Öğrenci Adı] sınıf içinde disiplin sorunları yaratmaktadır. Öğretmenlerin sözünü kesmekte, arkadaşlarını rahatsız etmekte ve ders akışını bozmaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["disiplin sorunu", "söz kesme", "rahatsız etme", "ders bozma"]
         },
         {
             "id": "5_1_033",
-            "icerik": "[Öğrenci Adı], sınıf içinde liderlik vasıfları gösteriyor. Arkadaşlarına karşı yardımsever tavrı ve sorumluluk bilinciyle örnek oluyor. Akademik ve sosyal anlamda çok başarılı bir dönem geçirdi.",
-            "ton": "olumlu",
-            "etiketler": ["yardımsever", "sosyal beceri"]
+            "icerik": "[Öğrenci Adı] arkadaşlarına karşı saldırgan davranışlar sergilemektedir. Fiziksel ve sözel şiddet eğilimi göstererek sosyal ilişkilerinde problem yaşamaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["saldırganlık", "fiziksel şiddet", "sözel şiddet", "sosyal problem"]
         },
         {
             "id": "5_1_034",
-            "icerik": "[Öğrenci Adı], derslere karşı ilgisiz davranıyor ve ödev sorumluluklarını yerine getirmiyor. Akademik başarısı için acil önlem alınması ve aile desteğinin sağlanması gerekiyor.",
+            "icerik": "[Öğrenci Adı] sürekli yalan söyleme eğilimi göstermektedir. Ödevini yapmadığı halde yaptığını iddia etmekte, mazeretler uydurmaktadır.",
             "ton": "olumsuz",
-            "etiketler": ["ödev yapmama alışkanlığı", "akademik sorun"]
+            "etiketler": ["yalan söyleme", "mazeret uydurma", "güvenilmezlik", "dürüstlük sorunu"]
         },
         {
             "id": "5_1_035",
-            "icerik": "[Öğrenci Adı], sınıf içinde sessiz ve uyumlu bir öğrenci. Derslere katılımını artırması ve kendini daha fazla ifade etmesi için cesaretlendirilmeli. Potansiyelini ortaya çıkarması bekleniyor.",
-            "ton": "notr",
-            "etiketler": ["orta düzey katılım", "sosyal gelişim gerektiren"]
+            "icerik": "[Öğrenci Adı] okul malzemelerine ve çevreye zarar vermektedir. Masa, sandalye çizgileri, duvar yazıları gibi maddi hasarlara neden olmaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["maddi hasar", "okul malına zarar", "çevre kirliliği", "sorumsuzluk"]
+        },
+        {
+            "id": "5_1_036",
+            "icerik": "[Öğrenci Adı] derslerde hiç katılım göstermemekte, sorulara yanıt vermemekte ve öğrenme isteği göstermemektedir. Akademik motivasyonu tamamen kaybolmuştur.",
+            "ton": "olumsuz",
+            "etiketler": ["katılım yok", "öğrenme isteği yok", "motivasyon kaybı", "akademik sorun"]
+        },
+        {
+            "id": "5_1_037",
+            "icerik": "[Öğrenci Adı] arkadaşlarını dışlayıcı davranışlar sergilemektedir. Grup oyunlarına almamakta, alay etmekte ve sosyal zorbalık yapmaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["dışlayıcı davranış", "sosyal zorbalık", "alay etme", "grup oyunlarından dışlama"]
+        },
+        {
+            "id": "5_1_038",
+            "icerik": "[Öğrenci Adı] öfke kontrolünde ciddi sorunlar yaşamaktadır. Küçük olaylarda büyük tepkiler vermekte, sinirlendiğinde kendini kontrol edememektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["öfke kontrolsüzlüğü", "aşırı tepki", "sinir kontrolü", "duygusal sorun"]
+        },
+        {
+            "id": "5_1_039",
+            "icerik": "[Öğrenci Adı] sürekli ders kaçırma eğilimi göstermektedir. Tuvalete çıktığını söyleyip geri dönmemekte, hastalık bahanesi ile derse katılmamaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["ders kaçırma", "bahane", "devamsızlık", "sorumsuzluk"]
+        },
+        {
+            "id": "5_1_040",
+            "icerik": "[Öğrenci Adı] teknoloji bağımlılığı göstermektedir. Derslerde telefonla ilgilenmekte, oyun oynamakta ve dikkatini derslerden çekmektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["teknoloji bağımlılığı", "telefon kullanımı", "oyun bağımlılığı", "dikkat dağınıklığı"]
+        },
+        {
+            "id": "5_1_041",
+            "icerik": "[Öğrenci Adı] başkalarının eşyalarını izinsiz almaktadır. Sınıf arkadaşlarının kalemlerini, silgilerini alıp geri vermemekte, hırsızlık eğilimi göstermektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["hırsızlık eğilimi", "eşya alma", "izinsiz kullanım", "etik sorun"]
+        },
+        {
+            "id": "5_1_042",
+            "icerik": "[Öğrenci Adı] öğretmenlere saygısızlık etmektedir. Otorite tanımamakta, kurallara uymamakta ve büyüklerle konuşma adabını bilmemektedir.",
+            "ton": "olumsuz",
+            "etiketler": ["öğretmene saygısızlık", "otorite tanımama", "kural ihlali", "adap bilmeme"]
+        },
+        {
+            "id": "5_1_043",
+            "icerik": "[Öğrenci Adı] sınıf temizliğine önem vermemektedir. Çöplerini yere atmakta, masa etrafını kirletmekte ve ortak alanları kirli bırakmaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["temizlik sorunu", "çöp atma", "kirletme", "sorumsuzluk"]
+        },
+        {
+            "id": "5_1_044",
+            "icerik": "[Öğrenci Adı] grup çalışmalarında tamamen pasif kalmakta, hiç katkı sağlamamakta ve arkadaşlarının yaptığı işleri kopyalamaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["grup pasifliği", "katkısızlık", "kopyalama", "çalışma reddi"]
+        },
+        {
+            "id": "5_1_045",
+            "icerik": "[Öğrenci Adı] sürekli şikayet etme eğilimi göstermektedir. Her konuda problem çıkarmakta, arkadaşlarını öğretmene şikayet etmekte ve çatışma yaratmaktadır.",
+            "ton": "olumsuz",
+            "etiketler": ["sürekli şikayet", "problem çıkarma", "çatışma yaratma", "olumsuz tutum"]
         }
     ]
 }

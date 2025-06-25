@@ -1,54 +1,29 @@
-# 📝 Karne Görüşleri Uygulaması
 
-Ortaokul öğretmenleri için geliştirilen bu uygulama, karne görüşü yazım sürecini kolaylaştırmak ve zenginleştirmek amacıyla tasarlanmıştır.  
-Yapay zekaya benzer bir deneyim sunmak için **etiket tabanlı öneri sistemi** kullanır. İnternet bağlantısı gerektirmez, tamamen **offline** çalışır.
+# karne-gorusleri
 
-## 🎯 Proje Amacı
+Karne yorum yazma uygulaması - Türk eğitim sistemi için özel olarak tasarlanmış bir karne yorumu yazma aracı.
 
-- Öğretmenlerin zamandan tasarruf etmesini sağlamak
-- Klişeleşmiş ifadeler yerine öğrenciye özel, anlamlı yorumlar sunmak
-- İnternet gerektirmeyen, güvenli ve pratik bir kullanım imkanı sağlamak
+## Özellikler
 
-## 🚀 Özellikler
+- 5-8. sınıflar için hazır yorum şablonları
+- Emoji destekli ton sistemi (😊 Olumlu, 😐 Nötr, 😕 Olumsuz)
+- AI destekli yorum önerileri
+- Otomatik isim değiştirme sistemi
+- Çevrimdışı çalışma desteği (PWA)
+- Türkçe eğitim sistemi uyumlu
 
-- 🔍 Sınıf ve dönem seçimine göre filtreleme
-- 🏷️ Etiket tabanlı, dinamik öneri sistemi (AI yerine)
-- ✍️ Hazır yorumları düzenleme ve özelleştirme
-- 💾 Offline çalışma desteği (veriler yereldedir)
-- 🎨 Kullanıcı dostu ve modern tasarım
+## Teknolojiler
 
-## 🛠️ Teknolojiler
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Veritabanı**: PostgreSQL
+- **Build Tool**: Vite
+- **PWA**: Service Worker ile çevrimdışı destek
 
-- HTML  
-- Tailwind CSS  
-- Vanilla JavaScript  
-- LocalStorage (veri kaydı için)
+## Kullanım
 
-## 📦 Kurulum
+Uygulama Türk ortaokul öğretmenlerinin karne yorumlarını hızlı ve etkili bir şekilde yazabilmeleri için tasarlanmıştır.
 
-Projeyi kendi bilgisayarınızda çalıştırmak için:
+## Lisans
 
-```bash
-git clone https://github.com/omeryol/karne-gorusleri.git
-cd karne-gorusleri
-
-Ardından index.html dosyasını bir tarayıcıda açarak uygulamayı hemen kullanmaya başlayabilirsiniz.
-
-🧠 Etiket Tabanlı Öneri Sistemi Nasıl Çalışır?
-Yorumlar; sınıf seviyesi, başarı durumu, davranış gibi çeşitli etiketlerle ilişkilendirilmiştir.
-Kullanıcı, bu etiketlerden seçim yaparak sistemin uygun yorumları önermesini sağlar.
-
-Gerçek yapay zeka (AI) kullanılmamaktadır. Ancak etiket-matching yöntemi sayesinde akıllı öneri deneyimi sunulur.
-
-👨‍🏫 Hedef Kitle
-Sınıf ve branş öğretmenleri
-
-Okul idarecileri
-
-Karne görüşü yazımında zorlanan eğitimciler
-
-📌 Geliştirme Durumu
-✅ Arayüz ve kullanıcı deneyimi tasarlandı
-✅ Etiket sistemine dayalı yorum motoru çalışıyor
-🔄 Etiket yönetimi ve öneri çeşitliliği genişletiliyor
-🛠️ PDF çıktısı ve tema özelleştirme özellikleri planlanıyor
+Bu proje eğitim amaçlı olarak geliştirilmiştir.

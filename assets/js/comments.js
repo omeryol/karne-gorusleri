@@ -90,23 +90,29 @@ class CommentManager {
             });
         }
 
-        // Etiket ekleme
-        const newTagInput = document.getElementById('newTagInput');
-        if (newTagInput) {
-            newTagInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    this.addTag(e.target.value.trim());
-                    e.target.value = '';
-                }
-            });
-        }
+        
 
         // İptal butonu
         const cancelEditBtn = document.getElementById('cancelEditBtn');
         if (cancelEditBtn) {
             cancelEditBtn.addEventListener('click', () => {
                 window.ui.hideModal('commentEditModal');
+            });
+        }
+
+        // Önceki öğrenci butonu
+        const prevStudentBtn = document.getElementById('prevStudentBtn');
+        if (prevStudentBtn) {
+            prevStudentBtn.addEventListener('click', () => {
+                this.navigateToStudent('prev');
+            });
+        }
+
+        // Sonraki öğrenci butonu
+        const nextStudentBtn = document.getElementById('nextStudentBtn');
+        if (nextStudentBtn) {
+            nextStudentBtn.addEventListener('click', () => {
+                this.navigateToStudent('next');
             });
         }
     }
@@ -147,7 +153,7 @@ class CommentManager {
             <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Yer Tutucu Yönetimi</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                    "<strong>${student.name.split(' ')[0]}</strong>" adı yorumdan silinecek.
+                    "<strong>${student.name.split(' ')[0]}</strong>" adı yorumdan silinecektir.
                 </p>
                 <div class="flex gap-3">
                     <button onclick="this.closest('#placeholderModal').remove()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
@@ -192,6 +198,11 @@ class CommentManager {
         
         this.currentEditStudent = student;
         
+        // Template manager'a current student'ı set et
+        if (window.templates) {
+            window.templates.setCurrentStudent(student);
+        }
+        
         // Öğrenci bilgilerini doldur
         const editStudentName = document.getElementById('editStudentName');
         const editStudentGradeSection = document.getElementById('editStudentGradeSection');
@@ -217,27 +228,31 @@ class CommentManager {
         const form = document.getElementById('commentEditForm');
         if (comment) {
             form.content.value = comment.content;
-            form.tone.value = comment.tone;
-            form.period.value = comment.period;
+            if (form.tone) form.tone.value = comment.tone || 'olumlu';
+            if (form.period) form.period.value = comment.period || '1';
             this.updateCharacterCount(comment.content.length);
-            this.renderCurrentTags(comment.tags || []);
         } else {
             form.reset();
-            form.period.value = '1'; // Varsayılan dönem
             
             // Yeni yorum için boş başlat
             form.content.value = '';
+            if (form.tone) form.tone.value = 'olumlu';
+            if (form.period) form.period.value = '1';
             
             // Placeholder ekle
             const textarea = form.content;
             textarea.placeholder = `${student.name.split(' ')[0]} için yorumu buraya yazın...`;
             
             this.updateCharacterCount(0);
-            this.renderCurrentTags([]);
         }
 
         debugLog('Calling showModal for commentEditModal');
         window.ui.showModal('commentEditModal');
+        
+        // Navigation butonlarını güncelle
+        const students = this.storage.getStudents();
+        const currentIndex = students.findIndex(s => s.id === student.id);
+        this.updateNavigationButtons(currentIndex, students.length);
     }
 
     handleCommentSubmit(e) {
@@ -246,9 +261,9 @@ class CommentManager {
         
         const commentData = {
             content: formData.get('content').trim(),
-            tone: formData.get('tone'),
-            period: formData.get('period'),
-            tags: this.getCurrentTags()
+            tone: formData.get('tone') || 'olumlu', // Get tone from form or default
+            period: formData.get('period') || '1', // Get period from form or default
+            tags: [] // No tags
         };
 
         // [Öğrenci Adı] placeholder'ını otomatik değiştir (kaydetme sırasında)
@@ -294,15 +309,7 @@ class CommentManager {
             return false;
         }
 
-        if (!comment.tone || !['olumlu', 'notr', 'olumsuz'].includes(comment.tone)) {
-            window.ui.showToast('Geçerli bir ton seçin!', 'error');
-            return false;
-        }
-
-        if (!comment.period || !['1', '2'].includes(comment.period)) {
-            window.ui.showToast('Geçerli bir dönem seçin!', 'error');
-            return false;
-        }
+        
 
         return true;
     }
@@ -347,40 +354,182 @@ class CommentManager {
         }
     }
 
-    addTag(tag) {
-        if (!tag || tag.length < 2) return;
+    navigateToStudent(direction) {
+        if (!this.currentEditStudent) return;
+
+        const students = this.storage.getStudents();
+        const currentIndex = students.findIndex(s => s.id === this.currentEditStudent.id);
         
-        const currentTags = this.getCurrentTags();
-        if (!currentTags.includes(tag.toLowerCase())) {
-            currentTags.push(tag.toLowerCase());
-            this.renderCurrentTags(currentTags);
+        if (currentIndex === -1) return;
+
+        let newIndex;
+        if (direction === 'prev') {
+            newIndex = currentIndex > 0 ? currentIndex - 1 : students.length - 1;
+        } else {
+            newIndex = currentIndex < students.length - 1 ? currentIndex + 1 : 0;
+        }
+
+        const newStudent = students[newIndex];
+        const comments = this.storage.getCommentsByStudentId(newStudent.id);
+        const hasComment = comments.length > 0;
+
+        // Mevcut formu kontrol et - gerçekten değişiklik var mı?
+        const form = document.getElementById('commentEditForm');
+        const currentContent = form.content.value.trim();
+        
+        // Orijinal içeriği al
+        let originalContent = '';
+        if (this.currentEditingId) {
+            const originalComment = this.storage.getCommentById(this.currentEditingId);
+            originalContent = originalComment ? originalComment.content.trim() : '';
+        }
+
+        // Gerçekten değişiklik var mı kontrol et
+        const hasChanges = currentContent !== originalContent && currentContent.length > 0;
+        
+        if (hasChanges) {
+            this.showNavigationConfirmModal(currentContent, newStudent, newIndex, hasComment, comments);
+        } else {
+            // Değişiklik yoksa direkt geç
+            this.performNavigation(newStudent, newIndex, hasComment, comments);
         }
     }
 
-    removeTag(tag) {
-        const currentTags = this.getCurrentTags();
-        const filtered = currentTags.filter(t => t !== tag);
-        this.renderCurrentTags(filtered);
+    showNavigationConfirmModal(content, newStudent, newIndex, hasComment, comments) {
+        const modal = document.createElement('div');
+        modal.id = 'navigationConfirmModal';
+        modal.className = 'fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50';
+        modal.innerHTML = `
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl border border-gray-200 dark:border-gray-700 transform scale-95 opacity-0 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-exclamation-triangle text-yellow-600 dark:text-yellow-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Kaydedilmemiş Değişiklikler</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Yorum alanında değişiklikler var</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    Mevcut öğrenci için yaptığınız değişiklikler kaydedilmemiş. Nasıl devam etmek istiyorsunuz?
+                </p>
+                <div class="flex space-x-3">
+                    <button id="discardChanges" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                        <i class="fas fa-times mr-2"></i>
+                        Değişiklikleri Göz Ardı Et
+                    </button>
+                    <button id="saveAndContinue" class="flex-1 bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                        <i class="fas fa-save mr-2"></i>
+                        Kaydet ve Devam Et
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Animation
+        requestAnimationFrame(() => {
+            const content = modal.querySelector('div');
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+        });
+
+        // Event listeners
+        const discardBtn = modal.querySelector('#discardChanges');
+        const saveBtn = modal.querySelector('#saveAndContinue');
+
+        const cleanup = () => {
+            const content = modal.querySelector('div');
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                if (modal.parentNode) {
+                    document.body.removeChild(modal);
+                }
+            }, 300);
+        };
+
+        discardBtn.addEventListener('click', () => {
+            cleanup();
+            this.performNavigation(newStudent, newIndex, hasComment, comments);
+        });
+
+        saveBtn.addEventListener('click', () => {
+            cleanup();
+            
+            // Hızlı kaydetme
+            const form = document.getElementById('commentEditForm');
+            const commentData = {
+                content: content,
+                tone: (form.tone && form.tone.value) || 'olumlu',
+                period: (form.period && form.period.value) || '1',
+                tags: []
+            };
+
+            // [Öğrenci Adı] placeholder'ını değiştir
+            if (this.currentEditStudent) {
+                const firstName = this.currentEditStudent.name.split(' ')[0];
+                commentData.content = commentData.content.replace(/\[Öğrenci Adı\]/g, firstName);
+            }
+
+            if (this.currentEditingId) {
+                this.storage.updateComment(this.currentEditingId, commentData);
+            } else {
+                commentData.studentId = this.currentEditStudent.id;
+                this.storage.addComment(commentData);
+            }
+            
+            this.render();
+            window.students && window.students.render();
+            window.ui.showToast('Yorum kaydedildi!', 'success');
+            
+            this.performNavigation(newStudent, newIndex, hasComment, comments);
+        });
+
+        // ESC tuşu ile kapatma
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                cleanup();
+                document.removeEventListener('keydown', handleEsc);
+            }
+        };
+        document.addEventListener('keydown', handleEsc);
     }
 
-    getCurrentTags() {
-        const tagElements = document.querySelectorAll('#currentTags .tag');
-        return Array.from(tagElements).map(el => el.dataset.tag);
+    performNavigation(newStudent, newIndex, hasComment, comments) {
+        // Yeni öğrenciye geç
+        if (hasComment) {
+            this.currentEditingId = comments[0].id;
+        } else {
+            this.currentEditingId = null;
+        }
+
+        this.showEditModal(newStudent, hasComment ? comments[0] : null);
+        
+        // Navigation butonlarının durumunu güncelle
+        this.updateNavigationButtons(newIndex, this.storage.getStudents().length);
     }
 
-    renderCurrentTags(tags) {
-        const container = document.getElementById('currentTags');
-        if (!container) return;
-
-        container.innerHTML = tags.map(tag => `
-            <span class="tag bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200 flex items-center" data-tag="${tag}">
-                ${tag}
-                <button onclick="window.comments.removeTag('${tag}')" class="ml-2 text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-100">
-                    <i class="fas fa-times text-xs"></i>
-                </button>
-            </span>
-        `).join('');
+    updateNavigationButtons(currentIndex, totalStudents) {
+        const prevBtn = document.getElementById('prevStudentBtn');
+        const nextBtn = document.getElementById('nextStudentBtn');
+        
+        if (prevBtn && nextBtn) {
+            // Butonları her zaman aktif tut (döngüsel navigasyon)
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
+            
+            // Tooltip güncelle
+            const prevIndex = currentIndex > 0 ? currentIndex - 1 : totalStudents - 1;
+            const nextIndex = currentIndex < totalStudents - 1 ? currentIndex + 1 : 0;
+            
+            prevBtn.title = `Önceki Öğrenci (${prevIndex + 1}/${totalStudents})`;
+            nextBtn.title = `Sonraki Öğrenci (${nextIndex + 1}/${totalStudents})`;
+        }
     }
+
+    
 
     getFilteredComments() {
         let comments = this.storage.getComments();
@@ -416,9 +565,10 @@ class CommentManager {
         const initials = window.students.getInitials(student.name);
         const toneColor = this.getToneColor(comment.tone);
         const toneText = this.getToneText(comment.tone);
+        const toneBgColor = this.getToneBackgroundColor(comment.tone);
 
         return `
-            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 animate-fade-in">
+            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 animate-fade-in">
                 <div class="flex items-start justify-between">
                     <div class="flex-1">
                         <div class="flex items-center space-x-3 mb-3">
@@ -492,6 +642,15 @@ class CommentManager {
             'olumsuz': '😕 Olumsuz'
         };
         return texts[tone] || 'Bilinmiyor';
+    }
+
+    getToneBackgroundColor(tone) {
+        const colors = {
+            'olumlu': 'bg-green-50 dark:bg-green-900/20',
+            'notr': 'bg-yellow-50 dark:bg-yellow-900/20',
+            'olumsuz': 'bg-red-50 dark:bg-red-900/20'
+        };
+        return colors[tone] || 'bg-white dark:bg-gray-800';
     }
 
     showAllCommentsModal() {

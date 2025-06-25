@@ -168,12 +168,23 @@
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Öğrenci kartında "Yorum Ekle" butonuna tıklayın. AI önerilerinden yararlanabilir veya kendi yorumunuzu yazabilirsiniz.</p>
                 </div>
 
+                <!-- Sınıf Filtresi -->
+                <div class="mb-6">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+                        <i class="fas fa-graduation-cap text-green-500 mr-2"></i>
+                        Sınıf Filtresi
+                    </h3>
+                    <div id="gradeFilterButtons">
+                        <!-- Grade filter buttons will be rendered here -->
+                    </div>
+                </div>
+
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
                         <i class="fas fa-brain text-primary mr-2"></i>
                         AI Önerisi Nasıl Çalışır?
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Etiket filtresi ile istediğiniz kategorilerde hazır yorumları görüntüleyebilir ve düzenleyebilirsiniz.</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Sınıf ve etiket filtresi ile istediğiniz kategorilerde hazır yorumları görüntüleyebilir ve düzenleyebilirsiniz.</p>
                 </div>
 
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
@@ -502,7 +513,15 @@
     <div id="commentEditModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
         <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-2xl w-full transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-display font-semibold text-gray-900 dark:text-white">Yorum Düzenle</h2>
+                <div class="flex items-center space-x-2">
+                    <button id="prevStudentBtn" class="text-gray-400 hover:text-primary transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" title="Önceki Öğrenci">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 class="text-xl font-display font-semibold text-gray-900 dark:text-white">Yorum Düzenle</h2>
+                    <button id="nextStudentBtn" class="text-gray-400 hover:text-primary transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" title="Sonraki Öğrenci">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
                 <button id="commentEditCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
                     <i class="fas fa-times text-xl"></i>
                 </button>
@@ -519,49 +538,42 @@
                     </div>
                 </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Yorum İçeriği</label>
-                    <textarea name="content" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white h-32 resize-none" placeholder="Öğrenci yorumunu buraya yazın..." maxlength="500"></textarea>
-                    <div class="flex justify-between items-center mt-2">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Karakter sayısı: <span id="charCount">0</span>/500</span>
-                        <div class="flex gap-2">
-                            <button type="button" id="editAISuggestionsBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1">
-                                <i class="fas fa-robot"></i>
-                                AI Önerileri
-                            </button>
-                            <button type="button" id="editPlaceholderBtn" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1" title="[Öğrenci Adı] yer tutucusunu kaldır">
-                                <i class="fas fa-eraser"></i>
-                                İsmi Sil
-                            </button>
+                <div class="mb-4">
+                            <label for="content" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Yorum</label>
+                            <textarea name="content" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white h-32 resize-none" placeholder="Öğrenci yorumunu buraya yazın..." maxlength="500"></textarea>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Karakter sayısı: <span id="charCount">0</span>/500</span>
+                                <div class="flex gap-2">
+                                    <button type="button" id="editAISuggestionsBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1">
+                                        <i class="fas fa-robot"></i>
+                                        AI Önerileri
+                                    </button>
+                                    <button type="button" id="editPlaceholderBtn" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1" title="[Öğrenci Adı] yer tutucusunu kaldır">
+                                        <i class="fas fa-eraser"></i>
+                                        İsmi Kaldır
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ton</label>
-                        <select name="tone" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
-                            <option value="olumlu">😊 Olumlu</option>
-                            <option value="notr">😐 Nötr</option>
-                            <option value="olumsuz">😕 Olumsuz</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dönem</label>
-                        <select name="period" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
-                            <option value="1">1. Dönem</option>
-                            <option value="2">2. Dönem</option>
-                        </select>
-                    </div>
-                </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="tone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ton</label>
+                                <select name="tone" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
+                                    <option value="olumlu">😊 Olumlu</option>
+                                    <option value="notr">😐 Nötr</option>
+                                    <option value="olumsuz">😕 Olumsuz</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="period" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dönem</label>
+                                <select name="period" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
+                                    <option value="1">1. Dönem</option>
+                                    <option value="2">2. Dönem</option>
+                                </select>
+                            </div>
+                        </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Etiketler</label>
-                    <div class="flex flex-wrap gap-2 mb-3" id="currentTags">
-                        <!-- Dynamic tags will be loaded here -->
-                    </div>
-                    <input type="text" id="newTagInput" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-sm" placeholder="Yeni etiket ekle... (Enter'a basın)">
-                </div>
 
                 <div class="flex justify-end space-x-4">
                     <button type="button" id="cancelEditBtn" class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
@@ -588,14 +600,35 @@
                 </button>
             </div>
 
-            <!-- Tone Filter -->
+            <!-- Filters in compact horizontal layout -->
             <div class="mb-6">
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Ton Filtresi</label>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <button class="ai-tone-filter active bg-positive text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumlu">😊 Olumlu</button>
-                    <button class="ai-tone-filter active bg-neutral text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="notr">😐 Nötr</button>
-                    <button class="ai-tone-filter active bg-negative text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumsuz">😕 Olumsuz</button>
-                    <button class="ai-tone-filter active bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="all">Tümü</button>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Tone Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ton</label>
+                        <div class="flex flex-wrap gap-1">
+                            <button class="ai-tone-filter active bg-positive text-white px-2 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105" data-tone="olumlu">😊 Olumlu</button>
+                            <button class="ai-tone-filter bg-neutral text-white px-2 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105" data-tone="notr">😐 Nötr</button>
+                            <button class="ai-tone-filter bg-negative text-white px-2 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105" data-tone="olumsuz">😕 Olumsuz</button>
+                            <button class="ai-tone-filter bg-gray-500 text-white px-2 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105" data-tone="all">Tümü</button>
+                        </div>
+                    </div>
+
+                    <!-- Grade Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Sınıf</label>
+                        <div id="gradeFilterButtons">
+                            <!-- Dynamic grade filter buttons will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Term Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dönem</label>
+                        <div id="termFilterButtons">
+                            <!-- Dynamic term filter buttons will be loaded here -->
+                        </div>
+                    </div>
                 </div>
             </div>
 
