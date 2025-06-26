@@ -7,7 +7,7 @@ class App {
 
     init() {
         debugLog('App.init() started');
-        
+
         this.initializeComponents();
         this.setupTheme();
         this.setupKeyboardShortcuts();
@@ -20,7 +20,7 @@ class App {
             this.dashboard.updateStats();
             this.tabs.switchTo('dashboard');
         }, 100);
-        
+
         debugLog('App.init() completed');
     }
 
@@ -30,20 +30,20 @@ class App {
                 'Bu işlem tüm öğrenci verilerini, yorumları ve ayarları kalıcı olarak silecektir. Bu işlem geri alınamaz!\n\nEmin misiniz?',
                 'Uygulamayı Sıfırla'
             );
-            
+
             if (confirmed) {
                 // İkinci onay
                 const doubleConfirmed = await window.ui.confirmDialog(
                     'Son uyarı! Tüm verileriniz silinecek. Bu işlemi gerçekten yapmak istiyor musunuz?',
                     'Son Onay'
                 );
-                
+
                 if (doubleConfirmed) {
                     // Tüm localStorage verilerini sil
                     window.storage.clear();
-                    
+
                     window.ui.showToast('Uygulama başarıyla sıfırlandı!', 'success');
-                    
+
                     // Sayfayı yenile
                     setTimeout(() => {
                         window.location.reload();
@@ -57,21 +57,88 @@ class App {
 
     exportToExcel() {
         try {
-            const csvContent = window.storage.exportToExcel();
+            const data = window.storage.exportData();
+            const csvContent = this.convertToCSV(data);
             if (csvContent) {
-                const encodedUri = encodeURI(csvContent);
+                const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
                 const link = document.createElement("a");
-                link.setAttribute("href", encodedUri);
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
                 link.setAttribute("download", `karne_yorumlari_${new Date().toLocaleDateString('tr-TR').replace(/\./g, '_')}.csv`);
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
-                
+                URL.revokeObjectURL(url);
+
                 window.ui.showToast('Veriler Excel dosyasına aktarıldı!', 'success');
             }
         } catch (error) {
             window.ui.showToast('Excel aktarımı başarısız!', 'error');
         }
+    }
+
+    exportToPDF() {
+        try {
+            const data = window.storage.exportData();
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // PDF başlığı
+            doc.setFontSize(16);
+            doc.text('Karne Yorumları Raporu', 20, 20);
+            doc.setFontSize(10);
+            doc.text(`Tarih: ${new Date().toLocaleDateString('tr-TR')}`, 20, 30);
+
+            let yPosition = 50;
+
+            // Öğrenci yorumları
+            data.comments.forEach((comment, index) => {
+                const student = data.students.find(s => s.id === comment.studentId);
+                if (student) {
+                    if (yPosition > 250) {
+                        doc.addPage();
+                        yPosition = 20;
+                    }
+
+                    doc.setFontSize(12);
+                    doc.text(`${index + 1}. ${student.name} (${student.grade}-${student.section})`, 20, yPosition);
+                    yPosition += 10;
+
+                    doc.setFontSize(10);
+                    const lines = doc.splitTextToSize(comment.content, 170);
+                    doc.text(lines, 20, yPosition);
+                    yPosition += lines.length * 5 + 10;
+                }
+            });
+
+            doc.save(`karne_yorumlari_${new Date().toLocaleDateString('tr-TR').replace(/\./g, '_')}.pdf`);
+            window.ui.showToast('PDF raporu oluşturuldu!', 'success');
+        } catch (error) {
+            window.ui.showToast('PDF aktarımı için jsPDF kütüphanesi yüklenemedi!', 'error');
+        }
+    }
+
+    convertToCSV(data) {
+        const headers = ['Öğrenci Adı', 'Sınıf', 'Şube', 'Yorum', 'Ton', 'Dönem', 'Tarih'];
+        const csvContent = [headers.join(',')];
+
+        data.comments.forEach(comment => {
+            const student = data.students.find(s => s.id === comment.studentId);
+            if (student) {
+                const row = [
+                    `"${student.name}"`,
+                    student.grade,
+                    `"${student.section}"`,
+                    `"${comment.content.replace(/"/g, '""')}"`,
+                    comment.tone === 'olumlu' ? 'Olumlu' : comment.tone === 'notr' ? 'Nötr' : 'Olumsuz',
+                    `${comment.period}. Dönem`,
+                    new Date(comment.createdAt).toLocaleDateString('tr-TR')
+                ];
+                csvContent.push(row.join(','));
+            }
+        });
+
+        return csvContent.join('\n');
     }
 
     initializeComponents() {
@@ -83,7 +150,7 @@ class App {
 
         // Global referansları ayarla
         window.app = this;
-        
+
         debugLog('App components initialized', {
             tabs: !!this.tabs,
             dashboard: !!this.dashboard
@@ -91,7 +158,7 @@ class App {
     }
 
     setupTheme() {
-        const savedTheme = window.storage.getSetting('theme') || 'light';
+        const savedTheme = window.storage.getSetting('theme') || 'dark';
         const htmlElement = document.documentElement;
 
         if (savedTheme === 'dark') {
@@ -294,7 +361,7 @@ class TabManager {
         debugLog('TabManager.bindEvents() started');
         const tabButtons = document.querySelectorAll('[data-tab]');
         debugLog('Found tab buttons:', tabButtons.length);
-        
+
         tabButtons.forEach((button, index) => {
             debugLog(`Setting up tab button ${index}:`, button.dataset.tab);
             button.addEventListener('click', () => {
@@ -302,7 +369,7 @@ class TabManager {
                 this.switchTo(button.dataset.tab);
             });
         });
-        
+
         debugLog('TabManager.bindEvents() completed');
     }
 
@@ -311,14 +378,34 @@ class TabManager {
 
         // Button state güncellemesi
         document.querySelectorAll('[data-tab]').forEach(btn => {
-            btn.classList.remove('border-primary', 'text-primary');
-            btn.classList.add('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+            const tab = btn.dataset.tab;
+
+            // Base classes for inactive state
+            btn.className = 'tab-button bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all duration-200';
+
+            // Add specific hover colors for each tab
+            if (tab === 'students') {
+                btn.classList.add('hover:bg-green-500', 'hover:text-white');
+            } else if (tab === 'comments') {
+                btn.classList.add('hover:bg-purple-500', 'hover:text-white');
+            } else if (tab === 'templates') {
+                btn.classList.add('hover:bg-orange-500', 'hover:text-white');
+            } else if (tab === 'dashboard') {
+                btn.classList.add('hover:bg-blue-500', 'hover:text-white');
+            }
         });
 
         const activeButton = document.querySelector(`[data-tab="${tabName}"]`);
         if (activeButton) {
-            activeButton.classList.remove('border-transparent', 'text-gray-500', 'dark:text-gray-400');
-            activeButton.classList.add('border-primary', 'text-primary');
+            // Aktif buton için özel renkler
+            const colors = {
+                'dashboard': 'bg-gradient-to-r from-blue-500 to-blue-600 text-white',
+                'students': 'bg-gradient-to-r from-green-500 to-green-600 text-white',
+                'comments': 'bg-gradient-to-r from-purple-500 to-purple-600 text-white',
+                'templates': 'bg-gradient-to-r from-orange-500 to-orange-600 text-white'
+            };
+
+            activeButton.className = `tab-button ${colors[tabName]} px-4 py-3 rounded-lg shadow-lg font-medium transition-all duration-200 transform scale-105 whitespace-nowrap`;
         }
 
         // Content görünürlük güncellemesi
@@ -341,7 +428,10 @@ class TabManager {
         } else if (tabName === 'comments') {
             window.comments.render();
         } else if (tabName === 'templates') {
-            window.templates.render();
+            if (window.templates) {
+                console.log('Refreshing templates tab');
+                window.templates.render();
+            }
         }
     }
 }
@@ -369,14 +459,33 @@ class DashboardManager {
     handleGradeFilterChange(e) {
         const grade = e.target.dataset.grade;
 
-        // Aktif filtreyi güncelle
+        // Aktif filtreyi güncelle - active class ve görsel belirginleştirme
         document.querySelectorAll('.grade-filter').forEach(btn => {
-            btn.classList.remove('active');
+            btn.classList.remove('active', 'border-yellow-400', 'ring-2', 'ring-yellow-300', 'scale-105');
+            btn.classList.add('border-transparent');
         });
-        e.target.classList.add('active');
+
+        e.target.classList.add('active', 'border-yellow-400', 'ring-2', 'ring-yellow-300', 'scale-105');
+        e.target.classList.remove('border-transparent');
 
         this.currentGradeFilter = grade;
         this.updateStats();
+
+        // Sınıf seçimi yapıldığında öğrenci yönetimi sekmesine git ve o sınıfı filtrele
+        if (grade && grade !== 'all') {
+            // Öğrenci yönetimi sekmesine geç
+            window.app.tabs.switchTo('students');
+
+            // Öğrenci sınıf filtresini ayarla
+            if (window.students && typeof window.students.setGradeFilter === 'function') {
+                window.students.setGradeFilter(grade);
+            }
+
+            // Templates manager'da da sınıf filtresini ayarla (AI öneriler için)
+            if (window.templates && typeof window.templates.setSelectedGrade === 'function') {
+                window.templates.setSelectedGrade(grade);
+            }
+        }
     }
 
     updateStats() {
@@ -472,34 +581,34 @@ function debugLog(message, data = null) {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     debugLog('DOM Content Loaded - Starting initialization');
-    
+
     try {
         // Create global instances in order
         debugLog('Creating Storage instance');
         window.storage = new Storage();
         debugLog('Storage created successfully');
-        
+
         debugLog('Creating UI Manager instance');
         window.ui = new UIManager();
         debugLog('UI Manager created successfully');
-        
+
         debugLog('Creating Student Manager instance');
         window.students = new StudentManager(window.storage);
         debugLog('Student Manager created successfully');
-        
+
         debugLog('Creating Comment Manager instance');
         window.comments = new CommentManager(window.storage);
         debugLog('Comment Manager created successfully');
-        
+
         debugLog('Creating Template Manager instance');
         window.templates = new TemplateManager(window.storage);
         debugLog('Template Manager created successfully');
-        
+
         // Initialize app last
         debugLog('Creating App instance');
         window.app = new App();
         debugLog('App created successfully');
-        
+
         debugLog('All instances created successfully');
     } catch (error) {
         console.error('[ERROR] Failed to initialize:', error);

@@ -43,7 +43,7 @@ class UIManager {
     createToastContainer() {
         const container = document.createElement('div');
         container.id = 'toast-container';
-        container.className = 'fixed top-4 right-4 z-50 space-y-2';
+        container.className = 'fixed top-4 right-2 md:right-4 z-50 space-y-2 max-w-sm';
         document.body.appendChild(container);
     }
 
@@ -61,11 +61,14 @@ class UIManager {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
         
-        // Animation
+        // Geçişli animasyon
         requestAnimationFrame(() => {
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+            
             const content = modal.querySelector('div');
             if (content) {
-                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.remove('scale-90', 'scale-95', 'opacity-0');
                 content.classList.add('scale-100', 'opacity-100');
             }
         });
@@ -73,7 +76,7 @@ class UIManager {
         // Focus management
         const firstInput = modal.querySelector('input, select, textarea, button');
         if (firstInput) {
-            setTimeout(() => firstInput.focus(), 100);
+            setTimeout(() => firstInput.focus(), 300);
         }
         
         debugLog('Modal shown successfully:', modalId);
@@ -83,10 +86,14 @@ class UIManager {
         const modal = document.getElementById(modalId);
         if (!modal) return;
 
+        // Geçişli kapanış animasyonu
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+
         const content = modal.querySelector('div');
         if (content) {
             content.classList.remove('scale-100', 'opacity-100');
-            content.classList.add('scale-95', 'opacity-0');
+            content.classList.add('scale-90', 'opacity-0');
         }
 
         setTimeout(() => {
@@ -100,12 +107,17 @@ class UIManager {
                     form.reset();
                 }
             });
-        }, 300);
+        }, 500);
     }
 
     showToast(message, type = 'info', duration = 4000) {
         const toast = this.createToast(message, type);
         const container = document.getElementById('toast-container');
+        
+        // Sınırla maksimum toast sayısını
+        if (this.activeToasts.length >= 5) {
+            this.removeToast(this.activeToasts[0]);
+        }
         
         container.appendChild(toast);
         this.activeToasts.push(toast);

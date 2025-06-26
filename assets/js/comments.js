@@ -174,6 +174,10 @@ class CommentManager {
             // [Öğrenci Adı] placeholder'ını ve etrafındaki noktalama işaretlerini kaldır
             let content = textarea.value;
             
+            // Önce mevcut öğrenci adını kontrol et ve kaldır
+            const firstName = this.currentEditStudent.name.split(' ')[0];
+            content = content.replace(new RegExp(firstName, 'g'), '[Öğrenci Adı]');
+            
             // Farklı kombinasyonları temizle
             content = content.replace(/,\s*\[Öğrenci Adı\]\s*/g, ' ');
             content = content.replace(/\[Öğrenci Adı\]\s*,\s*/g, ' ');
@@ -189,7 +193,7 @@ class CommentManager {
             
             textarea.value = content;
             this.updateCharacterCount(content.length);
-            window.ui.showToast('[Öğrenci Adı] yer tutucusu silinecektir', 'info');
+            window.ui.showToast(`${firstName} adı yorumdan kaldırıldı`, 'success');
         }
     }
 

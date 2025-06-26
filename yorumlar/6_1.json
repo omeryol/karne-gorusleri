@@ -1,66 +1,273 @@
-{
-    "sinif": "6",
-    "donem": "1",
-    "yorumlar": [
-        {
-            "id": "6_1_001",
-            "icerik": "[Öğrenci Adı] ortaokula uyum sürecinde başarılı olmaktadır.",
-            "ton": "olumlu",
-            "etiketler": ["uyum başarısı", "ortaokul geçişi", "adaptasyon", "başarılı süreç"]
-        },
-        {
-            "id": "6_1_002",
-            "icerik": "[Öğrenci Adı] fen bilimleri deneylerinde merak ve keşfetme isteği göstermektedir.",
-            "ton": "olumlu",
-            "etiketler": ["merak duygusu", "deney sevgisi", "fen bilimleri", "keşfetme isteği"]
-        },
-        {
-            "id": "6_1_003",
-            "icerik": "[Öğrenci Adı] yazılı sınavlarda orta düzey başarı göstermektedir.",
-            "ton": "notr",
-            "etiketler": ["orta düzey başarı", "sınav performansı", "potansiyel var", "çaba gerektiren"]
-        },
-        {
-            "id": "6_1_004",
-            "icerik": "[Öğrenci Adı] arkadaşlarına karşı saygısız davranışlar sergilemektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["saygısızlık", "arkadaş zorbalığı", "sosyal problem", "davranış sorunu"]
-        },
-        {
-            "id": "6_1_005",
-            "icerik": "[Öğrenci Adı] Türkçe kompozisyon yazma konusunda yaratıcı fikirler üretmektedir.",
-            "ton": "olumlu",
-            "etiketler": ["yaratıcı yazma", "Türkçe", "özgün fikirler", "kompozisyon becerisi"]
-        },
-        {
-            "id": "6_1_006",
-            "icerik": "[Öğrenci Adı] ödevlerini eksik ve özensiz yapmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["ödev sorunu", "özensizlik", "sorumsuz davranış", "kalite düşüklüğü"]
-        },
-        {
-            "id": "6_1_007",
-            "icerik": "[Öğrenci Adı] grup projelerinde işbirliği yapmayı başarmaktadır.",
-            "ton": "olumlu",
-            "etiketler": ["işbirlikçi", "takım çalışması", "proje başarısı", "sosyal beceri"]
-        },
-        {
-            "id": "6_1_008",
-            "icerik": "[Öğrenci Adı] sosyal aktivitelerde çekingen davranmaktadır.",
-            "ton": "notr",
-            "etiketler": ["çekingen", "sosyal gelişim gerektiren", "özgüven eksikliği", "destek ihtiyacı"]
-        },
-        {
-            "id": "6_1_009",
-            "icerik": "[Öğrenci Adı] matematik dersinde kavrama güçlüğü yaşamaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["kavrama güçlüğü", "matematik zorluğu", "öğrenme zorluğu", "sürekli destek gerektiren"]
-        },
-        {
-            "id": "6_1_010",
-            "icerik": "[Öğrenci Adı] el becerisi gerektiren çalışmalarda yeteneklidir.",
-            "ton": "olumlu",
-            "etiketler": ["el becerisi", "pratik zeka", "manuel yetenek", "yaratıcı uygulama"]
-        }
-    ]
-}
+
+[
+  {
+    "id": 1,
+    "content": "[Öğrenci Adı] ortaokul ortamına tamamen uyum sağladı ve artan ders yükü ile başarıyla başa çıkıyor. Grup çalışmalarında aktif rol alıyor ve sosyal becerileri her geçen gün gelişiyor. Yeni arkadaşlıklar kurmada başarılı.",
+    "tone": "olumlu",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
+  },
+  {
+    "id": 2,
+    "content": "[Öğrenci Adı] artan ders sayısına güzel uyum gösteriyor. Zaman planlaması yapabiliyor ve ödevlerini düzenli tamamlıyor. Arkadaşlarıyla proje çalışmalarında iyi iş birliği yapıyor.",
+    "tone": "olumlu",
+    "tags": ["artan ders yükü", "grup çalışmaları", "ortaokul uyumu", "sosyal beceri gelişimi"]
+  },
+  {
+    "id": 3,
+    "content": "[Öğrenci Adı] grup çalışmalarında liderlik özelliklerini gösteriyor. Arkadaşlarını dinliyor ve herkesın fikrini alıyor. Sosyal becerilerinde güzel gelişme var ve çatışma çözme konusunda başarılı.",
+    "tone": "olumlu",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 4,
+    "content": "[Öğrenci Adı] sosyal beceri gelişimi açısından örnek öğrencilerimizden. Arkadaşlarıyla empati kurabiliyor ve onları anlamaya çalışıyor. Takım çalışmalarında herkesi dahil etmeye özen gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 5,
+    "content": "[Öğrenci Adı] ortaokul sistemine mükemmel uyum sağladı. Farklı öğretmenlerle çalışmaya alıştı ve her dersin kendine özgü kurallarını öğrendi. Arkadaşlık ilişkilerinde olgun davranıyor.",
+    "tone": "olumlu",
+    "tags": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 6,
+    "content": "[Öğrenci Adı] artan ders yükünü iyi organize ediyor. Ders programını takip ediyor ve hangi gün hangi derslerin olduğunu biliyor. Arkadaşlarına ders programında yardım ediyor.",
+    "tone": "olumlu",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 7,
+    "content": "[Öğrenci Adı] grup projelerinde yaratıcı fikirler üretiyor. Arkadaşlarıyla beyin fırtınası yapmayı seviyor ve herkesi konuşturmaya çalışıyor. Sunum yapmaktan korkmuyor.",
+    "tone": "olumlu",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 8,
+    "content": "[Öğrenci Adı] sosyal becerilerini geliştirme konusunda istekli. Arkadaşlarıyla çatışma yaşadığında çözüm arayışına giriyor. Özür dilemeyi ve hata kabul etmeyi öğrendi.",
+    "tone": "olumlu",
+    "tags": ["sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 9,
+    "content": "[Öğrenci Adı] ortaokul ortamındaki değişiklikleri fırsat olarak görüyor. Yeni etkinliklere katılmaya hevesli ve arkadaşlarını da teşvik ediyor. Okul kulüplerine üye olmak istiyor.",
+    "tone": "olumlu",
+    "tags": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 10,
+    "content": "[Öğrenci Adı] ders saatlerinin artmasından şikayetçi değil. Her dersi ayrı bir fırsat olarak görüyor ve öğrenmeye açık. Arkadaşlarına da aynı yaklaşımı öğütlüyor.",
+    "tone": "olumlu",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 11,
+    "content": "[Öğrenci Adı] takım çalışmalarında güçlü taraflarını keşfetti. Organizing yapmayı seviyor ve arkadaşlarının güçlü taraflarını da fark ediyor. Herkesi değerli hissettiriyor.",
+    "tone": "olumlu",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 12,
+    "content": "[Öğrenci Adı] sosyal becerilerini oyun dışında da kullanmaya başladı. Derslerde arkadaşlarıyla işbirliği yapıyor ve bilgi paylaşımında bulunuyor. Yardımlaşmayı seviyor.",
+    "tone": "olumlu",
+    "tags": ["sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 13,
+    "content": "[Öğrenci Adı] ortaokul rutinine tam uyum sağladı. Teneffüs saatlerini verimli kullanıyor ve arkadaşlarıyla kaliteli zaman geçiriyor. Okul etkinliklerine katılım gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 14,
+    "content": "[Öğrenci Adı] ders yükündeki artışa rağmen sosyal ilişkilerine vakit ayırıyor. Arkadaşlarıyla hem ders çalışıyor hem de eğleniyor. Dengeyi iyi kuruyor.",
+    "tone": "olumlu",
+    "tags": ["artan ders yükü", "sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları"]
+  },
+  {
+    "id": 15,
+    "content": "[Öğrenci Adı] grup çalışmaları sayesinde sosyal becerilerini çok geliştirdi. Ortaokul uyumu mükemmel ve artan ders yükünü başarıyla yönetiyor. Arkadaşları tarafından seviliyor.",
+    "tone": "olumlu",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 16,
+    "content": "[Öğrenci Adı] ortaokul uyumu normal düzeyde ilerliyor. Bazen ders yükünden şikayet ediyor ama adapte olmaya çalışıyor. Grup çalışmalarında pasif kalma eğilimi gösteriyor.",
+    "tone": "notr",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
+  },
+  {
+    "id": 17,
+    "content": "[Öğrenci Adı] artan ders sayısına alışma konusunda zorlanıyor. Bazı günler çok yorulduğunu söylüyor. Arkadaşlarıyla ilişkilerinde değişkenlik gösteriyor.",
+    "tone": "notr",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 18,
+    "content": "[Öğrenci Adı] grup çalışmalarında katılım gösteriyor ama liderlik yapmaktan kaçınıyor. Arkadaşlarının kararlarını bekliyor ve inisiyatif almıyor.",
+    "tone": "notr",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 19,
+    "content": "[Öğrenci Adı] sosyal beceri gelişiminde yavaş ilerleme kaydediyor. Arkadaşlarıyla iletişim kuruyor ama çatışma yaşadığında çözüm üretmekte zorlanıyor.",
+    "tone": "notr",
+    "tags": ["sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 20,
+    "content": "[Öğrenci Adı] ortaokul kurallarına uyum sağlıyor ama isteksiz görünüyor. Ders programını takip etmekte bazen zorlanıyor. Arkadaşlık ilişkileri sınırlı.",
+    "tone": "notr",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 21,
+    "content": "[Öğrenci Adı] ders yükündeki artıştan dolayı stres yaşıyor. Ödev yoğunluğundan şikayet ediyor ve bazen yetiştiremediğini söylüyor. Arkadaşlarından destek istiyor.",
+    "tone": "notr",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 22,
+    "content": "[Öğrenci Adı] grup çalışmalarında çekingen davranıyor. Fikirlerini paylaşmaktan çekiniyor ve arkadaşlarının ne düşüneceğini merak ediyor. Kendine güven eksikliği var.",
+    "tone": "notr",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 23,
+    "content": "[Öğrenci Adı] sosyal becerilerini geliştirme konusunda istekli ama başarılı olamıyor. Arkadaşlarıyla iletişimde sorunlar yaşıyor ve yanlış anlaşılmalar oluyor.",
+    "tone": "notr",
+    "tags": ["sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 24,
+    "content": "[Öğrenci Adı] ortaokul ortamında kaybolmuş hissediyor. Hangi sınıfa gideceğini bazen karıştırıyor. Arkadaşlarından yön tarifinde yardım istiyor.",
+    "tone": "notr",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 25,
+    "content": "[Öğrenci Adı] farklı öğretmenlerin farklı kurallarına uyum sağlamaya çalışıyor. Bazen hangi derste ne yapacağını unutuyor. Arkadaşlarının hatırlatmasına ihtiyaç duyuyor.",
+    "tone": "notr",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 26,
+    "content": "[Öğrenci Adı] grup projelerinde sorumluluk almaktan kaçınıyor. Arkadaşlarının yapmasını bekliyor ve pasif kalıyor. Katkı sağlama konusunda isteksiz.",
+    "tone": "notr",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 27,
+    "content": "[Öğrenci Adı] sosyal aktivitelere katılmayı tercih etmiyor. Teneffüslerde tek başına vakit geçiriyor. Arkadaşlık kurma konusunda çekingen davranıyor.",
+    "tone": "notr",
+    "tags": ["sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 28,
+    "content": "[Öğrenci Adı] ders yükü artışına uyum sağlamaya çalışıyor ama yorulduğunu ifade ediyor. Konsantrasyon süresi kısa ve dikkatinin dağıldığını söylüyor.",
+    "tone": "notr",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 29,
+    "content": "[Öğrenci Adı] ortaokul uyumu, ders yükü artışı ve sosyal beceriler konularında destek almaya ihtiyacı var. Arkadaşlık ilişkilerinde istikrarsızlık gösteriyor.",
+    "tone": "notr",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 30,
+    "content": "[Öğrenci Adı] grup çalışmaları ve sosyal beceri gelişimi konularında daha fazla rehberliğe ihtiyacı var. Ortaokul uyumunda yavaş ama istikrarlı ilerleme gösteriyor.",
+    "tone": "notr",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 31,
+    "content": "[Öğrenci Adı] ortaokul ortamına uyum sağlayamıyor. Sürekli ilkokulu özlediğini söylüyor ve eski okuluna dönmek istiyor. Yeni sistem ona çok zor geliyor.",
+    "tone": "olumsuz",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 32,
+    "content": "[Öğrenci Adı] artan ders yükü ile başa çıkamıyor. Sürekli yorgun ve bitkin görünüyor. Ödevlerini yapamıyor ve ders malzemelerini getirmeyi unutuyor.",
+    "tone": "olumsuz",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 33,
+    "content": "[Öğrenci Adı] grup çalışmalarında hiç katkı sağlamıyor. Arkadaşlarının çalışmasını engelliyor ve projelerini bozuyor. Takım çalışmasını reddediyor.",
+    "tone": "olumsuz",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 34,
+    "content": "[Öğrenci Adı] sosyal beceri gelişimi konusunda gerilek gösteriyor. Arkadaşlarıyla sürekli çatışma yaşıyor ve kimseyle anlaşamıyor. İletişim kurmayı reddediyor.",
+    "tone": "olumsuz",
+    "tags": ["sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 35,
+    "content": "[Öğrenci Adı] ortaokul kurallarına hiç uymuyor. Hangi sınıfa gideceğini bilmiyor ve ders programını takip etmiyor. Sürekli geç kalıyor ve dersleri kaçırıyor.",
+    "tone": "olumsuz",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 36,
+    "content": "[Öğrenci Adı] ders saatlerinin artmasından dolayı sürekli şikayet ediyor. Derslere katılmak istemiyor ve sürekli kaçmaya çalışıyor. Okula gelmeyi reddediyor.",
+    "tone": "olumsuz",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 37,
+    "content": "[Öğrenci Adı] grup projelerinde arkadaşlarıyla kavga ediyor. Hiçbir fikri kabul etmiyor ve kendi istediği olmazsa çalışmayı bırakıyor. İş birliği yapmıyor.",
+    "tone": "olumsuz",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 38,
+    "content": "[Öğrenci Adı] sosyal ilişkilerde başarısız oluyor. Hiç arkadaş edinemiyor ve herkesle kavga ediyor. Sosyal aktiviteleri reddediyor ve tek başına kalmayı tercih ediyor.",
+    "tone": "olumsuz",
+    "tags": ["sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 39,
+    "content": "[Öğrenci Adı] ortaokul sisteminden hiç memnun değil. Sürekli eleştiriyor ve hiçbir şeyi beğenmiyor. Öğretmenlere saygısızlık yapıyor ve kurallara uymuyor.",
+    "tone": "olumsuz",
+    "tags": ["ortaokul uyumu", "sosyal beceri gelişimi", "artan ders yükü", "grup çalışmaları"]
+  },
+  {
+    "id": 40,
+    "content": "[Öğrenci Adı] farklı öğretmenlerin varlığından rahatsız oluyor. Her öğretmene farklı davranıyor ve saygısızlık yapıyor. Ders değişimlerinde sorun çıkarıyor.",
+    "tone": "olumsuz",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 41,
+    "content": "[Öğrenci Adı] takım çalışmalarında yıkıcı davranıyor. Arkadaşlarının motivasyonunu bozuyor ve projelerin başarısız olmasına sebep oluyor. Liderlik yapmaya çalışırken baskı kuruyor.",
+    "tone": "olumsuz",
+    "tags": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 42,
+    "content": "[Öğrenci Adı] sosyal becerilerini geliştirmek yerine arkadaşlarını olumsuz etkiliyor. Kavga çıkarıyor ve barışmayı reddediyor. Özür dilemeyi ve hata kabul etmeyi istemiyor.",
+    "tone": "olumsuz",
+    "tags": ["sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
+  },
+  {
+    "id": 43,
+    "content": "[Öğrenci Adı] okul etkinliklerine katılmayı reddediyor. Arkadaşlarını da etkinliklerden vazgeçirmeye çalışıyor. Okul kültürüne uyum sağlamıyor.",
+    "tone": "olumsuz",
+    "tags": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+  },
+  {
+    "id": 44,
+    "content": "[Öğrenci Adı] ders yükü artışını bahane ederek hiçbir sorumluluğunu yerine getirmiyor. Sürekli yorgun olduğunu söyleyerek derslere katılmıyor.",
+    "tone": "olumsuz",
+    "tags": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+  },
+  {
+    "id": 45,
+    "content": "[Öğrenci Adı] ortaokula uyum, ders yükü artışı, grup çalışmaları ve sosyal beceri gelişimi konularında ciddi sorunlar yaşıyor. Acil destek ve rehberlik gerekiyor.",
+    "tone": "olumsuz",
+    "tags": ["ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
+  }
+]

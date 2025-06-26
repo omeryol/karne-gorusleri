@@ -1,277 +1,273 @@
 
-{
-    "sinif": "5",
-    "donem": "1",
-    "yorumlar": [
-        {
-            "id": "5_1_001",
-            "icerik": "[Öğrenci Adı] ortaokula geçiş sürecinde mükemmel bir uyum göstererek hem akademik hem de sosyal açıdan başarılı bir performans sergilemektedir. Yeni ortamına çabuk adapte olmuş, arkadaşlıklar kurmuş ve derslerde aktif katılım sağlamaktadır.",
-            "ton": "olumlu",
-            "etiketler": ["ortaokula uyum", "mükemmel adaptasyon", "sosyal başarı", "aktif katılım"]
-        },
-        {
-            "id": "5_1_002",
-            "icerik": "[Öğrenci Adı] ilkokuldan gelen güçlü temel becerilerini ortaokulda da sürdürerek derslerde istikrarlı bir başarı göstermektedir. Öğretmen talimatlarını dikkatle dinler, ödevlerini zamanında tamamlar ve sınıf kurallarına uyum sağlar.",
-            "ton": "olumlu",
-            "etiketler": ["güçlü temel", "istikrarlı başarı", "kurallara uyum", "sorumluluk"]
-        },
-        {
-            "id": "5_1_003",
-            "icerik": "[Öğrenci Adı] merak duygusu yüksek bir öğrencidir. Derslerde soru sorar, yeni konuları öğrenmeye istekli davranır ve özellikle fen bilimleri ve matematik derslerinde yaratıcı çözümler üretmeye çalışır.",
-            "ton": "olumlu",
-            "etiketler": ["yüksek merak", "öğrenme isteği", "yaratıcı düşünme", "soru sorma"]
-        },
-        {
-            "id": "5_1_004",
-            "icerik": "[Öğrenci Adı] grup çalışmalarında işbirlikçi bir tutum sergiler, arkadaşlarına yardım etmekten çekinmez ve takım ruhunu geliştirmiştir. Sosyal becerilerinin yanı sıra liderlik potansiyeli de göstermektedir.",
-            "ton": "olumlu",
-            "etiketler": ["işbirlikçi", "yardımsever", "takım ruhu", "liderlik potansiyeli"]
-        },
-        {
-            "id": "5_1_005",
-            "icerik": "[Öğrenci Adı] sanat ve müzik etkinliklerinde yaratıcılığını ortaya koyar, özgün fikirler üretir ve estetik duygusu gelişmiştir. El becerisi gerektiren çalışmalarda da başarılı sonuçlar elde etmektedir.",
-            "ton": "olumlu",
-            "etiketler": ["yaratıcılık", "estetik duygu", "el becerisi", "özgün fikirler"]
-        },
-        {
-            "id": "5_1_006",
-            "icerik": "[Öğrenci Adı] okuma alışkanlığı gelişmiş bir öğrencidir. Türkçe derslerinde anlama becerileri yüksek, kelime dağarcığı zengin ve yazılı ifade becerilerinde gelişim göstermektedir.",
-            "ton": "olumlu",
-            "etiketler": ["okuma alışkanlığı", "anlama becerisi", "zengin kelime", "yazılı ifade"]
-        },
-        {
-            "id": "5_1_007",
-            "icerik": "[Öğrenci Adı] spor ve fiziksel etkinliklerde aktif katılım gösterir, fair play anlayışını benimser ve takım oyunlarında uyumlu bir performans sergiler. Sağlıklı yaşam konusunda bilinçlidir.",
-            "ton": "olumlu",
-            "etiketler": ["spor aktifliği", "fair play", "takım uyumu", "sağlıklı yaşam"]
-        },
-        {
-            "id": "5_1_008",
-            "icerik": "[Öğrenci Adı] problem çözme becerileri gelişmiş, analitik düşünebilen bir öğrencidir. Matematik ve mantık gerektiren konularda başarılı, sistematik yaklaşım sergilemektedir.",
-            "ton": "olumlu",
-            "etiketler": ["problem çözme", "analitik düşünme", "matematik başarısı", "sistematik yaklaşım"]
-        },
-        {
-            "id": "5_1_009",
-            "icerik": "[Öğrenci Adı] teknoloji kullanımında bilinçli davranır, araştırma projelerinde dijital kaynakları etkili şekilde kullanır ve bilgi teknolojileri dersinde yaratıcı çalışmalar üretir.",
-            "ton": "olumlu",
-            "etiketler": ["teknoloji kullanımı", "dijital araştırma", "bilinçli yaklaşım", "yaratıcı projeler"]
-        },
-        {
-            "id": "5_1_010",
-            "icerik": "[Öğrenci Adı] çevre bilinci gelişmiş, doğa sevgisi olan bir öğrencidir. Geri dönüşüm projelerinde aktif rol alır ve sınıf arkadaşlarını da çevreye duyarlı olmaya teşvik eder.",
-            "ton": "olumlu",
-            "etiketler": ["çevre bilinci", "doğa sevgisi", "geri dönüşüm", "teşvik edici"]
-        },
-        {
-            "id": "5_1_011",
-            "icerik": "[Öğrenci Adı] empati kurabilen, arkadaşlarının duygularını anlayabilen ve çatışma anlarında arabuluculuk yapabilen sosyal becerileri gelişmiş bir öğrencidir.",
-            "ton": "olumlu",
-            "etiketler": ["empati kurma", "duygusal zeka", "arabuluculuk", "sosyal beceri"]
-        },
-        {
-            "id": "5_1_012",
-            "icerik": "[Öğrenci Adı] düzenli çalışma alışkanlığı edinmiş, zamanını etkili kullanabilen ve öz disiplin sahibi bir öğrencidir. Planlı yaklaşımı ile hedeflerine ulaşmaya odaklanmıştır.",
-            "ton": "olumlu",
-            "etiketler": ["düzenli çalışma", "zaman yönetimi", "öz disiplin", "planlı yaklaşım"]
-        },
-        {
-            "id": "5_1_013",
-            "icerik": "[Öğrenci Adı] özgüven sahibi, kendini ifade etmekte başarılı ve sunum becerilerini geliştirmiş bir öğrencidir. Sınıf önünde konuşmaktan çekinmez ve fikirlerini net şekilde aktarır.",
-            "ton": "olumlu",
-            "etiketler": ["özgüven", "kendini ifade", "sunum becerisi", "net iletişim"]
-        },
-        {
-            "id": "5_1_014",
-            "icerik": "[Öğrenci Adı] yardımlaşma duygusunu benimsemiş, sınıf içinde dayanışmayı destekleyen ve arkadaşlarının başarısından mutluluk duyan sosyal değerleri güçlü bir öğrencidir.",
-            "ton": "olumlu",
-            "etiketler": ["yardımlaşma", "dayanışma", "sosyal değerler", "başkasının başarısından mutluluk"]
-        },
-        {
-            "id": "5_1_015",
-            "icerik": "[Öğrenci Adı] eleştirel düşünme becerisini geliştirmeye başlamış, farklı bakış açılarını değerlendirebilen ve kendi görüşlerini gerekçeleriyle savunabilen bir öğrencidir.",
-            "ton": "olumlu",
-            "etiketler": ["eleştirel düşünme", "farklı bakış açısı", "görüş savunma", "gerekçelendirme"]
-        },
-        {
-            "id": "5_1_016",
-            "icerik": "[Öğrenci Adı] ortaokula uyum sürecinde bazı zorluklar yaşamakla birlikte çaba göstermektedir. Zaman zaman derse odaklanmakta güçlük çeker ancak destekle başarı gösterebilir.",
-            "ton": "notr",
-            "etiketler": ["uyum zorluğu", "çaba gösterme", "odaklanma güçlüğü", "destekle başarı"]
-        },
-        {
-            "id": "5_1_017",
-            "icerik": "[Öğrenci Adı] akademik performansı orta seviyededir. Bazı derslerde başarılı olurken bazılarında ek çalışmaya ihtiyaç duymaktadır. Düzenli tekrar yapması gerekir.",
-            "ton": "notr",
-            "etiketler": ["orta seviye", "değişken performans", "ek çalışma", "düzenli tekrar"]
-        },
-        {
-            "id": "5_1_018",
-            "icerik": "[Öğrenci Adı] sosyal çevresine uyum sağlamaya çalışmakta ancak zaman zaman çekingen davranabilmektedir. Grup çalışmalarında daha aktif olmaya teşvik edilmelidir.",
-            "ton": "notr",
-            "etiketler": ["sosyal uyum", "çekingenlik", "grup pasifliği", "teşvik gerekli"]
-        },
-        {
-            "id": "5_1_019",
-            "icerik": "[Öğrenci Adı] ödev yapma konusunda düzensizlik göstermektedir. Bazen zamanında teslim eder bazen geciktirir. Sorumluluk bilincini geliştirmesi gerekmektedir.",
-            "ton": "notr",
-            "etiketler": ["ödev düzensizliği", "zaman yönetimi", "sorumluluk bilinci", "gelişim gerekli"]
-        },
-        {
-            "id": "5_1_020",
-            "icerik": "[Öğrenci Adı] derslerde motivasyon dalgalanmaları yaşamaktadır. İlgi alanlarına yönelik konularda aktif, diğer alanlarda pasif kalabilmektedir.",
-            "ton": "notr",
-            "etiketler": ["motivasyon dalgalanması", "seçici ilgi", "aktif-pasif", "gelişim potansiyeli"]
-        },
-        {
-            "id": "5_1_021",
-            "icerik": "[Öğrenci Adı] okuma hızı ve anlama becerilerinde gelişime ihtiyaç vardır. Türkçe derslerinde destekleyici çalışmalar yapması önerilmektedir.",
-            "ton": "notr",
-            "etiketler": ["okuma hızı", "anlama becerisi", "Türkçe desteği", "gelişim ihtiyacı"]
-        },
-        {
-            "id": "5_1_022",
-            "icerik": "[Öğrenci Adı] matematik işlemlerinde bazen hata yapmakta, dikkat eksikliği gösterebilmektedir. Daha dikkatli çalışma alışkanlığı edinmelidir.",
-            "ton": "notr",
-            "etiketler": ["matematik hataları", "dikkat eksikliği", "çalışma alışkanlığı", "gelişim gerekli"]
-        },
-        {
-            "id": "5_1_023",
-            "icerik": "[Öğrenci Adı] arkadaş seçiminde kararsızlık yaşayabilmekte, sosyal gruplar arasında gidip gelebilmektedir. Sosyal kimliğini henüz tam oluşturamamıştır.",
-            "ton": "notr",
-            "etiketler": ["arkadaş seçimi", "sosyal kararsızlık", "kimlik arayışı", "gelişim süreci"]
-        },
-        {
-            "id": "5_1_024",
-            "icerik": "[Öğrenci Adı] teknoloji kullanımında sınır belirleme konusunda rehberliğe ihtiyaç duymaktadır. Ders dışı teknoloji kullanımını kontrol etmelidir.",
-            "ton": "notr",
-            "etiketler": ["teknoloji kontrolü", "sınır belirleme", "rehberlik ihtiyacı", "öz kontrol"]
-        },
-        {
-            "id": "5_1_025",
-            "icerik": "[Öğrenci Adı] not tutma ve organize olma becerilerini geliştirmesi gerekmektedir. Ders materyallerini düzenli tutma konusunda destek almalıdır.",
-            "ton": "notr",
-            "etiketler": ["not tutma", "organizasyon", "düzen", "destek gerekli"]
-        },
-        {
-            "id": "5_1_026",
-            "icerik": "[Öğrenci Adı] zamanı etkili kullanma konusunda zorlanmakta, oyun ve çalışma arasındaki dengeyi kurmakta güçlük çekmektedir.",
-            "ton": "notr",
-            "etiketler": ["zaman kullanımı", "oyun-çalışma dengesi", "öncelik belirleme", "gelişim gerekli"]
-        },
-        {
-            "id": "5_1_027",
-            "icerik": "[Öğrenci Adı] kendini ifade etmekte zaman zaman zorlanabilmekte, fikirlerini paylaşmaya çekinebilmektedir. Özgüven gelişimine ihtiyaç vardır.",
-            "ton": "notr",
-            "etiketler": ["kendini ifade", "çekingenlik", "özgüven geliştirme", "fikirlerini paylaşma"]
-        },
-        {
-            "id": "5_1_028",
-            "icerik": "[Öğrenci Adı] grup projelerinde rol dağılımını anlamakta zorlanabilmekte, takım çalışması becerilerini geliştirmesi gerekmektedir.",
-            "ton": "notr",
-            "etiketler": ["grup çalışması", "rol anlama", "takım becerisi", "gelişim gerekli"]
-        },
-        {
-            "id": "5_1_029",
-            "icerik": "[Öğrenci Adı] sanatsal etkinliklerde ilgi göstermekle birlikte henüz yeteneklerini tam olarak keşfedememiştir. Farklı sanat dallarını denemelidir.",
-            "ton": "notr",
-            "etiketler": ["sanatsal ilgi", "yetenek keşfi", "farklı dallar", "deneyim gerekli"]
-        },
-        {
-            "id": "5_1_030",
-            "icerik": "[Öğrenci Adı] sınıf kurallarını genel olarak kabul etmekle birlikte bazen unutabilmekte, hatırlatmalara ihtiyaç duymaktadır.",
-            "ton": "notr",
-            "etiketler": ["kural kabul", "unutkanlık", "hatırlatma", "alışkanlık oluşturma"]
-        },
-        {
-            "id": "5_1_031",
-            "icerik": "[Öğrenci Adı] ortaokula uyum sağlamakta ciddi zorluklar yaşamaktadır. Sürekli geç kalma, ödev yapmama ve derslere katılmama gibi problemler göstermektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["uyum zorluğu", "sürekli geç kalma", "ödev yapmama", "katılım reddi"]
-        },
-        {
-            "id": "5_1_032",
-            "icerik": "[Öğrenci Adı] sınıf içinde disiplin sorunları yaratmaktadır. Öğretmenlerin sözünü kesmekte, arkadaşlarını rahatsız etmekte ve ders akışını bozmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["disiplin sorunu", "söz kesme", "rahatsız etme", "ders bozma"]
-        },
-        {
-            "id": "5_1_033",
-            "icerik": "[Öğrenci Adı] arkadaşlarına karşı saldırgan davranışlar sergilemektedir. Fiziksel ve sözel şiddet eğilimi göstererek sosyal ilişkilerinde problem yaşamaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["saldırganlık", "fiziksel şiddet", "sözel şiddet", "sosyal problem"]
-        },
-        {
-            "id": "5_1_034",
-            "icerik": "[Öğrenci Adı] sürekli yalan söyleme eğilimi göstermektedir. Ödevini yapmadığı halde yaptığını iddia etmekte, mazeretler uydurmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["yalan söyleme", "mazeret uydurma", "güvenilmezlik", "dürüstlük sorunu"]
-        },
-        {
-            "id": "5_1_035",
-            "icerik": "[Öğrenci Adı] okul malzemelerine ve çevreye zarar vermektedir. Masa, sandalye çizgileri, duvar yazıları gibi maddi hasarlara neden olmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["maddi hasar", "okul malına zarar", "çevre kirliliği", "sorumsuzluk"]
-        },
-        {
-            "id": "5_1_036",
-            "icerik": "[Öğrenci Adı] derslerde hiç katılım göstermemekte, sorulara yanıt vermemekte ve öğrenme isteği göstermemektedir. Akademik motivasyonu tamamen kaybolmuştur.",
-            "ton": "olumsuz",
-            "etiketler": ["katılım yok", "öğrenme isteği yok", "motivasyon kaybı", "akademik sorun"]
-        },
-        {
-            "id": "5_1_037",
-            "icerik": "[Öğrenci Adı] arkadaşlarını dışlayıcı davranışlar sergilemektedir. Grup oyunlarına almamakta, alay etmekte ve sosyal zorbalık yapmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["dışlayıcı davranış", "sosyal zorbalık", "alay etme", "grup oyunlarından dışlama"]
-        },
-        {
-            "id": "5_1_038",
-            "icerik": "[Öğrenci Adı] öfke kontrolünde ciddi sorunlar yaşamaktadır. Küçük olaylarda büyük tepkiler vermekte, sinirlendiğinde kendini kontrol edememektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["öfke kontrolsüzlüğü", "aşırı tepki", "sinir kontrolü", "duygusal sorun"]
-        },
-        {
-            "id": "5_1_039",
-            "icerik": "[Öğrenci Adı] sürekli ders kaçırma eğilimi göstermektedir. Tuvalete çıktığını söyleyip geri dönmemekte, hastalık bahanesi ile derse katılmamaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["ders kaçırma", "bahane", "devamsızlık", "sorumsuzluk"]
-        },
-        {
-            "id": "5_1_040",
-            "icerik": "[Öğrenci Adı] teknoloji bağımlılığı göstermektedir. Derslerde telefonla ilgilenmekte, oyun oynamakta ve dikkatini derslerden çekmektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["teknoloji bağımlılığı", "telefon kullanımı", "oyun bağımlılığı", "dikkat dağınıklığı"]
-        },
-        {
-            "id": "5_1_041",
-            "icerik": "[Öğrenci Adı] başkalarının eşyalarını izinsiz almaktadır. Sınıf arkadaşlarının kalemlerini, silgilerini alıp geri vermemekte, hırsızlık eğilimi göstermektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["hırsızlık eğilimi", "eşya alma", "izinsiz kullanım", "etik sorun"]
-        },
-        {
-            "id": "5_1_042",
-            "icerik": "[Öğrenci Adı] öğretmenlere saygısızlık etmektedir. Otorite tanımamakta, kurallara uymamakta ve büyüklerle konuşma adabını bilmemektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["öğretmene saygısızlık", "otorite tanımama", "kural ihlali", "adap bilmeme"]
-        },
-        {
-            "id": "5_1_043",
-            "icerik": "[Öğrenci Adı] sınıf temizliğine önem vermemektedir. Çöplerini yere atmakta, masa etrafını kirletmekte ve ortak alanları kirli bırakmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["temizlik sorunu", "çöp atma", "kirletme", "sorumsuzluk"]
-        },
-        {
-            "id": "5_1_044",
-            "icerik": "[Öğrenci Adı] grup çalışmalarında tamamen pasif kalmakta, hiç katkı sağlamamakta ve arkadaşlarının yaptığı işleri kopyalamaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["grup pasifliği", "katkısızlık", "kopyalama", "çalışma reddi"]
-        },
-        {
-            "id": "5_1_045",
-            "icerik": "[Öğrenci Adı] sürekli şikayet etme eğilimi göstermektedir. Her konuda problem çıkarmakta, arkadaşlarını öğretmene şikayet etmekte ve çatışma yaratmaktadır.",
-            "ton": "olumsuz",
-            "etiketler": ["sürekli şikayet", "problem çıkarma", "çatışma yaratma", "olumsuz tutum"]
-        }
-    ]
-}
+[
+  {
+    "id": 1,
+    "content": "[Öğrenci Adı] ortaokula başlama sürecinde güzel bir uyum gösteriyor. Sınıf kurallarımızı öğrenmekte istekli ve arkadaşlarıyla iyi ilişkiler kuruyor. Temel derslerinde düzenli çalışmaya başladı ve ödevlerini zamanında getirmeye özen gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["uyum süreci", "temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+  },
+  {
+    "id": 2,
+    "content": "[Öğrenci Adı] yeni okuluna çok hızlı alıştı. Derslerde dikkatlice dinliyor ve sorularını çekinmeden soruyor. Arkadaşlarıyla oyun oynamayı seviyor ve sınıf etkinliklerine katılmaktan mutlu oluyor. Okuma yazma becerilerinde ilerleme kaydediyor.",
+    "tone": "olumlu",
+    "tags": ["uyum süreci", "temel akademik beceriler", "sosyal uyum"]
+  },
+  {
+    "id": 3,
+    "content": "[Öğrenci Adı] sınıfımızın neşeli öğrencilerinden biri. Matematik işlemlerinde başarılı, Türkçe dersinde güzel kompozisyonlar yazıyor. Teneffüslerde arkadaşlarıyla güzel oyunlar oynuyor ve herkesle dostça geçiniyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+  },
+  {
+    "id": 4,
+    "content": "[Öğrenci Adı] ortaokul hayatına güzel bir başlangıç yaptı. Öğretmenlerini dinliyor, arkadaşlarına saygılı davranıyor. Ödevlerini düzenli yapıyor ve derslerinde başarılı olmaya çalışıyor. Sınıf içinde sessizce çalışmasını biliyor.",
+    "tone": "olumlu",
+    "tags": ["uyum süreci", "kuralları öğrenme", "temel akademik beceriler"]
+  },
+  {
+    "id": 5,
+    "content": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı. Fen bilgisi dersini çok seviyor ve deneyimlere büyük ilgi gösteriyor. Sınıf temizliğinde sorumluluk alıyor ve öğretmenlerine yardım etmek istiyor.",
+    "tone": "olumlu",
+    "tags": ["sosyal uyum", "temel akademik beceriler", "kuralları öğrenme"]
+  },
+  {
+    "id": 6,
+    "content": "[Öğrenci Adı] okul kurallarını çabuk öğrendi ve uyguluyor. Derslerde aktif katılım gösteriyor, kitap okumayı seviyor. Arkadaşlarıyla birlikte proje yapmaktan hoşlanıyor ve paylaşmayı öğrendi.",
+    "tone": "olumlu",
+    "tags": ["kuralları öğrenme", "temel akademik beceriler", "sosyal uyum"]
+  },
+  {
+    "id": 7,
+    "content": "[Öğrenci Adı] sınıfımızın yardımsever öğrencilerinden. Arkadaşları zorlandığında onlara yardım ediyor. Matematik problemlerini çözmeyi seviyor ve Türkçe dersinde güzel hikayeler yazıyor.",
+    "tone": "olumlu",
+    "tags": ["sosyal uyum", "temel akademik beceriler", "uyum süreci"]
+  },
+  {
+    "id": 8,
+    "content": "[Öğrenci Adı] ortaokula geçiş sürecini başarıyla tamamladı. Öğretmenlerle saygılı iletişim kuruyor, derslerde dikkatini toplayabiliyor. Grup çalışmalarında arkadaşlarıyla güzel işbirliği yapıyor.",
+    "tone": "olumlu",
+    "tags": ["uyum süreci", "kuralları öğrenme", "sosyal uyum"]
+  },
+  {
+    "id": 9,
+    "content": "[Öğrenci Adı] derslerinde düzenli ve başarılı. Ev ödevlerini zamanında yapıyor, ders araç gereçlerini getirmeyi unutmuyor. Arkadaşlarıyla oynarken kuralları gözetiyor ve adil oynamaya özen gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "kuralları öğrenme", "sosyal uyum"]
+  },
+  {
+    "id": 10,
+    "content": "[Öğrenci Adı] sosyal bilgiler dersine büyük ilgi gösteriyor. Tarih konularını merak ediyor ve sorular soruyor. Sınıf arkadaşlarıyla güzel dostluklar kurdu ve herkesle iyi geçiniyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 11,
+    "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapıyor. Resim yapmayı ve el işi çalışmalarını seviyor. Arkadaşlarının çalışmalarını beğeniyor ve onları destekliyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 12,
+    "content": "[Öğrenci Adı] müzik dersinde güzel sesi ile dikkat çekiyor. Şarkı söylemeyi ve enstrüman çalmayı öğrenmeye hevesli. Arkadaşlarıyla birlikte güzel etkinlikler düzenliyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 13,
+    "content": "[Öğrenci Adı] beden eğitimi dersini çok seviyor. Spor yapmayı ve takım oyunlarını öğreniyor. Arkadaşlarıyla birlikte koşmayı ve oyun oynamayı tercih ediyor.",
+    "tone": "olumlu",
+    "tags": ["sosyal uyum", "temel akademik beceriler", "uyum süreci"]
+  },
+  {
+    "id": 14,
+    "content": "[Öğrenci Adı] İngilizce dersinde yeni kelimeler öğrenmeye hevesli. Telaffuz çalışmalarına katılıyor ve basit cümleler kurmaya çalışıyor. Arkadaşlarıyla İngilizce kelimeler öğreniyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "uyum süreci", "sosyal uyum"]
+  },
+  {
+    "id": 15,
+    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar kullanmayı öğreniyor. Yeni programları keşfetmeyi seviyor ve arkadaşlarıyla birlikte projeler yapıyor. Okul kurallarına uygun davranıyor.",
+    "tone": "olumlu",
+    "tags": ["temel akademik beceriler", "kuralları öğrenme", "uyum süreci"]
+  },
+  {
+    "id": 16,
+    "content": "[Öğrenci Adı] ortaokula alışma sürecinde normale. Bazı günler derslerde dikkati dağılıyor, bazen ödevlerini unutabiliyor. Arkadaşlarıyla iyi geçiniyor ama sınıf kurallarını hatırlatmak gerekiyor.",
+    "tone": "notr",
+    "tags": ["uyum süreci", "temel akademik beceriler", "kuralları öğrenme"]
+  },
+  {
+    "id": 17,
+    "content": "[Öğrenci Adı] yeni ortamına alışmaya çalışıyor. Derslerde bazen aktif, bazen sessiz kalıyor. Arkadaş edinme konusunda biraz çekingen ama zamanla açılıyor. Ödevlerinde düzensizlik oluyor.",
+    "tone": "notr",
+    "tags": ["uyum süreci", "sosyal uyum", "temel akademik beceriler"]
+  },
+  {
+    "id": 18,
+    "content": "[Öğrenci Adı] okul kurallarını öğrenme konusunda yavaş ilerliyor. Derslerde dikkatini toplama konusunda zorlanıyor. Arkadaşlarıyla oynarken kuralları unutabiliyor.",
+    "tone": "notr",
+    "tags": ["kuralları öğrenme", "temel akademik beceriler", "sosyal uyum"]
+  },
+  {
+    "id": 19,
+    "content": "[Öğrenci Adı] matematik dersinde zorlanıyor ve ek çalışmaya ihtiyacı var. Türkçe dersinde okuduğunu anlamada güçlük çekiyor. Arkadaşlarıyla iyi geçiniyor ama derslerde desteğe ihtiyacı var.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "uyum süreci", "sosyal uyum"]
+  },
+  {
+    "id": 20,
+    "content": "[Öğrenci Adı] sosyal uyum konusunda zaman alıyor. Arkadaş gruplarına katılma konusunda tereddütlü. Derslerde sessiz kalıyor ve katılım az. Ödevlerini yapmaya çalışıyor ama düzensiz.",
+    "tone": "notr",
+    "tags": ["sosyal uyum", "uyum süreci", "temel akademik beceriler"]
+  },
+  {
+    "id": 21,
+    "content": "[Öğrenci Adı] sınıf ortamında kendini güvende hissetmiyor gibi görünüyor. Öğretmenlerle iletişim kurmakta zorlanıyor. Arkadaşlarıyla oynamayı tercih etmiyor, daha çok tek başına kalıyor.",
+    "tone": "notr",
+    "tags": ["sosyal uyum", "uyum süreci", "kuralları öğrenme"]
+  },
+  {
+    "id": 22,
+    "content": "[Öğrenci Adı] fen bilgisi dersinde konuları anlamakta zorlanıyor. Deney yaparken arkadaşlarıyla işbirliği yapmakta güçlük çekiyor. Ödevlerini eksik getiriyor ve ders malzemelerini unutuyor.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+  },
+  {
+    "id": 23,
+    "content": "[Öğrenci Adı] sosyal bilgiler dersindeki konulara ilgi göstermiyor. Harita okuma ve tarih konularında zorlanıyor. Arkadaşlarıyla grup çalışması yapmayı tercih etmiyor.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 24,
+    "content": "[Öğrenci Adı] İngilizce dersinde yeni kelimeleri öğrenmekte zorlanıyor. Telaffuz konusunda sıkıntı yaşıyor. Derslerde katılım az ve ödevlerini düzensiz yapıyor.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "uyum süreci", "kuralları öğrenme"]
+  },
+  {
+    "id": 25,
+    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar kullanımında geride kalıyor. Yeni programları öğrenmekte zorlanıyor. Arkadaşlarından yardım istemekte çekiniyor.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 26,
+    "content": "[Öğrenci Adı] müzik dersinde çok sessiz kalıyor. Şarkı söylemeye katılmıyor ve enstrüman çalmayı öğrenmek istemiyor. Derslerde dikkatsiz ve ilgisiz görünüyor.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 27,
+    "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapmakta zorlanıyor. Malzeme kullanımında beceri eksikliği var. Arkadaşlarının çalışmalarını beğenmiyor ve eleştiriyor.",
+    "tone": "notr",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+  },
+  {
+    "id": 28,
+    "content": "[Öğrenci Adı] beden eğitimi dersinde spor aktivitelerine katılmak istemiyor. Takım oyunlarında arkadaşlarıyla uyum sağlayamıyor. Kurallara uymakta zorlanıyor.",
+    "tone": "notr",
+    "tags": ["sosyal uyum", "kuralları öğrenme", "uyum süreci"]
+  },
+  {
+    "id": 29,
+    "content": "[Öğrenci Adı] okula gelme konusunda isteksiz görünüyor. Derslerde sürekli dalgın ve ödevlerini hiç yapmiyor. Arkadaşlarıyla iletişim kurmayı reddediyor.",
+    "tone": "notr",
+    "tags": ["uyum süreci", "temel akademik beceriler", "sosyal uyum"]
+  },
+  {
+    "id": 30,
+    "content": "[Öğrenci Adı] sınıf kurallarına uymakta ciddi sorunlar yaşıyor. Öğretmenlere saygısız davranıyor ve arkadaşlarını rahatsız ediyor. Derslerde hiç katılım göstermiyor ve ödevlerini yapmıyor.",
+    "tone": "notr",
+    "tags": ["kuralları öğrenme", "sosyal uyum", "temel akademik beceriler"]
+  },
+  {
+    "id": 31,
+    "content": "[Öğrenci Adı] ortaokula uyum konusunda ciddi zorluklar yaşıyor. Sınıfta huzursuzluk çıkarıyor ve arkadaşlarıyla sürekli kavga ediyor. Derslere hiç ilgi göstermiyor ve ödevlerini yapmıyor.",
+    "tone": "olumsuz",
+    "tags": ["uyum süreci", "sosyal uyum", "kuralları öğrenme"]
+  },
+  {
+    "id": 32,
+    "content": "[Öğrenci Adı] temel akademik becerilerde çok geride kaldı. Okuma yazma konusunda ciddi sıkıntıları var. Matematik işlemlerini yapamıyor ve derslerde hiç dinlemiyor.",
+    "tone": "olumsuz",
+    "tags": ["temel akademik beceriler", "uyum süreci", "kuralları öğrenme"]
+  },
+  {
+    "id": 33,
+    "content": "[Öğrenci Adı] sınıf kurallarına hiç uymuyor. Öğretmenlere karşı gelmeye devam ediyor ve dersleri sürekli böliyor. Arkadaşlarını olumsuz etkiliyor.",
+    "tone": "olumsuz",
+    "tags": ["kuralları öğrenme", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 34,
+    "content": "[Öğrenci Adı] sosyal uyum konusunda başarısız. Arkadaşlarına vuryor ve kötü sözler söylüyor. Teneffüslerde sürekli kavga çıkarıyor ve kimseyle oynamak istemiyor.",
+    "tone": "olumsuz",
+    "tags": ["sosyal uyum", "kuralları öğrenme", "uyum süreci"]
+  },
+  {
+    "id": 35,
+    "content": "[Öğrenci Adı] matematik dersinde hiçbir işlemi yapamıyor. Basit toplama çıkarma bile öğrenemedi. Derslerde hiç dikkat etmiyor ve sürekli başka şeylerle ilgileniyor.",
+    "tone": "olumsuz",
+    "tags": ["temel akademik beceriler", "uyum süreci", "kuralları öğrenme"]
+  },
+  {
+    "id": 36,
+    "content": "[Öğrenci Adı] Türkçe dersinde okuma yazma becerileri çok zayıf. Basit kelimeleri bile okuyamıyor. Hikaye dinlemeyi sevmiyor ve yazma çalışmalarını reddediyor.",
+    "tone": "olumsuz",
+    "tags": ["temel akademik beceriler", "uyum süreci", "sosyal uyum"]
+  },
+  {
+    "id": 37,
+    "content": "[Öğrenci Adı] fen bilgisi dersinde hiç ilgi göstermiyor. Deneyler sırasında malzemeleri bozuyor ve arkadaşlarının çalışmalarını engelliyor. Güvenlik kurallarına uymuyor.",
+    "tone": "olumsuz",
+    "tags": ["temel akademik beceriler", "kuralları öğrenme", "sosyal uyum"]
+  },
+  {
+    "id": 38,
+    "content": "[Öğrenci Adı] sosyal bilgiler dersinde hiçbir konuyu öğrenemiyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını reddediyor ve arkadaşlarıyla çalışmayı istemiyor.",
+    "tone": "olumsuz",
+    "tags": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+  },
+  {
+    "id": 39,
+    "content": "[Öğrenci Adı] İngilizce dersine hiç katılmıyor. Yeni kelimeleri öğrenmeyi reddediyor. Telaffuz çalışmalarında gürültü çıkarıyor ve dersi engelliyor.",
+    "tone": "olumsuz",
+    "tags": ["temel akademik beceriler", "kuralları öğrenme", "uyum süreci"]
+  },
+  {
+    "id": 40,
+    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayarlara zarar veriyor. Kurallara uymayı reddediyor ve arkadaşlarının çalışmalarını bozuyor. Öğretmen uyarılarını dinlemiyor.",
+    "tone": "olumsuz",
+    "tags": ["kuralları öğrenme", "temel akademik beceriler", "sosyal uyum"]
+  },
+  {
+    "id": 41,
+    "content": "[Öğrenci Adı] müzik dersinde sürekli gürültü çıkarıyor. Şarkı söylemeyi reddediyor ve enstrümanlara zarar veriyor. Dersleri bölerek arkadaşlarını rahatsız ediyor.",
+    "tone": "olumsuz",
+    "tags": ["kuralları öğrenme", "sosyal uyum", "temel akademik beceriler"]
+  },
+  {
+    "id": 42,
+    "content": "[Öğrenci Adı] sanat derslerinde malzemeleri israf ediyor. Yaratıcı çalışmalar yapmayı reddediyor ve arkadaşlarının eserlerini bozuyor. Derslerde sürekli ayakta dolaşıyor.",
+    "tone": "olumsuz",
+    "tags": ["kuralları öğrenme", "sosyal uyum", "temel akademik beceriler"]
+  },
+  {
+    "id": 43,
+    "content": "[Öğrenci Adı] beden eğitimi dersinde hiçbir aktiviteye katılmıyor. Spor malzemelerini saklamayı reddediyor ve oyun kurallarına uymuyor. Arkadaşlarıyla fair play yapmıyor.",
+    "tone": "olumsuz",
+    "tags": ["sosyal uyum", "kuralları öğrenme", "uyum süreci"]
+  },
+  {
+    "id": 44,
+    "content": "[Öğrenci Adı] okula gelmek istemiyor ve sürekli kaçmaya çalışıyor. Sınıfta oturmayı reddediyor ve koridorlarda dolaşıyor. Hiçbir derse katılmıyor ve ödevlerini yapmıyor.",
+    "tone": "olumsuz",
+    "tags": ["uyum süreci", "kuralları öğrenme", "temel akademik beceriler"]
+  },
+  {
+    "id": 45,
+    "content": "[Öğrenci Adı] ortaokul hayatına hiç uyum sağlayamadı. Bütün derslerde başarısız, arkadaşlarıyla sürekli problem yaşıyor. Aile desteği ile acil rehberlik hizmetine ihtiyacı var.",
+    "tone": "olumsuz",
+    "tags": ["uyum süreci", "temel akademik beceriler", "sosyal uyum"]
+  }
+]

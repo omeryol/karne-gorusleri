@@ -192,45 +192,45 @@ class StudentManager {
         const initials = this.getInitials(student.name);
         
         return `
-            <div class="student-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-12 h-12 ${gradeColor} rounded-full flex items-center justify-center">
-                            <span class="text-white font-semibold text-lg">${initials}</span>
+            <div class="student-card bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 ${gradeColor} rounded-full flex items-center justify-center">
+                            <span class="text-white font-semibold text-sm">${initials}</span>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-gray-900 dark:text-white">${student.name}</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">${student.grade}-${student.section}</p>
+                            <h3 class="font-medium text-gray-900 dark:text-white text-sm">${student.name}</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">${student.grade}-${student.section}</p>
                         </div>
                     </div>
-                    <div class="flex space-x-2">
-                        <button onclick="window.students && window.students.editStudent('${student.id}')" class="text-gray-400 hover:text-primary transition-colors duration-200" title="Düzenle">
+                    <div class="flex space-x-1">
+                        <button onclick="window.students && window.students.editStudent('${student.id}')" class="text-gray-400 hover:text-primary transition-colors duration-200 text-sm" title="Düzenle">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button onclick="window.students && window.students.deleteStudent('${student.id}')" class="text-gray-400 hover:text-red-500 transition-colors duration-200" title="Sil">
+                        <button onclick="window.students && window.students.deleteStudent('${student.id}')" class="text-gray-400 hover:text-red-500 transition-colors duration-200 text-sm" title="Sil">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
                 </div>
                 
-                <div class="mb-4">
-                    <div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <div class="mb-3">
+                    <div class="flex items-center justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
                         <span>Yorum Durumu</span>
                         <span class="${hasComment ? 'text-positive' : 'text-neutral'} font-medium">
                             ${hasComment ? 'Tamamlandı' : 'Beklemede'}
                         </span>
                     </div>
-                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div class="${hasComment ? 'bg-positive' : 'bg-neutral'} h-2 rounded-full" style="width: ${hasComment ? '100' : '0'}%"></div>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                        <div class="${hasComment ? 'bg-positive' : 'bg-neutral'} h-1.5 rounded-full" style="width: ${hasComment ? '100' : '0'}%"></div>
                     </div>
                 </div>
                 
                 <div class="flex space-x-2">
-                    <button onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})" class="flex-1 bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-all duration-200">
+                    <button onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})" class="flex-1 bg-primary hover:bg-purple-700 text-white py-1.5 px-3 rounded-md text-xs font-medium transition-all duration-200">
                         <i class="fas fa-${hasComment ? 'comment-dots' : 'plus'} mr-1"></i>
-                        ${hasComment ? 'Yorum Düzenle' : 'Yorum Ekle'}
+                        ${hasComment ? 'Düzenle' : 'Ekle'}
                     </button>
-                    <button onclick="window.students && window.students.copyStudentInfo('${student.id}')" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg text-sm transition-all duration-200" title="Kopyala">
+                    <button onclick="window.students && window.students.copyStudentInfo('${student.id}')" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-1.5 px-2 rounded-md text-xs transition-all duration-200" title="Kopyala">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>

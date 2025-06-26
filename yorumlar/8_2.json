@@ -1,66 +1,183 @@
-{
-    "sinif": "8",
-    "donem": "2",
-    "yorumlar": [
-        {
-            "id": "8_2_001",
-            "icerik": "[Öğrenci Adı] LGS sınavına hazırlık sürecinde kararlı ve hedef odaklı çalışmaktadır.",
-            "ton": "olumlu",
-            "etiketler": ["LGS hazırlığı", "kararlılık", "hedef odaklı", "başarı motivasyonu"]
-        },
-        {
-            "id": "8_2_002",
-            "icerik": "[Öğrenci Adı] mezuniyet döneminde olgunluk ve sorumluluk göstermektedir.",
-            "ton": "olumlu",
-            "etiketler": ["mezuniyet olgunluğu", "sorumluluk sahibi", "kişisel gelişim", "örnek davranış"]
-        },
-        {
-            "id": "8_2_003",
-            "icerik": "[Öğrenci Adı] gelecek planlaması konusunda belirsizlik yaşamaktadır.",
-            "ton": "notr",
-            "etiketler": ["gelecek belirsizliği", "planlamagelişim gerektiren", "rehberlik ihtiyacı", "karar verme zorluğu"]
-        },
-        {
-            "id": "8_2_004",
-            "icerik": "[Öğrenci Adı] sınav kaygısı seviyesi kritik boyutlara ulaşmıştır.",
-            "ton": "olumsuz",
-            "etiketler": ["kritik sınav kaygısı", "psikolojik problem", "performans engelleyici", "profesyonel yardım gerekli"]
-        },
-        {
-            "id": "8_2_005",
-            "icerik": "[Öğrenci Adı] tüm derslerde dengeli başarı göstererek mükemmel bir profil çizmektedir.",
-            "ton": "olumlu",
-            "etiketler": ["dengeli başarı", "mükemmel profil", "çok yönlü yetenek", "üstün performans"]
-        },
-        {
-            "id": "8_2_006",
-            "icerik": "[Öğrenci Adı] öğretmenlere karşı saygısız tutum sergilemektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["öğretmene saygısızlık", "otorite problemi", "disiplin sorunu", "ciddi davranış problemi"]
-        },
-        {
-            "id": "8_2_007",
-            "icerik": "[Öğrenci Adı] arkadaşlarına rehberlik eden ve yardım eden bir kişilik göstermektedir.",
-            "ton": "olumlu",
-            "etiketler": ["akran rehberliği", "yardım etme", "empati kurabilen", "sosyal liderlik"]
-        },
-        {
-            "id": "8_2_008",
-            "icerik": "[Öğrenci Adı] son dönemde motivasyon kaybı yaşamakta ancak potansiyeli yüksektir.",
-            "ton": "notr",
-            "etiketler": ["motivasyon kaybı", "yüksek potansiyel", "geçici düşüş", "teşvik gerekli"]
-        },
-        {
-            "id": "8_2_009",
-            "icerik": "[Öğrenci Adı] proje sunumlarında özgüvenli ve etkili iletişim kurmaktadır.",
-            "ton": "olumlu",
-            "etiketler": ["özgüvenli sunum", "etkili iletişim", "proje başarısı", "liderlik becerisi"]
-        },
-        {
-            "id": "8_2_010",
-            "icerik": "[Öğrenci Adı] sınıf içinde sürekli tartışma çıkarmakta ve ortamı germektedir.",
-            "ton": "olumsuz",
-            "etiketler": ["tartışma çıkarma", "sınıf ortamını germe", "sosyal problem", "disiplin sorunu"]
-        }
-    ]
-}
+
+[
+  {
+    "id": 1,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımı ile birlikte olgunlaşma sürecinde dikkat çekici gelişim gösteriyor. Sınav kaygısını verimli strese dönüştürme becerisi güçlü, olgunlaşma göstergeleri belirgin ve liseye hazırlık konusunda kapsamlı yaklaşım sergiliyor.",
+    "tone": "olumlu",
+    "tags": ["mezuniyet yaklaşımı", "sınav kaygısı", "olgunlaşma", "liseye hazırlık"]
+  },
+  {
+    "id": 2,
+    "content": "[Öğrenci Adı] sınav kaygısını en iyi performans için kullanma konusunda ustalaşma gösteriyor. Kaygıyı motivasyona dönüştürme becerileri gelişmiş, stres yönetimi gelişmiş ve baskı altında en iyi performans yeteneği mükemmel.",
+    "tone": "olumlu",
+    "tags": ["sınav kaygısı geliştirme", "kaygı-motivasyon dönüştürme", "gelişmiş stres yönetimi", "en iyi performans"]
+  },
+  {
+    "id": 3,
+    "content": "[Öğrenci Adı] olgunlaşma sürecinde duygusal olgunluk ve bilişsel gelişim entegrasyonu başarılı. Kendini yansıtma yetenekleri güçlü, kişisel büyüme farkındalığı yüksek ve gelecek odaklı düşünce kalıpları geliştirdi.",
+    "tone": "olumlu",
+    "tags": ["duygusal olgunluk", "bilişsel gelişim", "kendini yansıtma", "gelecek odaklı düşünce"]
+  },
+  {
+    "id": 4,
+    "content": "[Öğrenci Adı] liseye hazırlık konusunda stratejik hazırlık ve bütüncül hazır oluş sergiliyor. Akademik becerileri birleştirme başarılı, sosyal becerileri iyileştirme etkili ve geçiş yönetimi becerilerinde uzmanlaşmış.",
+    "tone": "olumlu",
+    "tags": ["stratejik lise hazırlığı", "akademik becerileri birleştirme", "sosyal becerileri iyileştirme", "geçiş yönetimi"]
+  },
+  {
+    "id": 5,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında liderlik ortaya çıkışı ve sorumluluk sahipliği gösteriyor. Rol model davranışlar sergiliyor, yaşıt mentorluk yetenekleri gelişmiş ve miras yaratma zihniyeti benimsiyor.",
+    "tone": "olumlu",
+    "tags": ["liderlik ortaya çıkışı", "sorumluluk sahipliği", "rol model davranışlar", "miras yaratma"]
+  },
+  {
+    "id": 6,
+    "content": "[Öğrenci Adı] sınav kaygısı ve performans baskısını büyüme katalizörü olarak kullanıyor. Dayanıklılık oluşturma sürecinde başarılı, uyarlanabilir başa çıkma stratejileri geliştirmiş ve meydan okumayı kucaklama tutumu sergiliyor.",
+    "tone": "olumlu",
+    "tags": ["büyüme katalizörü kaygı", "dayanıklılık oluşturma", "uyarlanabilir başa çıkma", "meydan okumayı kucaklama"]
+  },
+  {
+    "id": 7,
+    "content": "[Öğrenci Adı] olgunlaşma konusunda bilgelik edinimi ve duygusal zeka ustalaşması gösteriyor. Bakış açısı alma yetenekleri gelişmiş, empati gelişmişliği yüksek ve sosyal bilgelik gösterimi yapıyor.",
+    "tone": "olumlu",
+    "tags": ["bilgelik edinimi", "duygusal zeka ustalaşması", "bakış açısı alma", "sosyal bilgelik"]
+  },
+  {
+    "id": 8,
+    "content": "[Öğrenci Adı] liseye hazırlık sürecinde kapsamlı beceri entegrasyonu ve gelecek hazır oluşu sergiliyor. Farklı dersleri birleştirme bağlantıları yapabilme yeteneği güçlü, üst bilişsel farkındalık yüksek ve kendi kendine öğrenme ustalaşması gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["kapsamlı beceri entegrasyonu", "farklı ders birleştirme bağlantıları", "üst bilişsel farkındalık", "kendi kendine öğrenme"]
+  },
+  {
+    "id": 9,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında yansıtıcı uygulama ve kendini değerlendirme uzmanlığı geliştirdi. Kişisel büyüme belgeleme yetenekleri güçlü, hedef iyileştirme becerileri etkili ve sürekli gelişim zihniyeti benimsiyor.",
+    "tone": "olumlu",
+    "tags": ["yansıtıcı uygulama", "kendini değerlendirme uzmanlığı", "kişisel büyüme belgeleme", "sürekli gelişim"]
+  },
+  {
+    "id": 10,
+    "content": "[Öğrenci Adı] sınav kaygısını akademik mükemmellik sürücüsü olarak geliştiriyor. Performans ayarlama becerileri gelişmiş, stresi başarıya dönüştürme etkili ve sürekli motivasyon korunması gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["akademik mükemmellik sürücüsü", "performans ayarlama", "stres-başarı dönüştürme", "sürekli motivasyon"]
+  },
+  {
+    "id": 11,
+    "content": "[Öğrenci Adı] olgunlaşma sürecinde karakter birleştirme ve değer entegrasyonu başarılı. Ahlaki akıl yürütme gelişmişliği yüksek, ahlaki liderlik özellikleri belirgin ve ilkeli karar verme yetenekleri gelişmiş.",
+    "tone": "olumlu",
+    "tags": ["karakter birleştirme", "değer entegrasyonu", "ahlaki akıl yürütme", "ahlaki liderlik"]
+  },
+  {
+    "id": 12,
+    "content": "[Öğrenci Adı] liseye hazırlık konusunda geçiş ustalaşması ve uyum mükemmelliği sergiliyor. Değişim yönetimi becerileri güçlü, gelecek planlama gelişmişliği yüksek ve proaktif hazırlık stratejileri geliştirdi.",
+    "tone": "olumlu",
+    "tags": ["geçiş ustalaşması", "uyum mükemmelliği", "değişim yönetimi", "proaktif hazırlık"]
+  },
+  {
+    "id": 13,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında miras düşüncesi ve etki farkındalığı gösteriyor. Katkı zihniyeti güçlü, sosyal sorumluluk gelişmişliği yüksek ve topluluk liderlik potansiyeli sergiliyor.",
+    "tone": "olumlu",
+    "tags": ["miras düşüncesi", "etki farkındalığı", "katkı zihniyeti", "topluluk liderliği"]
+  },
+  {
+    "id": 14,
+    "content": "[Öğrenci Adı] sınav kaygısı, olgunlaşma ve lise hazırlığı konularında entegre ustalaşma sergiliyor. Bütüncül gelişim yaklaşımı benimsiyor, dengeli mükemmellik gösteriyor ve kapsamlı hazır oluşu gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["entegre ustalaşma", "bütüncül gelişim", "dengeli mükemmellik", "kapsamlı hazır oluş"]
+  },
+  {
+    "id": 15,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında örnek liderlik ve ilham verici etki yaratıyor. Rol model mükemmellik sergiliyor, dönüştürücü etki gösteriyor ve kalıcı olumlu miras oluşturuyor.",
+    "tone": "olumlu",
+    "tags": ["örnek liderlik", "ilham verici etki", "rol model mükemmellik", "kalıcı olumlu miras"]
+  },
+  {
+    "id": 16,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında ortalama seviyede hazırlık gösteriyor. Sınav kaygısında dalgalanmalar yaşıyor, olgunlaşma sürecinde tutarsızlık bulunuyor ve liseye hazırlık konusunda eksiklikler gözleniyor.",
+    "tone": "notr",
+    "tags": ["ortalama mezuniyet hazırlığı", "sınav kaygısı dalgalanmaları", "olgunlaşma tutarsızlığı", "lise hazırlık eksiklikleri"]
+  },
+  {
+    "id": 17,
+    "content": "[Öğrenci Adı] sınav kaygısını yönetme konusunda değişken başarı gösteriyor. Olgunlaşma göstergeleri tutarsız, liseye hazırlık sürecinde belirsizlik yaşıyor ve mezuniyet yaklaşımında odaklanma problemleri bulunuyor.",
+    "tone": "notr",
+    "tags": ["değişken sınav kaygısı yönetimi", "tutarsız olgunlaşma", "lise hazırlık belirsizliği", "mezuniyet odaklanma problemleri"]
+  },
+  {
+    "id": 18,
+    "content": "[Öğrenci Adı] olgunlaşma sürecinde zorlanmalar yaşıyor. Duygusal düzenleme problemleri belirgin, sınav kaygısı bunaltıcı seviyeye ulaşıyor ve liseye hazırlık motivasyonunda eksiklik gözleniyor.",
+    "tone": "notr",
+    "tags": ["olgunlaşma zorlanmaları", "duygusal düzenleme problemleri", "bunaltıcı sınav kaygısı", "lise hazırlık motivasyon eksikliği"]
+  },
+  {
+    "id": 19,
+    "content": "[Öğrenci Adı] liseye hazırlık konusunda beklenenin altında performans sergiliyor. Geçiş kaygısı belirgin, mezuniyet yaklaşımında stres yönetimi yetersizliği ve olgunlaşma sürecinde gerilik gözleniyor.",
+    "tone": "notr",
+    "tags": ["beklenti altı lise hazırlığı", "geçiş kaygısı", "stres yönetimi yetersizliği", "olgunlaşma geriliği"]
+  },
+  {
+    "id": 20,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında uyum problemleri yaşıyor. Sınav kaygısı performansı olumsuz etkiliyor, olgunlaşma sürecinde durağanlık gözleniyor ve lise geçişi konusunda hazırlıksızlık bulunuyor.",
+    "tone": "notr",
+    "tags": ["mezuniyet uyum problemleri", "sınav kaygısı olumsuz etkisi", "olgunlaşma durağanlığı", "lise geçişi hazırlıksızlığı"]
+  },
+  {
+    "id": 21,
+    "content": "[Öğrenci Adı] sınav kaygısı ve mezuniyet stresi konularında ciddi zorlanmalar yaşıyor. Olgunlaşma sürecinde gerilik belirtileri, liseye hazırlık kapasitesinde azalma ve akademik işlevselde bozulma gözleniyor.",
+    "tone": "notr",
+    "tags": ["ciddi sınav-mezuniyet zorlanmaları", "olgunlaşma geriliği", "lise hazırlık kapasitesi azalması", "akademik işlevsel bozulma"]
+  },
+  {
+    "id": 22,
+    "content": "[Öğrenci Adı] olgunlaşma ve lise hazırlığı konularında işlevsizlik gösteriyor. Mezuniyet yaklaşımında panik tepkileri, sınav kaygısı etkisiz kılıcı seviyeye ulaşmış ve geçiş hazır oluşu tamamen kaybolmuş.",
+    "tone": "notr",
+    "tags": ["olgunlaşma-lise hazırlık işlevsizliği", "mezuniyet panik tepkileri", "etkisiz kılıcı sınav kaygısı", "kaybolmuş geçiş hazır oluşu"]
+  },
+  {
+    "id": 23,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında çöküş belirtileri gösteriyor. Sınav kaygısı bunaltıcı seviyede, olgunlaşma sürecinde geriye hareket ve liseye hazırlık konusunda tam kaçınma gözleniyor.",
+    "tone": "notr",
+    "tags": ["mezuniyet çöküşü", "bunaltıcı sınav kaygısı", "olgunlaşma geriye hareket", "lise hazırlık tam kaçınma"]
+  },
+  {
+    "id": 24,
+    "content": "[Öğrenci Adı] sınav kaygısı ve mezuniyet stresi karşısında başa çıkma başarısızlığı yaşıyor. Olgunlaşma sürecinde tam durağanlık, lise geçiş kaygısı kritik seviyede ve akademik motivasyon tamamen kaybolmuş.",
+    "tone": "notr",
+    "tags": ["sınav-mezuniyet başa çıkma başarısızlığı", "tam olgunlaşma durağanlığı", "kritik geçiş kaygısı", "kaybolmuş akademik motivasyon"]
+  },
+  {
+    "id": 25,
+    "content": "[Öğrenci Adı] mezuniyet, sınav kaygısı ve lise hazırlığı konularında kritik seviyede sorunlar yaşıyor. Olgunlaşma süreci tamamen durmuş, geçiş hazır oluşu yok olmuş ve mezuniyet yeterliliği ciddi şekilde zarar görmüş durumda.",
+    "tone": "notr",
+    "tags": ["kritik mezuniyet-sınav-lise sorunları", "durmuş olgunlaşma süreci", "yok olmuş geçiş hazır oluşu", "zarar görmüş mezuniyet yeterliliği"]
+  },
+  {
+    "id": 26,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımında tam kriz yaşıyor. Sınav kaygısı panik bozukluğu seviyesine ulaşmış, olgunlaşma sürecinde tam gerilik ve liseye hazırlık kapasitesi tamamen kaybolmuş. Acil uzman müdahale gereksinimi var.",
+    "tone": "olumsuz",
+    "tags": ["tam mezuniyet krizi", "panik bozukluğu sınav kaygısı", "tam olgunlaşma geriliği", "kaybolmuş lise hazırlık kapasitesi"]
+  },
+  {
+    "id": 27,
+    "content": "[Öğrenci Adı] sınav kaygısı ve mezuniyet stresi açısından kritik çöküş yaşıyor. Olgunlaşma sürecinde şiddetli bozulma, lise geçiş hazır oluşu tamamen yok ve akademik işlevsellik tamamen zarar görmüş durumda. Çok yönlü acil müdahale gereksinimi var.",
+    "tone": "olumsuz",
+    "tags": ["kritik sınav-mezuniyet çöküşü", "şiddetli olgunlaşma bozulması", "yok lise geçiş hazır oluşu", "tamamen zarar görmüş işlevsellik"]
+  },
+  {
+    "id": 28,
+    "content": "[Öğrenci Adı] olgunlaşma ve lise hazırlığı açısından kritik durumda bulunuyor. Mezuniyet yaklaşımında varoluşsal kriz, sınav kaygısı şiddetli kaygı bozukluğu seviyesinde ve geçiş kapasitesi tamamen kaybolmuş durumda.",
+    "tone": "olumsuz",
+    "tags": ["kritik olgunlaşma-lise durumu", "mezuniyet varoluşsal krizi", "şiddetli kaygı bozukluğu", "tamamen kaybolmuş geçiş kapasitesi"]
+  },
+  {
+    "id": 29,
+    "content": "[Öğrenci Adı] mezuniyet, sınav kaygısı ve olgunlaşma açısından telafisi zor hasarlar almış. Lise hazırlık kapasitesi tamamen yok edilmiş, akademik işlevsellik tamamen çökmüş ve ruhsal iyilik kritik tehlikede durumda.",
+    "tone": "olumsuz",
+    "tags": ["telafisi zor çok alan hasarı", "yok edilmiş lise kapasitesi", "tamamen çökmüş işlevsellik", "kritik tehlikede iyilik"]
+  },
+  {
+    "id": 30,
+    "content": "[Öğrenci Adı] mezuniyet yaklaşımı ve lise hazırlığı konularında acil durumda bulunuyor. Sınav kaygısı şiddetli zihinsel sağlık krizi yaratmış, olgunlaşma sürecinde tam durma ve mezuniyet hazır oluşu tamamen yok durumda. Acil ruhsal müdahale gereksinimi var.",
+    "tone": "olumsuz",
+    "tags": ["acil mezuniyet-lise durumu", "şiddetli zihinsel sağlık krizi", "tam olgunlaşma durması", "yok mezuniyet hazır oluşu"]
+  }
+]

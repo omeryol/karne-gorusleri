@@ -1,66 +1,183 @@
-{
-    "sinif": "7",
-    "donem": "2",
-    "yorumlar": [
-    {
-      "id": "7_2_001",
-      "icerik": "[Öğrenci Adı] bu dönem akademik hedeflerini belirleyerek başarıyla ilerlemektedir.",
-      "ton": "olumlu",
-      "etiketler": ["hedef belirleme", "akademik planlama", "başarılı ilerleme", "stratejik düşünme"]
-    },
-    {
-      "id": "7_2_002",
-      "icerik": "[Öğrenci Adı] geometri konularında görsel zeka kullanarak başarı göstermektedir.",
-      "ton": "olumlu",
-      "etiketler": ["görsel zeka", "geometri başarısı", "uzamsal düşünme", "matematik yeteneği"]
-    },
-    {
-      "id": "7_2_003",
-      "icerik": "[Öğrenci Adı] grup çalışmalarında daha aktif rol almaya başlamıştır.",
-      "ton": "notr",
-      "etiketler": ["grup katılımında gelişim", "artan aktivite", "sosyal gelişim", "potansiyel artışı"]
-    },
-    {
-      "id": "7_2_004",
-      "icerik": "[Öğrenci Adı] düzenli olarak geç kalmakta ve mazeretleri kabul edilemez durumdadır.",
-      "ton": "olumsuz",
-      "etiketler": ["sürekli gecikmeler", "zaman yönetimi sorunu", "düzensizlik", "sorumsuzluk"]
-    },
-    {
-      "id": "7_2_005",
-      "icerik": "[Öğrenci Adı] sanat çalışmalarında estetik duygusu gelişmiştir.",
-      "ton": "olumlu",
-      "etiketler": ["estetik duygu", "sanat yeteneği", "yaratıcı ifade", "görsel sanatlar"]
-    },
-    {
-      "id": "7_2_006",
-      "icerik": "[Öğrenci Adı] sınav kaygısı yaşamakta ve performansı olumsuz etkilenmektedir.",
-      "ton": "olumsuz",
-      "etiketler": ["sınav kaygısı", "performans düşüklüğü", "stres yönetimi", "psikolojik destek gerekli"]
-    },
-    {
-      "id": "7_2_007",
-      "icerik": "[Öğrenci Adı] İngilizce konuşma becerisinde kayda değer gelişim göstermiştir.",
-      "ton": "olumlu",
-      "etiketler": ["İngilizce konuşma", "dil becerisi", "iletişim başarısı", "önemli gelişim"]
-    },
-    {
-      "id": "7_2_008",
-      "icerik": "[Öğrenci Adı] not tutma ve organize olma konusunda rehberlik ihtiyacı vardır.",
-      "ton": "notr",
-      "etiketler": ["organizasyon sorunu", "not tutma eksikliği", "rehberlik ihtiyacı", "çalışma tekniği"]
-    },
-    {
-      "id": "7_2_009",
-      "icerik": "[Öğrenci Adı] sosyal medya kullanımı nedeniyle dikkatini derslerden çekmektedir.",
-      "ton": "olumsuz",
-      "etiketler": ["dijital dikkat dağınıklığı", "sosyal medya bağımlılığı", "konsantrasyon kaybı", "teknoloji kötüye kullanımı"]
-    },
-    {
-      "id": "7_2_010",
-      "icerik": "[Öğrenci Adı] bilim fuarı projesinde mükemmel bir sunum gerçekleştirmiştir.",
-      "ton": "olumlu",
-      "etiketler": ["mükemmel sunum", "bilim projesi", "araştırma becerisi", "özgüven"]
-    }
-  ]
-}
+
+[
+  {
+    "id": 1,
+    "content": "[Öğrenci Adı] lise hazırlık düşünceleri konusunda planlı yaklaşım sergiliyor. Hedef belirleme konusunda net vizyona sahip, kişilik gelişiminde olgunluk gösteriyor ve çatışma çözme becerilerini gelecek odaklı bakış açısıyla geliştiriyor.",
+    "tone": "olumlu",
+    "tags": ["lise hazırlık düşünceleri", "hedef belirleme", "kişilik gelişimi", "çatışma çözme becerileri"]
+  },
+  {
+    "id": 2,
+    "content": "[Öğrenci Adı] hedef belirleme sürecinde sistemli ve gerçekçi yaklaşımlar geliştirdi. Kısa ve uzun vadeli planlar oluşturma yeteneği güçlü, kişisel güçlü yönlerini tanımlama konusunda bilinçli ve sosyal becerilerini gelecek hedefleriyle uyumlu şekilde geliştiriyor.",
+    "tone": "olumlu",
+    "tags": ["sistemli hedef belirleme", "kısa-uzun vade planlama", "güçlü yön tanımlama", "gelecek odaklı sosyal gelişim"]
+  },
+  {
+    "id": 3,
+    "content": "[Öğrenci Adı] kişilik gelişimi konusunda kendini tanıma ve duygusal zeka birleştirmesi başarılı. Kendi değerlerini tanımlama konusunda net, karakter özelliklerini güçlendirme sürecinde istikrarlı ve sosyal ilişkilerinde samimi yaklaşımlar sergiliyor.",
+    "tone": "olumlu",
+    "tags": ["kendini tanıma", "duygusal zeka", "değer tanımlama", "karakter güçlendirme"]
+  },
+  {
+    "id": 4,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde ileri seviye teknikleri uygulayabiliyor. Onarıcı adalet yaklaşımlarını benimsiyor, arabuluculuk süreçlerinde liderlik yapıyor ve sosyal adaleti destekleyen çözümler üretiyor. Lise hazırlığında da bu becerileri önceliyor.",
+    "tone": "olumlu",
+    "tags": ["ileri seviye çatışma çözme", "onarıcı adalet", "arabuluculuk liderliği", "sosyal adalet"]
+  },
+  {
+    "id": 5,
+    "content": "[Öğrenci Adı] lise hazırlık sürecinde akademik ve sosyal yetkinlikleri dengeli geliştiriyor. Hedef odaklı çalışma disiplini kazanmış, kişilik gelişiminde bütüncül yaklaşım benimsiyor ve gelecek planlamasında gerçekçi ama iddialı hedefler koyuyor.",
+    "tone": "olumlu",
+    "tags": ["akademik-sosyal denge", "hedef odaklı disiplin", "bütüncül kişilik yaklaşımı", "gerçekçi iddialı hedefler"]
+  },
+  {
+    "id": 6,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda SMART kriterleri kullanımında ustalaşmış. Belirli, ölçülebilir ve ulaşılabilir hedefler koyma yeteneği gelişmiş, ilerleme takibi becerilerinde uzmanlaşmış ve kişilik gelişimini sistemli şekilde yönetiyor.",
+    "tone": "olumlu",
+    "tags": ["SMART hedef belirleme", "ilerleme takibi", "sistemli kişilik yönetimi", "hedef ulaşılabilirliği"]
+  },
+  {
+    "id": 7,
+    "content": "[Öğrenci Adı] kişilik gelişiminde büyüme zihniyeti ve dayanıklılık birleştirmesi gösteriyor. Zorlukları öğrenme fırsatı olarak değerlendirme yeteneği güçlü, uyum kapasitesi yüksek ve çatışma çözme süreçlerinde yaratıcı yaklaşımlar geliştiriyor.",
+    "tone": "olumlu",
+    "tags": ["büyüme zihniyeti", "dayanıklılık", "zorlukları öğrenme fırsatına çevirme", "yaratıcı çatışma çözme"]
+  },
+  {
+    "id": 8,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde kültürel yetkinlik ve çeşitlilik yönetimi konularında başarılı. Çok kültürlü ortamlarda etkili iletişim kurma yeteneği gelişmiş, kapsayıcı liderlik vasıfları gösteriyor ve lise hedeflerini küresel bakış açısıyla şekillendiriyor.",
+    "tone": "olumlu",
+    "tags": ["kültürel yetkinlik", "çeşitlilik yönetimi", "çok kültürlü iletişim", "kapsayıcı liderlik"]
+  },
+  {
+    "id": 9,
+    "content": "[Öğrenci Adı] lise hazırlık düşünceleri konusunda girişimci zihniyet geliştirdi. Yenilikçi düşünce yaklaşımları benimsiyor, risk değerlendirme becerilerinde uzmanlaşmış ve kişilik gelişimini kariyer planlaması ile entegre ediyor.",
+    "tone": "olumlu",
+    "tags": ["girişimci zihniyet", "yenilikçi düşünce", "risk değerlendirme", "kariyer planlama entegrasyonu"]
+  },
+  {
+    "id": 10,
+    "content": "[Öğrenci Adı] hedef belirleme ve kişilik gelişimi konularında mentorluk yaklaşımı sergiliyor. Yaşıtlarına rehberlik etme yeteneği güçlü, sosyal sorumluluk projelerinde liderlik yapıyor ve çatışma çözme becerilerini toplumsal fayda için kullanıyor.",
+    "tone": "olumlu",
+    "tags": ["mentorluk yaklaşımı", "yaşıt rehberliği", "sosyal sorumluluk liderliği", "toplumsal fayda odağı"]
+  },
+  {
+    "id": 11,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde sistem düşüncesi yaklaşımı geliştirdi. Problemleri bütüncül bakış açısıyla analiz etme yeteneği güçlü, paydaş yönetimi konusunda başarılı ve sürdürülebilir çözümler üretme konusunda yaratıcı.",
+    "tone": "olumlu",
+    "tags": ["sistem düşüncesi", "bütüncül problem analizi", "paydaş yönetimi", "sürdürülebilir çözümler"]
+  },
+  {
+    "id": 12,
+    "content": "[Öğrenci Adı] lise hazırlık sürecinde kendi kendine öğrenme yaklaşımı benimsiyor. Özerk öğrenme becerilerinde uzmanlaşmış, kişisel gelişim planlarını sürekli güncelliyor ve hedeflerine ulaşma konusunda kendi kendini hesap verebilirlik gösteriyor.",
+    "tone": "olumlu",
+    "tags": ["kendi kendine öğrenme", "özerk öğrenme", "sürekli plan güncelleme", "kendi hesap verebilirlik"]
+  },
+  {
+    "id": 13,
+    "content": "[Öğrenci Adı] kişilik gelişiminde duygusal düzenleme ve stres yönetimi konularında mükemmel. Baskı altında performans sergileme yeteneği güçlü, farkındalık teknikleri uygulama konusunda başarılı ve iyi olma odaklı yaşam felsefesi geliştirdi.",
+    "tone": "olumlu",
+    "tags": ["duygusal düzenleme", "stres yönetimi", "baskı altı performans", "farkındalık teknikleri"]
+  },
+  {
+    "id": 14,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda stratejik düşünce ve gelecek vizyonu birleştirmesi gösteriyor. Trend analizi yapabilme yeteneği gelişmiş, senaryo planlama konusunda başarılı ve uyarlanabilir planlama stratejileri geliştirme konusunda yaratıcı.",
+    "tone": "olumlu",
+    "tags": ["stratejik düşünce", "gelecek vizyonu", "trend analizi", "uyarlanabilir planlama"]
+  },
+  {
+    "id": 15,
+    "content": "[Öğrenci Adı] çatışma çözme, hedef belirleme ve kişilik gelişimi konularında entegre mükemmellik sergiliyor. Bütüncül gelişim yaklaşımı benimsiyor, liderlik potansiyeli tam kapasiteyle ortaya çıkmış ve gelecek odaklı etki yaratma konusunda vizyon sahibi.",
+    "tone": "olumlu",
+    "tags": ["entegre mükemmellik", "bütüncül gelişim", "tam liderlik potansiyeli", "gelecek odaklı etki"]
+  },
+  {
+    "id": 16,
+    "content": "[Öğrenci Adı] lise hazırlık düşünceleri konusunda kararsızlık yaşıyor. Hedef belirleme sürecinde tutarsızlık gözleniyor, kişilik gelişiminde yavaş ilerleme kaydediyor ve çatışma çözme becerilerinde eksiklikler bulunuyor.",
+    "tone": "notr",
+    "tags": ["lise hazırlık kararsızlığı", "hedef belirleme tutarsızlığı", "yavaş kişilik gelişimi", "çatışma çözme eksiklikleri"]
+  },
+  {
+    "id": 17,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda belirsizlik gösteriyor. Kısa vadeli hedeflerde dalgalanmalar yaşıyor, kişilik gelişiminde motivasyon eksikliği bulunuyor ve sosyal ilişkilerde dengesizlik gözleniyor.",
+    "tone": "notr",
+    "tags": ["hedef belirsizliği", "kısa vade dalgalanmaları", "motivasyon eksikliği", "sosyal dengesizlik"]
+  },
+  {
+    "id": 18,
+    "content": "[Öğrenci Adı] kişilik gelişimi sürecinde zorlanmalar yaşıyor. Kendini tanıma eksiklikleri belirgin, çatışma çözme konusunda yetersizlik gösteriyor ve lise hazırlık planlamasında odaklanma problemleri bulunuyor.",
+    "tone": "notr",
+    "tags": ["kişilik gelişim zorlanmaları", "kendini tanıma eksiklikleri", "çatışma çözme yetersizliği", "planlama odaklanma problemleri"]
+  },
+  {
+    "id": 19,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde beklenenin altında performans sergiliyor. Çatışma büyütme eğilimi gösteriyor, hedef belirleme konusunda erteleme yaşıyor ve kişisel gelişim planlarında tutarsızlık bulunuyor.",
+    "tone": "notr",
+    "tags": ["beklenti altı çatışma çözme", "çatışma büyütme", "hedef erteleme", "kişisel plan tutarsızlığı"]
+  },
+  {
+    "id": 20,
+    "content": "[Öğrenci Adı] lise hazırlık sürecinde odaklanma problemleri yaşıyor. Hedeflerini netleştirme konusunda zorluklar çekiyor, kişilik gelişiminde istikrarsızlık gösteriyor ve sosyal becerilerinde gerilik gözleniyor.",
+    "tone": "notr",
+    "tags": ["lise hazırlık odaklanma problemleri", "hedef netleştirme zorlukları", "kişilik istikrarsızlığı", "sosyal beceri geriliği"]
+  },
+  {
+    "id": 21,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda ciddi zorlanmalar yaşıyor. Gerçekçi ve gerçekçi olmayan hedef ayrımını yapamıyor, kişilik gelişiminde yönelim kaybı yaşıyor ve çatışma çözme yerine kaçınma stratejileri kullanıyor.",
+    "tone": "notr",
+    "tags": ["ciddi hedef belirleme zorlanmaları", "gerçekçi-gerçekçi olmayan ayrım yapamama", "kişilik yönelim kaybı", "çatışma kaçınma"]
+  },
+  {
+    "id": 22,
+    "content": "[Öğrenci Adı] kişilik gelişimi konusunda kimlik karmaşası yaşıyor. Çatışma çözme becerilerinde gerilik gözleniyor, lise hazırlık planlarında kaygı düzeyi yüksek ve öz yeterlilik inançları düşük seyir ediyor.",
+    "tone": "notr",
+    "tags": ["kimlik karmaşası", "çatışma çözme geriliği", "lise hazırlık kaygısı", "düşük öz yeterlilik"]
+  },
+  {
+    "id": 23,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde işlevsizlik gösteriyor. Yıkıcı çatışma davranışları sergiliyor, hedef belirleme sürecinde felç yaşıyor ve kişilik gelişiminde geriye gidiş gözleniyor.",
+    "tone": "notr",
+    "tags": ["çatışma çözme işlevsizliği", "yıkıcı çatışma davranışları", "hedef felci", "kişilik geriye gidişi"]
+  },
+  {
+    "id": 24,
+    "content": "[Öğrenci Adı] lise hazırlık düşünceleri konusunda aşırı kaygı yaşıyor. Hedef belirleme sürecinde bunalım durumu, kişilik gelişiminde durağanlık ve çatışma çözme kapasitesinde azalma gözleniyor.",
+    "tone": "notr",
+    "tags": ["lise hazırlık aşırı kaygısı", "hedef bunalımı", "kişilik durağanlığı", "çatışma çözme kapasitesi azalması"]
+  },
+  {
+    "id": 25,
+    "content": "[Öğrenci Adı] hedef belirleme ve kişilik gelişimi konularında kritik seviyede sorunlar yaşıyor. Hedef kaçınma davranışları gösteriyor, kimlik karmaşası derinleşiyor ve çatışma çözme yerine geri çekilme stratejileri kullanıyor.",
+    "tone": "notr",
+    "tags": ["kritik hedef-kişilik sorunları", "hedef kaçınma", "kimlik karmaşası", "geri çekilme stratejileri"]
+  },
+  {
+    "id": 26,
+    "content": "[Öğrenci Adı] lise hazırlık sürecinde tamamen kaybolmuş durumda. Hedef belirleme kapasitesi kaybolmuş, kişilik gelişimi durmuş ve çatışma çözme becerileri çözülmüş. Acil destek gereksinimi bulunuyor.",
+    "tone": "olumsuz",
+    "tags": ["tamamen kaybolmuş lise hazırlık", "kaybolmuş hedef belirleme", "durmuş kişilik gelişimi", "çözülmüş çatışma çözme"]
+  },
+  {
+    "id": 27,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda tamamen işlevsiz hale geldi. Kişilik gelişimi tersine dönmüş, çatışma çözme yerine çatışma yaratma davranışları sergiliyor ve lise hazırlık planları tamamen çökmüş. Çok yönlü müdahale gereksinimi var.",
+    "tone": "olumsuz",
+    "tags": ["tamamen işlevsiz hedef belirleme", "tersine kişilik gelişimi", "çatışma yaratma", "çökmüş lise planları"]
+  },
+  {
+    "id": 28,
+    "content": "[Öğrenci Adı] kişilik gelişimi açısından kritik seviyede gerilik yaşıyor. Çatışma çözme kapasitesi tamamen kaybolmuş, hedef belirleme yerine hedef sabotajı davranışları gösteriyor ve lise hazırlık sürecinde tam işlevsizlik yaşıyor.",
+    "tone": "olumsuz",
+    "tags": ["kritik kişilik geriliği", "kaybolmuş çatışma çözme", "hedef sabotajı", "tam işlevsizlik"]
+  },
+  {
+    "id": 29,
+    "content": "[Öğrenci Adı] çatışma çözme, hedef belirleme ve kişilik gelişimi açısından telafisi zor hasarlar almış. Sosyal işlevsellik kaybolmuş, akademik motivasyon çökmüş ve lise hazırlık sürecinde tamamen yönsüz hale gelmiş.",
+    "tone": "olumsuz",
+    "tags": ["telafisi zor çok alan hasarı", "kaybolmuş sosyal işlevsellik", "çökmüş akademik motivasyon", "tamamen yönsüz"]
+  },
+  {
+    "id": 30,
+    "content": "[Öğrenci Adı] lise hazırlık, hedef belirleme ve kişilik gelişimi konularında kritik durumda bulunuyor. Tüm gelişim alanları çökmüş, çatışma çözme kapasitesi tersine dönmüş ve gelecek planlama yeteneği tamamen kaybolmuş. Acil uzman değerlendirme gereksinimi var.",
+    "tone": "olumsuz",
+    "tags": ["kritik çok alan durumu", "çökmüş tüm gelişim alanları", "tersine çatışma çözme", "kaybolmuş gelecek planlama"]
+  }
+]
