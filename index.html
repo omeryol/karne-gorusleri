@@ -2,8 +2,9 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karne Yorum Asistanı - Öğrenciye Yorum Ekleme Sistemi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Karne Asistanı - Öğretmen Değerlendirme Sistemi</title>
     <meta name="description" content="Türk ortaokul öğretmenleri için offline çalışan, AI destekli karne yorum sistemi. Hızlı, etkili ve güvenli öğrenci değerlendirme aracı.">
 
     <!-- PWA Meta Tags -->
@@ -62,49 +63,63 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 font-body transition-colors duration-300 min-h-screen">
-    <!-- Navigation Header -->
-    <header class="bg-white dark:bg-gray-800 shadow-lg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
+<body class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 font-body transition-colors duration-300 min-h-screen relative overflow-x-hidden">
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-30 animate-float"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-yellow-300 dark:bg-yellow-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-30 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 dark:bg-pink-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-30 animate-float" style="animation-delay: 4s;"></div>
+        <div class="absolute bottom-20 right-20 w-72 h-72 bg-blue-300 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-30 animate-float" style="animation-delay: 6s;"></div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10">
+    <!-- Glassmorphism Navigation Header -->
+    <header class="sticky top-0 z-40 backdrop-blur-2xl bg-gradient-to-r from-white/20 via-white/10 to-white/20 dark:from-gray-900/30 dark:via-gray-900/20 dark:to-gray-900/30 border-b border-white/30 dark:border-gray-700/40 shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:backdrop-blur-sm">
+        <div class="relative max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20 md:h-24">
                 <!-- Logo and Title -->
-                <div class="flex items-center space-x-2 md:space-x-3 min-w-0 flex-1">
-                    <div class="bg-gradient-to-r from-primary to-purple-600 p-1.5 md:p-2 rounded-lg flex-shrink-0">
-                        <i class="fas fa-graduation-cap text-white text-lg md:text-xl"></i>
+                <div class="flex items-center space-x-4 md:space-x-6 min-w-0 flex-1">
+                    <div class="glass-morph-logo bg-gradient-to-br from-purple-500/20 to-blue-600/20 backdrop-blur-xl p-3 md:p-4 rounded-2xl flex-shrink-0 shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-110 hover:rotate-3 border border-white/20 dark:border-gray-700/30">
+                        <i class="fas fa-brain text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-2xl md:text-3xl drop-shadow-lg"></i>
                     </div>
                     <div class="min-w-0 flex-1">
-                        <h1 class="text-lg md:text-xl font-display font-semibold text-gray-900 dark:text-white cursor-pointer hover:text-primary transition-colors truncate" onclick="window.app && window.app.tabs && window.app.tabs.switchTo('dashboard')">Karne Asistanı</h1>
-                        <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-0.5 md:mt-1 hidden sm:block">Ortaokul öğretmenleri için AI destekli karne yorum sistemi</p>
+                        <h1 class="text-2xl md:text-3xl font-display font-black bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-all duration-300 truncate tracking-tight drop-shadow-sm" onclick="window.app && window.app.tabs && window.app.tabs.switchTo('dashboard')">
+                            Karne Yorum Asistanı
+                        </h1>
+                        <p class="text-sm md:text-base text-gray-700/80 dark:text-gray-300/80 mt-1 hidden sm:block font-medium backdrop-blur-sm">
+                            ✨ AI destekli akıllı değerlendirme sistemi
+                        </p>
                     </div>
                 </div>
 
-                <!-- Right Side Controls -->
-                <div class="flex items-center space-x-2 md:space-x-4">
+                <!-- Glassmorphism Action Buttons -->
+                <div class="flex items-center space-x-2 md:space-x-3">
                     <!-- Welcome Button -->
-                    <button id="showWelcomeBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white p-2 md:p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105" title="Karşılama Mesajı">
-                        <i class="fas fa-star text-sm md:text-lg"></i>
+                    <button id="showWelcomeBtn" class="glass-button bg-gradient-to-r from-yellow-400/30 to-amber-500/30 hover:from-yellow-400/50 hover:to-amber-500/50 backdrop-blur-xl border border-yellow-300/40 p-3 md:p-3.5 rounded-2xl shadow-xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group" title="Karşılama Mesajı">
+                        <i class="fas fa-star text-yellow-600 dark:text-yellow-400 text-base md:text-lg group-hover:rotate-12 transition-transform duration-300"></i>
                     </button>
 
                     <!-- Export Button -->
-                    <button id="exportBtn" class="bg-green-500 hover:bg-green-600 text-white p-2 md:p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105" title="Excel'e Aktar">
-                        <i class="fas fa-file-excel text-sm md:text-lg"></i>
+                    <button id="exportBtn" class="glass-button bg-gradient-to-r from-emerald-400/30 to-green-500/30 hover:from-emerald-400/50 hover:to-green-500/50 backdrop-blur-xl border border-emerald-300/40 p-3 md:p-3.5 rounded-2xl shadow-xl hover:shadow-emerald-400/25 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group" title="Excel'e Aktar">
+                        <i class="fas fa-file-excel text-emerald-600 dark:text-emerald-400 text-base md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
                     </button>
 
                     <!-- Reset Button -->
-                    <button id="resetAppBtn" class="bg-red-500 hover:bg-red-600 text-white p-2 md:p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105" title="Uygulamayı Sıfırla">
-                        <i class="fas fa-trash-restore text-sm md:text-lg"></i>
+                    <button id="resetAppBtn" class="glass-button bg-gradient-to-r from-red-400/30 to-rose-500/30 hover:from-red-400/50 hover:to-rose-500/50 backdrop-blur-xl border border-red-300/40 p-3 md:p-3.5 rounded-2xl shadow-xl hover:shadow-red-400/25 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group" title="Uygulamayı Sıfırla">
+                        <i class="fas fa-trash-restore text-red-600 dark:text-red-400 text-base md:text-lg group-hover:rotate-12 transition-transform duration-300"></i>
                     </button>
 
                     <!-- Help Button -->
-                    <button id="helpBtn" class="bg-primary hover:bg-purple-700 text-white px-2 py-2 md:px-4 md:py-2 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 flex items-center gap-1 md:gap-2" title="Kullanım Kılavuzu">
-                        <i class="fas fa-question-circle text-sm md:text-base"></i>
-                        <span class="hidden sm:inline text-sm md:text-base">Kılavuz</span>
+                    <button id="helpBtn" class="glass-button bg-gradient-to-r from-purple-400/30 to-indigo-500/30 hover:from-purple-400/50 hover:to-indigo-500/50 backdrop-blur-xl border border-purple-300/40 px-3 py-3 md:px-4 md:py-3.5 rounded-2xl shadow-xl hover:shadow-purple-400/25 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 flex items-center gap-2 group" title="Kullanım Kılavuzu">
+                        <i class="fas fa-question-circle text-purple-600 dark:text-purple-400 text-base md:text-lg group-hover:rotate-12 transition-transform duration-300"></i>
+                        <span class="hidden sm:inline text-sm md:text-base font-semibold text-purple-700 dark:text-purple-300">Kılavuz</span>
                     </button>
 
                     <!-- Theme Toggle -->
-                    <button id="themeToggle" class="bg-indigo-500 hover:bg-indigo-600 text-white p-2 md:p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105" title="Tema Değiştir">
-                        <i class="fas fa-moon dark:hidden text-sm md:text-lg"></i>
-                        <i class="fas fa-sun hidden dark:block text-sm md:text-lg"></i>
+                    <button id="themeToggle" class="glass-button bg-gradient-to-r from-indigo-400/30 to-blue-500/30 hover:from-indigo-400/50 hover:to-blue-500/50 backdrop-blur-xl border border-indigo-300/40 p-3 md:p-3.5 rounded-2xl shadow-xl hover:shadow-indigo-400/25 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group" title="Tema Değiştir">
+                        <i class="fas fa-moon dark:hidden text-indigo-600 text-base md:text-lg group-hover:rotate-12 transition-transform duration-300"></i>
+                        <i class="fas fa-sun hidden dark:block text-indigo-400 text-base md:text-lg group-hover:rotate-12 transition-transform duration-300"></i>
                     </button>
                 </div>
             </div>
@@ -112,29 +127,229 @@
     </header>
 
     <!-- Welcome Modal -->
-    <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-500 opacity-0" style="display: none;">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 max-w-md w-full transform scale-90 opacity-0 transition-all duration-500 shadow-2xl border border-gray-200 dark:border-gray-700">
-            <div class="flex justify-between items-start mb-4">
-                <div class="mx-auto w-16 h-16 bg-gradient-to-r from-primary to-purple-600 rounded-full flex items-center justify-center">
-                    <i class="fas fa-star text-white text-2xl"></i>
+    <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg z-50 flex items-center justify-center p-4 transition-all duration-500 opacity-0" style="display: none;">
+        <div class="glass-effect bg-white/20 dark:bg-gray-900/30 backdrop-blur-xl rounded-3xl p-6 md:p-8 max-w-4xl w-full max-h-[90vh] overflow-hidden transform scale-90 opacity-0 transition-all duration-500 shadow-2xl border border-white/30 dark:border-gray-700/50">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary via-purple-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-display font-bold text-white drop-shadow-lg">Karne Yorum Asistanına Hoş Geldiniz!</h2>
+                        <p class="text-white/80 font-medium">AI destekli akıllı değerlendirme sistemi</p>
+                    </div>
                 </div>
-                <button id="welcomeCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" title="Kapat">
+                <button id="welcomeCloseBtn" class="text-white/60 hover:text-white transition-all duration-200 p-2 rounded-xl hover:bg-white/10" title="Kapat">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
-            <div class="text-center">
-                <h2 class="text-2xl font-display font-semibold text-gray-900 dark:text-white mb-4">Hoş Geldiniz!</h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">Karne Asistanı ile öğrenci değerlendirmelerinizi hızlı ve etkili bir şekilde oluşturun.</p>
-                <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 mb-6">
-                    <div class="flex items-center text-sm text-green-800 dark:text-green-200">
-                        <i class="fas fa-shield-alt mr-2"></i>
-                        <span>Bu sistem hiçbir veriyi sunucuya göndermez. Tüm verileriniz güvenli bir şekilde cihazınızda saklanır. Dilediğiniz zaman tüm sisiteme eklediğiniz verileri üstteki tuş ile silebilirsiniz.</span>
+
+            <!-- Slides Container -->
+            <div class="relative overflow-hidden rounded-2xl">
+                <div id="welcomeSlides" class="flex transition-transform duration-500 ease-in-out">
+
+                    <!-- Slide 1: Hoş Geldiniz -->
+                    <div class="w-full flex-shrink-0 bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/30 dark:to-purple-900/30 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i class="fas fa-heart text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Hoş Geldiniz!</h3>
+                            <p class="text-gray-700 dark:text-gray-200 mb-6 text-lg leading-relaxed">
+                                Öğrenci değerlendirmelerinizi hızlı, etkili ve güvenli bir şekilde oluşturun. 
+                                Tüm verileriniz cihazınızda güvenle saklanır.
+                            </p>
+                            <div class="bg-green-50/80 dark:bg-green-900/30 border border-green-200/50 dark:border-green-800/50 rounded-xl p-4">
+                                <div class="flex items-center justify-center text-green-800 dark:text-green-200">
+                                    <i class="fas fa-shield-alt mr-2 text-lg"></i>
+                                    <span class="font-medium">%100 Offline - Verileriniz güvende</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Slide 2: AI Önerileri -->
+                    <div class="w-full flex-shrink-0 bg-gradient-to-br from-purple-50/80 to-pink-50/80 dark:from-purple-900/30 dark:to-pink-900/30 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i class="fas fa-robot text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">AI Destekli Yorum Sistemi</h3>
+                            <div class="space-y-4 text-left">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-magic text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Akıllı Öneriler</h4>
+                                        <p class="text-gray-700 dark:text-gray-200">Sınıf ve döneme göre filtrelenmiş hazır yorumlar</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-tags text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Etiket Sistemi</h4>
+                                        <p class="text-gray-700 dark:text-gray-200">İhtiyacınıza göre kategorize edilmiş şablonlar</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-user text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Otomatik İsim Değiştirme</h4>
+                                        <p class="text-gray-700 dark:text-gray-200">[Öğrenci Adı] otomatik olarak değiştirilir</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Öğrenci Yönetimi -->
+                    <div class="w-full flex-shrink-0 bg-gradient-to-br from-green-50/80 to-blue-50/80 dark:from-green-900/30 dark:to-blue-900/30 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i class="fas fa-users text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Kolay Öğrenci Yönetimi</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                                <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-4 border border-white/30">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <i class="fas fa-user-plus text-green-600 text-lg"></i>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Tekil Ekleme</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-700 dark:text-gray-200">Öğrencileri tek tek ekleyin</p>
+                                </div>
+                                <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-4 border border-white/30">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <i class="fas fa-users text-blue-600 text-lg"></i>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Toplu Ekleme</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-700 dark:text-gray-200">Liste halinde çoklu ekleme</p>
+                                </div>
+                                <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-4 border border-white/30">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <i class="fas fa-filter text-purple-600 text-lg"></i>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Akıllı Filtreleme</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-700 dark:text-gray-200">Sınıf ve şubeye göre filtreleme</p>
+                                </div>
+                                <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-4 border border-white/30">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <i class="fas fa-graduation-cap text-orange-600 text-lg"></i>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">5-8. Sınıf Desteği</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-700 dark:text-gray-200">Ortaokul seviyesi öğrenciler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Dashboard ve Raporlama -->
+                    <div class="w-full flex-shrink-0 bg-gradient-to-br from-orange-50/80 to-yellow-50/80 dark:from-orange-900/30 dark:to-yellow-900/30 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i class="fas fa-chart-line text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Kapsamlı Dashboard & Raporlama</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-3 border border-white/30">
+                                        <div class="text-2xl font-bold text-orange-600 mb-1">📊</div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white text-sm">İstatistikler</h4>
+                                        <p class="text-xs text-gray-700 dark:text-gray-200">Detaylı analiz</p>
+                                    </div>
+                                    <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-3 border border-white/30">
+                                        <div class="text-2xl font-bold text-green-600 mb-1">📈</div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Ton Analizi</h4>
+                                        <p class="text-xs text-gray-700 dark:text-gray-200">Yorum dağılımı</p>
+                                    </div>
+                                    <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-3 border border-white/30">
+                                        <div class="text-2xl font-bold text-blue-600 mb-1">📋</div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Excel Export</h4>
+                                        <p class="text-xs text-gray-700 dark:text-gray-200">Veri aktarımı</p>
+                                    </div>
+                                    <div class="bg-white/50 dark:bg-gray-800/50 rounded-xl p-3 border border-white/30">
+                                        <div class="text-2xl font-bold text-purple-600 mb-1">🏷️</div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Popüler Etiketler</h4>
+                                        <p class="text-xs text-gray-700 dark:text-gray-200">Trend analizi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Özellikler -->
+                    <div class="w-full flex-shrink-0 bg-gradient-to-br from-indigo-50/80 to-cyan-50/80 dark:from-indigo-900/30 dark:to-cyan-900/30 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i class="fas fa-star text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Gelişmiş Özellikler</h3>
+                            <div class="space-y-3 text-left">
+                                <div class="flex items-center space-x-3 bg-white/50 dark:bg-gray-800/50 rounded-lg p-3 border border-white/30">
+                                    <i class="fas fa-moon text-indigo-600 text-lg"></i>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Karanlık/Aydınlık Tema</span>
+                                </div>
+                                <div class="flex items-center space-x-3 bg-white/50 dark:bg-gray-800/50 rounded-lg p-3 border border-white/30">
+                                    <i class="fas fa-keyboard text-purple-600 text-lg"></i>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Klavye Kısayolları (ESC, Ctrl+Enter)</span>
+                                </div>
+                                <div class="flex items-center space-x-3 bg-white/50 dark:bg-gray-800/50 rounded-lg p-3 border border-white/30">
+                                    <i class="fas fa-mobile-alt text-green-600 text-lg"></i>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Tam Mobil Uyumlu Tasarım</span>
+                                </div>
+                                <div class="flex items-center space-x-3 bg-white/50 dark:bg-gray-800/50 rounded-lg p-3 border border-white/30">
+                                    <i class="fas fa-wifi-slash text-blue-600 text-lg"></i>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Offline Çalışma - İnternet Gereksiz</span>
+                                </div>
+                                <div class="flex items-center space-x-3 bg-white/50 dark:bg-gray-800/50 rounded-lg p-3 border border-white/30">
+                                    <i class="fas fa-smile text-yellow-600 text-lg"></i>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Emoji Destekli Ton Sistemi (😊😐😕)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <button id="welcomeStartBtn" class="w-full bg-primary hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105">
-                    Başlayalım
-                </button>
-                <button id="welcomeDontShowAgain" class="mt-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
+            </div>
+
+            <!-- Navigation & Controls -->
+            <div class="flex justify-between items-center mt-6 pt-4 border-t border-white/20">
+                <!-- Slide Indicators -->
+                <div class="flex space-x-2">
+                    <button class="slide-indicator active w-3 h-3 rounded-full bg-white/80 hover:bg-white transition-all duration-200" data-slide="0"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-200" data-slide="1"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-200" data-slide="2"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-200" data-slide="3"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-200" data-slide="4"></button>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button id="prevSlideBtn" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 flex items-center space-x-2 border border-white/30">
+                        <i class="fas fa-chevron-left"></i>
+                        <span>Önceki</span>
+                    </button>
+
+                    <button id="nextSlideBtn" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 flex items-center space-x-2 border border-white/30">
+                        <span>Sonraki</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <button id="welcomeStartBtn" class="bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center space-x-2">
+                        <i class="fas fa-rocket"></i>
+                        <span>Başlayalım</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Don't Show Again -->
+            <div class="text-center mt-4">
+                <button id="welcomeDontShowAgain" class="text-white/60 hover:text-white text-sm transition-all duration-200">
                     Bir daha gösterme
                 </button>
             </div>
@@ -142,118 +357,142 @@
     </div>
 
     <!-- Help Modal -->
-    <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-display font-semibold text-gray-900 dark:text-white">Kullanım Kılavuzu</h2>
-                <button id="helpCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+    <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-lg z-[60] flex items-center justify-center p-4" style="display: none;">
+        <div class="glass-effect bg-white/10 dark:bg-gray-900/20 backdrop-blur-xl rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-500 shadow-2xl border-2 border-white/30 dark:border-gray-700/50">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-display font-bold text-white drop-shadow-lg flex items-center">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-2xl mr-4 shadow-lg animate-pulse-glow">
+                        <i class="fas fa-question-circle text-white text-xl"></i>
+                    </div>
+                    Kullanım Kılavuzu
+                </h2>
+                <button id="helpCloseBtn" class="text-white/80 hover:text-red-400 transition-all duration-200 p-3 rounded-xl hover:bg-red-500/20 border border-white/20 hover:border-red-400/50">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
-                    <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                        <i class="fas fa-rocket text-blue-600 mr-2"></i>
-                        Hızlı Başlangıç Rehberi
-                    </h3>
-                    <div class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                        <div class="flex items-start gap-2">
-                            <span class="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
-                            <span>Dashboard'dan sınıf seçin → İlgili sınıf öğrenci sayfası açılır</span>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Sol Kolon -->
+                <div class="space-y-6">
+                    <div class="glass-effect bg-green-50/30 dark:bg-green-900/30 backdrop-blur-xl p-6 rounded-2xl border-2 border-green-300/50 dark:border-green-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-xl mr-3 shadow-lg animate-bounce-light">
+                                <i class="fas fa-user-plus text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-green-800 dark:text-green-200 drop-shadow-sm">Öğrenci Yönetimi</h3>
                         </div>
-                        <div class="flex items-start gap-2">
-                            <span class="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
-                            <span>Öğrenci Yönetimi'nden öğrencileri tek tek veya toplu ekleyin</span>
+                        <ul class="space-y-3 text-green-700 dark:text-green-300">
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-green-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Tek Öğrenci:</strong> Form ile tekil öğrenci ekleme</span>
+                            </li>
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200"><i class="fas fa-circle text-green-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Toplu Ekleme:</strong> Liste halinde çoklu öğrenci ekleme</span>
+                            </li>
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-green-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Düzenleme/Silme:</strong> Öğrenci kartlarındaki ikonları kullanın</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glass-effect bg-purple-50/30 dark:bg-purple-900/30 backdrop-blur-xl p-6 rounded-2xl border-2 border-purple-300/50 dark:border-purple-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-xl mr-3 shadow-lg animate-bounce-light">
+                                <i class="fas fa-comment-dots text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-purple-800 dark:text-purple-200 drop-shadow-sm">Yorum Oluşturma</h3>
                         </div>
-                        <div class="flex items-start gap-2">
-                            <span class="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
-                            <span>Öğrenci kartlarından "Yorum Ekle" ile AI önerilerini kullanın</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
-                            <span>Yorumları düzenleyin ve "[Öğrenci Adı]" yer tutucularını kullanın</span>
-                        </div>
+                        <ul class="space-y-3 text-purple-700 dark:text-purple-300">
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-purple-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Manuel Yazım:</strong> Kendi yorumunuzu yazın</span>
+                            </li>
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-purple-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>AI Önerileri:</strong> Yapay zeka destekli şablon önerileri</span>
+                            </li>
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-purple-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Ton Seçimi:</strong> Olumlu, nötr veya olumsuz ton</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
-                        <i class="fas fa-user-plus text-green-600 mr-2"></i>
-                        Öğrenci Yönetimi
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">Öğrenci Yönetimi sekmesinden "Öğrenci Ekle" butonuna tıklayın.</p>
-                    <ul class="text-xs text-gray-500 dark:text-gray-400 space-y-1 ml-4">
-                        <li>• Tek öğrenci eklemek için "Tek Öğrenci" sekmesini kullanın</li>
-                        <li>• Çoklu ekleme için "Toplu Ekleme" sekmesini kullanın</li>
-                        <li>• Her öğrenci için ad, sınıf ve şube bilgisi gereklidir</li>
-                    </ul>
-                </div>
+                <!-- Sağ Kolon -->
+                <div class="space-y-6">
+                    <div class="glass-effect bg-orange-50/30 dark:bg-orange-900/30 backdrop-blur-xl p-6 rounded-2xl border-2 border-orange-300/50 dark:border-orange-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-xl mr-3 shadow-lg animate-bounce-light">
+                                <i class="fas fa-file-alt text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-orange-800 dark:text-orange-200 drop-shadow-sm">Şablon Sistemi</h3>
+                        </div>
+                        <ul class="space-y-3 text-orange-700 dark:text-orange-300">
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-orange-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Sınıf Bazlı:</strong> Her sınıf için özel şablonlar</span>
+                            </li>
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-orange-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Etiket Sistemi:</strong> Konularına göre filtreleme</span>
+                            </li>
+                            <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
+                                <i class="fas fa-circle text-orange-500 text-xs mt-2 mr-3 animate-pulse"></i>
+                                <span><strong>Otomatik Öneriler:</strong> AI tabanlı içerik önerileri</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
-                        <i class="fas fa-comment-dots text-purple-600 mr-2"></i>
-                        Yorum Sistemi
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-2">Öğrenci kartında "Yorum Ekle" butonuna tıklayın.</p>
-                    <ul class="text-xs text-gray-500 dark:text-gray-400 space-y-1 ml-4">
-                        <li>• AI önerilerinden seçim yapabilirsiniz</li>
-                        <li>• Yorumları kendi ihtiyacınıza göre düzenleyebilirsiniz</li>
-                        <li>• "[Öğrenci Adı]" yer tutucu otomatik değiştirilir</li>
-                        <li>• Ton seçimi (😊 Olumlu, 😐 Nötr, 😕 Olumsuz) yapabilirsiniz</li>
-                    </ul>
-                </div>
-
-
-
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
-                        <i class="fas fa-brain text-primary mr-2"></i>
-                        AI Önerisi Nasıl Çalışır?
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Sınıf ve etiket filtresi ile istediğiniz kategorilerde hazır yorumları görüntüleyebilir ve düzenleyebilirsiniz.</p>
-                </div>
-
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
-                        <i class="fas fa-keyboard text-primary mr-2"></i>
-                        Klavye Kısayolları
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">ESC: Modal kapat, Ctrl+Enter: Kaydet, ←/→: Öğrenciler arası geçiş</p>
-                </div>
-
-                <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
-                        <i class="fas fa-shield-alt text-primary mr-2"></i>
-                        Veri Güvenliği
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Bu uygulama tamamen offline çalışır. Öğrenci bilgileri ve yorumlarınız hiçbir zaman internet üzerinden gönderilmez, sadece cihazınızda güvenli bir şekilde saklanır. Dilediğiniz zaman üstteki tuş ile verileri silebilirsiniz.</p>
+                    <div class="glass-effect bg-blue-50/30 dark:bg-blue-900/30 backdrop-blur-xl p-6 rounded-2xl border-2 border-blue-300/50 dark:border-blue-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-xl mr-3 shadow-lg animate-bounce-light">
+                                <i class="fas fa-keyboard text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-200 drop-shadow-sm">Klavye Kısayolları</h3>
+                        </div>
+                        <ul class="space-y-3 text-blue-700 dark:text-blue-300">
+                            <li class="flex items-center justify-between transform hover:scale-105 transition-transform duration-200">
+                                <span>Modal Kapatma</span>
+                                <kbd class="bg-blue-200/80 dark:bg-blue-800/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs shadow-lg border border-blue-300/50">ESC</kbd>
+                            </li>
+                            <li class="flex items-center justify-between transform hover:scale-105 transition-transform duration-200">
+                                <span>Hızlı Kaydet</span>
+                                <kbd class="bg-blue-200/80 dark:bg-blue-800/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs shadow-lg border border-blue-300/50">Ctrl + Enter</kbd>
+                            </li>
+                            <li class="flex items-center justify-between transform hover:scale-105 transition-transform duration-200">
+                                <span>Sekme Geçişi</span>
+                                <kbd class="bg-blue-200/80 dark:bg-blue-800/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs shadow-lg border border-blue-300/50">Ctrl + 1-4</kbd>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
     <!-- Main Container -->
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 md:py-8">
         <!-- Tab Navigation -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 mb-6 md:mb-8">
-            <nav class="flex justify-center items-center gap-3 px-4 py-4 overflow-x-auto scrollbar-hide" aria-label="Tabs">
-                <button data-tab="dashboard" class="tab-button bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md hover:shadow-lg font-medium transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
-                    <i class="fas fa-chart-line mr-1"></i>
+        <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg rounded-2xl shadow-2xl border-2 border-white/20 dark:border-gray-700/50 mb-6 md:mb-8 overflow-hidden">
+            <nav class="flex justify-center items-center gap-2 px-4 py-6 overflow-x-auto scrollbar-hide" aria-label="Tabs">
+                <button data-tab="dashboard" class="tab-button bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 text-white rounded-2xl shadow-lg hover:shadow-2xl font-semibold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 whitespace-nowrap group">
+                    <i class="fas fa-chart-line mr-2 group-hover:rotate-12 transition-transform"></i>
                     <span class="hidden sm:inline">Dashboard</span>
                     <span class="sm:hidden">Panel</span>
                 </button>
-                <button data-tab="students" class="tab-button bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-green-500 hover:text-white rounded-lg shadow-md hover:shadow-lg font-medium transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
-                    <i class="fas fa-users mr-1"></i>
+                <button data-tab="students" class="tab-button bg-white/80 dark:bg-gray-700/80 backdrop-blur text-gray-700 dark:text-gray-300 hover:bg-gradient-to-br hover:from-green-500 hover:via-green-600 hover:to-green-700 hover:text-white rounded-2xl shadow-lg hover:shadow-2xl font-semibold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 whitespace-nowrap group">
+                    <i class="fas fa-users mr-2 group-hover:bounce transition-transform"></i>
                     <span class="hidden sm:inline">Öğrenci Yönetimi</span>
                     <span class="sm:hidden">Öğrenci</span>
                 </button>
-                <button data-tab="comments" class="tab-button bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-purple-500 hover:text-white rounded-lg shadow-md hover:shadow-lg font-medium transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
-                    <i class="fas fa-comments mr-1"></i>
+                <button data-tab="comments" class="tab-button bg-white/80 dark:bg-gray-700/80 backdrop-blur text-gray-700 dark:text-gray-300 hover:bg-gradient-to-br hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 hover:text-white rounded-2xl shadow-lg hover:shadow-2xl font-semibold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 whitespace-nowrap group">
+                    <i class="fas fa-comments mr-2 group-hover:pulse transition-transform"></i>
                     <span>Yorumlar</span>
                 </button>
-                <button data-tab="templates" class="tab-button bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-orange-500 hover:text-white rounded-lg shadow-md hover:shadow-lg font-medium transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
-                    <i class="fas fa-file-text mr-1"></i>
+                <button data-tab="templates" class="tab-button bg-white/80 dark:bg-gray-700/80 backdrop-blur text-gray-700 dark:text-gray-300 hover:bg-gradient-to-br hover:from-orange-500 hover:via-orange-600 hover:to-orange-700 hover:text-white rounded-2xl shadow-lg hover:shadow-2xl font-semibold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 whitespace-nowrap group">
+                    <i class="fas fa-file-text mr-2 group-hover:wiggle transition-transform"></i>
                     <span class="hidden sm:inline">Şablonlar</span>
                     <span class="sm:hidden">Şablon</span>
                 </button>
@@ -263,32 +502,39 @@
         <!-- Dashboard Tab -->
         <div id="dashboard-tab" class="tab-content">
             <!-- Grade Filter -->
-            <div class="flex flex-wrap gap-3 mb-8">
-                <button class="grade-filter bg-grade-5 hover:bg-blue-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent" data-grade="5">
-                    <i class="fas fa-users mr-2"></i>
+            <div class="flex flex-wrap gap-4 mb-10">
+                <button class="grade-filter relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-2xl hover:shadow-blue-500/50 border-2 border-blue-400/30 overflow-hidden group" data-grade="5">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <i class="fas fa-users mr-3 text-lg"></i>
                     5. Sınıf
                 </button>
-                <button class="grade-filter bg-grade-6 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent" data-grade="6">
-                    <i class="fas fa-users mr-2"></i>
+                <button class="grade-filter relative bg-gradient-to-br from-green-500 via-green-600 to-green-700 hover:from-green-600 hover:via-green-700 hover:to-green-800 text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-2xl hover:shadow-green-500/50 border-2 border-green-400/30 overflow-hidden group" data-grade="6">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <i class="fas fa-users mr-3 text-lg"></i>
                     6. Sınıf
                 </button>
-                <button class="grade-filter bg-grade-7 hover:bg-purple-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent" data-grade="7">
-                    <i class="fas fa-users mr-2"></i>
+                <button class="grade-filter relative bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 hover:from-purple-600 hover:via-purple-700 hover:to-purple-800 text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-2xl hover:shadow-purple-500/50 border-2 border-purple-400/30 overflow-hidden group" data-grade="7">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <i class="fas fa-users mr-3 text-lg"></i>
                     7. Sınıf
                 </button>
-                <button class="grade-filter bg-grade-8 hover:bg-gray-600 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-transparent" data-grade="8">
-                    <i class="fas fa-users mr-2"></i>
+                <button class="grade-filter relative bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 hover:from-gray-700 hover:via-gray-800 hover:to-gray-900 text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-2xl hover:shadow-gray-500/50 border-2 border-gray-500/30 overflow-hidden group" data-grade="8">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <i class="fas fa-users mr-3 text-lg"></i>
                     8. Sınıf
                 </button>
-                <button class="grade-filter active bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white px-5 py-3 rounded-xl font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-yellow-400 ring-2 ring-yellow-300" data-grade="all">
-                    <i class="fas fa-globe mr-2"></i>
+                <button class="grade-filter active relative bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-2xl hover:shadow-yellow-500/50 border-4 border-yellow-400 ring-4 ring-yellow-300/50 overflow-hidden group animate-glow" data-grade="all">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <i class="fas fa-globe mr-3 text-lg animate-float"></i>
                     Tümü
                 </button>
             </div>
 
             <!-- Statistics Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-4 md:p-6 shadow-xl border border-blue-200 dark:border-gray-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group" onclick="window.app && window.app.tabs && window.app.tabs.switchTo('students')">
+                <div class="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 rounded-3xl p-6 md:p-8 shadow-2xl border-2 border-blue-300/30 dark:border-gray-600/50 hover:shadow-blue-500/25 hover:shadow-2xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 cursor-pointer group overflow-hidden" onclick="window.app && window.app.tabs && window.app.tabs.switchTo('students')">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full -translate-y-10 translate-x-10"></div>
+                    <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-blue-300/30 to-transparent rounded-full translate-y-8 -translate-x-8"></div>
                     <div class="flex items-center">
                         <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-3 md:p-4 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <i class="fas fa-users text-white text-lg md:text-xl"></i>
@@ -383,8 +629,7 @@
                 </button>
             </div>
 
-            <!-- Student Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="studentsGrid">
+            <!-- Student Cards Grid --><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="studentsGrid">
                 <!-- Dynamic content will be loaded here -->
             </div>
         </div>
@@ -424,12 +669,17 @@
         <!-- Templates Tab -->
         <div id="templates-tab" class="tab-content hidden">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                <div class="flex flex-wrap gap-2">
+                <div class="flex items-center gap-4">
+                    <div class="flex flex-wrap gap-2">
                     <!-- Tone Filter -->
                     <button class="tone-filter active bg-positive text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumlu">Olumlu</button>
                     <button class="tone-filter bg-neutral text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="notr">Nötr</button>
                     <button class="tone-filter bg-negative text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumsuz">Olumsuz</button>
                     <button class="tone-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="all">Tümü</button>
+                    </div>
+                    <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">
+                        <span id="templateCounter">0</span> şablon
+                    </span>
                 </div>
 
                 <button id="aiSuggestionsBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center">
@@ -446,56 +696,73 @@
     </div>
 
     <!-- Add Student Modal -->
-    <div id="addStudentModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-md w-full transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-display font-semibold text-gray-900 dark:text-white">Öğrenci Ekle</h2>
-                <button id="addStudentCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+    <div id="addStudentModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4" style="display: none;">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-8 max-w-lg w-full max-h-[95vh] md:max-h-auto overflow-y-auto md:overflow-visible transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white flex items-center">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-2xl mr-4 shadow-lg">
+                        <i class="fas fa-user-plus text-white text-lg"></i>
+                    </div>
+                    Öğrenci Ekle
+                </h2>
+                <button id="addStudentCloseBtn" class="text-gray-400 hover:text-red-500 transition-all duration-200 p-2 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
 
             <!-- Tab Navigation -->
-            <div class="flex space-x-4 mb-6 border-b border-gray-200 dark:border-gray-700">
-                <button class="student-tab-btn active pb-2 px-1 text-sm font-medium border-b-2 border-primary text-primary" data-tab="single">
+            <div class="flex space-x-2 mb-8 bg-gray-100 dark:bg-gray-700 rounded-2xl p-2">
+                <button class="student-tab-btn active flex-1 py-3 px-4 text-base font-semibold rounded-xl transition-all duration-200 bg-primary text-white shadow-lg" data-tab="single">
+                    <i class="fas fa-user mr-2"></i>
                     Tekil Ekleme
                 </button>
-                <button class="student-tab-btn pb-2 px-1 text-sm font-medium border-b-2 border-transparent text-gray-500 dark:text-gray-400" data-tab="bulk">
+                <button class="student-tab-btn flex-1 py-3 px-4 text-base font-semibold rounded-xl transition-all duration-200 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600" data-tab="bulk">
+                    <i class="fas fa-users mr-2"></i>
                     Toplu Ekleme
                 </button>
             </div>
 
             <!-- Single Student Form -->
             <div id="single-student-tab" class="student-tab-content">
-                <form id="singleStudentForm" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Öğrenci Adı</label>
-                        <input type="text" name="name" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white" placeholder="Öğrenci adını girin">
+                <form id="singleStudentForm" class="space-y-6">
+                    <div class="space-y-3">
+                        <label class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-user mr-2 text-primary"></i>
+                            Öğrenci Adı
+                        </label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base" placeholder="Öğrenci adını girin">
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Sınıf</label>
-                            <select name="grade" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <label class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-graduation-cap mr-2 text-primary"></i>
+                                Sınıf
+                            </label>
+                            <select name="grade" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base">
                                 <option value="">Seçin</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
+                                <option value="5">5. Sınıf</option>
+                                <option value="6">6. Sınıf</option>
+                                <option value="7">7. Sınıf</option>
+                                <option value="8">8. Sınıf</option>
                             </select>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Şube</label>
-                            <select name="section" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
+                        <div class="space-y-3">
+                            <label class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-users mr-2 text-primary"></i>
+                                Şube
+                            </label>
+                            <select name="section" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base">
                                 <option value="">Seçin</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                                <option value="E">E</option>
+                                <option value="A">A Şubesi</option>
+                                <option value="B">B Şubesi</option>
+                                <option value="C">C Şubesi</option>
+                                <option value="D">D Şubesi</option>
+                                <option value="E">E Şubesi</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
+                    <button type="submit" class="w-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white py-4 px-6 rounded-xl font-semibold text-base transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                        <i class="fas fa-plus mr-2"></i>
                         Öğrenci Ekle
                     </button>
                 </form>
@@ -503,35 +770,45 @@
 
             <!-- Bulk Student Form -->
             <div id="bulk-student-tab" class="student-tab-content hidden">
-                <form id="bulkStudentForm" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Öğrenci Listesi</label>
-                        <textarea name="studentList" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white h-32" placeholder="Her satıra bir öğrenci adı yazın&#10;Örnek:&#10;Ayşe Yıldız&#10;Mehmet Kaya&#10;Zeynep Aslan"></textarea>
+                <form id="bulkStudentForm" class="space-y-6">
+                    <div class="space-y-3">
+                        <label class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-list mr-2 text-primary"></i>
+                            Öğrenci Listesi
+                        </label>
+                        <textarea name="studentList" required class="w-full px-4 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white h-40 text-base leading-relaxed" placeholder="Her satıra bir öğrenci adı yazın&#10;Örnek:&#10;Ayşe Yıldız&#10;Mehmet Kaya&#10;Zeynep Aslan"></textarea>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Sınıf</label>
-                            <select name="grade" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <label class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-graduation-cap mr-2 text-primary"></i>
+                                Sınıf
+                            </label>
+                            <select name="grade" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base">
                                 <option value="">Seçin</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
+                                <option value="5">5. Sınıf</option>
+                                <option value="6">6. Sınıf</option>
+                                <option value="7">7. Sınıf</option>
+                                <option value="8">8. Sınıf</option>
                             </select>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Şube</label>
-                            <select name="section" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
+                        <div class="space-y-3">
+                            <label class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-users mr-2 text-primary"></i>
+                                Şube
+                            </label>
+                            <select name="section" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base">
                                 <option value="">Seçin</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                                <option value="E">E</option>
+                                <option value="A">A Şubesi</option>
+                                <option value="B">B Şubesi</option>
+                                <option value="C">C Şubesi</option>
+                                <option value="D">D Şubesi</option>
+                                <option value="E">E Şubesi</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
+                    <button type="submit" class="w-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white py-4 px-6 rounded-xl font-semibold text-base transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                        <i class="fas fa-users mr-2"></i>
                         Tüm Öğrencileri Ekle
                     </button>
                 </form>
@@ -540,76 +817,93 @@
     </div>
 
     <!-- Comment Edit Modal -->
-    <div id="commentEditModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-2xl w-full transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-6">
-                <div class="flex items-center space-x-2">
-                    <button id="prevStudentBtn" class="text-gray-400 hover:text-primary transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" title="Önceki Öğrenci">
-                        <i class="fas fa-chevron-left"></i>
+    <div id="commentEditModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4" style="display: none;">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-8 max-w-3xl w-full max-h-[95vh] md:max-h-auto overflow-y-auto md:overflow-visible transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-4">
+                    <button id="prevStudentBtn" class="text-gray-400 hover:text-primary transition-all duration-200 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-110" title="Önceki Öğrenci">
+                        <i class="fas fa-chevron-left text-lg"></i>
                     </button>
-                    <h2 class="text-xl font-display font-semibold text-gray-900 dark:text-white">Yorum Düzenle</h2>
-                    <button id="nextStudentBtn" class="text-gray-400 hover:text-primary transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" title="Sonraki Öğrenci">
-                        <i class="fas fa-chevron-right"></i>
+                    <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white">Yorum Düzenle</h2>
+                    <button id="nextStudentBtn" class="text-gray-400 hover:text-primary transition-all duration-200 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-110" title="Sonraki Öğrenci">
+                        <i class="fas fa-chevron-right text-lg"></i>
                     </button>
                 </div>
-                <button id="commentEditCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+                <button id="commentEditCloseBtn" class="text-gray-400 hover:text-red-500 transition-all duration-200 p-2 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
 
-            <form id="commentEditForm" class="space-y-6">
-                <div class="flex items-center space-x-4 mb-4">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center" id="editStudentAvatar">
-                        <span class="text-white font-semibold text-lg" id="editStudentInitials"></span>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 dark:text-white" id="editStudentName"></h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400" id="editStudentGradeSection"></p>
+            <form id="commentEditForm" class="space-y-8">
+                <!-- Student Info Card -->
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 border border-blue-200 dark:border-gray-600">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg" id="editStudentAvatar">
+                            <span id="editStudentInitials"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white" id="editStudentName"></h3>
+                            <p class="text-base text-gray-600 dark:text-gray-300 font-medium" id="editStudentGradeSection"></p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="mb-4">
-                            <label for="content" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Yorum</label>
-                            <textarea name="content" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white h-32 resize-none" placeholder="Öğrenci yorumunu buraya yazın..." maxlength="500"></textarea>
-                            <div class="flex justify-between items-center mt-2">
-                                <span class="text-sm text-gray-500 dark:text-gray-400">Karakter sayısı: <span id="charCount">0</span>/500</span>
-                                <div class="flex gap-2">
-                                    <button type="button" id="editAISuggestionsBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1">
-                                        <i class="fas fa-robot"></i>
-                                        AI Önerileri
-                                    </button>
-                                    <button type="button" id="editPlaceholderBtn" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1" title="[Öğrenci Adı] yer tutucusunu kaldır">
-                                        <i class="fas fa-eraser"></i>
-                                        İsmi Kaldır
-                                    </button>
-                                </div>
-                            </div>
+                <!-- Comment Textarea -->
+                <div class="space-y-3">
+                    <label for="content" class="block text-base font-semibold text-gray-700 dark:text-gray-300">Yorum İçeriği</label>
+                    <textarea name="content" required class="w-full px-4 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white h-36 resize-none text-base leading-relaxed" placeholder="Öğrenci yorumunu buraya yazın..." maxlength="500"></textarea>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                            <i class="fas fa-keyboard mr-1"></i>
+                            Karakter: <span id="charCount" class="font-bold">0</span>/500
+                        </span>
+                        <div class="flex gap-3">
+                            <button type="button" id="editAISuggestionsBtn" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-blue-500/25 transform hover:scale-105">
+                                <i class="fas fa-robot"></i>
+                                AI Önerileri
+                            </button>
+                            <button type="button" id="editPlaceholderBtn" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-red-500/25 transform hover:scale-105" title="[Öğrenci Adı] yer tutucusunu kaldır">
+                                <i class="fas fa-eraser"></i>
+                                İsmi Kaldır
+                            </button>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label for="tone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ton</label>
-                                <select name="tone" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
-                                    <option value="olumlu">😊 Olumlu</option>
-                                    <option value="notr">😐 Nötr</option>
-                                    <option value="olumsuz">😕 Olumsuz</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="period" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dönem</label>
-                                <select name="period" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white">
-                                    <option value="1">1. Dönem</option>
-                                    <option value="2">2. Dönem</option>
-                                </select>
-                            </div>
-                        </div>
+                <!-- Tone and Period Selection -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-3">
+                        <label for="tone" class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-smile mr-2 text-primary"></i>
+                            Yorum Tonu
+                        </label>
+                        <select name="tone" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base font-medium">
+                            <option value="olumlu">😊 Olumlu</option>
+                            <option value="notr">😐 Nötr</option>
+                            <option value="olumsuz">😕 Olumsuz</option>
+                        </select>
+                    </div>
+                    <div class="space-y-3">
+                        <label for="period" class="block text-base font-semibold text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-calendar mr-2 text-primary"></i>
+                            Dönem
+                        </label>
+                        <select name="period" required class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base font-medium">
+                            <option value="1">1. Dönem</option>
+                            <option value="2">2. Dönem</option>
+                        </select>
+                    </div>
+                </div>
 
-
-                <div class="flex justify-end space-x-4">
-                    <button type="button" id="cancelEditBtn" class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                <!-- Action Buttons -->
+                <div class="flex justify-end space-x-4 pt-6">
+                    <button type="button" id="cancelEditBtn" class="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 font-semibold text-base">
+                        <i class="fas fa-times mr-2"></i>
                         İptal
                     </button>
-                    <button type="submit" class="px-6 py-2 bg-primary hover:bg-purple-700 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
+                    <button type="submit" class="px-8 py-3 bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white rounded-xl font-semibold text-base transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                        <i class="fas fa-save mr-2"></i>
                         Yorumu Kaydet
                     </button>
                 </div>
@@ -618,53 +912,85 @@
     </div>
 
     <!-- AI Suggestions Modal -->
-    <div id="aiSuggestionsModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-display font-semibold text-gray-900 dark:text-white flex items-center">
-                    <i class="fas fa-brain text-primary mr-2"></i>
-                    AI Yorum Önerileri
+    <div id="aiSuggestionsModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4" style="display: none;">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-8 max-w-6xl w-full max-h-[95vh] md:max-h-[85vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
+            <div class="flex justify-between items-center mb-4 md:mb-8">
+                <h2 class="text-lg md:text-3xl font-display font-bold text-gray-900 dark:text-white flex items-center">
+                    <div class="bg-gradient-to-r from-primary to-purple-600 p-2 md:p-3 rounded-xl md:rounded-2xl mr-2 md:mr-4 shadow-lg">
+                        <i class="fas fa-robot text-white text-sm md:text-xl"></i>
+                    </div>
+                    <span class="hidden sm:inline">AI Yorum Önerileri</span>
+                    <span class="sm:hidden">AI Önerileri</span>
                 </h2>
-                <button id="aiSuggestionsCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                    <i class="fas fa-times text-xl"></i>
+                <button id="aiSuggestionsCloseBtn" class="text-gray-400 hover:text-red-500 transition-all duration-200 p-2 md:p-3 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20">
+                    <i class="fas fa-times text-lg md:text-2xl"></i>
                 </button>
             </div>
 
+            <!-- Search Bar -->
+            <div class="mb-4 md:mb-6">
+                <div class="search-container relative">
+                    <input 
+                        type="text" 
+                        id="templateSearchInput" 
+                        placeholder="Şablon ara... (örn: başarılı, arkadaşlık, ders)" 
+                        class="search-input w-full px-4 py-3 pr-12 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white text-base transition-all duration-300"
+                    >
+                    <div class="search-glow"></div>
+                    <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                        <i class="fas fa-search text-gray-400 text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
             <!-- Filters in compact horizontal layout -->
-            <div class="mb-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="mb-4 md:mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
                     <!-- Tone Filter -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ton</label>
-                        <div id="aiToneFilterButtons">
+                        <label class="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 md:mb-2">Ton</label>
+                        <div id="aiToneFilterButtons" class="flex flex-wrap gap-1">
                             <!-- Dynamic content will be loaded here -->
                         </div>
                     </div>
 
                     <!-- Grade Filter -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Sınıf</label>
-                        <div id="gradeFilterButtons">
+                        <label class="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 md:mb-2">Sınıf</label>
+                        <div id="gradeFilterButtons" class="flex flex-wrap gap-1">
                             <!-- Dynamic grade filter buttons will be loaded here -->
                         </div>
                     </div>
 
                     <!-- Term Filter -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dönem</label>
-                        <div id="termFilterButtons">
+                        <label class="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 md:mb-2">Dönem</label>
+                        <div id="termFilterButtons" class="flex flex-wrap gap-1">
                             <!-- Dynamic term filter buttons will be loaded here -->
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Selected Tags Display -->
+            <div id="selectedTagsDisplay">
+                <!-- Dynamic selected tags will be displayed here -->
+            </div>
+
             <!-- Tag Filter -->
-            <div class="mb-6">
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Etiket Filtresi</label>
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 max-h-60 overflow-y-auto" id="tagFilterButtons">
-                    <!-- Dynamic categorized tag filter buttons will be loaded here -->
+            <div class="mb-4 md:mb-6">
+                <label class="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 md:mb-3">Etiket Filtresi</label>
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 md:p-4 max-h-32 md:max-h-60 overflow-y-auto" id="tagFilterButtons">
+                    <!-- Dynamic tag filter buttons will be loaded here -->
                 </div>
+            </div>
+
+            <!-- Suggestions Counter -->
+            <div class="flex items-center justify-between mb-4">
+                <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">AI Önerileri</h4>
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span id="suggestionsCounter">0</span> öneri
+                </span>
             </div>
 
             <!-- Suggestions List -->
@@ -675,8 +1001,8 @@
     </div>
 
     <!-- All Comments Modal -->
-    <div id="allCommentsModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4" style="display: none;">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
+    <div id="allCommentsModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4" style="display: none;">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 max-w-4xl w-full max-h-[95vh] md:max-h-[80vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-xl font-display font-semibold text-gray-900 dark:text-white">Tüm Yorumlar</h2>
                 <button id="allCommentsCloseBtn" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
@@ -726,19 +1052,20 @@
                         <i class="fas fa-graduation-cap text-white text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-900 dark:text-white text-lg">Karne Yorum Asistanı</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white text-lg">Karne Asistanı</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400">Öğretmenler için AI destekli yorum sistemi</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-                    <span>© 2025 Karne Yorum Asistanı</span>
+                    <span>© 2025 Karne Asistanı</span>
                     <span class="text-gray-300 dark:text-gray-600">•</span>
-                    <span class="font-medium text-primary">By Ömer YOLCU | Claude AI</span>
+                    <span class="font-medium text-primary">Ömer YOLCU & Claude AI</span>
                     <span class="text-gray-300 dark:text-gray-600">•</span>
                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">v1.0</span>
                 </div>
             </div>
         </div>
     </footer>
+    </div> <!-- Main Content Wrapper End -->
 </body>
 </html>

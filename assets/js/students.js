@@ -4,6 +4,8 @@ class StudentManager {
         debugLog('StudentManager constructor called');
         this.storage = storage;
         this.currentFilter = 'all';
+        this.selectedStudents = new Set();
+        this.isSelectionMode = false;
         this.init();
         debugLog('StudentManager constructor completed');
     }
@@ -50,6 +52,14 @@ class StudentManager {
                 this.handleFilterChange(e);
             });
         });
+
+        // Touch ve swipe event'leri için delegasyon
+        this.setupTouchEvents();
+        
+        // Klavye kısayolları
+        this.setupKeyboardShortcuts();
+        
+        debugLog('StudentManager.bindEvents() completed successfully');
     }
 
     showAddModal() {
@@ -59,7 +69,7 @@ class StudentManager {
     handleSingleStudentSubmit(e) {
         e.preventDefault();
         const formData = new FormData(e.target);
-        
+
         const student = {
             name: formData.get('name').trim(),
             grade: formData.get('grade'),
@@ -81,7 +91,7 @@ class StudentManager {
     handleBulkStudentSubmit(e) {
         e.preventDefault();
         const formData = new FormData(e.target);
-        
+
         const studentList = formData.get('studentList').trim();
         const grade = formData.get('grade');
         const section = formData.get('section');
@@ -152,7 +162,7 @@ class StudentManager {
 
     handleFilterChange(e) {
         const grade = e.target.dataset.grade;
-        
+
         // Aktif filtreyi güncelle
         document.querySelectorAll('.student-grade-filter').forEach(btn => {
             btn.classList.remove('active');
@@ -165,11 +175,11 @@ class StudentManager {
 
     getFilteredStudents() {
         const students = this.storage.getStudents();
-        
+
         if (this.currentFilter === 'all') {
             return students;
         }
-        
+
         return students.filter(student => student.grade === this.currentFilter);
     }
 
@@ -190,49 +200,115 @@ class StudentManager {
         const hasComment = comments.length > 0;
         const gradeColor = this.getGradeColor(student.grade);
         const initials = this.getInitials(student.name);
-        
+        const lastComment = hasComment ? comments[comments.length - 1] : null;
+
         return `
-            <div class="student-card bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})">
-                <div class="flex items-center justify-between mb-3">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 ${gradeColor} rounded-full flex items-center justify-center">
-                            <span class="text-white font-semibold text-sm">${initials}</span>
+            <div class="student-card swipeable bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                 data-student-id="${student.id}"
+                 onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})"
+                 ondblclick="event.stopPropagation(); window.students && window.students.editStudent('${student.id}')"
+                 ontouchstart="this.touchStartHandler && this.touchStartHandler(event)"
+                 ontouchmove="this.touchMoveHandler && this.touchMoveHandler(event)"
+                 ontouchend="this.touchEndHandler && this.touchEndHandler(event)">
+                
+                <!-- Swipe Indicators -->
+                <div class="swipe-indicator left">
+                    <i class="fas fa-edit text-sm"></i>
+                </div>
+                <div class="swipe-indicator right">
+                    <i class="fas fa-comment-plus text-sm"></i>
+                </div>
+                
+                <!-- Selection Checkbox -->
+                <div class="selection-checkbox absolute top-2 left-2 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs">
+                    <i class="fas fa-check"></i>
+                </div>
+
+                <!-- Header Section -->
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-14 h-14 ${gradeColor} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-lg">${initials}</span>
                         </div>
                         <div>
-                            <h3 class="font-medium text-gray-900 dark:text-white text-sm">${student.name}</h3>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">${student.grade}-${student.section}</p>
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">${student.name}</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">${student.grade}-${student.section} Sınıfı</p>
                         </div>
                     </div>
-                    <div class="flex space-x-1">
-                        <button onclick="window.students && window.students.editStudent('${student.id}')" class="text-gray-400 hover:text-primary transition-colors duration-200 text-sm" title="Düzenle">
-                            <i class="fas fa-edit"></i>
+                    <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        <button onclick="event.stopPropagation(); window.students && window.students.editStudent('${student.id}')" 
+                                class="touch-target w-10 h-10 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-xl hover:bg-blue-200 dark:hover:bg-blue-800 transition-all duration-200 flex items-center justify-center group/btn" 
+                                title="Düzenle"
+                                ontouchstart="this.classList.add('haptic-light')">
+                            <i class="fas fa-edit text-sm group-hover/btn:scale-110 transition-transform"></i>
                         </button>
-                        <button onclick="window.students && window.students.deleteStudent('${student.id}')" class="text-gray-400 hover:text-red-500 transition-colors duration-200 text-sm" title="Sil">
-                            <i class="fas fa-trash"></i>
+                        <button onclick="event.stopPropagation(); window.students && window.students.deleteStudent('${student.id}')" 
+                                class="touch-target w-10 h-10 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 rounded-xl hover:bg-red-200 dark:hover:bg-red-800 transition-all duration-200 flex items-center justify-center group/btn" 
+                                title="Sil"
+                                ontouchstart="this.classList.add('haptic-medium')">
+                            <i class="fas fa-trash text-sm group-hover/btn:scale-110 transition-transform"></i>
                         </button>
                     </div>
                 </div>
-                
-                <div class="mb-3">
-                    <div class="flex items-center justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
-                        <span>Yorum Durumu</span>
-                        <span class="${hasComment ? 'text-positive' : 'text-neutral'} font-medium">
-                            ${hasComment ? 'Tamamlandı' : 'Beklemede'}
+
+                <!-- Progress Section -->
+                <div class="mb-4">
+                    <div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        <span class="font-medium">Yorum Durumu</span>
+                        <span class="${hasComment ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'} font-bold text-sm">
+                            ${hasComment ? '✓ Tamamlandı' : '⏳ Beklemede'}
                         </span>
                     </div>
-                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
-                        <div class="${hasComment ? 'bg-positive' : 'bg-neutral'} h-1.5 rounded-full" style="width: ${hasComment ? '100' : '0'}%"></div>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                        <div class="${hasComment ? 'bg-gradient-to-r from-emerald-500 to-emerald-600' : 'bg-gradient-to-r from-amber-400 to-amber-500'} h-2 rounded-full transition-all duration-500" 
+                             style="width: ${hasComment ? '100' : '25'}%"></div>
                     </div>
                 </div>
-                
-                <div class="flex space-x-2">
-                    <button onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})" class="flex-1 bg-primary hover:bg-purple-700 text-white py-1.5 px-3 rounded-md text-xs font-medium transition-all duration-200">
-                        <i class="fas fa-${hasComment ? 'comment-dots' : 'plus'} mr-1"></i>
-                        ${hasComment ? 'Düzenle' : 'Ekle'}
+
+                <!-- Action Buttons -->
+                <div class="flex space-x-3">
+                    <button onclick="window.students && window.students.handleCommentAction('${student.id}', ${hasComment})" 
+                            class="touch-target flex-1 bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-purple-500/25"
+                            ontouchstart="this.classList.add('haptic-light')">
+                        <i class="fas fa-${hasComment ? 'edit' : 'plus'} text-sm"></i>
+                        <span>${hasComment ? 'Düzenle' : 'Yorum Ekle'}</span>
                     </button>
-                    <button onclick="window.students && window.students.copyStudentInfo('${student.id}')" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-1.5 px-2 rounded-md text-xs transition-all duration-200" title="Kopyala">
-                        <i class="fas fa-copy"></i>
+                    <button onclick="event.stopPropagation(); window.students && window.students.copyStudentInfo('${student.id}')" 
+                            class="touch-target bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-105 flex items-center justify-center shadow-md" 
+                            title="Bilgileri Kopyala"
+                            ontouchstart="this.classList.add('haptic-light')">
+                        <i class="fas fa-copy text-sm"></i>
                     </button>
+                </div>
+
+                <!-- Hover Preview Overlay -->
+                <div class="preview-overlay">
+                    <div class="text-center space-y-3">
+                        <div class="w-16 h-16 ${gradeColor} rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-white font-bold text-xl">${initials}</span>
+                        </div>
+                        <h3 class="font-bold text-xl">${student.name}</h3>
+                        <p class="text-lg opacity-90">${student.grade}-${student.section} Sınıfı</p>
+                        ${hasComment ? `
+                            <div class="bg-white/20 rounded-xl p-3 mt-4">
+                                <p class="text-sm font-medium mb-2">Son Yorum:</p>
+                                <p class="text-xs opacity-80 line-clamp-3">${lastComment ? lastComment.content.substring(0, 120) + '...' : ''}</p>
+                            </div>
+                        ` : `
+                            <div class="bg-white/20 rounded-xl p-3 mt-4">
+                                <p class="text-sm">Henüz yorum eklenmemiş</p>
+                                <p class="text-xs opacity-80 mt-1">Tıklayarak yorum ekleyin</p>
+                            </div>
+                        `}
+                        <div class="flex space-x-2 justify-center mt-4">
+                            <button class="bg-white/30 hover:bg-white/40 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                ${hasComment ? 'Düzenle' : 'Ekle'}
+                            </button>
+                            <button class="bg-white/30 hover:bg-white/40 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                Kopyala
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
@@ -286,11 +362,11 @@ class StudentManager {
         // Form submit handler'ını güncelle
         const newForm = form.cloneNode(true);
         form.parentNode.replaceChild(newForm, form);
-        
+
         newForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
-            
+
             const updates = {
                 name: formData.get('name').trim(),
                 grade: formData.get('grade'),
@@ -311,20 +387,25 @@ class StudentManager {
         this.showAddModal();
     }
 
-    deleteStudent(id) {
+    async deleteStudent(id) {
         const student = this.storage.getStudentById(id);
         if (!student) return;
 
         const comments = this.storage.getCommentsByStudentId(id);
         const commentText = comments.length > 0 ? ' ve yorumları' : '';
 
-        if (confirm(`${student.name} adlı öğrenci${commentText} silinecek. Emin misiniz?`)) {
+        const confirmed = await window.ui.confirmDialog(
+            `${student.name} adlı öğrenci${commentText} kalıcı olarak silinecek. Bu işlem geri alınamaz!`,
+            'Öğrenci Sil'
+        );
+
+        if (confirmed) {
             if (this.storage.deleteStudent(id)) {
                 this.render();
                 window.app && window.app.dashboard && window.app.dashboard.updateStats();
                 window.ui.showToast('Öğrenci başarıyla silindi!', 'success');
             } else {
-                window.ui.showToast('Silme işlemi sırasında hata oluştu!', 'error');
+                window.ui.showErrorToast('Silme işlemi sırasında hata oluştu!');
             }
         }
     }
@@ -335,7 +416,7 @@ class StudentManager {
 
         const comments = this.storage.getCommentsByStudentId(id);
         let text = `${student.name} (${student.grade}-${student.section})`;
-        
+
         if (comments.length > 0) {
             text += `\n\nYorum:\n${comments[0].content}`;
         }
@@ -358,18 +439,248 @@ class StudentManager {
 
     handleCommentAction(studentId, hasComment) {
         debugLog('handleCommentAction called:', { studentId, hasComment });
-        
+
         if (!window.comments) {
             debugLog('ERROR: Comments manager not available');
             return;
         }
-        
+
         if (hasComment) {
             debugLog('Editing existing comment');
             window.comments.editComment(studentId);
         } else {
             debugLog('Adding new comment');
             window.comments.addComment(studentId);
+        }
+    }
+
+    setupTouchEvents() {
+        const studentsGrid = document.getElementById('studentsGrid');
+        if (!studentsGrid) return;
+
+        studentsGrid.addEventListener('touchstart', this.handleTouchStart.bind(this), { passive: true });
+        studentsGrid.addEventListener('touchmove', this.handleTouchMove.bind(this), { passive: true });
+        studentsGrid.addEventListener('touchend', this.handleTouchEnd.bind(this), { passive: true });
+    }
+
+    setupKeyboardShortcuts() {
+        document.addEventListener('keydown', (e) => {
+            // Ctrl+A - Tümünü seç
+            if (e.ctrlKey && e.key === 'a' && !e.target.matches('input, textarea')) {
+                e.preventDefault();
+                this.selectAllStudents();
+            }
+            // Escape - Seçimi temizle
+            if (e.key === 'Escape') {
+                this.clearSelection();
+            }
+        });
+    }
+
+    handleTouchStart(e) {
+        if (!e.target.closest('.student-card')) return;
+        
+        const card = e.target.closest('.student-card');
+        const touch = e.touches[0];
+        
+        card.touchStartX = touch.clientX;
+        card.touchStartY = touch.clientY;
+        card.touchStartTime = Date.now();
+        
+        // Haptic feedback simülasyonu
+        if (navigator.vibrate) {
+            navigator.vibrate(10);
+        }
+    }
+
+    handleTouchMove(e) {
+        if (!e.target.closest('.student-card')) return;
+        
+        const card = e.target.closest('.student-card');
+        if (!card.touchStartX) return;
+        
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - card.touchStartX;
+        const deltaY = touch.clientY - card.touchStartY;
+        
+        // Horizontal swipe threshold
+        if (Math.abs(deltaX) > 50 && Math.abs(deltaY) < 100) {
+            if (deltaX > 0) {
+                card.style.transform = `translateX(${Math.min(deltaX, 100)}px)`;
+                card.style.backgroundColor = 'rgba(59, 130, 246, 0.1)'; // Blue tint for edit
+            } else {
+                card.style.transform = `translateX(${Math.max(deltaX, -100)}px)`;
+                card.style.backgroundColor = 'rgba(16, 185, 129, 0.1)'; // Green tint for comment
+            }
+        }
+    }
+
+    handleTouchEnd(e) {
+        if (!e.target.closest('.student-card')) return;
+        
+        const card = e.target.closest('.student-card');
+        if (!card.touchStartX) return;
+        
+        const touch = e.changedTouches[0];
+        const deltaX = touch.clientX - card.touchStartX;
+        const deltaY = touch.clientY - card.touchStartY;
+        const duration = Date.now() - card.touchStartTime;
+        const studentId = card.dataset.studentId;
+        
+        // Reset visual state
+        card.style.transform = '';
+        card.style.backgroundColor = '';
+        
+        // Swipe actions
+        if (Math.abs(deltaX) > 80 && Math.abs(deltaY) < 100) {
+            if (deltaX > 0) {
+                // Right swipe - Edit student
+                this.editStudent(studentId);
+                if (navigator.vibrate) navigator.vibrate(20);
+            } else {
+                // Left swipe - Add/Edit comment
+                const comments = this.storage.getCommentsByStudentId(studentId);
+                this.handleCommentAction(studentId, comments.length > 0);
+                if (navigator.vibrate) navigator.vibrate(20);
+            }
+        }
+        // Double tap detection
+        else if (duration < 300 && Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
+            if (card.lastTapTime && Date.now() - card.lastTapTime < 300) {
+                // Double tap - Toggle selection
+                this.toggleStudentSelection(studentId);
+                if (navigator.vibrate) navigator.vibrate([10, 50, 10]);
+            } else {
+                card.lastTapTime = Date.now();
+            }
+        }
+        
+        // Cleanup
+        delete card.touchStartX;
+        delete card.touchStartY;
+        delete card.touchStartTime;
+    }
+
+    toggleStudentSelection(studentId) {
+        if (this.selectedStudents.has(studentId)) {
+            this.selectedStudents.delete(studentId);
+        } else {
+            this.selectedStudents.add(studentId);
+        }
+        
+        this.updateSelectionUI();
+        this.updateBulkActionsBar();
+    }
+
+    selectAllStudents() {
+        const students = this.getFilteredStudents();
+        students.forEach(student => this.selectedStudents.add(student.id));
+        this.updateSelectionUI();
+        this.updateBulkActionsBar();
+    }
+
+    clearSelection() {
+        this.selectedStudents.clear();
+        this.updateSelectionUI();
+        this.updateBulkActionsBar();
+    }
+
+    updateSelectionUI() {
+        const cards = document.querySelectorAll('.student-card');
+        cards.forEach(card => {
+            const studentId = card.dataset.studentId;
+            const checkbox = card.querySelector('.selection-checkbox');
+            
+            if (this.selectedStudents.has(studentId)) {
+                checkbox?.classList.add('visible');
+                card.classList.add('selected');
+            } else {
+                checkbox?.classList.remove('visible');
+                card.classList.remove('selected');
+            }
+        });
+    }
+
+    updateBulkActionsBar() {
+        let bulkBar = document.getElementById('bulkActionsBar');
+        
+        if (this.selectedStudents.size > 0) {
+            if (!bulkBar) {
+                bulkBar = this.createBulkActionsBar();
+                document.body.appendChild(bulkBar);
+            }
+            bulkBar.classList.add('visible');
+            bulkBar.querySelector('.selected-count').textContent = this.selectedStudents.size;
+        } else {
+            if (bulkBar) {
+                bulkBar.classList.remove('visible');
+            }
+        }
+    }
+
+    createBulkActionsBar() {
+        const bar = document.createElement('div');
+        bar.id = 'bulkActionsBar';
+        bar.className = 'bulk-actions-bar fixed bottom-4 left-4 right-4 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-4 z-50';
+        
+        bar.innerHTML = `
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <span class="selected-count text-white font-bold text-sm">0</span>
+                    </div>
+                    <span class="font-medium text-gray-900 dark:text-white">öğrenci seçildi</span>
+                </div>
+                <div class="flex space-x-2">
+                    <button onclick="window.students.bulkAddComments()" class="touch-target bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 flex items-center space-x-2">
+                        <i class="fas fa-comment-plus text-sm"></i>
+                        <span>Toplu Yorum</span>
+                    </button>
+                    <button onclick="window.students.bulkDelete()" class="touch-target bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 flex items-center space-x-2">
+                        <i class="fas fa-trash text-sm"></i>
+                        <span>Sil</span>
+                    </button>
+                    <button onclick="window.students.clearSelection()" class="touch-target bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200">
+                        <i class="fas fa-times text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        return bar;
+    }
+
+    async bulkAddComments() {
+        if (this.selectedStudents.size === 0) return;
+        
+        const selectedIds = Array.from(this.selectedStudents);
+        // İlk öğrenci için yorum modalını aç
+        const firstStudent = this.storage.getStudentById(selectedIds[0]);
+        if (firstStudent) {
+            // Toplu yorum modu için flag set et
+            window.comments.bulkMode = true;
+            window.comments.bulkStudentIds = selectedIds;
+            window.comments.currentBulkIndex = 0;
+            
+            this.handleCommentAction(selectedIds[0], false);
+        }
+    }
+
+    async bulkDelete() {
+        if (this.selectedStudents.size === 0) return;
+        
+        const confirmed = await window.ui.confirmDialog(
+            `${this.selectedStudents.size} öğrenciyi silmek istediğinizden emin misiniz?`,
+            'Toplu Silme Onayı'
+        );
+        
+        if (confirmed) {
+            for (const studentId of this.selectedStudents) {
+                await this.deleteStudent(studentId, false); // Silent delete
+            }
+            this.clearSelection();
+            this.render();
+            window.ui.showToast(`${this.selectedStudents.size} öğrenci başarıyla silindi`, 'success');
         }
     }
 }

@@ -1,273 +1,272 @@
-
 [
   {
     "id": 1,
     "content": "[Öğrenci Adı] ikinci dönemde özgüveni arttı ve daha cesur davranmaya başladı. Derslerde daha çok söz alıyor ve fikirlerini paylaşıyor. Sorumluluk almayı seviyor ve arkadaşlık ilişkileri güçlendi.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
   },
   {
     "id": 2,
     "content": "[Öğrenci Adı] bu dönem daha kararlı ve düzenli çalışmaya başladı. Ödevlerini zamanında yapıyor ve ders araç gereçlerini unutmuyor. Arkadaşlarına yardım etmeyi seviyor ve sınıf lideri olmaya başladı.",
     "tone": "olumlu",
-    "tags": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
   },
   {
     "id": 3,
     "content": "[Öğrenci Adı] artık kendine güveniyor ve yeni şeyler denemeye cesaret ediyor. Matematik problemlerini çözmeyi seviyor ve başarılı oluyor. Arkadaşlarıyla güzel projeler yapıyor.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 4,
     "content": "[Öğrenci Adı] bu dönem liderlik özelliklerini göstermeye başladı. Grup çalışmalarında arkadaşlarını yönlendiriyor ve herkesi dahil etmeye çalışıyor. Derslerde başarılı ve istikrarlı.",
     "tone": "olumlu",
-    "tags": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
+    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
   },
   {
     "id": 5,
     "content": "[Öğrenci Adı] arkadaşlarıyla çok güzel dostluklar kurdu. Paylaşmayı öğrendi ve herkesle adil oynamaya özen gösteriyor. Derslerde düzenli çalışıyor ve notları yükseldi.",
     "tone": "olumlu",
-    "tags": ["arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi", "sorumluluk alma"]
+    "etiketler": ["arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi", "sorumluluk alma"]
   },
   {
     "id": 6,
     "content": "[Öğrenci Adı] fen bilgisi dersinde deney yapmayı çok seviyor ve meraklı sorular soruyor. Arkadaşlarıyla birlikte araştırma yapmayı öğrendi. Özgüveni her geçen gün artıyor.",
     "tone": "olumlu",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 7,
     "content": "[Öğrenci Adı] sosyal bilgiler dersinde tarih konularını çok merak ediyor. Araştırma ödevlerini severek yapıyor ve arkadaşlarıyla bilgilerini paylaşıyor. Sorumluluk sahibi davranıyor.",
     "tone": "olumlu",
-    "tags": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
   },
   {
     "id": 8,
     "content": "[Öğrenci Adı] Türkçe dersinde güzel hikayeler yazıyor ve kitap okumayı seviyor. Arkadaşlarına hikayeler anlatıyor ve onları da okumaya teşvik ediyor. Kendine güveni tam.",
     "tone": "olumlu",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 9,
     "content": "[Öğrenci Adı] matematik dersinde zorlu problemleri çözmeye cesaret ediyor. Arkadaşlarına matematik konularında yardım ediyor. Sorumluluk almayı seviyor ve güvenilir biri.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 10,
     "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapıyor ve eserlerini arkadaşlarıyla paylaşıyor. Kendine güveni arttı ve yeni teknikler denemeye başladı.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 11,
     "content": "[Öğrenci Adı] müzik dersinde güzel sesiyle arkadaşlarına öncülük ediyor. Koro çalışmalarında sorumluluk alıyor ve müzik dinlemeyi seviyor. Özgüveni çok gelişti.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
   },
   {
     "id": 12,
     "content": "[Öğrenci Adı] beden eğitimi dersinde takım oyunlarında liderlik yapıyor. Fair play kurallarına uyuyor ve arkadaşlarını destekliyor. Spor yapmaya olan ilgisi arttı.",
     "tone": "olumlu",
-    "tags": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
+    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
   },
   {
     "id": 13,
     "content": "[Öğrenci Adı] İngilizce dersinde yeni kelimeler öğrenmeye hevesli. Telaffuz çalışmalarında cesur davranıyor ve arkadaşlarıyla İngilizce konuşmaya çalışıyor.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 14,
     "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar programlarını öğreniyor ve arkadaşlarına yardım ediyor. Sorumluluk sahibi davranıyor ve yaratıcı projeler yapıyor.",
     "tone": "olumlu",
-    "tags": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
+    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
   },
   {
     "id": 15,
     "content": "[Öğrenci Adı] bu dönem hem derslerde başarılı hem de arkadaşlarıyla güzel ilişkiler kurmayı başardı. Özgüveni gelişti ve sorumluluk almaya başladı. Çok güzel bir gelişim gösteriyor.",
     "tone": "olumlu",
-    "tags": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 16,
     "content": "[Öğrenci Adı] özgüven konusunda bazen kararsız kalıyor. Derslerde başarılı olduğu zamanlar kendine güveniyor ama bazen çekiniyor. Arkadaşlık ilişkileri normal düzeyde.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 17,
     "content": "[Öğrenci Adı] sorumluluk alma konusunda istikrarlı değil. Bazen ödevlerini düzenli yapıyor bazen unutuyor. Arkadaşlarıyla iyi geçiniyor ama liderlik yapmaktan kaçınıyor.",
     "tone": "notr",
-    "tags": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
   },
   {
     "id": 18,
     "content": "[Öğrenci Adı] arkadaşlık ilişkilerinde seçici davranıyor. Sadece belirli arkadaşlarıyla oynuyor ve diğerlerini grubuna almak istemiyor. Derslerde ortalama başarı gösteriyor.",
     "tone": "notr",
-    "tags": ["arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 19,
     "content": "[Öğrenci Adı] akademik konularda kararsız bir performans sergiliyor. Bazı derslerde başarılı, bazılarında zorlanıyor. Özgüveni dalgalı ve arkadaşlarıyla ilişkileri değişken.",
     "tone": "notr",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 20,
     "content": "[Öğrenci Adı] fen bilgisi dersinde deney yapmaktan korkuyor. Arkadaşlarıyla birlikte çalışmayı seviyor ama liderlik yapmaktan çekiniyor. Özgüven eksikliği yaşıyor.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 21,
     "content": "[Öğrenci Adı] sosyal bilgiler dersinde tarih konularını anlamakta zorlanıyor. Araştırma ödevlerini yapmayı sevmiyor ve arkadaşlarından yardım istemekten çekiniyor.",
     "tone": "notr",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 22,
     "content": "[Öğrenci Adı] Türkçe dersinde yazma çalışmalarında zorlanıyor. Hikaye yazmayı sevmiyor ve arkadaşlarının yazdıklarını beğenmediğini söylüyor. Kendine güveni az.",
     "tone": "notr",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 23,
     "content": "[Öğrenci Adı] matematik dersinde zorlu problemler karşısında pes ediyor. Arkadaşlarından yardım istemek yerine sessiz kalıyor. Özgüven eksikliği belirgin.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 24,
     "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapmaktan korkuyor. Arkadaşlarının eserlerini beğeniyor ama kendisininkileri beğenmiyor. Özgüven problemi yaşıyor.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 25,
     "content": "[Öğrenci Adı] müzik dersinde şarkı söylemekten utanıyor. Arkadaşlarının önünde performans göstermek istemiyor. Sesinin güzel olmadığını düşünüyor.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 26,
     "content": "[Öğrenci Adı] beden eğitimi dersinde takım oyunlarında pasif kalıyor. Arkadaşlarının kendisini seçmeyeceğini düşünüyor. Spor yapmaya ilgisi az.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 27,
     "content": "[Öğrenci Adı] İngilizce dersinde telaffuz yapmaktan utanıyor. Arkadaşlarının gülmesinden korkuyor. Yeni kelimeler öğrenmek istiyor ama cesaret edemiyor.",
     "tone": "notr",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 28,
     "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar kullanımında arkadaşlarından geri kalıyor. Yeni programları öğrenmekte zorlanıyor ve yardım istemekten çekiniyor.",
     "tone": "notr",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 29,
     "content": "[Öğrenci Adı] sorumluluk almaktan kaçınıyor ve sürekli arkadaşlarının arkasına saklanıyor. Özgüven eksikliği belirgin ve derslerde pasif kalıyor.",
     "tone": "notr",
-    "tags": ["sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite"]
   },
   {
     "id": 30,
     "content": "[Öğrenci Adı] bu dönem arkadaşlık ilişkilerinde ve derslerde istikrarsız bir performans gösteriyor. Özgüven eksikliği ve sorumluluk almama problemi devam ediyor.",
     "tone": "notr",
-    "tags": ["arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 31,
     "content": "[Öğrenci Adı] özgüven konusunda ciddi sorunlar yaşıyor. Hiçbir derste söz almıyor ve arkadaşlarıyla konuşmayı reddediyor. Sürekli tek başına oturmayı tercih ediyor.",
     "tone": "olumsuz",
-    "tags": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
   },
   {
     "id": 32,
     "content": "[Öğrenci Adı] sorumluluk almayı tamamen reddediyor. Ödevlerini yapmıyor, ders araç gereçlerini getirmiyor. Arkadaşlarına yardım etmeyi istemiyor.",
     "tone": "olumsuz",
-    "tags": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
   },
   {
     "id": 33,
     "content": "[Öğrenci Adı] arkadaşlık ilişkilerinde başarısız. Hiç kimseyle oynamak istemiyor ve herkesi reddediyor. Sosyal aktivitelere katılmayı reddediyor.",
     "tone": "olumsuz",
-    "tags": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sosyal uyum", "akademik stabilite"]
+    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sosyal uyum", "akademik stabilite"]
   },
   {
     "id": 34,
     "content": "[Öğrenci Adı] akademik stabilite konusunda çok geride kaldı. Hiçbir derste başarılı olamıyor ve çalışmayı reddediyor. Ödevlerini hiç yapmiyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri"]
+    "etiketler": ["akademik stabilite", "sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri"]
   },
   {
     "id": 35,
     "content": "[Öğrenci Adı] fen bilgisi dersinde deney yapmayı reddediyor. Arkadaşlarıyla çalışmayı istemiyor ve malzemeleri dağıtıyor. Güvenlik kurallarına uymuyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
+    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
   },
   {
     "id": 36,
     "content": "[Öğrenci Adı] sosyal bilgiler dersinde hiç ilgi göstermiyor. Araştırma ödevlerini yapmıyor ve arkadaşlarının çalışmalarını engelliyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
   },
   {
     "id": 37,
     "content": "[Öğrenci Adı] Türkçe dersinde yazma çalışmalarını reddediyor. Hikaye dinlemeyi sevmiyor ve arkadaşlarının yazdıklarını eleştiriyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
   },
   {
     "id": 38,
     "content": "[Öğrenci Adı] matematik dersinde hiçbir problemi çözmeye çalışmıyor. Arkadaşlarından yardım istemiyor ve öğretmen açıklamalarını dinlemiyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
   },
   {
     "id": 39,
     "content": "[Öğrenci Adı] sanat derslerinde hiçbir çalışma yapmak istemiyor. Malzemeleri israf ediyor ve arkadaşlarının eserlerini bozuyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
+    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
   },
   {
     "id": 40,
     "content": "[Öğrenci Adı] müzik dersinde şarkı söylemeyi reddediyor. Arkadaşlarının performanslarını bozuyor ve enstrümanlara zarar veriyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
+    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
   },
   {
     "id": 41,
     "content": "[Öğrenci Adı] beden eğitimi dersine hiç katılmıyor. Takım oyunlarını bozmaya çalışıyor ve fair play kurallarına uymuyor.",
     "tone": "olumsuz",
-    "tags": ["arkadaşlık ilişkileri", "sorumluluk alma", "akademik stabilite", "özgüven gelişimi"]
+    "etiketler": ["arkadaşlık ilişkileri", "sorumluluk alma", "akademik stabilite", "özgüven gelişimi"]
   },
   {
     "id": 42,
     "content": "[Öğrenci Adı] İngilizce dersinde hiç konuşmak istemiyor. Yeni kelimeler öğrenmeyi reddediyor ve arkadaşlarının çalışmalarını engelliyor.",
     "tone": "olumsuz",
-    "tags": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
+    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
   },
   {
     "id": 43,
     "content": "[Öğrenci Adı] teknoloji dersinde bilgisayarlara zarar veriyor. Arkadaşlarının projelerini silmeye çalışıyor ve kurallara uymuyor.",
     "tone": "olumsuz",
-    "tags": ["sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi"]
+    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi"]
   },
   {
     "id": 44,
     "content": "[Öğrenci Adı] sınıfta hiç arkadaş edinemiyor. Herkesi kendisinden uzaklaştırıyor ve sosyal aktivitelere katılmayı reddediyor. Özgüven eksikliği çok ciddi.",
     "tone": "olumsuz",
-    "tags": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma", "akademik stabilite"]
+    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma", "akademik stabilite"]
   },
   {
     "id": 45,
     "content": "[Öğrenci Adı] bu dönem hiçbir alanda gelişim gösteremedi. Özgüven eksikliği, sorumluluk almama ve arkadaşlık problemleri devam ediyor. Acil destek gerekiyor.",
     "tone": "olumsuz",
-    "tags": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
   }
 ]

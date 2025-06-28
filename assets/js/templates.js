@@ -8,15 +8,27 @@ class TemplateManager {
         this.aiModalToneFilter = 'all'; // AI modal için ayrı ton filtresi - tümü olarak başlat
         this.selectedGrade = 'all'; // Sınıf filtresi - başlangıç değeri
         this.selectedTerm = 'all'; // Dönem filtresi - başlangıç değeri
+        this.searchTerm = ''; // Arama terimi
         this.init();
     }
 
     async init() {
         this.bindEvents();
+        this.setupSearch();
         await this.loadTemplates();
         // İlk yükleme için ton filtresini ayarla
         this.currentToneFilter = 'olumlu';
         this.render();
+    }
+
+    setupSearch() {
+        const searchInput = document.getElementById('templateSearchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.searchTerm = e.target.value.toLowerCase().trim();
+                this.renderSuggestions();
+            });
+        }
     }
 
     bindEvents() {
@@ -39,6 +51,7 @@ class TemplateManager {
         const aiSuggestionsCloseBtn = document.getElementById('aiSuggestionsCloseBtn');
         if (aiSuggestionsCloseBtn) {
             aiSuggestionsCloseBtn.addEventListener('click', () => {
+                this.resetAITags();
                 window.ui.hideModal('aiSuggestionsModal');
             });
         }
@@ -76,6 +89,9 @@ class TemplateManager {
             }
         }
         console.log('All templates loaded:', this.templates);
+        
+        // Şablonlar yüklendikten sonra etiket filtrelerini güncelle
+        this.refreshTagFilters();
     }
 
     handleToneFilterChange(e) {
@@ -124,12 +140,22 @@ class TemplateManager {
         const grid = document.getElementById('templatesGrid');
         const templates = this.getFilteredTemplates();
 
+        // Update template count display
+        this.updateTemplateCount(templates.length);
+
         if (templates.length === 0) {
             grid.innerHTML = this.renderEmptyState();
             return;
         }
 
         grid.innerHTML = templates.map(template => this.renderTemplateCard(template)).join('');
+    }
+
+    updateTemplateCount(count) {
+        const counter = document.getElementById('templateCounter');
+        if (counter) {
+            counter.textContent = count;
+        }
     }
 
     renderTemplateCard(template) {
@@ -220,19 +246,27 @@ class TemplateManager {
     showAISuggestions() {
         // Seçili öğrenciyi al (eğer comment edit modundaysak)
         const editModal = document.getElementById('commentEditModal');
-        if (editModal && editModal.style.display !== 'none' && window.comments && window.comments.currentEditStudent) {
+        const isEditModalOpen = editModal && editModal.style.display !== 'none';
+        
+        if (isEditModalOpen && window.comments && window.comments.currentEditStudent) {
             this.setCurrentStudent(window.comments.currentEditStudent);
         }
-        
+
         // AI modal ton filtrelerini sıfırla
         this.aiModalToneFilter = 'all';
-        
+
         this.renderSelectedGradeInfo();
         this.renderAIToneFilters();
         this.renderTermFilters();
+        this.renderCurrentTags(); // Etiket gösterimini render et
+        
+        // Etiket filtrelerini en güncel verilerle yeniden oluştur
+        this.refreshTagFilters();
         this.renderTagFilters();
         this.renderSuggestions();
-        window.ui.showModal('aiSuggestionsModal');
+        
+        // Eğer edit modal açıksa, diğer modalleri kapatmadan AI modalını aç
+        window.ui.showModal('aiSuggestionsModal', isEditModalOpen);
     }
 
     renderAIToneFilters() {
@@ -353,59 +387,37 @@ class TemplateManager {
 
     renderTagFilters() {
         const container = document.getElementById('tagFilterButtons');
-        const allTags = this.getAllTags();
-        const categorizedTags = this.categorizeTagsForFilters(allTags);
+        if (!container) return;
 
-        container.innerHTML = Object.entries(categorizedTags).map(([category, tags]) => `
-            <div class="tag-category-group mb-2">
-                <button class="category-toggle w-full flex items-center justify-between bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 px-2 py-1 rounded text-xs font-medium text-gray-700 dark:text-gray-300 transition-colors duration-200" data-category="${category}">
-                    <span class="flex items-center gap-1">
-                        <i class="${this.getCategoryIcon(category)} text-xs"></i>
-                        ${category} (${tags.length})
-                    </span>
-                    <i class="fas fa-chevron-down transition-transform duration-200 text-xs"></i>
-                </button>
-                <div class="category-tags mt-1 hidden">
-                    <div class="grid grid-cols-3 gap-1 pl-2">
-                        ${tags.map(tag => `
-                            <button class="tag-filter-btn px-2 py-1 rounded text-xs transition-colors duration-200 ${
-                                this.selectedTags.includes(tag) 
-                                    ? 'bg-blue-500 text-white' 
-                                    : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800'
-                            }" data-tag="${tag}">
-                                ${tag}
-                            </button>
-                        `).join('')}
-                    </div>
-                </div>
+        // Mevcut seçime göre etiketleri al
+        const currentTags = this.getTagsForCurrentSelection();
+
+        // Her etiket için şablon sayısını hesapla
+        const tagCounts = {};
+        currentTags.forEach(tag => {
+            tagCounts[tag] = this.getTemplateCountForTag(tag);
+        });
+
+        // Etiketleri alfabetik sırala
+        const sortedTags = currentTags.sort((a, b) => a.localeCompare(b, 'tr'));
+
+        container.innerHTML = `
+            <div class="flex flex-wrap gap-2">
+                ${sortedTags.map(tag => `
+                    <button 
+                        onclick="window.templates.toggleTagFilter('${tag}')"
+                        class="tag-filter-btn px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                            this.selectedTags.includes(tag) 
+                                ? 'bg-primary text-white shadow-md' 
+                                : 'bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-500'
+                        }"
+                        title="${tag} - ${tagCounts[tag]} şablon"
+                    >
+                        ${tag} <span class="ml-1 text-xs opacity-75">(${tagCounts[tag]})</span>
+                    </button>
+                `).join('')}
             </div>
-        `).join('');
-
-        // Category toggle event listeners
-        container.querySelectorAll('.category-toggle').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const categoryTags = btn.nextElementSibling;
-                const chevron = btn.querySelector('.fa-chevron-down');
-
-                if (categoryTags.classList.contains('hidden')) {
-                    categoryTags.classList.remove('hidden');
-                    chevron.style.transform = 'rotate(180deg)';
-                } else {
-                    categoryTags.classList.add('hidden');
-                    chevron.style.transform = 'rotate(0deg)';
-                }
-            });
-        });
-
-        // Tag filter event listeners
-        container.querySelectorAll('.tag-filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                this.toggleTagFilter(e.target.dataset.tag);
-                this.renderTagFilters(); // Re-render to update visual state
-                this.renderSuggestions(); // Re-render suggestions
-            });
-        });
+        `;
     }
 
     toggleTagFilter(tag) {
@@ -415,7 +427,7 @@ class TemplateManager {
         } else {
             this.selectedTags.splice(index, 1);
         }
-        
+
         this.renderCurrentTags(); // Update current tags display
         this.renderTagFilters(); // Re-render to update visual state
         this.renderSuggestions(); // Re-render suggestions with new filter
@@ -431,12 +443,15 @@ class TemplateManager {
         const suggestions = this.getFilteredSuggestions();
         console.log('Rendering suggestions:', suggestions.length);
 
+        // Update suggestions count display
+        this.updateSuggestionsCount(suggestions.length);
+
         if (suggestions.length === 0) {
             container.innerHTML = `
                 <div class="text-center py-8">
                     <i class="fas fa-search text-gray-400 text-3xl mb-4"></i>
                     <p class="text-gray-500 dark:text-gray-400">
-                        ${this.selectedTags.length > 0 ? 'Seçili etiketlere uygun öneri bulunamadı.' : 'Şablonlar yükleniyor...'}
+                        ${this.selectedTags.length > 0 ? 'Seçili filtrelere uygun öneri bulunamadı.' : 'Şablonlar yükleniyor...'}
                     </p>
                     ${this.selectedTags.length === 0 ? `
                         <button onclick="window.templates.renderSuggestions()" class="mt-4 bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-lg">
@@ -449,6 +464,30 @@ class TemplateManager {
         }
 
         container.innerHTML = suggestions.map(suggestion => this.renderSuggestionCard(suggestion)).join('');
+    }
+
+    // Etiket filtrelerini yenileme fonksiyonu
+    refreshTagFilters() {
+        // AI modal açık ise etiket filtrelerini güncelle
+        const aiModal = document.getElementById('aiSuggestionsModal');
+        if (aiModal && aiModal.style.display !== 'none') {
+            this.renderTagFilters();
+        }
+    }
+
+    // Şablonları yeniden yükleme fonksiyonu
+    async reloadTemplates() {
+        console.log('Reloading templates...');
+        await this.loadTemplates();
+        this.render(); // Ana şablonları yeniden render et
+        
+        // AI modal açık ise önerileri de güncelle
+        const aiModal = document.getElementById('aiSuggestionsModal');
+        if (aiModal && aiModal.style.display !== 'none') {
+            this.renderSuggestions();
+        }
+        
+        console.log('Templates reloaded and updated');
     }
 
     renderSuggestionCard(suggestion) {
@@ -511,11 +550,11 @@ class TemplateManager {
         });
 
         let allTemplates = [];
-        
+
         // Sınıf filtresi kontrolü - önce sınıf filtresini uygula
         const gradeFilter = this.selectedGrade || 'all';
         const termFilter = this.selectedTerm || 'all';
-        
+
         console.log('Applied filters:', { gradeFilter, termFilter });
 
         // Şablonları topla
@@ -564,6 +603,19 @@ class TemplateManager {
             console.log(`After tone filter: ${allTemplates.length}`);
         }
 
+        // Arama terimi filtresi uygula
+        if (this.searchTerm) {
+            allTemplates = allTemplates.filter(template => {
+                const content = (template.content || template.icerik || '').toLowerCase();
+                const tags = template.etiketler || template.tags || [];
+                const tagString = tags.join(' ').toLowerCase();
+                
+                return content.includes(this.searchTerm) || 
+                       tagString.includes(this.searchTerm);
+            });
+            console.log(`After search filter: ${allTemplates.length}`);
+        }
+
         // Etiket filtresi yoksa ilk 20'yi döndür
         if (this.selectedTags.length === 0) {
             return allTemplates.slice(0, 20);
@@ -571,9 +623,10 @@ class TemplateManager {
 
         // Etiket filtresi uygula
         const tagFilteredResults = allTemplates.filter(template => {
-            if (!template.etiketler || template.etiketler.length === 0) return false;
+            const templateTags = template.etiketler || template.tags;
+            if (!templateTags || templateTags.length === 0) return false;
             return this.selectedTags.some(selectedTag => 
-                template.etiketler.includes(selectedTag)
+                templateTags.includes(selectedTag)
             );
         });
 
@@ -587,8 +640,8 @@ class TemplateManager {
         Object.values(this.templates).forEach(gradeTemplates => {
             if (gradeTemplates && gradeTemplates.yorumlar) {
                 gradeTemplates.yorumlar.forEach(template => {
-                    const tags = template.tags || template.etiketler;
-                    if (tags && tags.length > 0) {
+                    const tags = template.etiketler || template.tags;
+                    if (tags && Array.isArray(tags)) {
                         tags.forEach(tag => allTags.add(tag));
                     }
                 });
@@ -596,6 +649,149 @@ class TemplateManager {
         });
 
         return Array.from(allTags).sort();
+    }
+
+    // Seçilen sınıf ve dönemdeki şablonların etiketlerini getir
+    getTagsForCurrentSelection() {
+        const tags = new Set();
+        const gradeFilter = this.selectedGrade || 'all';
+        const termFilter = this.selectedTerm || 'all';
+
+        if (gradeFilter === 'all') {
+            // Tüm sınıflar seçili
+            if (termFilter === 'all') {
+                // Tüm dönemler
+                ['5_1', '5_2', '6_1', '6_2', '7_1', '7_2', '8_1', '8_2'].forEach(key => {
+                    if (this.templates[key] && this.templates[key].yorumlar) {
+                        this.templates[key].yorumlar.forEach(template => {
+                            const templateTags = template.etiketler || template.tags;
+                            if (templateTags && Array.isArray(templateTags)) {
+                                templateTags.forEach(tag => tags.add(tag));
+                            }
+                        });
+                    }
+                });
+            } else {
+                // Belirli dönem, tüm sınıflar
+                ['5', '6', '7', '8'].forEach(grade => {
+                    const key = `${grade}_${termFilter}`;
+                    if (this.templates[key] && this.templates[key].yorumlar) {
+                        this.templates[key].yorumlar.forEach(template => {
+                            const templateTags = template.etiketler || template.tags;
+                            if (templateTags && Array.isArray(templateTags)) {
+                                templateTags.forEach(tag => tags.add(tag));
+                            }
+                        });
+                    }
+                });
+            }
+        } else {
+            // Belirli sınıf seçili
+            if (termFilter === 'all') {
+                // Tüm dönemler, belirli sınıf
+                ['1', '2'].forEach(term => {
+                    const key = `${gradeFilter}_${term}`;
+                    if (this.templates[key] && this.templates[key].yorumlar) {
+                        this.templates[key].yorumlar.forEach(template => {
+                            const templateTags = template.etiketler || template.tags;
+                            if (templateTags && Array.isArray(templateTags)) {
+                                templateTags.forEach(tag => tags.add(tag));
+                            }
+                        });
+                    }
+                });
+            } else {
+                // Belirli sınıf ve dönem
+                const key = `${gradeFilter}_${termFilter}`;
+                if (this.templates[key] && this.templates[key].yorumlar) {
+                    this.templates[key].yorumlar.forEach(template => {
+                        const templateTags = template.etiketler || template.tags;
+                        if (templateTags && Array.isArray(templateTags)) {
+                            templateTags.forEach(tag => tags.add(tag));
+                        }
+                    });
+                }
+            }
+        }
+
+        return Array.from(tags);
+    }
+
+    getTemplateCountForTag(tag) {
+        const gradeFilter = this.selectedGrade || 'all';
+        const termFilter = this.selectedTerm || 'all';
+        let count = 0;
+
+        if (gradeFilter === 'all') {
+            // Tüm sınıflar seçili
+            if (termFilter === 'all') {
+                // Tüm dönemler
+                ['5_1', '5_2', '6_1', '6_2', '7_1', '7_2', '8_1', '8_2'].forEach(key => {
+                    if (this.templates[key] && this.templates[key].yorumlar) {
+                        this.templates[key].yorumlar.forEach(template => {
+                            const templateTags = template.etiketler || template.tags;
+                            if (templateTags && templateTags.includes(tag)) {
+                                // Ton filtresini de kontrol et
+                                if (this.aiModalToneFilter === 'all' || (template.tone || template.ton) === this.aiModalToneFilter) {
+                                    count++;
+                                }
+                            }
+                        });
+                    }
+                });
+            } else {
+                // Belirli dönem, tüm sınıflar
+                ['5', '6', '7', '8'].forEach(grade => {
+                    const key = `${grade}_${termFilter}`;
+                    if (this.templates[key] && this.templates[key].yorumlar) {
+                        this.templates[key].yorumlar.forEach(template => {
+                            const templateTags = template.etiketler || template.tags;
+                            if (templateTags && templateTags.includes(tag)) {
+                                // Ton filtresini de kontrol et
+                                if (this.aiModalToneFilter === 'all' || (template.tone || template.ton) === this.aiModalToneFilter) {
+                                    count++;
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        } else {
+            // Belirli sınıf seçili
+            if (termFilter === 'all') {
+                // Tüm dönemler, belirli sınıf
+                ['1', '2'].forEach(term => {
+                    const key = `${gradeFilter}_${term}`;
+                    if (this.templates[key] && this.templates[key].yorumlar) {
+                        this.templates[key].yorumlar.forEach(template => {
+                            const templateTags = template.etiketler || template.tags;
+                            if (templateTags && templateTags.includes(tag)) {
+                                // Ton filtresini de kontrol et
+                                if (this.aiModalToneFilter === 'all' || (template.tone || template.ton) === this.aiModalToneFilter) {
+                                    count++;
+                                }
+                            }
+                        });
+                    }
+                });
+            } else {
+                // Belirli sınıf ve dönem
+                const key = `${gradeFilter}_${termFilter}`;
+                if (this.templates[key] && this.templates[key].yorumlar) {
+                    this.templates[key].yorumlar.forEach(template => {
+                        const templateTags = template.etiketler || template.tags;
+                        if (templateTags && templateTags.includes(tag)) {
+                            // Ton filtresini de kontrol et
+                            if (this.aiModalToneFilter === 'all' || (template.tone || template.ton) === this.aiModalToneFilter) {
+                                count++;
+                            }
+                        }
+                    });
+                }
+            }
+        }
+
+        return count;
     }
 
     categorizeTagsForFilters(tags) {
@@ -677,7 +873,7 @@ class TemplateManager {
                     t.ton === suggestion.ton &&
                     JSON.stringify(t.etiketler || []) === JSON.stringify(suggestion.etiketler || [])
                 );
-                
+
                 if (found) {
                     const [grade, term] = key.split('_');
                     return { grade, term };
@@ -697,10 +893,10 @@ class TemplateManager {
             if (templateData && templateData.yorumlar) {
                 const found = templateData.yorumlar.find(t => 
                     (t.icerik || t.content) === templateContent && 
-                    (t.ton || t.tone) === templateTone &&
+(t.ton || t.tone) === templateTone &&
                     JSON.stringify(t.etiketler || t.tags || []) === JSON.stringify(templateTags)
                 );
-                
+
                 if (found) {
                     const [grade, term] = key.split('_');
                     return { grade, term };
@@ -734,13 +930,13 @@ class TemplateManager {
 
     selectSuggestion(id) {
         console.log('selectSuggestion called with id:', id);
-        
+
         // AI önerilerinden şablonu bul
         const suggestions = this.getFilteredSuggestions();
         console.log('Available suggestions:', suggestions);
-        
+
         const suggestion = suggestions.find(t => t.id == id);
-        
+
         if (!suggestion) {
             console.error('Suggestion not found with id:', id);
             window.ui.showToast('Öneri bulunamadı!', 'error');
@@ -748,13 +944,17 @@ class TemplateManager {
         }
 
         console.log('Found suggestion:', suggestion);
-        window.ui.hideModal('aiSuggestionsModal');
-
-        // Check if we're in comment edit mode
+        
+        // Check if we're in comment edit mode BEFORE closing any modals
         const editModal = document.getElementById('commentEditModal');
         const editTextarea = document.querySelector('#commentEditForm textarea[name="content"]');
+        const isEditMode = editModal && editModal.style.display === 'flex' && editTextarea;
 
-        if (editModal && editModal.style.display !== 'none' && editTextarea) {
+        console.log('Edit mode check:', isEditMode);
+        console.log('Edit modal display:', editModal ? editModal.style.display : 'modal not found');
+        console.log('Edit textarea found:', !!editTextarea);
+
+        if (isEditMode) {
             // Edit mode - populate edit textarea
             let content = suggestion.content || suggestion.icerik;
 
@@ -780,21 +980,34 @@ class TemplateManager {
                 }
             }
 
+            // AI modal'ını düzgün şekilde kapat - sadece AI modalını
+            window.ui.hideModalOnly('aiSuggestionsModal');
+            
+            // Focus ver
+            setTimeout(() => {
+                editTextarea.focus();
+                // Textarea'nın sonuna git
+                editTextarea.setSelectionRange(editTextarea.value.length, editTextarea.value.length);
+            }, 100);
+
             window.ui.showToast('Öneri aktarıldı!', 'success');
             return;
         }
+
+        // Regular comment mode için AI modal'ını normal şekilde kapat
+        window.ui.hideModal('aiSuggestionsModal');
 
         // Regular comment mode
         const textarea = document.getElementById('commentText');
         if (textarea) {
             let content = suggestion.content || suggestion.icerik;
-            
+
             // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
             if (this.currentStudent) {
                 const firstName = this.currentStudent.name.split(' ')[0];
                 content = content.replace(/\[Öğrenci Adı\]/g, firstName);
             }
-            
+
             textarea.value = content;
             textarea.focus();
 
@@ -808,7 +1021,7 @@ class TemplateManager {
                     tags.forEach(tag => window.comments.addTag(tag));
                 }
             }
-            
+
             window.ui.showToast('Öneri aktarıldı!', 'success');
         }
     }
@@ -861,8 +1074,11 @@ class TemplateManager {
         // Check if we're in comment edit mode
         const editModal = document.getElementById('commentEditModal');
         const editTextarea = document.querySelector('#commentEditForm textarea[name="content"]');
+        const isEditMode = editModal && editModal.style.display !== 'none' && editTextarea;
 
-        if (editModal && editModal.style.display !== 'none' && editTextarea) {
+        console.log('useTemplate - Edit mode check:', isEditMode);
+
+        if (isEditMode) {
             // Edit mode - populate edit textarea
             let content = templateContent;
 
@@ -888,6 +1104,11 @@ class TemplateManager {
                 }
             }
 
+            // Edit modal focus ver - edit modalı zaten açık olduğu için sadece focus ver
+            setTimeout(() => {
+                editTextarea.focus();
+            }, 100);
+
             window.ui.showToast('Şablon aktarıldı!', 'success');
             return;
         }
@@ -896,13 +1117,13 @@ class TemplateManager {
         const textarea = document.getElementById('commentText');
         if (textarea) {
             let content = templateContent;
-            
+
             // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
             if (this.currentStudent) {
                 const firstName = this.currentStudent.name.split(' ')[0];
                 content = content.replace(/\[Öğrenci Adı\]/g, firstName);
             }
-            
+
             textarea.value = content;
             textarea.focus();
 
@@ -915,7 +1136,7 @@ class TemplateManager {
                     templateTags.forEach(tag => window.comments.addTag(tag));
                 }
             }
-            
+
             window.ui.showToast('Şablon aktarıldı!', 'success');
         }
     }
@@ -963,6 +1184,91 @@ class TemplateManager {
             'olumsuz': 'hover:bg-red-100 dark:hover:bg-red-900/30'
         };
         return colors[tone] || 'hover:bg-gray-100 dark:hover:bg-gray-600';
+    }
+
+    resetAITags() {
+        this.selectedTags = [];
+        this.aiModalToneFilter = 'all';
+        this.renderCurrentTags();
+        this.renderTagFilters();
+        this.renderSuggestions();
+    }
+
+    updateSuggestionsCount(count) {
+        const counter = document.getElementById('suggestionsCounter');
+        if (counter) {
+            counter.textContent = count;
+        }
+    }
+
+    renderAISuggestions() {
+        const container = document.getElementById('aiSuggestionsContent');
+        if (!container) return;
+
+        const suggestions = this.getFilteredSuggestions();
+
+        // Render tone filters
+        const toneFiltersHtml = `
+            <div class="flex flex-wrap gap-2 mb-4">
+                <button class="ai-tone-filter ${this.aiModalToneFilter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} px-3 py-1 rounded text-sm" data-tone="all">Tümü</button>
+                <button class="ai-tone-filter ${this.aiModalToneFilter === 'olumlu' ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700'} px-3 py-1 rounded text-sm" data-tone="olumlu">Olumlu</button>
+                <button class="ai-tone-filter ${this.aiModalToneFilter === 'notr' ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-700'} px-3 py-1 rounded text-sm" data-tone="notr">Nötr</button>
+                <button class="ai-tone-filter ${this.aiModalToneFilter === 'olumsuz' ? 'bg-red-500 text-white' : 'bg-gray-200 text-gray-700'} px-3 py-1 rounded text-sm" data-tone="olumsuz">Olumsuz</button>
+            </div>
+        `;
+
+        // Seçilen öğrenci/dönemin etiketlerini al
+        const availableTags = this.getTagsForCurrentSelection();
+
+        // Seçili etiketleri göster
+        const selectedTagsHtml = this.selectedTags.length > 0 ? `
+            <div class="mb-3">
+                <h4 class="text-sm font-medium mb-1">Seçili Etiketler:</h4>
+                <div class="flex flex-wrap gap-1">
+                    ${this.selectedTags.map(tag => `
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-800">
+                            ${tag}
+                            <button class="ml-1 text-blue-600 hover:text-blue-800" onclick="window.templates.toggleTagFilter('${tag}')">
+                                <i class="fas fa-times text-xs"></i>
+                            </button>
+                        </span>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
+
+        // Render tag filters
+        const tagFiltersHtml = `
+            <div class="mb-4">
+                <h4 class="text-sm font-medium mb-2">Mevcut Etiketler:</h4>
+                <div class="flex flex-wrap gap-1 max-h-32 overflow-y-auto">
+                    ${availableTags.map(tag => `
+                        <button class="tag-filter ${this.selectedTags.includes(tag) ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} px-2 py-1 rounded-full text-xs hover:bg-blue-400" 
+                                data-tag="${tag}">
+                            ${tag}
+                        </button>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = `
+            ${toneFiltersHtml}
+            ${selectedTagsHtml}
+            ${tagFiltersHtml}
+            <div class="grid gap-3">
+                ${suggestions.map(suggestion => this.renderSuggestionCard(suggestion)).join('')}
+            </div>
+        `;
+
+        // Bind tag filter events
+        container.querySelectorAll('.tag-filter').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const tag = e.target.dataset.tag;
+                this.toggleTagFilter(tag);
+                this.renderSuggestions(); // Re-render suggestions
+            });
+        });
     }
 }
 

@@ -4,180 +4,180 @@
     "id": 1,
     "content": "[Öğrenci Adı] LGS stresi karşısında etkili başa çıkma stratejileri geliştirdi. Ciddi akademik hazırlık sürecinde disiplinli çalışma alışkanlıkları sergiliyor, gelecek kaygısını motivasyon kaynağına dönüştürüyor ve düzenli çalışma rutinlerini başarıyla sürdürüyor.",
     "tone": "olumlu",
-    "tags": ["LGS stresi", "ciddi akademik hazırlık", "gelecek kaygısı", "disiplinli çalışma"]
+    "etiketler": ["LGS hazırlık", "disiplinli çalışma", "motivasyon", "düzenli rutin"]
   },
   {
     "id": 2,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık konusunda sistemli yaklaşım benimsiyor. LGS stratejilerini geliştirme yeteneği gelişmiş, zaman yönetimi konusunda uzmanlaşmış ve gelecek planlamasında gerçekçi hedefler koyarak disiplinli çalışma yöntemi geliştirdi.",
     "tone": "olumlu",
-    "tags": ["sistemli akademik hazırlık", "LGS geliştirme", "zaman yönetimi uzmanlaşması", "gerçekçi gelecek hedefleri"]
+    "etiketler": ["sistemli çalışma", "LGS stratejisi", "zaman yönetimi", "hedef belirleme"]
   },
   {
     "id": 3,
     "content": "[Öğrenci Adı] gelecek kaygısını yapıcı kaygı olarak yönetiyor. Performans kaygısını en iyi performansa dönüştürme becerisi güçlü, stres yönetimi teknikleri etkili kullanıyor ve akademik zorluklara karşı dayanıklılık gösteriyor.",
     "tone": "olumlu",
-    "tags": ["yapıcı kaygı", "performans kaygısı yönetimi", "stres yönetimi", "akademik dayanıklılık"]
+    "etiketler": ["kaygı yönetimi", "stres kontrolü", "dayanıklılık", "performans"]
   },
   {
     "id": 4,
     "content": "[Öğrenci Adı] disiplinli çalışma konusunda kendini düzenleme becerisinde ustalaşma sergiliyor. Dikkat dağıtıcı unsurları yönetme becerilerinde uzmanlaşmış, odaklanma sürdürme stratejileri geliştirmiş ve uzun vadeli hedef bağlılığı göstererek akademik mükemmelliğe odaklanmış.",
     "tone": "olumlu",
-    "tags": ["kendini düzenleme becerisinde ustalaşma", "dikkat dağıtıcı yönetimi", "odaklanma sürdürme", "uzun vadeli hedef bağlılığı"]
+    "etiketler": ["öz disiplin", "odaklanma", "dikkat kontrolü", "hedef odaklılık"]
   },
   {
     "id": 5,
     "content": "[Öğrenci Adı] LGS stresi ve akademik baskıyı dengeli bakış açısı ile yönetiyor. Bütüncül iyilik yaklaşımı benimsiyor, zihinsel sağlık farkındalığı yüksek ve sürdürülebilir çalışma alışkanlıkları geliştirerek sağlıklı rekabet zihniyeti sergiliyor.",
     "tone": "olumlu",
-    "tags": ["dengeli LGS bakış açısı", "bütüncül iyilik", "zihinsel sağlık farkındalığı", "sürdürülebilir çalışma alışkanlıkları"]
+    "etiketler": ["dengeli yaklaşım", "zihinsel sağlık", "sürdürülebilir çalışma", "sağlıklı rekabet"]
   },
   {
     "id": 6,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde liderlik özellikleri gösteriyor. Çalışma grubu koordinasyonu yetenekleri güçlü, akran destek sistemleri oluşturmada başarılı ve işbirlikçi öğrenme yaklaşımları geliştirerek akademik topluluk oluşturuyor.",
     "tone": "olumlu",
-    "tags": ["akademik liderlik", "çalışma grubu koordinasyonu", "akran destek sistemleri", "işbirlikçi öğrenme"]
+    "etiketler": ["liderlik", "grup çalışması", "işbirliği", "akran desteği"]
   },
   {
     "id": 7,
     "content": "[Öğrenci Adı] gelecek kaygısını stratejik planlamaya dönüştürüyor. Kariyer yolu keşfetme yetenekleri gelişmiş, hedef koyma becerileri yüksek ve gelecek görme becerilerinde uzmanlaşarak proaktif gelecek hazırlığı yapıyor.",
     "tone": "olumlu",
-    "tags": ["stratejik gelecek planlaması", "kariyer yolu keşfetme", "gelişmiş hedef koyma", "proaktif hazırlık"]
+    "etiketler": ["gelecek planlama", "kariyer odaklı", "stratejik düşünme", "proaktif yaklaşım"]
   },
   {
     "id": 8,
     "content": "[Öğrenci Adı] disiplinli çalışma konusunda yenilikçilik ve verimlilik entegrasyonu başarılı. Akıllı çalışma teknikleri geliştirmiş, verimlilik artırma konusunda yaratıcı, etkili öğrenme stratejileri kullanıyor ve akademik performans artırımı sağlıyor.",
     "tone": "olumlu",
-    "tags": ["çalışma yenilikçiliği", "verimlilik artırma", "etkili öğrenme stratejileri", "performans artırımı"]
+    "etiketler": ["verimli çalışma", "akıllı teknikler", "yaratıcılık", "performans artışı"]
   },
   {
     "id": 9,
     "content": "[Öğrenci Adı] LGS stresini büyüme fırsatı olarak değerlendiriyor. Meydan okumayı kucaklama tutumu güçlü, zorluklarla başa çıkma becerileri gelişmiş ve baskıyı performansa dönüştürme konusunda başarılı bir dönüşüm sergiliyor.",
     "tone": "olumlu",
-    "tags": ["büyüme fırsatı zihniyeti", "meydan okumayı kucaklama", "zorluklarla başa çıkma", "baskı-performans dönüştürme"]
+    "etiketler": ["büyüme odaklı", "meydan okuma", "zorluk yönetimi", "dönüşüm"]
   },
   {
     "id": 10,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde duygusal zeka uygulama konusunda mükemmel. Kendini tanıma ve kendini yönetme dengeleme yeteneği güçlü, sosyal farkındalığı korumada başarılı ve ilişki yönetimi becerilerini akademik ortamda etkili kullanıyor.",
     "tone": "olumlu",
-    "tags": ["akademik duygusal zeka", "kendini tanıma dengesi", "sosyal farkındalık koruma", "akademik ilişki yönetimi"]
+    "etiketler": ["duygusal zeka", "öz farkındalık", "sosyal beceri", "ilişki yönetimi"]
   },
   {
     "id": 11,
     "content": "[Öğrenci Adı] gelecek kaygısı ve LGS stresi konularında üst bilişsel stratejiler geliştirdi. Nasıl öğrenileceğini öğrenme konusunda uzmanlaşmış, bilişsel yük yönetimi etkili ve çalışma etkinliği izleme sistemleri kurmuş.",
     "tone": "olumlu",
-    "tags": ["üst bilişsel stratejiler", "nasıl öğrenileceğini öğrenme", "bilişsel yük yönetimi", "çalışma etkinliği izleme"]
+    "etiketler": ["öğrenme stratejisi", "bilişsel yönetim", "etkililik", "izleme sistemi"]
   },
   {
     "id": 12,
     "content": "[Öğrenci Adı] disiplinli çalışma konusunda sürdürülebilir mükemmellik yaklaşımı benimsiyor. İş-yaşam dengesi koruma becerilerinde başarılı, tükenmişlik önleme stratejileri etkili ve uzun vadeli akademik sürdürülebilirlik sağlayarak sağlıklı başarı zihniyeti geliştirdi.",
     "tone": "olumlu",
-    "tags": ["sürdürülebilir akademik mükemmellik", "iş-yaşam dengesi", "tükenmişlik önleme", "sağlıklı başarı"]
+    "etiketler": ["sürdürülebilirlik", "denge", "tükenmişlik önleme", "sağlıklı başarı"]
   },
   {
     "id": 13,
     "content": "[Öğrenci Adı] LGS stresi karşısında uyarlanabilir başa çıkma mekanizmaları geliştirdi. Stresi güce dönüştürme yetenekleri güçlü, baskı yönetimi gelişmiş ve krizi fırsata dönüştürme konusunda yaratıcı yaklaşımlar sergiliyor.",
     "tone": "olumlu",
-    "tags": ["uyarlanabilir başa çıkma", "stres-güç dönüştürme", "gelişmiş baskı yönetimi", "kriz-fırsat dönüştürme"]
+    "etiketler": ["uyum yeteneği", "stres yönetimi", "baskı kontrolü", "fırsat yaratma"]
   },
   {
     "id": 14,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık ve gelecek planlama konularında entegre ustalaşma sergiliyor. Kapsamlı hazırlık stratejileri gelişmiş, çok boyutlu hedef başarma yaklaşımı benimsiyor ve bütüncül başarı tanımı oluşturmuş.",
     "tone": "olumlu",
-    "tags": ["entegre akademik ustalaşma", "kapsamlı hazırlık", "çok boyutlu başarma", "bütüncül başarı"]
+    "etiketler": ["bütüncül yaklaşım", "kapsamlı hazırlık", "çok boyutlu hedef", "entegre başarı"]
   },
   {
     "id": 15,
     "content": "[Öğrenci Adı] LGS stresi, akademik hazırlık ve gelecek kaygısı konularında örnek yönetim sergiliyor. Baskı altında en iyi performans yetenekleri mükemmel, örnekle liderlik gösteriyor ve ilham verici akademik yolculuk yaratarak rol model davranışlar sergiliyor.",
     "tone": "olumlu",
-    "tags": ["örnek stres yönetimi", "baskı altında en iyi performans", "örnekle liderlik", "ilham verici akademik yolculuk"]
+    "etiketler": ["örnek davranış", "baskı altında başarı", "liderlik", "rol model"]
   },
   {
     "id": 16,
     "content": "[Öğrenci Adı] LGS stresi karşısında ortalama düzeyde başa çıkma gösteriyor. Ciddi akademik hazırlık sürecinde tutarsızlık yaşıyor, gelecek kaygısında dalgalanmalar bulunuyor ve disiplinli çalışma alışkanlıklarında eksiklikler gözleniyor.",
     "tone": "notr",
-    "tags": ["ortalama LGS başa çıkma", "akademik hazırlık tutarsızlığı", "gelecek kaygısı dalgalanmaları", "disiplin eksiklikleri"]
+    "etiketler": ["ortalama başarı", "tutarsızlık", "kaygı dalgalanması", "disiplin eksikliği"]
   },
   {
     "id": 17,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık konusunda değişken performans sergiliyor. LGS stresini yönetme konusunda zorluklar yaşıyor, disiplinli çalışma rutinlerinde düzensizlik gösteriyor ve gelecek planlamasında belirsizlik bulunuyor.",
     "tone": "notr",
-    "tags": ["değişken akademik performans", "LGS stres yönetim zorlukları", "çalışma rutini düzensizliği", "gelecek planlama belirsizliği"]
+    "etiketler": ["değişken performans", "stres zorluğu", "rutin düzensizliği", "planlama belirsizliği"]
   },
   {
     "id": 18,
     "content": "[Öğrenci Adı] gelecek kaygısını yönetme konusunda zorlanmalar yaşıyor. LGS stresi altında motivasyon düşüşleri gözleniyor, akademik odaklanma problemleri bulunuyor ve disiplinli çalışma konusunda kararsızlık sergiliyor.",
     "tone": "notr",
-    "tags": ["gelecek kaygısı yönetim zorlanmaları", "LGS motivasyon düşüşleri", "akademik odaklanma problemleri", "disiplin kararsızlığı"]
+    "etiketler": ["kaygı zorluğu", "motivasyon düşüşü", "odaklanma sorunu", "kararsızlık"]
   },
   {
     "id": 19,
     "content": "[Öğrenci Adı] disiplinli çalışma konusunda beklenenin altında performans gösteriyor. LGS hazırlık sürecinde erteleme eğilimleri belirgin, zaman yönetimi problemleri mevcut ve gelecek kaygısı akademik performansı olumsuz etkiliyor.",
     "tone": "notr",
-    "tags": ["beklenti altı disiplin performansı", "LGS erteleme", "zaman yönetimi problemleri", "kaygı-performans olumsuz etkisi"]
+    "etiketler": ["düşük performans", "erteleme", "zaman sorunu", "olumsuz etki"]
   },
   {
     "id": 20,
     "content": "[Öğrenci Adı] LGS stresi karşısında uyum problemleri yaşıyor. Ciddi akademik beklentileri karşılama konusunda yetersizlik gösteriyor, stres yönetimi becerilerinde eksiklik bulunuyor ve disiplinli çalışma motivasyonunda düşüşler gözleniyor.",
     "tone": "notr",
-    "tags": ["LGS uyum problemleri", "akademik beklenti yetersizliği", "stres yönetimi eksikliği", "disiplin motivasyon düşüşü"]
+    "etiketler": ["uyum sorunu", "beklenti yetersizliği", "stres eksikliği", "motivasyon kaybı"]
   },
   {
     "id": 21,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde ciddi zorlanmalar yaşıyor. LGS stresini verimli kaygıya dönüştüremiyor, gelecek kaygısı bunaltıcı seviyeye ulaşıyor ve çalışma disiplini çözülme eğilimi gösteriyor.",
     "tone": "notr",
-    "tags": ["ciddi akademik zorlanmalar", "verimli kaygı dönüştürememe", "bunaltıcı gelecek kaygısı", "çalışma disiplini çözülmesi"]
+    "etiketler": ["ciddi zorluk", "stres dönüşüm sorunu", "bunaltıcı kaygı", "disiplin çözülmesi"]
   },
   {
     "id": 22,
     "content": "[Öğrenci Adı] gelecek kaygısı ve LGS stresi konularında işlevsizlik gösteriyor. Akademik felç yaşıyor, çalışma motivasyon kaybı belirgin ve disiplinli çalışma kapasitesinde ciddi azalma gözleniyor.",
     "tone": "notr",
-    "tags": ["gelecek kaygısı işlevsizliği", "akademik felç", "çalışma motivasyon kaybı", "disiplin kapasitesi azalması"]
+    "etiketler": ["işlevsizlik", "akademik felç", "motivasyon kaybı", "kapasite azalması"]
   },
   {
     "id": 23,
     "content": "[Öğrenci Adı] disiplinli çalışma konusunda çöküş belirtileri gösteriyor. LGS stresi bunaltıcı seviyede, akademik performansta düşüş belirgin ve gelecek kaygısı panik seviyelerine ulaşarak günlük işlevselliği etkiliyor.",
     "tone": "notr",
-    "tags": ["disiplin çöküşü", "LGS stres bunalımı", "akademik performans düşüşü", "panik seviyesi gelecek kaygısı"]
+    "etiketler": ["çöküş belirtisi", "bunaltıcı stres", "performans düşüşü", "panik seviyesi"]
   },
   {
     "id": 24,
     "content": "[Öğrenci Adı] LGS stresi ve akademik baskı karşısında başa çıkma mekanizmaları başarısızlığı yaşıyor. Disiplinli çalışma tamamen bozulmuş, gelecek kaygısı etkisiz kılıcı seviyeye ulaşmış ve akademik işlevsellik ciddi şekilde zarar görmüş durumda.",
     "tone": "notr",
-    "tags": ["başa çıkma mekanizmaları başarısızlığı", "tamamen bozulmuş disiplin", "etkisiz kılıcı gelecek kaygısı", "zarar görmüş akademik işlevsellik"]
+    "etiketler": ["başa çıkma başarısızlığı", "bozulmuş disiplin", "etkisiz kılıcı kaygı", "zarar görmüş işlev"]
   },
   {
     "id": 25,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık ve LGS stresi konularında kritik seviyede sorunlar yaşıyor. Çalışma felci durumu, disiplinli çalışma kapasitesi kaybolmuş ve gelecek kaygısı güçsüz kılıcı seviyeye ulaşarak tüm yaşam alanlarını etkiliyor.",
     "tone": "notr",
-    "tags": ["kritik akademik-stres sorunları", "çalışma felci", "kaybolmuş disiplin kapasitesi", "güçsüz kılıcı gelecek kaygısı"]
+    "etiketler": ["kritik sorun", "çalışma felci", "kaybolmuş kapasite", "güçsüz kılıcı kaygı"]
   },
   {
     "id": 26,
     "content": "[Öğrenci Adı] LGS stresi karşısında tamamen çöküş yaşıyor. Ciddi akademik hazırlık kapasitesi kaybolmuş, disiplinli çalışma becerileri çözülmüş ve gelecek kaygısı kronik kaygı bozukluğuna dönüşmüş. Acil uzman müdahale gereksinimi var.",
     "tone": "olumsuz",
-    "tags": ["tam LGS çöküşü", "kaybolmuş akademik hazırlık kapasitesi", "çözülmüş disiplin becerileri", "kronik kaygı bozukluğu"]
+    "etiketler": ["tam çöküş", "kaybolmuş kapasite", "çözülmüş beceri", "kronik kaygı"]
   },
   {
     "id": 27,
     "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde tam çöküş yaşıyor. LGS stresi panik bozukluğu seviyesine ulaşmış, disiplinli çalışma tamamen imkansız hale gelmiş ve gelecek kaygısı varoluşsal kriz yaratmış. Çok yönlü acil müdahale gereksinimi var.",
     "tone": "olumsuz",
-    "tags": ["tam akademik çöküş", "panik bozukluğu seviyesi LGS stresi", "imkansız disiplinli çalışma", "varoluşsal kriz"]
+    "etiketler": ["tam çöküş", "panik bozukluğu", "imkansız çalışma", "varoluşsal kriz"]
   },
   {
     "id": 28,
     "content": "[Öğrenci Adı] gelecek kaygısı ve LGS stresi açısından kritik ruhsal durumda bulunuyor. Akademik işlevsellik tamamen çökmüş, disiplinli çalışma kapasitesi yok olmuş ve şiddetli kaygı belirtileri tüm yaşam alanlarını ele geçirmiş.",
     "tone": "olumsuz",
-    "tags": ["kritik ruhsal durum", "tam akademik çöküş", "yok olmuş disiplin kapasitesi", "şiddetli kaygı belirtileri"]
+    "etiketler": ["kritik ruhsal durum", "tam çöküş", "yok olmuş kapasite", "şiddetli kaygı"]
   },
   {
     "id": 29,
     "content": "[Öğrenci Adı] LGS stresi, akademik hazırlık ve gelecek kaygısı açısından telafisi zor hasarlar almış. Disiplinli çalışma becerileri tamamen bozulmuş, zihinsel sağlık kritik şekilde zarar görmüş ve akademik yol tamamen raydan çıkmış durumda.",
     "tone": "olumsuz",
-    "tags": ["telafisi zor çok alan hasarı", "tamamen bozulmuş disiplin becerileri", "kritik zarar görmüş zihinsel sağlık", "raydan çıkmış akademik yol"]
+    "etiketler": ["telafisi zor hasar", "bozulmuş beceri", "kritik zihinsel zarar", "raydan çıkmış"]
   },
   {
     "id": 30,
     "content": "[Öğrenci Adı] LGS stresi ve ciddi akademik hazırlık konularında kritik acil durumda bulunuyor. Disiplinli çalışma kapasitesi tamamen kaybolmuş, gelecek kaygısı şiddetli zihinsel sağlık krizi yaratmış ve acil ruhsal müdahale gerektiren durumda bulunuyor.",
     "tone": "olumsuz",
-    "tags": ["kritik acil durum", "tamamen kaybolmuş disiplin kapasitesi", "şiddetli zihinsel sağlık krizi", "acil ruhsal müdahale"]
+    "etiketler": ["kritik acil durum", "kaybolmuş kapasite", "zihinsel sağlık krizi", "acil müdahale"]
   }
 ]

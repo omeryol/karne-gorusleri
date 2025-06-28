@@ -17,8 +17,37 @@ class App {
         // İlk yükleme ve tab navigation setup
         setTimeout(() => {
             debugLog('Running delayed initialization');
-            this.dashboard.updateStats();
-            this.tabs.switchTo('dashboard');
+            try {
+                // Check tab content elements exist
+                const dashboardTab = document.getElementById('dashboard-tab');
+                debugLog(`[INIT] Dashboard tab element exists: ${!!dashboardTab}`);
+                if (dashboardTab) {
+                    debugLog(`[INIT] Dashboard tab classes: ${dashboardTab.className}`);
+                    debugLog(`[INIT] Dashboard tab display: ${dashboardTab.style.display}`);
+                }
+
+                // List all tab content elements
+                const allTabContents = document.querySelectorAll('.tab-content');
+                debugLog(`[INIT] Found ${allTabContents.length} tab content elements`);
+                allTabContents.forEach((tab, index) => {
+                    debugLog(`[INIT] Tab ${index}: ${tab.id}, classes: ${tab.className}, display: ${tab.style.display}`);
+                });
+
+                if (this.dashboard && typeof this.dashboard.updateStats === 'function') {
+                    this.dashboard.updateStats();
+                    debugLog('Dashboard stats updated');
+                }
+                if (this.tabs && typeof this.tabs.switchTo === 'function') {
+                    debugLog('Switching to dashboard tab');
+                    this.tabs.switchTo('dashboard');
+                } else {
+                    debugLog('ERROR: tabs.switchTo not available');
+                }
+                debugLog('Delayed initialization completed successfully');
+            } catch (error) {
+                debugLog('ERROR in delayed initialization:', error);
+                debugLog('Error stack:', error.stack);
+            }
         }, 100);
 
         debugLog('App.init() completed');
@@ -142,19 +171,26 @@ class App {
     }
 
     initializeComponents() {
-        // Tab yönetimi
-        this.tabs = new TabManager();
+        try {
+            // Tab yönetimi
+            this.tabs = new TabManager();
+            debugLog('TabManager created successfully');
 
-        // Dashboard yönetimi
-        this.dashboard = new DashboardManager();
+            // Dashboard yönetimi
+            this.dashboard = new DashboardManager();
+            debugLog('DashboardManager created successfully');
 
-        // Global referansları ayarla
-        window.app = this;
+            // Global referansları ayarla
+            window.app = this;
 
-        debugLog('App components initialized', {
-            tabs: !!this.tabs,
-            dashboard: !!this.dashboard
-        });
+            debugLog('App components initialized', {
+                tabs: !!this.tabs,
+                dashboard: !!this.dashboard
+            });
+        } catch (error) {
+            debugLog('ERROR in initializeComponents:', error);
+            throw error;
+        }
     }
 
     setupTheme() {
@@ -179,17 +215,27 @@ class App {
         document.addEventListener('keydown', (e) => {
             // ESC tuşu - modalleri kapat
             if (e.key === 'Escape') {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 const openModals = [
                     'welcomeModal', 'helpModal', 'addStudentModal', 
                     'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
                 ];
 
+                let modalClosed = false;
                 openModals.forEach(modalId => {
                     const modal = document.getElementById(modalId);
-                    if (modal && modal.style.display === 'flex') {
+                    if (modal && modal.style.display === 'flex' && !modalClosed) {
+                        debugLog('Closing modal with ESC:', modalId);
                         window.ui.hideModal(modalId);
+                        modalClosed = true;
                     }
                 });
+
+                if (!modalClosed) {
+                    debugLog('No modal found to close with ESC');
+                }
             }
 
             // Ctrl+Enter - kaydet
@@ -216,6 +262,10 @@ class App {
     }
 
     setupNavigationHandlers() {
+        // Welcome modal slide functionality
+        this.currentSlide = 0;
+        this.totalSlides = 5;
+
         // Welcome modal handlers
         const welcomeStartBtn = document.getElementById('welcomeStartBtn');
         debugLog('Welcome start button found:', !!welcomeStartBtn);
@@ -242,6 +292,32 @@ class App {
                 window.ui.hideModal('welcomeModal');
             });
         }
+
+        // Slide navigation
+        const prevSlideBtn = document.getElementById('prevSlideBtn');
+        const nextSlideBtn = document.getElementById('nextSlideBtn');
+
+        if (prevSlideBtn) {
+            prevSlideBtn.addEventListener('click', () => {
+                this.goToPrevSlide();
+            });
+        }
+
+        if (nextSlideBtn) {
+            nextSlideBtn.addEventListener('click', () => {
+                this.goToNextSlide();
+            });
+        }
+
+        // Slide indicators
+        document.querySelectorAll('.slide-indicator').forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                this.goToSlide(index);
+            });
+        });
+
+        // Auto slide (optional)
+        this.autoSlideInterval = null;
 
         // Welcome butonu
         const showWelcomeBtn = document.getElementById('showWelcomeBtn');
@@ -329,9 +405,18 @@ class App {
             if (modal) {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) {
+                        debugLog('Modal backdrop clicked:', modalId);
                         window.ui.hideModal(modalId);
                     }
                 });
+
+                // Prevent modal content clicks from closing modal
+                const modalContent = modal.querySelector('div');
+                if (modalContent) {
+                    modalContent.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                }
             }
         });
     }
@@ -341,8 +426,67 @@ class App {
         if (!hasSeenWelcome) {
             setTimeout(() => {
                 window.ui.showModal('welcomeModal');
+                this.resetSlidePosition();
+                this.startAutoSlide();
             }, 500);
         }
+    }
+
+    goToSlide(slideIndex) {
+        this.currentSlide = slideIndex;
+        const slidesContainer = document.getElementById('welcomeSlides');
+        if (slidesContainer) {
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+        this.updateSlideIndicators();
+        this.resetAutoSlide();
+    }
+
+    goToNextSlide() {
+        const nextSlide = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextSlide);
+    }
+
+    goToPrevSlide() {
+        const prevSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevSlide);
+    }
+
+    updateSlideIndicators() {
+        document.querySelectorAll('.slide-indicator').forEach((indicator, index) => {
+            if (index === this.currentSlide) {
+                indicator.classList.add('active');
+                indicator.classList.remove('bg-white/40');
+                indicator.classList.add('bg-white/80');
+            } else {
+                indicator.classList.remove('active');
+                indicator.classList.remove('bg-white/80');
+                indicator.classList.add('bg-white/40');
+            }
+        });
+    }
+
+    startAutoSlide() {
+        this.stopAutoSlide();
+        this.autoSlideInterval = setInterval(() => {
+            this.goToNextSlide();
+        }, 8000); // 8 saniyede bir otomatik geçiş
+    }
+
+    stopAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+
+    resetAutoSlide() {
+        this.startAutoSlide();
+    }
+
+    resetSlidePosition() {
+        this.currentSlide = 0;
+        this.goToSlide(0);
     }
 }
 
@@ -359,26 +503,69 @@ class TabManager {
 
     bindEvents() {
         debugLog('TabManager.bindEvents() started');
-        const tabButtons = document.querySelectorAll('[data-tab]');
-        debugLog('Found tab buttons:', tabButtons.length);
 
-        tabButtons.forEach((button, index) => {
-            debugLog(`Setting up tab button ${index}:`, button.dataset.tab);
-            button.addEventListener('click', () => {
-                debugLog('Tab button clicked:', button.dataset.tab);
-                this.switchTo(button.dataset.tab);
+        // DOM ready olana kadar bekle
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.setupTabButtons();
             });
-        });
+        } else {
+            this.setupTabButtons();
+        }
 
         debugLog('TabManager.bindEvents() completed');
     }
 
+    setupTabButtons() {
+        const tabButtons = document.querySelectorAll('[data-tab]');
+        debugLog('Found tab buttons:', tabButtons.length);
+
+        if (tabButtons.length === 0) {
+            debugLog('WARNING: No tab buttons found');
+            debugLog('Checking for potential tab buttons in DOM...');
+            const allButtons = document.querySelectorAll('button');
+            debugLog(`Total buttons found: ${allButtons.length}`);
+            allButtons.forEach((btn, i) => {
+                if (btn.dataset && btn.dataset.tab) {
+                    debugLog(`Button ${i} has data-tab: ${btn.dataset.tab}`);
+                }
+            });
+            return;
+        }
+
+        tabButtons.forEach((button, index) => {
+            const tabName = button.dataset.tab;
+            debugLog(`Setting up tab button ${index}: ${tabName}`);
+
+            // Check if corresponding tab content exists
+            const correspondingContent = document.getElementById(`${tabName}-tab`);
+            debugLog(`  Corresponding content exists for ${tabName}: ${!!correspondingContent}`);
+
+            button.addEventListener('click', () => {
+                debugLog(`Tab button clicked: ${tabName}`);
+                this.switchTo(tabName);
+            });
+        });
+
+        debugLog('Tab button setup completed');
+    }
+
     switchTo(tabName) {
-        if (this.currentTab === tabName) return;
+        debugLog(`[TAB-SWITCH] Attempting to switch to tab: ${tabName}`);
+        debugLog(`[TAB-SWITCH] Current tab: ${this.currentTab}`);
+
+        if (this.currentTab === tabName) {
+            debugLog(`[TAB-SWITCH] Already on ${tabName}, skipping`);
+            return;
+        }
 
         // Button state güncellemesi
-        document.querySelectorAll('[data-tab]').forEach(btn => {
+        const allTabButtons = document.querySelectorAll('[data-tab]');
+        debugLog(`[TAB-SWITCH] Found ${allTabButtons.length} tab buttons`);
+
+        allTabButtons.forEach(btn => {
             const tab = btn.dataset.tab;
+            debugLog(`[TAB-SWITCH] Processing button: ${tab}`);
 
             // Base classes for inactive state
             btn.className = 'tab-button bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all duration-200';
@@ -396,6 +583,8 @@ class TabManager {
         });
 
         const activeButton = document.querySelector(`[data-tab="${tabName}"]`);
+        debugLog(`[TAB-SWITCH] Active button found: ${!!activeButton}`);
+
         if (activeButton) {
             // Aktif buton için özel renkler
             const colors = {
@@ -406,33 +595,95 @@ class TabManager {
             };
 
             activeButton.className = `tab-button ${colors[tabName]} px-4 py-3 rounded-lg shadow-lg font-medium transition-all duration-200 transform scale-105 whitespace-nowrap`;
+            debugLog(`[TAB-SWITCH] Applied active styles to ${tabName} button`);
         }
 
         // Content görünürlük güncellemesi
-        document.querySelectorAll('.tab-content').forEach(content => {
+        const allTabContents = document.querySelectorAll('.tab-content');
+        debugLog(`[TAB-SWITCH] Found ${allTabContents.length} tab contents`);
+
+        allTabContents.forEach((content, index) => {
+            const contentId = content.id;
+            const wasHidden = content.classList.contains('hidden');
             content.classList.add('hidden');
+            content.style.display = 'none';
+            content.style.visibility = 'hidden';
+            content.style.opacity = '0';
+            content.style.zIndex = '0';
+            debugLog(`[TAB-SWITCH] Hidden content ${index}: ${contentId}, was hidden: ${wasHidden}`);
         });
 
         const targetContent = document.getElementById(`${tabName}-tab`);
         if (targetContent) {
+            debugLog(`[TAB-SWITCH] Found target content: ${tabName}-tab`);
             targetContent.classList.remove('hidden');
+            targetContent.style.display = 'block';
+            targetContent.style.visibility = 'visible';
+            targetContent.style.opacity = '1';
+            targetContent.style.zIndex = '10';
+            targetContent.style.minHeight = 'calc(100vh - 200px)';
+            targetContent.style.width = '100%';
+            targetContent.style.position = 'relative';
+
+            // Force multiple reflows to ensure changes take effect
+            targetContent.offsetHeight;
+            targetContent.offsetWidth;
+            
+            // Additional forcing
+            setTimeout(() => {
+                targetContent.style.display = 'block';
+                targetContent.offsetHeight;
+            }, 10);
+
+            debugLog(`[TAB-SWITCH] Applied active styles to ${tabName} content`);
+            debugLog(`[TAB-SWITCH] Final visibility check - classes: ${targetContent.className}, display: ${targetContent.style.display}, visibility: ${targetContent.style.visibility}`);
+        } else {
+            debugLog(`[TAB-SWITCH] WARNING: Target content not found: ${tabName}-tab`);
         }
 
         this.currentTab = tabName;
+        debugLog(`[TAB-SWITCH] Updated current tab to: ${this.currentTab}`);
 
         // Tab değişikliğinde refresh
         if (tabName === 'dashboard') {
-            window.app.dashboard.updateStats();
+            debugLog(`[TAB-SWITCH] Refreshing dashboard`);
+            try {
+                window.app.dashboard.updateStats();
+                debugLog(`[TAB-SWITCH] Dashboard stats updated successfully`);
+            } catch (error) {
+                debugLog(`[TAB-SWITCH] Error updating dashboard: ${error.message}`);
+            }
         } else if (tabName === 'students') {
-            window.students.render();
+            debugLog(`[TAB-SWITCH] Refreshing students`);
+            try {
+                window.students.render();
+                debugLog(`[TAB-SWITCH] Students rendered successfully`);
+            } catch (error) {
+                debugLog(`[TAB-SWITCH] Error rendering students: ${error.message}`);
+            }
         } else if (tabName === 'comments') {
-            window.comments.render();
+            debugLog(`[TAB-SWITCH] Refreshing comments`);
+            try {
+                window.comments.render();
+                debugLog(`[TAB-SWITCH] Comments rendered successfully`);
+            } catch (error) {
+                debugLog(`[TAB-SWITCH] Error rendering comments: ${error.message}`);
+            }
         } else if (tabName === 'templates') {
+            debugLog(`[TAB-SWITCH] Refreshing templates`);
             if (window.templates) {
-                console.log('Refreshing templates tab');
-                window.templates.render();
+                try {
+                    window.templates.render();
+                    debugLog(`[TAB-SWITCH] Templates rendered successfully`);
+                } catch (error) {
+                    debugLog(`[TAB-SWITCH] Error rendering templates: ${error.message}`);
+                }
+            } else {
+                debugLog(`[TAB-SWITCH] Templates manager not available`);
             }
         }
+
+        debugLog(`[TAB-SWITCH] Tab switch to ${tabName} completed`);
     }
 }
 
@@ -448,8 +699,22 @@ class DashboardManager {
     }
 
     bindEvents() {
+        // DOM ready olana kadar bekle
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.setupGradeFilters();
+            });
+        } else {
+            this.setupGradeFilters();
+        }
+    }
+
+    setupGradeFilters() {
         // Grade filtreleri
-        document.querySelectorAll('.grade-filter').forEach(btn => {
+        const gradeFilters = document.querySelectorAll('.grade-filter');
+        debugLog('Found grade filters:', gradeFilters.length);
+
+        gradeFilters.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 this.handleGradeFilterChange(e);
             });
@@ -582,6 +847,36 @@ function debugLog(message, data = null) {
 document.addEventListener('DOMContentLoaded', () => {
     debugLog('DOM Content Loaded - Starting initialization');
 
+    // First, let's check what's in the DOM
+    debugLog('[DOM-CHECK] Document ready state:', document.readyState);
+    debugLog('[DOM-CHECK] Body exists:', !!document.body);
+    debugLog('[DOM-CHECK] HTML structure check...');
+
+    // Check for main containers
+    const mainContainer = document.querySelector('.max-w-7xl');
+    debugLog('[DOM-CHECK] Main container found:', !!mainContainer);
+
+    // Check for tab navigation
+    const tabNavigation = document.querySelector('nav[aria-label="Tabs"]');
+    debugLog('[DOM-CHECK] Tab navigation found:', !!tabNavigation);
+
+    // Check for all tab content areas
+    const dashboardTab = document.getElementById('dashboard-tab');
+    const studentsTab = document.getElementById('students-tab');
+    const commentsTab = document.getElementById('comments-tab');
+    const templatesTab = document.getElementById('templates-tab');
+
+    debugLog('[DOM-CHECK] Dashboard tab exists:', !!dashboardTab);
+    debugLog('[DOM-CHECK] Students tab exists:', !!studentsTab);
+    debugLog('[DOM-CHECK] Comments tab exists:', !!commentsTab);
+    debugLog('[DOM-CHECK] Templates tab exists:', !!templatesTab);
+
+    if (dashboardTab) {
+        debugLog('[DOM-CHECK] Dashboard tab initial classes:', dashboardTab.className);
+        debugLog('[DOM-CHECK] Dashboard tab initial display:', dashboardTab.style.display);
+        debugLog('[DOM-CHECK] Dashboard tab innerHTML length:', dashboardTab.innerHTML.length);
+    }
+
     try {
         // Create global instances in order
         debugLog('Creating Storage instance');
@@ -610,8 +905,63 @@ document.addEventListener('DOMContentLoaded', () => {
         debugLog('App created successfully');
 
         debugLog('All instances created successfully');
+
+        // Manuel tab görünürlük kontrolü
+        setTimeout(() => {
+            debugLog('[MANUAL-TAB-CHECK] Running manual tab visibility check...');
+            const dashboardTab = document.getElementById('dashboard-tab');
+
+            if (dashboardTab) {
+                debugLog('[MANUAL-TAB-CHECK] Dashboard tab found');
+                debugLog('[MANUAL-TAB-CHECK] Current classes:', dashboardTab.className);
+                debugLog('[MANUAL-TAB-CHECK] Current display:', dashboardTab.style.display);
+                debugLog('[MANUAL-TAB-CHECK] Has hidden class:', dashboardTab.classList.contains('hidden'));
+
+                if (dashboardTab.classList.contains('hidden')) {
+                    dashboardTab.classList.remove('hidden');
+                    debugLog('[MANUAL-TAB-CHECK] Removed hidden class');
+                }
+
+                dashboardTab.style.display = 'block';
+                debugLog('[MANUAL-TAB-CHECK] Set display to block');
+                debugLog('[MANUAL-TAB-CHECK] Final classes:', dashboardTab.className);
+                debugLog('[MANUAL-TAB-CHECK] Final display:', dashboardTab.style.display);
+            } else {
+                debugLog('[MANUAL-TAB-CHECK] Dashboard tab NOT found!');
+            }
+        }, 200);
+
+        // Additional debugging check
+        setTimeout(() => {
+            debugLog('[FINAL-CHECK] Final visibility check after 1 second...');
+            const allTabContents = document.querySelectorAll('.tab-content');
+            debugLog('[FINAL-CHECK] Total tab contents found:', allTabContents.length);
+
+            allTabContents.forEach((tab, index) => {
+                debugLog(`[FINAL-CHECK] Tab ${index}: ${tab.id}`);
+                debugLog(`[FINAL-CHECK]   Classes: ${tab.className}`);
+                debugLog(`[FINAL-CHECK]   Display: ${tab.style.display}`);
+                debugLog(`[FINAL-CHECK]   Hidden: ${tab.classList.contains('hidden')}`);
+                debugLog(`[FINAL-CHECK]   Visible: ${tab.offsetWidth > 0 && tab.offsetHeight > 0}`);
+            });
+        }, 1000);
+
     } catch (error) {
         console.error('[ERROR] Failed to initialize:', error);
         console.error('[ERROR] Error details:', error.message, error.stack);
+
+        // Hata durumunda en azından dashboard'u göster
+        setTimeout(() => {
+            debugLog('[EMERGENCY] Running emergency dashboard display...');
+            const dashboardTab = document.getElementById('dashboard-tab');
+            if (dashboardTab) {
+                dashboardTab.classList.remove('hidden');
+                dashboardTab.style.display = 'block';
+                dashboardTab.style.visibility = 'visible';
+                debugLog('[EMERGENCY] Emergency dashboard display activated');
+            } else {
+                debugLog('[EMERGENCY] Dashboard tab not found for emergency display');
+            }
+        }, 500);
     }
 });

@@ -47,7 +47,7 @@ class UIManager {
         document.body.appendChild(container);
     }
 
-    showModal(modalId) {
+    showModal(modalId, keepOthersOpen = false) {
         debugLog('UIManager.showModal called with:', modalId);
         
         const modal = document.getElementById(modalId);
@@ -58,8 +58,29 @@ class UIManager {
             return;
         }
 
+        // Sadece belirtilirse diğer modalleri kapat
+        if (!keepOthersOpen) {
+            this.hideAllModals();
+        }
+
         modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        
+        // Eğer başka bir modal açıksa body style'larını tekrar ayarlama
+        if (!keepOthersOpen) {
+            document.body.style.overflow = 'hidden';
+            document.body.style.height = '100vh';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+        }
+        
+        // Modal'ın tüm sayfayı kaplamasını engelle
+        modal.style.isolation = 'isolate';
+        modal.style.contain = 'layout style';
+        
+        // AI modal ise z-index'ini artır ki edit modalın üzerinde çıksın
+        if (modalId === 'aiSuggestionsModal') {
+            modal.style.zIndex = '60';
+        }
         
         // Geçişli animasyon
         requestAnimationFrame(() => {
@@ -73,18 +94,46 @@ class UIManager {
             }
         });
 
-        // Focus management
-        const firstInput = modal.querySelector('input, select, textarea, button');
-        if (firstInput) {
-            setTimeout(() => firstInput.focus(), 300);
+        // Focus management - sadece keepOthersOpen false ise
+        if (!keepOthersOpen) {
+            const firstInput = modal.querySelector('input, select, textarea, button:not([id*="Close"])');
+            if (firstInput) {
+                setTimeout(() => firstInput.focus(), 300);
+            }
         }
         
         debugLog('Modal shown successfully:', modalId);
     }
 
+    hideAllModals() {
+        const modals = [
+            'welcomeModal', 'helpModal', 'addStudentModal', 
+            'commentEditModal', 'aiSuggestionsModal', 'allCommentsModal'
+        ];
+
+        modals.forEach(modalId => {
+            const modal = document.getElementById(modalId);
+            if (modal && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                modal.classList.add('opacity-0');
+                const content = modal.querySelector('div');
+                if (content) {
+                    content.classList.add('scale-90', 'opacity-0');
+                }
+            }
+        });
+
+        document.body.style.overflow = '';
+        document.body.style.height = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+    }
+
     hideModal(modalId) {
         const modal = document.getElementById(modalId);
         if (!modal) return;
+
+        debugLog('UIManager.hideModal called with:', modalId);
 
         // Geçişli kapanış animasyonu
         modal.classList.remove('opacity-100');
@@ -93,12 +142,15 @@ class UIManager {
         const content = modal.querySelector('div');
         if (content) {
             content.classList.remove('scale-100', 'opacity-100');
-            content.classList.add('scale-90', 'opacity-0');
+            content.classList.add('scale-90', 'scale-95', 'opacity-0');
         }
 
         setTimeout(() => {
             modal.style.display = 'none';
             document.body.style.overflow = '';
+            document.body.style.height = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
             
             // Form reset
             const forms = modal.querySelectorAll('form');
@@ -107,7 +159,40 @@ class UIManager {
                     form.reset();
                 }
             });
-        }, 500);
+
+            debugLog('Modal hidden successfully:', modalId);
+        }, 200);
+    }
+
+    hideModalOnly(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        debugLog('UIManager.hideModalOnly called with:', modalId);
+
+        // Sadece belirtilen modalı kapat, body style'ları değiştirme
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+
+        const content = modal.querySelector('div');
+        if (content) {
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-90', 'scale-95', 'opacity-0');
+        }
+
+        setTimeout(() => {
+            modal.style.display = 'none';
+            
+            // Form reset
+            const forms = modal.querySelectorAll('form');
+            forms.forEach(form => {
+                if (!form.classList.contains('no-reset')) {
+                    form.reset();
+                }
+            });
+
+            debugLog('Modal hidden successfully (only):', modalId);
+        }, 200);
     }
 
     showToast(message, type = 'info', duration = 4000) {
@@ -138,13 +223,27 @@ class UIManager {
 
     createToast(message, type) {
         const toast = document.createElement('div');
-        toast.className = `transform translate-x-full opacity-0 transition-all duration-300 max-w-sm w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden`;
+        toast.className = `transform translate-x-full opacity-0 transition-all duration-500 max-w-sm w-full`;
 
         const colors = {
-            success: 'bg-positive',
-            error: 'bg-negative', 
-            warning: 'bg-neutral',
-            info: 'bg-primary'
+            success: 'bg-green-50/30 dark:bg-green-900/30 border-green-300/50 dark:border-green-700/50',
+            error: 'bg-red-50/30 dark:bg-red-900/30 border-red-300/50 dark:border-red-700/50',
+            warning: 'bg-yellow-50/30 dark:bg-yellow-900/30 border-yellow-300/50 dark:border-yellow-700/50',
+            info: 'bg-blue-50/30 dark:bg-blue-900/30 border-blue-300/50 dark:border-blue-700/50'
+        };
+
+        const iconColors = {
+            success: 'from-green-500 to-green-600',
+            error: 'from-red-500 to-red-600',
+            warning: 'from-yellow-500 to-yellow-600',
+            info: 'from-blue-500 to-blue-600'
+        };
+
+        const textColors = {
+            success: 'text-green-800 dark:text-green-200',
+            error: 'text-red-800 dark:text-red-200',
+            warning: 'text-yellow-800 dark:text-yellow-200',
+            info: 'text-blue-800 dark:text-blue-200'
         };
 
         const icons = {
@@ -155,21 +254,19 @@ class UIManager {
         };
 
         toast.innerHTML = `
-            <div class="p-3">
-                <div class="flex items-center">
+            <div class="glass-effect ${colors[type]} backdrop-blur-xl rounded-2xl p-4 shadow-2xl border-2 animate-slideIn">
+                <div class="flex items-start">
                     <div class="flex-shrink-0">
-                        <div class="${colors[type]} w-6 h-6 rounded-full flex items-center justify-center">
-                            <i class="${icons[type]} text-white text-xs"></i>
+                        <div class="w-8 h-8 bg-gradient-to-br ${iconColors[type]} rounded-xl flex items-center justify-center shadow-lg animate-bounce-light">
+                            <i class="${icons[type]} text-white text-sm"></i>
                         </div>
                     </div>
                     <div class="ml-3 flex-1">
-                        <p class="text-sm font-medium text-gray-900 dark:text-white truncate">${message}</p>
+                        <p class="text-sm font-semibold ${textColors[type]} leading-tight">${message}</p>
                     </div>
-                    <div class="ml-2 flex-shrink-0">
-                        <button onclick="window.ui.removeToast(this.closest('.transform'))" class="bg-white dark:bg-gray-800 rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none">
-                            <i class="fas fa-times text-xs"></i>
-                        </button>
-                    </div>
+                    <button onclick="window.ui.removeToast(this.closest('.transform'))" class="ml-2 ${textColors[type]} hover:bg-white/20 dark:hover:bg-black/20 rounded-lg p-1 transition-all duration-200 hover:scale-110">
+                        <i class="fas fa-times text-xs"></i>
+                    </button>
                 </div>
             </div>
         `;
@@ -219,19 +316,19 @@ class UIManager {
             dialog.className = 'fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4';
             
             dialog.innerHTML = `
-                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-md w-full shadow-2xl border border-gray-200 dark:border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-exclamation-triangle text-yellow-600 dark:text-yellow-400 text-xl"></i>
+                <div class="glass-effect bg-white/10 dark:bg-gray-900/20 backdrop-blur-xl rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/30 dark:border-gray-700/50 transform scale-95 opacity-0 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg animate-pulse">
+                            <i class="fas fa-exclamation-triangle text-white text-2xl animate-bounce"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${title}</h3>
+                        <h3 class="text-xl font-bold text-white drop-shadow-lg">${title}</h3>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">${message}</p>
-                    <div class="flex space-x-3 justify-end">
-                        <button id="cancelBtn" class="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200">
+                    <p class="text-white/90 mb-8 text-lg leading-relaxed">${message}</p>
+                    <div class="flex space-x-4 justify-end">
+                        <button id="cancelBtn" class="px-6 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all duration-200 border border-white/20">
                             İptal
                         </button>
-                        <button id="confirmBtn" class="px-4 py-2 bg-primary hover:bg-purple-700 text-white rounded-lg font-medium transition-all duration-200">
+                        <button id="confirmBtn" class="px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-red-500/25 transition-all duration-200 transform hover:scale-105">
                             Onayla
                         </button>
                     </div>
@@ -240,11 +337,26 @@ class UIManager {
 
             document.body.appendChild(dialog);
 
+            // Animasyon efekti
+            requestAnimationFrame(() => {
+                const dialogContent = dialog.querySelector('div');
+                dialogContent.classList.remove('scale-95', 'opacity-0');
+                dialogContent.classList.add('scale-100', 'opacity-100');
+            });
+
             const confirmBtn = dialog.querySelector('#confirmBtn');
             const cancelBtn = dialog.querySelector('#cancelBtn');
 
             const cleanup = () => {
-                document.body.removeChild(dialog);
+                const dialogContent = dialog.querySelector('div');
+                dialogContent.classList.remove('scale-100', 'opacity-100');
+                dialogContent.classList.add('scale-95', 'opacity-0');
+                
+                setTimeout(() => {
+                    if (document.body.contains(dialog)) {
+                        document.body.removeChild(dialog);
+                    }
+                }, 300);
             };
 
             confirmBtn.addEventListener('click', () => {
@@ -264,6 +376,124 @@ class UIManager {
                 }
             });
         });
+    }
+
+    // Kırmızı ton uyarı metodu ekleme
+    showWarningDialog(message, title = 'Uyarı') {
+        return new Promise((resolve) => {
+            const dialog = document.createElement('div');
+            dialog.className = 'fixed inset-0 bg-black bg-opacity-60 backdrop-blur-lg z-50 flex items-center justify-center p-4';
+            
+            dialog.innerHTML = `
+                <div class="glass-effect bg-red-50/20 dark:bg-red-900/20 backdrop-blur-xl rounded-3xl p-8 max-w-lg w-full shadow-2xl border-2 border-red-300/50 dark:border-red-700/50 transform scale-90 opacity-0 transition-all duration-500">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-red-500 via-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse">
+                            <i class="fas fa-exclamation-triangle text-white text-3xl animate-wiggle"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-red-800 dark:text-red-200 mb-4 drop-shadow-sm">${title}</h3>
+                        <p class="text-red-700 dark:text-red-300 mb-8 text-lg leading-relaxed">${message}</p>
+                        <button id="warningOkBtn" class="px-8 py-4 bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:from-red-600 hover:via-red-700 hover:to-red-800 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-110 border-2 border-red-400/30">
+                            <i class="fas fa-check mr-2"></i>
+                            Anladım
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(dialog);
+
+            // Animasyon efekti
+            requestAnimationFrame(() => {
+                const dialogContent = dialog.querySelector('div');
+                dialogContent.classList.remove('scale-90', 'opacity-0');
+                dialogContent.classList.add('scale-100', 'opacity-100');
+            });
+
+            const okBtn = dialog.querySelector('#warningOkBtn');
+
+            const cleanup = () => {
+                const dialogContent = dialog.querySelector('div');
+                dialogContent.classList.remove('scale-100', 'opacity-100');
+                dialogContent.classList.add('scale-90', 'opacity-0');
+                
+                setTimeout(() => {
+                    if (document.body.contains(dialog)) {
+                        document.body.removeChild(dialog);
+                    }
+                }, 500);
+            };
+
+            okBtn.addEventListener('click', () => {
+                cleanup();
+                resolve(true);
+            });
+
+            dialog.addEventListener('click', (e) => {
+                if (e.target === dialog) {
+                    cleanup();
+                    resolve(true);
+                }
+            });
+
+            // ESC tuşu ile kapatma
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    cleanup();
+                    resolve(true);
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            
+            document.addEventListener('keydown', handleEscape);
+        });
+    }
+
+    // Kırmızı ton error toast
+    showErrorToast(message, duration = 5000) {
+        const toast = document.createElement('div');
+        toast.className = 'fixed top-4 right-4 z-50 transform translate-x-full opacity-0 transition-all duration-500 max-w-sm w-full';
+        
+        toast.innerHTML = `
+            <div class="glass-effect bg-red-50/30 dark:bg-red-900/30 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border-2 border-red-300/50 dark:border-red-700/50">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center animate-pulse">
+                            <i class="fas fa-exclamation-circle text-white text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="ml-3 flex-1">
+                        <p class="text-sm font-semibold text-red-800 dark:text-red-200 leading-tight">${message}</p>
+                    </div>
+                    <button onclick="this.closest('.fixed').remove()" class="ml-2 text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-200 transition-colors">
+                        <i class="fas fa-times text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(toast);
+
+        // Show animation
+        requestAnimationFrame(() => {
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            toast.classList.add('translate-x-0', 'opacity-100');
+        });
+
+        // Auto remove
+        setTimeout(() => {
+            if (document.body.contains(toast)) {
+                toast.classList.remove('translate-x-0', 'opacity-100');
+                toast.classList.add('translate-x-full', 'opacity-0');
+                
+                setTimeout(() => {
+                    if (document.body.contains(toast)) {
+                        document.body.removeChild(toast);
+                    }
+                }, 500);
+            }
+        }, duration);
+
+        return toast;
     }
 
     showProgress(progress = 0, text = '') {
