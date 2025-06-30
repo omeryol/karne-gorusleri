@@ -8,31 +8,31 @@
   {
     "id": 2,
     "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen LGS **kaygısı** nedeniyle potansiyelini tam olarak yansıtamamıştır. Sınavların sadece bir değerlendirme aracı olduğunu hatırlatmak isteriz. İkinci dönemde **rahatlama teknikleri** öğrenmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, LGS'de daha **başarılı** olmasına yardımcı olacaktır. Bu konuda desteğe ihtiyacı var, ona yardımcı olmaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["kaygı", "sınav", "stres", "yönetim", "potansiyel", "yansıtma", "başarılı", "destek", "ihtiyaç", "pekiştirme"]
   },
   {
     "id": 3,
     "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelle LGS'de çok daha iyi başarılara imza atabilecek kapasitededir. Ancak, bu dönemde **motivasyon düşüklüğü** yaşadığı ve potansiyelini tam olarak kullanamadığı gözlemlenmiştir. İkinci dönemde hedeflerini netleştirmesi ve bu hedeflere ulaşmak için daha fazla **çaba** göstermesi, motivasyonunu artıracaktır. Ona güveniyor ve yeteneklerini tam kullanmasını diliyoruz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["potansiyel", "motivasyonsuz", "düşük", "çaba", "hedef", "yetenekli", "ilgisiz", "destek", "ihtiyaç", "kararsız"]
   },
   {
     "id": 4,
     "content": "[Öğrenci Adı], ödev ve projelerini son ana bırakma eğilimi göstermektedir. Bu durum, LGS hazırlığını **olumsuz** etkilemektedir. **Zaman yönetimi** becerilerini geliştirmesi ve sorumluluklarını zamanında yerine getirmesi, başarısı için kritik öneme sahiptir. İkinci dönemde **planlı** çalışmasını bekliyoruz. Bu alışkanlığı kazanması, LGS sürecinde ona büyük avantaj sağlayacaktır.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["erteleyen", "düzensiz", "zaman", "yönetimi", "olumsuz", "etki", "planlı", "sorumlu", "gelişmesi", "ihtiyaç"]
   },
   {
     "id": 5,
     "content": "[Öğrenci Adı], sosyal ve arkadaş canlısı yapısıyla dikkat çekmektedir. Ancak, bu özelliği nedeniyle derslere yeterince **odaklanamadığı** gözlemlenmiştir. LGS sürecinde sosyal hayatıyla dersleri arasında bir **denge** kurması, başarısı için kritik öneme sahiptir. İkinci dönemde ders çalışma programına daha sıkı uymasını bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sosyal", "dengeli", "odaklanamayan", "denge", "önemli", "ilgisiz", "ihtiyaç", "rehberlik", "çaba", "zaman"]
   },
   {
     "id": 6,
     "content": "[Öğrenci Adı], önceki yıllardan gelen temel eksiklikleri nedeniyle LGS hazırlığında **zorlanmaktadır**. Bu eksiklikleri gidermek için ek **desteğe** ihtiyaç duymaktadır. Sömestr tatilinde bu eksiklikleri kapatmaya yönelik yoğun bir çalışma yapması, LGS'de daha iyi bir performans sergilemesine yardımcı olacaktır. Ona bu süreçte rehberlik etmeye devam edeceğiz. Potansiyeli yüksek, sadece temelini güçlendirmeli.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["eksiklik", "zorlanan", "destek", "ihtiyaç", "temel", "yoğun", "çalışma", "pekiştirme", "potansiyel", "rehberlik"]
   },
   {
@@ -44,61 +44,61 @@
   {
     "id": 8,
     "content": "[Öğrenci Adı], okul dışı aktivitelerde (spor, sanat vb.) önemli başarılar elde etmektedir. Bu yetenekleri takdire şayandır. Ancak, bu yoğunluk nedeniyle LGS hazırlığına yeterli zaman ayıramadığı gözlemlenmiştir. Hobileriyle LGS hazırlığı arasında bir **denge** kurması, başarısı için kritik öneme sahiptir. İkinci dönemde ders çalışma programına daha sıkı uymasını bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["hobiler", "denge", "zaman", "yönetimi", "yoğun", "öncelik", "rehberlik", "ihtiyaç", "başarılı", "potansiyel"]
   },
   {
     "id": 9,
     "content": "[Öğrenci Adı], derste **odaklanmakta zorlandığı** ve zaman zaman **hareketli** olduğu gözlemlenmiştir. Bu durum, özel bir öğrenme desteği gerektirebilir. İkinci dönemde dikkatini toplama becerisini geliştirecek teknikler (kısa molalar, sessiz ortam) kullanması ve bireysel farklılıklarına uygun destek programlarına yönelmesi faydalı olacaktır. Ona bu konuda özel destek sağlamaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["dikkat", "odaklanma", "hiperaktif", "zorlanan", "hareketli", "destek", "ihtiyaç", "teknik", "çaba", "rehberlik"]
   },
   {
     "id": 10,
     "content": "[Öğrenci Adı], akademik alanda bazı zorluklar yaşamış ve bir an önce hayata atılma eğilimi göstermiştir. Okulun sadece akademik bir ortam değil, aynı zamanda sosyal gelişim ve farklı beceriler edinme fırsatı sunduğu vurgulanmalıdır. İkinci dönemde okula olan **bağlılığını** artıracak yaklaşımlar sergilemesini bekliyoruz. Ona geleceğin okulda olduğunu anlatmaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["okul", "bağlılık", "motivasyonsuz", "ilgisiz", "erken", "yönelim", "gelecek", "destek", "ihtiyaç", "rehberlik"]
   },
   {
     "id": 11,
     "content": "[Öğrenci Adı], LGS konularının bazı alanlarında **eksiklikler** olduğu gözlemlenmiştir. Bu eksiklikleri gidermek için yoğun bir çalışma yapması gerekmektedir. İkinci dönemde bu konulara ağırlık vermesi ve soru çözme pratiğini artırması, LGS başarısını olumlu etkileyecektir. Ona bu konularda **rehberlik** etmeye ve ek kaynaklar sağlamaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["eksiklik", "LGS", "konu", "yoğun", "çalışma", "pratik", "rehberlik", "ihtiyaç", "destek", "başarı"]
   },
   {
     "id": 12,
     "content": "[Öğrenci Adı], yüksek beklentiler nedeniyle sınav dönemlerinde **stres** yaşadığı ve **aile baskısı** hissettiği gözlemlenmiştir. Başarının sadece notlardan ibaret olmadığını, öğrenme sürecinin keyfini çıkarmanın da önemli olduğunu hatırlatmak isteriz. İkinci dönemde **rahatlama teknikleri** öğrenmesi ve ailesiyle iletişim kurması faydalı olacaktır. Ona destek olmaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["stres", "aile", "baskı", "kaygı", "rahatlama", "iletişim", "destek", "ihtiyaç", "önemli", "denge"]
   },
   {
     "id": 13,
     "content": "[Öğrenci Adı], LGS sonrası gelecek hakkında **aşırı kaygı** duyduğu gözlemlenmiştir. Geleceği planlamak önemlidir, ancak aşırı kaygı performansı olumsuz etkileyebilir. İkinci dönemde hedeflerini belirlerken **gerçekçi** olması ve **kaygı yönetimi** tekniklerini öğrenmesi faydalı olacaktır. Ona bu süreçte rehberlik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["kaygı", "gelecek", "planlama", "gerçekçi", "yönetim", "olumsuz", "etki", "rehberlik", "destek", "ihtiyaç"]
   },
   {
     "id": 14,
     "content": "[Öğrenci Adı], zihinsel potansiyeline rağmen düzenli **ders çalışma alışkanlığı** edinmekte zorlanmaktadır. Bu durum, LGS hazırlığını **olumsuz** etkilemektedir. İkinci dönemde küçük adımlarla başlayarak günlük bir çalışma rutini oluşturması, akademik performansını olumlu yönde etkileyecektir. Ona bu konuda rehberlik etmeye ve destek olmaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["çalışma", "alışkanlık", "düzensiz", "olumsuz", "etki", "potansiyel", "rehberlik", "destek", "ihtiyaç", "düzen"]
   },
   {
     "id": 15,
     "content": "[Öğrenci Adı], arkadaş çevresinden **olumsuz etkilendiği** ve derslere ilgisinin azaldığı gözlemlenmiştir. Doğru arkadaş seçimi ve derslere odaklanma, LGS başarısı için kritik öneme sahiptir. İkinci dönemde bu konuda daha **bilinçli** davranmasını ve derslerine öncelik vermesini bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sosyal", "çevre", "olumsuz", "etki", "ilgisiz", "öncelik", "bilinçli", "rehberlik", "destek", "arkadaş"]
   },
   {
     "id": 16,
     "content": "[Öğrenci Adı], LGS'de okuma anlama sorularında **zorlandığı** ve hızlı okuma becerisine ihtiyaç duyduğu gözlemlenmiştir. Okuduğunu anlama, tüm derslerdeki başarısını doğrudan etkileyecektir. İkinci dönemde düzenli **kitap okuma alışkanlığı** kazanması ve okuma becerilerini geliştirmeye yönelik çalışmalar yapması, LGS başarısını artıracaktır. Ona bu konuda destek olmaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["okuma", "anlama", "zorlanan", "hız", "kitap", "alışkanlık", "gelişme", "ihtiyaç", "destek", "başarı"]
   },
   {
     "id": 17,
     "content": "[Öğrenci Adı], LGS konularında anlamadığı yerleri **sormaktan çekindiği** gözlemlenmiştir. Soru sormak, öğrenme sürecinin önemli bir parçasıdır ve LGS başarısı için kritik öneme sahiptir. İkinci dönemde daha **cesur** olması ve aklına takılan her şeyi sorması, öğrenme sürecini hızlandıracaktır. Ona bu konuda teşvik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["soru", "çekingen", "iletişim", "cesur", "hızlanma", "öğrenme", "kritik", "önemli", "teşvik", "destek"]
   },
   {
@@ -110,13 +110,13 @@
   {
     "id": 19,
     "content": "[Öğrenci Adı], LGS hazırlığı için uygun **ders çalışma ortamı** konusunda desteğe ihtiyaç duymaktadır. Düzenli ve sessiz bir çalışma alanı, odaklanma ve öğrenme verimliliği için önemlidir. İkinci dönemde bu konuda aile desteğiyle uygun bir ortam oluşturulması, akademik başarısını olumlu etkileyecektir. Ona bu konuda rehberlik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["ortam", "destek", "ihtiyaç", "düzenli", "sessiz", "odaklanma", "verimli", "aile", "rehberlik", "önemli"]
   },
   {
     "id": 20,
     "content": "[Öğrenci Adı], LGS konularına hakim olmasına rağmen soru tiplerine ve **sınav stratejilerine** yeterince hakim olmadığı gözlemlenmiştir. İkinci dönemde deneme sınavlarına ağırlık vermesi, soru çözme tekniklerini geliştirmesi ve **zaman yönetimi** stratejileri oluşturması, LGS başarısını artıracaktır. Ona bu konuda rehberlik etmeye ve yol göstermeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sınav", "strateji", "zaman", "yönetim", "eksiklik", "gelişme", "deneme", "başarı", "rehberlik", "ihtiyaç"]
   },
   {
@@ -128,7 +128,7 @@
   {
     "id": 22,
     "content": "[Öğrenci Adı], sanatsal alanda **yetenekli** olmasına rağmen LGS sürecinin getirdiği **stres** nedeniyle bu yönünü ihmal etmiştir. Sanatsal faaliyetler, stres yönetimi için faydalı olabilir. İkinci dönemde LGS yoğunluğu arasında sanata da zaman ayırmasını teşvik ediyoruz. Onun bu **dengeli** gelişimi için önemlidir.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sanatsal", "yetenekli", "stres", "kaygı", "denge", "ihmal", "faydalı", "teşvik", "önemli", "gelişim"]
   },
   {
@@ -146,19 +146,19 @@
   {
     "id": 25,
     "content": "[Öğrenci Adı], ailesiyle iletişim kurmada zaman zaman **zorluklar** yaşadığı gözlemlenmiştir. LGS sürecinde aile desteği büyük önem taşır. İkinci dönemde ailesiyle daha **açık iletişim** kurmasını ve yaşadığı zorlukları paylaşmaktan çekinmemesini bekliyoruz. Bu iletişim, onun başarı yolculuğunda büyük fark yaratacaktır.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["iletişim", "aile", "zorluk", "destek", "açık", "paylaşım", "önemli", "çekingen", "ihtiyaç", "gelişme"]
   },
   {
     "id": 26,
     "content": "[Öğrenci Adı], akran baskısı altında olduğu ve derslere olan ilgisinde **düşüş** yaşandığı gözlemlenmiştir. Kendi hedeflerine odaklanması ve doğru arkadaş çevresi seçimi LGS başarısı için kritik öneme sahiptir. İkinci dönemde bu konuda daha **bilinçli** davranmasını ve derslerine öncelik vermesini bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["akran", "baskı", "ilgisiz", "düşüş", "hedef", "öncelik", "bilinçli", "rehberlik", "destek", "çevre"]
   },
   {
     "id": 27,
     "content": "[Öğrenci Adı], LGS konularının bazı alanlarında yaşıtlarına göre **gecikmeler** yaşamıştır. Bu eksiklikleri gidermek için yoğun bir çalışma yapması gerekmektedir. İkinci dönemde bireysel etütlere ağırlık vermesi ve soru çözüm pratiğini artırması, LGS başarısını olumlu etkileyecektir. Ona bu konuda özel destek sağlamaya devam edeceğiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["gecikme", "eksiklik", "LGS", "yoğun", "çalışma", "pratik", "destek", "ihtiyaç", "başarı", "rehberlik"]
   },
   {
@@ -176,7 +176,7 @@
   {
     "id": 30,
     "content": "[Öğrenci Adı]'nın LGS yoğunluğu nedeniyle fiziksel aktiviteyi **ihmal ettiği** gözlemlenmiştir. Düzenli spor, hem fiziksel hem de zihinsel sağlığı için önemlidir. İkinci dönemde ders çalışma programına kısa fiziksel molalar eklemesini tavsiye ederiz. Onun daha **enerjik** ve **sağlıklı** olması için teşvik etmeliyiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["fiziksel", "aktivite", "ihmal", "enerji", "sağlık", "stres", "denge", "teşvik", "önemli", "alışkanlık"]
   },
   {
