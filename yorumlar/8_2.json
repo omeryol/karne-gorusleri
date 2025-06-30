@@ -1,10 +1,9 @@
-
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımı ile birlikte olgunlaşma sürecinde dikkat çekici gelişim gösteriyor. Sınav kaygısını verimli strese dönüştürme becerisi güçlü, olgunlaşma göstergeleri belirgin ve liseye hazırlık konusunda kapsamlı yaklaşım sergiliyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde gösterdiği üstün başarı ve kararlılıkla bizleri gururlandırmıştır. Hedefine ulaşma yolunda sergilediği azim takdire şayandır. LGS sonrası süreçte dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, yeni eğitim hayatına hazır bir şekilde başlamasını tavsiye ederiz.",
     "tone": "olumlu",
-    "etiketler": ["mezuniyet hazırlığı", "sınav yönetimi", "olgunlaşma", "lise hazırlığı"]
+    "etiketler": ["LGS Odaklı, Başarılı ve Kararlı", "mezuniyet hazırlığı", "sınav yönetimi", "olgunlaşma", "lise hazırlığı"]
   },
   {
     "id": 2,
@@ -14,9 +13,9 @@
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı] olgunlaşma sürecinde duygusal olgunluk ve bilişsel gelişim entegrasyonu başarılı. Kendini yansıtma yetenekleri güçlü, kişisel büyüme farkındalığı yüksek ve gelecek odaklı düşünce kalıpları geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["duygusal olgunluk", "bilişsel gelişim", "öz yansıtma", "gelecek odaklı"]
+    "content": "[Öğrenci Adı], LGS sürecinde sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, yeni eğitim hayatına daha dingin ve hazır bir şekilde başlamasını tavsiye ederiz.",
+    "tone": "notr",
+    "etiketler": ["Sınav Kaygısı Yüksek, Destek İhtiyacı", "duygusal olgunluk", "bilişsel gelişim", "öz yansıtma", "gelecek odaklı"]
   },
   {
     "id": 4,
@@ -26,9 +25,9 @@
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında liderlik ortaya çıkışı ve sorumluluk sahipliği gösteriyor. Rol model davranışlar sergiliyor, yaşıt mentorluk yetenekleri gelişmiş ve miras yaratma zihniyeti benimsiyor.",
-    "tone": "olumlu",
-    "etiketler": ["liderlik", "sorumluluk", "rol model", "mentorluk"]
+    "content": "[Öğrenci Adı], LGS sürecinde motivasyonunu artırma konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması ve yeni eğitim hayatına istekli bir başlangıç yapması önemlidir. Potansiyelini kullanması için desteklenmeye devam etmelidir.",
+    "tone": "notr",
+    "etiketler": ["Motivasyon Düşüklüğü, Potansiyelini Kullanamayan", "liderlik", "sorumluluk", "rol model", "mentorluk"]
   },
   {
     "id": 6,
@@ -38,9 +37,9 @@
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı] olgunlaşma konusunda bilgelik edinimi ve duygusal zeka ustalaşması gösteriyor. Bakış açısı alma yetenekleri gelişmiş, empati gelişmişliği yüksek ve sosyal bilgelik gösterimi yapıyor.",
-    "tone": "olumlu",
-    "etiketler": ["bilgelik", "duygusal zeka", "empati", "sosyal bilgelik"]
+    "content": "[Öğrenci Adı], LGS sürecinde sorumluluklarını erteleme eğiliminde azalma göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek zaman yönetimi becerilerini pekiştirmesi, yeni eğitim hayatına daha düzenli bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Sorumluluklarını Erteleyen, LGS'yi Etkileyen", "bilgelik", "duygusal zeka", "empati", "sosyal bilgelik"]
   },
   {
     "id": 8,
@@ -50,9 +49,9 @@
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında yansıtıcı uygulama ve kendini değerlendirme uzmanlığı geliştirdi. Kişisel büyüme belgeleme yetenekleri güçlü, hedef iyileştirme becerileri etkili ve sürekli gelişim zihniyeti benimsiyor.",
-    "tone": "olumlu",
-    "etiketler": ["öz değerlendirme", "kişisel büyüme", "hedef iyileştirme", "sürekli gelişim"]
+    "content": "[Öğrenci Adı], LGS sürecinde sosyal hayatıyla dersleri arasında denge kurma konusunda çaba göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir.",
+    "tone": "notr",
+    "etiketler": ["Sosyal Yönü Güçlü, Derslere Odaklanmakta Zorlanan", "öz değerlendirme", "kişisel büyüme", "hedef iyileştirme", "sürekli gelişim"]
   },
   {
     "id": 10,
@@ -62,9 +61,9 @@
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı] olgunlaşma sürecinde karakter birleştirme ve değer entegrasyonu başarılı. Ahlaki akıl yürütme gelişmişliği yüksek, ahlaki liderlik özellikleri belirgin ve ilkeli karar verme yetenekleri gelişmiş.",
-    "tone": "olumlu",
-    "etiketler": ["karakter gelişimi", "değer sistemi", "ahlaki liderlik", "ilkeli karar"]
+    "content": "[Öğrenci Adı], LGS sürecinde temel eksiklerini giderme konusunda çaba göstermiştir. Yaz tatilinde bu eksiklerini tamamen kapatmaya yönelik düzenli çalışmalar yapması, yeni eğitim hayatına daha güçlü başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Temel Eksikleri Olan, Ek Destek İhtiyacı", "karakter gelişimi", "değer sistemi", "ahlaki liderlik", "ilkeli karar"]
   },
   {
     "id": 12,
@@ -74,9 +73,9 @@
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında miras düşüncesi ve etki farkındalığı gösteriyor. Katkı zihniyeti güçlü, sosyal sorumluluk gelişmişliği yüksek ve topluluk liderlik potansiyeli sergiliyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde yüksek başarısını sürdürmüştür. Stres yönetimi konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, yeni eğitim hayatına daha dingin ve hazır bir şekilde başlamasını tavsiye ederiz.",
     "tone": "olumlu",
-    "etiketler": ["miras bilinci", "etki farkındalığı", "sosyal sorumluluk", "topluluk liderliği"]
+    "etiketler": ["Yüksek Başarılı ama Mükemmeliyetçi", "miras bilinci", "etki farkındalığı", "sosyal sorumluluk", "topluluk liderliği"]
   },
   {
     "id": 14,
@@ -86,9 +85,9 @@
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında örnek liderlik ve ilham verici etki yaratıyor. Rol model mükemmellik sergiliyor, dönüştürücü etki gösteriyor ve kalıcı olumlu miras oluşturuyor.",
-    "tone": "olumlu",
-    "etiketler": ["örnek liderlik", "ilham verici", "dönüştürücü etki", "olumlu miras"]
+    "content": "[Öğrenci Adı], LGS sürecinde okul dışı aktivitelerdeki başarısını sürdürmüştür. Yaz tatilinde bu yeteneklerini geliştirmeye devam ederken, yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Hobileriyle dersleri arasında denge kurması önemlidir.",
+    "tone": "notr",
+    "etiketler": ["Okul Dışı Hobileri Yoğun, Derslere Yansıtamayan", "örnek liderlik", "ilham verici", "dönüştürücü etki", "olumlu miras"]
   },
   {
     "id": 16,
@@ -98,9 +97,9 @@
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı] sınav kaygısını yönetme konusunda değişken başarı gösteriyor. Olgunlaşma göstergeleri tutarsız, liseye hazırlık sürecinde belirsizlik yaşıyor ve mezuniyet yaklaşımında odaklanma problemleri bulunuyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde dikkatini toplama konusunda çaba göstermiştir. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları gibi) yönelmesi faydalı olacaktır. Yeni eğitim hayatına daha hazır başlaması için desteklenmeye devam etmelidir.",
     "tone": "notr",
-    "etiketler": ["değişken başarı", "tutarsız gelişim", "belirsizlik", "odaklanma sorunu"]
+    "etiketler": ["Dikkat Eksikliği ve Hiperaktivite Belirtileri Olan", "değişken başarı", "tutarsız gelişim", "belirsizlik", "odaklanma sorunu"]
   },
   {
     "id": 18,
@@ -110,9 +109,9 @@
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı] liseye hazırlık konusunda beklenenin altında performans sergiliyor. Geçiş kaygısı belirgin, mezuniyet yaklaşımında stres yönetimi yetersizliği ve olgunlaşma sürecinde gerilik gözleniyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde akademik alanda çaba göstermiştir. Yaz tatilinde ilgi alanlarını destekleyecek, ancak aynı zamanda temel akademik becerilerini de koruyacak aktivitelere yönelmesi, okula olan bağlılığını güçlendirecektir. Geleceği için öğrenmeye devam etmesi önemlidir.",
     "tone": "notr",
-    "etiketler": ["düşük performans", "geçiş kaygısı", "stres yetersizliği", "gelişim geriliği"]
+    "etiketler": ["Erken Yaşta Çalışma Eğilimi", "düşük performans", "geçiş kaygısı", "stres yetersizliği", "gelişim geriliği"]
   },
   {
     "id": 20,
@@ -122,9 +121,9 @@
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı] sınav kaygısı ve mezuniyet stresi konularında ciddi zorlanmalar yaşıyor. Olgunlaşma sürecinde gerilik belirtileri, liseye hazırlık kapasitesinde azalma ve akademik işlevselde bozulma gözleniyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde eksik konularını giderme konusunda çaba göstermiştir. Yaz tatilinde bu eksiklerini tamamen kapatmaya yönelik düzenli çalışmalar yapması, yeni eğitim hayatına daha güçlü başlamasını sağlayacaktır.",
     "tone": "notr",
-    "etiketler": ["ciddi zorluk", "gelişim geriliği", "kapasite azalması", "işlevsel bozulma"]
+    "etiketler": ["LGS Konularında Eksiklikler", "ciddi zorluk", "gelişim geriliği", "kapasite azalması", "işlevsel bozulma"]
   },
   {
     "id": 22,
@@ -134,9 +133,9 @@
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında çöküş belirtileri gösteriyor. Sınav kaygısı bunaltıcı seviyede, olgunlaşma sürecinde geriye hareket ve liseye hazırlık konusunda tam kaçınma gözleniyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde aile baskısını yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, yeni eğitim hayatına daha dingin ve hazır bir şekilde başlamasını tavsiye ederiz.",
     "tone": "notr",
-    "etiketler": ["çöküş belirtisi", "bunaltıcı kaygı", "geriye hareket", "tam kaçınma"]
+    "etiketler": ["Aile Baskısı Altında Olan", "çöküş belirtisi", "bunaltıcı kaygı", "geriye hareket", "tam kaçınma"]
   },
   {
     "id": 24,
@@ -146,9 +145,9 @@
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı] mezuniyet, sınav kaygısı ve lise hazırlığı konularında kritik seviyede sorunlar yaşıyor. Olgunlaşma süreci tamamen durmuş, geçiş hazır oluşu yok olmuş ve mezuniyet yeterliliği ciddi şekilde zarar görmüş durumda.",
+    "content": "[Öğrenci Adı], LGS sürecinde gelecek kaygısını yönetme konusunda çaba göstermiştir. Yaz tatilinde dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, yeni eğitim hayatına daha pozitif bir bakış açısıyla başlamasını tavsiye ederiz.",
     "tone": "notr",
-    "etiketler": ["kritik sorun", "durmuş gelişim", "yok olmuş hazırlık", "zarar görmüş yeterlilik"]
+    "etiketler": ["Gelecek Kaygısı Yüksek", "kritik sorun", "durmuş gelişim", "yok olmuş hazırlık", "zarar görmüş yeterlilik"]
   },
   {
     "id": 26,
@@ -158,9 +157,9 @@
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı] sınav kaygısı ve mezuniyet stresi açısından kritik çöküş yaşıyor. Olgunlaşma sürecinde şiddetli bozulma, lise geçiş hazır oluşu tamamen yok ve akademik işlevsellik tamamen zarar görmüş durumda. Çok yönlü acil müdahale gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["kritik çöküş", "şiddetli bozulma", "yok hazırlık", "zarar görmüş işlev"]
+    "content": "[Öğrenci Adı], LGS sürecinde ders çalışma alışkanlığı edinme konusunda çaba göstermiştir. Yaz tatilinde günlük kısa çalışma periyotları oluşturarak bu alışkanlığını pekiştirmesi, yeni eğitim hayatına daha düzenli ve başarılı bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Ders Çalışma Alışkanlığı Zayıf, LGS'yi Etkileyen", "kritik çöküş", "şiddetli bozulma", "yok hazırlık", "zarar görmüş işlev"]
   },
   {
     "id": 28,
@@ -170,14 +169,104 @@
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı] mezuniyet, sınav kaygısı ve olgunlaşma açısından telafisi zor hasarlar almış. Lise hazırlık kapasitesi tamamen yok edilmiş, akademik işlevsellik tamamen çökmüş ve ruhsal iyilik kritik tehlikede durumda.",
-    "tone": "olumsuz",
-    "etiketler": ["telafisi zor hasar", "yok edilmiş kapasite", "çökmüş işlev", "kritik tehlike"]
+    "content": "[Öğrenci Adı], LGS sürecinde sosyal çevre etkisini yönetme konusunda çaba göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir.",
+    "tone": "notr",
+    "etiketler": ["Sosyal Çevre Etkisi Altında Olan", "telafisi zor hasar", "yok edilmiş kapasite", "çökmüş işlev", "kritik tehlike"]
   },
   {
     "id": 30,
     "content": "[Öğrenci Adı] mezuniyet yaklaşımı ve lise hazırlığı konularında acil durumda bulunuyor. Sınav kaygısı şiddetli zihinsel sağlık krizi yaratmış, olgunlaşma sürecinde tam durma ve mezuniyet hazır oluşu tamamen yok durumda. Acil ruhsal müdahale gereksinimi var.",
     "tone": "olumsuz",
     "etiketler": ["acil durum", "zihinsel kriz", "tam durma", "yok hazırlık"]
+  },
+  {
+    "id": 31,
+    "content": "[Öğrenci Adı], LGS sürecinde okuma anlama becerilerini geliştirme konusunda çaba göstermiştir. Yaz tatilinde düzenli kitap okumaya devam etmesi ve hızlı okuma tekniklerini denemesi, yeni eğitim hayatına daha hazırlıklı başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Okuma Anlama Becerisi Düşük", "mezuniyet hazırlığı", "sınav yönetimi", "olgunlaşma", "lise hazırlığı"]
+  },
+  {
+    "id": 32,
+    "content": "[Öğrenci Adı] sınav kaygısını en iyi performans için kullanma konusunda ustalaşma gösteriyor. Kaygıyı motivasyona dönüştürme becerileri gelişmiş, stres yönetimi gelişmiş ve baskı altında en iyi performans yeteneği mükemmel.",
+    "tone": "olumlu",
+    "etiketler": ["sınav başarısı", "motivasyon", "stres kontrolü", "baskı yönetimi"]
+  },
+  {
+    "id": 33,
+    "content": "[Öğrenci Adı], LGS sürecinde soru sorma konusunda gelişim göstermiştir. Yaz tatilinde merak ettiği konularda araştırmalar yapması ve sorular sormaktan çekinmemesi, yeni eğitim hayatına daha araştırmacı bir ruhla başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Soru Sormaktan Çekinen, LGS'yi Etkileyen", "duygusal olgunluk", "bilişsel gelişim", "öz yansıtma", "gelecek odaklı"]
+  },
+  {
+    "id": 34,
+    "content": "[Öğrenci Adı] liseye hazırlık konusunda stratejik hazırlık ve bütüncül hazır oluş sergiliyor. Akademik becerileri birleştirme başarılı, sosyal becerileri iyileştirme etkili ve geçiş yönetimi becerilerinde uzmanlaşmış.",
+    "tone": "olumlu",
+    "etiketler": ["stratejik hazırlık", "akademik birleştirme", "sosyal beceri", "geçiş yönetimi"]
+  },
+  {
+    "id": 35,
+    "content": "[Öğrenci Adı], LGS sürecinde yaratıcı ve özgün düşünme becerilerini sergilemiştir. Yaz tatilinde ilgi alanlarına yönelik projeler geliştirmesi, bulmacalar çözmesi ve farklı düşünme tekniklerini denemesi, yeni eğitim hayatına daha donanımlı başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Yaratıcı ve Özgün Düşünme Becerisi Gelişmiş", "liderlik", "sorumluluk", "rol model", "mentorluk"]
+  },
+  {
+    "id": 36,
+    "content": "[Öğrenci Adı] sınav kaygısı ve performans baskısını büyüme katalizörü olarak kullanıyor. Dayanıklılık oluşturma sürecinde başarılı, uyarlanabilir başa çıkma stratejileri geliştirmiş ve meydan okumayı kucaklama tutumu sergiliyor.",
+    "tone": "olumlu",
+    "etiketler": ["büyüme odaklı", "dayanıklılık", "uyum yeteneği", "meydan okuma"]
+  },
+  {
+    "id": 37,
+    "content": "[Öğrenci Adı], LGS sürecinde ders çalışma ortamı konusunda gösterdiği çaba takdire şayandır. Yaz tatilinde kendine uygun bir çalışma köşesi oluşturması ve düzenli çalışma alışkanlığını sürdürmesi, yeni eğitim hayatına daha verimli bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Ders Çalışma Ortamı Desteği İhtiyacı", "bilgelik", "duygusal zeka", "empati", "sosyal bilgelik"]
+  },
+  {
+    "id": 38,
+    "content": "[Öğrenci Adı] liseye hazırlık sürecinde kapsamlı beceri entegrasyonu ve gelecek hazır oluşu sergiliyor. Farklı dersleri birleştirme bağlantıları yapabilme yeteneği güçlü, üst bilişsel farkındalık yüksek ve kendi kendine öğrenme ustalaşması gösteriyor.",
+    "tone": "olumlu",
+    "etiketler": ["beceri entegrasyonu", "ders birleştirme", "bilişsel farkındalık", "otodik öğrenme"]
+  },
+  {
+    "id": 39,
+    "content": "[Öğrenci Adı], LGS sürecinde sınav stratejilerini geliştirme konusunda çaba göstermiştir. Yaz tatilinde dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, yeni eğitim hayatına daha stratejik bir bakış açısıyla başlamasını tavsiye ederiz.",
+    "tone": "notr",
+    "etiketler": ["LGS Stratejisi Eksikliği", "öz değerlendirme", "kişisel büyüme", "hedef iyileştirme", "sürekli gelişim"]
+  },
+  {
+    "id": 40,
+    "content": "[Öğrenci Adı] sınav kaygısını akademik mükemmellik sürücüsü olarak geliştiriyor. Performans ayarlama becerileri gelişmiş, stresi başarıya dönüştürme etkili ve sürekli motivasyon korunması gösteriyor.",
+    "tone": "olumlu",
+    "etiketler": ["akademik mükemmellik", "performans ayarlama", "başarı odaklı", "sürekli motivasyon"]
+  },
+  {
+    "id": 41,
+    "content": "[Öğrenci Adı], LGS sürecinde teknolojiye olan ilgisini verimli kullanmıştır. Yaz tatilinde kodlama, bilimsel araştırmalar veya eğitim içerikleriyle ilgilenmesi, yeni eğitim hayatına daha donanımlı ve bilinçli başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Teknolojiye Aşırı İlgi Duyan", "karakter gelişimi", "değer sistemi", "ahlaki liderlik", "ilkeli karar"]
+  },
+  {
+    "id": 42,
+    "content": "[Öğrenci Adı] liseye hazırlık konusunda geçiş ustalaşması ve uyum mükemmelliği sergiliyor. Değişim yönetimi becerileri güçlü, gelecek planlama gelişmişliği yüksek ve proaktif hazırlık stratejileri geliştirdi.",
+    "tone": "olumlu",
+    "etiketler": ["geçiş ustalaşması", "uyum yeteneği", "değişim yönetimi", "proaktif planlama"]
+  },
+  {
+    "id": 43,
+    "content": "[Öğrenci Adı], LGS sürecinde sanatsal yönünü korumaya çalışmıştır. Yaz tatilinde sanatsal faaliyetlere ağırlık vermesi, yeni hobiler edinmesi ve zihinsel olarak rahatlaması, yeni eğitim hayatına daha dinlenmiş ve ilham dolu başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Sanatsal Yönü Güçlü, LGS Stresi", "miras bilinci", "etki farkındalığı", "sosyal sorumluluk", "topluluk liderliği"]
+  },
+  {
+    "id": 44,
+    "content": "[Öğrenci Adı] sınav kaygısı, olgunlaşma ve lise hazırlığı konularında entegre ustalaşma sergiliyor. Bütüncül gelişim yaklaşımı benimsiyor, dengeli mükemmellik gösteriyor ve kapsamlı hazır oluşu gösteriyor.",
+    "tone": "olumlu",
+    "etiketler": ["entegre yaklaşım", "bütüncül gelişim", "dengeli mükemmellik", "kapsamlı hazırlık"]
+  },
+  {
+    "id": 45,
+    "content": "[Öğrenci Adı], LGS sürecinde yabancı dil öğrenme konusundaki isteğini korumuştur. Yaz tatilinde yabancı dilde kitap okuması, film izlemesi ve pratik yapması, lise hayatına daha güçlü bir dil becerisiyle başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Yabancı Dil Öğrenmeye Açık", "örnek liderlik", "ilham verici", "dönüştürücü etki", "olumlu miras"]
   }
 ]

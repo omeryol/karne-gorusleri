@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı] ortaokul ortamına tamamen uyum sağladı ve artan ders yükü ile başarıyla başa çıkıyor. Grup çalışmalarında aktif rol alıyor ve sosyal becerileri her geçen gün gelişiyor. Yeni arkadaşlıklar kurmada başarılı.",
+    "content": "[Öğrenci Adı], akademik başarısıyla birlikte sosyal becerilerini de dengeli bir şekilde geliştiren örnek bir öğrencidir. Özellikle grup çalışmalarında sergilediği liderlik özellikleri takdire şayandır. İkinci dönemde bu liderlik vasfını daha da geliştirerek sınıf içi projelere daha fazla katkı sağlamasını bekliyoruz.",
     "tone": "olumlu",
-    "etiketler": ["ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
+    "etiketler": ["Dengeli Başarılı, Liderlik Potansiyeli", "ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
   },
   {
     "id": 2,
@@ -13,9 +13,9 @@
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı] grup çalışmalarında liderlik özelliklerini gösteriyor. Arkadaşlarını dinliyor ve herkesın fikrini alıyor. Sosyal becerilerinde güzel gelişme var ve çatışma çözme konusunda başarılı.",
-    "tone": "olumlu",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "content": "[Öğrenci Adı], bu dönem derslerde bazı zorluklar yaşamış ve öğrenmeye olan ilgisinde düşüş gözlemlenmiştir. Ancak her öğrencinin farklı bir öğrenme hızı olduğu unutulmamalıdır. Potansiyeline inanarak, küçük adımlarla ilerlemesi için desteklenmelidir. Sömestr tatilinde sevdiği konularla ilgili basit okumalar yapması ve eğlenceli öğrenme aktiviteleriyle okuldan kopmaması, ikinci döneme daha pozitif başlamasına yardımcı olacaktır.",
+    "tone": "notr",
+    "etiketler": ["Akademik Zorluk Yaşayan, Destekleyici Yaklaşım Gereken", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 4,
@@ -25,9 +25,9 @@
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı] ortaokul sistemine mükemmel uyum sağladı. Farklı öğretmenlerle çalışmaya alıştı ve her dersin kendine özgü kurallarını öğrendi. Arkadaşlık ilişkilerinde olgun davranıyor.",
+    "content": "[Öğrenci Adı], yüksek akademik başarısıyla göz doldurmaktadır. Öğrenmeye olan tutkusu takdire şayandır. Ancak, zaman zaman mükemmeliyetçi yaklaşımı nedeniyle sınav dönemlerinde stres yaşadığı gözlemlenmiştir. Başarının sadece notlardan ibaret olmadığını hatırlatmak isteriz. Sömestr tatilinde dinlenmeye ve hobilerine zaman ayırmaya özen göstermesi, stres yönetimini öğrenmesi için faydalı olacaktır.",
     "tone": "olumlu",
-    "etiketler": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+    "etiketler": ["Yüksek Beklentili, Stres Yönetimi Gereken", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
   },
   {
     "id": 6,
@@ -37,9 +37,9 @@
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı] grup projelerinde yaratıcı fikirler üretiyor. Arkadaşlarıyla beyin fırtınası yapmayı seviyor ve herkesi konuşturmaya çalışıyor. Sunum yapmaktan korkmuyor.",
+    "content": "[Öğrenci Adı], bu dönemde sergilediği disiplinli çalışma alışkanlığı ve kararlılığı sayesinde akademik başarısını istikrarlı bir şekilde sürdürmüştür. Sorumluluk bilinci ve derslere olan özverisi örnek teşkil etmektedir. İkinci dönemde de bu düzenini koruması, başarısını daha da pekiştirecektir.",
     "tone": "olumlu",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "etiketler": ["Disiplinli ve Çalışkan, Başarısı Yüksek", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 8,
@@ -49,9 +49,9 @@
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı] ortaokul ortamındaki değişiklikleri fırsat olarak görüyor. Yeni etkinliklere katılmaya hevesli ve arkadaşlarını da teşvik ediyor. Okul kulüplerine üye olmak istiyor.",
-    "tone": "olumlu",
-    "etiketler": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+    "content": "[Öğrenci Adı], derslerdeki potansiyeline rağmen dikkatini uzun süre korumakta zorlanmaktadır. Bu durum, akademik performansını olumsuz etkileyebilmektedir. İkinci dönemde odaklanma becerisini geliştirecek teknikler (kısa molalar, sessiz ortam) kullanması faydalı olacaktır.",
+    "tone": "notr",
+    "etiketler": ["Dikkati Gelişmesi Gereken, Yaz Tatili Önerileri:", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
   },
   {
     "id": 10,
@@ -61,9 +61,9 @@
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı] takım çalışmalarında güçlü taraflarını keşfetti. Organizing yapmayı seviyor ve arkadaşlarının güçlü taraflarını da fark ediyor. Herkesi değerli hissettiriyor.",
-    "tone": "olumlu",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "content": "[Öğrenci Adı], akademik olarak sınıf ortalamasında bir performans sergilemektedir. Ancak, sosyal ilişkilerinde zaman zaman uyum sorunları yaşadığı ve kendini ifade etmekte zorlandığı gözlemlenmiştir. İkinci dönemde grup çalışmalarına daha fazla katılması ve farklı arkadaşlıklar kurmaya açık olması, sosyal becerilerini geliştirmesine yardımcı olacaktır.",
+    "tone": "notr",
+    "etiketler": ["Sosyal Uyum Sorunu Yaşayan, Akademik Ortalamada:", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 12,
@@ -73,9 +73,9 @@
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı] ortaokul rutinine tam uyum sağladı. Teneffüs saatlerini verimli kullanıyor ve arkadaşlarıyla kaliteli zaman geçiriyor. Okul etkinliklerine katılım gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+    "content": "[Öğrenci Adı], derslerdeki potansiyeline rağmen sorumluluklarını yerine getirme konusunda zaman zaman aksaklıklar yaşamıştır. Ödev takibi ve ders araç-gereçlerini düzenli kullanma alışkanlığı geliştirmesi gerekmektedir. İkinci dönemde bu konuda daha bilinçli adımlar atmasını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Sorumluluk Bilinci Gelişmesi Gereken:", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
   },
   {
     "id": 14,
@@ -85,9 +85,9 @@
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı] grup çalışmaları sayesinde sosyal becerilerini çok geliştirdi. Ortaokul uyumu mükemmel ve artan ders yükünü başarıyla yönetiyor. Arkadaşları tarafından seviliyor.",
+    "content": "[Öğrenci Adı], derslerde karşılaştığı problemlere yaratıcı ve özgün çözümler getirme becerisiyle öne çıkmaktadır. Bu yeteneği, öğrenme sürecini zenginleştirmektedir. İkinci dönemde bu yaratıcılığını daha karmaşık projelere uygulamasını ve farklı disiplinlerdeki problemleri çözmeye çalışmasını bekliyoruz.",
     "tone": "olumlu",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "etiketler": ["Yaratıcı Problem Çözücü:", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 16,
@@ -97,9 +97,9 @@
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı] artan ders sayısına alışma konusunda zorlanıyor. Bazı günler çok yorulduğunu söylüyor. Arkadaşlarıyla ilişkilerinde değişkenlik gösteriyor.",
+    "content": "[Öğrenci Adı], okul dışı aktivitelerde (spor, sanat vb.) önemli başarılar elde etmektedir. Bu yetenekleri takdire şayandır. Ancak, bu başarıyı akademik alana yeterince yansıtamadığı gözlemlenmiştir. İkinci dönemde derslerine de aynı disiplin ve motivasyonla yaklaşması, genel başarısını artıracaktır.",
     "tone": "notr",
-    "etiketler": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+    "etiketler": ["Okul Dışı Aktivitelerde Başarılı:", "artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
   },
   {
     "id": 18,
@@ -109,9 +109,9 @@
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı] sosyal beceri gelişiminde yavaş ilerleme kaydediyor. Arkadaşlarıyla iletişim kuruyor ama çatışma yaşadığında çözüm üretmekte zorlanıyor.",
+    "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen sınav dönemlerinde yaşadığı kaygı nedeniyle potansiyelini tam olarak yansıtamamıştır. Sınavların sadece bir değerlendirme aracı olduğunu hatırlatmak isteriz. İkinci dönemde rahatlama teknikleri öğrenmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, daha başarılı olmasına yardımcı olacaktır.",
     "tone": "notr",
-    "etiketler": ["sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
+    "etiketler": ["Sınav Kaygısı Olan:", "sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
   },
   {
     "id": 20,
@@ -121,9 +121,9 @@
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı] ders yükündeki artıştan dolayı stres yaşıyor. Ödev yoğunluğundan şikayet ediyor ve bazen yetiştiremediğini söylüyor. Arkadaşlarından destek istiyor.",
-    "tone": "notr",
-    "etiketler": ["artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
+    "content": "[Öğrenci Adı], olaylara ve konulara eleştirel bir bakış açısıyla yaklaşma becerisiyle öne çıkmaktadır. Sorgulayıcı yapısı, derinlemesine öğrenmeyi teşvik etmektedir. İkinci dönemde bu becerisini daha karmaşık metinleri analiz etmeye ve farklı görüşleri değerlendirmeye yönelik kullanmasını bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Eleştirel Düşünme Becerisi Gelişmiş:", "artan ders yükü", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları"]
   },
   {
     "id": 22,
@@ -133,9 +133,9 @@
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı] sosyal becerilerini geliştirme konusunda istekli ama başarılı olamıyor. Arkadaşlarıyla iletişimde sorunlar yaşıyor ve yanlış anlaşılmalar oluyor.",
+    "content": "[Öğrenci Adı], ders çalışma ortamı konusunda desteğe ihtiyaç duymaktadır. Düzenli ve sessiz bir çalışma alanı, odaklanma ve öğrenme verimliliği için önemlidir. İkinci dönemde bu konuda aile desteğiyle uygun bir ortam oluşturulması, akademik başarısını olumlu etkileyecektir.",
     "tone": "notr",
-    "etiketler": ["sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
+    "etiketler": ["Ders Çalışma Ortamı İhtiyacı Olan:", "sosyal beceri gelişimi", "grup çalışmaları", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 24,
@@ -145,9 +145,9 @@
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı] farklı öğretmenlerin farklı kurallarına uyum sağlamaya çalışıyor. Bazen hangi derste ne yapacağını unutuyor. Arkadaşlarının hatırlatmasına ihtiyaç duyuyor.",
+    "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen sınıf içi tartışmalara katılmaktan çekindiği gözlemlenmiştir. Fikirlerini paylaşması, hem kendi öğrenme sürecini zenginleştirecek hem de sınıf arkadaşlarına örnek olacaktır. İkinci dönemde daha aktif bir katılım sergilemesini bekliyoruz.",
     "tone": "notr",
-    "etiketler": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+    "etiketler": ["Sınıf İçi Tartışmalara Katılmayan:", "ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
   },
   {
     "id": 26,
@@ -157,9 +157,9 @@
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı] sosyal aktivitelere katılmayı tercih etmiyor. Teneffüslerde tek başına vakit geçiriyor. Arkadaşlık kurma konusunda çekingen davranıyor.",
+    "content": "[Öğrenci Adı], ödev ve projelerini son ana bırakma eğilimi göstermektedir. Bu durum, hem kalitesini etkilemekte hem de stres yaratmaktadır. Zaman yönetimi becerilerini geliştirmesi ve sorumluluklarını zamanında yerine getirmesi, başarısı için kritik öneme sahiptir. İkinci dönemde planlı çalışmasını bekliyoruz.",
     "tone": "notr",
-    "etiketler": ["sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
+    "etiketler": ["Sorumluluklarını Erteleyen:", "sosyal beceri gelişimi", "ortaokul uyumu", "grup çalışmaları", "artan ders yükü"]
   },
   {
     "id": 28,
@@ -169,9 +169,9 @@
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı] ortaokul uyumu, ders yükü artışı ve sosyal beceriler konularında destek almaya ihtiyacı var. Arkadaşlık ilişkilerinde istikrarsızlık gösteriyor.",
-    "tone": "notr",
-    "etiketler": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+    "content": "[Öğrenci Adı], bilgiye olan açlığı ve araştırmacı ruhuyla dikkat çekmektedir. Merak ettiği konuları derinlemesine incelemesi takdire şayandır. İkinci dönemde bu merakını farklı disiplinlere yöneltmesini ve öğrendiklerini arkadaşlarıyla paylaşmasını teşvik ediyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Meraklı ve Araştırmacı:", "ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
   },
   {
     "id": 30,
@@ -181,9 +181,9 @@
   },
   {
     "id": 31,
-    "content": "[Öğrenci Adı] ortaokul ortamına uyum sağlayamıyor. Sürekli ilkokulu özlediğini söylüyor ve eski okuluna dönmek istiyor. Yeni sistem ona çok zor geliyor.",
-    "tone": "olumsuz",
-    "etiketler": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+    "content": "[Öğrenci Adı], sağlık sorunları nedeniyle zaman zaman okula devam etmekte zorlanmıştır. Ancak, derslerini telafi etme konusundaki çabası takdire şayandır. İkinci dönemde sağlık durumuna dikkat ederek ve derslerini takip ederek başarısını sürdürmesini bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Sağlık Sorunları Nedeniyle Devamsızlık:", "ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
   },
   {
     "id": 32,
@@ -193,9 +193,9 @@
   },
   {
     "id": 33,
-    "content": "[Öğrenci Adı] grup çalışmalarında hiç katkı sağlamıyor. Arkadaşlarının çalışmasını engelliyor ve projelerini bozuyor. Takım çalışmasını reddediyor.",
-    "tone": "olumsuz",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "content": "[Öğrenci Adı], öğrenme stilini keşfetme konusunda desteğe ihtiyaç duymaktadır. Farklı öğrenme yöntemlerini denemesi, dersleri daha kolay anlamasına yardımcı olacaktır. İkinci dönemde kendisine en uygun öğrenme tekniklerini bulmasını ve uygulamasını teşvik ediyoruz.",
+    "tone": "notr",
+    "etiketler": ["Öğrenme Stili Farklı:", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 34,
@@ -205,9 +205,9 @@
   },
   {
     "id": 35,
-    "content": "[Öğrenci Adı] ortaokul kurallarına hiç uymuyor. Hangi sınıfa gideceğini bilmiyor ve ders programını takip etmiyor. Sürekli geç kalıyor ve dersleri kaçırıyor.",
-    "tone": "olumsuz",
-    "etiketler": ["ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
+    "content": "[Öğrenci Adı], ders materyallerini düzenli kullanma konusunda desteğe ihtiyaç duymaktadır. Düzenli materyal kullanımı, ders takibini kolaylaştırır ve sorumluluk bilincini geliştirir. İkinci dönemde eşyalarına daha özen göstermesini ve düzenli olmayı alışkanlık haline getirmesini bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Ders Materyallerini Düzenli Kullanmayan:", "ortaokul uyumu", "artan ders yükü", "sosyal beceri gelişimi", "grup çalışmaları"]
   },
   {
     "id": 36,
@@ -217,9 +217,9 @@
   },
   {
     "id": 37,
-    "content": "[Öğrenci Adı] grup projelerinde arkadaşlarıyla kavga ediyor. Hiçbir fikri kabul etmiyor ve kendi istediği olmazsa çalışmayı bırakıyor. İş birliği yapmıyor.",
-    "tone": "olumsuz",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "content": "[Öğrenci Adı], akran ilişkilerinde zaman zaman zorlandığı ve kendini dışlanmış hissettiği gözlemlenmiştir. Sosyal becerilerini geliştirmesi ve arkadaşlarıyla daha sağlıklı iletişim kurması için desteğe ihtiyaç duymaktadır. İkinci dönemde grup aktivitelerine katılımını ve empati becerisini geliştirmesini teşvik ediyoruz.",
+    "tone": "notr",
+    "etiketler": ["Akran İlişkilerinde Destek İhtiyacı:", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 38,
@@ -229,9 +229,9 @@
   },
   {
     "id": 39,
-    "content": "[Öğrenci Adı] ortaokul sisteminden hiç memnun değil. Sürekli eleştiriyor ve hiçbir şeyi beğenmiyor. Öğretmenlere saygısızlık yapıyor ve kurallara uymuyor.",
-    "tone": "olumsuz",
-    "etiketler": ["ortaokul uyumu", "sosyal beceri gelişimi", "artan ders yükü", "grup çalışmaları"]
+    "content": "[Öğrenci Adı], zihinsel potansiyeline rağmen derslere karşı ilgisiz olduğu gözlemlenmiştir. Öğrenme motivasyonunu artırmak için ilgi alanlarına yönelik öğrenme materyalleriyle desteklenmelidir. İkinci dönemde küçük başarılarla motivasyonunu yeniden kazanmasını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Öğrenme Motivasyonu Düşük:", "ortaokul uyumu", "sosyal beceri gelişimi", "artan ders yükü", "grup çalışmaları"]
   },
   {
     "id": 40,
@@ -241,9 +241,9 @@
   },
   {
     "id": 41,
-    "content": "[Öğrenci Adı] takım çalışmalarında yıkıcı davranıyor. Arkadaşlarının motivasyonunu bozuyor ve projelerin başarısız olmasına sebep oluyor. Liderlik yapmaya çalışırken baskı kuruyor.",
-    "tone": "olumsuz",
-    "etiketler": ["grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
+    "content": "[Öğrenci Adı], problemler karşında çözüm odaklı ve pratik zekasıyla öne çıkmaktadır. Karşılaştığı zorluklarda alternatif yollar bulma yeteneği takdire şayandır. İkinci dönemde bu becerisini daha karmaşık projelere uygulamasını ve analitik düşünme yeteneğini geliştirmesini bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Çözüm Odaklı ve Pratik Zeka:", "grup çalışmaları", "sosyal beceri gelişimi", "ortaokul uyumu", "artan ders yükü"]
   },
   {
     "id": 42,
@@ -253,9 +253,9 @@
   },
   {
     "id": 43,
-    "content": "[Öğrenci Adı] okul etkinliklerine katılmayı reddediyor. Arkadaşlarını da etkinliklerden vazgeçirmeye çalışıyor. Okul kültürüne uyum sağlamıyor.",
-    "tone": "olumsuz",
-    "etiketler": ["ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
+    "content": "[Öğrenci Adı], dersi dinleme konusunda zaman zaman zorlanmış, dikkatini sürdürmekte güçlük çekmiştir. Etkili dinleme becerisi, öğrenmenin temelidir. İkinci dönemde derste daha dikkatli olmasını, not alarak veya soru sorarak aktif dinlemeyi öğrenmesini bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Dersi Dinlemede Zorlanan:", "ortaokul uyumu", "sosyal beceri gelişimi", "grup çalışmaları", "artan ders yükü"]
   },
   {
     "id": 44,
@@ -265,8 +265,8 @@
   },
   {
     "id": 45,
-    "content": "[Öğrenci Adı] ortaokula uyum, ders yükü artışı, grup çalışmaları ve sosyal beceri gelişimi konularında ciddi sorunlar yaşıyor. Acil destek ve rehberlik gerekiyor.",
-    "tone": "olumsuz",
-    "etiketler": ["ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
+    "content": "[Öğrenci Adı], sınıf içi etkinliklere ve grup çalışmalarına katılmada isteksiz olduğu gözlemlenmiştir. Katılım, hem sosyal hem de akademik gelişimi için önemlidir. İkinci dönemde daha cesur olması, fikirlerini paylaşmaktan çekinmemesi ve grup aktivitelerine daha aktif katılması gerektiğini düşünüyoruz.",
+    "tone": "notr",
+    "etiketler": ["Sınıf İçi Etkinliklere İsteksiz:", "ortaokul uyumu", "artan ders yükü", "grup çalışmaları", "sosyal beceri gelişimi"]
   }
 ]

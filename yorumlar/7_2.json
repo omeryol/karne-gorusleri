@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı] lise hazırlık düşünceleri konusunda planlı yaklaşım sergiliyor. Hedef belirleme konusunda net vizyona sahip, kişilik gelişiminde olgunluk gösteriyor ve çatışma çözme becerilerini gelecek odaklı bakış açısıyla geliştiriyor.",
+    "content": "[Öğrenci Adı], yıl boyunca hedef odaklı ve planlı çalışmasını sürdürerek üstün başarı elde etmiştir. Yaz tatilinde 8. sınıfa hazırlık amacıyla temel derslerdeki bilgilerini taze tutmasını ve ilgi alanlarını geliştirecek aktivitelere devam etmesini tavsiye ederiz.",
     "tone": "olumlu",
-    "etiketler": ["lise hazırlık düşünceleri", "hedef belirleme", "kişilik gelişimi", "çatışma çözme becerileri"]
+    "etiketler": ["Hedef Odaklı, Başarılı", "lise hazırlık düşünceleri", "hedef belirleme", "kişilik gelişimi", "çatışma çözme becerileri"]
   },
   {
     "id": 2,
@@ -13,9 +13,9 @@
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı] kişilik gelişimi konusunda kendini tanıma ve duygusal zeka birleştirmesi başarılı. Kendi değerlerini tanımlama konusunda net, karakter özelliklerini güçlendirme sürecinde istikrarlı ve sosyal ilişkilerinde samimi yaklaşımlar sergiliyor.",
-    "tone": "olumlu",
-    "etiketler": ["kendini tanıma", "duygusal zeka", "değer tanımlama", "karakter güçlendirme"]
+    "content": "[Öğrenci Adı], yıl boyunca motivasyonunu artırma konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 8. sınıfa daha istekli bir başlangıç yapmasını sağlayacaktır. Potansiyelini kullanması için desteklenmeye devam etmelidir.",
+    "tone": "notr",
+    "etiketler": ["Motivasyon Düşüklüğü, Potansiyelini Kullanamayan", "kendini tanıma", "duygusal zeka", "değer tanımlama", "karakter güçlendirme"]
   },
   {
     "id": 4,
@@ -25,9 +25,9 @@
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı] lise hazırlık sürecinde akademik ve sosyal yetkinlikleri dengeli geliştiriyor. Hedef odaklı çalışma disiplini kazanmış, kişilik gelişiminde bütüncül yaklaşım benimsiyor ve gelecek planlamasında gerçekçi ama iddialı hedefler koyuyor.",
-    "tone": "olumlu",
-    "etiketler": ["akademik-sosyal denge", "hedef odaklı disiplin", "bütüncül kişilik yaklaşımı", "gerçekçi iddialı hedefler"]
+    "content": "[Öğrenci Adı], yıl boyunca sorumluluk bilincini geliştirme konusunda önemli adımlar atmıştır. Yaz tatilinde günlük bir çalışma rutini oluşturarak sorumluluklarını pekiştirmesi, 8. sınıfa daha hazırlıklı başlamasını sağlayacaktır. Disiplinli çalışma, başarının anahtarıdır.",
+    "tone": "notr",
+    "etiketler": ["Sorumluluk Almaktan Kaçınan, Akademik Düşüş", "akademik-sosyal denge", "hedef odaklı disiplin", "bütüncül kişilik yaklaşımı", "gerçekçi iddialı hedefler"]
   },
   {
     "id": 6,
@@ -37,9 +37,9 @@
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı] kişilik gelişiminde büyüme zihniyeti ve dayanıklılık birleştirmesi gösteriyor. Zorlukları öğrenme fırsatı olarak değerlendirme yeteneği güçlü, uyum kapasitesi yüksek ve çatışma çözme süreçlerinde yaratıcı yaklaşımlar geliştiriyor.",
+    "content": "[Öğrenci Adı], bu eğitim-öğretim yılı boyunca gösterdiği sürekli gelişimle bizleri gururlandırmıştır. Yaz tatilinde 8. sınıfa hazırlık amacıyla temel derslerdeki bilgilerini taze tutmasını ve ilgi alanlarını geliştirecek aktivitelere devam etmesini tavsiye ederiz.",
     "tone": "olumlu",
-    "etiketler": ["büyüme zihniyeti", "dayanıklılık", "zorlukları öğrenme fırsatına çevirme", "yaratıcı çatışma çözme"]
+    "etiketler": ["Sürekli Gelişim Gösteren, Özgüveni Yüksek", "büyüme zihniyeti", "dayanıklılık", "zorlukları öğrenme fırsatına çevirme", "yaratıcı çatışma çözme"]
   },
   {
     "id": 8,
@@ -49,9 +49,9 @@
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı] lise hazırlık düşünceleri konusunda girişimci zihniyet geliştirdi. Yenilikçi düşünce yaklaşımları benimsiyor, risk değerlendirme becerilerinde uzmanlaşmış ve kişilik gelişimini kariyer planlaması ile entegre ediyor.",
-    "tone": "olumlu",
-    "etiketler": ["girişimci zihniyet", "yenilikçi düşünce", "risk değerlendirme", "kariyer planlama entegrasyonu"]
+    "content": "[Öğrenci Adı], yıl boyunca sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde rahatlama teknikleri öğrenmeye devam etmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, 8. sınıfta daha başarılı olmasına yardımcı olacaktır.",
+    "tone": "notr",
+    "etiketler": ["Sınav Kaygısı Olan, Destek İhtiyacı", "girişimci zihniyet", "yenilikçi düşünce", "risk değerlendirme", "kariyer planlama entegrasyonu"]
   },
   {
     "id": 10,
@@ -61,9 +61,9 @@
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı] çatışma çözme becerilerinde sistem düşüncesi yaklaşımı geliştirdi. Problemleri bütüncül bakış açısıyla analiz etme yeteneği güçlü, paydaş yönetimi konusunda başarılı ve sürdürülebilir çözümler üretme konusunda yaratıcı.",
-    "tone": "olumlu",
-    "etiketler": ["sistem düşüncesi", "bütüncül problem analizi", "paydaş yönetimi", "sürdürülebilir çözümler"]
+    "content": "[Öğrenci Adı], yıl boyunca akademik alanda çaba göstermiştir. Yaz tatilinde ilgi alanlarını destekleyecek, ancak aynı zamanda temel akademik becerilerini de koruyacak aktivitelere yönelmesi, okula olan bağlılığını güçlendirecektir. Geleceği için öğrenmeye devam etmesi önemlidir.",
+    "tone": "notr",
+    "etiketler": ["Erken Hayata Atılma Eğilimi, Okul Bağını Güçlendirme", "sistem düşüncesi", "bütüncül problem analizi", "paydaş yönetimi", "sürdürülebilir çözümler"]
   },
   {
     "id": 12,
@@ -73,9 +73,9 @@
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı] kişilik gelişiminde duygusal düzenleme ve stres yönetimi konularında mükemmel. Baskı altında performans sergileme yeteneği güçlü, farkındalık teknikleri uygulama konusunda başarılı ve iyi olma odaklı yaşam felsefesi geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["duygusal düzenleme", "stres yönetimi", "baskı altı performans", "farkındalık teknikleri"]
+    "content": "[Öğrenci Adı], yıl boyunca zaman yönetimi konusunda gelişim göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek zaman yönetimi becerilerini pekiştirmesi, 8. sınıfa daha düzenli bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Zaman Yönetimi Sorunu Olan", "duygusal düzenleme", "stres yönetimi", "baskı altı performans", "farkındalık teknikleri"]
   },
   {
     "id": 14,
@@ -85,9 +85,9 @@
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı] çatışma çözme, hedef belirleme ve kişilik gelişimi konularında entegre mükemmellik sergiliyor. Bütüncül gelişim yaklaşımı benimsiyor, liderlik potansiyeli tam kapasiteyle ortaya çıkmış ve gelecek odaklı etki yaratma konusunda vizyon sahibi.",
-    "tone": "olumlu",
-    "etiketler": ["entegre mükemmellik", "bütüncül gelişim", "tam liderlik potansiyeli", "gelecek odaklı etki"]
+    "content": "[Öğrenci Adı], yıl boyunca sınıf içi katılıma yönelik gelişim göstermiştir. Yaz tatilinde kendini ifade etme becerilerini geliştirecek sosyal aktivitelere katılması, 8. sınıfa daha özgüvenli bir iletişimle başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Pasif Katılımcı", "entegre mükemmellik", "bütüncül gelişim", "tam liderlik potansiyeli", "gelecek odaklı etki"]
   },
   {
     "id": 16,
@@ -97,9 +97,9 @@
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı] hedef belirleme konusunda belirsizlik gösteriyor. Kısa vadeli hedeflerde dalgalanmalar yaşıyor, kişilik gelişiminde motivasyon eksikliği bulunuyor ve sosyal ilişkilerde dengesizlik gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["hedef belirsizliği", "kısa vade dalgalanmaları", "motivasyon eksikliği", "sosyal dengesizlik"]
+    "content": "[Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda gelişim göstermiştir. Yaz tatilinde sorumluluk bilincini pekiştirmesi ve disiplinli olmayı alışkanlık haline getirmesi, 8. sınıfa daha düzenli bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Okul Kurallarına Uyumda Zorlanan", "hedef belirsizliği", "kısa vade dalgalanmaları", "motivasyon eksikliği", "sosyal dengesizlik"]
   },
   {
     "id": 18,
@@ -109,9 +109,9 @@
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı] çatışma çözme becerilerinde beklenenin altında performans sergiliyor. Çatışma büyütme eğilimi gösteriyor, hedef belirleme konusunda erteleme yaşıyor ve kişisel gelişim planlarında tutarsızlık bulunuyor.",
-    "tone": "notr",
-    "etiketler": ["beklenti altı çatışma çözme", "çatışma büyütme", "hedef erteleme", "kişisel plan tutarsızlığı"]
+    "content": "[Öğrenci Adı], yıl boyunca potansiyelini keşfetme konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik araştırmalar yapması ve kendini geliştirecek projelere yönelmesi, 8. sınıfa daha bilinçli başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Akademik Potansiyelini Keşfedemeyen", "beklenti altı çatışma çözme", "çatışma büyütme", "hedef erteleme", "kişisel plan tutarsızlığı"]
   },
   {
     "id": 20,
@@ -121,9 +121,9 @@
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı] hedef belirleme konusunda ciddi zorlanmalar yaşıyor. Gerçekçi ve gerçekçi olmayan hedef ayrımını yapamıyor, kişilik gelişiminde yönelim kaybı yaşıyor ve çatışma çözme yerine kaçınma stratejileri kullanıyor.",
+    "content": "[Öğrenci Adı], yıl boyunca sosyal medya/ekran kullanımını dengeleme konusunda çaba göstermiştir. Yaz tatilinde ekran süresini sınırlayarak, kitap okumaya ve fiziksel aktivitelere yönelmesi, 8. sınıfa daha sağlıklı bir başlangıç yapmasını sağlayacaktır.",
     "tone": "notr",
-    "etiketler": ["ciddi hedef belirleme zorlanmaları", "gerçekçi-gerçekçi olmayan ayrım yapamama", "kişilik yönelim kaybı", "çatışma kaçınma"]
+    "etiketler": ["Sosyal Medya/Ekran Bağımlılığı", "ciddi hedef belirleme zorlanmaları", "gerçekçi-gerçekçi olmayan ayrım yapamama", "kişilik yönelim kaybı", "çatışma kaçınma"]
   },
   {
     "id": 22,
@@ -133,9 +133,9 @@
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı] çatışma çözme becerilerinde işlevsizlik gösteriyor. Yıkıcı çatışma davranışları sergiliyor, hedef belirleme sürecinde felç yaşıyor ve kişilik gelişiminde geriye gidiş gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["çatışma çözme işlevsizliği", "yıkıcı çatışma davranışları", "hedef felci", "kişilik geriye gidişi"]
+    "content": "[Öğrenci Adı], yıl boyunca sorumluluk bilincini korumuş ve arkadaşlarına destek olmaya devam etmiştir. Yaz tatilinde sosyal sorumluluk projelerine katılması veya gönüllü çalışmalarda bulunması, bu değerli özelliklerini daha da pekiştirecektir.",
+    "tone": "olumlu",
+    "etiketler": ["Sorumluluk Bilinci Gelişmiş, Akranlarına Yardımcı", "çatışma çözme işlevsizliği", "yıkıcı çatışma davranışları", "hedef felci", "kişilik geriye gidişi"]
   },
   {
     "id": 24,
@@ -145,9 +145,9 @@
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı] hedef belirleme ve kişilik gelişimi konularında kritik seviyede sorunlar yaşıyor. Hedef kaçınma davranışları gösteriyor, kimlik karmaşası derinleşiyor ve çatışma çözme yerine geri çekilme stratejileri kullanıyor.",
-    "tone": "notr",
-    "etiketler": ["kritik hedef-kişilik sorunları", "hedef kaçınma", "kimlik karmaşası", "geri çekilme stratejileri"]
+    "content": "[Öğrenci Adı], yıl boyunca düzenli çalışma alışkanlığını koruyarak üstün başarı elde etmiştir. Yaz tatilinde 8. sınıfa hazırlık amacıyla temel derslerdeki bilgilerini taze tutmasını ve zihinsel becerilerini canlı tutacak aktivitelere devam etmesini tavsiye ederiz.",
+    "tone": "olumlu",
+    "etiketler": ["Ders Çalışma Alışkanlığı Oturmuş, Başarılı", "kritik hedef-kişilik sorunları", "hedef kaçınma", "kimlik karmaşası", "geri çekilme stratejileri"]
   },
   {
     "id": 26,
@@ -157,9 +157,9 @@
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı] hedef belirleme konusunda tamamen işlevsiz hale geldi. Kişilik gelişimi tersine dönmüş, çatışma çözme yerine çatışma yaratma davranışları sergiliyor ve lise hazırlık planları tamamen çökmüş. Çok yönlü müdahale gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["tamamen işlevsiz hedef belirleme", "tersine kişilik gelişimi", "çatışma yaratma", "çökmüş lise planları"]
+    "content": "[Öğrenci Adı], yıl boyunca derslere olan ilgisini artırma konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 8. sınıfa daha istekli bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Derslere İlgisiz, Pasif", "tamamen işlevsiz hedef belirleme", "tersine kişilik gelişimi", "çatışma yaratma", "çökmüş lise planları"]
   },
   {
     "id": 28,
@@ -169,14 +169,104 @@
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı] çatışma çözme, hedef belirleme ve kişilik gelişimi açısından telafisi zor hasarlar almış. Sosyal işlevsellik kaybolmuş, akademik motivasyon çökmüş ve lise hazırlık sürecinde tamamen yönsüz hale gelmiş.",
-    "tone": "olumsuz",
-    "etiketler": ["telafisi zor çok alan hasarı", "kaybolmuş sosyal işlevsellik", "çökmüş akademik motivasyon", "tamamen yönsüz"]
+    "content": "[Öğrenci Adı], yıl boyunca duygusal dengeyi sağlama konusunda önemli adımlar atmıştır. Yaz tatilinde hobilerine yönelerek ve dinlenerek duygusal sağlığını desteklemesi, 8. sınıfa daha güçlü başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Duygusal Denge İhtiyacı Olan", "telafisi zor çok alan hasarı", "kaybolmuş sosyal işlevsellik", "çökmüş akademik motivasyon", "tamamen yönsüz"]
   },
   {
     "id": 30,
     "content": "[Öğrenci Adı] lise hazırlık, hedef belirleme ve kişilik gelişimi konularında kritik durumda bulunuyor. Tüm gelişim alanları çökmüş, çatışma çözme kapasitesi tersine dönmüş ve gelecek planlama yeteneği tamamen kaybolmuş. Acil uzman değerlendirme gereksinimi var.",
     "tone": "olumsuz",
     "etiketler": ["kritik çok alan durumu", "çökmüş tüm gelişim alanları", "tersine çatışma çözme", "kaybolmuş gelecek planlama"]
+  },
+  {
+    "id": 31,
+    "content": "[Öğrenci Adı], yıl boyunca özgün fikirler üretme becerisini sürdürmüştür. Yaz tatilinde ilgi alanlarına yönelik projeler geliştirmesi, bulmacalar çözmesi ve farklı düşünme tekniklerini denemesi, 8. sınıfa daha donanımlı başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Özgün Fikirler Üreten", "lise hazırlık düşünceleri", "hedef belirleme", "kişilik gelişimi", "çatışma çözme becerileri"]
+  },
+  {
+    "id": 32,
+    "content": "[Öğrenci Adı] hedef belirleme sürecinde sistemli ve gerçekçi yaklaşımlar geliştirdi. Kısa ve uzun vadeli planlar oluşturma yeteneği güçlü, kişisel güçlü yönlerini tanımlama konusunda bilinçli ve sosyal becerilerini gelecek hedefleriyle uyumlu şekilde geliştiriyor.",
+    "tone": "olumlu",
+    "etiketler": ["sistemli hedef belirleme", "kısa-uzun vade planlama", "güçlü yön tanımlama", "gelecek odaklı sosyal gelişim"]
+  },
+  {
+    "id": 33,
+    "content": "[Öğrenci Adı], yıl boyunca çözüm odaklı yaklaşımını sürdürmüştür. Yaz tatilinde zorlayıcı bulmacalar çözmesi ve problem çözme becerilerini geliştirecek aktivitelere katılması, 8. sınıfa daha güçlü başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Çözüm Odaklı Yaklaşım Sergileyen", "kendini tanıma", "duygusal zeka", "değer tanımlama", "karakter güçlendirme"]
+  },
+  {
+    "id": 34,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde ileri seviye teknikleri uygulayabiliyor. Onarıcı adalet yaklaşımlarını benimsiyor, arabuluculuk süreçlerinde liderlik yapıyor ve sosyal adaleti destekleyen çözümler üretiyor. Lise hazırlığında da bu becerileri önceliyor.",
+    "tone": "olumlu",
+    "etiketler": ["ileri seviye çatışma çözme", "onarıcı adalet", "arabuluculuk liderliği", "sosyal adalet"]
+  },
+  {
+    "id": 35,
+    "content": "[Öğrenci Adı], yıl boyunca aile desteği konusunda çaba göstermiştir. Yaz tatilinde aile üyeleriyle birlikte öğrenme aktivitelerine katılması ve okul-aile işbirliğinin devam etmesi, 8. sınıfa daha güçlü başlamasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Aile Desteği İhtiyacı Olan", "akademik-sosyal denge", "hedef odaklı disiplin", "bütüncül kişilik yaklaşımı", "gerçekçi iddialı hedefler"]
+  },
+  {
+    "id": 36,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda SMART kriterleri kullanımında ustalaşmış. Belirli, ölçülebilir ve ulaşılabilir hedefler koyma yeteneği gelişmiş, ilerleme takibi becerilerinde uzmanlaşmış ve kişilik gelişimini sistemli şekilde yönetiyor.",
+    "tone": "olumlu",
+    "etiketler": ["SMART hedef belirleme", "ilerleme takibi", "sistemli kişilik yönetimi", "hedef ulaşılabilirliği"]
+  },
+  {
+    "id": 37,
+    "content": "[Öğrenci Adı], yıl boyunca sınıf içi liderlik potansiyelini sürdürmüştür. Yaz tatilinde sosyal sorumluluk projelerine katılması veya liderlik becerilerini geliştirecek aktivitelere yönelmesi, 8. sınıfa daha donanımlı başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Sınıf İçi Liderlik Potansiyeli", "büyüme zihniyeti", "dayanıklılık", "zorlukları öğrenme fırsatına çevirme", "yaratıcı çatışma çözme"]
+  },
+  {
+    "id": 38,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde kültürel yetkinlik ve çeşitlilik yönetimi konularında başarılı. Çok kültürlü ortamlarda etkili iletişim kurma yeteneği gelişmiş, kapsayıcı liderlik vasıfları gösteriyor ve lise hedeflerini küresel bakış açısıyla şekillendiriyor.",
+    "tone": "olumlu",
+    "etiketler": ["kültürel yetkinlik", "çeşitlilik yönetimi", "çok kültürlü iletişim", "kapsayıcı liderlik"]
+  },
+  {
+    "id": 39,
+    "content": "[Öğrenci Adı], yıl boyunca ders çalışma motivasyonunu artırma konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 8. sınıfa daha istekli bir başlangıç yapmasını sağlayacaktır.",
+    "tone": "notr",
+    "etiketler": ["Ders Çalışma Motivasyonu Düşük", "girişimci zihniyet", "yenilikçi düşünce", "risk değerlendirme", "kariyer planlama entegrasyonu"]
+  },
+  {
+    "id": 40,
+    "content": "[Öğrenci Adı] hedef belirleme ve kişilik gelişimi konularında mentorluk yaklaşımı sergiliyor. Yaşıtlarına rehberlik etme yeteneği güçlü, sosyal sorumluluk projelerinde liderlik yapıyor ve çatışma çözme becerilerini toplumsal fayda için kullanıyor.",
+    "tone": "olumlu",
+    "etiketler": ["mentorluk yaklaşımı", "yaşıt rehberliği", "sosyal sorumluluk liderliği", "toplumsal fayda odağı"]
+  },
+  {
+    "id": 41,
+    "content": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili faydalı aktivitelere yönelmesi, 8. sınıfa daha bilinçli ve bilgili başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Teknolojiye Aşırı İlgi Duyan", "sistem düşüncesi", "bütüncül problem analizi", "paydaş yönetimi", "sürdürülebilir çözümler"]
+  },
+  {
+    "id": 42,
+    "content": "[Öğrenci Adı] lise hazırlık sürecinde kendi kendine öğrenme yaklaşımı benimsiyor. Özerk öğrenme becerilerinde uzmanlaşmış, kişisel gelişim planlarını sürekli güncelliyor ve hedeflerine ulaşma konusunda kendi kendini hesap verebilirlik gösteriyor.",
+    "tone": "olumlu",
+    "etiketler": ["kendi kendine öğrenme", "özerk öğrenme", "sürekli plan güncelleme", "kendi hesap verebilirlik"]
+  },
+  {
+    "id": 43,
+    "content": "[Öğrenci Adı], yıl boyunca sanatsal yeteneklerini geliştirmeye devam etmiştir. Yaz tatilinde sanatsal projelere yönelmesi, yaratıcılığını beslemesi ve 8. sınıfa ilhamla başlaması için harika bir fırsattır. Sanat, öğrenme sürecine renk katacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Sanatsal Yönü Güçlü", "duygusal düzenleme", "stres yönetimi", "baskı altı performans", "farkındalık teknikleri"]
+  },
+  {
+    "id": 44,
+    "content": "[Öğrenci Adı] hedef belirleme konusunda stratejik düşünce ve gelecek vizyonu birleştirmesi gösteriyor. Trend analizi yapabilme yeteneği gelişmiş, senaryo planlama konusunda başarılı ve uyarlanabilir planlama stratejileri geliştirme konusunda yaratıcı.",
+    "tone": "olumlu",
+    "etiketler": ["stratejik düşünce", "gelecek vizyonu", "trend analizi", "uyarlanabilir planlama"]
+  },
+  {
+    "id": 45,
+    "content": "[Öğrenci Adı], yıl boyunca yabancı dil öğrenme konusundaki isteğini korumuştur. Yaz tatilinde yabancı dilde çizgi film izlemesi, basit hikaye kitapları okuması veya dil öğrenme uygulamaları kullanması, 8. sınıfa daha donanımlı başlamasını sağlayacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["Yabancı Dil Öğrenmeye Açık", "entegre mükemmellik", "bütüncül gelişim", "tam liderlik potansiyeli", "gelecek odaklı etki"]
   }
 ]

@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı] ergenlik dönemi zorluklarını başarıyla yönetiyor ve akademik derinleşme sürecinde kayda değer ilerleme gösteriyor. Sosyal grup dinamiklerinde liderlik özellikleri sergiliyor, sorumluluk bilincinde olgunluk gösteriyor ve çatışma çözme becerilerini etkili kullanıyor.",
+    "content": "[Öğrenci Adı], bu dönemi akademik anlamda üstün bir başarıyla tamamlamıştır. Hedefine ulaşma konusundaki kararlılığı ve düzenli çalışma alışkanlığı takdire şayandır. İkinci dönemde de bu istikrarlı başarısını sürdürerek bilgi birikimini ve problem çözme becerilerini daha da artırmasını bekliyoruz.",
     "tone": "olumlu",
-    "etiketler": ["ergenlik dönemi zorlukları", "akademik derinleşme", "sosyal grup dinamikleri", "sorumluluk bilinci"]
+    "etiketler": ["Hedef Odaklı, Başarılı", "ergenlik dönemi zorlukları", "akademik derinleşme", "sosyal grup dinamikleri", "sorumluluk bilinci"]
   },
   {
     "id": 2,
@@ -13,9 +13,9 @@
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı] sosyal grup dinamiklerinde olgun ve dengeli bir profil çiziyor. Çeşitli kişilik tipleriyle uyum sağlama konusunda başarılı, empati kurma yeteneği gelişmiş ve çatışma çözme süreçlerinde arabulucu rol oynuyor. Akademik sorumluluklarını da titizlikle yerine getiriyor.",
-    "tone": "olumlu",
-    "etiketler": ["olgun grup dinamikleri", "kişilik uyumu", "empati geliştirme", "arabulucu çatışma çözme"]
+    "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelle çok daha iyi başarılara imza atabilecek kapasitededir. Ancak, bu dönemde motivasyon düşüklüğü yaşadığı ve potansiyelini tam olarak kullanamadığı gözlemlenmiştir. Sömestr tatilinde ilgi alanlarına yönelik araştırmalar yapması ve küçük başarılarla motivasyonunu yeniden kazanması için desteklenmelidir.",
+    "tone": "notr",
+    "etiketler": ["Motivasyon Düşüklüğü, Potansiyelini Kullanamayan", "olgun grup dinamikleri", "kişilik uyumu", "empati geliştirme", "arabulucu çatışma çözme"]
   },
   {
     "id": 4,
@@ -25,9 +25,9 @@
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı] çatışma çözme becerilerinde uzmanlaşma gösteriyor. Farklı görüşleri birleştirme yeteneği güçlü, diplomatik yaklaşımlar sergiliyor ve sosyal uyumda örnek davranışlar gösteriyor. Akademik derinleşme sürecinde de aynı olgunluğu sergiliyor.",
-    "tone": "olumlu",
-    "etiketler": ["çatışma çözme uzmanlaşması", "görüş birleştirme", "diplomatik yaklaşım", "sosyal uyum örneği"]
+    "content": "[Öğrenci Adı], derslerdeki sorumluluklarını yerine getirme konusunda zaman zaman aksaklıklar yaşamış, bu durum akademik başarısında düşüşe neden olmuştur. Kendi öğrenme sürecinin sorumluluğunu alması, düzenli ödev takibi ve ders tekrarı yapması büyük önem taşımaktadır. İkinci dönemde bu konularda daha bilinçli adımlar atmasını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Sorumluluk Almaktan Kaçınan, Akademik Düşüş", "çatışma çözme uzmanlaşması", "görüş birleştirme", "diplomatik yaklaşım", "sosyal uyum örneği"]
   },
   {
     "id": 6,
@@ -37,9 +37,9 @@
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı] akademik derinleşme sürecinde farklı alanları birleştiren yaklaşım sergiliyor. Farklı alan bilgilerini entegre etme yeteneği gelişmiş, analitik düşünce kapasitesi güçlü ve sosyal grup dinamiklerinde fikir liderliği yapıyor. Sorumluluk bilinci de paralel gelişim gösteriyor.",
+    "content": "[Öğrenci Adı], bu eğitim-öğretim yılı boyunca gösterdiği sürekli gelişimle bizleri gururlandırmıştır. Özellikle ikinci dönemde akademik başarısının yanı sıra özgüveni ve derse katılımı gözle görülür şekilde artmıştır. Zorlandığı konularda yılmadan çalışması takdire şayandır.",
     "tone": "olumlu",
-    "etiketler": ["farklı alan birleştirme", "alan entegrasyonu", "analitik düşünce", "fikir liderliği"]
+    "etiketler": ["Sürekli Gelişim Gösteren, Özgüveni Yüksek", "farklı alan birleştirme", "alan entegrasyonu", "analitik düşünce", "fikir liderliği"]
   },
   {
     "id": 8,
@@ -49,9 +49,9 @@
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı] sorumluluk bilincinde bağımsız düşünce geliştirme konusunda dikkat çekici. Bağımsız karar alma yeteneği güçlü, ahlaki değerleri benimseme sürecinde istikrarlı ve sosyal sorumluluklarını yerine getirme konusunda öncü davranışlar sergiliyor.",
-    "tone": "olumlu",
-    "etiketler": ["bağımsız düşünce geliştirme", "bağımsız karar alma", "ahlaki değer benimseme", "sosyal sorumluluk öncülüğü"]
+    "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen sınav dönemlerinde yaşadığı kaygı nedeniyle potansiyelini tam olarak yansıtamamıştır. Sınavların sadece bir değerlendirme aracı olduğunu hatırlatmak isteriz. Sömestr tatilinde rahatlama teknikleri öğrenmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, daha başarılı olmasına yardımcı olacaktır.",
+    "tone": "notr",
+    "etiketler": ["Sınav Kaygısı Olan, Destek İhtiyacı", "bağımsız düşünce geliştirme", "bağımsız karar alma", "ahlaki değer benimseme", "sosyal sorumluluk öncülüğü"]
   },
   {
     "id": 10,
@@ -61,9 +61,9 @@
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı] akademik derinleşme sürecinde araştırma becerileri ve kaynak değerlendirme yeteneği geliştirdi. Bilgi birleştirme konusunda yetenekli, eleştirel okuma becerilerinde uzmanlaşmış ve sosyal grup çalışmalarında koordinatör rolünü başarıyla üstleniyor.",
-    "tone": "olumlu",
-    "etiketler": ["araştırma becerileri", "kaynak değerlendirme", "bilgi birleştirme", "grup koordinatörlüğü"]
+    "content": "[Öğrenci Adı], akademik alanda bazı zorluklar yaşamış ve okul dışındaki ilgi alanlarına daha fazla yönelme eğilimi göstermiştir. Okulun sadece akademik bir ortam değil, aynı zamanda sosyal gelişim fırsatı sunduğu vurgulanmalıdır. İkinci dönemde okula olan bağlılığını artıracak aktivitelere yönelmesini bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Erken Hayata Atılma Eğilimi, Okul Bağını Güçlendirme", "araştırma becerileri", "kaynak değerlendirme", "bilgi birleştirme", "grup koordinatörlüğü"]
   },
   {
     "id": 12,
@@ -73,9 +73,9 @@
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı] sosyal grup dinamiklerinde duygusal zeka uygulama konusunda başarılı. Ruh hali yönetimi becerilerinde uzmanlaşmış, sosyal işaretleri doğru okuyor ve grup atmosferini olumlu yönde etkiliyor. Akademik çalışmalarında da aynı olgunluğu sergiliyor.",
-    "tone": "olumlu",
-    "etiketler": ["duygusal zeka", "ruh hali yönetimi", "sosyal işaret okuma", "pozitif grup atmosferi"]
+    "content": "[Öğrenci Adı], zaman yönetimi konusunda desteğe ihtiyaç duymaktadır. Ödev ve projelerini zamanında teslim etmekte zorlandığı gözlemlenmiştir. İkinci dönemde günlük/haftalık planlar yaparak ve önceliklerini belirleyerek zamanını daha verimli kullanmasını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Zaman Yönetimi Sorunu Olan", "duygusal zeka", "ruh hali yönetimi", "sosyal işaret okuma", "pozitif grup atmosferi"]
   },
   {
     "id": 14,
@@ -85,9 +85,9 @@
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı] sorumluluk bilinci ve çatışma çözme becerileri konusunda gelecek odaklı vizyon geliştirdi. Sürdürülebilir ilişkiler kurma yeteneği güçlü, sosyal etki yaratma konusunda bilinçli ve akademik mükemmellik ile sosyal başarıyı harmanlama konusunda başarılı.",
-    "tone": "olumlu",
-    "etiketler": ["gelecek odaklı vizyon", "sürdürülebilir ilişkiler", "sosyal etki bilinci", "mükemmellik-başarı harmanlaması"]
+    "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen sınıf içi tartışmalara ve sözlü etkinliklere katılımda çekingen olduğu gözlemlenmiştir. Bilgisini paylaşmaktan çekinmemesi, özgüvenini artırarak öğrenme sürecini daha da zenginleştirecektir. İkinci dönemde daha aktif bir katılım sergilemesini teşvik ediyoruz.",
+    "tone": "notr",
+    "etiketler": ["Pasif Katılımcı", "gelecek odaklı vizyon", "sürdürülebilir ilişkiler", "sosyal etki bilinci", "mükemmellik-başarı harmanlaması"]
   },
   {
     "id": 16,
@@ -97,9 +97,9 @@
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı] akademik derinleşme konusunda değişken başarı gösteriyor. Bazı alanlarda ilerleme kaydederken bazılarında geride kalıyor, sosyal grup dinamiklerinde uyum problemleri yaşıyor ve çatışma çözme becerilerinde eksiklik bulunuyor.",
+    "content": "[Öğrenci Adı], okul kurallarına uyumda zaman zaman zorlandığı ve disiplin sorunları yaşadığı gözlemlenmiştir. Kurallara uymak, düzenli bir öğrenme ortamı için esastır. İkinci dönemde bu konuda daha dikkatli ve sorumlu davranmasını bekliyoruz.",
     "tone": "notr",
-    "etiketler": ["değişken akademik başarı", "alan bazlı geri kalma", "grup uyum problemleri", "çatışma çözme eksikliği"]
+    "etiketler": ["Okul Kurallarına Uyumda Zorlanan", "değişken akademik başarı", "alan bazlı geri kalma", "grup uyum problemleri", "çatışma çözme eksikliği"]
   },
   {
     "id": 18,
@@ -109,9 +109,9 @@
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı] sorumluluk bilinci gelişiminde beklenenin altında performans sergiliyor. Çatışma çözme becerilerinde gerilik gösteriyor, sosyal ilişkilerde yüzeysel kalma eğiliminde ve akademik derinleşme sürecinde konsantrasyon problemleri yaşıyor.",
+    "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelin farkında olmadığı ve kendini yeterince zorlamadığı gözlemlenmiştir. Daha fazlasını başarabilecek kapasitededir. İkinci dönemde hedefler belirlemesi ve bu hedeflere ulaşmak için daha fazla çaba göstermesi, potansiyelini ortaya çıkaracaktır.",
     "tone": "notr",
-    "etiketler": ["beklenti altı sorumluluk gelişimi", "çatışma çözme geriliği", "yüzeysel sosyal ilişkiler", "akademik konsantrasyon problemleri"]
+    "etiketler": ["Akademik Potansiyelini Keşfedemeyen", "beklenti altı sorumluluk gelişimi", "çatışma çözme geriliği", "yüzeysel sosyal ilişkiler", "akademik konsantrasyon problemleri"]
   },
   {
     "id": 20,
@@ -121,9 +121,9 @@
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı] akademik derinleşme sürecinde ciddi zorlanmalar yaşıyor. Karmaşık konuları anlama konusunda başarısız, eleştirel düşünce becerilerinde eksiklik gösteren ve sosyal grup çalışmalarında işlevsel olmayan davranışlar sergiliyor.",
+    "content": "[Öğrenci Adı], derslerden çok sosyal medya ve ekran kullanımına odaklandığı gözlemlenmiştir. Bu durum, akademik başarısını olumsuz etkilemektedir. Ekran süresini dengelemesi ve derslerine yeterli zaman ayırması önemlidir. İkinci dönemde bu konuda daha bilinçli davranmasını bekliyoruz.",
     "tone": "notr",
-    "etiketler": ["ciddi akademik zorlanmalar", "karmaşık konu anlama başarısızlığı", "eleştirel düşünce eksikliği", "işlevsel olmayan grup davranışları"]
+    "etiketler": ["Sosyal Medya/Ekran Bağımlılığı", "ciddi akademik zorlanmalar", "karmaşık konu anlama başarısızlığı", "eleştirel düşünce eksikliği", "işlevsel olmayan grup davranışları"]
   },
   {
     "id": 22,
@@ -133,9 +133,9 @@
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı] sosyal grup dinamiklerinde bozucu rol oynuyor. Akademik derinleşme sürecinde motivasyon eksikliği belirgin, çatışma çözme yerine çatışma yaratma eğilimi gösteren ve sorumluluk almaktan kaçınan davranışlar sergiliyor.",
-    "tone": "notr",
-    "etiketler": ["bozucu grup rolü", "akademik motivasyon eksikliği", "çatışma yaratma eğilimi", "sorumluluk kaçınması"]
+    "content": "[Öğrenci Adı], sorumluluk bilinci gelişmiş ve arkadaşlarına karşı yardımsever bir tutum sergilemektedir. Bu özelliği, sınıf içi işbirliğini artırmaktadır. Akademik başarısını da bu olumlu davranışlarıyla birleştirmesi, onu örnek bir öğrenci yapmaktadır. İkinci dönemde bu özelliklerini daha da geliştirmesini bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Sorumluluk Bilinci Gelişmiş, Akranlarına Yardımcı", "bozucu grup rolü", "akademik motivasyon eksikliği", "çatışma yaratma eğilimi", "sorumluluk kaçınması"]
   },
   {
     "id": 24,
@@ -145,9 +145,9 @@
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı] akademik derinleşme ve sosyal gelişim konularında kritik seviyede yetersizlik gösteriyor. Çatışma çözme yerine çatışma büyütme eğilimi, sorumluluk reddi davranışları ve ergenlik döneminin gereksinimlerini karşılayamama durumu gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["kritik akademik-sosyal yetersizlik", "çatışma büyütme", "sorumluluk reddi", "ergenlik gereksinim karşılayamama"]
+    "content": "[Öğrenci Adı], düzenli ders çalışma alışkanlığı sayesinde akademik başarısını istikrarlı bir şekilde sürdürmüştür. Planlı ve programlı çalışması takdire şayandır. İkinci dönemde de bu düzenini koruması ve eksiklerini tamamlaması, başarısını daha da pekiştirecektir.",
+    "tone": "olumlu",
+    "etiketler": ["Ders Çalışma Alışkanlığı Oturmuş, Başarılı", "kritik akademik-sosyal yetersizlik", "çatışma büyütme", "sorumluluk reddi", "ergenlik gereksinim karşılayamama"]
   },
   {
     "id": 26,
@@ -157,9 +157,9 @@
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı] akademik derinleşme sürecinde çöküş yaşıyor. Sosyal ilişkilerde yıkıcı davranışlar sergiliyor, sorumluluk bilinci tamamen kaybolmuş ve ergenlik döneminin getirdiği zorluklarla başa çıkma kapasitesi kalmamış. Kapsamlı destek sistemi gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik çöküş", "yıkıcı sosyal davranışlar", "kaybolmuş sorumluluk bilinci", "başa çıkma kapasitesi kaybı"]
+    "content": "[Öğrenci Adı], derslere karşı ilgisiz olduğu ve katılımının düşük olduğu gözlemlenmiştir. Öğrenme motivasyonunu artırmak için ilgi alanlarına yönelik materyallerle desteklenmelidir. İkinci dönemde küçük başarılarla motivasyonunu yeniden kazanmasını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Derslere İlgisiz, Pasif", "akademik çöküş", "yıkıcı sosyal davranışlar", "kaybolmuş sorumluluk bilinci", "başa çıkma kapasitesi kaybı"]
   },
   {
     "id": 28,
@@ -169,14 +169,104 @@
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı] sorumluluk bilinci ve çatışma çözme açısından telafisi zor hasarlar almış. Sosyal beceriler çözülmüş, akademik işlevsellik kaybolmuş ve ergenlik döneminin getirdiği değişimlerle başa çıkma yeteneği tamamen ortadan kalkmış.",
-    "tone": "olumsuz",
-    "etiketler": ["telafisi zor sorumluluk-çatışma hasarı", "çözülmüş sosyal beceriler", "kaybolmuş akademik işlevsellik", "başa çıkma yeteneği kaybı"]
+    "content": "[Öğrenci Adı], zaman zaman yaşadığı duygusal dalgalanmalar nedeniyle ders başarısında düşüşler yaşamıştır. Duygularını yönetme becerisini geliştirmesi, akademik performansını olumlu etkileyecektir. İkinci dönemde daha dengeli bir ruh haliyle derslere katılımını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Duygusal Denge İhtiyacı Olan", "telafisi zor sorumluluk-çatışma hasarı", "çözülmüş sosyal beceriler", "kaybolmuş akademik işlevsellik", "başa çıkma yeteneği kaybı"]
   },
   {
     "id": 30,
     "content": "[Öğrenci Adı] ergenlik dönemi yönetimi ve akademik gelişim açısından kritik durumda bulunuyor. Sosyal grup dinamikleri tamamen bozulmuş, çatışma çözme kapasitesi yok olmuş ve sorumluluk bilinci tersine dönmüş. Acil uzman müdahale ve aile terapisi gereksinimi var.",
     "tone": "olumsuz",
     "etiketler": ["kritik ergenlik-akademik durum", "tamamen bozulmuş grup dinamikleri", "yok olmuş çatışma çözme", "tersine sorumluluk bilinci"]
+  },
+  {
+    "id": 31,
+    "content": "[Öğrenci Adı], derslerde ve projelerde özgün fikirler sunma becerisiyle öne çıkmaktadır. Yaratıcı düşünme yeteneği, öğrenme sürecini zenginleştirmektedir. İkinci dönemde bu yaratıcılığını daha karmaşık projelere uygulamasını ve farklı çözüm yolları keşfetmesini bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Özgün Fikirler Üreten", "ergenlik dönemi zorlukları", "akademik derinleşme", "sosyal grup dinamikleri", "sorumluluk bilinci"]
+  },
+  {
+    "id": 32,
+    "content": "[Öğrenci Adı] akademik derinleşme konusunda sistemli yaklaşım sergiliyor. Karmaşık konuları analiz etme yeteneği gelişmiş, eleştirel düşünce becerilerinde uzmanlaşmış ve sosyal grup dinamiklerinde yapıcı rol oynuyor. Sorumluluk alma konusunda proaktif davranıyor.",
+    "tone": "olumlu",
+    "etiketler": ["sistemli akademik yaklaşım", "karmaşık konu analizi", "eleştirel düşünce", "yapıcı grup rolü"]
+  },
+  {
+    "id": 33,
+    "content": "[Öğrenci Adı], problemler karşısında pes etmeyen, çözüm odaklı yaklaşım sergileyen bir yapıya sahiptir. Bu tutumu, öğrenme sürecindeki azmini göstermektedir. İkinci dönemde bu becerisini daha karmaşık sorunlara uygulamasını ve farklı çözüm stratejileri geliştirmesini bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Çözüm Odaklı Yaklaşım Sergileyen", "olgun grup dinamikleri", "kişilik uyumu", "empati geliştirme", "arabulucu çatışma çözme"]
+  },
+  {
+    "id": 34,
+    "content": "[Öğrenci Adı] sorumluluk bilinci konusunda örnek davranışlar sergiliyor. Bireysel ve toplu sorumlulukları dengeleme konusunda başarılı, liderlik vasıfları belirginleşmiş ve ergenlik döneminin getirdiği zorluklarla olgun şekilde başa çıkıyor.",
+    "tone": "olumlu",
+    "etiketler": ["örnek sorumluluk bilinci", "bireysel-toplu sorumluluk dengesi", "belirgin liderlik", "olgun ergenlik yönetimi"]
+  },
+  {
+    "id": 35,
+    "content": "[Öğrenci Adı], akademik başarısını artırmak için aile desteğine ihtiyaç duymaktadır. Okul-aile işbirliği, öğrencinin gelişiminde kritik öneme sahiptir. İkinci dönemde aile katılımının artması ve öğrencinin evde desteklenmesi, başarısını olumlu etkileyecektir.",
+    "tone": "notr",
+    "etiketler": ["Aile Desteği İhtiyacı Olan", "çatışma çözme uzmanlaşması", "görüş birleştirme", "diplomatik yaklaşım", "sosyal uyum örneği"]
+  },
+  {
+    "id": 36,
+    "content": "[Öğrenci Adı] ergenlik dönemi zorluklarını büyüme fırsatına çevirme konusunda yaratıcı yaklaşımlar geliştirdi. Duygusal zeka seviyesi yüksek, sosyal farkındalığı gelişmiş ve akademik hedeflerini net şekilde belirlemiş. Grup dinamiklerinde olumlu enerji kaynağı.",
+    "tone": "olumlu",
+    "etiketler": ["zorlukları büyüme fırsatına çevirme", "yüksek duygusal zeka", "sosyal farkındalık", "pozitif enerji kaynağı"]
+  },
+  {
+    "id": 37,
+    "content": "[Öğrenci Adı], sınıf içi liderlik potansiyeliyle dikkat çekmektedir. Akranlarını olumlu etkileyen ve sorumluluk alan bir yapıya sahiptir. İkinci dönemde bu liderlik vasfını daha da geliştirerek sınıf içi projelere ve etkinliklere daha fazla katkı sağlamasını bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Sınıf İçi Liderlik Potansiyeli", "farklı alan birleştirme", "alan entegrasyonu", "analitik düşünce", "fikir liderliği"]
+  },
+  {
+    "id": 38,
+    "content": "[Öğrenci Adı] sosyal grup dinamiklerinde kültürel duyarlılık ve çeşitlilik yönetimi konusunda başarılı. Kapsayıcı yaklaşımlar sergiliyor, farklılıkları güç olarak görüyor ve çatışma çözme süreçlerinde yaratıcı yöntemler kullanıyor. Akademik performansı da bu sosyal yetkinlikle destekleniyor.",
+    "tone": "olumlu",
+    "etiketler": ["kültürel duyarlılık", "çeşitlilik yönetimi", "kapsayıcı yaklaşım", "yaratıcı çatışma çözme"]
+  },
+  {
+    "id": 39,
+    "content": "[Öğrenci Adı], zihinsel potansiyeline rağmen derslere karşı ilgisiz olduğu ve motivasyonunun düşük olduğu gözlemlenmiştir. Öğrenme motivasyonunu artırmak için ilgi alanlarına yönelik öğrenme materyalleriyle desteklenmelidir. İkinci dönemde küçük başarılarla motivasyonunu yeniden kazanmasını bekliyoruz.",
+    "tone": "notr",
+    "etiketler": ["Ders Çalışma Motivasyonu Düşük", "bağımsız düşünce geliştirme", "bağımsız karar alma", "ahlaki değer benimseme", "sosyal sorumluluk öncülüğü"]
+  },
+  {
+    "id": 40,
+    "content": "[Öğrenci Adı] ergenlik dönemi zorluklarını akademik motivasyon kaynağına dönüştürüyor. Kişisel gelişim odaklı yaklaşımları benimsiyor, sosyal becerilerini sürekli geliştiriyor ve grup dinamiklerinde dengeleyici rol oynuyor.",
+    "tone": "olumlu",
+    "etiketler": ["zorlukları motivasyon kaynağına dönüştürme", "kişisel gelişim odağı", "sürekli sosyal beceri geliştirme", "dengeleyici grup rolü"]
+  },
+  {
+    "id": 41,
+    "content": "[Öğrenci Adı], teknolojiye olan ilgisiyle dikkat çekmektedir. Bu ilgiyi derslerine de yansıtması, öğrenme sürecini zenginleştirecektir. İkinci dönemde teknolojiyi akademik amaçlarla daha verimli kullanmasını ve dengeli bir ekran süresi belirlemesini bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Teknolojiye Aşırı İlgi Duyan", "araştırma becerileri", "kaynak değerlendirme", "bilgi birleştirme", "grup koordinatörlüğü"]
+  },
+  {
+    "id": 42,
+    "content": "[Öğrenci Adı] çatışma çözme becerilerinde arabuluculuk teknikleri geliştirmiş durumda. Herkesin kazandığı yaklaşımları benimsiyor, sosyal adaleti destekliyor ve grup dinamiklerinde adil çözümler üretiyor. Sorumluluk bilinci de bu sosyal yetkinlikle paralel gelişim gösteriyor.",
+    "tone": "olumlu",
+    "etiketler": ["arabuluculuk teknikleri", "herkesin kazandığı yaklaşımlar", "sosyal adalet", "adil çözüm üretme"]
+  },
+  {
+    "id": 43,
+    "content": "[Öğrenci Adı], sanatsal alanda (resim, müzik vb.) yetenekli bir yapıya sahiptir. Bu yeteneği, farklı öğrenme deneyimlerini zenginleştirebilir. İkinci dönemde sanatsal becerilerini dersleriyle ilişkilendirerek yaratıcılığını akademik çalışmalara yansıtmasını bekliyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["Sanatsal Yönü Güçlü", "duygusal zeka", "ruh hali yönetimi", "sosyal işaret okuma", "pozitif grup atmosferi"]
+  },
+  {
+    "id": 44,
+    "content": "[Öğrenci Adı] ergenlik dönemi ve akademik derinleşme sürecini entegre yönetme konusunda mükemmel bir örnek. Bütüncül yaklaşımlar sergiliyor, çoklu bakış açılarını değerlendiriyor ve sosyal sorumluluklarını akademik hedefleriyle dengeliyor.",
+    "tone": "olumlu",
+    "etiketler": ["entegre ergenlik-akademik yönetim", "bütüncül yaklaşım", "çoklu bakış açısı değerlendirme", "sorumluluk-hedef dengesi"]
+  },
+  {
+    "id": 45,
+    "content": "[Öğrenci Adı], yabancı dil öğrenmeye karşı meraklı ve açık bir tutum sergilemektedir. Yeni diller öğrenme potansiyeli yüksektir. İkinci dönemde yabancı dil derslerine daha fazla odaklanması ve öğrendiklerini günlük hayatta kullanmaya çalışması, dil becerilerini hızla geliştirecektir.",
+    "tone": "olumlu",
+    "etiketler": ["Yabancı Dil Öğrenmeye Açık", "gelecek odaklı vizyon", "sürdürülebilir ilişkiler", "sosyal etki bilinci", "mükemmellik-başarı harmanlaması"]
   }
 ]
