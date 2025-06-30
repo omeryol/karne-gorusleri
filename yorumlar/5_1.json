@@ -1,272 +1,242 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı] ortaokula başlama sürecinde güzel bir uyum gösteriyor. Sınıf kurallarımızı öğrenmekte istekli ve arkadaşlarıyla iyi ilişkiler kuruyor. Temel derslerinde düzenli çalışmaya başladı ve ödevlerini zamanında getirmeye özen gösteriyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın ortaokul hayatına bu denli olumlu bir başlangıç yapması bizleri çok memnun etti. Yeni okul ortamına ve ders düzenine gösterdiği hızlı uyum ve adaptasyon becerisi takdire şayan. Derslere olan içten merakı ve öğrenmeye açık tutumu, onu sınıfımızın pozitif enerjisi yapıyor. Arkadaşlarından da sıkça pozitif geri bildirimler alıyoruz, bu da sosyal gelişiminin ne kadar sağlıklı ilerlediğini gösteriyor. İlk dönemdeki bu güçlü adımlar, gelecek başarılarının sağlam bir temeli niteliğinde. [Öğrenci Adı] tam bir **uyumlu** ve **istekli** öğrencimiz.",
     "tone": "olumlu",
-    "etiketler": ["uyum süreci", "temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+    "etiketler": ["uyumlu", "istekli", "başlangıç", "merak", "sosyal", "dikkatli", "pozitif", "güven", "adaptasyon", "hızlı"]
   },
   {
     "id": 2,
-    "content": "[Öğrenci Adı] yeni okuluna çok hızlı alıştı. Derslerde dikkatlice dinliyor ve sorularını çekinmeden soruyor. Arkadaşlarıyla oyun oynamayı seviyor ve sınıf etkinliklerine katılmaktan mutlu oluyor. Okuma yazma becerilerinde ilerleme kaydediyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı] bu dönemi akademik anlamda gerçekten üstün bir başarıyla tamamladı. Derslere olan aktif katılımı ve sorumluluk bilinci, sınıfımızdaki diğer öğrencilere örnek teşkil ediyor. Öğrenmeye olan büyük isteği ve düzenli çalışma alışkanlığı sayesinde sınıfımızın parlayan yıldızlarından biri haline geldi. Bu istikrarlı ve **disiplinli** başarısını ikinci dönemde de sürdürerek, doğal liderlik özelliklerini daha da geliştirmesini tüm kalbimizle bekliyoruz. Onun bu azmi gurur verici.",
     "tone": "olumlu",
-    "etiketler": ["uyum süreci", "temel akademik beceriler", "sosyal uyum"]
+    "etiketler": ["başarılı", "sorumlu", "lider", "çalışkan", "disiplinli", "üstün", "parlayan", "örnek", "istekli", "azim"]
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı] sınıfımızın neşeli öğrencilerinden biri. Matematik işlemlerinde başarılı, Türkçe dersinde güzel kompozisyonlar yazıyor. Teneffüslerde arkadaşlarıyla güzel oyunlar oynuyor ve herkesle dostça geçiniyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı]'nın derslerdeki zihinsel potansiyeli ve konuları kavrama becerisi oldukça dikkat çekici. Ancak, zaman zaman derse **odaklanamayan** bir yapı sergilediğini ve ödevlerini aksattığını gözlemliyoruz. Bu durum, potansiyelini tam kullanmasını engelliyor. Sömestr tatilinde belirleyeceğiniz kısa ve düzenli çalışma periyotlarıyla dikkatini geliştirmesi, ikinci dönemdeki başarısını ciddi oranda artıracaktır. Onun tam kapasitesine ulaşması için desteğinize güveniyoruz.",
+    "tone": "nötr",
+    "etiketler": ["potansiyel", "odaklanamayan", "dikkat", "ödev", "aksaklık", "düzensiz", "unutkan", "zorlanan", "gelişmesi", "destek"]
   },
   {
     "id": 4,
-    "content": "[Öğrenci Adı] ortaokul hayatına güzel bir başlangıç yaptı. Öğretmenlerini dinliyor, arkadaşlarına saygılı davranıyor. Ödevlerini düzenli yapıyor ve derslerinde başarılı olmaya çalışıyor. Sınıf içinde sessizce çalışmasını biliyor.",
-    "tone": "olumlu",
-    "etiketler": ["uyum süreci", "kuralları öğrenme", "temel akademik beceriler"]
+    "content": "Sayın velimiz, [Öğrenci Adı] sosyal ilişkilerinde son derece **arkadaş** canlısı ve uyumlu bir öğrenci. Sınıf içi etkileşimlerde aktif rol alıyor ve arkadaşlarıyla kolayca iyi anlaşabiliyor. Akademik olarak ise özellikle okuma ve temel matematik becerilerinde biraz desteğe ihtiyaç duyuyor. Sömestr tatilinde bu temel konuları pekiştirmeye yönelik yapılacak küçük ve düzenli çalışmaların, ikinci dönemde ders başarısını önemli ölçüde yükseltmesine yardımcı olacağına inanıyoruz. Onun sosyal yönü çok güçlü.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "arkadaş", "uyumlu", "iletişim", "okuma", "matematik", "desteğe", "ihtiyaç", "pekiştirme", "gelişim"]
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı. Fen bilgisi dersini çok seviyor ve deneyimlere büyük ilgi gösteriyor. Sınıf temizliğinde sorumluluk alıyor ve öğretmenlerine yardım etmek istiyor.",
-    "tone": "olumlu",
-    "etiketler": ["sosyal uyum", "temel akademik beceriler", "kuralları öğrenme"]
+    "content": "Değerli velimiz, [Öğrenci Adı] ders konularını anlama ve sınavlardaki başarısıyla kendini gösteren bir öğrencimiz. Bilgi birikimi iyi durumda. Ancak sınıf içi tartışmalara ve sözlü etkinliklere katılımda biraz **çekingen** davrandığını gözlemliyoruz. Bilgisini ve fikirlerini paylaşmaktan çekinmemesi, özgüvenini artırarak öğrenme sürecini daha da zenginleştirecektir. İkinci dönemde daha aktif ve cesur bir katılım sergilemesini sabırsızlıkla bekliyoruz.",
+    "tone": "nötr",
+    "etiketler": ["çekingen", "katılım", "sözlü", "özgüven", "gelişmesi", "pasif", "saklanan", "gözlem", "ihtiyaç", "teşvik"]
   },
   {
     "id": 6,
-    "content": "[Öğrenci Adı] okul kurallarını çabuk öğrendi ve uyguluyor. Derslerde aktif katılım gösteriyor, kitap okumayı seviyor. Arkadaşlarıyla birlikte proje yapmaktan hoşlanıyor ve paylaşmayı öğrendi.",
-    "tone": "olumlu",
-    "etiketler": ["kuralları öğrenme", "temel akademik beceriler", "sosyal uyum"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı]'nın teknolojiye olan ilgisi ve yatkınlığı oldukça dikkat çekici. Bu doğal ilgisini derslerine de yansıtması, öğrenme sürecini zenginleştirebilecek büyük bir potansiyel taşıyor. Ancak, ekran başında geçirdiği sürenin **düzensiz** olduğunu ve bu konuda dengelenmesi gerektiğini gözlemliyoruz. İkinci dönemde teknolojiyi akademik amaçlarla daha verimli kullanmasını ve sağlığını da gözeterek dengeli bir ekran süresi belirlemesini rica ediyoruz. Bu konuda işbirliğiniz çok önemli.",
+    "tone": "nötr",
+    "etiketler": ["teknoloji", "ekran", "düzensiz", "bağımlılık", "yönlendirme", "denge", "verimli", "ilgi", "potansiyel", "kontrol"]
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı] sınıfımızın yardımsever öğrencilerinden. Arkadaşları zorlandığında onlara yardım ediyor. Matematik problemlerini çözmeyi seviyor ve Türkçe dersinde güzel hikayeler yazıyor.",
-    "tone": "olumlu",
-    "etiketler": ["sosyal uyum", "temel akademik beceriler", "uyum süreci"]
+    "content": "Sayın velimiz, [Öğrenci Adı]'nın zaman zaman yaşadığı **duygusal** hassasiyetlerin derse odaklanmasını zorlaştırdığını ve bu durumun akademik performansını etkileyebildiğini fark ettik. Duygularını tanıma, ifade etme ve yönetme becerilerini geliştirmesi yönünde desteğe ihtiyacı var. Bu alandaki gelişim, onun hem akademik hem de sosyal yaşantısını olumlu etkileyecektir. İkinci dönemde daha dengeli bir ruh haliyle derslere katılımını bekliyoruz. Bu konuda okul psikolojik danışmanımız da destek sağlayabilir.",
+    "tone": "nötr",
+    "etiketler": ["duygusal", "hassas", "odaklanma", "zorluk", "empati", "dengesiz", "ruh hali", "destek", "gelişmesi", "yönetim"]
   },
   {
     "id": 8,
-    "content": "[Öğrenci Adı] ortaokula geçiş sürecini başarıyla tamamladı. Öğretmenlerle saygılı iletişim kuruyor, derslerde dikkatini toplayabiliyor. Grup çalışmalarında arkadaşlarıyla güzel işbirliği yapıyor.",
-    "tone": "olumlu",
-    "etiketler": ["uyum süreci", "kuralları öğrenme", "sosyal uyum"]
+    "content": "Değerli velimiz, [Öğrenci Adı] bireysel çalışmalarda oldukça başarılı ve bağımsız bir öğrencimiz. Ancak, grup etkinliklerinde ve takım çalışmalarında daha **pasif** kaldığı dikkatimizi çekti. Fikirlerini paylaşma, sorumluluk alma ve işbirliği yapma becerilerini geliştirmesi, hem kendi öğrenme sürecini hem de grubun genel başarısını olumlu yönde etkileyecektir. İkinci dönemde grup çalışmalarında daha aktif ve liderlik vasfı gösteren bir rol almasını teşvik ediyoruz. Potansiyeli oldukça yüksek.",
+    "tone": "nötr",
+    "etiketler": ["grup", "pasif", "işbirliği", "katılım", "paylaşım", "çekingen", "desteğe", "ihtiyaç", "sorumluluk", "etki"]
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı] derslerinde düzenli ve başarılı. Ev ödevlerini zamanında yapıyor, ders araç gereçlerini getirmeyi unutmuyor. Arkadaşlarıyla oynarken kuralları gözetiyor ve adil oynamaya özen gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "kuralları öğrenme", "sosyal uyum"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı]'nın zaman zaman sınıf **kurallarına** uyumda zorlandığını, ders araç gereçlerini unuttuğunu ve ödevlerini eksik getirdiğini gözlemliyoruz. Bu tür **düzensiz** davranışlar akademik başarısını doğrudan etkileyebilir. Düzenli olma ve sorumluluk bilinci geliştirmesi büyük önem taşıyor. İkinci dönemde bu konularda daha dikkatli ve sorumlu davranmasını bekliyoruz. Kuralların ve düzenin önemini içselleştirmesi, onun genel gelişimine büyük katkı sağlayacaktır. Desteğinize ihtiyacımız var.",
+    "tone": "nötr",
+    "etiketler": ["kural", "düzensiz", "unutkan", "sorumsuz", "dikkat", "gelişmesi", "ihtiyaç", "sınır", "uyarı", "takip"]
   },
   {
     "id": 10,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersine büyük ilgi gösteriyor. Tarih konularını merak ediyor ve sorular soruyor. Sınıf arkadaşlarıyla güzel dostluklar kurdu ve herkesle iyi geçiniyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "content": "Sayın velimiz, [Öğrenci Adı]'nın **beslenme** alışkanlıklarında zaman zaman düzensizlikler olduğunu ve bunun enerjisini, dolayısıyla derse olan odağını etkilediğini gözlemledik. Sağlıklı ve dengeli beslenme, akademik başarı ve genel sağlık için hayati öneme sahiptir. İkinci dönemde dengeli beslenmeye özen göstermesini ve düzenli öğünler tüketmesini bekliyoruz. Bu konuda evde vereceğiniz desteğin, onun fiziksel ve zihinsel gelişimine büyük katkı sağlayacağına inanıyoruz.",
+    "tone": "nötr",
+    "etiketler": ["beslenme", "düzensiz", "enerji", "sağlık", "odaklanma", "ihtiyaç", "destek", "alışkanlık", "önemli", "etki"]
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapıyor. Resim yapmayı ve el işi çalışmalarını seviyor. Arkadaşlarının çalışmalarını beğeniyor ve onları destekliyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın ortaokula uyum sürecinde maalesef **ciddi zorluklar** yaşadığını üzülerek belirtmek isteriz. Sınıf içinde sıkça huzursuzluk çıkarıyor, arkadaşlarıyla sürekli tartışıyor ve derslere karşı belirgin bir **ilgisizlik** sergiliyor. Ödevlerini düzenli olarak yapmaması da akademik gelişimini kayda değer ölçüde olumsuz etkiliyor. Bu durumun üstesinden gelebilmek ve [Öğrenci Adı]'nı okul ortamına kazandırabilmek adına acil rehberlik ve aile desteğine ihtiyacımız var. İşbirliğimiz hayati önem taşımakta.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "huzursuz", "tartışma", "ilgisiz", "sorunlu", "reddeden", "kaçınan", "başarısız", "destek", "acil"]
   },
   {
     "id": 12,
-    "content": "[Öğrenci Adı] müzik dersinde güzel sesi ile dikkat çekiyor. Şarkı söylemeyi ve enstrüman çalmayı öğrenmeye hevesli. Arkadaşlarıyla birlikte güzel etkinlikler düzenliyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "content": "Sevgili velimiz, [Öğrenci Adı] temel akademik becerilerde maalesef çok **geride** kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde ciddi sıkıntıları var. Derslerde dikkatini toplayamıyor, sürekli başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir **direnç** sergiliyor. Bu durum, akademik ilerlemesini tamamen durduruyor. Acilen özel bir destek programına, yoğun bireysel çalışmaya ve profesyonel rehberlik desteğine ihtiyacımız var. İşbirliğiniz olmadan ilerleme kaydetmek çok zor.",
+    "tone": "olumsuz",
+    "etiketler": ["geride", "başarısız", "temel", "zorluk", "sıkıntı", "odaklanamayan", "ilgilenmeyen", "dirençli", "destek", "yoğun"]
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı] beden eğitimi dersini çok seviyor. Spor yapmayı ve takım oyunlarını öğreniyor. Arkadaşlarıyla birlikte koşmayı ve oyun oynamayı tercih ediyor.",
-    "tone": "olumlu",
-    "etiketler": ["sosyal uyum", "temel akademik beceriler", "uyum süreci"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı] sınıf kurallarına hiç **uymuyor** ve bu konuda ısrarcı bir tavır sergiliyor. Öğretmenlere karşı gelmeye devam ediyor, dersleri sürekli bölüyor ve arkadaşlarını olumsuz etkiliyor. Bu **inatçı** ve **saygısız** davranışlar sınıf düzenini ciddi şekilde bozmakta ve diğer öğrencilerin öğrenme hakkını engellemektedir. Davranışlarında acil ve radikal bir değişime ihtiyacımız var. Bu noktada aile desteğiniz ve kararlı tutumunuz kritik önem taşımaktadır. Acilen bu durumu ele almalıyız.",
+    "tone": "olumsuz",
+    "etiketler": ["kuralsız", "inatçı", "saygısız", "bozan", "engelleyen", "olumsuz", "dirençli", "uyumsuz", "davranış", "acil"]
   },
   {
     "id": 14,
-    "content": "[Öğrenci Adı] İngilizce dersinde yeni kelimeler öğrenmeye hevesli. Telaffuz çalışmalarına katılıyor ve basit cümleler kurmaya çalışıyor. Arkadaşlarıyla İngilizce kelimeler öğreniyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "uyum süreci", "sosyal uyum"]
+    "content": "Sayın velimiz, [Öğrenci Adı] sosyal uyum konusunda maalesef **problemli** bir profil çiziyor. Arkadaşlarına fiziksel veya sözlü olarak zarar veriyor, sürekli kavga çıkarıyor ve kimseyle iletişim kurmak istemiyor. Teneffüslerde yalnız kalmayı tercih ediyor veya sorun yaratıyor. Bu durum, akran ilişkilerini ciddi şekilde **zedeliyor** ve onun sosyal gelişimini engelliyor. Sosyal beceri gelişimi için acil ve profesyonel desteğe ihtiyacımız var. Bu konudaki işbirliğimiz çok değerli olacaktır.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "agresif", "kavga", "zarar", "yalnız", "reddeden", "problemli", "zedelenmiş", "sosyal", "acil"]
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar kullanmayı öğreniyor. Yeni programları keşfetmeyi seviyor ve arkadaşlarıyla birlikte projeler yapıyor. Okul kurallarına uygun davranıyor.",
-    "tone": "olumlu",
-    "etiketler": ["temel akademik beceriler", "kuralları öğrenme", "uyum süreci"]
+    "content": "Değerli velimiz, [Öğrenci Adı] ev ödevlerini yapma ve teslim etme konusunda ciddi **düzensizlikler** yaşamaktadır. Ödevlerini ya hiç yapmıyor ya da eksik getirmektedir. Bu durum, öğrenilen konuları pekiştirmesini engellemekte ve akademik başarısını doğrudan olumsuz etkilemektedir. Düzenli çalışma alışkanlığı edinebilmesi için acil ve kararlı bir aile takibine, ayrıca okuldan da özel bir desteğe ihtiyacımız var. Disiplinli bir rutin oluşturmak hayati önem taşıyor.",
+    "tone": "olumsuz",
+    "etiketler": ["düzensiz", "eksik", "yapmıyor", "sorumsuz", "pekişmeyen", "engellenen", "olumsuz", "takip", "kararlı", "acil"]
   },
   {
     "id": 16,
-    "content": "[Öğrenci Adı] ortaokula alışma sürecinde normale. Bazı günler derslerde dikkati dağılıyor, bazen ödevlerini unutabiliyor. Arkadaşlarıyla iyi geçiniyor ama sınıf kurallarını hatırlatmak gerekiyor.",
-    "tone": "notr",
-    "etiketler": ["uyum süreci", "temel akademik beceriler", "kuralları öğrenme"]
+    "content": "Sevgili velimiz, [Öğrenci Adı] sınıfımızın neşeli ve **girişken** öğrencilerinden biri olarak öne çıkıyor. Matematik işlemlerinde oldukça başarılı bir performans sergilerken, Türkçe dersinde de akıcı ve özgün kompozisyonlar yazıyor. Teneffüslerde arkadaşlarıyla güzel ve yapıcı oyunlar oynuyor, herkesle **dostça** geçinmeye özen gösteriyor. Onun bu pozitif enerjisi ve sosyal yönü, sınıfımıza her zaman neşe ve uyum katıyor. Bu yetenekleriyle gurur duyuyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["girişken", "neşeli", "matematik", "Türkçe", "başarılı", "dostça", "enerjik", "katkı", "olumlu", "pozitif"]
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı] yeni ortamına alışmaya çalışıyor. Derslerde bazen aktif, bazen sessiz kalıyor. Arkadaş edinme konusunda biraz çekingen ama zamanla açılıyor. Ödevlerinde düzensizlik oluyor.",
-    "tone": "notr",
-    "etiketler": ["uyum süreci", "sosyal uyum", "temel akademik beceriler"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı] ortaokul hayatına çok **istekli** ve uyumlu bir başlangıç yaptı. Öğretmenlerini dikkatle dinliyor, arkadaşlarına karşı her zaman saygılı davranıyor. Ödevlerini büyük bir özenle ve düzenli bir şekilde yapıyor, derslerinde başarılı olmak için çaba gösteriyor. Sınıf içinde sessizce ve **disiplinli** bir şekilde çalışmasını biliyor. Onun bu düzenli ve azimli tutumunu korumasını tüm kalbimizle diliyoruz. Gelecek için sağlam bir temel atıyor.",
+    "tone": "olumlu",
+    "etiketler": ["istekli", "saygılı", "düzenli", "başarılı", "sakin", "özverili", "çalışkan", "dikkatli", "sorumlu", "azim"]
   },
   {
     "id": 18,
-    "content": "[Öğrenci Adı] okul kurallarını öğrenme konusunda yavaş ilerliyor. Derslerde dikkatini toplama konusunda zorlanıyor. Arkadaşlarıyla oynarken kuralları unutabiliyor.",
-    "tone": "notr",
-    "etiketler": ["kuralları öğrenme", "temel akademik beceriler", "sosyal uyum"]
+    "content": "Sayın velimiz, [Öğrenci Adı] yeni arkadaşlarıyla hemen **kaynaştı** ve sosyal çevresini hızla genişletti. Özellikle Fen Bilgisi dersini çok seviyor ve derslerde yapılan deneylere büyük bir ilgi ve hevesle yaklaşıyor. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli. Bu **yardımsever** ve **sorumlu** tutumuyla sınıfımıza gerçekten değer katıyor. Onun bu pozitif enerjisi hepimize ilham veriyor.",
+    "tone": "olumlu",
+    "etiketler": ["kaynaştı", "fen", "deney", "ilgi", "sorumlu", "yardımsever", "aktif", "işbirlikçi", "meraklı", "değerli"]
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı] matematik dersinde zorlanıyor ve ek çalışmaya ihtiyacı var. Türkçe dersinde okuduğunu anlamada güçlük çekiyor. Arkadaşlarıyla iyi geçiniyor ama derslerde desteğe ihtiyacı var.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "uyum süreci", "sosyal uyum"]
+    "content": "Değerli velimiz, [Öğrenci Adı] okul kurallarını ve düzenini şaşırtıcı bir hızla **öğrendi** ve büyük bir titizlikle uyguluyor. Derslerde aktif katılım gösteriyor ve kitap okumaya olan sevgisiyle dikkat çekiyor. Arkadaşlarıyla birlikte proje yapmaktan büyük keyif alıyor ve öğrendiklerini **paylaşımcı** bir ruhla aktarıyor. Onun bu işbirlikçi ve kurala uyan tutumu, sınıf ortamımıza pozitif bir katkı sağlıyor ve diğer öğrencilere örnek oluyor. Kendisi çok değerli bir birey.",
+    "tone": "olumlu",
+    "etiketler": ["öğrendi", "kural", "aktif", "okuma", "proje", "paylaşımcı", "işbirlikçi", "uygulamacı", "değerli", "istekli"]
   },
   {
     "id": 20,
-    "content": "[Öğrenci Adı] sosyal uyum konusunda zaman alıyor. Arkadaş gruplarına katılma konusunda tereddütlü. Derslerde sessiz kalıyor ve katılım az. Ödevlerini yapmaya çalışıyor ama düzensiz.",
-    "tone": "notr",
-    "etiketler": ["sosyal uyum", "uyum süreci", "temel akademik beceriler"]
+    "content": "Sevgili velimiz, [Öğrenci Adı] sınıfımızın en **yardımsever** öğrencilerinden biri olarak öne çıkıyor. Arkadaşları zorlandığında onlara büyük bir içtenlikle yardım ediyor, bu da onun güçlü **empati** becerisini gösteriyor. Matematik problemlerini çözmeyi seviyor ve bu alanda oldukça başarılı. Türkçe dersinde ise hayal gücünü kullanarak birbirinden güzel hikayeler yazıyor. Onun bu duyarlı ve akademik yönüyle gurur duyuyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["yardımsever", "empati", "matematik", "Türkçe", "problem", "çözümcü", "destekleyici", "anlayışlı", "duyarlı", "işbirlikçi"]
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı] sınıf ortamında kendini güvende hissetmiyor gibi görünüyor. Öğretmenlerle iletişim kurmakta zorlanıyor. Arkadaşlarıyla oynamayı tercih etmiyor, daha çok tek başına kalıyor.",
-    "tone": "notr",
-    "etiketler": ["sosyal uyum", "uyum süreci", "kuralları öğrenme"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı]'nın ortaokula alışma sürecinde **normal** bir seyir izlediğini söyleyebiliriz. Bazı günler derslerde dikkati dağılabiliyor, bazen de ödevlerini getirmeyi unutabiliyor. Arkadaşlarıyla genel olarak iyi geçiniyor ancak sınıf kurallarını ara sıra hatırlatmamız gerekiyor. Genel uyumu iyi yönde devam ediyor ve adaptasyon sürecinin zamanla daha da oturacağına inanıyoruz. Küçük hatırlatmalarla daha da iyiye gidecek.",
+    "tone": "nötr",
+    "etiketler": ["normal", "alışma", "dalgın", "unutkan", "hatırlatma", "geçiş", "düzensiz", "orta", "dengeli", "seyir"]
   },
   {
     "id": 22,
-    "content": "[Öğrenci Adı] fen bilgisi dersinde konuları anlamakta zorlanıyor. Deney yaparken arkadaşlarıyla işbirliği yapmakta güçlük çekiyor. Ödevlerini eksik getiriyor ve ders malzemelerini unutuyor.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+    "content": "Sayın velimiz, [Öğrenci Adı] yeni okul ortamına alışmak için çaba gösteriyor. Derslerde bazen aktif katılım gösterirken, bazen daha **sessiz** kalmayı tercih ediyor. Arkadaş edinme konusunda biraz **çekingen** davranıyor ancak zamanla daha açık olduğunu gözlemliyoruz. Ödevlerinde zaman zaman **düzensizlik** oluyor ve bu konuya dikkat etmesi, sorumluluk bilincini geliştirmesi gerekiyor. Onun çabasını görüyor ve destekliyoruz.",
+    "tone": "nötr",
+    "etiketler": ["çabalıyor", "sessiz", "çekingen", "düzensizlik", "alışma", "gelişme", "değişken", "ortalama", "yavaş", "ihtiyaç"]
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersindeki konulara ilgi göstermiyor. Harita okuma ve tarih konularında zorlanıyor. Arkadaşlarıyla grup çalışması yapmayı tercih etmiyor.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "content": "Değerli velimiz, [Öğrenci Adı] matematik dersinde bazı konularda **zorlanıyor** ve bu nedenle ek çalışmaya ihtiyaç duyuyor. Türkçe dersinde ise okuduğunu anlama becerisinde güçlükler çekiyor. Arkadaşlarıyla genel olarak iyi geçinmesine rağmen, derslerde bireysel desteğe ihtiyacı olduğunu düşünüyoruz. Temel becerileri pekiştirmeye yönelik yapılacak düzenli çalışmalarla daha iyi bir seviyeye gelecektir. Bu konuda işbirliğiniz çok önemli.",
+    "tone": "nötr",
+    "etiketler": ["zorlanıyor", "matematik", "Türkçe", "anlama", "destek", "ihtiyaç", "temel", "pekiştirme", "gelişim", "ortalama"]
   },
   {
     "id": 24,
-    "content": "[Öğrenci Adı] İngilizce dersinde yeni kelimeleri öğrenmekte zorlanıyor. Telaffuz konusunda sıkıntı yaşıyor. Derslerde katılım az ve ödevlerini düzensiz yapıyor.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "uyum süreci", "kuralları öğrenme"]
+    "content": "Sevgili velimiz, [Öğrenci Adı]'nın sosyal uyum konusunda biraz **zaman aldığını** gözlemliyoruz. Arkadaş gruplarına katılma konusunda zaman zaman **tereddütlü** davranıyor. Derslerde daha çok sessiz kalıyor ve katılımı az. Ödevlerini yapmaya çalışıyor ancak bu konuda da **düzensiz** bir yol izliyor. Ona daha girişken olması ve sosyal çevresini genişletmesi için cesaret vermemiz gerekiyor. Bu konuda okul-aile işbirliği çok faydalı olacaktır.",
+    "tone": "nötr",
+    "etiketler": ["zaman", "tereddütlü", "sessiz", "katılım", "düzensiz", "girişken", "çekingen", "yavaş", "ihtiyaç", "gelişme"]
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar kullanımında geride kalıyor. Yeni programları öğrenmekte zorlanıyor. Arkadaşlarından yardım istemekte çekiniyor.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı] fen bilgisi dersindeki bazı konuları anlamakta **zorlanıyor**. Deneyler sırasında arkadaşlarıyla işbirliği yapmakta güçlük çektiğini ve görev dağılımında sorunlar yaşadığını gözlemledik. Ödevlerini sıkça eksik getiriyor ve ders malzemelerini unutma eğilimi gösteriyor. Bu konularda daha **dikkatli** ve sorumlu olması, ders başarısını artıracaktır. Temel eksiklerini gidermek için desteğe ihtiyacımız var.",
+    "tone": "nötr",
+    "etiketler": ["zorlanıyor", "fen", "deney", "işbirliği", "eksik", "unutkan", "dikkatli", "düzensiz", "ihtiyaç", "pekiştirme"]
   },
   {
     "id": 26,
-    "content": "[Öğrenci Adı] müzik dersinde çok sessiz kalıyor. Şarkı söylemeye katılmıyor ve enstrüman çalmayı öğrenmek istemiyor. Derslerde dikkatsiz ve ilgisiz görünüyor.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "content": "Sayın velimiz, [Öğrenci Adı]'nın okula gelme konusunda **isteği az** görünüyor ve derslerde sürekli **dalgın** bir halde olduğunu gözlemledik. Maalesef ödevlerini de hiç yapmıyor. Arkadaşlarıyla iletişim kurmayı **reddettiği** durumlar da oluyor. Okul bağını ve öğrenme motivasyonunu güçlendirmek adına acil ve yoğun desteğinize ihtiyacımız var. Bu durumun ciddiyetinin farkında olmanızı rica ederiz.",
+    "tone": "nötr",
+    "etiketler": ["isteksiz", "dalgın", "yapmıyor", "reddiyor", "iletişim", "okul", "bağ", "desteğe", "ihtiyaç", "düşük"]
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapmakta zorlanıyor. Malzeme kullanımında beceri eksikliği var. Arkadaşlarının çalışmalarını beğenmiyor ve eleştiriyor.",
-    "tone": "notr",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "kuralları öğrenme"]
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın ortaokul uyum sürecinde maalesef **ciddi zorluklar** yaşadığını üzülerek belirtmek isteriz. Sınıf içinde sıkça huzursuzluk çıkarıyor, arkadaşlarıyla sürekli **kavga** ediyor ve derslere karşı belirgin bir **ilgisizlik** sergiliyor. Ödevlerini düzenli olarak yapmaması da akademik gelişimini kayda değer ölçüde olumsuz etkiliyor. Bu durumun üstesinden gelebilmek ve [Öğrenci Adı]'nı okul ortamına kazandırabilmek adına acil rehberlik ve aile desteğine ihtiyacımız var. İşbirliğimiz hayati önem taşımakta.",
+    "tone": "olumsuz",
+    "etiketler": ["zorluk", "huzursuz", "kavga", "ilgisiz", "yapmıyor", "reddeden", "uyumsuz", "davranış", "acil", "problemli"]
   },
   {
     "id": 28,
-    "content": "[Öğrenci Adı] beden eğitimi dersinde spor aktivitelerine katılmak istemiyor. Takım oyunlarında arkadaşlarıyla uyum sağlayamıyor. Kurallara uymakta zorlanıyor.",
-    "tone": "notr",
-    "etiketler": ["sosyal uyum", "kuralları öğrenme", "uyum süreci"]
+    "content": "Sevgili velimiz, [Öğrenci Adı] temel akademik becerilerde maalesef çok **geride** kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde **ciddi sıkıntıları** var. Derslerde dikkatini toplayamıyor, sürekli başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir **direnç** sergiliyor. Bu durum, akademik ilerlemesini tamamen durduruyor. Acilen özel bir destek programına, yoğun bireysel çalışmaya ve profesyonel rehberlik desteğine ihtiyacımız var. İşbirliğiniz olmadan ilerleme kaydetmek çok zor olacaktır.",
+    "tone": "olumsuz",
+    "etiketler": ["geride", "sıkıntı", "yapamıyor", "dinlemiyor", "engelleyen", "temel", "akademik", "başarısız", "yoğun", "destek"]
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı] okula gelme konusunda isteksiz görünüyor. Derslerde sürekli dalgın ve ödevlerini hiç yapmiyor. Arkadaşlarıyla iletişim kurmayı reddediyor.",
-    "tone": "notr",
-    "etiketler": ["uyum süreci", "temel akademik beceriler", "sosyal uyum"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı] sınıf kurallarına hiç **uymuyor** ve bu konuda ısrarcı bir tavır sergiliyor. Öğretmenlere karşı gelmeye devam ediyor, dersleri sürekli bölüyor ve arkadaşlarını olumsuz etkiliyor. Bu **inatçı** ve **saygısız** davranışlar sınıf düzenini ciddi şekilde bozmakta ve diğer öğrencilerin öğrenme hakkını engellemektedir. Davranışlarında acil ve radikal bir değişime ihtiyacımız var. Bu noktada aile desteğiniz ve kararlı tutumunuz kritik önem taşımaktadır. Acilen bu durumu ele almalıyız.",
+    "tone": "olumsuz",
+    "etiketler": ["kuralsız", "inatçı", "saygısız", "bozan", "engelleyen", "olumsuz", "dirençli", "uyumsuz", "davranış", "acil"]
   },
   {
     "id": 30,
-    "content": "[Öğrenci Adı] sınıf kurallarına uymakta ciddi sorunlar yaşıyor. Öğretmenlere saygısız davranıyor ve arkadaşlarını rahatsız ediyor. Derslerde hiç katılım göstermiyor ve ödevlerini yapmıyor.",
-    "tone": "notr",
-    "etiketler": ["kuralları öğrenme", "sosyal uyum", "temel akademik beceriler"]
+    "content": "Sayın velimiz, [Öğrenci Adı] sosyal uyum konusunda maalesef **problemli** bir profil çiziyor. Arkadaşlarına fiziksel veya sözlü olarak **zarar** veriyor, sürekli kavga çıkarıyor ve kimseyle iletişim kurmak **istemiyor**. Teneffüslerde yalnız kalmayı tercih ediyor veya sorun yaratıyor. Bu durum, akran ilişkilerini ciddi şekilde **zedeliyor** ve onun sosyal gelişimini engelliyor. Sosyal beceri gelişimi için acil ve profesyonel desteğe ihtiyacımız var. Bu konudaki işbirliğimiz çok değerli olacaktır.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "agresif", "kavga", "zarar", "yalnız", "reddeden", "problemli", "zedelenmiş", "sosyal", "acil"]
   },
   {
     "id": 31,
-    "content": "[Öğrenci Adı] ortaokula uyum konusunda ciddi zorluklar yaşıyor. Sınıfta huzursuzluk çıkarıyor ve arkadaşlarıyla sürekli kavga ediyor. Derslere hiç ilgi göstermiyor ve ödevlerini yapmıyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı] matematik dersinde hiçbir işlemi **yapamıyor**. Basit toplama çıkarma bile öğrenemedi. Derslerde hiç dikkat etmiyor ve sürekli başka şeylerle ilgileniyor. Temel bilgi eksikliği çok **ciddi** seviyede. Bu durum, akademik ilerlemesini ciddi şekilde baltalıyor. Öğrenme güçlüğü ihtimaline karşı bir değerlendirme yapılması faydalı olabilir.",
     "tone": "olumsuz",
-    "etiketler": ["uyum süreci", "sosyal uyum", "kuralları öğrenme"]
+    "etiketler": ["yapamıyor", "ciddi", "öğrenemiyor", "dikkat", "ilgilenmeyen", "temel", "matematik", "sorun", "eksik", "düşük"]
   },
   {
     "id": 32,
-    "content": "[Öğrenci Adı] temel akademik becerilerde çok geride kaldı. Okuma yazma konusunda ciddi sıkıntıları var. Matematik işlemlerini yapamıyor ve derslerde hiç dinlemiyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı]'nın Türkçe dersinde okuma yazma becerileri maalesef çok **zayıf**. Basit kelimeleri bile okumakta güçlük çekiyor. Hikaye dinlemeyi sevmiyor ve yazma çalışmalarını tamamen **reddettiği** gözlemlendi. Okuryazarlık konusunda **yoğun** ve bireyselleştirilmiş desteğe acilen ihtiyacı var. Bu temel becerilerin gelişimi, diğer derslerindeki başarısını da doğrudan etkileyecektir.",
     "tone": "olumsuz",
-    "etiketler": ["temel akademik beceriler", "uyum süreci", "kuralları öğrenme"]
+    "etiketler": ["zayıf", "okuyamıyor", "reddeden", "sevmiyor", "yoğun", "Türkçe", "okuma", "yazma", "destek", "sıkıntı"]
   },
   {
     "id": 33,
-    "content": "[Öğrenci Adı] sınıf kurallarına hiç uymuyor. Öğretmenlere karşı gelmeye devam ediyor ve dersleri sürekli böliyor. Arkadaşlarını olumsuz etkiliyor.",
+    "content": "Kıymetli velimiz, [Öğrenci Adı] fen bilgisi dersinde hiçbir şekilde **ilgi göstermiyor**. Deneyler sırasında malzemeleri kasten bozuyor ve arkadaşlarının çalışmalarını **engelleyici** tutumlar sergiliyor. Güvenlik kurallarına kesinlikle **uymuyor** ve bu durum hem kendisi hem de diğer öğrenciler için risk oluşturuyor. Bu davranışlar kesinlikle kabul edilemez ve acil müdahale gerektiriyor. Bu konudaki işbirliğinizi bekliyoruz.",
     "tone": "olumsuz",
-    "etiketler": ["kuralları öğrenme", "sosyal uyum", "uyum süreci"]
+    "etiketler": ["ilgisiz", "bozucu", "engelleyen", "uymayan", "tehlikeli", "fen", "deney", "kural", "sorun", "yıkıcı"]
   },
   {
     "id": 34,
-    "content": "[Öğrenci Adı] sosyal uyum konusunda başarısız. Arkadaşlarına vuryor ve kötü sözler söylüyor. Teneffüslerde sürekli kavga çıkarıyor ve kimseyle oynamak istemiyor.",
+    "content": "Sayın velimiz, [Öğrenci Adı] sosyal bilgiler dersinde hiçbir konuyu **öğrenemiyor** ve derse karşı belirgin bir **direnç** sergiliyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını tamamen **reddettiği** ve arkadaşlarıyla çalışmayı **istemediği** gözlemlendi. Bu durum, hem akademik hem de sosyal gelişimini olumsuz etkiliyor. Öğrenme motivasyonunu artırmak için özel bir yaklaşım belirlememiz gerekiyor.",
     "tone": "olumsuz",
-    "etiketler": ["sosyal uyum", "kuralları öğrenme", "uyum süreci"]
+    "etiketler": ["öğrenemiyor", "zayıf", "reddeden", "istemiyor", "direnç", "sosyal", "tarih", "bilgi", "grup", "işbirliği"]
   },
   {
     "id": 35,
-    "content": "[Öğrenci Adı] matematik dersinde hiçbir işlemi yapamıyor. Basit toplama çıkarma bile öğrenemedi. Derslerde hiç dikkat etmiyor ve sürekli başka şeylerle ilgileniyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı] İngilizce dersine hiç **katılmıyor**. Yeni kelimeleri öğrenmeyi **reddettiği** ve telaffuz çalışmalarında sürekli **gürültü** çıkardığı gözlemlendi. Dersin akışını engelleyici davranışlar sergiliyor. Bu **negatif** ve yıkıcı tutumu, hem kendi öğrenmesini hem de sınıfın genel öğrenme ortamını olumsuz etkiliyor. Bu konuda acil bir çözüm bulmamız gerekiyor.",
     "tone": "olumsuz",
-    "etiketler": ["temel akademik beceriler", "uyum süreci", "kuralları öğrenme"]
+    "etiketler": ["katılmıyor", "reddeden", "gürültü", "engelleyen", "negatif", "İngilizce", "kelime", "telaffuz", "sorun", "direnç"]
   },
   {
     "id": 36,
-    "content": "[Öğrenci Adı] Türkçe dersinde okuma yazma becerileri çok zayıf. Basit kelimeleri bile okuyamıyor. Hikaye dinlemeyi sevmiyor ve yazma çalışmalarını reddediyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı] teknoloji dersinde bilgisayarlara **kasten zarar** veriyor. Kurallara uymayı tamamen **reddettiği** ve arkadaşlarının çalışmalarını bozduğu gözlemlendi. Öğretmen uyarılarını kesinlikle dinlemiyor ve bu davranışlarını sürdürüyor. Bu **yıkıcı** ve **sorumsuz** tutum kabul edilemez. Ciddi sonuçları olabilecek bu davranışlar için acil bir müdahale planı oluşturmamız gerekiyor.",
     "tone": "olumsuz",
-    "etiketler": ["temel akademik beceriler", "uyum süreci", "sosyal uyum"]
+    "etiketler": ["zarar", "reddeden", "bozucu", "dinlemeyen", "kasıtlı", "teknoloji", "kural", "uyarı", "sorun", "yıkıcı"]
   },
   {
     "id": 37,
-    "content": "[Öğrenci Adı] fen bilgisi dersinde hiç ilgi göstermiyor. Deneyler sırasında malzemeleri bozuyor ve arkadaşlarının çalışmalarını engelliyor. Güvenlik kurallarına uymuyor.",
+    "content": "Kıymetli velimiz, [Öğrenci Adı] müzik dersinde sürekli **gürültü** çıkarıyor. Şarkı söylemeyi tamamen **reddettiği** ve enstrümanlara zarar verdiği gözlemlendi. Dersleri sürekli bölerek arkadaşlarını rahatsız ediyor. Müzik ortamını **kasten bozuyor**. Sanatsal ifadeden çok, olumsuz davranışlarıyla dikkat çekiyor. Bu disiplinsiz tavrının önüne geçmemiz gerekiyor.",
     "tone": "olumsuz",
-    "etiketler": ["temel akademik beceriler", "kuralları öğrenme", "sosyal uyum"]
+    "etiketler": ["gürültü", "reddeden", "zarar", "bozan", "rahatsız", "müzik", "şarkı", "enstrüman", "sorun", "yıkıcı"]
   },
   {
     "id": 38,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersinde hiçbir konuyu öğrenemiyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını reddediyor ve arkadaşlarıyla çalışmayı istemiyor.",
+    "content": "Sayın velimiz, [Öğrenci Adı] sanat derslerinde malzemeleri **kasten israf** ediyor. Yaratıcı çalışmalar yapmayı **reddettiği** ve arkadaşlarının eserlerini bozduğu gözlemlendi. Derslerde sürekli ayakta dolaşıyor ve sınıf disiplinini **bozuyor**. Bu tavırlar dersin verimini düşürmekte ve diğer öğrencileri olumsuz etkilemektedir. Disiplin sorunlarına acil bir çözüm bulmalıyız.",
     "tone": "olumsuz",
-    "etiketler": ["temel akademik beceriler", "sosyal uyum", "uyum süreci"]
+    "etiketler": ["israf", "reddeden", "bozucu", "dolaşan", "disiplin", "sanat", "malzeme", "yaratıcı", "sorun", "yıkıcı"]
   },
   {
     "id": 39,
-    "content": "[Öğrenci Adı] İngilizce dersine hiç katılmıyor. Yeni kelimeleri öğrenmeyi reddediyor. Telaffuz çalışmalarında gürültü çıkarıyor ve dersi engelliyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı] beden eğitimi dersinde hiçbir aktiviteye **katılmıyor**. Spor malzemelerini kasten saklamayı **reddettiği** ve oyun kurallarına uymadığı gözlemlendi. Arkadaşlarıyla **fair play** ruhuna aykırı davranışlar sergiliyor. Sporun ve takım olmanın değerlerine saygı duymuyor. Bu tutumunun hem fiziksel gelişimini hem de sosyal ilişkilerini olumsuz etkilediğini görmekteyiz.",
     "tone": "olumsuz",
-    "etiketler": ["temel akademik beceriler", "kuralları öğrenme", "uyum süreci"]
+    "etiketler": ["katılmıyor", "reddeden", "uymuyor", "fairplay", "aykırı", "beden", "spor", "oyun", "kural", "sorun"]
   },
   {
     "id": 40,
-    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayarlara zarar veriyor. Kurallara uymayı reddediyor ve arkadaşlarının çalışmalarını bozuyor. Öğretmen uyarılarını dinlemiyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı] okula gelmek **istemiyor** ve sürekli okulu **kaçmaya** çalışıyor. Sınıfta oturmayı **reddettiği** ve koridorlarda dolaştığı gözlemlendi. Maalesef hiçbir derse katılmıyor ve ödevlerini hiç yapmıyor. Bu durum, onun eğitimden tamamen **kopma** riski taşıdığını gösteriyor. Durum oldukça ciddi ve acilen kapsamlı bir müdahale gerekmektedir. Okul-aile işbirliği bu noktada hayati öneme sahiptir.",
     "tone": "olumsuz",
-    "etiketler": ["kuralları öğrenme", "temel akademik beceriler", "sosyal uyum"]
-  },
-  {
-    "id": 41,
-    "content": "[Öğrenci Adı] müzik dersinde sürekli gürültü çıkarıyor. Şarkı söylemeyi reddediyor ve enstrümanlara zarar veriyor. Dersleri bölerek arkadaşlarını rahatsız ediyor.",
-    "tone": "olumsuz",
-    "etiketler": ["kuralları öğrenme", "sosyal uyum", "temel akademik beceriler"]
-  },
-  {
-    "id": 42,
-    "content": "[Öğrenci Adı] sanat derslerinde malzemeleri israf ediyor. Yaratıcı çalışmalar yapmayı reddediyor ve arkadaşlarının eserlerini bozuyor. Derslerde sürekli ayakta dolaşıyor.",
-    "tone": "olumsuz",
-    "etiketler": ["kuralları öğrenme", "sosyal uyum", "temel akademik beceriler"]
-  },
-  {
-    "id": 43,
-    "content": "[Öğrenci Adı] beden eğitimi dersinde hiçbir aktiviteye katılmıyor. Spor malzemelerini saklamayı reddediyor ve oyun kurallarına uymuyor. Arkadaşlarıyla fair play yapmıyor.",
-    "tone": "olumsuz",
-    "etiketler": ["sosyal uyum", "kuralları öğrenme", "uyum süreci"]
-  },
-  {
-    "id": 44,
-    "content": "[Öğrenci Adı] okula gelmek istemiyor ve sürekli kaçmaya çalışıyor. Sınıfta oturmayı reddediyor ve koridorlarda dolaşıyor. Hiçbir derse katılmıyor ve ödevlerini yapmıyor.",
-    "tone": "olumsuz",
-    "etiketler": ["uyum süreci", "kuralları öğrenme", "temel akademik beceriler"]
-  },
-  {
-    "id": 45,
-    "content": "[Öğrenci Adı] ortaokul hayatına hiç uyum sağlayamadı. Bütün derslerde başarısız, arkadaşlarıyla sürekli problem yaşıyor. Aile desteği ile acil rehberlik hizmetine ihtiyacı var.",
-    "tone": "olumsuz",
-    "etiketler": ["uyum süreci", "temel akademik beceriler", "sosyal uyum"]
+    "etiketler": ["istemiyor", "kaçıyor", "reddeden", "dolaşan", "yapmıyor", "kopma", "risk", "okul", "devamsızlık", "sorun"]
   }
 ]

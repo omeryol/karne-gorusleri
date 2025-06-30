@@ -1,272 +1,212 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı], yıl boyunca dengeli başarısını ve liderlik özelliklerini sürdürmüştür. Yaz tatilinde ilgi alanlarına yönelik okumalar yapmasını, sosyal sorumluluk projelerine katılmasını ve 7. sınıfa dinlenmiş ve hazır bir şekilde başlamasını tavsiye ederiz. Liderlik vasfını pekiştirmesi önemlidir.",
+    "content": "[Öğrenci Adı], yıl boyunca dengeli başarısını ve **liderlik** özelliklerini sürdürmüştür. Yaz tatilinde ilgi alanlarına yönelik okumalar yapmasını, sosyal sorumluluk projelerine katılmasını ve 7. sınıfa dinlenmiş ve hazır bir şekilde başlamasını tavsiye ederiz. Liderlik vasfını pekiştirmesi onun için çok önemli. Akademik ve sosyal gelişimi takdire şayan, tam bir **örnek** öğrenci.",
     "tone": "olumlu",
-    "etiketler": ["Dengeli Başarılı, Liderlik Potansiyeli", "ergenlik başlangıcı", "kimlik arayışı", "motivasyon dalgalanmaları", "özgüven gelişimi"]
+    "etiketler": ["başarılı", "dengeli", "lider", "sorumlu", "örnek", "sosyal", "gelişen", "istikrarlı", "takdire şayan", "potansiyelli"]
   },
   {
     "id": 2,
-    "content": "[Öğrenci Adı] kimlik arayışı sürecinde farklı ilgi alanlarını keşfetme cesareti gösteriyor. Kişiliğini tanıma konusunda bilinçli davranıyor ve sosyal kimliğini sağlıklı şekilde oluşturmaya başlıyor.",
-    "tone": "olumlu",
-    "etiketler": ["kimlik keşfi", "farklı ilgi alanları", "kişilik tanıma", "sosyal kimlik oluşumu"]
+    "content": "[Öğrenci Adı], yıl boyunca akademik zorluklarla mücadele etmiştir. Gösterdiği **çaba** gerçekten takdire şayandır. Yaz tatilinde temel eksiklerini gidermeye yönelik düzenli ve kısa süreli çalışmalar yapması, 7. sınıfa daha **güçlü** başlamasını sağlayacaktır. Sevdiği konularla öğrenmeyi birleştirmesi motivasyonunu artıracaktır. Ona olan inancımız tam.",
+    "tone": "nötr",
+    "etiketler": ["zorlanan", "çaba", "mücadele", "eksiklik", "destek", "ihtiyaç", "güçlü", "motivasyon", "istekli", "potansiyel"]
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı], yıl boyunca akademik zorluklarla mücadele etmiştir. Gösterdiği çaba takdire şayandır. Yaz tatilinde temel eksiklerini gidermeye yönelik düzenli ve kısa süreli çalışmalar yapması, 7. sınıfa daha güçlü başlamasını sağlayacaktır. Sevdiği konularla öğrenmeyi birleştirmesi motivasyonunu artıracaktır.",
-    "tone": "notr",
-    "etiketler": ["Akademik Zorluk Yaşayan, Destekleyici Yaklaşım Gereken", "motivasyon yönetimi", "kendini toparlama", "hedef odaklanma", "özgüven inşası"]
+    "content": "[Öğrenci Adı], yıl boyunca yüksek başarısını sürdürmüştür. Stres yönetimi konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ihmal etmeden, zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesi, 7. sınıfa daha **dingin** ve **hazır** bir şekilde başlamasını sağlayacaktır. Onun bu **mükemmeliyetçi** yapısı, doğru yönlendirildiğinde harikalar yaratıyor.",
+    "tone": "olumlu",
+    "etiketler": ["başarılı", "yüksek", "mükemmeliyetçi", "stres", "yönetim", "dingin", "hazır", "dengeli", "özverili", "çalışkan"]
   },
   {
     "id": 4,
-    "content": "[Öğrenci Adı] özgüven gelişimi açısından güzel bir örnek gösteriyor. Ergenlik döneminin zorluklarına rağmen kendine güveniyor, sosyal becerilerini geliştirmeye devam ediyor ve akademik hedeflerinden ödün vermiyor.",
+    "content": "[Öğrenci Adı], yıl boyunca sergilediği **disiplinli** çalışma alışkanlığı ve **kararlılık** sayesinde akademik başarısını istikrarlı bir şekilde sürdürmüştür. Sorumluluk bilinci ve derslere olan özverisi örnek teşkil etmektedir. Gelecek yıl 7. sınıfa başlarken bu düzenini koruması, başarısını daha da pekiştirecektir. Yaz tatilinde genel kültürünü artıracak okumalar yapmasını tavsiye ederiz. Onunla gurur duyuyoruz.",
     "tone": "olumlu",
-    "etiketler": ["örnek özgüven gelişimi", "ergenlik zorlukları", "sosyal beceri gelişimi", "akademik kararlılık"]
+    "etiketler": ["disiplinli", "çalışkan", "sorumlu", "kararlı", "istikrarlı", "başarılı", "örnek", "özverili", "düzenli", "azim"]
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı], yıl boyunca yüksek başarısını sürdürmüştür. Stres yönetimi konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ihmal etmeden, zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesi, 7. sınıfa daha dingin ve hazır bir şekilde başlamasını sağlayacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Yüksek Beklentili, Stres Yönetimi Gereken", "duygusal denge", "mood yönetimi", "sosyal olgunluk", "sağlıklı kimlik oluşumu"]
+    "content": "[Öğrenci Adı], derslerdeki potansiyeline rağmen dikkatini uzun süre korumakta **zorlanmaktadır**. Bu durum, akademik performansını zaman zaman olumsuz etkileyebilmektedir. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları, enstrüman çalma, kodlama gibi) yönelmesi faydalı olacaktır. Düzenli uyku ve beslenmeye dikkat etmesi de zihinsel gelişimini destekleyecektir. Potansiyelini kullanması için çabalarına devam etmeliyiz.",
+    "tone": "nötr",
+    "etiketler": ["dikkat", "odaklanma", "zorlanan", "dalgın", "potansiyel", "gelişmesi", "ihtiyaç", "destek", "uyku", "beslenme"]
   },
   {
     "id": 6,
-    "content": "[Öğrenci Adı] kimlik arayışı sürecinde yaratıcı keşifler yaparak kendini ifade ediyor. Sanatsal ve farklı ilgi alanlarını genişletiyor, özgün düşünce kapasitesini geliştiriyor ve sosyal çevresinde olumlu etki yaratıyor.",
-    "tone": "olumlu",
-    "etiketler": ["yaratıcı keşifler", "sanatsal ilgiler", "özgün düşünce", "pozitif sosyal etki"]
+    "content": "[Öğrenci Adı], akademik olarak sınıf ortalamasında bir performans sergilemektedir. Ancak, sosyal ilişkilerinde **uyum sorunları** yaşadığı ve kendini ifade etmekte **çekingen** davrandığı gözlemlenmiştir. Yaz tatilinde sosyal aktivitelere katılması ve iletişim becerilerini geliştirmesi önemlidir. 7. sınıfa daha **uyumlu** bir başlangıç yapmasını bekliyoruz. Ona destek olmaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "uyum", "çekingen", "iletişim", "zorlanan", "gelişmesi", "ihtiyaç", "destek", "arkadaş", "katılım"]
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı], yıl boyunca sergilediği disiplinli çalışma alışkanlığı ve kararlılığı sayesinde akademik başarısını istikrarlı bir şekilde sürdürmüştür. Gelecek yıl 7. sınıfa başlarken bu düzenini koruması, başarısını daha da pekiştirecektir. Yaz tatilinde genel kültürünü artıracak okumalar yapmasını tavsiye ederiz.",
+    "content": "[Öğrenci Adı], yıl boyunca sorumluluk bilincini geliştirmek için **çaba** göstermiştir. Yaz tatilinde günlük rutinler oluşturarak ve küçük görevler alarak sorumluluklarını pekiştirmesi, 7. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Küçük adımlarla başlayarak büyük bir **disiplin** kazanmasını diliyoruz. Ona güvenimiz tam.",
     "tone": "olumlu",
-    "etiketler": ["Disiplinli ve Çalışkan, Başarısı Yüksek", "motivasyon fırsatları", "farklı motivasyon kaynakları", "içsel motivasyon", "istikrarlı özgüven"]
+    "etiketler": ["sorumlu", "çaba", "gelişim", "düzenli", "hazırlıklı", "disiplin", "alışkanlık", "bilinçli", "takip", "istekli"]
   },
   {
     "id": 8,
-    "content": "[Öğrenci Adı] özgüven gelişimi konusunda örnek davranışlar sergiliyor. Kendine özgü yeteneklerini keşfetmiş, güçlü yönlerini vurgulamayı öğrenmiş ve sosyal ilişkilerinde samimi bir kimlik oluşturmuş.",
+    "content": "[Öğrenci Adı], yıl boyunca **yaratıcı** problem çözme becerilerini sergilemiştir. Farklı bakış açıları ve özgün yaklaşımlarıyla dikkat çekiyor. Yaz tatilinde ilgi alanlarına yönelik projeler geliştirmesi, bulmacalar çözmesi ve farklı düşünme tekniklerini denemesi, 7. sınıfa daha **donanımlı** başlamasını sağlayacaktır. Onun bu **çözüm odaklı** yapısı çok değerli.",
     "tone": "olumlu",
-    "etiketler": ["rol model davranışlar", "yetenek keşfi", "güçlü yön vurgusu", "samimi kimlik"]
+    "etiketler": ["yaratıcı", "özgün", "çözümcü", "problem", "analitik", "düşünen", "becerikli", "değerli", "gelişen", "donanımlı"]
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı], derslerdeki potansiyeline rağmen dikkatini uzun süre korumakta zorlanmaktadır. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları, enstrüman çalma, kodlama gibi) yönelmesi faydalı olacaktır. Düzenli uyku ve beslenmeye dikkat etmesi de zihinsel gelişimini destekleyecektir.",
-    "tone": "notr",
-    "etiketler": ["Dikkati Gelişmesi Gereken, Yaz Tatili Önerileri:", "değişim kabulü", "fiziksel değişim uyumu", "duygusal kabul", "sosyal uyum"]
+    "content": "[Öğrenci Adı], yıl boyunca okul dışı aktivitelerdeki başarısını sürdürmüştür. Spor, sanat gibi alanlarda gösterdiği **yetenek** takdire şayandır. Yaz tatilinde bu yeteneklerini geliştirmeye devam ederken, 7. sınıfa hazırlık amacıyla ders tekrarı yapmayı ve okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Hobileriyle dersleri arasında **denge** kurması önemlidir. Onun potansiyeli çok yönlü.",
+    "tone": "olumlu",
+    "etiketler": ["başarılı", "okul dışı", "yetenek", "denge", "motivasyon", "pekiştirme", "potansiyel", "çaba", "düzenli", "önemli"]
   },
   {
     "id": 10,
-    "content": "[Öğrenci Adı] kimlik arayışında farklı bakış açılarını değerlendirme yeteneği gelişmiş. Kendi değer sistemini oluşturma konusunda bilinçli ve sosyal sorumluluğu benimser hale gelmiş.",
-    "tone": "olumlu",
-    "etiketler": ["eleştirel düşünce", "perspektif değerlendirme", "değer sistemi oluşumu", "sosyal sorumluluk"]
+    "content": "[Öğrenci Adı], yıl boyunca sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Artık sınavların sadece bir değerlendirme aracı olduğunu daha iyi anlıyor. Yaz tatilinde rahatlama teknikleri öğrenmeye devam etmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, 7. sınıfta daha **başarılı** olmasına yardımcı olacaktır. Onun bu **çabası** takdire şayan.",
+    "tone": "nötr",
+    "etiketler": ["kaygı", "sınav", "yönetim", "çaba", "rahatlama", "pekiştirme", "başarılı", "ihtiyaç", "gelişmesi", "denge"]
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı], akademik olarak sınıf ortalamasında bir performans sergilemektedir. Sosyal ilişkilerinde gelişim göstermesi için yaz tatilinde sosyal aktivitelere katılması ve iletişim becerilerini geliştirmesi önemlidir. 7. sınıfa daha uyumlu bir başlangıç yapmasını bekliyoruz.",
-    "tone": "notr",
-    "etiketler": ["Sosyal Uyum Sorunu Yaşayan, Akademik Ortalamada:", "motivasyon avantajı", "öğrenme yöntem çeşitliliği", "kişisel stil keşfi", "hızlanan özgüven"]
+    "content": "[Öğrenci Adı], yıl boyunca **eleştirel** düşünme becerilerini geliştirmiştir. Olaylara ve konulara farklı bir bakış açısıyla yaklaşma yeteneği takdire şayandır. Yaz tatilinde farklı türde kitaplar okuması, belgeseller izlemesi ve olaylara çok yönlü bakış açısı geliştirmesi, 7. sınıfa daha **donanımlı** başlamasını sağlayacaktır. Onun bu **sorgulayan** zihniyeti bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["eleştirel", "sorgulayan", "düşünen", "analitik", "donanımlı", "gelişen", "derinlemesine", "farklı", "bakış açısı", "teşvik"]
   },
   {
     "id": 12,
-    "content": "[Öğrenci Adı] özgüven gelişimi sürecinde arkadaşlarını olumlu etkiliyor. Sosyal liderlik vasıfları gelişmiş, empati kapasitesi artmış ve ergenlik döneminin zorluklarında arkadaşlarına destek oluyor.",
+    "content": "[Öğrenci Adı], yıl boyunca ders çalışma ortamı konusunda gösterdiği **çaba** takdire şayandır. Kendi uygun bir çalışma köşesi oluşturmaya başladı. Yaz tatilinde kendine uygun bir çalışma köşesi oluşturması ve düzenli çalışma alışkanlığını sürdürmesi, 7. sınıfa daha **verimli** bir başlangıç yapmasını sağlayacaktır. Düzenin, başarısının anahtarı olduğunu kavraması önemli.",
     "tone": "olumlu",
-    "etiketler": ["arkadaş etkileme", "sosyal liderlik", "empati kapasitesi", "arkadaş desteği"]
+    "etiketler": ["ortam", "destek", "ihtiyaç", "düzenli", "verimli", "çaba", "alışkanlık", "gelişim", "bilinçli", "başarı"]
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı], yıl boyunca sorumluluk bilincini geliştirme konusunda çaba göstermiştir. Yaz tatilinde günlük rutinler oluşturarak sorumluluklarını pekiştirmesi, 7. sınıfa daha hazırlıklı başlamasını sağlayacaktır. Küçük görevler alması ve bunları tamamlaması teşvik edilmelidir.",
-    "tone": "notr",
-    "etiketler": ["Sorumluluk Bilinci Gelişmesi Gereken:", "kişilik temelleri", "karakter tanımlama", "ahlaki değer benimseme", "pozitif kimlik şekillendirme"]
+    "content": "[Öğrenci Adı], yıl boyunca sınıf içi tartışmalara katılımda gözle görülür bir **gelişim** göstermiştir. Yaz tatilinde kendini **ifade** etme becerilerini geliştirecek sosyal aktivitelere katılması, 7. sınıfa daha **özgüvenli** bir **iletişimle** başlamasını sağlayacaktır. Artık fikirlerini daha rahat paylaşıyor.",
+    "tone": "olumlu",
+    "etiketler": ["katılım", "gelişim", "sosyal", "özgüven", "iletişim", "ifade", "aktif", "cesur", "teşvik", "ilerleme"]
   },
   {
     "id": 14,
-    "content": "[Öğrenci Adı] kimlik arayışı ve özgüven gelişimi konularında dengeli bir yaklaşım sergiliyor. Kişisel ve akademik kimliğini harmanlama konusunda başarılı, sosyal çevresinde güvenilir konum edinmiş ve gelecek planlamasında net vizyona sahip.",
-    "tone": "olumlu",
-    "etiketler": ["dengeli kimlik yaklaşımı", "kişisel-akademik harmanlama", "güvenilir sosyal konum", "net gelecek vizyonu"]
+    "content": "[Öğrenci Adı], yıl boyunca sorumluluklarını erteleme eğiliminde **azalma** göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek **zaman yönetimi** becerilerini pekiştirmesi, 7. sınıfa daha **düzenli** bir başlangıç yapmasını sağlayacaktır. Onun bu **çabası** takdire şayan.",
+    "tone": "nötr",
+    "etiketler": ["erteleyen", "zaman", "yönetim", "azalma", "düzenli", "planlı", "sorumlu", "gelişmesi", "çaba", "ihtiyaç"]
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı], yıl boyunca yaratıcı problem çözme becerilerini sergilemiştir. Yaz tatilinde ilgi alanlarına yönelik projeler geliştirmesi, bulmacalar çözmesi ve farklı düşünme tekniklerini denemesi, 7. sınıfa daha donanımlı başlamasını sağlayacaktır.",
+    "content": "[Öğrenci Adı], yıl boyunca **meraklı** ve **araştırmacı** yapısını sürdürmüştür. Bilgiye olan açlığı takdire şayandır. Yaz tatilinde ilgi alanlarına yönelik araştırmalar yapması, belgeseller izlemesi ve yeni bilgiler edinmesi, 7. sınıfa daha **donanımlı** başlamasını sağlayacaktır. Öğrenme tutkusunu koruması bizleri çok mutlu ediyor.",
     "tone": "olumlu",
-    "etiketler": ["Yaratıcı Problem Çözücü:", "büyüme fırsatı değerlendirmesi", "dayanıklılık kapasitesi", "gelişmiş problem çözme", "mükemmel özgüven örneği"]
+    "etiketler": ["meraklı", "araştırmacı", "bilgi", "donanımlı", "gelişim", "tutku", "istekli", "keşfeden", "öğrenen", "başarılı"]
   },
   {
     "id": 16,
-    "content": "[Öğrenci Adı] ergenlik başlangıcında kimlik arayışı konusunda kararsızlık yaşıyor. Motivasyon dalgalanmaları belirgin, özgüven gelişiminde tutarsızlık gözleniyor ve sosyal ilişkilerinde dengesizlik bulunuyor.",
-    "tone": "notr",
-    "etiketler": ["kimlik kararsızlığı", "belirgin motivasyon dalgalanmaları", "özgüven tutarsızlığı", "sosyal dengesizlik"]
+    "content": "[Öğrenci Adı], yıl boyunca sağlık sorunlarına rağmen derslerini takip etme konusunda **çaba** göstermiştir. Yaz tatilinde sağlığına dikkat ederek ve eksiklerini tamamlayarak 7. sınıfa dinlenmiş ve hazır bir şekilde başlaması önemlidir. Bu süreçte ailesinin ve okulun desteği çok önemli.",
+    "tone": "nötr",
+    "etiketler": ["sağlık", "devamsızlık", "çaba", "takip", "destek", "ihtiyaç", "önemli", "dinlenmiş", "hazırlık", "zorlanan"]
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı], yıl boyunca okul dışı aktivitelerdeki başarısını sürdürmüştür. Yaz tatilinde bu yeteneklerini geliştirmeye devam ederken, 7. sınıfa hazırlık amacıyla ders tekrarı yapmayı ve okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Hobileriyle dersleri arasında denge kurması önemlidir.",
-    "tone": "notr",
-    "etiketler": ["Okul Dışı Aktivitelerde Başarılı:", "motivasyon yönetim zorlukları", "akademik kararsızlık", "özgüven eksiklikleri", "değişim uyum problemleri"]
+    "content": "[Öğrenci Adı], yıl boyunca farklı öğrenme stillerini deneme konusunda **çaba** göstermiştir. Yaz tatilinde kendisine en uygun öğrenme yöntemlerini pekiştirmesi ve bu yöntemlerle ders tekrarı yapması, 7. sınıfa daha **verimli** bir başlangıç yapmasını sağlayacaktır. Kendini tanıması ve öğrenme sürecine uyum sağlaması çok kıymetli.",
+    "tone": "nötr",
+    "etiketler": ["öğrenme stili", "keşif", "çaba", "verimli", "yöntem", "pekiştirme", "gelişmesi", "ihtiyaç", "destek", "uyum"]
   },
   {
     "id": 18,
-    "content": "[Öğrenci Adı] özgüven gelişimi sürecinde dalgalı bir seyir izliyor. Kimlik arayışında karmaşa yaşıyor, sosyal becerilerinde gerilik gösteriyor ve ergenlik zorluklarıyla başa çıkma konusunda yetersizlik sergiliyor.",
-    "tone": "notr",
-    "etiketler": ["dalgalı özgüven gelişimi", "kimlik karmaşası", "sosyal beceri geriliği", "ergenlik başa çıkma yetersizliği"]
+    "content": "[Öğrenci Adı], yıl boyunca ders materyallerini düzenli kullanma konusunda **gelişim** göstermiştir. Yaz tatilinde eşyalarını düzenli tutma alışkanlığını pekiştirmesi, 7. sınıfa daha **organize** bir başlangıç yapmasını sağlayacaktır. **Düzen**, başarısının anahtarıdır ve bu alandaki ilerlemesi takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["materyal", "düzenli", "organize", "gelişim", "alışkanlık", "pekiştirme", "sorumlu", "başarı", "anahtar", "ilerleme"]
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı], yıl boyunca sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde rahatlama teknikleri öğrenmeye devam etmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, 7. sınıfta daha başarılı olmasına yardımcı olacaktır.",
-    "tone": "notr",
-    "etiketler": ["Sınav Kaygısı Olan:", "duygusal düzensizlik", "ruh hali kontrol başarısızlığı", "sosyal tutarsızlık", "kimlik kaybolmuşluğu"]
+    "content": "[Öğrenci Adı], yıl boyunca akran ilişkilerinde **gelişim** göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, yeni arkadaşlar kurması ve iletişim becerilerini pekiştirmesi, 7. sınıfa daha **uyumlu** bir başlangıç yapmasını sağlayacaktır. Bu alandaki **çabası** takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["akran", "ilişki", "gelişim", "sosyal", "iletişim", "uyumlu", "arkadaş", "çaba", "istekli", "pozitif"]
   },
   {
     "id": 20,
-    "content": "[Öğrenci Adı] kimlik arayışı sürecinde yönelim belirsizliği gösteriyor. İlgi alanlarını belirleyememe sorunu yaşıyor, özgüven eksikliği kronikleşiyor ve sosyal uyum problemleri artıyor.",
-    "tone": "notr",
-    "etiketler": ["yönelim belirsizliği", "ilgi alanı belirleme sorunu", "kronik özgüven eksikliği", "artan sosyal uyum problemleri"]
+    "content": "[Öğrenci Adı], yıl boyunca öğrenme motivasyonunu artırmak için **çaba** göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 7. sınıfa daha **istekli** bir başlangıç yapmasını sağlayacaktır. Her küçük adımın, büyük bir değişimin başlangıcı olduğunu unutmamalıyız. Ona güvenimiz tam.",
+    "tone": "nötr",
+    "etiketler": ["motivasyon", "çaba", "gelişim", "istekli", "eğlenceli", "ilgi", "potansiyel", "destek", "adım", "işbirliği"]
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı], yıl boyunca eleştirel düşünme becerilerini geliştirmiştir. Yaz tatilinde farklı türde kitaplar okuması, belgeseller izlemesi ve olaylara çok yönlü bakış açısı geliştirmesi, 7. sınıfa daha donanımlı başlamasını sağlayacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Eleştirel Düşünme Becerisi Gelişmiş:", "motivasyon-akademik olumsuz etki", "konsantrasyon problemleri", "öz disiplin eksikliği", "ergenlik zorluk başa çıkamama"]
+    "content": "[Öğrenci Adı], ortaokul uyum sürecinde maalesef **ciddi zorluklar** yaşamıştır. Okula ve derslere olan **ilgisizliği** hala devam ediyor. Sınıfta zaman zaman huzursuzluk çıkarıyor ve arkadaşlarıyla tartışabiliyor. Ödevlerini düzenli yapmaması akademik gelişimini olumsuz etkiliyor. Bu durumun üstesinden gelmek için acil rehberlik ve aile desteğine ihtiyacımız var. İşbirliğimiz hayati önem taşımakta.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "zorluk", "ilgisiz", "huzursuz", "tartışma", "sorumsuz", "reddeden", "destek", "acil", "problemli"]
   },
   {
     "id": 22,
-    "content": "[Öğrenci Adı] özgüven gelişiminde ciddi aksaklıklar yaşıyor. Kendine güven eksikliği belirgin, sosyal kaygı düzeyi yüksek ve kimlik arayışında kaybolmuşluk hissi derinleşiyor.",
-    "tone": "notr",
-    "etiketler": ["ciddi özgüven aksaklıkları", "belirgin güven eksikliği", "yüksek sosyal kaygı", "derinleşen kaybolmuşluk"]
+    "content": "[Öğrenci Adı], akademik performansı bu dönemde maalesef belirgin bir **düşüş** gösterdi. Özellikle derslere olan **ilgisizliği** ve ödevlerini yapma konusundaki **sorumsuz** tutumu dikkat çekiyor. Bu durum, önceki dönemlerdeki başarılarını olumsuz etkiliyor. Acil bir müdahale ve düzenli takip ile bu gidişatı tersine çevirmemiz gerekiyor. Aile desteği bu noktada çok kritik.",
+    "tone": "olumsuz",
+    "etiketler": ["düşüş", "ilgisiz", "sorumsuz", "akademik", "olumsuz", "müdahale", "takip", "destek", "ciddi", "alarm"]
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı], yıl boyunca ders çalışma ortamı konusunda gösterdiği çaba takdire şayandır. Yaz tatilinde kendine uygun bir çalışma köşesi oluşturması ve düzenli çalışma alışkanlığını sürdürmesi, 7. sınıfa daha verimli bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Ders Çalışma Ortamı İhtiyacı Olan:", "kimlik krizi yönetememe", "kontrolsüz duygusal çalkantılar", "kaybolmuş akademik motivasyon", "sosyal izolasyon eğilimi"]
+    "content": "[Öğrenci Adı], sınıf kurallarına uyumda maalesef **ciddi sorunlar** yaşamaya devam ediyor. Kuralları **hiçe sayıyor**, öğretmen uyarılarını **reddettiği** gözlemlendi. Arkadaşlarını sıkça rahatsız ediyor ve ders düzenini bozuyor. Bu **inatçı** ve **saygısız** davranışlar, sınıf ortamını olumsuz etkiliyor. Acil bir disiplin planı ve aile takibi ile bu durumu düzeltmemiz gerekiyor. Durum oldukça ciddidir.",
+    "tone": "olumsuz",
+    "etiketler": ["kuralsız", "sorun", "hiçe sayan", "reddeden", "inatçı", "saygısız", "bozucu", "davranış", "disiplin", "acil"]
   },
   {
     "id": 24,
-    "content": "[Öğrenci Adı] motivasyon dalgalanmaları ve özgüven eksikliği birbirini olumsuz etkiliyor. Akademik başarısızlık kronikleşiyor, sosyal beceri gelişimi durmuş ve ergenlik döneminin gereksinimlerini karşılayamıyor.",
-    "tone": "notr",
-    "etiketler": ["olumsuz karşılıklı etki", "kronik akademik başarısızlık", "durmuş sosyal gelişim", "gereksinim karşılayamama"]
+    "content": "[Öğrenci Adı], sosyal uyum konusunda maalesef **problemli** bir profil çiziyor. Arkadaşlarına fiziksel veya sözlü olarak **zarar veriyor**, sürekli kavga çıkarıyor ve kimseyle iletişim kurmak **istemiyor**. Teneffüslerde yalnız kalmayı tercih ediyor veya sorun yaratıyor. Bu durum, akran ilişkilerini ciddi şekilde **zedeliyor**. Sosyal beceri gelişimi için acil ve profesyonel desteğe ihtiyacımız var. Bu konudaki işbirliğimiz çok değerli olacaktır.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "agresif", "kavga", "zarar", "yalnız", "reddeden", "problemli", "zedelenmiş", "sosyal", "acil"]
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı], yıl boyunca sınıf içi tartışmalara katılımda gelişim göstermiştir. Yaz tatilinde kendini ifade etme becerilerini geliştirecek sosyal aktivitelere katılması, 7. sınıfa daha özgüvenli bir iletişimle başlamasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Sınıf İçi Tartışmalara Katılmayan:", "kimlik arayışı ve özgüven gelişiminde kritik seviyede sorunlar yaşıyor. Kendini tanıma konusunda kaybolmuş, sosyal ilişkilerde çözülme gözleniyor ve ergenlik döneminin zorluklarıyla başa çıkamaz durumda."]
+    "content": "[Öğrenci Adı], ev ödevlerini yapma ve teslim etme konusunda ciddi **düzensizlikler** yaşamaktadır. Ödevlerini ya hiç yapmıyor ya da eksik getirmektedir. Bu durum, öğrenilen konuları pekiştirmesini engellemekte ve akademik başarısını doğrudan olumsuz etkilemektedir. Düzenli çalışma alışkanlığı edinebilmesi için acil ve kararlı bir aile takibine, ayrıca okuldan da özel bir desteğe ihtiyacımız var. Disiplinli bir rutin oluşturmak hayati önem taşıyor.",
+    "tone": "olumsuz",
+    "etiketler": ["düzensiz", "eksik", "yapmıyor", "sorumsuz", "pekişmeyen", "engellenen", "olumsuz", "takip", "kararlı", "acil"]
   },
   {
     "id": 26,
-    "content": "[Öğrenci Adı] ergenlik başlangıcında ciddi uyum problemleri yaşıyor. Kimlik karmaşası derinleşmiş, motivasyon tamamen kaybolmuş ve özgüven eksikliği kritik seviyeye ulaşmış. Acil destek gereksinimi bulunuyor.",
-    "tone": "olumsuz",
-    "etiketler": ["ciddi ergenlik uyum problemleri", "derinleşen kimlik karmaşası", "tamamen kaybolmuş motivasyon", "kritik özgüven eksikliği"]
+    "content": "[Öğrenci Adı], akademik olarak yeterli bir performans sergilemesine rağmen, zaman zaman duygusal hassasiyetleri nedeniyle derse odaklanmakta **zorlanmaktadır**. Yaz tatilinde hobilerine yönelerek ve dinlenerek duygusal sağlığını desteklemesi, 6. sınıfa daha **güçlü** başlamasını sağlayacaktır. Duygularını yönetme konusunda gelişimi devam etmeli. Duygusal zekasını kullanması çok önemli.",
+    "tone": "nötr",
+    "etiketler": ["duygusal", "hassas", "odaklanma", "zorluk", "denge", "yönetim", "gelişmesi", "destek", "ihtiyaç", "hobiler"]
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı], yıl boyunca sorumluluklarını erteleme eğiliminde azalma göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek zaman yönetimi becerilerini pekiştirmesi, 7. sınıfa daha düzenli bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Sorumluluklarını Erteleyen:", "tamamen kaybolmuş kimlik arayışı", "tersine özgüven gelişimi", "çözülen sosyal beceriler", "değişim başa çıkamama"]
+    "content": "[Öğrenci Adı], yıl boyunca okuma becerilerinde gözle görülür bir **gelişim** göstermiştir. Ancak bu alandaki eksikliklerini tamamen gidermek için yaz tatilinde düzenli okumaya devam etmesi önemlidir. Her gün belirli bir süre kitap okumak, okuma hızını ve anlama becerisini artırarak 6. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Okuma sevgisi ve alışkanlığı için desteğinizi sürdürün.",
+    "tone": "nötr",
+    "etiketler": ["okuma", "gelişim", "hız", "anlama", "eksiklik", "pekiştirme", "hazırlıklı", "ihtiyaç", "destek", "süreklilik"]
   },
   {
     "id": 28,
-    "content": "[Öğrenci Adı] motivasyon dalgalanmaları kontrolden çıkmış ve akademik çöküşe neden olmuş. Özgüven kaybı kronikleşmiş, sosyal izolasyon derinleşmiş ve ergenlik krizini yönetemez hale gelmiş. Acil müdahale gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["kontrolsüz motivasyon dalgalanmaları", "akademik çöküş", "kronik özgüven kaybı", "ergenlik krizi yönetememe"]
+    "content": "[Öğrenci Adı], yıl boyunca sözlü ifade becerilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde ailesiyle veya arkadaşlarıyla sohbet ederek, basit sunum provaları yaparak veya hikaye anlatarak bu becerilerini pekiştirmesi, 6. sınıfa daha **güçlü** bir **iletişimle** başlamasını sağlayacaktır. Kendini daha rahat ifade etmesi için teşvik edilmeli. Onun potansiyeli çok yüksek.",
+    "tone": "nötr",
+    "etiketler": ["sözlü", "ifade", "gelişim", "çaba", "iletişim", "güçlü", "pratik", "özgüven", "ihtiyaç", "teşvik"]
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı], yıl boyunca meraklı ve araştırmacı yapısını sürdürmüştür. Yaz tatilinde ilgi alanlarına yönelik araştırmalar yapması, belgeseller izlemesi ve yeni bilgiler edinmesi, 7. sınıfa daha donanımlı başlamasını sağlayacaktır. Öğrenme tutkusunu koruması önemlidir.",
+    "content": "[Öğrenci Adı], yıl boyunca grup çalışmalarına katılımda gözle görülür bir **gelişim** göstermiştir. Yaz tatilinde takım sporlarına veya grup aktivitelerine katılması, **işbirliği** ve **liderlik** becerilerini daha da geliştirmesine yardımcı olacaktır. 6. sınıfta daha **aktif** bir takım oyuncusu olmasını bekliyoruz. Fikirlerini daha rahat ifade etmeye başladı. Bu **sosyal** gelişimi çok kıymetli.",
     "tone": "olumlu",
-    "etiketler": ["Meraklı ve Araştırmacı:", "telafisi zor özgüven-kimlik hasarı", "tamamen işlevsiz sosyal ilişkiler", "yok olmuş akademik motivasyon", "başa çıkma kapasitesi kaybı"]
+    "etiketler": ["grup", "işbirliği", "liderlik", "aktif", "katılımcı", "gelişim", "takım", "sosyal", "teşvik", "sorumlu"]
   },
   {
     "id": 30,
-    "content": "[Öğrenci Adı] ergenlik başlangıcında kritik durumda bulunuyor. Kimlik arayışı sürecinde tamamen kaybolmuş, özgüven gelişimi durmuş ve sosyal-akademik işlevsellik kaybedilmiş. Acil uzman değerlendirme ve aile desteği gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["kritik ergenlik durumu", "tamamen kaybolmuş kimlik", "durmuş özgüven gelişimi", "işlevsellik kaybı"]
+    "content": "[Öğrenci Adı], yıl boyunca kurallara uyum konusunda önemli bir **gelişim** göstermiştir. Davranışlarındaki **düzen** ve **sorumluluk** bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. sınıfa daha **organize** bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı. Kendisiyle gurur duyuyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["kural", "düzenli", "sorumlu", "disiplinli", "organize", "alışkanlık", "gelişim", "bilinçli", "tutarlı", "başarı"]
   },
   {
     "id": 31,
-    "content": "[Öğrenci Adı], yıl boyunca sağlık sorunlarına rağmen derslerini takip etme çabası göstermiştir. Yaz tatilinde sağlığına dikkat ederek ve eksiklerini tamamlayarak 7. sınıfa dinlenmiş ve hazır bir şekilde başlaması önemlidir.",
-    "tone": "notr",
-    "etiketler": ["Sağlık Sorunları Nedeniyle Devamsızlık:", "ergenlik başlangıcında ciddi uyum problemleri", "derinleşen kimlik karmaşası", "tamamen kaybolmuş motivasyon", "kritik özgüven eksikliği"]
+    "content": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili **faydalı** aktivitelere yönelmesi, 6. sınıfa daha **bilinçli** ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
+    "tone": "olumlu",
+    "etiketler": ["teknoloji", "ilgi", "faydalı", "bilinçli", "denge", "potansiyel", "gelişimi", "yönlendirme", "merak", "kullanım"]
   },
   {
     "id": 32,
-    "content": "[Öğrenci Adı] sorumluluk almayı tamamen reddediyor. Ödevlerini yapmıyor, ders araç gereçlerini getirmiyor. Arkadaşlarına yardım etmeyi istemiyor.",
-    "tone": "olumsuz",
-    "etiketler": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "content": "[Öğrenci Adı], yıl boyunca sanatsal yeteneklerini geliştirmeye devam etmiştir. Yaratıcılığını farklı alanlara yansıtması takdire şayandır. Yaz tatilinde sanatsal projelere yönelmesi, hayal gücünü beslemesi ve 6. sınıfa **ilhamla** başlaması için harika bir fırsattır. Sanatın, öğrenme sürecine renk kattığını görmekten mutluluk duyuyoruz. O bir **sanatçı** ruhu taşıyor.",
+    "tone": "olumlu",
+    "etiketler": ["sanatsal", "yetenekli", "yaratıcı", "ilham", "gelişim", "hayal gücü", "sanatçı", "renk katan", "istekli", "özgün"]
   },
   {
     "id": 33,
-    "content": "[Öğrenci Adı], yıl boyunca farklı öğrenme stillerini deneme konusunda çaba göstermiştir. Yaz tatilinde kendisine en uygun öğrenme yöntemlerini pekiştirmesi ve bu yöntemlerle ders tekrarı yapması, 7. sınıfa daha verimli bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Öğrenme Stili Farklı:", "kimlik arayışı sürecinde tamamen kaybolmuş durumda. Özgüven gelişimi tersine dönmüş, sosyal beceriler çözülüyor ve ergenlik döneminin getirdiği değişimlerle başa çıkamıyor. Kapsamlı müdahale gereksinimi var."]
+    "content": "[Öğrenci Adı], yıl boyunca yabancı dil öğrenme konusundaki isteğini korumuştur. Meraklı ve açık tutumuyla dikkat çekiyor. Yaz tatilinde yabancı dilde çizgi film izlemesi, basit hikaye kitapları okuması veya dil öğrenme uygulamaları kullanması, 6. sınıfa daha **donanımlı** başlamasını sağlayacaktır. Onun bu **hevesi** bizleri çok mutlu ediyor.",
+    "tone": "olumlu",
+    "etiketler": ["yabancı dil", "istekli", "meraklı", "donanımlı", "hevesli", "pratik", "gelişim", "açık", "becerikli", "ilerleme"]
   },
   {
     "id": 34,
-    "content": "[Öğrenci Adı] akademik stabilite konusunda çok geride kaldı. Hiçbir derste başarılı olamıyor ve çalışmayı reddediyor. Ödevlerini hiç yapmiyor.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri"]
+    "content": "[Öğrenci Adı], yıl boyunca çevreye olan **duyarlılığını** sürdürmüştür. Okul içi projelerde ve etkinliklerde aktif rol alması takdire şayandır. Yaz tatilinde doğa yürüyüşlerine katılması, çevre koruma projelerini araştırması veya bahçe işleriyle ilgilenmesi, bu değerli özelliğini pekiştirecektir. Doğaya olan ilgisi, onu daha **bilinçli** bir birey yapacaktır.",
+    "tone": "olumlu",
+    "etiketler": ["çevre", "duyarlı", "doğa", "bilinçli", "aktif", "sorumlu", "gelişim", "öncü", "takdire şayan", "pozitif"]
   },
   {
     "id": 35,
-    "content": "[Öğrenci Adı], yıl boyunca ders materyallerini düzenli kullanma konusunda gelişim göstermiştir. Yaz tatilinde eşyalarını düzenli tutma alışkanlığını pekiştirmesi, 7. sınıfa daha organize bir başlangıç yapmasını sağlayacaktır. Düzen, başarının anahtarıdır.",
-    "tone": "notr",
-    "etiketler": ["Ders Materyallerini Düzenli Kullanmayan:", "motivasyon dalgalanmaları kontrolden çıkmış ve akademik çöküşe neden olmuş. Özgüven kaybı kronikleşmiş, sosyal izolasyon derinleşmiş ve ergenlik krizini yönetemez hale gelmiş. Acil müdahale gereksinimi var."]
-  },
-  {
-    "id": 36,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersinde hiç ilgi göstermiyor. Araştırma ödevlerini yapmıyor ve arkadaşlarının çalışmalarını engelliyor.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
-  },
-  {
-    "id": 37,
-    "content": "[Öğrenci Adı], yıl boyunca akran ilişkilerinde gelişim göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, yeni arkadaşlıklar kurması ve iletişim becerilerini pekiştirmesi, 7. sınıfa daha uyumlu bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Akran İlişkilerinde Destek İhtiyacı:", "telafisi zor özgüven-kimlik hasarı", "tamamen işlevsiz sosyal ilişkiler", "yok olmuş akademik motivasyon", "başa çıkma kapasitesi kaybı"]
-  },
-  {
-    "id": 38,
-    "content": "[Öğrenci Adı] matematik dersinde hiçbir problemi çözmeye çalışmıyor. Arkadaşlarından yardım istemiyor ve öğretmen açıklamalarını dinlemiyor.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
-  },
-  {
-    "id": 39,
-    "content": "[Öğrenci Adı], yıl boyunca öğrenme motivasyonunu artırma konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 7. sınıfa daha istekli bir başlangıç yapmasını sağlayacaktır. Her küçük adım, büyük bir değişimin başlangıcıdır.",
-    "tone": "notr",
-    "etiketler": ["Öğrenme Motivasyonu Düşük:", "kritik ergenlik durumu", "tamamen kaybolmuş kimlik", "durmuş özgüven gelişimi", "işlevsellik kaybı"]
-  },
-  {
-    "id": 40,
-    "content": "[Öğrenci Adı] müzik dersinde şarkı söylemeyi reddediyor. Arkadaşlarının performanslarını bozuyor ve enstrümanlara zarar veriyor.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
-  },
-  {
-    "id": 41,
-    "content": "[Öğrenci Adı], yıl boyunca çözüm odaklı ve pratik zekasını sergilemiştir. Yaz tatilinde zeka oyunları oynaması, bulmacalar çözmesi ve mantıksal düşünme becerilerini geliştirecek aktivitelerle meşgul olması, 7. sınıfa daha keskin bir zihinle başlamasını sağlayacaktır.",
+    "content": "[Öğrenci Adı], yıl boyunca ailesiyle olan **güçlü iletişimini** sürdürmüştür. Aile desteğiyle akademik ve sosyal gelişimini devam ettirmesi önemlidir. Yaz tatilinde ailesiyle birlikte vakit geçirmesi ve yeni deneyimler edinmesi, 6. sınıfa daha **mutlu** ve **hazır** başlamasını sağlayacaktır. Bu güçlü bağ, onun başarısının temelini oluşturuyor.",
     "tone": "olumlu",
-    "etiketler": ["Çözüm Odaklı ve Pratik Zeka:", "arkadaşlık ilişkileri", "sorumluluk alma", "akademik stabilite", "özgüven gelişimi"]
-  },
-  {
-    "id": 42,
-    "content": "[Öğrenci Adı] İngilizce dersinde hiç konuşmak istemiyor. Yeni kelimeler öğrenmeyi reddediyor ve arkadaşlarının çalışmalarını engelliyor.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
-  },
-  {
-    "id": 43,
-    "content": "[Öğrenci Adı], yıl boyunca dersi dinleme becerilerini geliştirmeye çaba göstermiştir. Yaz tatilinde aktif dinleme egzersizleri yapması, podcast dinlemesi ve okuduğunu anlama becerilerini pekiştirmesi, 7. sınıfa daha dikkatli bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Dersi Dinlemede Zorlanan:", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi"]
-  },
-  {
-    "id": 44,
-    "content": "[Öğrenci Adı] sınıfta hiç arkadaş edinemiyor. Herkesi kendisinden uzaklaştırıyor ve sosyal aktivitelere katılmayı reddediyor. Özgüven eksikliği çok ciddi.",
-    "tone": "olumsuz",
-    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma", "akademik stabilite"]
-  },
-  {
-    "id": 45,
-    "content": "[Öğrenci Adı], yıl boyunca sınıf içi etkinliklere katılım konusunda gelişim göstermiştir. Yaz tatilinde sosyal kulüplere veya takım sporlarına katılması, yeni arkadaşlar edinmesi ve özgüvenini artırması, 7. sınıfa daha katılımcı bir ruhla başlamasını sağlayacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Sınıf İçi Etkinliklere İsteksiz:", "özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["aile", "iletişim", "destek", "güçlü", "mutlu", "hazır", "deneyim", "sosyal", "akademik", "bağ"]
   }
 ]

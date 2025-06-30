@@ -1,272 +1,182 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı], LGS sürecinde gösterdiği üstün başarı ve kararlılıkla bizleri gururlandırmıştır. Hedefine ulaşma yolunda sergilediği azim takdire şayandır. LGS sonrası süreçte dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, yeni eğitim hayatına hazır bir şekilde başlamasını tavsiye ederiz.",
+    "content": "[Öğrenci Adı], LGS sürecinde gösterdiği üstün başarı ve **kararlılıkla** bizleri gururlandırmıştır. Sınav maratonunu başarıyla tamamlamış olmanın verdiği rahatlama ve yeni bir döneme başlama heyecanı gözlerinden okunuyor. Hedefine ulaşma yolunda sergilediği **azim** takdire şayandır. LGS sonrası süreçte dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, 9. sınıfa dinlenmiş ve hazır bir şekilde başlamasını tavsiye ederiz. Onunla gurur duyuyoruz.",
     "tone": "olumlu",
-    "etiketler": ["LGS Odaklı, Başarılı ve Kararlı", "mezuniyet hazırlığı", "sınav yönetimi", "olgunlaşma", "lise hazırlığı"]
+    "etiketler": ["başarılı", "kararlı", "azim", "gurur", "rahatlamış", "dinlenmiş", "hedefli", "üstün", "hazırlıklı", "takdire şayan"]
   },
   {
     "id": 2,
-    "content": "[Öğrenci Adı] sınav kaygısını en iyi performans için kullanma konusunda ustalaşma gösteriyor. Kaygıyı motivasyona dönüştürme becerileri gelişmiş, stres yönetimi gelişmiş ve baskı altında en iyi performans yeteneği mükemmel.",
+    "content": "[Öğrenci Adı], LGS sürecinde sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Artık sınavların sadece bir değerlendirme aracı olduğunu ve sonucun sadece bir sayıdan ibaret olmadığını daha iyi anlıyor. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, 9. sınıfa daha **dingin** ve **hazır** bir şekilde başlamasını tavsiye ederiz. Onun bu **olgun** yaklaşımı bizleri sevindiriyor.",
     "tone": "olumlu",
-    "etiketler": ["sınav başarısı", "motivasyon", "stres kontrolü", "baskı yönetimi"]
+    "etiketler": ["kaygı", "yönetim", "sınav", "dingin", "hazır", "rahatlama", "zihinsel", "olgun", "destek", "gelişim"]
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı], LGS sürecinde sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, yeni eğitim hayatına daha dingin ve hazır bir şekilde başlamasını tavsiye ederiz.",
-    "tone": "notr",
-    "etiketler": ["Sınav Kaygısı Yüksek, Destek İhtiyacı", "duygusal olgunluk", "bilişsel gelişim", "öz yansıtma", "gelecek odaklı"]
+    "content": "[Öğrenci Adı], LGS sürecinde motivasyonunu artırmak için **çaba** göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması ve yeni eğitim hayatına **istekli** bir başlangıç yapması önemlidir. Potansiyelini kullanması ve içindeki öğrenme ateşini canlı tutması için desteklenmeye devam etmelidir. Ona olan inancımız tam.",
+    "tone": "nötr",
+    "etiketler": ["motivasyon", "çaba", "istekli", "potansiyel", "destek", "ilgi", "eğlenceli", "hazırlık", "gelişim", "kararsız"]
   },
   {
     "id": 4,
-    "content": "[Öğrenci Adı] liseye hazırlık konusunda stratejik hazırlık ve bütüncül hazır oluş sergiliyor. Akademik becerileri birleştirme başarılı, sosyal becerileri iyileştirme etkili ve geçiş yönetimi becerilerinde uzmanlaşmış.",
+    "content": "[Öğrenci Adı], LGS sürecinde sorumluluklarını erteleme eğiliminde **azalma** göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek **zaman yönetimi** becerilerini pekiştirmesi, 9. sınıfa daha **düzenli** bir başlangıç yapmasını sağlayacaktır. Onun bu **disiplinli** ve planlı yaklaşımı takdire şayandır. Bu alışkanlık gelecekteki başarısının anahtarı olacak.",
     "tone": "olumlu",
-    "etiketler": ["stratejik hazırlık", "akademik birleştirme", "sosyal beceri", "geçiş yönetimi"]
+    "etiketler": ["sorumlu", "erteleyen", "zaman", "yönetim", "azalma", "düzenli", "planlı", "disiplinli", "alışkanlık", "başarı"]
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı], LGS sürecinde motivasyonunu artırma konusunda çaba göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması ve yeni eğitim hayatına istekli bir başlangıç yapması önemlidir. Potansiyelini kullanması için desteklenmeye devam etmelidir.",
-    "tone": "notr",
-    "etiketler": ["Motivasyon Düşüklüğü, Potansiyelini Kullanamayan", "liderlik", "sorumluluk", "rol model", "mentorluk"]
+    "content": "[Öğrenci Adı], LGS sürecinde sosyal hayatıyla dersleri arasında **denge** kurma konusunda **çaba** göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Onun bu **bilinçli** yaklaşımı bizleri mutlu ediyor. Hem eğlenmeli hem öğrenmeli.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "denge", "çaba", "okuma", "bilinçli", "hazırlık", "ihmal", "önemli", "aktivite", "rehberlik"]
   },
   {
     "id": 6,
-    "content": "[Öğrenci Adı] sınav kaygısı ve performans baskısını büyüme katalizörü olarak kullanıyor. Dayanıklılık oluşturma sürecinde başarılı, uyarlanabilir başa çıkma stratejileri geliştirmiş ve meydan okumayı kucaklama tutumu sergiliyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde temel eksiklerini giderme konusunda **çaba** göstermiştir. Yaz tatilinde bu eksiklerini tamamen kapatmaya yönelik düzenli çalışmalar yapması, 9. sınıfa daha **güçlü** başlamasını sağlayacaktır. Bu azmi ve gayreti takdire şayandır. Ona olan inancımız tam.",
     "tone": "olumlu",
-    "etiketler": ["büyüme odaklı", "dayanıklılık", "uyum yeteneği", "meydan okuma"]
+    "etiketler": ["eksiklik", "çaba", "düzenli", "güçlü", "azim", "gayret", "hazırlık", "başarı", "istikrarlı", "takdire şayan"]
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı], LGS sürecinde sorumluluklarını erteleme eğiliminde azalma göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek zaman yönetimi becerilerini pekiştirmesi, yeni eğitim hayatına daha düzenli bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Sorumluluklarını Erteleyen, LGS'yi Etkileyen", "bilgelik", "duygusal zeka", "empati", "sosyal bilgelik"]
+    "content": "[Öğrenci Adı], LGS sürecinde yüksek başarısını sürdürmüştür. **Stres yönetimi** konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, 9. sınıfa daha **dingin** ve **hazır** bir şekilde başlamasını tavsiye ederiz. Onun bu **mükemmeliyetçi** yapısı doğru yönlendirildiğinde harikalar yaratıyor.",
+    "tone": "olumlu",
+    "etiketler": ["başarılı", "yüksek", "stres", "yönetim", "dingin", "hazır", "mükemmeliyetçi", "dengeli", "dinlenme", "zihinsel"]
   },
   {
     "id": 8,
-    "content": "[Öğrenci Adı] liseye hazırlık sürecinde kapsamlı beceri entegrasyonu ve gelecek hazır oluşu sergiliyor. Farklı dersleri birleştirme bağlantıları yapabilme yeteneği güçlü, üst bilişsel farkındalık yüksek ve kendi kendine öğrenme ustalaşması gösteriyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde okul dışı aktivitelerdeki başarısını sürdürmüştür. Yaz tatilinde bu yeteneklerini geliştirmeye devam ederken, yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Hobileriyle dersleri arasında **denge** kurması önemlidir. Onun bu **çok yönlü** gelişimi bizleri gururlandırıyor.",
     "tone": "olumlu",
-    "etiketler": ["beceri entegrasyonu", "ders birleştirme", "bilişsel farkındalık", "otodik öğrenme"]
+    "etiketler": ["hobiler", "denge", "başarılı", "yetenek", "gelişim", "okuma", "ihmal", "önemli", "çok yönlü", "gurur verici"]
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı], LGS sürecinde sosyal hayatıyla dersleri arasında denge kurma konusunda çaba göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir.",
-    "tone": "notr",
-    "etiketler": ["Sosyal Yönü Güçlü, Derslere Odaklanmakta Zorlanan", "öz değerlendirme", "kişisel büyüme", "hedef iyileştirme", "sürekli gelişim"]
+    "content": "[Öğrenci Adı], LGS sürecinde dikkatini toplama konusunda **çaba** göstermiştir. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları gibi) yönelmesi faydalı olacaktır. 9. sınıfa daha **hazır** başlaması için desteklenmeye devam etmelidir. Onun bu azmi takdire şayan.",
+    "tone": "nötr",
+    "etiketler": ["dikkat", "odaklanma", "çaba", "hazır", "destek", "ihtiyaç", "gelişim", "faydalı", "azim", "kararlılık"]
   },
   {
     "id": 10,
-    "content": "[Öğrenci Adı] sınav kaygısını akademik mükemmellik sürücüsü olarak geliştiriyor. Performans ayarlama becerileri gelişmiş, stresi başarıya dönüştürme etkili ve sürekli motivasyon korunması gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["akademik mükemmellik", "performans ayarlama", "başarı odaklı", "sürekli motivasyon"]
+    "content": "[Öğrenci Adı], LGS sürecinde akademik alanda **çaba** göstermiştir. Yaz tatilinde ilgi alanlarını destekleyecek, ancak aynı zamanda temel akademik becerilerini de koruyacak aktivitelere yönelmesi, okula olan **bağlılığını** güçlendirecektir. Geleceği için öğrenmeye devam etmesi önemlidir. Onun bu **bilinçli** yaklaşımı bizleri sevindiriyor.",
+    "tone": "nötr",
+    "etiketler": ["çaba", "ilgi", "bağlılık", "akademik", "destek", "gelişim", "önemli", "bilinçli", "motivasyon", "süreklilik"]
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı], LGS sürecinde temel eksiklerini giderme konusunda çaba göstermiştir. Yaz tatilinde bu eksiklerini tamamen kapatmaya yönelik düzenli çalışmalar yapması, yeni eğitim hayatına daha güçlü başlamasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Temel Eksikleri Olan, Ek Destek İhtiyacı", "karakter gelişimi", "değer sistemi", "ahlaki liderlik", "ilkeli karar"]
+    "content": "[Öğrenci Adı], LGS sürecinde eksik konularını giderme konusunda **çaba** göstermiştir. Yaz tatilinde bu eksiklerini tamamen kapatmaya yönelik düzenli çalışmalar yapması, 9. sınıfa daha **güçlü** başlamasını sağlayacaktır. Onun bu azmi ve gayreti takdire şayandır. Ona olan inancımız tam.",
+    "tone": "olumlu",
+    "etiketler": ["eksiklik", "çaba", "düzenli", "güçlü", "azim", "gayret", "hazırlık", "başarı", "istikrarlı", "takdire şayan"]
   },
   {
     "id": 12,
-    "content": "[Öğrenci Adı] liseye hazırlık konusunda geçiş ustalaşması ve uyum mükemmelliği sergiliyor. Değişim yönetimi becerileri güçlü, gelecek planlama gelişmişliği yüksek ve proaktif hazırlık stratejileri geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["geçiş ustalaşması", "uyum yeteneği", "değişim yönetimi", "proaktif planlama"]
+    "content": "[Öğrenci Adı], LGS sürecinde **aile baskısını** yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, 9. sınıfa daha **dingin** ve **hazır** bir şekilde başlamasını tavsiye ederiz. Ailesiyle açık iletişim kurması çok önemli. Onun bu **olgun** yaklaşımı bizleri sevindiriyor.",
+    "tone": "nötr",
+    "etiketler": ["aile", "baskı", "kaygı", "yönetim", "dingin", "hazır", "rahatlama", "iletişim", "olgun", "destek"]
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı], LGS sürecinde yüksek başarısını sürdürmüştür. Stres yönetimi konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, yeni eğitim hayatına daha dingin ve hazır bir şekilde başlamasını tavsiye ederiz.",
+    "content": "[Öğrenci Adı], LGS sürecinde gelecek kaygısını yönetme konusunda **çaba** göstermiştir. Yaz tatilinde dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, 9. sınıfa daha **pozitif** bir bakış açısıyla başlamasını tavsiye ederiz. Onun bu **bilinçli** ve **umutlu** tutumu bizleri sevindiriyor. Ona güvenimiz tam.",
     "tone": "olumlu",
-    "etiketler": ["Yüksek Başarılı ama Mükemmeliyetçi", "miras bilinci", "etki farkındalığı", "sosyal sorumluluk", "topluluk liderliği"]
+    "etiketler": ["kaygı", "gelecek", "yönetim", "çaba", "pozitif", "bilinçli", "umutlu", "dinlenme", "ilgi", "başlangıç"]
   },
   {
     "id": 14,
-    "content": "[Öğrenci Adı] sınav kaygısı, olgunlaşma ve lise hazırlığı konularında entegre ustalaşma sergiliyor. Bütüncül gelişim yaklaşımı benimsiyor, dengeli mükemmellik gösteriyor ve kapsamlı hazır oluşu gösteriyor.",
+    "content": "[Öğrenci Adı], LGS sürecinde ders çalışma alışkanlığı edinme konusunda **çaba** göstermiştir. Yaz tatilinde günlük kısa çalışma periyotları oluşturarak bu alışkanlığını pekiştirmesi, 9. sınıfa daha **düzenli** ve **başarılı** bir başlangıç yapmasını sağlayacaktır. Onun bu **azim** ve **istikrarı** takdire şayandır.",
     "tone": "olumlu",
-    "etiketler": ["entegre yaklaşım", "bütüncül gelişim", "dengeli mükemmellik", "kapsamlı hazırlık"]
+    "etiketler": ["çalışma", "alışkanlık", "çaba", "düzenli", "başarılı", "azim", "istikrarlı", "pekiştirme", "gelişim", "verimli"]
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı], LGS sürecinde okul dışı aktivitelerdeki başarısını sürdürmüştür. Yaz tatilinde bu yeteneklerini geliştirmeye devam ederken, yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Hobileriyle dersleri arasında denge kurması önemlidir.",
-    "tone": "notr",
-    "etiketler": ["Okul Dışı Hobileri Yoğun, Derslere Yansıtamayan", "örnek liderlik", "ilham verici", "dönüştürücü etki", "olumlu miras"]
+    "content": "[Öğrenci Adı], LGS sürecinde sosyal çevre etkisini yönetme konusunda **çaba** göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Onun bu **bilinçli** yaklaşımı bizleri mutlu ediyor. Hem eğlenmeli hem öğrenmeli.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "çevre", "etki", "yönetim", "çaba", "bilinçli", "okuma", "aktivite", "denge", "önemli"]
   },
   {
     "id": 16,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında ortalama seviyede hazırlık gösteriyor. Sınav kaygısında dalgalanmalar yaşıyor, olgunlaşma sürecinde tutarsızlık bulunuyor ve liseye hazırlık konusunda eksiklikler gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["ortalama hazırlık", "kaygı dalgalanması", "tutarsız olgunlaşma", "hazırlık eksikliği"]
+    "content": "[Öğrenci Adı], LGS sürecinde okuma anlama becerilerini geliştirme konusunda **çaba** göstermiştir. Yaz tatilinde düzenli kitap okumaya devam etmesi ve hızlı okuma tekniklerini denemesi, 9. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Okuduğunu anlama becerisi onun için çok önemli.",
+    "tone": "nötr",
+    "etiketler": ["okuma", "anlama", "beceri", "gelişim", "çaba", "düzenli", "hızlı", "hazırlıklı", "pekiştirme", "önemli"]
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı], LGS sürecinde dikkatini toplama konusunda çaba göstermiştir. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları gibi) yönelmesi faydalı olacaktır. Yeni eğitim hayatına daha hazır başlaması için desteklenmeye devam etmelidir.",
-    "tone": "notr",
-    "etiketler": ["Dikkat Eksikliği ve Hiperaktivite Belirtileri Olan", "değişken başarı", "tutarsız gelişim", "belirsizlik", "odaklanma sorunu"]
+    "content": "[Öğrenci Adı], LGS sürecinde soru sorma konusunda **gelişim** göstermiştir. Yaz tatilinde merak ettiği konularda araştırmalar yapması ve sorular sormaktan çekinmemesi, 9. sınıfa daha **araştırmacı** bir ruhla başlamasını sağlayacaktır. Onun bu **cesur** ve **meraklı** tutumu bizleri sevindiriyor.",
+    "tone": "olumlu",
+    "etiketler": ["soru", "gelişim", "meraklı", "araştırmacı", "cesur", "iletişim", "istekli", "bilgili", "teşvik", "ilerleme"]
   },
   {
     "id": 18,
-    "content": "[Öğrenci Adı] olgunlaşma sürecinde zorlanmalar yaşıyor. Duygusal düzenleme problemleri belirgin, sınav kaygısı bunaltıcı seviyeye ulaşıyor ve liseye hazırlık motivasyonunda eksiklik gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["olgunlaşma zorluğu", "duygusal sorun", "bunaltıcı kaygı", "motivasyon eksikliği"]
+    "content": "[Öğrenci Adı], LGS sürecinde **yaratıcı** ve **özgün** düşünme becerilerini sergilemiştir. Yaz tatilinde ilgi alanlarına yönelik projeler geliştirmesi, bulmacalar çözmesi ve farklı düşünme tekniklerini denemesi, 9. sınıfa daha **donanımlı** başlamasını sağlayacaktır. Onun bu **parlak** zekası takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["yaratıcı", "özgün", "düşünme", "donanımlı", "parlak", "zeka", "gelişim", "proje", "takdire şayan", "potansiyel"]
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı], LGS sürecinde akademik alanda çaba göstermiştir. Yaz tatilinde ilgi alanlarını destekleyecek, ancak aynı zamanda temel akademik becerilerini de koruyacak aktivitelere yönelmesi, okula olan bağlılığını güçlendirecektir. Geleceği için öğrenmeye devam etmesi önemlidir.",
-    "tone": "notr",
-    "etiketler": ["Erken Yaşta Çalışma Eğilimi", "düşük performans", "geçiş kaygısı", "stres yetersizliği", "gelişim geriliği"]
+    "content": "[Öğrenci Adı], LGS sürecinde ders çalışma ortamı konusunda gösterdiği **çaba** takdire şayandır. Yaz tatilinde kendine uygun bir çalışma köşesi oluşturması ve düzenli çalışma alışkanlığını sürdürmesi, 9. sınıfa daha **verimli** bir başlangıç yapmasını sağlayacaktır. **Düzen**, başarının anahtarıdır.",
+    "tone": "olumlu",
+    "etiketler": ["ortam", "düzenli", "çaba", "verimli", "alışkanlık", "başarı", "anahtar", "hazırlık", "sorumlu", "gelişim"]
   },
   {
     "id": 20,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında uyum problemleri yaşıyor. Sınav kaygısı performansı olumsuz etkiliyor, olgunlaşma sürecinde durağanlık gözleniyor ve lise geçişi konusunda hazırlıksızlık bulunuyor.",
-    "tone": "notr",
-    "etiketler": ["uyum sorunu", "olumsuz etki", "gelişim durağanlığı", "geçiş hazırlıksızlığı"]
+    "content": "[Öğrenci Adı], LGS sürecinde sınav stratejilerini geliştirme konusunda **çaba** göstermiştir. Yaz tatilinde dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, 9. sınıfa daha **stratejik** bir bakış açısıyla başlamasını tavsiye ederiz. Onun bu **planlı** yaklaşımı bizleri sevindiriyor.",
+    "tone": "olumlu",
+    "etiketler": ["sınav", "strateji", "gelişim", "çaba", "planlı", "dinlenme", "ilgi", "bakış açısı", "başarı", "önemli"]
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı], LGS sürecinde eksik konularını giderme konusunda çaba göstermiştir. Yaz tatilinde bu eksiklerini tamamen kapatmaya yönelik düzenli çalışmalar yapması, yeni eğitim hayatına daha güçlü başlamasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["LGS Konularında Eksiklikler", "ciddi zorluk", "gelişim geriliği", "kapasite azalması", "işlevsel bozulma"]
+    "content": "[Öğrenci Adı], LGS sürecinde teknolojiye olan ilgisini **verimli** kullanmıştır. Yaz tatilinde kodlama, bilimsel araştırmalar veya eğitim içerikleriyle ilgilenmesi, 9. sınıfa daha **donanımlı** ve **bilinçli** başlamasını sağlayacaktır. Onun bu teknolojiye olan ilgisi doğru yönlendirildiğinde harikalar yaratıyor.",
+    "tone": "olumlu",
+    "etiketler": ["teknoloji", "verimli", "donanımlı", "bilinçli", "ilgi", "kodlama", "araştırma", "eğitim", "gelişim", "potansiyel"]
   },
   {
     "id": 22,
-    "content": "[Öğrenci Adı] olgunlaşma ve lise hazırlığı konularında işlevsizlik gösteriyor. Mezuniyet yaklaşımında panik tepkileri, sınav kaygısı etkisiz kılıcı seviyeye ulaşmış ve geçiş hazır oluşu tamamen kaybolmuş.",
-    "tone": "notr",
-    "etiketler": ["işlevsizlik", "panik tepki", "etkisiz kılıcı kaygı", "kaybolmuş hazırlık"]
+    "content": "[Öğrenci Adı], LGS sürecinde sanatsal yönünü korumaya **çaba** göstermiştir. Yaz tatilinde sanatsal faaliyetlere ağırlık vermesi, yeni hobiler edinmesi ve zihinsel olarak rahatlaması, 9. sınıfa daha **dinlenmiş** ve **ilham dolu** başlamasını sağlayacaktır. Sanat, onun için önemli bir denge unsuru.",
+    "tone": "olumlu",
+    "etiketler": ["sanatsal", "çaba", "hobi", "dinlenmiş", "ilham", "denge", "gelişim", "rahatlama", "yaratıcı", "önemli"]
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı], LGS sürecinde aile baskısını yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, yeni eğitim hayatına daha dingin ve hazır bir şekilde başlamasını tavsiye ederiz.",
-    "tone": "notr",
-    "etiketler": ["Aile Baskısı Altında Olan", "çöküş belirtisi", "bunaltıcı kaygı", "geriye hareket", "tam kaçınma"]
+    "content": "[Öğrenci Adı], LGS sürecinde yabancı dil öğrenme konusundaki isteğini korumuştur. Yaz tatilinde yabancı dilde kitap okuması, film izlemesi ve pratik yapması, lise hayatına daha **güçlü** bir **dil becerisiyle** başlamasını sağlayacaktır. Onun bu **hevesi** ve **azim** bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["yabancı dil", "istekli", "güçlü", "hevesli", "azim", "pratik", "kitap", "film", "gelişim", "başarı"]
   },
   {
     "id": 24,
-    "content": "[Öğrenci Adı] sınav kaygısı ve mezuniyet stresi karşısında başa çıkma başarısızlığı yaşıyor. Olgunlaşma sürecinde tam durağanlık, lise geçiş kaygısı kritik seviyede ve akademik motivasyon tamamen kaybolmuş.",
-    "tone": "notr",
-    "etiketler": ["başa çıkma başarısızlığı", "tam durağanlık", "kritik kaygı", "kaybolmuş motivasyon"]
+    "content": "[Öğrenci Adı], LGS sürecinde çevreye olan **duyarlılığını** sürdürmüştür. Yaz tatilinde çevre projelerine katılması, sosyal sorumluluk faaliyetlerinde bulunması, 9. sınıfa daha **bilinçli** ve **sorumlu** bir birey olarak başlamasını sağlayacaktır. Onun bu **örnek** tutumu bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["çevre", "duyarlı", "sorumlu", "bilinçli", "sosyal", "proje", "gelişim", "örnek", "takdire şayan", "gurur verici"]
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı], LGS sürecinde gelecek kaygısını yönetme konusunda çaba göstermiştir. Yaz tatilinde dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, yeni eğitim hayatına daha pozitif bir bakış açısıyla başlamasını tavsiye ederiz.",
-    "tone": "notr",
-    "etiketler": ["Gelecek Kaygısı Yüksek", "kritik sorun", "durmuş gelişim", "yok olmuş hazırlık", "zarar görmüş yeterlilik"]
+    "content": "[Öğrenci Adı], LGS sürecinde ailesiyle iletişimini geliştirme konusunda **çaba** göstermiştir. Yaz tatilinde ailesiyle vakit geçirmesi, duygularını paylaşması ve 9. sınıfa daha **güçlü** bir **aile bağıyla** başlaması önemlidir. Aile desteği onun başarısının anahtarıdır.",
+    "tone": "olumlu",
+    "etiketler": ["aile", "iletişim", "çaba", "güçlü", "destek", "paylaşım", "bağ", "gelişim", "önemli", "başarı"]
   },
   {
     "id": 26,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımında tam kriz yaşıyor. Sınav kaygısı panik bozukluğu seviyesine ulaşmış, olgunlaşma sürecinde tam gerilik ve liseye hazırlık kapasitesi tamamen kaybolmuş. Acil uzman müdahale gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["tam kriz", "panik bozukluğu", "tam gerilik", "kaybolmuş kapasite"]
+    "content": "[Öğrenci Adı], LGS sürecinde akran baskısını yönetme konusunda **çaba** göstermiştir. Yaz tatilinde kendi kararlarını verme becerisini pekiştirmesi ve hedeflerine odaklanması, 9. sınıfa daha **özgüvenli** başlamasını sağlayacaktır. Onun bu **bilinçli** duruşu takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["akran", "baskı", "yönetim", "çaba", "özgüvenli", "hedefli", "bilinçli", "gelişim", "takdire şayan", "kararlı"]
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı], LGS sürecinde ders çalışma alışkanlığı edinme konusunda çaba göstermiştir. Yaz tatilinde günlük kısa çalışma periyotları oluşturarak bu alışkanlığını pekiştirmesi, yeni eğitim hayatına daha düzenli ve başarılı bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Ders Çalışma Alışkanlığı Zayıf, LGS'yi Etkileyen", "kritik çöküş", "şiddetli bozulma", "yok hazırlık", "zarar görmüş işlev"]
+    "content": "[Öğrenci Adı], LGS sürecinde gecikmeli konularını kapatma konusunda **çaba** göstermiştir. Yaz tatilinde bu eksiklerini tamamen gidermeye yönelik düzenli çalışmalar yapması, 9. sınıfa daha **güçlü** başlamasını sağlayacaktır. Onun bu **azmi** ve **istikrarı** takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["gecikmeli", "eksiklik", "çaba", "güçlü", "azim", "istikrarlı", "düzenli", "hazırlık", "gelişim", "başarı"]
   },
   {
     "id": 28,
-    "content": "[Öğrenci Adı] olgunlaşma ve lise hazırlığı açısından kritik durumda bulunuyor. Mezuniyet yaklaşımında varoluşsal kriz, sınav kaygısı şiddetli kaygı bozukluğu seviyesinde ve geçiş kapasitesi tamamen kaybolmuş durumda.",
-    "tone": "olumsuz",
-    "etiketler": ["kritik durum", "varoluşsal kriz", "şiddetli bozukluk", "kaybolmuş kapasite"]
+    "content": "[Öğrenci Adı], LGS sürecinde **duyarlı** ve **çözüm odaklı** yaklaşımını sürdürmüştür. Yaz tatilinde sosyal sorumluluk projelerine katılması, problem çözme becerilerini geliştirmesi, 9. sınıfa daha **bilinçli** ve **donanımlı** başlamasını sağlayacaktır. Onun bu **örnek** tutumu bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["duyarlı", "çözüm odaklı", "sorumlu", "bilinçli", "donanımlı", "sosyal", "gelişim", "örnek", "takdire şayan", "gurur verici"]
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı], LGS sürecinde sosyal çevre etkisini yönetme konusunda çaba göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir.",
-    "tone": "notr",
-    "etiketler": ["Sosyal Çevre Etkisi Altında Olan", "telafisi zor hasar", "yok edilmiş kapasite", "çökmüş işlev", "kritik tehlike"]
+    "content": "[Öğrenci Adı], LGS sürecinde sınav stratejilerini geliştirme konusunda önemli adımlar atmıştır. Yaz tatilinde deneme sınavları çözmeye devam etmesi, farklı soru tiplerini incelemesi ve **zaman yönetimi** becerilerini pekiştirmesi, 9. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Onun bu **çabası** takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["sınav", "strateji", "gelişim", "zaman", "yönetim", "hazırlıklı", "pekiştirme", "çaba", "düzenli", "başarı"]
   },
   {
     "id": 30,
-    "content": "[Öğrenci Adı] mezuniyet yaklaşımı ve lise hazırlığı konularında acil durumda bulunuyor. Sınav kaygısı şiddetli zihinsel sağlık krizi yaratmış, olgunlaşma sürecinde tam durma ve mezuniyet hazır oluşu tamamen yok durumda. Acil ruhsal müdahale gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["acil durum", "zihinsel kriz", "tam durma", "yok hazırlık"]
-  },
-  {
-    "id": 31,
-    "content": "[Öğrenci Adı], LGS sürecinde okuma anlama becerilerini geliştirme konusunda çaba göstermiştir. Yaz tatilinde düzenli kitap okumaya devam etmesi ve hızlı okuma tekniklerini denemesi, yeni eğitim hayatına daha hazırlıklı başlamasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Okuma Anlama Becerisi Düşük", "mezuniyet hazırlığı", "sınav yönetimi", "olgunlaşma", "lise hazırlığı"]
-  },
-  {
-    "id": 32,
-    "content": "[Öğrenci Adı] sınav kaygısını en iyi performans için kullanma konusunda ustalaşma gösteriyor. Kaygıyı motivasyona dönüştürme becerileri gelişmiş, stres yönetimi gelişmiş ve baskı altında en iyi performans yeteneği mükemmel.",
+    "content": "[Öğrenci Adı], LGS sürecinde fiziksel aktiviteye yeterli zaman ayırma konusunda **çaba** göstermiştir. Yaz tatilinde düzenli spor yapması, dışarıda vakit geçirmesi ve sağlıklı yaşam alışkanlıklarını sürdürmesi, 9. sınıfa daha **enerjik** ve **sağlıklı** başlamasını sağlayacaktır. Bu **bilinçli** yaklaşımı çok değerli.",
     "tone": "olumlu",
-    "etiketler": ["sınav başarısı", "motivasyon", "stres kontrolü", "baskı yönetimi"]
-  },
-  {
-    "id": 33,
-    "content": "[Öğrenci Adı], LGS sürecinde soru sorma konusunda gelişim göstermiştir. Yaz tatilinde merak ettiği konularda araştırmalar yapması ve sorular sormaktan çekinmemesi, yeni eğitim hayatına daha araştırmacı bir ruhla başlamasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Soru Sormaktan Çekinen, LGS'yi Etkileyen", "duygusal olgunluk", "bilişsel gelişim", "öz yansıtma", "gelecek odaklı"]
-  },
-  {
-    "id": 34,
-    "content": "[Öğrenci Adı] liseye hazırlık konusunda stratejik hazırlık ve bütüncül hazır oluş sergiliyor. Akademik becerileri birleştirme başarılı, sosyal becerileri iyileştirme etkili ve geçiş yönetimi becerilerinde uzmanlaşmış.",
-    "tone": "olumlu",
-    "etiketler": ["stratejik hazırlık", "akademik birleştirme", "sosyal beceri", "geçiş yönetimi"]
-  },
-  {
-    "id": 35,
-    "content": "[Öğrenci Adı], LGS sürecinde yaratıcı ve özgün düşünme becerilerini sergilemiştir. Yaz tatilinde ilgi alanlarına yönelik projeler geliştirmesi, bulmacalar çözmesi ve farklı düşünme tekniklerini denemesi, yeni eğitim hayatına daha donanımlı başlamasını sağlayacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Yaratıcı ve Özgün Düşünme Becerisi Gelişmiş", "liderlik", "sorumluluk", "rol model", "mentorluk"]
-  },
-  {
-    "id": 36,
-    "content": "[Öğrenci Adı] sınav kaygısı ve performans baskısını büyüme katalizörü olarak kullanıyor. Dayanıklılık oluşturma sürecinde başarılı, uyarlanabilir başa çıkma stratejileri geliştirmiş ve meydan okumayı kucaklama tutumu sergiliyor.",
-    "tone": "olumlu",
-    "etiketler": ["büyüme odaklı", "dayanıklılık", "uyum yeteneği", "meydan okuma"]
-  },
-  {
-    "id": 37,
-    "content": "[Öğrenci Adı], LGS sürecinde ders çalışma ortamı konusunda gösterdiği çaba takdire şayandır. Yaz tatilinde kendine uygun bir çalışma köşesi oluşturması ve düzenli çalışma alışkanlığını sürdürmesi, yeni eğitim hayatına daha verimli bir başlangıç yapmasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Ders Çalışma Ortamı Desteği İhtiyacı", "bilgelik", "duygusal zeka", "empati", "sosyal bilgelik"]
-  },
-  {
-    "id": 38,
-    "content": "[Öğrenci Adı] liseye hazırlık sürecinde kapsamlı beceri entegrasyonu ve gelecek hazır oluşu sergiliyor. Farklı dersleri birleştirme bağlantıları yapabilme yeteneği güçlü, üst bilişsel farkındalık yüksek ve kendi kendine öğrenme ustalaşması gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["beceri entegrasyonu", "ders birleştirme", "bilişsel farkındalık", "otodik öğrenme"]
-  },
-  {
-    "id": 39,
-    "content": "[Öğrenci Adı], LGS sürecinde sınav stratejilerini geliştirme konusunda çaba göstermiştir. Yaz tatilinde dinlenmeyi ve ilgi alanlarına yönelmeyi ihmal etmemesini, yeni eğitim hayatına daha stratejik bir bakış açısıyla başlamasını tavsiye ederiz.",
-    "tone": "notr",
-    "etiketler": ["LGS Stratejisi Eksikliği", "öz değerlendirme", "kişisel büyüme", "hedef iyileştirme", "sürekli gelişim"]
-  },
-  {
-    "id": 40,
-    "content": "[Öğrenci Adı] sınav kaygısını akademik mükemmellik sürücüsü olarak geliştiriyor. Performans ayarlama becerileri gelişmiş, stresi başarıya dönüştürme etkili ve sürekli motivasyon korunması gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["akademik mükemmellik", "performans ayarlama", "başarı odaklı", "sürekli motivasyon"]
-  },
-  {
-    "id": 41,
-    "content": "[Öğrenci Adı], LGS sürecinde teknolojiye olan ilgisini verimli kullanmıştır. Yaz tatilinde kodlama, bilimsel araştırmalar veya eğitim içerikleriyle ilgilenmesi, yeni eğitim hayatına daha donanımlı ve bilinçli başlamasını sağlayacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Teknolojiye Aşırı İlgi Duyan", "karakter gelişimi", "değer sistemi", "ahlaki liderlik", "ilkeli karar"]
-  },
-  {
-    "id": 42,
-    "content": "[Öğrenci Adı] liseye hazırlık konusunda geçiş ustalaşması ve uyum mükemmelliği sergiliyor. Değişim yönetimi becerileri güçlü, gelecek planlama gelişmişliği yüksek ve proaktif hazırlık stratejileri geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["geçiş ustalaşması", "uyum yeteneği", "değişim yönetimi", "proaktif planlama"]
-  },
-  {
-    "id": 43,
-    "content": "[Öğrenci Adı], LGS sürecinde sanatsal yönünü korumaya çalışmıştır. Yaz tatilinde sanatsal faaliyetlere ağırlık vermesi, yeni hobiler edinmesi ve zihinsel olarak rahatlaması, yeni eğitim hayatına daha dinlenmiş ve ilham dolu başlamasını sağlayacaktır.",
-    "tone": "notr",
-    "etiketler": ["Sanatsal Yönü Güçlü, LGS Stresi", "miras bilinci", "etki farkındalığı", "sosyal sorumluluk", "topluluk liderliği"]
-  },
-  {
-    "id": 44,
-    "content": "[Öğrenci Adı] sınav kaygısı, olgunlaşma ve lise hazırlığı konularında entegre ustalaşma sergiliyor. Bütüncül gelişim yaklaşımı benimsiyor, dengeli mükemmellik gösteriyor ve kapsamlı hazır oluşu gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["entegre yaklaşım", "bütüncül gelişim", "dengeli mükemmellik", "kapsamlı hazırlık"]
-  },
-  {
-    "id": 45,
-    "content": "[Öğrenci Adı], LGS sürecinde yabancı dil öğrenme konusundaki isteğini korumuştur. Yaz tatilinde yabancı dilde kitap okuması, film izlemesi ve pratik yapması, lise hayatına daha güçlü bir dil becerisiyle başlamasını sağlayacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Yabancı Dil Öğrenmeye Açık", "örnek liderlik", "ilham verici", "dönüştürücü etki", "olumlu miras"]
+    "etiketler": ["fiziksel", "aktivite", "sağlıklı", "enerjik", "çaba", "düzenli", "alışkanlık", "bilinçli", "gelişim", "önemli"]
   }
 ]

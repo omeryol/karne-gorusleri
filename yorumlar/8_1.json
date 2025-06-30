@@ -1,272 +1,212 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı], LGS sürecine büyük bir ciddiyetle yaklaşarak bu dönemde akademik anlamda üstün bir başarı sergilemiştir. Hedefine ulaşma konusundaki kararlılığı, düzenli ve planlı çalışma alışkanlığı takdire şayandır. İkinci dönemde de bu istikrarlı çalışmasını sürdürerek eksiklerini tamamlaması ve deneme sınavlarındaki performansını artırması, LGS'de istediği başarıya ulaşmasını sağlayacaktır.",
+    "content": "[Öğrenci Adı], LGS sürecine büyük bir **ciddiyetle** yaklaşarak bu dönemde akademik anlamda üstün bir başarı sergilemiştir. Hedefine ulaşma konusundaki **kararlılığı**, düzenli ve **planlı** çalışma alışkanlığı takdire şayandır. İkinci dönemde de bu istikrarlı çalışmasını sürdürerek eksiklerini tamamlaması ve deneme sınavlarındaki performansını artırması, LGS'de istediği başarıya ulaşmasını sağlayacaktır. Kendisi tam bir **azim** örneği.",
     "tone": "olumlu",
-    "etiketler": ["LGS Odaklı, Başarılı ve Kararlı", "LGS hazırlık", "disiplinli çalışma", "motivasyon", "düzenli rutin"]
+    "etiketler": ["başarılı", "kararlı", "disiplinli", "planlı", "azimli", "istikrarlı", "hedefli", "üstün", "çalışkan", "takdire şayan"]
   },
   {
     "id": 2,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık konusunda sistemli yaklaşım benimsiyor. LGS stratejilerini geliştirme yeteneği gelişmiş, zaman yönetimi konusunda uzmanlaşmış ve gelecek planlamasında gerçekçi hedefler koyarak disiplinli çalışma yöntemi geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["sistemli çalışma", "LGS stratejisi", "zaman yönetimi", "hedef belirleme"]
+    "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen LGS **kaygısı** nedeniyle potansiyelini tam olarak yansıtamamıştır. Sınavların sadece bir değerlendirme aracı olduğunu hatırlatmak isteriz. İkinci dönemde **rahatlama teknikleri** öğrenmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, LGS'de daha **başarılı** olmasına yardımcı olacaktır. Bu konuda desteğe ihtiyacı var, ona yardımcı olmaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["kaygı", "sınav", "stres", "yönetim", "potansiyel", "yansıtma", "başarılı", "destek", "ihtiyaç", "pekiştirme"]
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen LGS kaygısı nedeniyle potansiyelini tam olarak yansıtamamıştır. Sınavların sadece bir değerlendirme aracı olduğunu hatırlatmak isteriz. İkinci dönemde rahatlama teknikleri öğrenmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, LGS'de daha başarılı olmasına yardımcı olacaktır.",
-    "tone": "notr",
-    "etiketler": ["Sınav Kaygısı Yüksek, Destek İhtiyacı", "kaygı yönetimi", "stres kontrolü", "dayanıklılık", "performans"]
+    "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelle LGS'de çok daha iyi başarılara imza atabilecek kapasitededir. Ancak, bu dönemde **motivasyon düşüklüğü** yaşadığı ve potansiyelini tam olarak kullanamadığı gözlemlenmiştir. İkinci dönemde hedeflerini netleştirmesi ve bu hedeflere ulaşmak için daha fazla **çaba** göstermesi, motivasyonunu artıracaktır. Ona güveniyor ve yeteneklerini tam kullanmasını diliyoruz.",
+    "tone": "nötr",
+    "etiketler": ["potansiyel", "motivasyonsuz", "düşük", "çaba", "hedef", "yetenekli", "ilgisiz", "destek", "ihtiyaç", "kararsız"]
   },
   {
     "id": 4,
-    "content": "[Öğrenci Adı] disiplinli çalışma konusunda kendini düzenleme becerisinde ustalaşma sergiliyor. Dikkat dağıtıcı unsurları yönetme becerilerinde uzmanlaşmış, odaklanma sürdürme stratejileri geliştirmiş ve uzun vadeli hedef bağlılığı göstererek akademik mükemmelliğe odaklanmış.",
-    "tone": "olumlu",
-    "etiketler": ["öz disiplin", "odaklanma", "dikkat kontrolü", "hedef odaklılık"]
+    "content": "[Öğrenci Adı], ödev ve projelerini son ana bırakma eğilimi göstermektedir. Bu durum, LGS hazırlığını **olumsuz** etkilemektedir. **Zaman yönetimi** becerilerini geliştirmesi ve sorumluluklarını zamanında yerine getirmesi, başarısı için kritik öneme sahiptir. İkinci dönemde **planlı** çalışmasını bekliyoruz. Bu alışkanlığı kazanması, LGS sürecinde ona büyük avantaj sağlayacaktır.",
+    "tone": "nötr",
+    "etiketler": ["erteleyen", "düzensiz", "zaman", "yönetimi", "olumsuz", "etki", "planlı", "sorumlu", "gelişmesi", "ihtiyaç"]
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelle LGS'de çok daha iyi başarılara imza atabilecek kapasitededir. Ancak, bu dönemde motivasyon düşüklüğü yaşadığı ve potansiyelini tam olarak kullanamadığı gözlemlenmiştir. İkinci dönemde hedeflerini netleştirmesi ve bu hedeflere ulaşmak için daha fazla çaba göstermesi, motivasyonunu artıracaktır.",
-    "tone": "notr",
-    "etiketler": ["Motivasyon Düşüklüğü, Potansiyelini Kullanamayan", "dengeli yaklaşım", "zihinsel sağlık", "sürdürülebilir çalışma", "sağlıklı rekabet"]
+    "content": "[Öğrenci Adı], sosyal ve arkadaş canlısı yapısıyla dikkat çekmektedir. Ancak, bu özelliği nedeniyle derslere yeterince **odaklanamadığı** gözlemlenmiştir. LGS sürecinde sosyal hayatıyla dersleri arasında bir **denge** kurması, başarısı için kritik öneme sahiptir. İkinci dönemde ders çalışma programına daha sıkı uymasını bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "dengeli", "odaklanamayan", "denge", "önemli", "ilgisiz", "ihtiyaç", "rehberlik", "çaba", "zaman"]
   },
   {
     "id": 6,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde liderlik özellikleri gösteriyor. Çalışma grubu koordinasyonu yetenekleri güçlü, akran destek sistemleri oluşturmada başarılı ve işbirlikçi öğrenme yaklaşımları geliştirerek akademik topluluk oluşturuyor.",
-    "tone": "olumlu",
-    "etiketler": ["liderlik", "grup çalışması", "işbirliği", "akran desteği"]
+    "content": "[Öğrenci Adı], önceki yıllardan gelen temel eksiklikleri nedeniyle LGS hazırlığında **zorlanmaktadır**. Bu eksiklikleri gidermek için ek **desteğe** ihtiyaç duymaktadır. Sömestr tatilinde bu eksiklikleri kapatmaya yönelik yoğun bir çalışma yapması, LGS'de daha iyi bir performans sergilemesine yardımcı olacaktır. Ona bu süreçte rehberlik etmeye devam edeceğiz. Potansiyeli yüksek, sadece temelini güçlendirmeli.",
+    "tone": "nötr",
+    "etiketler": ["eksiklik", "zorlanan", "destek", "ihtiyaç", "temel", "yoğun", "çalışma", "pekiştirme", "potansiyel", "rehberlik"]
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı], ödev ve projelerini son ana bırakma eğilimi göstermektedir. Bu durum, LGS hazırlığını olumsuz etkilemektedir. Zaman yönetimi becerilerini geliştirmesi ve sorumluluklarını zamanında yerine getirmesi, başarısı için kritik öneme sahiptir. İkinci dönemde planlı çalışmasını bekliyoruz.",
-    "tone": "notr",
-    "etiketler": ["Sorumluluklarını Erteleyen, LGS'yi Etkileyen", "gelecek planlama", "kariyer odaklı", "stratejik düşünme", "proaktif yaklaşım"]
+    "content": "[Öğrenci Adı], yüksek akademik başarısıyla göz doldurmaktadır. Öğrenmeye olan tutkusu takdire şayandır. Ancak, **mükemmeliyetçi** yaklaşımı nedeniyle sınav dönemlerinde **stres** yaşadığı gözlemlenmiştir. Başarının sadece notlardan ibaret olmadığını hatırlatmak isteriz. İkinci dönemde **stres yönetimi** tekniklerini öğrenmesi faydalı olacaktır. Ona destek olmaya ve dengeyi bulmasına yardımcı olmaya devam edeceğiz.",
+    "tone": "olumlu",
+    "etiketler": ["başarılı", "yüksek", "mükemmeliyetçi", "stres", "kaygı", "denge", "yönetim", "destek", "tutku", "çalışkan"]
   },
   {
     "id": 8,
-    "content": "[Öğrenci Adı] disiplinli çalışma konusunda yenilikçilik ve verimlilik entegrasyonu başarılı. Akıllı çalışma teknikleri geliştirmiş, verimlilik artırma konusunda yaratıcı, etkili öğrenme stratejileri kullanıyor ve akademik performans artırımı sağlıyor.",
-    "tone": "olumlu",
-    "etiketler": ["verimli çalışma", "akıllı teknikler", "yaratıcılık", "performans artışı"]
+    "content": "[Öğrenci Adı], okul dışı aktivitelerde (spor, sanat vb.) önemli başarılar elde etmektedir. Bu yetenekleri takdire şayandır. Ancak, bu yoğunluk nedeniyle LGS hazırlığına yeterli zaman ayıramadığı gözlemlenmiştir. Hobileriyle LGS hazırlığı arasında bir **denge** kurması, başarısı için kritik öneme sahiptir. İkinci dönemde ders çalışma programına daha sıkı uymasını bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["hobiler", "denge", "zaman", "yönetimi", "yoğun", "öncelik", "rehberlik", "ihtiyaç", "başarılı", "potansiyel"]
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı], sosyal ve arkadaş canlısı yapısıyla dikkat çekmektedir. Ancak, bu özelliği nedeniyle derslere yeterince odaklanamadığı gözlemlenmiştir. LGS sürecinde sosyal hayatıyla dersleri arasında bir denge kurması, başarısı için kritik öneme sahiptir. İkinci dönemde ders çalışma programına daha sıkı uymasını bekliyoruz.",
-    "tone": "notr",
-    "etiketler": ["Sosyal Yönü Güçlü, Derslere Odaklanmakta Zorlanan", "büyüme odaklı", "meydan okuma", "zorluk yönetimi", "dönüşüm"]
+    "content": "[Öğrenci Adı], derste **odaklanmakta zorlandığı** ve zaman zaman **hareketli** olduğu gözlemlenmiştir. Bu durum, özel bir öğrenme desteği gerektirebilir. İkinci dönemde dikkatini toplama becerisini geliştirecek teknikler (kısa molalar, sessiz ortam) kullanması ve bireysel farklılıklarına uygun destek programlarına yönelmesi faydalı olacaktır. Ona bu konuda özel destek sağlamaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["dikkat", "odaklanma", "hiperaktif", "zorlanan", "hareketli", "destek", "ihtiyaç", "teknik", "çaba", "rehberlik"]
   },
   {
     "id": 10,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde duygusal zeka uygulama konusunda mükemmel. Kendini tanıma ve kendini yönetme dengeleme yeteneği güçlü, sosyal farkındalığı korumada başarılı ve ilişki yönetimi becerilerini akademik ortamda etkili kullanıyor.",
-    "tone": "olumlu",
-    "etiketler": ["duygusal zeka", "öz farkındalık", "sosyal beceri", "ilişki yönetimi"]
+    "content": "[Öğrenci Adı], akademik alanda bazı zorluklar yaşamış ve bir an önce hayata atılma eğilimi göstermiştir. Okulun sadece akademik bir ortam değil, aynı zamanda sosyal gelişim ve farklı beceriler edinme fırsatı sunduğu vurgulanmalıdır. İkinci dönemde okula olan **bağlılığını** artıracak yaklaşımlar sergilemesini bekliyoruz. Ona geleceğin okulda olduğunu anlatmaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["okul", "bağlılık", "motivasyonsuz", "ilgisiz", "erken", "yönelim", "gelecek", "destek", "ihtiyaç", "rehberlik"]
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı], önceki yıllardan gelen temel eksiklikleri nedeniyle LGS hazırlığında zorlanmaktadır. Bu eksiklikleri gidermek için ek desteğe ihtiyaç duymaktadır. Sömestr tatilinde bu eksiklikleri kapatmaya yönelik yoğun bir çalışma yapması, LGS'de daha iyi bir performans sergilemesine yardımcı olacaktır.",
-    "tone": "notr",
-    "etiketler": ["Temel Eksikleri Olan, Ek Destek İhtiyacı", "öğrenme stratejisi", "bilişsel yönetim", "etkililik", "izleme sistemi"]
+    "content": "[Öğrenci Adı], LGS konularının bazı alanlarında **eksiklikler** olduğu gözlemlenmiştir. Bu eksiklikleri gidermek için yoğun bir çalışma yapması gerekmektedir. İkinci dönemde bu konulara ağırlık vermesi ve soru çözme pratiğini artırması, LGS başarısını olumlu etkileyecektir. Ona bu konularda **rehberlik** etmeye ve ek kaynaklar sağlamaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["eksiklik", "LGS", "konu", "yoğun", "çalışma", "pratik", "rehberlik", "ihtiyaç", "destek", "başarı"]
   },
   {
     "id": 12,
-    "content": "[Öğrenci Adı] disiplinli çalışma konusunda sürdürülebilir mükemmellik yaklaşımı benimsiyor. İş-yaşam dengesi koruma becerilerinde başarılı, tükenmişlik önleme stratejileri etkili ve uzun vadeli akademik sürdürülebilirlik sağlayarak sağlıklı başarı zihniyeti geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["sürdürülebilirlik", "denge", "tükenmişlik önleme", "sağlıklı başarı"]
+    "content": "[Öğrenci Adı], yüksek beklentiler nedeniyle sınav dönemlerinde **stres** yaşadığı ve **aile baskısı** hissettiği gözlemlenmiştir. Başarının sadece notlardan ibaret olmadığını, öğrenme sürecinin keyfini çıkarmanın da önemli olduğunu hatırlatmak isteriz. İkinci dönemde **rahatlama teknikleri** öğrenmesi ve ailesiyle iletişim kurması faydalı olacaktır. Ona destek olmaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["stres", "aile", "baskı", "kaygı", "rahatlama", "iletişim", "destek", "ihtiyaç", "önemli", "denge"]
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı], yüksek akademik başarısıyla göz doldurmaktadır. Öğrenmeye olan tutkusu takdire şayandır. Ancak, mükemmeliyetçi yaklaşımı nedeniyle sınav dönemlerinde stres yaşadığı gözlemlenmiştir. Başarının sadece notlardan ibaret olmadığını hatırlatmak isteriz. İkinci dönemde stres yönetimi tekniklerini öğrenmesi faydalı olacaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Yüksek Başarılı ama Mükemmeliyetçi", "uyum yeteneği", "stres yönetimi", "baskı kontrolü", "fırsat yaratma"]
+    "content": "[Öğrenci Adı], LGS sonrası gelecek hakkında **aşırı kaygı** duyduğu gözlemlenmiştir. Geleceği planlamak önemlidir, ancak aşırı kaygı performansı olumsuz etkileyebilir. İkinci dönemde hedeflerini belirlerken **gerçekçi** olması ve **kaygı yönetimi** tekniklerini öğrenmesi faydalı olacaktır. Ona bu süreçte rehberlik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["kaygı", "gelecek", "planlama", "gerçekçi", "yönetim", "olumsuz", "etki", "rehberlik", "destek", "ihtiyaç"]
   },
   {
     "id": 14,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık ve gelecek planlama konularında entegre ustalaşma sergiliyor. Kapsamlı hazırlık stratejileri gelişmiş, çok boyutlu hedef başarma yaklaşımı benimsiyor ve bütüncül başarı tanımı oluşturmuş.",
-    "tone": "olumlu",
-    "etiketler": ["bütüncül yaklaşım", "kapsamlı hazırlık", "çok boyutlu hedef", "entegre başarı"]
+    "content": "[Öğrenci Adı], zihinsel potansiyeline rağmen düzenli **ders çalışma alışkanlığı** edinmekte zorlanmaktadır. Bu durum, LGS hazırlığını **olumsuz** etkilemektedir. İkinci dönemde küçük adımlarla başlayarak günlük bir çalışma rutini oluşturması, akademik performansını olumlu yönde etkileyecektir. Ona bu konuda rehberlik etmeye ve destek olmaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["çalışma", "alışkanlık", "düzensiz", "olumsuz", "etki", "potansiyel", "rehberlik", "destek", "ihtiyaç", "düzen"]
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı], okul dışı aktivitelerde (spor, sanat vb.) önemli başarılar elde etmektedir. Ancak, bu yoğunluk nedeniyle LGS hazırlığına yeterli zaman ayıramadığı gözlemlenmiştir. Hobileriyle LGS hazırlığı arasında bir denge kurması, başarısı için kritik öneme sahiptir. İkinci dönemde ders çalışma programına daha sıkı uymasını bekliyoruz.",
-    "tone": "notr",
-    "etiketler": ["Okul Dışı Hobileri Yoğun, Derslere Yansıtamayan", "örnek davranış", "baskı altında başarı", "liderlik", "rol model"]
+    "content": "[Öğrenci Adı], arkadaş çevresinden **olumsuz etkilendiği** ve derslere ilgisinin azaldığı gözlemlenmiştir. Doğru arkadaş seçimi ve derslere odaklanma, LGS başarısı için kritik öneme sahiptir. İkinci dönemde bu konuda daha **bilinçli** davranmasını ve derslerine öncelik vermesini bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "çevre", "olumsuz", "etki", "ilgisiz", "öncelik", "bilinçli", "rehberlik", "destek", "arkadaş"]
   },
   {
     "id": 16,
-    "content": "[Öğrenci Adı] LGS stresi karşısında ortalama düzeyde başa çıkma gösterıyor. Ciddi akademik hazırlık sürecinde tutarsızlık yaşıyor, gelecek kaygısında dalgalanmalar bulunuyor ve disiplinli çalışma alışkanlıklarında eksiklikler gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["ortalama başarı", "tutarsızlık", "kaygı dalgalanması", "disiplin eksikliği"]
+    "content": "[Öğrenci Adı], LGS'de okuma anlama sorularında **zorlandığı** ve hızlı okuma becerisine ihtiyaç duyduğu gözlemlenmiştir. Okuduğunu anlama, tüm derslerdeki başarısını doğrudan etkileyecektir. İkinci dönemde düzenli **kitap okuma alışkanlığı** kazanması ve okuma becerilerini geliştirmeye yönelik çalışmalar yapması, LGS başarısını artıracaktır. Ona bu konuda destek olmaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["okuma", "anlama", "zorlanan", "hız", "kitap", "alışkanlık", "gelişme", "ihtiyaç", "destek", "başarı"]
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı], derste odaklanmakta zorlandığı ve zaman zaman hareketli olduğu gözlemlenmiştir. Bu durum, özel bir öğrenme desteği gerektirebilir. İkinci dönemde dikkatini toplama becerisini geliştirecek teknikler (kısa molalar, sessiz ortam) kullanması ve bireysel farklılıklarına uygun destek programlarına yönelmesi faydalı olacaktır.",
-    "tone": "notr",
-    "etiketler": ["Dikkat Eksikliği ve Hiperaktivite Belirtileri Olan", "değişken performans", "stres zorluğu", "rutin düzensizliği", "planlama belirsizliği"]
+    "content": "[Öğrenci Adı], LGS konularında anlamadığı yerleri **sormaktan çekindiği** gözlemlenmiştir. Soru sormak, öğrenme sürecinin önemli bir parçasıdır ve LGS başarısı için kritik öneme sahiptir. İkinci dönemde daha **cesur** olması ve aklına takılan her şeyi sorması, öğrenme sürecini hızlandıracaktır. Ona bu konuda teşvik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["soru", "çekingen", "iletişim", "cesur", "hızlanma", "öğrenme", "kritik", "önemli", "teşvik", "destek"]
   },
   {
     "id": 18,
-    "content": "[Öğrenci Adı] gelecek kaygısını yönetme konusunda zorlanmalar yaşıyor. LGS stresi altında motivasyon düşüşleri gözleniyor, akademik odaklanma problemleri bulunuyor ve disiplinli çalışma konusunda kararsızlık sergiliyor.",
-    "tone": "notr",
-    "etiketler": ["kaygı zorluğu", "motivasyon düşüşü", "odaklanma sorunu", "kararsızlık"]
+    "content": "[Öğrenci Adı], LGS'de karşılaştığı problemlere **yaratıcı** ve **özgün** çözümler getirme becerisiyle öne çıkmaktadır. Bu yeteneği, zorlu sorular karşısında avantaj sağlamaktadır. İkinci dönemde bu yaratıcılığını daha karmaşık problemlere uygulaması ve farklı çözüm yolları keşfetmesi, LGS başarısını artıracaktır. Onun bu **çözüm odaklı** ve **parlak** zekası takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["yaratıcı", "özgün", "çözüm odaklı", "parlak", "zeka", "avantaj", "başarı", "gelişme", "takdire şayan", "potansiyel"]
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı], akademik alanda bazı zorluklar yaşamış ve bir an önce hayata atılma eğilimi göstermiştir. Okulun sadece akademik bir ortam değil, aynı zamanda sosyal gelişim ve farklı beceriler edinme fırsatı sunduğu vurgulanmalıdır. İkinci dönemde okula olan bağlılığını artıracak yaklaşımlar sergilemesini bekliyoruz.",
-    "tone": "notr",
-    "etiketler": ["Erken Yaşta Çalışma Eğilimi", "düşük performans", "erteleme", "zaman sorunu", "olumsuz etki"]
+    "content": "[Öğrenci Adı], LGS hazırlığı için uygun **ders çalışma ortamı** konusunda desteğe ihtiyaç duymaktadır. Düzenli ve sessiz bir çalışma alanı, odaklanma ve öğrenme verimliliği için önemlidir. İkinci dönemde bu konuda aile desteğiyle uygun bir ortam oluşturulması, akademik başarısını olumlu etkileyecektir. Ona bu konuda rehberlik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["ortam", "destek", "ihtiyaç", "düzenli", "sessiz", "odaklanma", "verimli", "aile", "rehberlik", "önemli"]
   },
   {
     "id": 20,
-    "content": "[Öğrenci Adı] LGS stresi karşısında uyum problemleri yaşıyor. Ciddi akademik beklentileri karşılama konusunda yetersizlik gösteriyor, stres yönetimi becerilerinde eksiklik bulunuyor ve disiplinli çalışma motivasyonunda düşüşler gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["uyum sorunu", "beklenti yetersizliği", "stres eksikliği", "motivasyon kaybı"]
+    "content": "[Öğrenci Adı], LGS konularına hakim olmasına rağmen soru tiplerine ve **sınav stratejilerine** yeterince hakim olmadığı gözlemlenmiştir. İkinci dönemde deneme sınavlarına ağırlık vermesi, soru çözme tekniklerini geliştirmesi ve **zaman yönetimi** stratejileri oluşturması, LGS başarısını artıracaktır. Ona bu konuda rehberlik etmeye ve yol göstermeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["sınav", "strateji", "zaman", "yönetim", "eksiklik", "gelişme", "deneme", "başarı", "rehberlik", "ihtiyaç"]
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı], LGS konularının bazı alanlarında eksiklikler olduğu gözlemlenmiştir. Bu eksiklikleri gidermek için yoğun bir çalışma yapması gerekmektedir. İkinci dönemde bu konulara ağırlık vermesi ve soru çözme pratiğini artırması, LGS başarısını olumlu etkileyecektir.",
-    "tone": "notr",
-    "etiketler": ["LGS Konularında Eksiklikler", "ciddi zorluk", "stres dönüşüm sorunu", "bunaltıcı kaygı", "disiplin çözülmesi"]
+    "content": "[Öğrenci Adı], teknolojiye olan ilgisiyle dikkat çekmektedir. Bu ilgiyi LGS hazırlık sürecinde **verimli** kullanması önemlidir. İkinci dönemde teknolojiyi akademik kaynaklar ve online öğrenme platformları için daha **bilinçli** kullanmasını bekliyoruz. Onun bu potansiyelini doğru yönlendirmeliyiz.",
+    "tone": "olumlu",
+    "etiketler": ["teknoloji", "ilgi", "verimli", "bilinçli", "kullanım", "potansiyel", "LGS", "hazırlık", "rehberlik", "önemli"]
   },
   {
     "id": 22,
-    "content": "[Öğrenci Adı] gelecek kaygısı ve LGS stresi konularında işlevsizlik gösteriyor. Akademik felç yaşıyor, çalışma motivasyon kaybı belirgin ve disiplinli çalışma kapasitesinde ciddi azalma gözleniyor.",
-    "tone": "notr",
-    "etiketler": ["işlevsizlik", "akademik felç", "motivasyon kaybı", "kapasite azalması"]
+    "content": "[Öğrenci Adı], sanatsal alanda **yetenekli** olmasına rağmen LGS sürecinin getirdiği **stres** nedeniyle bu yönünü ihmal etmiştir. Sanatsal faaliyetler, stres yönetimi için faydalı olabilir. İkinci dönemde LGS yoğunluğu arasında sanata da zaman ayırmasını teşvik ediyoruz. Onun bu **dengeli** gelişimi için önemlidir.",
+    "tone": "nötr",
+    "etiketler": ["sanatsal", "yetenekli", "stres", "kaygı", "denge", "ihmal", "faydalı", "teşvik", "önemli", "gelişim"]
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı], yüksek beklentiler nedeniyle sınav dönemlerinde stres yaşadığı ve aile baskısı hissettiği gözlemlenmiştir. Başarının sadece notlardan ibaret olmadığını, öğrenme sürecinin keyfini çıkarmanın da önemli olduğunu hatırlatmak isteriz. İkinci dönemde rahatlama teknikleri öğrenmesi ve ailesiyle iletişim kurması faydalı olacaktır.",
-    "tone": "notr",
-    "etiketler": ["Aile Baskısı Altında Olan", "çöküş belirtisi", "bunaltıcı stres", "performans düşüşü", "panik seviyesi"]
+    "content": "[Öğrenci Adı], yabancı dil öğrenmeye karşı **meraklı** ve **açık** bir tutum sergilemektedir. Bu özelliği, LGS sonrası lise hayatında önemli bir avantaj sağlayacaktır. İkinci dönemde yabancı dil derslerine ağırlık vermesini ve kelime bilgisini artırmasını bekliyoruz. Onun bu **hevesi** bizleri çok mutlu ediyor.",
+    "tone": "olumlu",
+    "etiketler": ["yabancı dil", "meraklı", "açık", "istekli", "avantaj", "lise", "gelişme", "hevesli", "önemli", "potansiyel"]
   },
   {
     "id": 24,
-    "content": "[Öğrenci Adı] LGS stresi ve akademik baskı karşısında başa çıkma mekanizmaları başarısızlığı yaşıyor. Disiplinli çalışma tamamen bozulmuş, gelecek kaygısı etkisiz kılıcı seviyeye ulaşmış ve akademik işlevsellik ciddi şekilde zarar görmüş durumda.",
-    "tone": "notr",
-    "etiketler": ["başa çıkma başarısızlığı", "bozulmuş disiplin", "etkisiz kılıcı kaygı", "zarar görmüş işlev"]
+    "content": "[Öğrenci Adı], çevre bilinci ve **sosyal sorumluluk** konularında **duyarlı** bir yapıya sahiptir. Bu duyarlılığı LGS konularıyla da ilişkilendirerek farklı bakış açıları geliştirebilir. İkinci dönemde bu alandaki ilgisini akademik çalışmalara yansıtmasını bekliyoruz. Onun bu **bilinçli** tutumu takdire şayandır.",
+    "tone": "olumlu",
+    "etiketler": ["çevre", "duyarlı", "sosyal", "sorumlu", "bilinçli", "akademik", "gelişme", "yansıtma", "takdire şayan", "pozitif"]
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı], LGS sonrası gelecek hakkında aşırı kaygı duyduğu gözlemlenmiştir. Geleceği planlamak önemlidir, ancak aşırı kaygı performansı olumsuz etkileyebilir. İkinci dönemde hedeflerini belirlerken gerçekçi olması ve kaygı yönetimi tekniklerini öğrenmesi faydalı olacaktır.",
-    "tone": "notr",
-    "etiketler": ["Gelecek Kaygısı Yüksek", "kritik sorun", "çalışma felci", "kaybolmuş kapasite", "güçsüz kılıcı kaygı"]
+    "content": "[Öğrenci Adı], ailesiyle iletişim kurmada zaman zaman **zorluklar** yaşadığı gözlemlenmiştir. LGS sürecinde aile desteği büyük önem taşır. İkinci dönemde ailesiyle daha **açık iletişim** kurmasını ve yaşadığı zorlukları paylaşmaktan çekinmemesini bekliyoruz. Bu iletişim, onun başarı yolculuğunda büyük fark yaratacaktır.",
+    "tone": "nötr",
+    "etiketler": ["iletişim", "aile", "zorluk", "destek", "açık", "paylaşım", "önemli", "çekingen", "ihtiyaç", "gelişme"]
   },
   {
     "id": 26,
-    "content": "[Öğrenci Adı] LGS stresi karşısında tamamen çöküş yaşıyor. Ciddi akademik hazırlık kapasitesi kaybolmuş, disiplinli çalışma becerileri çözülmüş ve gelecek kaygısı kronik kaygı bozukluğuna dönüşmüş. Acil uzman müdahale gereksinimi var.",
-    "tone": "olumsuz",
-    "etiketler": ["tam çöküş", "kaybolmuş kapasite", "çözülmüş beceri", "kronik kaygı"]
+    "content": "[Öğrenci Adı], akran baskısı altında olduğu ve derslere olan ilgisinde **düşüş** yaşandığı gözlemlenmiştir. Kendi hedeflerine odaklanması ve doğru arkadaş çevresi seçimi LGS başarısı için kritik öneme sahiptir. İkinci dönemde bu konuda daha **bilinçli** davranmasını ve derslerine öncelik vermesini bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["akran", "baskı", "ilgisiz", "düşüş", "hedef", "öncelik", "bilinçli", "rehberlik", "destek", "çevre"]
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı], zihinsel potansiyeline rağmen düzenli ders çalışma alışkanlığı edinmekte zorlanmaktadır. Bu durum, LGS hazırlığını olumsuz etkilemektedir. İkinci dönemde küçük adımlarla başlayarak günlük bir çalışma rutini oluşturması, akademik performansını olumlu yönde etkileyecektir.",
-    "tone": "notr",
-    "etiketler": ["Ders Çalışma Alışkanlığı Zayıf, LGS'yi Etkileyen", "tam çöküş", "panik bozukluğu", "imkansız çalışma", "varoluşsal kriz"]
+    "content": "[Öğrenci Adı], LGS konularının bazı alanlarında yaşıtlarına göre **gecikmeler** yaşamıştır. Bu eksiklikleri gidermek için yoğun bir çalışma yapması gerekmektedir. İkinci dönemde bireysel etütlere ağırlık vermesi ve soru çözüm pratiğini artırması, LGS başarısını olumlu etkileyecektir. Ona bu konuda özel destek sağlamaya devam edeceğiz.",
+    "tone": "nötr",
+    "etiketler": ["gecikme", "eksiklik", "LGS", "yoğun", "çalışma", "pratik", "destek", "ihtiyaç", "başarı", "rehberlik"]
   },
   {
     "id": 28,
-    "content": "[Öğrenci Adı] gelecek kaygısı ve LGS stresi açısından kritik ruhsal durumda bulunuyor. Akademik işlevsellik tamamen çökmüş, disiplinli çalışma kapasitesi yok olmuş ve şiddetli kaygı belirtileri tüm yaşam alanlarını ele geçirmiş.",
-    "tone": "olumsuz",
-    "etiketler": ["kritik ruhsal durum", "tam çöküş", "yok olmuş kapasite", "şiddetli kaygı"]
+    "content": "[Öğrenci Adı], akran ilişkilerinde **duyarlı** ve problemler karşısında **çözüm odaklı** bir yaklaşım sergilemektedir. LGS sürecindeki zorluklarla mücadele etme **azmi** takdire şayandır. İkinci dönemde bu özelliklerini daha da geliştirerek örnek teşkil etmesini bekliyoruz. Onun bu **pozitif** tutumu bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["duyarlı", "çözüm odaklı", "azim", "pozitif", "örnek", "sosyal", "mücadele", "başarı", "takdire şayan", "gelişme"]
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı], arkadaş çevresinden olumsuz etkilendiği ve derslere ilgisinin azaldığı gözlemlenmiştir. Doğru arkadaş seçimi ve derslere odaklanma, LGS başarısı için kritik öneme sahiptir. İkinci dönemde bu konuda daha bilinçli davranmasını ve derslerine öncelik vermesini bekliyoruz.",
-    "tone": "notr",
-    "etiketler": ["Sosyal Çevre Etkisi Altında Olan", "telafisi zor hasar", "bozulmuş beceri", "kritik zihinsel zarar", "raydan çıkmış"]
+    "content": "[Öğrenci Adı], başlangıçta sınav stratejileri konusunda eksiklikler yaşasa da bu dönemde önemli **gelişim** göstermiştir. Sınav süresini yönetme ve soru tiplerini tanıma becerileri artmıştır. İkinci dönemde bu gelişimini sürdürerek LGS'ye tam **hazır** olmasını bekliyoruz. Onun bu **çabası** ve öğrenme isteği çok değerli.",
+    "tone": "olumlu",
+    "etiketler": ["sınav", "strateji", "gelişim", "hazır", "zaman", "yönetim", "çaba", "istekli", "değerli", "başarı"]
   },
   {
     "id": 30,
-    "content": "[Öğrenci Adı] LGS stresi ve ciddi akademik hazırlık konularında kritik acil durumda bulunuyor. Disiplinli çalışma kapasitesi tamamen kaybolmuş, gelecek kaygısı şiddetli zihinsel sağlık krizi yaratmış ve acil ruhsal müdahale gerektiren durumda bulunuyor.",
-    "tone": "olumsuz",
-    "etiketler": ["kritik acil durum", "kaybolmuş kapasite", "zihinsel sağlık krizi", "acil müdahale"]
+    "content": "[Öğrenci Adı]'nın LGS yoğunluğu nedeniyle fiziksel aktiviteyi **ihmal ettiği** gözlemlenmiştir. Düzenli spor, hem fiziksel hem de zihinsel sağlığı için önemlidir. İkinci dönemde ders çalışma programına kısa fiziksel molalar eklemesini tavsiye ederiz. Onun daha **enerjik** ve **sağlıklı** olması için teşvik etmeliyiz.",
+    "tone": "nötr",
+    "etiketler": ["fiziksel", "aktivite", "ihmal", "enerji", "sağlık", "stres", "denge", "teşvik", "önemli", "alışkanlık"]
   },
   {
     "id": 31,
-    "content": "[Öğrenci Adı], LGS'de okuma anlama sorularında zorlandığı ve hızlı okuma becerisine ihtiyaç duyduğu gözlemlenmiştir. Okuduğunu anlama, tüm derslerdeki başarısını doğrudan etkileyecektir. İkinci dönemde düzenli kitap okuma alışkanlığı kazanması ve okuma becerilerini geliştirmeye yönelik çalışmalar yapması, LGS başarısını artıracaktır.",
-    "tone": "notr",
-    "etiketler": ["Okuma Anlama Becerisi Düşük", "LGS hazırlık", "disiplinli çalışma", "motivasyon", "düzenli rutin"]
+    "content": "[Öğrenci Adı], LGS stresi karşısında maalesef **tamamen çöküş** yaşıyor. Akademik hazırlık kapasitesi kaybolmuş, disiplinli çalışma becerileri çözülmüş ve gelecek kaygısı kronik kaygı bozukluğuna dönüşmüş. Bu durum, onun eğitim hayatını ciddi şekilde tehlikeye atmaktadır. **Acil uzman müdahale** gereksinimi var. Lütfen okulumuzla iletişime geçin, bu durum hayati önem taşıyor.",
+    "tone": "olumsuz",
+    "etiketler": ["çöküş", "kaygı", "kronik", "kapasite", "çözülmüş", "tehlikeli", "akademik", "psikolojik", "acil", "uzman"]
   },
   {
     "id": 32,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık konusunda sistemli yaklaşım benimsiyor. LGS stratejilerini geliştirme yeteneği gelişmiş, zaman yönetimi konusunda uzmanlaşmış ve gelecek planlamasında gerçekçi hedefler koyarak disiplinli çalışma yöntemi geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["sistemli çalışma", "LGS stratejisi", "zaman yönetimi", "hedef belirleme"]
+    "content": "[Öğrenci Adı], ciddi akademik hazırlık sürecinde maalesef **tamamen çöküş** yaşıyor. LGS stresi panik bozukluğu seviyesine ulaşmış, disiplinli çalışma tamamen imkansız hale gelmiş ve gelecek kaygısı **varoluşsal kriz** yaratmış. Bu durum, onun genel işlevselliğini ciddi şekilde etkiliyor. **Çok yönlü acil müdahale** gereksinimi var. Durumu ciddiyetle ele almalıyız.",
+    "tone": "olumsuz",
+    "etiketler": ["çöküş", "panik", "imkansız", "kriz", "varoluşsal", "ciddi", "akademik", "müdahale", "acil", "psikolojik"]
   },
   {
     "id": 33,
-    "content": "[Öğrenci Adı], LGS konularında anlamadığı yerleri sormaktan çekindiği gözlemlenmiştir. Soru sormak, öğrenme sürecinin önemli bir parçasıdır ve LGS başarısı için kritik öneme sahiptir. İkinci dönemde daha cesur olması ve aklına takılan her şeyi sorması, öğrenme sürecini hızlandıracaktır.",
-    "tone": "notr",
-    "etiketler": ["Soru Sormaktan Çekinen, LGS'yi Etkileyen", "kaygı yönetimi", "stres kontrolü", "dayanıklılık", "performans"]
+    "content": "[Öğrenci Adı], gelecek kaygısı ve LGS stresi açısından **kritik ruhsal durumda** bulunuyor. Akademik işlevsellik tamamen çökmüş, disiplinli çalışma kapasitesi yok olmuş ve şiddetli kaygı belirtileri tüm yaşam alanlarını ele geçirmiş. Bu durum, onun hem eğitimini hem de genel yaşam kalitesini olumsuz etkiliyor. **Acil psikolojik müdahale** gerekmektedir. Lütfen okulumuzla iletişime geçin.",
+    "tone": "olumsuz",
+    "etiketler": ["kritik", "ruhsal", "çöküş", "kaygı", "şiddetli", "işlevsiz", "kapasite", "olumsuz", "psikolojik", "acil"]
   },
   {
     "id": 34,
-    "content": "[Öğrenci Adı] disiplinli çalışma konusunda kendini düzenleme becerisinde ustalaşma sergiliyor. Dikkat dağıtıcı unsurları yönetme becerilerinde uzmanlaşmış, odaklanma sürdürme stratejileri geliştirmiş ve uzun vadeli hedef bağlılığı göstererek akademik mükemmelliğe odaklanmış.",
-    "tone": "olumlu",
-    "etiketler": ["öz disiplin", "odaklanma", "dikkat kontrolü", "hedef odaklılık"]
+    "content": "[Öğrenci Adı], LGS stresi, akademik hazırlık ve gelecek kaygısı açısından **telafisi zor hasarlar** almış. Disiplinli çalışma becerileri tamamen bozulmuş, zihinsel sağlık kritik şekilde zarar görmüş ve akademik yol tamamen raydan çıkmış durumda. Bu durum, onun geleceğini ciddi şekilde tehlikeye atmaktadır. Acil ve kapsamlı bir psikolojik destek planına ihtiyacımız var.",
+    "tone": "olumsuz",
+    "etiketler": ["hasar", "telafisi zor", "bozulmuş", "kritik", "zarar", "akademik", "psikolojik", "destek", "acil", "tehlikeli"]
   },
   {
     "id": 35,
-    "content": "[Öğrenci Adı], LGS'de karşılaştığı problemlere yaratıcı ve özgün çözümler getirme becerisiyle öne çıkmaktadır. Bu yeteneği, zorlu sorular karşısında avantaj sağlamaktadır. İkinci dönemde bu yaratıcılığını daha karmaşık problemlere uygulaması ve farklı çözüm yolları keşfetmesi, LGS başarısını artıracaktır.",
-    "tone": "olumlu",
-    "etiketler": ["Yaratıcı ve Özgün Düşünme Becerisi Gelişmiş", "dengeli yaklaşım", "zihinsel sağlık", "sürdürülebilir çalışma", "sağlıklı rekabet"]
-  },
-  {
-    "id": 36,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde liderlik özellikleri gösteriyor. Çalışma grubu koordinasyonu yetenekleri güçlü, akran destek sistemleri oluşturmada başarılı ve işbirlikçi öğrenme yaklaşımları geliştirerek akademik topluluk oluşturuyor.",
-    "tone": "olumlu",
-    "etiketler": ["liderlik", "grup çalışması", "işbirliği", "akran desteği"]
-  },
-  {
-    "id": 37,
-    "content": "[Öğrenci Adı], LGS hazırlığı için uygun ders çalışma ortamı konusunda desteğe ihtiyaç duymaktadır. Düzenli ve sessiz bir çalışma alanı, odaklanma ve öğrenme verimliliği için önemlidir. İkinci dönemde bu konuda aile desteğiyle uygun bir ortam oluşturulması, akademik başarısını olumlu etkileyecektir.",
-    "tone": "notr",
-    "etiketler": ["Ders Çalışma Ortamı Desteği İhtiyacı", "gelecek planlama", "kariyer odaklı", "stratejik düşünme", "proaktif yaklaşım"]
-  },
-  {
-    "id": 38,
-    "content": "[Öğrenci Adı] disiplinli çalışma konusunda yenilikçilik ve verimlilik entegrasyonu başarılı. Akıllı çalışma teknikleri geliştirmiş, verimlilik artırma konusunda yaratıcı, etkili öğrenme stratejileri kullanıyor ve akademik performans artırımı sağlıyor.",
-    "tone": "olumlu",
-    "etiketler": ["verimli çalışma", "akıllı teknikler", "yaratıcılık", "performans artışı"]
-  },
-  {
-    "id": 39,
-    "content": "[Öğrenci Adı], LGS konularına hakim olmasına rağmen soru tiplerine ve sınav stratejilerine yeterince hakim olmadığı gözlemlenmiştir. İkinci dönemde deneme sınavlarına ağırlık vermesi, soru çözme tekniklerini geliştirmesi ve zaman yönetimi stratejileri oluşturması, LGS başarısını artıracaktır.",
-    "tone": "notr",
-    "etiketler": ["LGS Stratejisi Eksikliği", "büyüme odaklı", "meydan okuma", "zorluk yönetimi", "dönüşüm"]
-  },
-  {
-    "id": 40,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık sürecinde duygusal zeka uygulama konusunda mükemmel. Kendini tanıma ve kendini yönetme dengeleme yeteneği güçlü, sosyal farkındalığı korumada başarılı ve ilişki yönetimi becerilerini akademik ortamda etkili kullanıyor.",
-    "tone": "olumlu",
-    "etiketler": ["duygusal zeka", "öz farkındalık", "sosyal beceri", "ilişki yönetimi"]
-  },
-  {
-    "id": 41,
-    "content": "[Öğrenci Adı], teknolojiye olan ilgisiyle dikkat çekmektedir. Bu ilgiyi LGS hazırlık sürecinde verimli kullanması önemlidir. İkinci dönemde teknolojiyi akademik kaynaklar ve online öğrenme platformları için daha bilinçli kullanmasını bekliyoruz.",
-    "tone": "olumlu",
-    "etiketler": ["Teknolojiye Aşırı İlgi Duyan", "öğrenme stratejisi", "bilişsel yönetim", "etkililik", "izleme sistemi"]
-  },
-  {
-    "id": 42,
-    "content": "[Öğrenci Adı] disiplinli çalışma konusunda sürdürülebilir mükemmellik yaklaşımı benimsiyor. İş-yaşam dengesi koruma becerilerinde başarılı, tükenmişlik önleme stratejileri etkili ve uzun vadeli akademik sürdürülebilirlik sağlayarak sağlıklı başarı zihniyeti geliştirdi.",
-    "tone": "olumlu",
-    "etiketler": ["sürdürülebilirlik", "denge", "tükenmişlik önleme", "sağlıklı başarı"]
-  },
-  {
-    "id": 43,
-    "content": "[Öğrenci Adı], sanatsal alanda yetenekli olmasına rağmen LGS sürecinin getirdiği stres nedeniyle bu yönünü ihmal etmiştir. Sanatsal faaliyetler, stres yönetimi için faydalı olabilir. İkinci dönemde LGS yoğunluğu arasında sanata da zaman ayırmasını teşvik ediyoruz.",
-    "tone": "notr",
-    "etiketler": ["Sanatsal Yönü Güçlü, LGS Stresi", "uyum yeteneği", "stres yönetimi", "baskı kontrolü", "fırsat yaratma"]
-  },
-  {
-    "id": 44,
-    "content": "[Öğrenci Adı] ciddi akademik hazırlık ve gelecek planlama konularında entegre ustalaşma sergiliyor. Kapsamlı hazırlık stratejileri gelişmiş, çok boyutlu hedef başarma yaklaşımı benimsiyor ve bütüncül başarı tanımı oluşturmuş.",
-    "tone": "olumlu",
-    "etiketler": ["bütüncül yaklaşım", "kapsamlı hazırlık", "çok boyutlu hedef", "entegre başarı"]
-  },
-  {
-    "id": 45,
-    "content": "[Öğrenci Adı], yabancı dil öğrenmeye karşı meraklı ve açık bir tutum sergilemektedir. Bu özelliği, LGS sonrası lise hayatında önemli bir avantaj sağlayacaktır. İkinci dönemde yabancı dil derslerine ağırlık vermesini ve kelime bilgisini artırmasını bekliyoruz.",
-    "tone": "olumlu",
-    "etiketler": ["Yabancı Dil Öğrenmeye Açık", "örnek davranış", "baskı altında başarı", "liderlik", "rol model"]
+    "content": "[Öğrenci Adı], LGS stresi ve ciddi akademik hazırlık konularında **kritik acil durumda** bulunuyor. Disiplinli çalışma kapasitesi tamamen kaybolmuş, gelecek kaygısı **şiddetli zihinsel sağlık krizi** yaratmış ve acil ruhsal müdahale gerektiren durumda bulunuyor. Bu durumun ciddiyetinin farkında olmanızı ve en kısa sürede okulumuzla iletişime geçmenizi önemle rica ediyoruz.",
+    "tone": "olumsuz",
+    "etiketler": ["kritik", "acil", "kaybolmuş", "kaygı", "şiddetli", "kriz", "ruhsal", "müdahale", "ciddi", "tehlikeli"]
   }
 ]

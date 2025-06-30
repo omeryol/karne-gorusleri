@@ -1,272 +1,242 @@
 [
   {
     "id": 1,
-    "content": "[Öğrenci Adı] ikinci dönemde özgüveni arttı ve daha cesur davranmaya başladı. Derslerde daha çok söz alıyor ve fikirlerini paylaşıyor. Sorumluluk almayı seviyor ve arkadaşlık ilişkileri güçlendi.",
+    "content": "Değerli velimiz, [Öğrenci Adı] bu dönemi akademik anlamda üstün bir başarıyla tamamlayarak yıl boyunca gösterdiği **istikrarlı** gelişimini sürdürdü. Derslere olan **aktif katılımı** ve sorumluluk bilinci gerçekten takdire şayan. Öğrenmeye olan isteği ve düzenli çalışma alışkanlığı, onu sınıfımızın **örnek** öğrencilerinden biri yapıyor. Yaz tatilinde ilgi alanlarına yönelik okumalar yapmasını, yeni beceriler edinmesini ve 6. sınıfa dinlenmiş ve hazır bir şekilde başlamasını tavsiye ederiz. Onunla gurur duyuyoruz.",
     "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["başarılı", "istikrarlı", "sorumlu", "aktif", "örnek", "istekli", "düzenli", "azim", "gelişen", "gurur verici"]
   },
   {
     "id": 2,
-    "content": "[Öğrenci Adı] bu dönem daha kararlı ve düzenli çalışmaya başladı. Ödevlerini zamanında yapıyor ve ders araç gereçlerini unutmuyor. Arkadaşlarına yardım etmeyi seviyor ve sınıf lideri olmaya başladı.",
+    "content": "Sevgili velimiz, [Öğrenci Adı]'nın özgüveni ikinci dönemde gözle görülür şekilde arttı ve artık daha **cesur** davranıyor. Derslerde daha çok söz alıyor, fikirlerini çekinmeden paylaşıyor ve sorumluluk almaktan keyif duyuyor. Özellikle grup çalışmalarındaki **liderlik** potansiyeli belirginleşti. Arkadaşlık ilişkileri de bu dönemde oldukça **güçlendi**. Onun bu olumlu dönüşümü, sınıf ortamımıza büyük bir enerji katıyor.",
     "tone": "olumlu",
-    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["özgüvenli", "cesur", "lider", "sorumlu", "güçlü", "iletişimci", "girişken", "paylaşımcı", "dönüşen", "pozitif"]
   },
   {
     "id": 3,
-    "content": "[Öğrenci Adı] artık kendine güveniyor ve yeni şeyler denemeye cesaret ediyor. Matematik problemlerini çözmeyi seviyor ve başarılı oluyor. Arkadaşlarıyla güzel projeler yapıyor.",
-    "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı], zihinsel potansiyeline rağmen zaman zaman dikkatini toplama konusunda hala desteğe ihtiyaç duymaktadır. Zaman zaman **dalgın** halleri derse odaklanmasını zorlaştırabiliyor. Yaz tatilinde dikkat ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları, enstrüman çalma gibi) yönelmesi çok faydalı olacaktır. Düzenli uyku ve beslenmeye dikkat etmesi de zihinsel gelişimini destekleyecektir. Potansiyelini tam kullanması için çabalarını sürdürüyoruz.",
+    "tone": "nötr",
+    "etiketler": ["potansiyelli", "dikkat", "odaklanma", "dalgın", "destek", "ihtiyaç", "gelişmesi", "zorlanan", "uyku", "beslenme"]
   },
   {
     "id": 4,
-    "content": "[Öğrenci Adı] bu dönem liderlik özelliklerini göstermeye başladı. Grup çalışmalarında arkadaşlarını yönlendiriyor ve herkesi dahil etmeye çalışıyor. Derslerde başarılı ve istikrarlı.",
-    "tone": "olumlu",
-    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
+    "content": "Sayın velimiz, [Öğrenci Adı] sosyal becerilerini yıl boyunca korumuş, **arkadaş** canlısı ve uyumlu yapısıyla öne çıkmıştır. Akademik alandaki temel eksikliklerini gidermek için gösterdiği **çaba** takdire şayandır. Özellikle okuma ve temel matematik becerilerini yaz tatilinde de güçlendirmeye devam etmesi, 6. sınıfa daha hazırlıklı başlamasını sağlayacaktır. Sosyal yönünü koruyarak akademik gelişimine odaklanması, onun için çok önemli bir denge unsuru olacaktır.",
+    "tone": "nötr",
+    "etiketler": ["sosyal", "arkadaş", "uyumlu", "çaba", "okuma", "matematik", "desteğe", "ihtiyaç", "denge", "gelişim"]
   },
   {
     "id": 5,
-    "content": "[Öğrenci Adı] arkadaşlarıyla çok güzel dostluklar kurdu. Paylaşmayı öğrendi ve herkesle adil oynamaya özen gösteriyor. Derslerde düzenli çalışıyor ve notları yükseldi.",
-    "tone": "olumlu",
-    "etiketler": ["arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi", "sorumluluk alma"]
+    "content": "Değerli velimiz, [Öğrenci Adı] akademik başarısını yıl boyunca istikrarlı bir şekilde sürdürmüştür. Ancak, özgüvenini artırarak sınıf içi etkinliklere daha fazla katılması, tüm potansiyelini tam olarak ortaya koymasını sağlayacaktır. Yaz tatilinde sosyal aktivitelere katılması ve kendini **ifade** etme becerilerini geliştirecek fırsatlar araması, 6. sınıfa daha **özgüvenli** başlamasına yardımcı olacaktır. Bilgi birikimi çok iyi.",
+    "tone": "nötr",
+    "etiketler": ["başarılı", "özgüven", "katılım", "potansiyel", "sosyal", "ifade", "çekingen", "gelişmesi", "ihtiyaç", "teşvik"]
   },
   {
     "id": 6,
-    "content": "[Öğrenci Adı] fen bilgisi dersinde deney yapmayı çok seviyor ve meraklı sorular soruyor. Arkadaşlarıyla birlikte araştırma yapmayı öğrendi. Özgüveni her geçen gün artıyor.",
-    "tone": "olumlu",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili **faydalı** aktivitelere yönelmesi, 6. sınıfa daha **bilinçli** ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
+    "tone": "nötr",
+    "etiketler": ["teknoloji", "ilgi", "faydalı", "bilinçli", "denge", "potansiyel", "gelişimi", "yönlendirme", "merak", "kullanım"]
   },
   {
     "id": 7,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersinde tarih konularını çok merak ediyor. Araştırma ödevlerini severek yapıyor ve arkadaşlarıyla bilgilerini paylaşıyor. Sorumluluk sahibi davranıyor.",
+    "content": "Sayın velimiz, [Öğrenci Adı], yıl boyunca duygusal hassasiyetlerini yönetme konusunda önemli adımlar atmıştır. Akademik başarısını korurken, duygusal dengeyi sağlamayı öğrenmesi gerçekten **takdire şayan**. Yaz tatilinde hobilerine yönelerek ve dinlenerek duygusal sağlığını desteklemesi, 6. sınıfa daha **güçlü** ve hazır başlamasını sağlayacaktır. Kendi duygularını tanıma ve yönetme becerisi her geçen gün gelişiyor.",
     "tone": "olumlu",
-    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["duygusal", "dengeli", "hassas", "yönetim", "takdire şayan", "güçlü", "hobiler", "dinlenmiş", "gelişimi", "istekli"]
   },
   {
     "id": 8,
-    "content": "[Öğrenci Adı] Türkçe dersinde güzel hikayeler yazıyor ve kitap okumayı seviyor. Arkadaşlarına hikayeler anlatıyor ve onları da okumaya teşvik ediyor. Kendine güveni tam.",
+    "content": "Değerli velimiz, [Öğrenci Adı], yıl boyunca grup çalışmalarına katılımda gözle görülür bir gelişim göstermiştir. Yaz tatilinde takım sporlarına veya grup aktivitelerine katılması, **işbirliği** ve **liderlik** becerilerini daha da geliştirmesine yardımcı olacaktır. 6. sınıfta daha **aktif** bir takım oyuncusu olmasını bekliyoruz. Fikirlerini daha rahat ifade etmeye başladı.",
     "tone": "olumlu",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["grup", "işbirliği", "liderlik", "aktif", "katılımcı", "gelişim", "takım", "sosyal", "teşvik", "sorumlu"]
   },
   {
     "id": 9,
-    "content": "[Öğrenci Adı] matematik dersinde zorlu problemleri çözmeye cesaret ediyor. Arkadaşlarına matematik konularında yardım ediyor. Sorumluluk almayı seviyor ve güvenilir biri.",
+    "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda önemli bir gelişim göstermiştir. Davranışlarındaki **düzen** ve **sorumluluk** bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. sınıfa daha **organize** bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı.",
     "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["kural", "düzenli", "sorumlu", "disiplinli", "organize", "alışkanlık", "gelişim", "bilinçli", "tutarlı", "başarı"]
   },
   {
     "id": 10,
-    "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapıyor ve eserlerini arkadaşlarıyla paylaşıyor. Kendine güveni arttı ve yeni teknikler denemeye başladı.",
+    "content": "Sayın velimiz, [Öğrenci Adı]'nın yıl boyunca beslenme alışkanlıklarını düzenleme konusunda **çaba** gösterdiğini memnuniyetle gözlemledik. Yaz tatilinde sağlıklı ve dengeli beslenmeye devam etmesi, düzenli fiziksel aktivite yapması, 6. sınıfa daha **enerjik** ve sağlıklı başlamasını sağlayacaktır. Bu konudaki bilinçlenmesi ve özverisi takdire şayan.",
     "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["beslenme", "düzenli", "sağlıklı", "enerjik", "çaba", "bilinçli", "fiziksel", "gelişim", "istekli", "özverili"]
   },
   {
     "id": 11,
-    "content": "[Öğrenci Adı] müzik dersinde güzel sesiyle arkadaşlarına öncülük ediyor. Koro çalışmalarında sorumluluk alıyor ve müzik dinlemeyi seviyor. Özgüveni çok gelişti.",
-    "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın ortaokul hayatına uyum sürecinde maalesef **ciddi zorluklar** yaşadığını üzülerek belirtmek isteriz. Sınıf içinde sıkça huzursuzluk çıkarıyor, arkadaşlarıyla sürekli tartışıyor ve derslere karşı belirgin bir **ilgisizlik** sergiliyor. Ödevlerini düzenli olarak yapmaması da akademik gelişimini kayda değer ölçüde olumsuz etkiliyor. Bu durumun üstesinden gelebilmek ve [Öğrenci Adı]'nı okul ortamına kazandırabilmek adına acil rehberlik ve aile desteğine ihtiyacımız var. İşbirliğimiz hayati önem taşımakta.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "huzursuz", "tartışma", "ilgisiz", "sorunlu", "reddeden", "kaçınan", "başarısız", "destek", "acil"]
   },
   {
     "id": 12,
-    "content": "[Öğrenci Adı] beden eğitimi dersinde takım oyunlarında liderlik yapıyor. Fair play kurallarına uyuyor ve arkadaşlarını destekliyor. Spor yapmaya olan ilgisi arttı.",
-    "tone": "olumlu",
-    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
+    "content": "Sevgili velimiz, [Öğrenci Adı] temel akademik becerilerde maalesef çok **geride** kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde **ciddi sıkıntıları** var. Derslerde dikkatini toplayamıyor, sürekli başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir **direnç** sergiliyor. Bu durum, akademik ilerlemesini tamamen durduruyor. Acilen özel bir destek programına, yoğun bireysel çalışmaya ve profesyonel rehberlik desteğine ihtiyacımız var. İşbirliğiniz olmadan ilerleme kaydetmek çok zor.",
+    "tone": "olumsuz",
+    "etiketler": ["geride", "sıkıntı", "yapamıyor", "dinlemiyor", "engelleyen", "temel", "akademik", "başarısız", "yoğun", "destek"]
   },
   {
     "id": 13,
-    "content": "[Öğrenci Adı] İngilizce dersinde yeni kelimeler öğrenmeye hevesli. Telaffuz çalışmalarında cesur davranıyor ve arkadaşlarıyla İngilizce konuşmaya çalışıyor.",
-    "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı] sınıf kurallarına hiç **uymuyor** ve bu konuda ısrarcı bir tavır sergiliyor. Öğretmenlere karşı gelmeye devam ediyor, dersleri sürekli bölüyor ve arkadaşlarını olumsuz etkiliyor. Bu **inatçı** ve **saygısız** davranışlar sınıf düzenini ciddi şekilde bozmakta ve diğer öğrencilerin öğrenme hakkını engellemektedir. Davranışlarında acil ve radikal bir değişime ihtiyacımız var. Bu noktada aile desteğiniz ve kararlı tutumunuz kritik önem taşımaktadır. Acilen bu durumu ele almalıyız.",
+    "tone": "olumsuz",
+    "etiketler": ["kuralsız", "inatçı", "saygısız", "bozan", "engelleyen", "olumsuz", "dirençli", "uyumsuz", "davranış", "acil"]
   },
   {
     "id": 14,
-    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar programlarını öğreniyor ve arkadaşlarına yardım ediyor. Sorumluluk sahibi davranıyor ve yaratıcı projeler yapıyor.",
-    "tone": "olumlu",
-    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite"]
+    "content": "Sayın velimiz, [Öğrenci Adı] sosyal uyum konusunda maalesef **problemli** bir profil çiziyor. Arkadaşlarına fiziksel veya sözlü olarak **zarar** veriyor, sürekli kavga çıkarıyor ve kimseyle iletişim kurmak **istemiyor**. Teneffüslerde yalnız kalmayı tercih ediyor veya sorun yaratıyor. Bu durum, akran ilişkilerini ciddi şekilde **zedeliyor** ve onun sosyal gelişimini engelliyor. Sosyal beceri gelişimi için acil ve profesyonel desteğe ihtiyacımız var. Bu konudaki işbirliğimiz çok değerli olacaktır.",
+    "tone": "olumsuz",
+    "etiketler": ["uyumsuz", "agresif", "kavga", "zarar", "yalnız", "reddeden", "problemli", "zedelenmiş", "sosyal", "acil"]
   },
   {
     "id": 15,
-    "content": "[Öğrenci Adı] bu dönem hem derslerde başarılı hem de arkadaşlarıyla güzel ilişkiler kurmayı başardı. Özgüveni gelişti ve sorumluluk almaya başladı. Çok güzel bir gelişim gösteriyor.",
-    "tone": "olumlu",
-    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Değerli velimiz, [Öğrenci Adı] ev ödevlerini yapma ve teslim etme konusunda ciddi **düzensizlikler** yaşamaktadır. Ödevlerini ya hiç yapmıyor ya da eksik getirmektedir. Bu durum, öğrenilen konuları pekiştirmesini engellemekte ve akademik başarısını doğrudan olumsuz etkilemektedir. Düzenli çalışma alışkanlığı edinebilmesi için acil ve kararlı bir aile takibine, ayrıca okuldan da özel bir desteğe ihtiyacımız var. Disiplinli bir rutin oluşturmak hayati önem taşıyor.",
+    "tone": "olumsuz",
+    "etiketler": ["düzensiz", "eksik", "yapmıyor", "sorumsuz", "pekişmeyen", "engellenen", "olumsuz", "takip", "kararlı", "acil"]
   },
   {
     "id": 16,
-    "content": "[Öğrenci Adı] özgüven konusunda bazen kararsız kalıyor. Derslerde başarılı olduğu zamanlar kendine güveniyor ama bazen çekiniyor. Arkadaşlık ilişkileri normal düzeyde.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Sevgili velimiz, [Öğrenci Adı], yıl boyunca sergilediği **yaratıcılık** ve meraklı yapısıyla dikkat çekti. Akademik gelişimini sürdürürken, özgün fikirleriyle sınıfımıza renk kattı. Yaz tatilinde sanatsal veya bilimsel ilgi alanlarına yönelik projelere yönelmesi, hayal gücünü beslemesi ve 6. sınıfa yeni keşiflerle başlaması için harika bir fırsat. Onun bu **meraklı** ve üretken yönü bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["yaratıcı", "meraklı", "gelişim", "özgün", "renk katan", "ilham verici", "üretken", "potansiyelli", "keşif", "gurur"]
   },
   {
     "id": 17,
-    "content": "[Öğrenci Adı] sorumluluk alma konusunda istikrarlı değil. Bazen ödevlerini düzenli yapıyor bazen unutuyor. Arkadaşlarıyla iyi geçiniyor ama liderlik yapmaktan kaçınıyor.",
-    "tone": "notr",
-    "etiketler": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca okuma becerilerinde gözle görülür bir **gelişim** göstermiştir. İlk dönemdeki eksiklerini gidermek için gösterdiği çaba takdire şayandır. Ancak bu alandaki becerilerini tamamen pekiştirmek için yaz tatilinde düzenli okumaya devam etmesi önemlidir. Her gün belirli bir süre kitap okumak, okuma hızını ve anlama becerisini artırarak 6. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Okuma sevgisi için teşvik edin.",
+    "tone": "nötr",
+    "etiketler": ["okuma", "gelişim", "hız", "anlama", "çaba", "eksiklik", "pekiştirme", "hazırlıklı", "ihtiyaç", "süreklilik"]
   },
   {
     "id": 18,
-    "content": "[Öğrenci Adı] arkadaşlık ilişkilerinde seçici davranıyor. Sadece belirli arkadaşlarıyla oynuyor ve diğerlerini grubuna almak istemiyor. Derslerde ortalama başarı gösteriyor.",
-    "tone": "notr",
-    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite", "sorumluluk alma"]
+    "content": "Sayın velimiz, [Öğrenci Adı], yıl boyunca sözlü ifade becerilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde ailesiyle veya arkadaşlarıyla sohbet ederek, basit sunum provaları yaparak veya hikaye anlatarak bu becerilerini pekiştirmesi, 6. sınıfa daha **güçlü** bir **iletişimle** başlamasını sağlayacaktır. Kendini daha rahat ifade etmesi için teşvik edilmeli. Onun potansiyeli çok yüksek.",
+    "tone": "nötr",
+    "etiketler": ["sözlü", "ifade", "gelişim", "çaba", "iletişim", "güçlü", "pratik", "özgüven", "ihtiyaç", "teşvik"]
   },
   {
     "id": 19,
-    "content": "[Öğrenci Adı] akademik konularda kararsız bir performans sergiliyor. Bazı derslerde başarılı, bazılarında zorlanıyor. Özgüveni dalgalı ve arkadaşlarıyla ilişkileri değişken.",
-    "tone": "notr",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Değerli velimiz, [Öğrenci Adı], yıl boyunca ders araç gereçlerini düzenli kullanma konusunda gözle görülür bir **gelişim** göstermiştir. Eskisine nazaran daha **organize** olduğunu görüyoruz. Yaz tatilinde eşyalarını düzenli tutma alışkanlığını pekiştirmesi ve sorumluluklarını zamanında yerine getirmesi, 6. sınıfa daha düzenli bir başlangıç yapmasını sağlayacaktır. Düzenin, başarısının anahtarı olduğunu unutmamalıyız.",
+    "tone": "olumlu",
+    "etiketler": ["düzenli", "sorumlu", "gelişim", "organize", "alışkanlık", "pekiştirme", "dikkatli", "başarı", "istekli", "ilerleme"]
   },
   {
     "id": 20,
-    "content": "[Öğrenci Adı] fen bilgisi dersinde deney yapmaktan korkuyor. Arkadaşlarıyla birlikte çalışmayı seviyor ama liderlik yapmaktan çekiniyor. Özgüven eksikliği yaşıyor.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "content": "Sevgili velimiz, [Öğrenci Adı], yıl boyunca sınavlara hazırlık konusunda gösterdiği **çaba** ve **gelişim** takdire şayandır. Yaz tatilinde düzenli tekrar yapması ve eksiklerini gidermeye yönelik çalışmalar yapması, 6. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Planlı çalışmanın, başarısının anahtarı olduğunu kavradı. Ona güveniyoruz.",
+    "tone": "olumlu",
+    "etiketler": ["sınav", "hazırlık", "gelişim", "çaba", "düzenli", "planlı", "başarı", "anahtar", "istekli", "azim"]
   },
   {
     "id": 21,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersinde tarih konularını anlamakta zorlanıyor. Araştırma ödevlerini yapmayı sevmiyor ve arkadaşlarından yardım istemekten çekiniyor.",
-    "tone": "notr",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca akran ilişkilerinde **duyarlılığını** korumuştur. Arkadaşlarına karşı empati becerisi güçlüdür. Yaz tatilinde sosyal becerilerini geliştirecek ve empati yeteneğini pekiştirecek aktivitelere katılması, 6. sınıfa daha **bilinçli** bir birey olarak başlamasını sağlayacaktır. Onun **yardımsever** kişiliği bizleri gururlandırıyor.",
+    "tone": "olumlu",
+    "etiketler": ["duyarlı", "yardımsever", "empati", "sosyal", "bilinçli", "gelişim", "arkadaş", "pozitif", "örnek", "gurur verici"]
   },
   {
     "id": 22,
-    "content": "[Öğrenci Adı] Türkçe dersinde yazma çalışmalarında zorlanıyor. Hikaye yazmayı sevmiyor ve arkadaşlarının yazdıklarını beğenmediğini söylüyor. Kendine güveni az.",
-    "tone": "notr",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Sayın velimiz, [Öğrenci Adı], yıl boyunca çözüm odaklı ve **pratik** zekasını sergilemiştir. Karşılaştığı zorluklarda alternatif yollar bulma yeteneği takdire şayandır. Yaz tatilinde zeka oyunları oynaması, bulmacalar çözmesi ve mantıksal düşünme becerilerini geliştirecek aktivitelere yönelmesi, 6. sınıfa daha **keskin** bir zihinle başlamasını sağlayacaktır. Onun bu özelliği çok değerli.",
+    "tone": "olumlu",
+    "etiketler": ["çözüm odaklı", "pratik", "zeka", "mantık", "keskin", "yetenekli", "düşünen", "oyuncu", "analitik", "değerli"]
   },
   {
     "id": 23,
-    "content": "[Öğrenci Adı] matematik dersinde zorlu problemler karşısında pes ediyor. Arkadaşlarından yardım istemek yerine sessiz kalıyor. Özgüven eksikliği belirgin.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Değerli velimiz, [Öğrenci Adı], yıl boyunca dersi dinleme becerilerini geliştirmeye **çaba** göstermiştir. Yaz tatilinde aktif dinleme egzersizleri yapması, podcast dinlemesi ve okuduğunu anlama becerilerini pekiştirmesi, 6. sınıfa daha **dikkatli** bir başlangıç yapmasını sağlayacaktır. Ona bu konuda destek olmaya devam etmeliyiz.",
+    "tone": "nötr",
+    "etiketler": ["dinleme", "çaba", "gelişim", "dikkatli", "pekiştirme", "anlama", "ihtiyaç", "desteğe", "istekli", "süreklilik"]
   },
   {
     "id": 24,
-    "content": "[Öğrenci Adı] sanat derslerinde yaratıcı çalışmalar yapmaktan korkuyor. Arkadaşlarının eserlerini beğeniyor ama kendisininkileri beğenmiyor. Özgüven problemi yaşıyor.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "content": "Sevgili velimiz, [Öğrenci Adı], yıl boyunca sınıf içi etkinliklere katılım konusunda **gelişim** göstermiştir. Yaz tatilinde sosyal kulüplere veya takım sporlarına katılması, yeni arkadaşlar edinmesi ve özgüvenini artırması, 6. sınıfa daha **katılımcı** bir ruhla başlamasını sağlayacaktır. Onun sosyal çevresi genişliyor.",
+    "tone": "olumlu",
+    "etiketler": ["katılım", "gelişim", "sosyal", "özgüven", "arkadaş", "katılımcı", "istekli", "işbirlikçi", "pozitif", "aktif"]
   },
   {
     "id": 25,
-    "content": "[Öğrenci Adı] müzik dersinde şarkı söylemekten utanıyor. Arkadaşlarının önünde performans göstermek istemiyor. Sesinin güzel olmadığını düşünüyor.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca ev ödevlerini yapma konusunda gözle görülür bir **gelişim** göstermiştir. Yaz tatilinde günlük bir çalışma rutini oluşturarak ve sorumluluklarını zamanında yerine getirerek **disiplin** becerilerini pekiştirmesi, 6. sınıfa daha **düzenli** bir başlangıç yapmasını sağlayacaktır. Bu azmi takdire şayan.",
+    "tone": "olumlu",
+    "etiketler": ["ödev", "gelişim", "disiplin", "düzenli", "sorumlu", "alışkanlık", "pekiştirme", "planlı", "çalışkan", "azim"]
   },
   {
     "id": 26,
-    "content": "[Öğrenci Adı] beden eğitimi dersinde takım oyunlarında pasif kalıyor. Arkadaşlarının kendisini seçmeyeceğini düşünüyor. Spor yapmaya ilgisi az.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "content": "Sayın velimiz, [Öğrenci Adı], yıl boyunca sözel ifade becerilerini üst düzeyde sergilemiştir. Fikirlerini ve düşüncelerini açıkça dile getirme yeteneği takdire şayandır. Yaz tatilinde hikaye anlatma, tiyatro veya münazara kulüplerine katılması gibi aktivitelerle bu becerilerini daha da geliştirmesi, 6. sınıfa daha **güçlü** bir **iletişimle** başlamasını sağlayacaktır. O tam bir **konuşkan** lider.",
+    "tone": "olumlu",
+    "etiketler": ["sözel", "ifade", "iletişim", "güçlü", "konuşkan", "yetenekli", "sanatsal", "lider", "aktivite", "gelişim"]
   },
   {
     "id": 27,
-    "content": "[Öğrenci Adı] İngilizce dersinde telaffuz yapmaktan utanıyor. Arkadaşlarının gülmesinden korkuyor. Yeni kelimeler öğrenmek istiyor ama cesaret edemiyor.",
-    "tone": "notr",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "content": "Değerli velimiz, [Öğrenci Adı], yıl boyunca öz kontrol becerilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde yoga, meditasyon veya nefes egzersizleri gibi sakinleşme teknikleri öğrenmesi, 6. sınıfa daha **dengeli** ve **bilinçli** bir birey olarak başlamasını sağlayacaktır. Duygularını yönetme konusunda ilerleme kaydetti.",
+    "tone": "nötr",
+    "etiketler": ["öz kontrol", "dengeli", "bilinçli", "çaba", "sakinleşme", "yönetim", "duygusal", "gelişim", "ihtiyaç", "teknik"]
   },
   {
     "id": 28,
-    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayar kullanımında arkadaşlarından geri kalıyor. Yeni programları öğrenmekte zorlanıyor ve yardım istemekten çekiniyor.",
-    "tone": "notr",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "content": "Sevgili velimiz, [Öğrenci Adı], yıl boyunca okuma ve yazma becerilerini geliştirmek konusunda önemli adımlar atmıştır. Yaz tatilinde bol bol kitap okuması, günlük tutması ve yazma pratiği yapması, 6. sınıfa daha **güçlü** bir **okuryazarlıkla** başlamasını sağlayacaktır. Bu alandaki gayreti takdire şayan.",
+    "tone": "olumlu",
+    "etiketler": ["okuma", "yazma", "gelişim", "güçlü", "okuryazarlık", "pratik", "kitap", "gayretli", "istekli", "ilerleme"]
   },
   {
     "id": 29,
-    "content": "[Öğrenci Adı] sorumluluk almaktan kaçınıyor ve sürekli arkadaşlarının arkasına saklanıyor. Özgüven eksikliği belirgin ve derslerde pasif kalıyor.",
-    "tone": "notr",
-    "etiketler": ["sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca sınav stratejilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde deneme sınavları çözmeye devam etmesi, farklı soru tiplerini incelemesi ve zaman yönetimi becerilerini pekiştirmesi, 7. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Bu alandaki gayreti devam etmeli.",
+    "tone": "nötr",
+    "etiketler": ["sınav", "strateji", "gelişim", "çaba", "deneme", "zaman", "yönetim", "pekiştirme", "hazırlıklı", "ihtiyaç"]
   },
   {
     "id": 30,
-    "content": "[Öğrenci Adı] bu dönem arkadaşlık ilişkilerinde ve derslerde istikrarsız bir performans gösteriyor. Özgüven eksikliği ve sorumluluk almama problemi devam ediyor.",
-    "tone": "notr",
-    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "akademik stabilite", "sorumluluk alma"]
+    "content": "Sayın velimiz, [Öğrenci Adı], yıl boyunca fiziksel aktiviteye katılım konusunda **gelişim** göstermiştir. Yaz tatilinde düzenli spor yapması, dışarıda vakit geçirmesi ve sağlıklı yaşam alışkanlıklarını sürdürmesi, 6. sınıfa daha **enerjik** ve **sağlıklı** başlamasını sağlayacaktır. Onun enerjisi hepimize iyi gelecek.",
+    "tone": "olumlu",
+    "etiketler": ["fiziksel", "aktivite", "gelişim", "enerjik", "sağlıklı", "spor", "düzenli", "alışkanlık", "pozitif", "güçlü"]
   },
   {
     "id": 31,
-    "content": "[Öğrenci Adı] özgüven konusunda ciddi sorunlar yaşıyor. Hiçbir derste söz almıyor ve arkadaşlarıyla konuşmayı reddediyor. Sürekli tek başına oturmayı tercih ediyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın akademik performansı bu dönemde maalesef belirgin bir **düşüş** gösterdi. Özellikle derslere olan **ilgisizliği** ve ödevlerini yapma konusundaki **sorumsuz** tutumu dikkat çekiyor. Bu durum, önceki dönemlerdeki başarılarını olumsuz etkiliyor. Acil bir müdahale ve düzenli takip ile bu gidişatı tersine çevirmemiz gerekiyor. Aile desteği bu noktada çok kritik.",
     "tone": "olumsuz",
-    "etiketler": ["özgüven gelişimi", "arkadaşlık ilişkileri", "akademik stabilite", "sorumluluk alma"]
+    "etiketler": ["düşüş", "ilgisiz", "sorumsuz", "akademik", "olumsuz", "müdahale", "takip", "destek", "ciddi", "alarm"]
   },
   {
     "id": 32,
-    "content": "[Öğrenci Adı] sorumluluk almayı tamamen reddediyor. Ödevlerini yapmıyor, ders araç gereçlerini getirmiyor. Arkadaşlarına yardım etmeyi istemiyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı] bu dönemde sınıf kurallarına uyumda maalesef **kontrolsüz** bir hale geldi. Ders sırasında sıkça arkadaşlarını rahatsız ediyor, kuralları hiçe sayıyor ve öğretmen uyarılarını **reddettiği** gözlemlendi. Bu **uyumsuz** davranışlar sınıf düzenini ciddi şekilde bozuyor. Acil bir disiplin planı ve aile takibi ile bu durumu düzeltmemiz gerekiyor. Durum oldukça ciddidir.",
     "tone": "olumsuz",
-    "etiketler": ["sorumluluk alma", "akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["kuralsız", "kontrolsüz", "uyumsuz", "rahatsız", "reddeden", "disiplin", "ciddi", "davranış", "bozucu", "acil"]
   },
   {
     "id": 33,
-    "content": "[Öğrenci Adı] arkadaşlık ilişkilerinde başarısız. Hiç kimseyle oynamak istemiyor ve herkesi reddediyor. Sosyal aktivitelere katılmayı reddediyor.",
+    "content": "Kıymetli velimiz, [Öğrenci Adı] bu dönemde sosyal ilişkilerinde maalesef **uyumsuz** bir profil çizmeye başladı. Arkadaşlarıyla sıkça **çatışmacı** tutumlar sergiliyor, küçük anlaşmazlıkları bile büyüterek ortamı gerginleştiriyor. Kimseyle işbirliği yapmak istemiyor ve yalnız kalmayı tercih ediyor. Bu durum, onun sosyal gelişimini **zedeliyor**. Sosyal beceri gelişimi için acil ve yoğun desteğe ihtiyacımız var. Okul psikolojik danışmanımızla görüşmeniz faydalı olacaktır.",
     "tone": "olumsuz",
-    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sosyal uyum", "akademik stabilite"]
+    "etiketler": ["uyumsuz", "çatışmacı", "gergin", "işbirliği", "yalnız", "zedelenmiş", "sosyal", "problem", "destek", "acil"]
   },
   {
     "id": 34,
-    "content": "[Öğrenci Adı] akademik stabilite konusunda çok geride kaldı. Hiçbir derste başarılı olamıyor ve çalışmayı reddediyor. Ödevlerini hiç yapmiyor.",
+    "content": "Sayın velimiz, [Öğrenci Adı]'nın akademik motivasyonu bu dönemde maalesef tamamen **düşüşe** geçti. Derslere karşı belirgin bir **ilgisizlik** ve **pasif** bir tutum sergiliyor. Ödevlerini yapma konusunda direnç gösteriyor ve öğrenmeye karşı isteksiz. Bu durum, potansiyelini kullanmasını engelliyor. Onun öğrenme isteğini yeniden kazanması için acil ve etkili bir destek planına ihtiyacımız var. Motivasyon kaybı oldukça ciddi boyutlarda.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "sorumluluk alma", "özgüven gelişimi", "arkadaşlık ilişkileri"]
+    "etiketler": ["düşüş", "ilgisiz", "pasif", "motivyasyonsuz", "dirençli", "isteksiz", "potansiyel", "kayıp", "destek", "ciddi"]
   },
   {
     "id": 35,
-    "content": "[Öğrenci Adı] fen bilgisi dersinde deney yapmayı reddediyor. Arkadaşlarıyla çalışmayı istemiyor ve malzemeleri dağıtıyor. Güvenlik kurallarına uymuyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın davranışlarında bu dönemde belirgin bir **kontrolsüzlük** gözlemledik. Ders esnasında sıkça yerinden kalkıyor, izinsiz konuşuyor ve sınıfın düzenini bozuyor. Öğretmen uyarılarını dikkate almaması ve **düzensiz** hareketleri, hem kendi öğrenmesini hem de arkadaşlarının odaklanmasını olumsuz etkiliyor. Bu **davranışsal** sorunlara acilen müdahale etmemiz gerekiyor. Aile desteği bu noktada çok önemli.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
+    "etiketler": ["kontrolsüz", "davranışsal", "düzensiz", "yerinden", "rahatsız", "uyumsuz", "sorun", "bozucu", "acil", "müdahale"]
   },
   {
     "id": 36,
-    "content": "[Öğrenci Adı] sosyal bilgiler dersinde hiç ilgi göstermiyor. Araştırma ödevlerini yapmıyor ve arkadaşlarının çalışmalarını engelliyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı] sorumluluklarını yerine getirme konusunda tamamen **reddeden** bir tutum sergiliyor. Ödevlerini yapmıyor, ders araç gereçlerini getirmiyor ve verilen görevleri tamamlamaktan kaçınıyor. Bu durum, akademik başarısını doğrudan olumsuz etkilemektedir. Disiplin ve sorumluluk bilinci kazandırılması için acil ve kararlı bir işbirliğine ihtiyacımız var. Onun bu **sorumsuz** hali endişe verici.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "sorumluluk alma", "arkadaşlık ilişkileri", "özgüven gelişimi"]
+    "etiketler": ["reddeden", "sorumsuz", "yapmıyor", "kaçınan", "düzensiz", "disiplin", "akademik", "olumsuz", "endişe", "acil"]
   },
   {
     "id": 37,
-    "content": "[Öğrenci Adı] Türkçe dersinde yazma çalışmalarını reddediyor. Hikaye dinlemeyi sevmiyor ve arkadaşlarının yazdıklarını eleştiriyor.",
+    "content": "Kıymetli velimiz, [Öğrenci Adı] sosyal ilişkilerinde maalesef **kopuk** bir hal sergiliyor. Hiç kimseyle oynamak veya iletişim kurmak istemiyor, kendini tamamen geri çekiyor. Sosyal aktivitelere katılmayı **reddettiği** gözlemlendi. Bu durum, onun akranlarıyla sağlıklı bağlar kurmasını engelliyor ve sosyal gelişimini ciddi şekilde aksatıyor. Okul psikolojik danışmanımızdan destek almanız faydalı olacaktır. Bu **izole** durumu bizi endişelendiriyor.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
+    "etiketler": ["kopuk", "izole", "yalnız", "reddeden", "iletişim", "sosyal", "çekingen", "engelleyici", "destek", "acil"]
   },
   {
     "id": 38,
-    "content": "[Öğrenci Adı] matematik dersinde hiçbir problemi çözmeye çalışmıyor. Arkadaşlarından yardım istemiyor ve öğretmen açıklamalarını dinlemiyor.",
+    "content": "Sayın velimiz, [Öğrenci Adı]'nın akademik performansı bu dönemde maalesef tamamen **çökmüş** durumda. Derslere karşı belirgin bir **ilgisizlik** ve öğrenme sürecine karşı **direnç** gözlemlendi. Hiçbir çaba göstermiyor, verilen görevleri yapmıyor ve sürekli mazeret üretiyor. Bu durum, onun gelecekteki eğitim hayatını ciddi şekilde tehlikeye atmaktadır. Kapsamlı bir destek ve müdahale planına acilen ihtiyacımız var.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "özgüven gelişimi", "arkadaşlık ilişkileri", "sorumluluk alma"]
+    "etiketler": ["çökmüş", "ilgisiz", "dirençli", "sorumsuz", "yapmıyor", "baltalayan", "tehlikeli", "akademik", "acil", "kapsamlı"]
   },
   {
     "id": 39,
-    "content": "[Öğrenci Adı] sanat derslerinde hiçbir çalışma yapmak istemiyor. Malzemeleri israf ediyor ve arkadaşlarının eserlerini bozuyor.",
+    "content": "Değerli velimiz, [Öğrenci Adı]'nın davranışlarında bu dönemde belirgin bir **agresiflik** ve **yıkıcı** tutum gözlemledik. Arkadaşlarına veya okul eşyalarına zarar verme eğilimi gösteriyor. Kurallara uymayı kesinlikle reddediyor ve öğretmen uyarılarını **hiçe sayıyor**. Bu kabul edilemez davranışlar, hem kendi hem de sınıfın güvenliğini tehdit etmektedir. Bu konuda acil ve kararlı bir disiplin süreci başlatmamız gerekiyor. İşbirliğiniz zorunludur.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
+    "etiketler": ["agresif", "yıkıcı", "zarar", "reddeden", "hiçe sayan", "tehdit", "kural", "davranış", "acil", "disiplin"]
   },
   {
     "id": 40,
-    "content": "[Öğrenci Adı] müzik dersinde şarkı söylemeyi reddediyor. Arkadaşlarının performanslarını bozuyor ve enstrümanlara zarar veriyor.",
+    "content": "Sevgili velimiz, [Öğrenci Adı]'nın genel olarak **umutsuz** ve **kaybolmuş** bir ruh hali içinde olduğunu gözlemledik. Derslere olan ilgisizliği, sosyal çekingenliği ve kuralsız davranışları birleşerek ciddi bir tablo oluşturuyor. Okuldan tamamen **kopma** riski taşıyor. Akademik ve sosyal-duygusal gelişiminde acil ve profesyonel bir desteğe ihtiyaç duymaktadır. Bu durum için kapsamlı bir müdahale planı oluşturmalıyız. Lütfen en kısa sürede okulumuzla iletişime geçin.",
     "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "sorumluluk alma", "özgüven gelişimi"]
-  },
-  {
-    "id": 41,
-    "content": "[Öğrenci Adı] beden eğitimi dersine hiç katılmıyor. Takım oyunlarını bozmaya çalışıyor ve fair play kurallarına uymuyor.",
-    "tone": "olumsuz",
-    "etiketler": ["arkadaşlık ilişkileri", "sorumluluk alma", "akademik stabilite", "özgüven gelişimi"]
-  },
-  {
-    "id": 42,
-    "content": "[Öğrenci Adı] İngilizce dersinde hiç konuşmak istemiyor. Yeni kelimeler öğrenmeyi reddediyor ve arkadaşlarının çalışmalarını engelliyor.",
-    "tone": "olumsuz",
-    "etiketler": ["akademik stabilite", "arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma"]
-  },
-  {
-    "id": 43,
-    "content": "[Öğrenci Adı] teknoloji dersinde bilgisayarlara zarar veriyor. Arkadaşlarının projelerini silmeye çalışıyor ve kurallara uymuyor.",
-    "tone": "olumsuz",
-    "etiketler": ["sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite", "özgüven gelişimi"]
-  },
-  {
-    "id": 44,
-    "content": "[Öğrenci Adı] sınıfta hiç arkadaş edinemiyor. Herkesi kendisinden uzaklaştırıyor ve sosyal aktivitelere katılmayı reddediyor. Özgüven eksikliği çok ciddi.",
-    "tone": "olumsuz",
-    "etiketler": ["arkadaşlık ilişkileri", "özgüven gelişimi", "sorumluluk alma", "akademik stabilite"]
-  },
-  {
-    "id": 45,
-    "content": "[Öğrenci Adı] bu dönem hiçbir alanda gelişim gösteremedi. Özgüven eksikliği, sorumluluk almama ve arkadaşlık problemleri devam ediyor. Acil destek gerekiyor.",
-    "tone": "olumsuz",
-    "etiketler": ["özgüven gelişimi", "sorumluluk alma", "arkadaşlık ilişkileri", "akademik stabilite"]
+    "etiketler": ["umutsuz", "kaybolmuş", "ilgisiz", "çekingen", "kuralsız", "kopma", "risk", "ciddi", "acil", "müdahale"]
   }
 ]
