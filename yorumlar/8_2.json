@@ -14,7 +14,7 @@
   {
     "id": 3,
     "content": "[Öğrenci Adı], LGS sürecinde motivasyonunu artırmak için **çaba** göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması ve yeni eğitim hayatına **istekli** bir başlangıç yapması önemlidir. Potansiyelini kullanması ve içindeki öğrenme ateşini canlı tutması için desteklenmeye devam etmelidir. Ona olan inancımız tam.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["motivasyon", "çaba", "istekli", "potansiyel", "destek", "ilgi", "eğlenceli", "hazırlık", "gelişim", "kararsız"]
   },
   {
@@ -26,7 +26,7 @@
   {
     "id": 5,
     "content": "[Öğrenci Adı], LGS sürecinde sosyal hayatıyla dersleri arasında **denge** kurma konusunda **çaba** göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Onun bu **bilinçli** yaklaşımı bizleri mutlu ediyor. Hem eğlenmeli hem öğrenmeli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sosyal", "denge", "çaba", "okuma", "bilinçli", "hazırlık", "ihmal", "önemli", "aktivite", "rehberlik"]
   },
   {
@@ -50,13 +50,13 @@
   {
     "id": 9,
     "content": "[Öğrenci Adı], LGS sürecinde dikkatini toplama konusunda **çaba** göstermiştir. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları gibi) yönelmesi faydalı olacaktır. 9. sınıfa daha **hazır** başlaması için desteklenmeye devam etmelidir. Onun bu azmi takdire şayan.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["dikkat", "odaklanma", "çaba", "hazır", "destek", "ihtiyaç", "gelişim", "faydalı", "azim", "kararlılık"]
   },
   {
     "id": 10,
     "content": "[Öğrenci Adı], LGS sürecinde akademik alanda **çaba** göstermiştir. Yaz tatilinde ilgi alanlarını destekleyecek, ancak aynı zamanda temel akademik becerilerini de koruyacak aktivitelere yönelmesi, okula olan **bağlılığını** güçlendirecektir. Geleceği için öğrenmeye devam etmesi önemlidir. Onun bu **bilinçli** yaklaşımı bizleri sevindiriyor.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["çaba", "ilgi", "bağlılık", "akademik", "destek", "gelişim", "önemli", "bilinçli", "motivasyon", "süreklilik"]
   },
   {
@@ -68,7 +68,7 @@
   {
     "id": 12,
     "content": "[Öğrenci Adı], LGS sürecinde **aile baskısını** yönetme konusunda önemli adımlar atmıştır. Yaz tatilinde dinlenmeyi ve zihinsel olarak rahatlamasına yardımcı olacak aktivitelere yönelmesini, 9. sınıfa daha **dingin** ve **hazır** bir şekilde başlamasını tavsiye ederiz. Ailesiyle açık iletişim kurması çok önemli. Onun bu **olgun** yaklaşımı bizleri sevindiriyor.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["aile", "baskı", "kaygı", "yönetim", "dingin", "hazır", "rahatlama", "iletişim", "olgun", "destek"]
   },
   {
@@ -86,13 +86,13 @@
   {
     "id": 15,
     "content": "[Öğrenci Adı], LGS sürecinde sosyal çevre etkisini yönetme konusunda **çaba** göstermiştir. Yaz tatilinde sosyal aktivitelere katılması, ancak aynı zamanda yeni eğitim hayatına hazırlık amacıyla okuma alışkanlığını sürdürmeyi ihmal etmemelidir. Onun bu **bilinçli** yaklaşımı bizleri mutlu ediyor. Hem eğlenmeli hem öğrenmeli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sosyal", "çevre", "etki", "yönetim", "çaba", "bilinçli", "okuma", "aktivite", "denge", "önemli"]
   },
   {
     "id": 16,
     "content": "[Öğrenci Adı], LGS sürecinde okuma anlama becerilerini geliştirme konusunda **çaba** göstermiştir. Yaz tatilinde düzenli kitap okumaya devam etmesi ve hızlı okuma tekniklerini denemesi, 9. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Okuduğunu anlama becerisi onun için çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["okuma", "anlama", "beceri", "gelişim", "çaba", "düzenli", "hızlı", "hazırlıklı", "pekiştirme", "önemli"]
   },
   {

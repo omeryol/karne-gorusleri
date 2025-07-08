@@ -8,13 +8,13 @@
   {
     "id": 2,
     "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelle çok daha iyi başarılara imza atabilecek kapasitededir. Ancak, bu dönemde **motivasyon düşüklüğü** yaşadığı ve potansiyelini tam olarak kullanamadığı gözlemlenmiştir. Derslere karşı zaman zaman **ilgisiz** bir tutum sergiliyor. Sömestr tatilinde ilgi alanlarına yönelik araştırmalar yapması ve küçük başarılarla motivasyonunu yeniden kazanması için desteklenmelidir. Ona güveniyor ve potansiyelini keşfetmesini diliyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["potansiyel", "motivasyonsuz", "ilgisiz", "düşük", "zorlanan", "destek", "ihtiyaç", "keşif", "çaba", "kararsız"]
   },
   {
     "id": 3,
     "content": "[Öğrenci Adı], derslerdeki sorumluluklarını yerine getirme konusunda zaman zaman **aksaklıklar** yaşamış, bu durum akademik başarısında **düşüşe** neden olmuştur. Kendi öğrenme sürecinin sorumluluğunu alması, düzenli ödev takibi ve ders tekrarı yapması büyük önem taşımaktadır. Zaman yönetimi konusunda da desteğe ihtiyacı var. İkinci dönemde bu konularda daha **bilinçli** adımlar atmasını bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sorumsuz", "aksaklık", "düşüş", "zaman", "yönetimi", "ihtiyaç", "bilinçli", "rehberlik", "takip", "düzen"]
   },
   {
@@ -26,43 +26,43 @@
   {
     "id": 5,
     "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen sınav dönemlerinde yaşadığı **kaygı** nedeniyle potansiyelini tam olarak yansıtamamıştır. Sınavların sadece bir değerlendirme aracı olduğunu hatırlatmak isteriz. **Stres yönetimi** tekniklerini öğrenmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, daha **başarılı** olmasına yardımcı olacaktır. Bu konuda desteğe ihtiyacı var, ona yardımcı olmaya devam edeceğiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["kaygı", "sınav", "stres", "yönetimi", "potansiyel", "yansıtma", "başarılı", "destek", "ihtiyaç", "pekiştirme"]
   },
   {
     "id": 6,
     "content": "[Öğrenci Adı], akademik alanda bazı zorluklar yaşamış ve okul dışındaki ilgi alanlarına daha fazla yönelme eğilimi göstermiştir. Okulun sadece akademik bir ortam değil, aynı zamanda sosyal gelişim fırsatı sunduğu vurgulanmalıdır. İkinci dönemde okula olan **bağlılığını** artıracak aktivitelere yönelmesini bekliyoruz. Onun **potansiyelini** okulda da sergilemesi için teşvik etmeliyiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["ilgisiz", "yönelim", "bağlılık", "potansiyel", "akademik", "sosyal", "dış odaklı", "ihtiyaç", "destek", "teşvik"]
   },
   {
     "id": 7,
     "content": "[Öğrenci Adı], zaman yönetimi konusunda desteğe ihtiyaç duymaktadır. Ödev ve projelerini zamanında teslim etmekte **zorlandığı** gözlemlenmiştir. İkinci dönemde günlük/haftalık planlar yaparak ve önceliklerini belirleyerek zamanını daha **verimli** kullanmasını bekliyoruz. Bu beceriyi kazanması, akademik başarısını doğrudan etkileyecektir. Ona bu konuda rehberlik etmeye devam edeceğiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["zaman", "yönetimi", "zorlanan", "verimli", "planlama", "ihtiyaç", "destek", "aksaklık", "sorumlu", "gelişmesi"]
   },
   {
     "id": 8,
     "content": "[Öğrenci Adı], ders konularına hakim olmasına rağmen sınıf içi tartışmalara ve sözlü etkinliklere katılımda **çekingen** olduğu gözlemlenmiştir. Bilgisini paylaşmaktan çekinmemesi, özgüvenini artırarak öğrenme sürecini daha da zenginleştirecektir. İkinci dönemde daha **aktif** bir katılım sergilemesini **teşvik** ediyoruz. Onun bu potansiyelini ortaya çıkarması için desteklerinize güveniyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["çekingen", "katılım", "pasif", "sözlü", "özgüven", "ihtiyaç", "teşvik", "iletişim", "bilgili", "gelişmesi"]
   },
   {
     "id": 9,
     "content": "[Öğrenci Adı], okul kurallarına uyumda zaman zaman **zorlandığı** ve disiplin sorunları yaşadığı gözlemlenmiştir. Kurallara uymak, düzenli bir öğrenme ortamı için esastır. İkinci dönemde bu konuda daha **dikkatli** ve **sorumlu** davranmasını bekliyoruz. Kuralların önemini anlaması ve içselleştirmesi gelişimine katkı sağlayacaktır. Bu konuda aile desteği çok önemlidir.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["kural", "disiplin", "zorlanan", "dikkatli", "sorumlu", "ihtiyaç", "uyumsuz", "davranış", "destek", "bilinçli"]
   },
   {
     "id": 10,
     "content": "[Öğrenci Adı], sahip olduğu zihinsel potansiyelin farkında olmadığı ve kendini yeterince **zorlamadığı** gözlemlenmiştir. Daha fazlasını başarabilecek kapasitededir. İkinci dönemde hedefler belirlemesi ve bu hedeflere ulaşmak için daha fazla **çaba** göstermesi, potansiyelini ortaya çıkaracaktır. Ona inanıyoruz ve yeteneklerini tam kullanması için teşvik ediyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["potansiyel", "zorlamayan", "kapasite", "çaba", "hedef", "yetenekli", "ilgisiz", "destek", "ihtiyaç", "keşfetme"]
   },
   {
     "id": 11,
     "content": "[Öğrenci Adı], derslerden çok sosyal medya ve ekran kullanımına **odaklandığı** gözlemlenmiştir. Bu durum, akademik başarısını olumsuz etkilemektedir. Ekran süresini dengelemesi ve derslerine yeterli zaman ayırması önemlidir. İkinci dönemde teknolojiyi akademik amaçlarla daha **verimli** kullanmasını ve **dengeli** bir ekran süresi belirlemesini bekliyoruz. İşbirliğiniz çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["ekran", "sosyal medya", "bağımlılık", "odaklanma", "verimli", "dengeli", "olumsuz", "etki", "ihtiyaç", "kontrol"]
   },
   {
@@ -80,13 +80,13 @@
   {
     "id": 14,
     "content": "[Öğrenci Adı], derslere karşı **ilgisiz** olduğu ve katılımının düşük olduğu gözlemlenmiştir. Öğrenme motivasyonunu artırmak için ilgi alanlarına yönelik materyallerle desteklenmelidir. Derslerde daha **pasif** bir tutum sergiliyor. İkinci dönemde küçük başarılarla motivasyonunu yeniden kazanmasını bekliyoruz. Onun potansiyeli yüksek, sadece ilgisini çekmemiz gerekiyor.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["ilgisiz", "pasif", "motivasyonsuz", "düşük", "destek", "ihtiyaç", "potansiyel", "kazanma", "çaba", "işbirliği"]
   },
   {
     "id": 15,
     "content": "[Öğrenci Adı], zaman zaman yaşadığı **duygusal dalgalanmalar** nedeniyle ders başarısında düşüşler yaşamıştır. Duygularını yönetme becerisini geliştirmesi, akademik performansını olumlu etkileyecektir. Ona duygularını tanıma ve ifade etme konusunda destek olmalıyız. İkinci dönemde daha **dengeli** bir ruh haliyle derslere katılımını bekliyoruz. Bu konuda okul psikolojik danışmanımız da destek sağlayabilir.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["duygusal", "dalgalı", "denge", "yönetim", "stres", "kaygı", "destek", "ihtiyaç", "ruh hali", "hassas"]
   },
   {
@@ -104,7 +104,7 @@
   {
     "id": 18,
     "content": "[Öğrenci Adı], akademik başarısını artırmak için **aile desteğine** ihtiyaç duymaktadır. Okul-aile işbirliği, öğrencinin gelişiminde kritik öneme sahiptir. İkinci dönemde aile katılımının artması ve öğrencinin evde desteklenmesi, başarısını olumlu etkileyecektir. Evde düzenli bir çalışma ortamı sağlanması çok önemli. Onunla birlikte hareket etmeliyiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["destek", "aile", "ihtiyaç", "işbirliği", "katılım", "ortam", "akademik", "gelişim", "önemli", "yönlendirme"]
   },
   {
@@ -116,13 +116,13 @@
   {
     "id": 20,
     "content": "[Öğrenci Adı], zihinsel potansiyeline rağmen derslere karşı **ilgisiz** olduğu ve **motivasyonunun düşük** olduğu gözlemlenmiştir. Öğrenme motivasyonunu artırmak için ilgi alanlarına yönelik öğrenme materyalleriyle desteklenmelidir. İkinci dönemde küçük başarılarla motivasyonunu yeniden kazanmasını bekliyoruz. Bu konuda okul-aile işbirliği çok önemlidir. Onu cesaretlendirmeliyiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["motivasyonsuz", "ilgisiz", "düşük", "destek", "ihtiyaç", "potansiyel", "kazanma", "çaba", "işbirliği", "cesaret"]
   },
   {
     "id": 21,
     "content": "[Öğrenci Adı], teknolojiye olan ilgisiyle dikkat çekmektedir. Bu ilgiyi derslerine de yansıtması, öğrenme sürecini zenginleştirecektir. Ancak ekran başında geçirdiği sürenin **dengesiz** olduğunu gözlemledik. İkinci dönemde teknolojiyi akademik amaçlarla daha **verimli** kullanmasını ve **dengeli** bir ekran süresi belirlemesini bekliyoruz. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["teknoloji", "ilgi", "dengesiz", "ekran", "verimli", "kullanım", "ihtiyaç", "kontrol", "potansiyel", "rehberlik"]
   },
   {
@@ -158,7 +158,7 @@
   {
     "id": 27,
     "content": "[Öğrenci Adı], okuma ve yazma gelişiminde yaşıtlarına göre **gecikmeler** olduğu gözlemlenmiştir. Temel becerileri pekiştirmek için ek desteğe ihtiyaç duymaktadır. İkinci dönemde bireysel okuma çalışmaları ve düzenli yazma egzersizleri yapması, bu alanlardaki gelişimini **hızlandıracaktır**. Bu konuda aile desteği ve okul işbirliği hayati önem taşımaktadır.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["okuma", "yazma", "gecikme", "destek", "ihtiyaç", "hızlı", "gelişim", "temel", "zorlanan", "çaba"]
   },
   {
@@ -170,13 +170,13 @@
   {
     "id": 29,
     "content": "[Öğrenci Adı], konulara hakim olmasına rağmen sınav stratejileri konusunda **eksiklikler** yaşamıştır. Sınav süresini yönetme, soru tiplerini tanıma gibi becerileri geliştirmesi önemlidir. İkinci dönemde deneme sınavları ve soru çözüm tekniklerine odaklanmasını bekliyoruz. Bu alandaki **gelişimi** LGS süreci için kritik olacaktır. Ona rehberlik etmeye devam edeceğiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sınav", "strateji", "eksiklik", "yönetim", "ihtiyaç", "gelişim", "deneme", "kritik", "rehberlik", "odaklanma"]
   },
   {
     "id": 30,
     "content": "[Öğrenci Adı]'nın fiziksel aktiviteye yeterli zaman ayırmadığı ve enerjisinin düşük olduğu gözlemlenmiştir. Düzenli spor, hem fiziksel hem de zihinsel sağlığı için önemlidir. İkinci dönemde okul sporlarına veya dışarıda oynanan oyunlara daha fazla **katılımını** bekliyoruz. Onun daha **enerjik** ve **sağlıklı** olması için teşvik etmeliyiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["fiziksel", "aktivite", "enerji", "sağlık", "katılım", "ihtiyaç", "düşük", "teşvik", "düzenli", "gelişmesi"]
   }
 ]

@@ -8,7 +8,7 @@
   {
     "id": 2,
     "content": "[Öğrenci Adı], yıl boyunca motivasyonunu artırma konusunda **çaba** göstermiştir. Potansiyeline inanması için onu sürekli teşvik etmeliyiz. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 8. sınıfa daha **istekli** bir başlangıç yapmasını sağlayacaktır. Kendi gücünü keşfetmesi için desteğe ihtiyacı var. Ona güveniyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["motivasyonsuz", "potansiyel", "çaba", "istekli", "destek", "ihtiyaç", "keşif", "düşük", "kararsız", "zorlanan"]
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": 6,
     "content": "[Öğrenci Adı], yıl boyunca akademik alanda **çaba** göstermiştir. Yaz tatilinde ilgi alanlarını destekleyecek, ancak aynı zamanda temel akademik becerilerini de koruyacak aktivitelere yönelmesi, okula olan **bağlılığını** güçlendirecektir. Geleceği için öğrenmeye devam etmesi önemlidir. Onun bu çabasını görüyor ve destekliyoruz. Potansiyelini okul ortamına da yansıtması gerekiyor.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["çaba", "ilgi", "bağlılık", "akademik", "destek", "ihtiyaç", "potansiyel", "gelişim", "süreklilik", "fırsat"]
   },
   {
@@ -56,13 +56,13 @@
   {
     "id": 10,
     "content": "[Öğrenci Adı], yıl boyunca potansiyelini keşfetme konusunda **çaba** göstermiştir. İlgi alanlarını araştırmaya ve kendini geliştirecek projelere yönelmesi, 8. sınıfa daha **bilinçli** başlamasını sağlayacaktır. Onun içindeki gücü ortaya çıkarmak için ona rehberlik etmeye devam etmeliyiz. Büyük başarılara imza atacağına inanıyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["potansiyel", "keşif", "çaba", "bilinçli", "gelişim", "ilgi", "proje", "rehberlik", "destek", "ihtiyaç"]
   },
   {
     "id": 11,
     "content": "[Öğrenci Adı], yıl boyunca sosyal medya/ekran kullanımını dengeleme konusunda **çaba** göstermiştir. Yaz tatilinde ekran süresini sınırlayarak, kitap okumaya ve fiziksel aktivitelere yönelmesi, 8. sınıfa daha **sağlıklı** bir başlangıç yapmasını sağlayacaktır. Dijital alışkanlıklarını yönetmesi onun için önemli bir adım.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["ekran", "sosyal medya", "denge", "sağlıklı", "çaba", "alışkanlık", "kitap", "aktivite", "gelişim", "kontrol"]
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 14,
     "content": "[Öğrenci Adı], yıl boyunca derslere olan ilgisini artırma konusunda **çaba** göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 8. sınıfa daha **istekli** bir başlangıç yapmasını sağlayacaktır. Onun bu çabasını görüyor ve destekliyoruz. Her küçük adım, büyük bir değişimin başlangıcıdır.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["ilgisiz", "çaba", "istekli", "motivasyon", "destek", "ihtiyaç", "gelişim", "eğlenceli", "adım", "işbirliği"]
   },
   {
@@ -104,7 +104,7 @@
   {
     "id": 18,
     "content": "[Öğrenci Adı], yıl boyunca aile desteği konusunda **çaba** göstermiştir. Yaz tatilinde aile üyeleriyle birlikte öğrenme aktivitelerine katılması ve okul-aile işbirliğinin devam etmesi, 8. sınıfa daha **güçlü** başlamasını sağlayacaktır. Bu bağın **önemi** çok büyüktür. Ailesiyle kurduğu iletişim, onun başarısını olumlu etkiliyor.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["aile", "destek", "çaba", "işbirliği", "güçlü", "önemli", "gelişim", "iletişim", "akademik", "sosyal"]
   },
   {
@@ -116,37 +116,37 @@
   {
     "id": 20,
     "content": "[Öğrenci Adı], yıl boyunca ders çalışma motivasyonunu artırmak için **çaba** göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 8. sınıfa daha **istekli** bir başlangıç yapmasını sağlayacaktır. Onun bu **azmi** ve öğrenmeye olan **hevesi** takdire şayan. Her küçük adım, büyük bir değişimin başlangıcıdır.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["motivasyon", "çaba", "istekli", "hevesli", "destek", "ihtiyaç", "gelişim", "eğlenceli", "adım", "işbirliği"]
   },
   {
     "id": 21,
     "content": "[Öğrenci Adı], lise hazırlık düşünceleri konusunda henüz **kararsızlık** yaşamaktadır. Hedef belirleme sürecinde tutarsızlık gözleniyor ve kişilik gelişiminde yavaş ilerleme kaydediyor. Çatışma çözme becerilerinde de eksiklikler bulunuyor. Bu konularda rehberlik ve aile desteği çok önemli. Onu doğru yönlendirmek için birlikte hareket etmeliyiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["kararsız", "hedef", "düzensiz", "yavaş", "eksiklik", "ihtiyaç", "destek", "rehberlik", "zorlanan", "belirsiz"]
   },
   {
     "id": 22,
     "content": "[Öğrenci Adı], hedef belirleme konusunda **belirsizlik** göstermektedir. Kısa vadeli hedeflerde bile dalgalanmalar yaşıyor. Kişilik gelişiminde **motivasyon eksikliği** belirgin ve sosyal ilişkilerinde dengesizlik gözleniyor. Ona net hedefler koyması ve bu yolda ilerlemesi için teşvik etmeliyiz. Desteklerinize ihtiyacımız var.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["belirsiz", "hedef", "düşük", "motivasyon", "dengesiz", "sosyal", "ihtiyaç", "destek", "kararsız", "yavaş"]
   },
   {
     "id": 23,
     "content": "[Öğrenci Adı], kişilik gelişimi sürecinde **zorlanmalar** yaşamaktadır. Kendini tanıma eksiklikleri belirgin ve çatışma çözme konusunda **yetersizlik** gösteriyor. Lise hazırlık planlamasında odaklanma problemleri bulunuyor. Ona kendini keşfetme ve bu süreçte destek olma konusunda yardımcı olmalıyız. Bu dönemi en verimli şekilde atlatmalı.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["zorlanan", "kimlik", "yetersiz", "odaklanma", "ihtiyaç", "destek", "karmaşa", "gelişim", "belirsiz", "zorluk"]
   },
   {
     "id": 24,
     "content": "[Öğrenci Adı], çatışma çözme becerilerinde beklenenin altında performans sergiliyor. Küçük anlaşmazlıkları bile **büyütme** eğilimi gösteriyor. Hedef belirleme konusunda **erteleme** yaşadığı ve kişisel gelişim planlarında tutarsızlık bulunduğu gözlemlendi. Ona daha yapıcı yollar öğretmeli ve sorumluluk bilincini pekiştirmeliyiz. Bu konuda aile desteği çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["çatışma", "büyütme", "erteleyen", "düzensiz", "tutarsız", "yapıcı", "ihtiyaç", "destek", "sorunlu", "gelişmesi"]
   },
   {
     "id": 25,
     "content": "[Öğrenci Adı], lise hazırlık sürecinde **odaklanma problemleri** yaşıyor. Hedeflerini netleştirme konusunda **zorluklar** çekiyor, kişilik gelişiminde **istikrarsızlık** gösteriyor ve sosyal becerilerinde **gerilik** gözleniyor. Ona bu karmaşık süreçte rehberlik etmeye ve hedeflerine odaklanmasına yardımcı olmaya devam etmeliyiz. Desteklerinize güveniyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["odaklanma", "zorluk", "hedef", "istikrarsız", "gerilik", "lise", "hazırlık", "rehberlik", "destek", "ihtiyaç"]
   },
   {

@@ -8,7 +8,7 @@
   {
     "id": 2,
     "content": "[Öğrenci Adı], yıl boyunca akademik zorluklarla mücadele etmiştir. Gösterdiği **çaba** gerçekten takdire şayandır. Yaz tatilinde temel eksiklerini gidermeye yönelik düzenli ve kısa süreli çalışmalar yapması, 7. sınıfa daha **güçlü** başlamasını sağlayacaktır. Sevdiği konularla öğrenmeyi birleştirmesi motivasyonunu artıracaktır. Ona olan inancımız tam.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["zorlanan", "çaba", "mücadele", "eksiklik", "destek", "ihtiyaç", "güçlü", "motivasyon", "istekli", "potansiyel"]
   },
   {
@@ -26,13 +26,13 @@
   {
     "id": 5,
     "content": "[Öğrenci Adı], derslerdeki potansiyeline rağmen dikkatini uzun süre korumakta **zorlanmaktadır**. Bu durum, akademik performansını zaman zaman olumsuz etkileyebilmektedir. Yaz tatilinde dikkatini ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları, enstrüman çalma, kodlama gibi) yönelmesi faydalı olacaktır. Düzenli uyku ve beslenmeye dikkat etmesi de zihinsel gelişimini destekleyecektir. Potansiyelini kullanması için çabalarına devam etmeliyiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["dikkat", "odaklanma", "zorlanan", "dalgın", "potansiyel", "gelişmesi", "ihtiyaç", "destek", "uyku", "beslenme"]
   },
   {
     "id": 6,
     "content": "[Öğrenci Adı], akademik olarak sınıf ortalamasında bir performans sergilemektedir. Ancak, sosyal ilişkilerinde **uyum sorunları** yaşadığı ve kendini ifade etmekte **çekingen** davrandığı gözlemlenmiştir. Yaz tatilinde sosyal aktivitelere katılması ve iletişim becerilerini geliştirmesi önemlidir. 7. sınıfa daha **uyumlu** bir başlangıç yapmasını bekliyoruz. Ona destek olmaya devam edeceğiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sosyal", "uyum", "çekingen", "iletişim", "zorlanan", "gelişmesi", "ihtiyaç", "destek", "arkadaş", "katılım"]
   },
   {
@@ -56,7 +56,7 @@
   {
     "id": 10,
     "content": "[Öğrenci Adı], yıl boyunca sınav kaygısını yönetme konusunda önemli adımlar atmıştır. Artık sınavların sadece bir değerlendirme aracı olduğunu daha iyi anlıyor. Yaz tatilinde rahatlama teknikleri öğrenmeye devam etmesi ve düzenli tekrarlarla konulara olan hakimiyetini pekiştirmesi, 7. sınıfta daha **başarılı** olmasına yardımcı olacaktır. Onun bu **çabası** takdire şayan.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["kaygı", "sınav", "yönetim", "çaba", "rahatlama", "pekiştirme", "başarılı", "ihtiyaç", "gelişmesi", "denge"]
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 14,
     "content": "[Öğrenci Adı], yıl boyunca sorumluluklarını erteleme eğiliminde **azalma** göstermiştir. Yaz tatilinde günlük planlar yaparak ve küçük hedefler belirleyerek **zaman yönetimi** becerilerini pekiştirmesi, 7. sınıfa daha **düzenli** bir başlangıç yapmasını sağlayacaktır. Onun bu **çabası** takdire şayan.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["erteleyen", "zaman", "yönetim", "azalma", "düzenli", "planlı", "sorumlu", "gelişmesi", "çaba", "ihtiyaç"]
   },
   {
@@ -92,13 +92,13 @@
   {
     "id": 16,
     "content": "[Öğrenci Adı], yıl boyunca sağlık sorunlarına rağmen derslerini takip etme konusunda **çaba** göstermiştir. Yaz tatilinde sağlığına dikkat ederek ve eksiklerini tamamlayarak 7. sınıfa dinlenmiş ve hazır bir şekilde başlaması önemlidir. Bu süreçte ailesinin ve okulun desteği çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sağlık", "devamsızlık", "çaba", "takip", "destek", "ihtiyaç", "önemli", "dinlenmiş", "hazırlık", "zorlanan"]
   },
   {
     "id": 17,
     "content": "[Öğrenci Adı], yıl boyunca farklı öğrenme stillerini deneme konusunda **çaba** göstermiştir. Yaz tatilinde kendisine en uygun öğrenme yöntemlerini pekiştirmesi ve bu yöntemlerle ders tekrarı yapması, 7. sınıfa daha **verimli** bir başlangıç yapmasını sağlayacaktır. Kendini tanıması ve öğrenme sürecine uyum sağlaması çok kıymetli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["öğrenme stili", "keşif", "çaba", "verimli", "yöntem", "pekiştirme", "gelişmesi", "ihtiyaç", "destek", "uyum"]
   },
   {
@@ -116,7 +116,7 @@
   {
     "id": 20,
     "content": "[Öğrenci Adı], yıl boyunca öğrenme motivasyonunu artırmak için **çaba** göstermiştir. Yaz tatilinde ilgi alanlarına yönelik eğlenceli öğrenme aktivitelerine katılması, 7. sınıfa daha **istekli** bir başlangıç yapmasını sağlayacaktır. Her küçük adımın, büyük bir değişimin başlangıcı olduğunu unutmamalıyız. Ona güvenimiz tam.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["motivasyon", "çaba", "gelişim", "istekli", "eğlenceli", "ilgi", "potansiyel", "destek", "adım", "işbirliği"]
   },
   {
@@ -152,19 +152,19 @@
   {
     "id": 26,
     "content": "[Öğrenci Adı], akademik olarak yeterli bir performans sergilemesine rağmen, zaman zaman duygusal hassasiyetleri nedeniyle derse odaklanmakta **zorlanmaktadır**. Yaz tatilinde hobilerine yönelerek ve dinlenerek duygusal sağlığını desteklemesi, 6. sınıfa daha **güçlü** başlamasını sağlayacaktır. Duygularını yönetme konusunda gelişimi devam etmeli. Duygusal zekasını kullanması çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["duygusal", "hassas", "odaklanma", "zorluk", "denge", "yönetim", "gelişmesi", "destek", "ihtiyaç", "hobiler"]
   },
   {
     "id": 27,
     "content": "[Öğrenci Adı], yıl boyunca okuma becerilerinde gözle görülür bir **gelişim** göstermiştir. Ancak bu alandaki eksikliklerini tamamen gidermek için yaz tatilinde düzenli okumaya devam etmesi önemlidir. Her gün belirli bir süre kitap okumak, okuma hızını ve anlama becerisini artırarak 6. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Okuma sevgisi ve alışkanlığı için desteğinizi sürdürün.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["okuma", "gelişim", "hız", "anlama", "eksiklik", "pekiştirme", "hazırlıklı", "ihtiyaç", "destek", "süreklilik"]
   },
   {
     "id": 28,
     "content": "[Öğrenci Adı], yıl boyunca sözlü ifade becerilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde ailesiyle veya arkadaşlarıyla sohbet ederek, basit sunum provaları yaparak veya hikaye anlatarak bu becerilerini pekiştirmesi, 6. sınıfa daha **güçlü** bir **iletişimle** başlamasını sağlayacaktır. Kendini daha rahat ifade etmesi için teşvik edilmeli. Onun potansiyeli çok yüksek.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sözlü", "ifade", "gelişim", "çaba", "iletişim", "güçlü", "pratik", "özgüven", "ihtiyaç", "teşvik"]
   },
   {

@@ -14,49 +14,49 @@
   {
     "id": 3,
     "content": "Kıymetli velimiz, [Öğrenci Adı]'nın derslerdeki zihinsel potansiyeli ve konuları kavrama becerisi oldukça dikkat çekici. Ancak, zaman zaman derse **odaklanamayan** bir yapı sergilediğini ve ödevlerini aksattığını gözlemliyoruz. Bu durum, potansiyelini tam kullanmasını engelliyor. Sömestr tatilinde belirleyeceğiniz kısa ve düzenli çalışma periyotlarıyla dikkatini geliştirmesi, ikinci dönemdeki başarısını ciddi oranda artıracaktır. Onun tam kapasitesine ulaşması için desteğinize güveniyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["potansiyel", "odaklanamayan", "dikkat", "ödev", "aksaklık", "düzensiz", "unutkan", "zorlanan", "gelişmesi", "destek"]
   },
   {
     "id": 4,
     "content": "Sayın velimiz, [Öğrenci Adı] sosyal ilişkilerinde son derece **arkadaş** canlısı ve uyumlu bir öğrenci. Sınıf içi etkileşimlerde aktif rol alıyor ve arkadaşlarıyla kolayca iyi anlaşabiliyor. Akademik olarak ise özellikle okuma ve temel matematik becerilerinde biraz desteğe ihtiyaç duyuyor. Sömestr tatilinde bu temel konuları pekiştirmeye yönelik yapılacak küçük ve düzenli çalışmaların, ikinci dönemde ders başarısını önemli ölçüde yükseltmesine yardımcı olacağına inanıyoruz. Onun sosyal yönü çok güçlü.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["sosyal", "arkadaş", "uyumlu", "iletişim", "okuma", "matematik", "desteğe", "ihtiyaç", "pekiştirme", "gelişim"]
   },
   {
     "id": 5,
     "content": "Değerli velimiz, [Öğrenci Adı] ders konularını anlama ve sınavlardaki başarısıyla kendini gösteren bir öğrencimiz. Bilgi birikimi iyi durumda. Ancak sınıf içi tartışmalara ve sözlü etkinliklere katılımda biraz **çekingen** davrandığını gözlemliyoruz. Bilgisini ve fikirlerini paylaşmaktan çekinmemesi, özgüvenini artırarak öğrenme sürecini daha da zenginleştirecektir. İkinci dönemde daha aktif ve cesur bir katılım sergilemesini sabırsızlıkla bekliyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["çekingen", "katılım", "sözlü", "özgüven", "gelişmesi", "pasif", "saklanan", "gözlem", "ihtiyaç", "teşvik"]
   },
   {
     "id": 6,
     "content": "Kıymetli velimiz, [Öğrenci Adı]'nın teknolojiye olan ilgisi ve yatkınlığı oldukça dikkat çekici. Bu doğal ilgisini derslerine de yansıtması, öğrenme sürecini zenginleştirebilecek büyük bir potansiyel taşıyor. Ancak, ekran başında geçirdiği sürenin **düzensiz** olduğunu ve bu konuda dengelenmesi gerektiğini gözlemliyoruz. İkinci dönemde teknolojiyi akademik amaçlarla daha verimli kullanmasını ve sağlığını da gözeterek dengeli bir ekran süresi belirlemesini rica ediyoruz. Bu konuda işbirliğiniz çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["teknoloji", "ekran", "düzensiz", "bağımlılık", "yönlendirme", "denge", "verimli", "ilgi", "potansiyel", "kontrol"]
   },
   {
     "id": 7,
     "content": "Sayın velimiz, [Öğrenci Adı]'nın zaman zaman yaşadığı **duygusal** hassasiyetlerin derse odaklanmasını zorlaştırdığını ve bu durumun akademik performansını etkileyebildiğini fark ettik. Duygularını tanıma, ifade etme ve yönetme becerilerini geliştirmesi yönünde desteğe ihtiyacı var. Bu alandaki gelişim, onun hem akademik hem de sosyal yaşantısını olumlu etkileyecektir. İkinci dönemde daha dengeli bir ruh haliyle derslere katılımını bekliyoruz. Bu konuda okul psikolojik danışmanımız da destek sağlayabilir.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["duygusal", "hassas", "odaklanma", "zorluk", "empati", "dengesiz", "ruh hali", "destek", "gelişmesi", "yönetim"]
   },
   {
     "id": 8,
     "content": "Değerli velimiz, [Öğrenci Adı] bireysel çalışmalarda oldukça başarılı ve bağımsız bir öğrencimiz. Ancak, grup etkinliklerinde ve takım çalışmalarında daha **pasif** kaldığı dikkatimizi çekti. Fikirlerini paylaşma, sorumluluk alma ve işbirliği yapma becerilerini geliştirmesi, hem kendi öğrenme sürecini hem de grubun genel başarısını olumlu yönde etkileyecektir. İkinci dönemde grup çalışmalarında daha aktif ve liderlik vasfı gösteren bir rol almasını teşvik ediyoruz. Potansiyeli oldukça yüksek.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["grup", "pasif", "işbirliği", "katılım", "paylaşım", "çekingen", "desteğe", "ihtiyaç", "sorumluluk", "etki"]
   },
   {
     "id": 9,
     "content": "Kıymetli velimiz, [Öğrenci Adı]'nın zaman zaman sınıf **kurallarına** uyumda zorlandığını, ders araç gereçlerini unuttuğunu ve ödevlerini eksik getirdiğini gözlemliyoruz. Bu tür **düzensiz** davranışlar akademik başarısını doğrudan etkileyebilir. Düzenli olma ve sorumluluk bilinci geliştirmesi büyük önem taşıyor. İkinci dönemde bu konularda daha dikkatli ve sorumlu davranmasını bekliyoruz. Kuralların ve düzenin önemini içselleştirmesi, onun genel gelişimine büyük katkı sağlayacaktır. Desteğinize ihtiyacımız var.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["kural", "düzensiz", "unutkan", "sorumsuz", "dikkat", "gelişmesi", "ihtiyaç", "sınır", "uyarı", "takip"]
   },
   {
     "id": 10,
     "content": "Sayın velimiz, [Öğrenci Adı]'nın **beslenme** alışkanlıklarında zaman zaman düzensizlikler olduğunu ve bunun enerjisini, dolayısıyla derse olan odağını etkilediğini gözlemledik. Sağlıklı ve dengeli beslenme, akademik başarı ve genel sağlık için hayati öneme sahiptir. İkinci dönemde dengeli beslenmeye özen göstermesini ve düzenli öğünler tüketmesini bekliyoruz. Bu konuda evde vereceğiniz desteğin, onun fiziksel ve zihinsel gelişimine büyük katkı sağlayacağına inanıyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["beslenme", "düzensiz", "enerji", "sağlık", "odaklanma", "ihtiyaç", "destek", "alışkanlık", "önemli", "etki"]
   },
   {
@@ -122,37 +122,37 @@
   {
     "id": 21,
     "content": "Kıymetli velimiz, [Öğrenci Adı]'nın ortaokula alışma sürecinde **normal** bir seyir izlediğini söyleyebiliriz. Bazı günler derslerde dikkati dağılabiliyor, bazen de ödevlerini getirmeyi unutabiliyor. Arkadaşlarıyla genel olarak iyi geçiniyor ancak sınıf kurallarını ara sıra hatırlatmamız gerekiyor. Genel uyumu iyi yönde devam ediyor ve adaptasyon sürecinin zamanla daha da oturacağına inanıyoruz. Küçük hatırlatmalarla daha da iyiye gidecek.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["normal", "alışma", "dalgın", "unutkan", "hatırlatma", "geçiş", "düzensiz", "orta", "dengeli", "seyir"]
   },
   {
     "id": 22,
     "content": "Sayın velimiz, [Öğrenci Adı] yeni okul ortamına alışmak için çaba gösteriyor. Derslerde bazen aktif katılım gösterirken, bazen daha **sessiz** kalmayı tercih ediyor. Arkadaş edinme konusunda biraz **çekingen** davranıyor ancak zamanla daha açık olduğunu gözlemliyoruz. Ödevlerinde zaman zaman **düzensizlik** oluyor ve bu konuya dikkat etmesi, sorumluluk bilincini geliştirmesi gerekiyor. Onun çabasını görüyor ve destekliyoruz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["çabalıyor", "sessiz", "çekingen", "düzensizlik", "alışma", "gelişme", "değişken", "ortalama", "yavaş", "ihtiyaç"]
   },
   {
     "id": 23,
     "content": "Değerli velimiz, [Öğrenci Adı] matematik dersinde bazı konularda **zorlanıyor** ve bu nedenle ek çalışmaya ihtiyaç duyuyor. Türkçe dersinde ise okuduğunu anlama becerisinde güçlükler çekiyor. Arkadaşlarıyla genel olarak iyi geçinmesine rağmen, derslerde bireysel desteğe ihtiyacı olduğunu düşünüyoruz. Temel becerileri pekiştirmeye yönelik yapılacak düzenli çalışmalarla daha iyi bir seviyeye gelecektir. Bu konuda işbirliğiniz çok önemli.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["zorlanıyor", "matematik", "Türkçe", "anlama", "destek", "ihtiyaç", "temel", "pekiştirme", "gelişim", "ortalama"]
   },
   {
     "id": 24,
     "content": "Sevgili velimiz, [Öğrenci Adı]'nın sosyal uyum konusunda biraz **zaman aldığını** gözlemliyoruz. Arkadaş gruplarına katılma konusunda zaman zaman **tereddütlü** davranıyor. Derslerde daha çok sessiz kalıyor ve katılımı az. Ödevlerini yapmaya çalışıyor ancak bu konuda da **düzensiz** bir yol izliyor. Ona daha girişken olması ve sosyal çevresini genişletmesi için cesaret vermemiz gerekiyor. Bu konuda okul-aile işbirliği çok faydalı olacaktır.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["zaman", "tereddütlü", "sessiz", "katılım", "düzensiz", "girişken", "çekingen", "yavaş", "ihtiyaç", "gelişme"]
   },
   {
     "id": 25,
     "content": "Kıymetli velimiz, [Öğrenci Adı] fen bilgisi dersindeki bazı konuları anlamakta **zorlanıyor**. Deneyler sırasında arkadaşlarıyla işbirliği yapmakta güçlük çektiğini ve görev dağılımında sorunlar yaşadığını gözlemledik. Ödevlerini sıkça eksik getiriyor ve ders malzemelerini unutma eğilimi gösteriyor. Bu konularda daha **dikkatli** ve sorumlu olması, ders başarısını artıracaktır. Temel eksiklerini gidermek için desteğe ihtiyacımız var.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["zorlanıyor", "fen", "deney", "işbirliği", "eksik", "unutkan", "dikkatli", "düzensiz", "ihtiyaç", "pekiştirme"]
   },
   {
     "id": 26,
     "content": "Sayın velimiz, [Öğrenci Adı]'nın okula gelme konusunda **isteği az** görünüyor ve derslerde sürekli **dalgın** bir halde olduğunu gözlemledik. Maalesef ödevlerini de hiç yapmıyor. Arkadaşlarıyla iletişim kurmayı **reddettiği** durumlar da oluyor. Okul bağını ve öğrenme motivasyonunu güçlendirmek adına acil ve yoğun desteğinize ihtiyacımız var. Bu durumun ciddiyetinin farkında olmanızı rica ederiz.",
-    "tone": "notr",
+    "tone": "nötr",
     "etiketler": ["isteksiz", "dalgın", "yapmıyor", "reddiyor", "iletişim", "okul", "bağ", "desteğe", "ihtiyaç", "düşük"]
   },
   {
