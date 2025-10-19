@@ -14,25 +14,25 @@
   {
     "id": 3,
     "content": "Kıymetli velimiz, [Öğrenci Adı], zihinsel potansiyeline rağmen zaman zaman dikkatini toplama konusunda hala desteğe ihtiyaç duymaktadır. Zaman zaman **dalgın** halleri derse odaklanmasını zorlaştırabiliyor. Yaz tatilinde dikkat ve odaklanma becerisini geliştirecek etkinliklere (yapboz, strateji oyunları, enstrüman çalma gibi) yönelmesi çok faydalı olacaktır. Düzenli uyku ve beslenmeye dikkat etmesi de zihinsel gelişimini destekleyecektir. Potansiyelini tam kullanması için çabalarını sürdürüyoruz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["potansiyelli", "dikkat", "odaklanma", "dalgın", "destek", "ihtiyaç", "gelişmesi", "zorlanan", "uyku", "beslenme"]
   },
   {
     "id": 4,
     "content": "Sayın velimiz, [Öğrenci Adı] sosyal becerilerini yıl boyunca korumuş, **arkadaş** canlısı ve uyumlu yapısıyla öne çıkmıştır. Akademik alandaki temel eksikliklerini gidermek için gösterdiği **çaba** takdire şayandır. Özellikle okuma ve temel matematik becerilerini yaz tatilinde de güçlendirmeye devam etmesi, 6. sınıfa daha hazırlıklı başlamasını sağlayacaktır. Sosyal yönünü koruyarak akademik gelişimine odaklanması, onun için çok önemli bir denge unsuru olacaktır.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sosyal", "arkadaş", "uyumlu", "çaba", "okuma", "matematik", "desteğe", "ihtiyaç", "denge", "gelişim"]
   },
   {
     "id": 5,
     "content": "Değerli velimiz, [Öğrenci Adı] akademik başarısını yıl boyunca istikrarlı bir şekilde sürdürmüştür. Ancak, özgüvenini artırarak sınıf içi etkinliklere daha fazla katılması, tüm potansiyelini tam olarak ortaya koymasını sağlayacaktır. Yaz tatilinde sosyal aktivitelere katılması ve kendini **ifade** etme becerilerini geliştirecek fırsatlar araması, 6. sınıfa daha **özgüvenli** başlamasına yardımcı olacaktır. Bilgi birikimi çok iyi.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["başarılı", "özgüven", "katılım", "potansiyel", "sosyal", "ifade", "çekingen", "gelişmesi", "ihtiyaç", "teşvik"]
   },
   {
     "id": 6,
     "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili **faydalı** aktivitelere yönelmesi, 6. sınıfa daha **bilinçli** ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["teknoloji", "ilgi", "faydalı", "bilinçli", "denge", "potansiyel", "gelişimi", "yönlendirme", "merak", "kullanım"]
   },
   {
@@ -98,13 +98,13 @@
   {
     "id": 17,
     "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca okuma becerilerinde gözle görülür bir **gelişim** göstermiştir. İlk dönemdeki eksiklerini gidermek için gösterdiği çaba takdire şayandır. Ancak bu alandaki becerilerini tamamen pekiştirmek için yaz tatilinde düzenli okumaya devam etmesi önemlidir. Her gün belirli bir süre kitap okumak, okuma hızını ve anlama becerisini artırarak 6. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Okuma sevgisi için teşvik edin.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["okuma", "gelişim", "hız", "anlama", "çaba", "eksiklik", "pekiştirme", "hazırlıklı", "ihtiyaç", "süreklilik"]
   },
   {
     "id": 18,
     "content": "Sayın velimiz, [Öğrenci Adı], yıl boyunca sözlü ifade becerilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde ailesiyle veya arkadaşlarıyla sohbet ederek, basit sunum provaları yaparak veya hikaye anlatarak bu becerilerini pekiştirmesi, 6. sınıfa daha **güçlü** bir **iletişimle** başlamasını sağlayacaktır. Kendini daha rahat ifade etmesi için teşvik edilmeli. Onun potansiyeli çok yüksek.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sözlü", "ifade", "gelişim", "çaba", "iletişim", "güçlü", "pratik", "özgüven", "ihtiyaç", "teşvik"]
   },
   {
@@ -134,7 +134,7 @@
   {
     "id": 23,
     "content": "Değerli velimiz, [Öğrenci Adı], yıl boyunca dersi dinleme becerilerini geliştirmeye **çaba** göstermiştir. Yaz tatilinde aktif dinleme egzersizleri yapması, podcast dinlemesi ve okuduğunu anlama becerilerini pekiştirmesi, 6. sınıfa daha **dikkatli** bir başlangıç yapmasını sağlayacaktır. Ona bu konuda destek olmaya devam etmeliyiz.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["dinleme", "çaba", "gelişim", "dikkatli", "pekiştirme", "anlama", "ihtiyaç", "desteğe", "istekli", "süreklilik"]
   },
   {
@@ -158,7 +158,7 @@
   {
     "id": 27,
     "content": "Değerli velimiz, [Öğrenci Adı], yıl boyunca öz kontrol becerilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde yoga, meditasyon veya nefes egzersizleri gibi sakinleşme teknikleri öğrenmesi, 6. sınıfa daha **dengeli** ve **bilinçli** bir birey olarak başlamasını sağlayacaktır. Duygularını yönetme konusunda ilerleme kaydetti.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["öz kontrol", "dengeli", "bilinçli", "çaba", "sakinleşme", "yönetim", "duygusal", "gelişim", "ihtiyaç", "teknik"]
   },
   {
@@ -170,7 +170,7 @@
   {
     "id": 29,
     "content": "Kıymetli velimiz, [Öğrenci Adı], yıl boyunca sınav stratejilerini geliştirmek için **çaba** göstermiştir. Yaz tatilinde deneme sınavları çözmeye devam etmesi, farklı soru tiplerini incelemesi ve zaman yönetimi becerilerini pekiştirmesi, 7. sınıfa daha **hazırlıklı** başlamasını sağlayacaktır. Bu alandaki gayreti devam etmeli.",
-    "tone": "nötr",
+    "tone": "notr",
     "etiketler": ["sınav", "strateji", "gelişim", "çaba", "deneme", "zaman", "yönetim", "pekiştirme", "hazırlıklı", "ihtiyaç"]
   },
   {
