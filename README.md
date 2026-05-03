@@ -52,4 +52,7 @@ Sonra tarayicidan `http://localhost:5000` adresine gidin.
 
 ## Lisans
 
-Bu proje egitim amacli olarak gelistirilmistir.
+Bu proje GNU Affero General Public License v3.0 (AGPL-3.0) ile lisanslanmistir.
+
+- Tam metin: [LICENSE](LICENSE)
+- Lisans baglantisi: https://www.gnu.org/licenses/agpl-3.0.html

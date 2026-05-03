@@ -2,7 +2,7 @@
   "name": "karne-gorusleri",
   "version": "1.0.0",
   "type": "module",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "scripts": {
     "build:templates": "node scripts/build-template-data.mjs",
     "analyze:templates": "node scripts/analyze-template-quality.mjs",
