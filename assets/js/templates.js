@@ -15,6 +15,8 @@ class TemplateManager {
         this.selectedLength = 'all'; // Uzunluk filtresi (AI modal)
         this.aiSuggestionMode = 'classic'; // classic | tag-focused
         this.searchTerm = ''; // Arama terimi
+        this.searchSuggestions = [];
+        this.activeSearchSuggestionIndex = -1;
         this.aiTagSearchTerm = '';
         this.isAITagFilterCollapsed = true;
         this.aiSuggestionsVisibleCount = 20;
@@ -41,13 +43,201 @@ class TemplateManager {
 
     setupSearch() {
         const searchInput = document.getElementById('templateSearchInput');
-        if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                this.searchTerm = e.target.value.toLowerCase().trim();
-                this.resetSuggestionVisibleCount();
-                this.renderTagFilters();
-                this.renderSuggestions();
+        const clearSearchBtn = document.getElementById('clearTemplateSearchBtn');
+        if (!searchInput) return;
+
+        const applySearchInput = () => {
+            this.searchTerm = String(searchInput.value || '').toLowerCase().trim();
+            this.updateSearchClearButton();
+            this.renderTemplateSearchSuggestions(searchInput.value);
+            this.render();
+        };
+
+        searchInput.addEventListener('input', applySearchInput);
+
+        searchInput.addEventListener('focus', () => {
+            this.renderTemplateSearchSuggestions(searchInput.value);
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.hideTemplateSearchSuggestions();
+                return;
+            }
+
+            if (!Array.isArray(this.searchSuggestions) || this.searchSuggestions.length === 0) {
+                return;
+            }
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.activeSearchSuggestionIndex = (this.activeSearchSuggestionIndex + 1) % this.searchSuggestions.length;
+                this.renderTemplateSearchSuggestions(searchInput.value, { preserveActiveIndex: true });
+                return;
+            }
+
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const nextIndex = this.activeSearchSuggestionIndex <= 0
+                    ? this.searchSuggestions.length - 1
+                    : this.activeSearchSuggestionIndex - 1;
+                this.activeSearchSuggestionIndex = nextIndex;
+                this.renderTemplateSearchSuggestions(searchInput.value, { preserveActiveIndex: true });
+                return;
+            }
+
+            if (e.key === 'Enter') {
+                if (this.activeSearchSuggestionIndex >= 0 && this.searchSuggestions[this.activeSearchSuggestionIndex]) {
+                    e.preventDefault();
+                    this.applyTemplateSearchSuggestion(this.searchSuggestions[this.activeSearchSuggestionIndex].value);
+                }
+            }
+        });
+
+        searchInput.addEventListener('blur', () => {
+            window.setTimeout(() => {
+                this.hideTemplateSearchSuggestions();
+            }, 110);
+        });
+
+        if (clearSearchBtn) {
+            clearSearchBtn.addEventListener('click', () => {
+                this.clearTemplateSearch();
             });
+        }
+
+        this.updateSearchClearButton();
+    }
+
+    getTemplateTagSuggestions(query = '') {
+        const frequencyMap = new Map();
+        const normalizedQuery = String(query || '').toLowerCase().trim();
+
+        this.getAllTemplates().forEach((template) => {
+            const tags = Array.isArray(template.etiketler || template.tags) ? (template.etiketler || template.tags) : [];
+            tags.forEach((rawTag) => {
+                const tag = String(rawTag || '').trim();
+                if (!tag) return;
+
+                const key = tag.toLowerCase();
+                if (!frequencyMap.has(key)) {
+                    frequencyMap.set(key, {
+                        value: tag,
+                        count: 0,
+                    });
+                }
+
+                const existing = frequencyMap.get(key);
+                existing.count += 1;
+            });
+        });
+
+        let suggestions = Array.from(frequencyMap.entries()).map(([key, payload]) => ({
+            key,
+            value: payload.value,
+            count: payload.count,
+        }));
+
+        if (normalizedQuery) {
+            suggestions = suggestions.filter((suggestion) => suggestion.key.includes(normalizedQuery));
+        }
+
+        suggestions.sort((a, b) => {
+            const aStarts = normalizedQuery ? a.key.startsWith(normalizedQuery) : false;
+            const bStarts = normalizedQuery ? b.key.startsWith(normalizedQuery) : false;
+            if (aStarts !== bStarts) {
+                return aStarts ? -1 : 1;
+            }
+            if (b.count !== a.count) {
+                return b.count - a.count;
+            }
+            return a.value.localeCompare(b.value, 'tr');
+        });
+
+        return suggestions.slice(0, 8);
+    }
+
+    renderTemplateSearchSuggestions(query = '', options = {}) {
+        const { preserveActiveIndex = false } = options;
+        const container = document.getElementById('templateSearchSuggestions');
+        const searchInput = document.getElementById('templateSearchInput');
+        if (!container || !searchInput) return;
+
+        const suggestions = this.getTemplateTagSuggestions(query);
+        this.searchSuggestions = suggestions;
+
+        if (!preserveActiveIndex) {
+            this.activeSearchSuggestionIndex = -1;
+        } else if (this.activeSearchSuggestionIndex >= suggestions.length) {
+            this.activeSearchSuggestionIndex = suggestions.length - 1;
+        }
+
+        const shouldShow = suggestions.length > 0 && document.activeElement === searchInput;
+        if (!shouldShow) {
+            container.classList.add('hidden');
+            container.innerHTML = '';
+            return;
+        }
+
+        container.innerHTML = suggestions.map((suggestion, index) => `
+            <button type="button" class="template-search-suggestion-item ${index === this.activeSearchSuggestionIndex ? 'active' : ''}" data-suggestion="${suggestion.value}">
+                <span class="inline-flex items-center gap-2">
+                    <i class="fas fa-tag text-[11px] text-cyan-600 dark:text-cyan-300"></i>
+                    <span>${suggestion.value}</span>
+                </span>
+                <span class="template-search-suggestion-meta">${suggestion.count} kez</span>
+            </button>
+        `).join('');
+
+        container.classList.remove('hidden');
+
+        container.querySelectorAll('.template-search-suggestion-item').forEach((button) => {
+            button.addEventListener('mousedown', (event) => {
+                event.preventDefault();
+                const selectedValue = button.dataset.suggestion || '';
+                this.applyTemplateSearchSuggestion(selectedValue);
+            });
+        });
+    }
+
+    applyTemplateSearchSuggestion(value) {
+        const searchInput = document.getElementById('templateSearchInput');
+        const selected = String(value || '').trim();
+        if (!searchInput || !selected) return;
+
+        searchInput.value = selected;
+        this.searchTerm = selected.toLowerCase();
+        this.updateSearchClearButton();
+        this.hideTemplateSearchSuggestions();
+        this.render();
+    }
+
+    hideTemplateSearchSuggestions() {
+        const container = document.getElementById('templateSearchSuggestions');
+        if (!container) return;
+        container.classList.add('hidden');
+        this.activeSearchSuggestionIndex = -1;
+    }
+
+    clearTemplateSearch() {
+        const searchInput = document.getElementById('templateSearchInput');
+        if (!searchInput) return;
+
+        searchInput.value = '';
+        this.searchTerm = '';
+        this.updateSearchClearButton();
+        this.hideTemplateSearchSuggestions();
+        this.render();
+    }
+
+    updateSearchClearButton() {
+        const clearButton = document.getElementById('clearTemplateSearchBtn');
+        if (!clearButton) return;
+
+        if (this.searchTerm) {
+            clearButton.classList.remove('hidden');
+        } else {
+            clearButton.classList.add('hidden');
         }
     }
 
@@ -222,6 +412,7 @@ class TemplateManager {
             this.mainGradeFilter !== 'all',
             this.mainTermFilter !== 'all',
             this.mainLengthFilter !== 'all',
+            this.searchTerm.length > 0,
         ].filter(Boolean).length;
 
         const badge = openBtn.querySelector('span:last-child');
@@ -537,6 +728,7 @@ class TemplateManager {
             term: this.mainTermFilter,
             length: this.mainLengthFilter,
             tone: this.currentToneFilter,
+            searchTerm: this.searchTerm,
         }, {
             enableNeutralFallback: true,
         });
@@ -583,6 +775,7 @@ class TemplateManager {
         const gradeChip = document.getElementById('summaryGradeChip');
         const termChip = document.getElementById('summaryTermChip');
         const lengthChip = document.getElementById('summaryLengthChip');
+        const searchChip = document.getElementById('summarySearchChip');
         const neutralFallbackChip = document.getElementById('summaryNeutralFallbackChip');
 
         if (toneChip) {
@@ -618,6 +811,15 @@ class TemplateManager {
                 lengthChip.classList.remove('hidden');
             } else {
                 lengthChip.classList.add('hidden');
+            }
+        }
+
+        if (searchChip) {
+            if (this.searchTerm) {
+                searchChip.innerHTML = `<i class="fas fa-search text-xs"></i><span>Arama: ${this.searchTerm}</span>`;
+                searchChip.classList.remove('hidden');
+            } else {
+                searchChip.classList.add('hidden');
             }
         }
 
