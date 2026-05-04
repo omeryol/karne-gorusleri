@@ -4,14 +4,19 @@
   "type": "module",
   "license": "AGPL-3.0-only",
   "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.generated.css --minify",
     "build:templates": "node scripts/build-template-data.mjs",
+    "build": "npm run build:css && npm run build:templates",
     "analyze:templates": "node scripts/analyze-template-quality.mjs",
     "suggest:comments": "node scripts/generate-comment-candidates.mjs",
     "suggest:apply:dry": "node scripts/apply-comment-candidates.mjs --mode=dry-run --limit=50",
     "suggest:apply": "node scripts/apply-comment-candidates.mjs --mode=apply --limit=50 && npm run build:templates",
     "dedupe:short": "node scripts/deduplicate-short-comments.mjs && npm run build:templates",
     "dedupe:short:global": "node scripts/deduplicate-short-comments.mjs --scope=global && npm run build:templates",
-    "prelocal": "npm run build:templates",
+    "prelocal": "npm run build",
     "local": "node scripts/local-static-server.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
   }
 }
