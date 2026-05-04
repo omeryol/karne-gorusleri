@@ -737,10 +737,16 @@
                         </div>
                     </div>
 
-                    <button id="aiSuggestionsBtn" class="w-full sm:w-auto bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center justify-center">
-                        <i class="fas fa-brain mr-2"></i>
-                        AI Önerileri
-                    </button>
+                    <div class="w-full sm:w-auto flex items-center gap-2">
+                        <button id="undoTemplateActionBtn" class="flex-1 sm:flex-none bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 px-4 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            <i class="fas fa-undo"></i>
+                            Geri Al
+                        </button>
+                        <button id="aiSuggestionsBtn" class="flex-1 sm:flex-none bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center justify-center">
+                            <i class="fas fa-brain mr-2"></i>
+                            AI Önerileri
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Live Summary Chips -->

@@ -22,6 +22,9 @@ class TemplateManager {
         this.aiSuggestionsVisibleCount = 20;
         this.aiSuggestionsStep = 20;
         this.isMobileFilterSheetOpen = false;
+        this.filterHistory = [];
+        this.filterHistoryLimit = 10;
+        this.isApplyingHistory = false;
         this.templateLoadState = {
             loaded: 0,
             failed: 0,
@@ -39,6 +42,9 @@ class TemplateManager {
         this.currentToneFilter = 'all';
         this.syncMainToneFilterButtons();
         this.render();
+        this.filterHistory = this.loadFilterHistory();
+        this.recordFilterHistory('Baslangic');
+        this.updateUndoButtonState();
     }
 
     setupSearch() {
@@ -97,6 +103,7 @@ class TemplateManager {
         searchInput.addEventListener('blur', () => {
             window.setTimeout(() => {
                 this.hideTemplateSearchSuggestions();
+                this.recordFilterHistory('Arama filtresi');
             }, 110);
         });
 
@@ -210,6 +217,7 @@ class TemplateManager {
         this.updateSearchClearButton();
         this.hideTemplateSearchSuggestions();
         this.render();
+        this.recordFilterHistory('Etiket onerisi');
     }
 
     hideTemplateSearchSuggestions() {
@@ -228,6 +236,7 @@ class TemplateManager {
         this.updateSearchClearButton();
         this.hideTemplateSearchSuggestions();
         this.render();
+        this.recordFilterHistory('Arama temizleme');
     }
 
     updateSearchClearButton() {
@@ -239,6 +248,138 @@ class TemplateManager {
         } else {
             clearButton.classList.add('hidden');
         }
+    }
+
+    captureCurrentFilterState(action = '') {
+        return {
+            tone: this.currentToneFilter,
+            grade: this.mainGradeFilter,
+            term: this.mainTermFilter,
+            length: this.mainLengthFilter,
+            searchTerm: this.searchTerm,
+            action,
+            timestamp: Date.now(),
+        };
+    }
+
+    areFilterStatesEqual(a, b) {
+        if (!a || !b) return false;
+        return a.tone === b.tone &&
+            a.grade === b.grade &&
+            a.term === b.term &&
+            a.length === b.length &&
+            a.searchTerm === b.searchTerm;
+    }
+
+    loadFilterHistory() {
+        if (!this.storage || typeof this.storage.getSetting !== 'function') {
+            return [];
+        }
+
+        const history = this.storage.getSetting('templateFilterHistory');
+        if (!Array.isArray(history)) {
+            return [];
+        }
+
+        return history
+            .filter((item) => item && typeof item === 'object')
+            .slice(-this.filterHistoryLimit);
+    }
+
+    persistFilterHistory() {
+        if (!this.storage || typeof this.storage.setSetting !== 'function') {
+            return;
+        }
+
+        this.storage.setSetting('templateFilterHistory', this.filterHistory.slice(-this.filterHistoryLimit));
+    }
+
+    recordFilterHistory(action = '') {
+        if (this.isApplyingHistory) {
+            return;
+        }
+
+        const nextState = this.captureCurrentFilterState(action);
+        const lastState = this.filterHistory[this.filterHistory.length - 1];
+        if (lastState && this.areFilterStatesEqual(lastState, nextState)) {
+            this.updateUndoButtonState();
+            return;
+        }
+
+        this.filterHistory.push(nextState);
+        if (this.filterHistory.length > this.filterHistoryLimit) {
+            this.filterHistory = this.filterHistory.slice(-this.filterHistoryLimit);
+        }
+
+        this.persistFilterHistory();
+        this.updateUndoButtonState();
+    }
+
+    applyFilterState(state, options = {}) {
+        const { skipHistory = false } = options;
+        if (!state) return;
+
+        this.currentToneFilter = this.normalizeTone(state.tone || 'all');
+        this.mainGradeFilter = String(state.grade || 'all');
+        this.mainTermFilter = String(state.term || 'all');
+        this.mainLengthFilter = String(state.length || 'all');
+        this.searchTerm = String(state.searchTerm || '').toLowerCase().trim();
+
+        const gradeFilter = document.getElementById('templateGradeFilter');
+        if (gradeFilter) {
+            gradeFilter.value = this.mainGradeFilter;
+        }
+
+        const termFilter = document.getElementById('templateTermFilter');
+        if (termFilter) {
+            termFilter.value = this.mainTermFilter;
+        }
+
+        const lengthFilter = document.getElementById('templateLengthFilter');
+        if (lengthFilter) {
+            lengthFilter.value = this.mainLengthFilter;
+        }
+
+        const searchInput = document.getElementById('templateSearchInput');
+        if (searchInput) {
+            searchInput.value = this.searchTerm;
+        }
+
+        this.updateSearchClearButton();
+        this.syncMainToneFilterButtons();
+        this.render();
+
+        if (!skipHistory) {
+            this.recordFilterHistory(state.action || 'Filtre durumu');
+        }
+    }
+
+    undoLastFilterAction() {
+        if (this.filterHistory.length < 2) {
+            if (window.ui && window.ui.showToast) {
+                window.ui.showToast('Geri alinacak islem bulunamadi.', 'warning');
+            }
+            this.updateUndoButtonState();
+            return;
+        }
+
+        this.isApplyingHistory = true;
+        this.filterHistory.pop();
+        const previousState = this.filterHistory[this.filterHistory.length - 1];
+        this.applyFilterState(previousState, { skipHistory: true });
+        this.persistFilterHistory();
+        this.isApplyingHistory = false;
+        this.updateUndoButtonState();
+
+        if (window.ui && window.ui.showToast) {
+            window.ui.showToast('Son filtre islemi geri alindi.', 'success');
+        }
+    }
+
+    updateUndoButtonState() {
+        const undoButton = document.getElementById('undoTemplateActionBtn');
+        if (!undoButton) return;
+        undoButton.disabled = this.filterHistory.length < 2;
     }
 
     bindEvents() {
@@ -254,6 +395,7 @@ class TemplateManager {
             gradeFilter.addEventListener('change', (e) => {
                 this.mainGradeFilter = e.target.value || 'all';
                 this.render();
+                this.recordFilterHistory('Sinif filtresi');
             });
         }
 
@@ -262,6 +404,7 @@ class TemplateManager {
             termFilter.addEventListener('change', (e) => {
                 this.mainTermFilter = e.target.value || 'all';
                 this.render();
+                this.recordFilterHistory('Donem filtresi');
             });
         }
 
@@ -270,6 +413,14 @@ class TemplateManager {
             lengthFilter.addEventListener('change', (e) => {
                 this.mainLengthFilter = e.target.value || 'all';
                 this.render();
+                this.recordFilterHistory('Uzunluk filtresi');
+            });
+        }
+
+        const undoTemplateActionBtn = document.getElementById('undoTemplateActionBtn');
+        if (undoTemplateActionBtn) {
+            undoTemplateActionBtn.addEventListener('click', () => {
+                this.undoLastFilterAction();
             });
         }
 
@@ -720,6 +871,7 @@ class TemplateManager {
         this.currentToneFilter = this.normalizeTone(tone);
         this.syncMainToneFilterButtons();
         this.render();
+        this.recordFilterHistory('Ton filtresi');
     }
 
     getFilteredTemplates() {
@@ -1006,6 +1158,7 @@ class TemplateManager {
         this.mainGradeFilter = 'all';
         this.mainTermFilter = 'all';
         this.mainLengthFilter = 'all';
+        this.searchTerm = '';
 
         const gradeFilter = document.getElementById('templateGradeFilter');
         if (gradeFilter) {
@@ -1022,8 +1175,15 @@ class TemplateManager {
             lengthFilter.value = 'all';
         }
 
+        const searchInput = document.getElementById('templateSearchInput');
+        if (searchInput) {
+            searchInput.value = '';
+        }
+
+        this.updateSearchClearButton();
         this.syncMainToneFilterButtons();
         this.render();
+        this.recordFilterHistory('Filtre sifirlama');
     }
 
     getSmartEmptyStateTip() {
@@ -1050,6 +1210,7 @@ class TemplateManager {
         document.querySelector('.tone-filter[data-tone="all"]')?.classList.add('active');
 
         this.render();
+        this.recordFilterHistory('Tumunu goster');
 
         if (window.ui && window.ui.showToast) {
             window.ui.showToast('Tüm şablonlar gösteriliyor!', 'success');
