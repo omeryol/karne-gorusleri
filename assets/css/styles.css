@@ -24,7 +24,7 @@
   --ring: hsl(215, 25%, 27%);
   --radius: 0.5rem;
   --positive: hsl(134, 61%, 41%);
-  --neutral: hsl(48, 89%, 60%);
+  --neutral: hsl(215, 16%, 47%);
   --negative: hsl(0, 85%, 60%);
   --grade-5: hsl(207, 67%, 44%);
   --grade-6: hsl(145, 63%, 42%);
@@ -177,7 +177,7 @@ body[data-page-theme="templates"] .ambient-geometry {
   --input: hsl(215, 27%, 17%);
   --ring: hsl(216, 34%, 84%);
   --positive: hsl(134, 61%, 41%);
-  --neutral: hsl(48, 89%, 60%);
+  --neutral: hsl(215, 16%, 47%);
   --negative: hsl(0, 85%, 60%);
   --grade-5: hsl(207, 67%, 44%);
   --grade-6: hsl(145, 63%, 42%);
@@ -1098,6 +1098,21 @@ body[data-page-theme="templates"] .ambient-geometry {
   --modal-btn-radius: clamp(0.72rem, 0.62rem + 0.35vw, 0.95rem);
   --modal-btn-shadow: 0 9px 22px rgba(15, 23, 42, 0.16);
   --modal-btn-shadow-hover: 0 14px 28px rgba(15, 23, 42, 0.22);
+  --modal-surface-radius: clamp(1rem, 0.8rem + 0.65vw, 1.5rem);
+  --modal-surface-shadow: 0 30px 56px rgba(15, 23, 42, 0.33);
+}
+
+.fixed[id$="Modal"] {
+  background:
+    radial-gradient(120% 80% at 50% -6%, rgba(56, 189, 248, 0.14), transparent 58%),
+    rgba(2, 6, 23, 0.56) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.fixed[id$="Modal"] > div {
+  border-radius: var(--modal-surface-radius) !important;
+  box-shadow: var(--modal-surface-shadow) !important;
 }
 
 @media (pointer: coarse) {
@@ -1118,11 +1133,11 @@ body[data-page-theme="templates"] .ambient-geometry {
 }
 
 .fixed[id$="Modal"] button:not(.slide-indicator) {
-  --modal-btn-bg-start: #5f27cd;
-  --modal-btn-bg-end: #7c3aed;
-  --modal-btn-border: rgba(99, 102, 241, 0.42);
+  --modal-btn-bg-start: #0369a1;
+  --modal-btn-bg-end: #0f766e;
+  --modal-btn-border: rgba(34, 211, 238, 0.4);
   --modal-btn-fg: #ffffff;
-  --modal-btn-ring: rgba(99, 102, 241, 0.42);
+  --modal-btn-ring: rgba(6, 182, 212, 0.4);
   min-height: var(--modal-btn-height);
   padding-inline: var(--modal-btn-padding-inline);
   border-radius: var(--modal-btn-radius);
@@ -1141,6 +1156,12 @@ body[data-page-theme="templates"] .ambient-geometry {
   transform: translateY(-1px);
   box-shadow: var(--modal-btn-shadow-hover);
   filter: saturate(1.06);
+}
+
+.fixed[id$="Modal"] button:not(.slide-indicator):active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+  filter: saturate(1);
 }
 
 .fixed[id$="Modal"] button:not(.slide-indicator):focus-visible {
@@ -1237,6 +1258,157 @@ body[data-page-theme="templates"] .ambient-geometry {
   padding-inline: clamp(0.52rem, 0.46rem + 0.28vw, 0.84rem);
   font-size: clamp(0.68rem, 0.64rem + 0.18vw, 0.78rem);
   border-radius: 0.64rem;
+}
+
+/* Break visual monotony: apply tonal steps inside each button group */
+#aiSuggestionsModal #suggestionModeButtons button:nth-child(4n + 1),
+#aiSuggestionsModal #gradeFilterButtons button:nth-child(4n + 1) {
+  --modal-btn-bg-start: #0369a1;
+  --modal-btn-bg-end: #0f766e;
+  --modal-btn-border: rgba(34, 211, 238, 0.42);
+  --modal-btn-ring: rgba(6, 182, 212, 0.36);
+}
+
+#aiSuggestionsModal #suggestionModeButtons button:nth-child(4n + 2),
+#aiSuggestionsModal #gradeFilterButtons button:nth-child(4n + 2) {
+  --modal-btn-bg-start: #1d4ed8;
+  --modal-btn-bg-end: #4338ca;
+  --modal-btn-border: rgba(96, 165, 250, 0.42);
+  --modal-btn-ring: rgba(99, 102, 241, 0.35);
+}
+
+#aiSuggestionsModal #suggestionModeButtons button:nth-child(4n + 3),
+#aiSuggestionsModal #gradeFilterButtons button:nth-child(4n + 3) {
+  --modal-btn-bg-start: #0f766e;
+  --modal-btn-bg-end: #047857;
+  --modal-btn-border: rgba(45, 212, 191, 0.42);
+  --modal-btn-ring: rgba(20, 184, 166, 0.35);
+}
+
+#aiSuggestionsModal #suggestionModeButtons button:nth-child(4n),
+#aiSuggestionsModal #gradeFilterButtons button:nth-child(4n) {
+  --modal-btn-bg-start: #b45309;
+  --modal-btn-bg-end: #92400e;
+  --modal-btn-border: rgba(251, 191, 36, 0.4);
+  --modal-btn-ring: rgba(245, 158, 11, 0.34);
+}
+
+#aiSuggestionsModal #aiToneFilterButtons .ai-tone-filter[data-tone="all"] {
+  --modal-btn-bg-start: #1d4ed8;
+  --modal-btn-bg-end: #0369a1;
+  --modal-btn-border: rgba(96, 165, 250, 0.4);
+  --modal-btn-ring: rgba(59, 130, 246, 0.34);
+}
+
+#aiSuggestionsModal #aiToneFilterButtons .ai-tone-filter[data-tone="olumlu"],
+.tone-filter[data-tone="olumlu"] {
+  --modal-btn-bg-start: #15803d;
+  --modal-btn-bg-end: #047857;
+  --modal-btn-border: rgba(74, 222, 128, 0.4);
+  --modal-btn-ring: rgba(34, 197, 94, 0.34);
+}
+
+#aiSuggestionsModal #aiToneFilterButtons .ai-tone-filter[data-tone="notr"],
+.tone-filter[data-tone="notr"] {
+  --modal-btn-bg-start: #475569;
+  --modal-btn-bg-end: #334155;
+  --modal-btn-border: rgba(148, 163, 184, 0.42);
+  --modal-btn-ring: rgba(148, 163, 184, 0.34);
+}
+
+#aiSuggestionsModal #aiToneFilterButtons .ai-tone-filter[data-tone="olumsuz"],
+.tone-filter[data-tone="olumsuz"] {
+  --modal-btn-bg-start: #b91c1c;
+  --modal-btn-bg-end: #991b1b;
+  --modal-btn-border: rgba(248, 113, 113, 0.42);
+  --modal-btn-ring: rgba(248, 113, 113, 0.35);
+}
+
+#aiSuggestionsModal #tagFilterButtons .tag-filter-btn[data-tone="olumlu"] {
+  --modal-btn-bg-start: #15803d;
+  --modal-btn-bg-end: #047857;
+  --modal-btn-border: rgba(74, 222, 128, 0.4);
+  --modal-btn-ring: rgba(34, 197, 94, 0.34);
+}
+
+#aiSuggestionsModal #tagFilterButtons .tag-filter-btn[data-tone="notr"] {
+  --modal-btn-bg-start: #475569;
+  --modal-btn-bg-end: #334155;
+  --modal-btn-border: rgba(148, 163, 184, 0.42);
+  --modal-btn-ring: rgba(148, 163, 184, 0.34);
+}
+
+#aiSuggestionsModal #tagFilterButtons .tag-filter-btn[data-tone="olumsuz"] {
+  --modal-btn-bg-start: #b91c1c;
+  --modal-btn-bg-end: #991b1b;
+  --modal-btn-border: rgba(248, 113, 113, 0.42);
+  --modal-btn-ring: rgba(248, 113, 113, 0.35);
+}
+
+#aiSuggestionsModal #termFilterButtons button:nth-child(odd),
+#aiSuggestionsModal #lengthFilterButtons button:nth-child(odd) {
+  --modal-btn-bg-start: #1d4ed8;
+  --modal-btn-bg-end: #0369a1;
+  --modal-btn-border: rgba(56, 189, 248, 0.42);
+  --modal-btn-ring: rgba(59, 130, 246, 0.34);
+}
+
+#aiSuggestionsModal #termFilterButtons button:nth-child(even),
+#aiSuggestionsModal #lengthFilterButtons button:nth-child(even) {
+  --modal-btn-bg-start: #6d28d9;
+  --modal-btn-bg-end: #4f46e5;
+  --modal-btn-border: rgba(129, 140, 248, 0.42);
+  --modal-btn-ring: rgba(139, 92, 246, 0.34);
+}
+
+/* Action button rows also get subtle tonal hierarchy */
+#commentEditModal .flex.justify-end.space-x-4.pt-6 > button:first-child,
+#bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 > button:first-child {
+  --modal-btn-bg-start: #475569;
+  --modal-btn-bg-end: #334155;
+  --modal-btn-border: rgba(148, 163, 184, 0.42);
+  --modal-btn-ring: rgba(148, 163, 184, 0.34);
+}
+
+#commentEditModal .flex.justify-end.space-x-4.pt-6 > button:last-child,
+#bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 > button:last-child {
+  --modal-btn-bg-start: #0f766e;
+  --modal-btn-bg-end: #0f766e;
+  --modal-btn-border: rgba(45, 212, 191, 0.42);
+  --modal-btn-ring: rgba(20, 184, 166, 0.35);
+}
+
+/* Keep primary action bars visible while modal content scrolls on mobile */
+@media (max-width: 768px) {
+  #commentEditModal .flex.justify-end.space-x-4.pt-6,
+  #bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 {
+    position: sticky;
+    bottom: 0;
+    z-index: 12;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    padding: 0.7rem 0.25rem calc(0.55rem + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0), rgba(248, 250, 252, 0.98) 36%);
+    border-top: 1px solid rgba(148, 163, 184, 0.28);
+    backdrop-filter: blur(10px);
+  }
+
+  .dark #commentEditModal .flex.justify-end.space-x-4.pt-6,
+  .dark #bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0.98) 36%);
+    border-top-color: rgba(148, 163, 184, 0.26);
+  }
+
+  #commentEditModal .flex.justify-end.space-x-4.pt-6 {
+    gap: 0.6rem;
+    justify-content: stretch;
+  }
+
+  #commentEditModal .flex.justify-end.space-x-4.pt-6 > button,
+  #bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 > button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
 }
 
 /* Print styles */

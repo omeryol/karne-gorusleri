@@ -714,11 +714,12 @@ class TemplateManager {
             container.innerHTML = `
                 <div class="mb-3 flex flex-wrap items-center gap-2">
                     ${this.selectedTags.map((tag) => {
-                        const theme = this.getCategoryTheme(this.getTagCategory(tag));
+                        const tagTone = this.getDominantToneForTag(tag);
+                        const toneTheme = this.getToneTagTheme(tagTone);
                         return `
-                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs ${theme.pillClass}">
+                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs ${toneTheme.pillClass}" data-tone="${tagTone}">
                                 ${tag}
-                                <button class="ml-1 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" onclick="window.templates.toggleTagFilter('${tag}')">
+                                <button class="ml-1 opacity-80 hover:opacity-100" onclick="window.templates.toggleTagFilter('${tag}')">
                                     <i class="fas fa-times text-xs"></i>
                                 </button>
                             </span>
@@ -757,8 +758,10 @@ class TemplateManager {
 
         // Her etiket için şablon sayısını hesapla
         const tagCounts = {};
+        const tagTones = {};
         currentTags.forEach(tag => {
             tagCounts[tag] = this.getTemplateCountForTag(tag);
+            tagTones[tag] = this.getDominantToneForTag(tag);
         });
 
         const categorizedTags = this.categorizeTagsForFilters(currentTags);
@@ -794,11 +797,13 @@ class TemplateManager {
                             <div class="flex flex-wrap gap-1">
                                 ${tags.map((tag) => {
                                     const selected = this.selectedTags.includes(tag);
-                                    const buttonClass = selected ? theme.selectedButtonClass : theme.buttonClass;
+                                    const toneTheme = this.getToneTagTheme(tagTones[tag]);
+                                    const buttonClass = selected ? toneTheme.selectedButtonClass : toneTheme.buttonClass;
                                     return `
                                         <button
                                             onclick="window.templates.toggleTagFilter('${tag}')"
                                             class="tag-filter-btn px-2.5 py-1 rounded-full text-[11px] font-medium transition-all duration-200 ${buttonClass}"
+                                            data-tone="${tagTones[tag]}"
                                             title="${tag} - ${tagCounts[tag]} sablon"
                                         >
                                             ${tag} <span class="ml-1 text-[10px] opacity-80">(${tagCounts[tag]})</span>
@@ -1505,6 +1510,59 @@ class TemplateManager {
         return Object.keys(categorized)[0] || 'Diğer';
     }
 
+    getDominantToneForTag(tag) {
+        const toneCounts = { olumlu: 0, notr: 0, olumsuz: 0 };
+
+        const templates = this.getTemplatesBySelection(
+            this.selectedGrade || 'all',
+            this.selectedTerm || 'all',
+            this.selectedLength || 'all'
+        ).filter((template) => {
+            if (!this.searchTerm) return true;
+            const content = (template.content || template.icerik || '').toLowerCase();
+            const templateTags = template.etiketler || template.tags || [];
+            const tagString = templateTags.join(' ').toLowerCase();
+            return content.includes(this.searchTerm) || tagString.includes(this.searchTerm);
+        });
+
+        templates.forEach((template) => {
+            const templateTags = template.etiketler || template.tags || [];
+            if (!templateTags.includes(tag)) {
+                return;
+            }
+
+            const tone = this.normalizeTone(template.tone || template.ton);
+            if (Object.prototype.hasOwnProperty.call(toneCounts, tone)) {
+                toneCounts[tone] += 1;
+            }
+        });
+
+        return Object.entries(toneCounts)
+            .sort((a, b) => b[1] - a[1])[0]?.[0] || 'notr';
+    }
+
+    getToneTagTheme(tone) {
+        const themes = {
+            olumlu: {
+                buttonClass: 'bg-emerald-100 dark:bg-emerald-900/45 text-emerald-800 dark:text-emerald-100 hover:bg-emerald-200 dark:hover:bg-emerald-800/60',
+                selectedButtonClass: 'bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-400/70',
+                pillClass: 'bg-emerald-100 dark:bg-emerald-900/45 text-emerald-800 dark:text-emerald-100',
+            },
+            notr: {
+                buttonClass: 'bg-slate-100 dark:bg-slate-800/65 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700/80',
+                selectedButtonClass: 'bg-slate-600 text-white shadow-sm ring-1 ring-slate-400/70',
+                pillClass: 'bg-slate-100 dark:bg-slate-800/65 text-slate-700 dark:text-slate-200',
+            },
+            olumsuz: {
+                buttonClass: 'bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-100 hover:bg-red-200 dark:hover:bg-red-800/60',
+                selectedButtonClass: 'bg-red-600 text-white shadow-sm ring-1 ring-red-400/70',
+                pillClass: 'bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-100',
+            },
+        };
+
+        return themes[tone] || themes.notr;
+    }
+
     setCurrentStudent(student) {
         this.currentStudent = student;
     }
@@ -1803,7 +1861,7 @@ class TemplateManager {
     getToneBackgroundColor(tone) {
         const colors = {
             'olumlu': 'bg-green-50 dark:bg-green-900/20',
-            'notr': 'bg-yellow-50 dark:bg-yellow-900/20',
+            'notr': 'bg-slate-100 dark:bg-slate-800/55',
             'olumsuz': 'bg-red-50 dark:bg-red-900/20'
         };
         return colors[tone] || 'bg-white dark:bg-gray-800';
@@ -1812,7 +1870,7 @@ class TemplateManager {
     getToneHoverColor(tone) {
         const colors = {
             'olumlu': 'hover:bg-green-100 dark:hover:bg-green-900/30',
-            'notr': 'hover:bg-yellow-100 dark:hover:bg-yellow-900/30',
+            'notr': 'hover:bg-slate-200 dark:hover:bg-slate-700/60',
             'olumsuz': 'hover:bg-red-100 dark:hover:bg-red-900/30'
         };
         return colors[tone] || 'hover:bg-gray-100 dark:hover:bg-gray-600';
