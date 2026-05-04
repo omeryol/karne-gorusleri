@@ -665,16 +665,38 @@
         <div id="templates-tab" class="tab-content hidden">
             <!-- Sticky Filter Bar -->
             <div class="sticky-filter-bar top-0 z-30 -mx-3 -mt-3 sm:-mx-5 lg:-mx-8 px-3 sm:px-5 lg:px-8 pt-3 pb-3 mb-6 backdrop-blur-lg bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/60 dark:border-slate-700/40 shadow-sm">
+                <div class="sm:hidden mb-3">
+                    <button id="openTemplateFiltersBtn" class="w-full inline-flex items-center justify-between gap-2 bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900 px-4 py-3 rounded-xl font-semibold shadow-lg" aria-expanded="false" aria-controls="templateFilterPanel">
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fas fa-sliders-h"></i>
+                            Filtreleri Aç
+                        </span>
+                        <span class="text-xs bg-white/15 dark:bg-slate-900/15 px-2 py-1 rounded-full">Dokun</span>
+                    </button>
+                </div>
+
+                <div id="templateFilterBackdrop" class="template-filter-backdrop sm:hidden" aria-hidden="true"></div>
+
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 w-full sm:w-auto">
-                        <div class="flex flex-wrap gap-2">
+                    <div id="templateFilterPanel" class="template-filter-panel flex flex-col md:flex-row md:items-center gap-3 md:gap-4 w-full sm:w-auto" aria-hidden="false">
+                        <div class="template-filter-panel-header sm:hidden flex items-center justify-between mb-1">
+                            <div class="flex items-center gap-2 text-slate-800 dark:text-slate-100">
+                                <i class="fas fa-filter"></i>
+                                <span class="font-bold">Şablon Filtreleri</span>
+                            </div>
+                            <button id="closeTemplateFiltersBtn" class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-slate-200/80 dark:bg-slate-700/80 text-slate-700 dark:text-slate-200" aria-label="Filtre panelini kapat">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+
+                        <div class="template-tone-row flex flex-wrap gap-2">
                         <!-- Tone Filter -->
                         <button class="tone-filter active bg-positive text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumlu">Olumlu</button>
                         <button class="tone-filter bg-neutral text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="notr">Nötr</button>
                         <button class="tone-filter bg-negative text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="olumsuz">Olumsuz</button>
                         <button class="tone-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-tone="all">Tümü</button>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="template-select-row flex flex-wrap gap-2">
                             <select id="templateGradeFilter" class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-1.5 text-sm">
                                 <option value="all">Tüm Sınıflar</option>
                                 <option value="5">5. Sınıf</option>
@@ -693,9 +715,20 @@
                                 <option value="uzun">Uzun</option>
                             </select>
                         </div>
+
+                        <div class="sm:hidden grid grid-cols-2 gap-2 mt-2">
+                            <button id="mobileResetTemplateFiltersBtn" class="inline-flex items-center justify-center gap-2 bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-100 px-3 py-3 rounded-lg font-semibold">
+                                <i class="fas fa-redo"></i>
+                                Sıfırla
+                            </button>
+                            <button id="applyTemplateFiltersBtn" class="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white px-3 py-3 rounded-lg font-semibold">
+                                <i class="fas fa-check"></i>
+                                Uygula
+                            </button>
+                        </div>
                     </div>
 
-                    <button id="aiSuggestionsBtn" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center">
+                    <button id="aiSuggestionsBtn" class="w-full sm:w-auto bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center justify-center">
                         <i class="fas fa-brain mr-2"></i>
                         AI Önerileri
                     </button>

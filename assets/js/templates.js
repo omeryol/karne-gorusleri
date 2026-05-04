@@ -19,6 +19,7 @@ class TemplateManager {
         this.isAITagFilterCollapsed = true;
         this.aiSuggestionsVisibleCount = 20;
         this.aiSuggestionsStep = 20;
+        this.isMobileFilterSheetOpen = false;
         this.templateLoadState = {
             loaded: 0,
             failed: 0,
@@ -82,6 +83,49 @@ class TemplateManager {
             });
         }
 
+        const openTemplateFiltersBtn = document.getElementById('openTemplateFiltersBtn');
+        if (openTemplateFiltersBtn) {
+            openTemplateFiltersBtn.addEventListener('click', () => {
+                this.openMobileFilterSheet();
+            });
+        }
+
+        const closeTemplateFiltersBtn = document.getElementById('closeTemplateFiltersBtn');
+        if (closeTemplateFiltersBtn) {
+            closeTemplateFiltersBtn.addEventListener('click', () => {
+                this.closeMobileFilterSheet();
+            });
+        }
+
+        const applyTemplateFiltersBtn = document.getElementById('applyTemplateFiltersBtn');
+        if (applyTemplateFiltersBtn) {
+            applyTemplateFiltersBtn.addEventListener('click', () => {
+                this.render();
+                this.closeMobileFilterSheet();
+            });
+        }
+
+        const mobileResetTemplateFiltersBtn = document.getElementById('mobileResetTemplateFiltersBtn');
+        if (mobileResetTemplateFiltersBtn) {
+            mobileResetTemplateFiltersBtn.addEventListener('click', () => {
+                this.resetMainFilters();
+                this.closeMobileFilterSheet();
+            });
+        }
+
+        const templateFilterBackdrop = document.getElementById('templateFilterBackdrop');
+        if (templateFilterBackdrop) {
+            templateFilterBackdrop.addEventListener('click', () => {
+                this.closeMobileFilterSheet();
+            });
+        }
+
+        window.addEventListener('resize', () => {
+            if (!this.isMobileViewport()) {
+                this.closeMobileFilterSheet();
+            }
+        });
+
         // AI önerileri butonu
         const aiSuggestionsBtn = document.getElementById('aiSuggestionsBtn');
         if (aiSuggestionsBtn) {
@@ -120,6 +164,74 @@ class TemplateManager {
                 this.handleAIToneFilterChange(e);
             }
         });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isMobileFilterSheetOpen) {
+                this.closeMobileFilterSheet();
+            }
+        });
+    }
+
+    isMobileViewport() {
+        return window.matchMedia('(max-width: 639px)').matches;
+    }
+
+    openMobileFilterSheet() {
+        if (!this.isMobileViewport()) return;
+
+        const panel = document.getElementById('templateFilterPanel');
+        const backdrop = document.getElementById('templateFilterBackdrop');
+        const openBtn = document.getElementById('openTemplateFiltersBtn');
+        if (!panel || !backdrop) return;
+
+        panel.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        panel.setAttribute('aria-hidden', 'false');
+        if (openBtn) {
+            openBtn.setAttribute('aria-expanded', 'true');
+        }
+        document.body.classList.add('template-filter-sheet-open');
+        this.isMobileFilterSheetOpen = true;
+    }
+
+    closeMobileFilterSheet() {
+        const panel = document.getElementById('templateFilterPanel');
+        const backdrop = document.getElementById('templateFilterBackdrop');
+        const openBtn = document.getElementById('openTemplateFiltersBtn');
+
+        if (panel) {
+            panel.classList.remove('is-open');
+            panel.setAttribute('aria-hidden', this.isMobileViewport() ? 'true' : 'false');
+        }
+        if (backdrop) {
+            backdrop.classList.remove('is-open');
+        }
+        if (openBtn) {
+            openBtn.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('template-filter-sheet-open');
+        this.isMobileFilterSheetOpen = false;
+    }
+
+    updateMobileFilterTrigger() {
+        const openBtn = document.getElementById('openTemplateFiltersBtn');
+        if (!openBtn) return;
+
+        const activeCount = [
+            this.currentToneFilter !== 'all',
+            this.mainGradeFilter !== 'all',
+            this.mainTermFilter !== 'all',
+            this.mainLengthFilter !== 'all',
+        ].filter(Boolean).length;
+
+        const badge = openBtn.querySelector('span:last-child');
+        if (!badge) return;
+
+        if (activeCount > 0) {
+            badge.textContent = `${activeCount} aktif`;
+        } else {
+            badge.textContent = 'Dokun';
+        }
     }
 
     async loadTemplates() {
@@ -526,6 +638,8 @@ class TemplateManager {
                 neutralFallbackChip.classList.add('hidden');
             }
         }
+
+        this.updateMobileFilterTrigger();
     }
 
     renderTemplateCard(template) {
