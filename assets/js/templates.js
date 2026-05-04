@@ -324,6 +324,16 @@ class TemplateManager {
         };
     }
 
+    hasExplicitNeutralTemplates(templates) {
+        if (!Array.isArray(templates) || templates.length === 0) {
+            return false;
+        }
+        
+        return templates.some((template) =>
+            this.normalizeTone(template.tone || template.ton) === 'notr'
+        );
+    }
+
     applyTemplateSearchFilter(templates, searchTerm = '') {
         const normalizedSearchTerm = String(searchTerm || '').toLowerCase().trim();
         if (!normalizedSearchTerm) {
@@ -436,6 +446,9 @@ class TemplateManager {
 
         // Update template count display
         this.updateTemplateCount(templates.length);
+        
+        // Update filter summary chips
+        this.updateFilterSummaryChips();
 
         if (templates.length === 0) {
             grid.innerHTML = this.renderEmptyState();
@@ -449,6 +462,69 @@ class TemplateManager {
         const counter = document.getElementById('templateCounter');
         if (counter) {
             counter.textContent = count;
+        }
+    }
+
+    updateFilterSummaryChips() {
+        // Ton chip
+        const toneChip = document.getElementById('summaryToneChip');
+        const gradeChip = document.getElementById('summaryGradeChip');
+        const termChip = document.getElementById('summaryTermChip');
+        const lengthChip = document.getElementById('summaryLengthChip');
+        const neutralFallbackChip = document.getElementById('summaryNeutralFallbackChip');
+
+        if (toneChip) {
+            const toneText = this.getToneText(this.currentToneFilter);
+            toneChip.innerHTML = `<i class="fas fa-filter text-xs"></i><span>Ton: ${toneText}</span>`;
+        }
+
+        // Grade chip
+        if (gradeChip) {
+            if (this.mainGradeFilter !== 'all') {
+                gradeChip.innerHTML = `<i class="fas fa-graduation-cap text-xs"></i><span>${this.mainGradeFilter}. Sınıf</span>`;
+                gradeChip.classList.remove('hidden');
+            } else {
+                gradeChip.classList.add('hidden');
+            }
+        }
+
+        // Term chip
+        if (termChip) {
+            if (this.mainTermFilter !== 'all') {
+                termChip.innerHTML = `<i class="fas fa-calendar text-xs"></i><span>${this.mainTermFilter}. Dönem</span>`;
+                termChip.classList.remove('hidden');
+            } else {
+                termChip.classList.add('hidden');
+            }
+        }
+
+        // Length chip
+        if (lengthChip) {
+            if (this.mainLengthFilter !== 'all') {
+                const lengthText = this.mainLengthFilter === 'kisa' ? 'Kısa' : 'Uzun';
+                lengthChip.innerHTML = `<i class="fas fa-bars text-xs"></i><span>${lengthText}</span>`;
+                lengthChip.classList.remove('hidden');
+            } else {
+                lengthChip.classList.add('hidden');
+            }
+        }
+
+        // Neutral fallback chip - show if we're filtering by neutral but fallback is active
+        if (neutralFallbackChip) {
+            const normalizedTone = this.normalizeTone(this.currentToneFilter);
+            if (normalizedTone === 'notr') {
+                // Check if we need fallback (no explicit neutral templates)
+                const allSelectedTemplates = this.getTemplatesBySelection(this.mainGradeFilter, this.mainTermFilter, this.mainLengthFilter);
+                const hasExplicitNeutral = this.hasExplicitNeutralTemplates(allSelectedTemplates);
+                
+                if (!hasExplicitNeutral && allSelectedTemplates.length > 0) {
+                    neutralFallbackChip.classList.remove('hidden');
+                } else {
+                    neutralFallbackChip.classList.add('hidden');
+                }
+            } else {
+                neutralFallbackChip.classList.add('hidden');
+            }
         }
     }
 

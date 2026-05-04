@@ -698,6 +698,59 @@ body[data-page-theme="templates"] .ambient-geometry {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
+/* Sticky Filter Bar */
+.sticky-filter-bar {
+  position: sticky;
+  transition: all 0.3s ease;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sticky-filter-bar:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.dark .sticky-filter-bar:hover {
+  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 4px 12px rgba(2, 6, 23, 0.3);
+}
+
+/* Summary Chips Animation */
+#filterSummaryChips > span:not(.text-xs) {
+  animation: chipSlideIn 0.3s ease-out;
+}
+
+@keyframes chipSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+#filterSummaryChips span:not(.text-xs):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.dark #filterSummaryChips span:not(.text-xs):hover {
+  box-shadow: 0 4px 12px rgba(2, 6, 23, 0.3);
+}
+
 .hero-action:hover,
 .dashboard-shortcut:hover {
   transform: translateY(-2px);
