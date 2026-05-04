@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-05-04T15:51:46.038Z",
+  "files": {
+    "5_1.json": {
+      "comments": 800,
+      "duplicates": 208,
+      "avgReadability": 78.9
+    },
+    "5_2.json": {
+      "comments": 800,
+      "duplicates": 248,
+      "avgReadability": 79.2
+    },
+    "6_1.json": {
+      "comments": 800,
+      "duplicates": 194,
+      "avgReadability": 78.7
+    },
+    "6_2.json": {
+      "comments": 800,
+      "duplicates": 226,
+      "avgReadability": 78.7
+    },
+    "7_1.json": {
+      "comments": 800,
+      "duplicates": 208,
+      "avgReadability": 78.8
+    },
+    "7_2.json": {
+      "comments": 800,
+      "duplicates": 221,
+      "avgReadability": 78.5
+    },
+    "8_1.json": {
+      "comments": 800,
+      "duplicates": 212,
+      "avgReadability": 78.5
+    },
+    "8_2.json": {
+      "comments": 800,
+      "duplicates": 196,
+      "avgReadability": 78.5
+    }
+  },
+  "totals": {
+    "comments": 6400,
+    "duplicates": 1713,
+    "avgReadability": 78.7
+  }
+}
