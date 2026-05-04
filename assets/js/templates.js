@@ -471,6 +471,7 @@ class TemplateManager {
         this.renderAIToneFilters();
         this.renderTermFilters();
         this.renderLengthFilters();
+        this.renderStyleFilters();
         this.renderCurrentTags(); // Etiket gösterimini render et
         
         // Etiket filtrelerini en güncel verilerle yeniden oluştur
@@ -706,6 +707,63 @@ class TemplateManager {
         });
     }
 
+    renderStyleFilters() {
+        const container = document.getElementById('styleFilterButtons');
+        if (!container) return;
+
+        const styleTags = [
+            { tag: 'samimi', label: 'Samimi' },
+            { tag: 'hafif-esprili', label: 'Esprili' },
+            { tag: 'babacan', label: 'Babacan' },
+            { tag: 'şefkatli', label: 'Şefkatli' },
+            { tag: 'uyarici', label: 'Uyarıcı' },
+        ];
+
+        const availableTags = new Set(this.getTagsForCurrentSelection());
+
+        container.innerHTML = `
+            <div class="flex flex-wrap gap-1">
+                ${styleTags.map(({ tag, label }) => {
+                    const selected = this.selectedTags.includes(tag);
+                    const available = availableTags.has(tag);
+                    const baseClass = selected
+                        ? 'bg-fuchsia-600 text-white ring-1 ring-fuchsia-400/70'
+                        : 'bg-fuchsia-100 dark:bg-fuchsia-900 text-fuchsia-800 dark:text-fuchsia-200';
+                    const disabledClass = available
+                        ? 'hover:bg-fuchsia-200 dark:hover:bg-fuchsia-800 cursor-pointer'
+                        : 'opacity-50 cursor-not-allowed';
+                    return `
+                        <button
+                            class="style-filter-btn px-2 py-1 rounded text-xs transition-colors duration-200 ${baseClass} ${disabledClass}"
+                            data-tag="${tag}"
+                            ${available ? '' : 'disabled'}
+                            title="${label}"
+                        >
+                            ${label}
+                        </button>
+                    `;
+                }).join('')}
+            </div>
+        `;
+
+        container.querySelectorAll('.style-filter-btn').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                const tag = e.currentTarget?.dataset?.tag;
+                if (!tag) return;
+                this.toggleStyleFilter(tag);
+            });
+        });
+    }
+
+    toggleStyleFilter(tag) {
+        const availableTags = new Set(this.getTagsForCurrentSelection());
+        if (!availableTags.has(tag)) {
+            return;
+        }
+
+        this.toggleTagFilter(tag);
+    }
+
     renderCurrentTags() {
         // This function renders the current tags display
         // Currently a placeholder for future tag display functionality
@@ -753,6 +811,7 @@ class TemplateManager {
                 ? 'Arama ile eslesen etiket bulunamadi.'
                 : 'Bu secimde etiket bulunamadi.';
             container.innerHTML = `<p class="text-sm text-gray-500 dark:text-gray-400">${emptyText}</p>`;
+            this.renderStyleFilters();
             return;
         }
 
@@ -766,6 +825,7 @@ class TemplateManager {
 
         const categorizedTags = this.categorizeTagsForFilters(currentTags);
         const orderedCategoryNames = [
+            'Yorum Stili',
             'Akademik Başarı',
             'Davranış',
             'Sosyal Beceriler',
@@ -818,6 +878,7 @@ class TemplateManager {
         `;
 
         this.applyAITagFilterState();
+        this.renderStyleFilters();
     }
 
     toggleAITagFilterVisibility() {
@@ -855,6 +916,7 @@ class TemplateManager {
 
         this.renderCurrentTags(); // Update current tags display
         this.renderTagFilters(); // Re-render to update visual state
+        this.renderStyleFilters();
         this.resetSuggestionVisibleCount();
         this.renderSuggestions(); // Re-render suggestions with new filter
     }
@@ -1366,6 +1428,7 @@ class TemplateManager {
 
     categorizeTagsForFilters(tags) {
         const categories = {
+            'Yorum Stili': [],
             'Akademik Başarı': [],
             'Davranış': [],
             'Sosyal Beceriler': [],
@@ -1378,7 +1441,10 @@ class TemplateManager {
         tags.forEach(tag => {
             const lowerTag = this.normalizeTagForMatch(tag);
 
-            if (lowerTag.includes('başarı') || lowerTag.includes('not') || lowerTag.includes('akademik') || 
+            if (lowerTag.includes('samimi') || lowerTag.includes('babacan') || lowerTag.includes('sefkatli') ||
+                lowerTag.includes('uyarici') || lowerTag.includes('hafif-esprili') || lowerTag.includes('esprili')) {
+                categories['Yorum Stili'].push(tag);
+            } else if (lowerTag.includes('başarı') || lowerTag.includes('not') || lowerTag.includes('akademik') || 
                 lowerTag.includes('ders') || lowerTag.includes('sınav') || lowerTag.includes('ödev') || 
                 lowerTag.includes('performans') || lowerTag.includes('yetenek') ||
                 lowerTag.includes('basari') || lowerTag.includes('sinav') || lowerTag.includes('odev')) {
@@ -1420,6 +1486,7 @@ class TemplateManager {
 
     getCategoryIcon(category) {
         const icons = {
+            'Yorum Stili': 'fas fa-feather-alt text-fuchsia-500',
             'Akademik Başarı': 'fas fa-graduation-cap text-blue-500',
             'Davranış': 'fas fa-user-check text-green-500',
             'Sosyal Beceriler': 'fas fa-users text-purple-500',
@@ -1433,6 +1500,14 @@ class TemplateManager {
 
     getCategoryTheme(category) {
         const themes = {
+            'Yorum Stili': {
+                groupBgClass: 'bg-fuchsia-50/80 dark:bg-fuchsia-950/30',
+                groupBorderClass: 'border-fuchsia-200 dark:border-fuchsia-800',
+                groupTextClass: 'text-fuchsia-700 dark:text-fuchsia-300',
+                buttonClass: 'bg-fuchsia-100 dark:bg-fuchsia-900 text-fuchsia-800 dark:text-fuchsia-100 hover:bg-fuchsia-200 dark:hover:bg-fuchsia-800',
+                selectedButtonClass: 'bg-fuchsia-600 text-white shadow-sm ring-1 ring-fuchsia-400/70',
+                pillClass: 'bg-fuchsia-100 dark:bg-fuchsia-900 text-fuchsia-800 dark:text-fuchsia-100',
+            },
             'Akademik Başarı': {
                 groupBgClass: 'bg-blue-50/80 dark:bg-blue-950/30',
                 groupBorderClass: 'border-blue-200 dark:border-blue-800',
