@@ -545,8 +545,23 @@ class TemplateManager {
         const gradeTermInfo = this.getGradeTermFromTemplate(template);
         const templateId = template.id;
 
+        // Check if this is a neutral fallback template
+        const isNeutralFallback = template.isNeutralFallback === true;
+        const fallbackBadgeHTML = isNeutralFallback ? `
+            <div class="group relative inline-block">
+                <div class="bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 px-2.5 py-1.5 rounded-full text-xs font-medium border border-amber-300 dark:border-amber-700 flex items-center gap-1.5 cursor-help transition-all duration-200 hover:bg-amber-200 dark:hover:bg-amber-900/60">
+                    <i class="fas fa-lightbulb text-amber-600 dark:text-amber-400"></i>
+                    <span>Nötr Fallback</span>
+                </div>
+                <div class="hidden group-hover:flex absolute top-full mt-1 left-1/2 transform -translate-x-1/2 z-50 bg-gray-900 dark:bg-gray-800 text-white dark:text-gray-100 px-3 py-2 rounded-lg text-xs whitespace-nowrap border border-gray-700 dark:border-gray-600 shadow-lg pointer-events-none before:absolute before:bottom-full before:left-1/2 before:transform before:-translate-x-1/2 before:border-4 before:border-transparent before:border-b-gray-900 dark:before:border-b-gray-800">
+                    Nötr şablon bulunamadığı için olumlu/olumsuz havuzundan gösterilmektedir
+                    <div class="absolute bottom-full right-0 -top-1"></div>
+                </div>
+            </div>
+        ` : '';
+
         return `
-            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in cursor-pointer" onclick="window.templates.useTemplate('${templateId}')">
+            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in cursor-pointer relative" onclick="window.templates.useTemplate('${templateId}')">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex gap-2">
                         <span class="${toneColor} text-white px-3 py-1 rounded-full text-sm font-medium">${toneText}</span>
@@ -556,7 +571,8 @@ class TemplateManager {
                         ` : ''}
                         <span class="${lengthBadgeClass} text-white px-2 py-1 rounded-full text-xs font-medium">${lengthText}</span>
                     </div>
-                    <div class="flex space-x-2">
+                    <div class="flex space-x-2 items-center">
+                        ${fallbackBadgeHTML}
                         <button onclick="event.stopPropagation(); window.templates.copyTemplate('${templateId}')" class="text-gray-400 hover:text-primary transition-colors duration-200" title="Kopyala">
                             <i class="fas fa-copy"></i>
                         </button>
