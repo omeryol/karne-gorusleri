@@ -243,10 +243,38 @@ class TemplateManager {
 
     normalizeTone(tone) {
         const normalized = String(tone || 'notr').toLowerCase();
+        if (normalized === 'all') {
+            return 'all';
+        }
         if (normalized === 'olumlu' || normalized === 'notr' || normalized === 'olumsuz') {
             return normalized;
         }
+        if (normalized === 'nötr' || normalized === 'neutral' || normalized === 'orta' || normalized === 'middle') {
+            return 'notr';
+        }
         return 'notr';
+    }
+
+    filterTemplatesByTone(templates, tone) {
+        const normalizedTone = this.normalizeTone(tone || 'all');
+        if (normalizedTone === 'all') {
+            return templates;
+        }
+
+        const filtered = templates.filter((template) =>
+            this.normalizeTone(template.tone || template.ton) === normalizedTone
+        );
+
+        // Veri setinde acik notr kayit yoksa notr seciminde bos ekran gostermek yerine
+        // olumlu + olumsuzdan dengeli bir havuz goster.
+        if (normalizedTone === 'notr' && filtered.length === 0) {
+            return templates.filter((template) => {
+                const templateTone = this.normalizeTone(template.tone || template.ton);
+                return templateTone === 'olumlu' || templateTone === 'olumsuz';
+            });
+        }
+
+        return filtered;
     }
 
     normalizeLengthType(lengthType) {
@@ -291,7 +319,7 @@ class TemplateManager {
 
         // Ton filtresini uygula
         if (this.currentToneFilter !== 'all') {
-            filteredTemplates = filteredTemplates.filter((template) => (template.ton || template.tone) === this.currentToneFilter);
+            filteredTemplates = this.filterTemplatesByTone(filteredTemplates, this.currentToneFilter);
         }
 
         return filteredTemplates;
@@ -1066,7 +1094,7 @@ class TemplateManager {
 
         // Ton filtresini uygula
         if (this.aiModalToneFilter && this.aiModalToneFilter !== 'all') {
-            allTemplates = allTemplates.filter(template => (template.tone || template.ton) === this.aiModalToneFilter);
+            allTemplates = this.filterTemplatesByTone(allTemplates, this.aiModalToneFilter);
         }
 
         // Arama terimi filtresi uygula
@@ -1377,7 +1405,10 @@ class TemplateManager {
             this.selectedGrade || 'all',
             this.selectedTerm || 'all',
             this.selectedLength || 'all'
-        ).filter((template) => this.aiModalToneFilter === 'all' || (template.tone || template.ton) === this.aiModalToneFilter)
+        ).filter((template) => {
+            if (this.aiModalToneFilter === 'all') return true;
+            return this.filterTemplatesByTone([template], this.aiModalToneFilter).length > 0;
+        })
          .filter((template) => {
              if (!this.searchTerm) return true;
              const content = (template.content || template.icerik || '').toLowerCase();
@@ -1401,7 +1432,10 @@ class TemplateManager {
             this.selectedGrade || 'all',
             this.selectedTerm || 'all',
             this.selectedLength || 'all'
-        ).filter((template) => this.aiModalToneFilter === 'all' || (template.tone || template.ton) === this.aiModalToneFilter)
+        ).filter((template) => {
+            if (this.aiModalToneFilter === 'all') return true;
+            return this.filterTemplatesByTone([template], this.aiModalToneFilter).length > 0;
+        })
          .filter((template) => {
              if (!this.searchTerm) return true;
              const content = (template.content || template.icerik || '').toLowerCase();
