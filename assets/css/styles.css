@@ -1092,12 +1092,12 @@ body[data-page-theme="templates"] .ambient-geometry {
 
 /* Modal button system: color scale + platform-adaptive sizing */
 :root {
-  --modal-btn-font-size: clamp(0.82rem, 0.74rem + 0.18vw, 1rem);
-  --modal-btn-height: clamp(2.35rem, 2.05rem + 0.75vw, 2.95rem);
-  --modal-btn-padding-inline: clamp(0.82rem, 0.7rem + 0.45vw, 1.35rem);
-  --modal-btn-radius: clamp(0.72rem, 0.62rem + 0.35vw, 0.95rem);
-  --modal-btn-shadow: 0 9px 22px rgba(15, 23, 42, 0.16);
-  --modal-btn-shadow-hover: 0 14px 28px rgba(15, 23, 42, 0.22);
+  --modal-btn-font-size: clamp(0.78rem, 0.71rem + 0.16vw, 0.95rem);
+  --modal-btn-height: clamp(2.15rem, 1.92rem + 0.62vw, 2.72rem);
+  --modal-btn-padding-inline: clamp(0.72rem, 0.62rem + 0.34vw, 1.18rem);
+  --modal-btn-radius: clamp(0.66rem, 0.58rem + 0.28vw, 0.86rem);
+  --modal-btn-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+  --modal-btn-shadow-hover: 0 11px 24px rgba(15, 23, 42, 0.2);
   --modal-surface-radius: clamp(1rem, 0.8rem + 0.65vw, 1.5rem);
   --modal-surface-shadow: 0 30px 56px rgba(15, 23, 42, 0.33);
 }
@@ -1117,18 +1117,18 @@ body[data-page-theme="templates"] .ambient-geometry {
 
 @media (pointer: coarse) {
   :root {
-    --modal-btn-font-size: clamp(0.9rem, 0.78rem + 0.5vw, 1.04rem);
-    --modal-btn-height: clamp(2.68rem, 2.34rem + 0.85vw, 3.2rem);
-    --modal-btn-padding-inline: clamp(1rem, 0.84rem + 0.5vw, 1.52rem);
-    --modal-btn-radius: clamp(0.82rem, 0.7rem + 0.45vw, 1.08rem);
+    --modal-btn-font-size: clamp(0.84rem, 0.76rem + 0.34vw, 0.98rem);
+    --modal-btn-height: clamp(2.38rem, 2.14rem + 0.72vw, 2.88rem);
+    --modal-btn-padding-inline: clamp(0.84rem, 0.72rem + 0.4vw, 1.28rem);
+    --modal-btn-radius: clamp(0.74rem, 0.64rem + 0.35vw, 0.96rem);
   }
 }
 
 @media (max-width: 420px) {
   :root {
-    --modal-btn-font-size: clamp(0.86rem, 0.77rem + 0.5vw, 0.98rem);
-    --modal-btn-height: clamp(2.56rem, 2.26rem + 0.9vw, 3.05rem);
-    --modal-btn-padding-inline: clamp(0.92rem, 0.8rem + 0.6vw, 1.28rem);
+    --modal-btn-font-size: clamp(0.8rem, 0.74rem + 0.36vw, 0.92rem);
+    --modal-btn-height: clamp(2.28rem, 2.08rem + 0.68vw, 2.72rem);
+    --modal-btn-padding-inline: clamp(0.76rem, 0.68rem + 0.42vw, 1.04rem);
   }
 }
 
@@ -1254,9 +1254,9 @@ body[data-page-theme="templates"] .ambient-geometry {
 #aiSuggestionsModal #gradeFilterButtons button,
 #aiSuggestionsModal #termFilterButtons button,
 #aiSuggestionsModal #lengthFilterButtons button {
-  min-height: clamp(1.92rem, 1.72rem + 0.5vw, 2.34rem);
-  padding-inline: clamp(0.52rem, 0.46rem + 0.28vw, 0.84rem);
-  font-size: clamp(0.68rem, 0.64rem + 0.18vw, 0.78rem);
+  min-height: clamp(1.76rem, 1.62rem + 0.42vw, 2.08rem);
+  padding-inline: clamp(0.45rem, 0.4rem + 0.22vw, 0.72rem);
+  font-size: clamp(0.64rem, 0.61rem + 0.14vw, 0.74rem);
   border-radius: 0.64rem;
 }
 
@@ -1408,6 +1408,57 @@ body[data-page-theme="templates"] .ambient-geometry {
   #bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 > button {
     flex: 1 1 0;
     min-width: 0;
+  }
+}
+
+/* Modal layout stability: prevent clipping, overflow and uneven alignment */
+.fixed[id$="Modal"] {
+  padding: clamp(0.45rem, 1.5vw, 1rem);
+}
+
+.fixed[id$="Modal"] > div {
+  width: min(calc(100vw - 1rem), 96rem);
+  max-width: calc(100vw - 1rem) !important;
+  max-height: min(92dvh, 980px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+}
+
+#commentEditModal .flex.justify-end.space-x-4.pt-6,
+#bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 {
+  flex-wrap: wrap;
+  row-gap: 0.55rem;
+}
+
+#commentEditModal .flex.justify-end.space-x-4.pt-6 > button,
+#bulkCommentWizardModal .flex.justify-end.gap-3.mt-5 > button {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .fixed[id$="Modal"] {
+    align-items: flex-start !important;
+    justify-content: center;
+    padding-top: max(0.55rem, env(safe-area-inset-top));
+    padding-bottom: max(0.55rem, env(safe-area-inset-bottom));
+  }
+
+  .fixed[id$="Modal"] > div {
+    width: calc(100vw - 0.7rem) !important;
+    max-width: calc(100vw - 0.7rem) !important;
+    max-height: calc(100dvh - 0.9rem) !important;
+    margin: 0 !important;
+  }
+
+  #commentEditModal .flex.justify-between.items-center.mb-8 {
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  #commentEditModal .flex.items-center.space-x-4 {
+    flex-wrap: wrap;
+    gap: 0.35rem;
   }
 }
 
@@ -2802,5 +2853,210 @@ footer {
   ):not(:disabled) > * {
     position: relative;
     z-index: 1;
+  }
+}
+
+/* Comment modal rebuild: fully isolated clean design */
+#commentEditModal {
+  background: rgba(2, 6, 23, 0.66) !important;
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+}
+
+#commentEditModal > .comment-modal-shell {
+  width: min(92vw, 900px) !important;
+  max-width: calc(100vw - 0.85rem) !important;
+  max-height: min(92dvh, 860px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden !important;
+  border-radius: 1rem !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.97), rgba(248, 250, 252, 0.94)) !important;
+  box-shadow: 0 18px 44px rgba(2, 6, 23, 0.34) !important;
+  clip-path: none !important;
+}
+
+.dark #commentEditModal > .comment-modal-shell {
+  border-color: rgba(148, 163, 184, 0.24) !important;
+  background: linear-gradient(170deg, rgba(15, 23, 42, 0.97), rgba(30, 41, 59, 0.94)) !important;
+}
+
+#commentEditModal > .comment-modal-shell::before,
+#commentEditModal > .comment-modal-shell::after {
+  display: none !important;
+  content: none !important;
+}
+
+#commentEditModal .comment-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: 0 !important;
+  padding: 0.78rem 0.88rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(248, 250, 252, 0.95);
+}
+
+.dark #commentEditModal .comment-modal-header {
+  border-bottom-color: rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.92);
+}
+
+#commentEditModal h2 {
+  color: #0f172a !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: 800;
+  background: none !important;
+}
+
+.dark #commentEditModal h2 {
+  color: #f8fafc !important;
+}
+
+#commentEditModal #commentEditForm {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.86rem !important;
+  gap: 0.72rem !important;
+}
+
+#commentEditModal .comment-modal-student-card,
+#commentEditModal .comment-modal-editor,
+#commentEditModal .comment-modal-history {
+  border-radius: 0.86rem !important;
+}
+
+#commentEditModal .comment-modal-student-card {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(120deg, rgba(239, 246, 255, 0.9), rgba(243, 244, 255, 0.82)) !important;
+}
+
+.dark #commentEditModal .comment-modal-student-card {
+  border-color: rgba(148, 163, 184, 0.2);
+  background: linear-gradient(120deg, rgba(30, 41, 59, 0.82), rgba(15, 23, 42, 0.74)) !important;
+}
+
+#commentEditModal .comment-modal-editor {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 0.72rem;
+  background: rgba(248, 250, 252, 0.76);
+}
+
+.dark #commentEditModal .comment-modal-editor {
+  border-color: rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+#commentEditModal textarea[name="content"] {
+  min-height: 9rem !important;
+  max-height: 34vh !important;
+  height: auto !important;
+  border-radius: 0.86rem !important;
+  font-size: 0.94rem !important;
+  line-height: 1.5;
+}
+
+#commentEditModal .comment-modal-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+#commentEditModal .comment-modal-editor-toolbar > span {
+  flex: 1 1 auto;
+  min-width: 10rem;
+}
+
+#commentEditModal .comment-modal-editor-toolbar > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+#commentEditModal .comment-modal-tool-btn {
+  min-height: 1.95rem !important;
+  padding: 0.38rem 0.66rem !important;
+  font-size: 0.73rem !important;
+  border-radius: 0.68rem !important;
+}
+
+#commentEditModal .comment-modal-history {
+  max-height: 28vh;
+  overflow: auto;
+}
+
+#commentEditModal .comment-modal-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 11;
+  margin: 0 !important;
+  padding-top: 0.62rem;
+  gap: 0.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0), rgba(248, 250, 252, 0.98) 42%);
+}
+
+.dark #commentEditModal .comment-modal-actions {
+  border-top-color: rgba(148, 163, 184, 0.2);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0.96) 42%);
+}
+
+#commentEditModal .comment-modal-actions > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
+}
+
+#commentEditModal .comment-modal-cancel-btn,
+#commentEditModal .comment-modal-save-btn {
+  min-height: 2.3rem !important;
+  font-size: 0.82rem !important;
+  padding-inline: 0.9rem !important;
+  border-radius: 0.76rem !important;
+}
+
+#commentEditModal :where(button):not(:disabled),
+#commentEditModal :where(button):not(:disabled):hover {
+  transform: none !important;
+  filter: none !important;
+}
+
+#commentEditModal :where(button)::before,
+#commentEditModal :where(button)::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 768px) {
+  #commentEditModal > .comment-modal-shell {
+    width: calc(100vw - 0.52rem) !important;
+    max-width: calc(100vw - 0.52rem) !important;
+    max-height: calc(100dvh - 0.72rem) !important;
+  }
+
+  #commentEditModal .comment-modal-header {
+    padding: 0.62rem 0.68rem;
+  }
+
+  #commentEditModal .comment-modal-nav {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  #commentEditModal #commentEditForm {
+    padding: 0.7rem !important;
+  }
+
+  #commentEditModal .comment-modal-history {
+    max-height: 24vh;
+  }
+
+  #commentEditModal .comment-modal-cancel-btn,
+  #commentEditModal .comment-modal-save-btn {
+    flex: 1 1 0;
+    min-width: 0;
   }
 }

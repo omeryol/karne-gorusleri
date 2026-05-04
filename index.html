@@ -832,10 +832,10 @@
 
     <!-- Comment Edit Modal -->
     <div id="commentEditModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4" style="display: none;">
-        <div class="philosophy-editor-shell bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-7 max-w-3xl w-full max-h-[95vh] md:max-h-auto overflow-y-auto md:overflow-visible transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
+        <div class="comment-modal-shell bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-7 max-w-3xl w-full max-h-[95vh] md:max-h-auto overflow-y-auto md:overflow-visible transform scale-95 opacity-0 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700">
             <!-- Header -->
-            <div class="flex justify-between items-center mb-8">
-                <div class="flex items-center space-x-4">
+            <div class="comment-modal-header flex justify-between items-center mb-8">
+                <div class="comment-modal-nav flex items-center space-x-4">
                     <button id="prevStudentBtn" class="text-gray-400 hover:text-primary transition-all duration-200 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 hover:scale-110" title="Önceki Öğrenci">
                         <i class="fas fa-chevron-left text-lg"></i>
                     </button>
@@ -851,7 +851,7 @@
 
             <form id="commentEditForm" class="space-y-6">
                 <!-- Student Info Card -->
-                <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-4 border border-blue-200 dark:border-gray-600">
+                <div class="comment-modal-student-card bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-4 border border-blue-200 dark:border-gray-600">
                     <div class="flex items-center justify-between gap-3">
                         <div class="flex items-center space-x-3 min-w-0">
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-base shadow-lg" id="editStudentAvatar">
@@ -874,20 +874,20 @@
                 </div>
 
                 <!-- Comment Textarea -->
-                <div class="space-y-3">
+                <div class="comment-modal-editor space-y-3">
                     <label for="content" class="block text-base font-semibold text-gray-700 dark:text-gray-300">Yorum İçeriği</label>
                     <textarea name="content" required class="w-full px-4 py-3 border-2 border-teal-300 dark:border-teal-700 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:text-white h-40 md:h-44 min-h-[9rem] resize-y text-base leading-relaxed" placeholder="Öğrenci yorumunu buraya yazın..." maxlength="500"></textarea>
-                    <div class="flex justify-between items-center">
+                    <div class="comment-modal-editor-toolbar flex justify-between items-center">
                         <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">
                             <i class="fas fa-keyboard mr-1"></i>
                             Karakter: <span id="charCount" class="font-bold">0</span>/500
                         </span>
                         <div class="flex gap-3">
-                            <button type="button" id="editAISuggestionsBtn" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-blue-500/25 transform hover:scale-105">
+                            <button type="button" id="editAISuggestionsBtn" class="comment-modal-tool-btn bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-blue-500/25 transform hover:scale-105">
                                 <i class="fas fa-robot"></i>
                                 AI Önerileri
                             </button>
-                            <button type="button" id="editPlaceholderBtn" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-red-500/25 transform hover:scale-105" title="[Öğrenci Adı] yer tutucusunu kaldır">
+                            <button type="button" id="editPlaceholderBtn" class="comment-modal-tool-btn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-red-500/25 transform hover:scale-105" title="[Öğrenci Adı] yer tutucusunu kaldır">
                                 <i class="fas fa-eraser"></i>
                                 İsmi Kaldır
                             </button>
@@ -897,7 +897,7 @@
                 </div>
 
                 <!-- Tone and Period Selection -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="comment-modal-meta-grid grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-3">
                         <label for="tone" class="block text-base font-semibold text-gray-700 dark:text-gray-300">
                             <i class="fas fa-smile mr-2 text-primary"></i>
@@ -921,7 +921,7 @@
                     </div>
                 </div>
 
-                <div id="studentCommentHistoryPanel" class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-900/35 p-3 space-y-3">
+                <div id="studentCommentHistoryPanel" class="comment-modal-history rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-900/35 p-3 space-y-3">
                     <div class="flex items-center justify-between gap-3 flex-wrap">
                         <div>
                             <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">Ogrenci Gecmisi</p>
@@ -933,12 +933,12 @@
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="flex justify-end space-x-4 pt-6">
-                    <button type="button" id="cancelEditBtn" class="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 font-semibold text-base">
+                <div class="comment-modal-actions flex justify-end space-x-4 pt-6">
+                    <button type="button" id="cancelEditBtn" class="comment-modal-cancel-btn px-8 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 font-semibold text-base">
                         <i class="fas fa-times mr-2"></i>
                         İptal
                     </button>
-                    <button type="submit" class="px-8 py-3 bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white rounded-xl font-semibold text-base transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                    <button type="submit" class="comment-modal-save-btn px-8 py-3 bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white rounded-xl font-semibold text-base transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
                         <i class="fas fa-save mr-2"></i>
                         Yorumu Kaydet
                     </button>
