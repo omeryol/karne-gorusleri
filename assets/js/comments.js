@@ -6,6 +6,9 @@ class CommentManager {
         this.currentToneFilter = 'all';
         this.currentEditingId = null;
         this.selectedPresetId = '';
+        this.quickWorkflowCollapsed = false;
+        this.quickTemplateSearchTerm = '';
+        this.quickTemplatePool = [];
         this.init();
     }
 
@@ -14,6 +17,7 @@ class CommentManager {
         try {
             this.bindEvents();
             this.render();
+            this.initQuickWorkflow();
             debugLog('CommentManager.init() completed successfully');
         } catch (error) {
             debugLog('ERROR in CommentManager.init():', error.message);
@@ -80,6 +84,57 @@ class CommentManager {
         if (viewAllCommentsBtn) {
             viewAllCommentsBtn.addEventListener('click', () => {
                 this.showAllCommentsModal();
+            });
+        }
+
+        const toggleQuickWorkflowBtn = document.getElementById('toggleQuickWorkflowBtn');
+        if (toggleQuickWorkflowBtn) {
+            toggleQuickWorkflowBtn.addEventListener('click', () => {
+                this.quickWorkflowCollapsed = !this.quickWorkflowCollapsed;
+                this.syncQuickWorkflowVisibility();
+            });
+        }
+
+        const quickStudentSelect = document.getElementById('quickWorkflowStudentSelect');
+        if (quickStudentSelect) {
+            quickStudentSelect.addEventListener('change', () => {
+                this.syncQuickWorkflowFromExistingComment();
+            });
+        }
+
+        const quickPeriodSelect = document.getElementById('quickWorkflowPeriod');
+        if (quickPeriodSelect) {
+            quickPeriodSelect.addEventListener('change', () => {
+                this.syncQuickWorkflowFromExistingComment();
+            });
+        }
+
+        const quickToneSelect = document.getElementById('quickWorkflowTone');
+        if (quickToneSelect) {
+            quickToneSelect.addEventListener('change', () => {
+                this.renderQuickWorkflowTemplates();
+            });
+        }
+
+        const quickTemplateSearch = document.getElementById('quickWorkflowTemplateSearch');
+        if (quickTemplateSearch) {
+            quickTemplateSearch.addEventListener('input', (e) => {
+                this.quickTemplateSearchTerm = String(e.target.value || '').toLowerCase().trim();
+                this.renderQuickWorkflowTemplates();
+            });
+        }
+
+        const quickApplyTemplateBtn = document.getElementById('quickWorkflowApplyTemplateBtn');
+        if (quickApplyTemplateBtn) {
+            quickApplyTemplateBtn.addEventListener('click', () => {
+                this.applyQuickWorkflowTemplate();
+            });
+        }
+
+        const quickSaveBtn = document.getElementById('quickWorkflowSaveBtn');
+        if (quickSaveBtn) {
+            quickSaveBtn.addEventListener('click', () => {
+                this.saveQuickWorkflowComment();
             });
         }
 
@@ -159,6 +214,195 @@ class CommentManager {
 
         this.populatePresetSelect();
         this.syncFilterControls();
+    }
+
+    initQuickWorkflow() {
+        this.refreshQuickTemplatePool();
+        this.renderQuickWorkflowStudents();
+        this.renderQuickWorkflowTemplates();
+        this.syncQuickWorkflowVisibility();
+        this.syncQuickWorkflowFromExistingComment();
+    }
+
+    refreshQuickTemplatePool() {
+        const templates = window.templates && typeof window.templates.getAllTemplates === 'function'
+            ? window.templates.getAllTemplates()
+            : [];
+
+        this.quickTemplatePool = templates.map((template) => {
+            const content = String(template?.content || template?.icerik || '').trim();
+            return {
+                id: String(template?.id || ''),
+                content,
+                tone: String(template?.tone || template?.ton || 'olumlu'),
+                grade: String(template?.grade || ''),
+                term: String(template?.term || ''),
+            };
+        }).filter((template) => template.id && template.content);
+    }
+
+    renderQuickWorkflowStudents() {
+        const select = document.getElementById('quickWorkflowStudentSelect');
+        if (!select) return;
+
+        const students = this.storage.getStudents();
+        const existingValue = select.value;
+
+        const options = ['<option value="">Öğrenci seçin</option>'];
+        students.forEach((student) => {
+            options.push(`<option value="${student.id}">${student.name} (${student.grade}-${student.section})</option>`);
+        });
+
+        select.innerHTML = options.join('');
+        if (existingValue && students.some((student) => student.id === existingValue)) {
+            select.value = existingValue;
+        }
+    }
+
+    renderQuickWorkflowTemplates() {
+        const select = document.getElementById('quickWorkflowTemplateSelect');
+        const toneSelect = document.getElementById('quickWorkflowTone');
+        if (!select) return;
+
+        if (!Array.isArray(this.quickTemplatePool) || this.quickTemplatePool.length === 0) {
+            this.refreshQuickTemplatePool();
+        }
+
+        const toneFilter = toneSelect ? String(toneSelect.value || 'olumlu') : 'olumlu';
+        const searchTerm = this.quickTemplateSearchTerm;
+
+        const filtered = this.quickTemplatePool
+            .filter((template) => {
+                const toneMatch = toneFilter === 'all' ? true : template.tone === toneFilter;
+                if (!toneMatch) return false;
+
+                if (!searchTerm) return true;
+
+                const haystack = `${template.content} ${template.grade} ${template.term} ${template.tone}`.toLowerCase();
+                return haystack.includes(searchTerm);
+            })
+            .slice(0, 160);
+
+        if (filtered.length === 0) {
+            select.innerHTML = '<option value="">Uygun şablon bulunamadı</option>';
+            return;
+        }
+
+        select.innerHTML = filtered.map((template) => {
+            const shortContent = template.content.length > 84
+                ? `${template.content.slice(0, 84)}...`
+                : template.content;
+            return `<option value="${template.id}">[${template.grade || '-'} / ${template.term || '-'}] ${shortContent}</option>`;
+        }).join('');
+    }
+
+    syncQuickWorkflowVisibility() {
+        const body = document.getElementById('quickWorkflowBody');
+        const toggle = document.getElementById('toggleQuickWorkflowBtn');
+        if (!body || !toggle) return;
+
+        body.classList.toggle('hidden', this.quickWorkflowCollapsed);
+        toggle.textContent = this.quickWorkflowCollapsed ? 'Genişlet' : 'Daralt';
+    }
+
+    syncQuickWorkflowFromExistingComment() {
+        const studentSelect = document.getElementById('quickWorkflowStudentSelect');
+        const periodSelect = document.getElementById('quickWorkflowPeriod');
+        const toneSelect = document.getElementById('quickWorkflowTone');
+        const editor = document.getElementById('quickWorkflowEditor');
+        if (!studentSelect || !periodSelect || !toneSelect || !editor) return;
+
+        const studentId = studentSelect.value;
+        const period = periodSelect.value || '1';
+        if (!studentId) {
+            editor.value = '';
+            return;
+        }
+
+        const existingComment = this.storage
+            .getCommentsByStudentId(studentId)
+            .find((comment) => String(comment.period || '1') === period);
+
+        if (existingComment) {
+            editor.value = existingComment.content || '';
+            toneSelect.value = existingComment.tone || 'olumlu';
+        }
+
+        this.renderQuickWorkflowTemplates();
+    }
+
+    applyQuickWorkflowTemplate() {
+        const studentSelect = document.getElementById('quickWorkflowStudentSelect');
+        const templateSelect = document.getElementById('quickWorkflowTemplateSelect');
+        const editor = document.getElementById('quickWorkflowEditor');
+        const toneSelect = document.getElementById('quickWorkflowTone');
+        if (!studentSelect || !templateSelect || !editor || !toneSelect) return;
+
+        const selectedTemplateId = templateSelect.value;
+        if (!selectedTemplateId) {
+            window.ui.showToast('Lütfen bir şablon seçin.', 'warning');
+            return;
+        }
+
+        const template = this.quickTemplatePool.find((item) => item.id === selectedTemplateId);
+        if (!template) {
+            window.ui.showToast('Şablon bulunamadı.', 'error');
+            return;
+        }
+
+        const student = this.storage.getStudentById(studentSelect.value);
+        const firstName = student ? String(student.name || '').split(' ')[0] : '[Öğrenci Adı]';
+        editor.value = template.content.replace(/\[Öğrenci Adı\]/g, firstName || '[Öğrenci Adı]');
+        toneSelect.value = template.tone || toneSelect.value;
+        window.ui.showToast('Şablon editöre eklendi.', 'success');
+    }
+
+    saveQuickWorkflowComment() {
+        const studentSelect = document.getElementById('quickWorkflowStudentSelect');
+        const periodSelect = document.getElementById('quickWorkflowPeriod');
+        const toneSelect = document.getElementById('quickWorkflowTone');
+        const editor = document.getElementById('quickWorkflowEditor');
+        if (!studentSelect || !periodSelect || !toneSelect || !editor) return;
+
+        const studentId = studentSelect.value;
+        const period = periodSelect.value || '1';
+        const tone = toneSelect.value || 'olumlu';
+        const content = String(editor.value || '').trim();
+
+        if (!studentId) {
+            window.ui.showToast('Önce öğrenci seçin.', 'warning');
+            return;
+        }
+
+        if (content.length < 10) {
+            window.ui.showToast('Yorum en az 10 karakter olmalıdır.', 'warning');
+            return;
+        }
+
+        const existingComment = this.storage
+            .getCommentsByStudentId(studentId)
+            .find((comment) => String(comment.period || '1') === period);
+
+        const payload = {
+            content,
+            tone,
+            period,
+            tags: [],
+        };
+
+        const success = existingComment
+            ? this.storage.updateComment(existingComment.id, payload)
+            : this.storage.addComment({ ...payload, studentId });
+
+        if (!success) {
+            window.ui.showToast('Yorum kaydedilemedi.', 'error');
+            return;
+        }
+
+        this.render();
+        window.students && window.students.render();
+        window.app && window.app.dashboard && window.app.dashboard.updateStats();
+        window.ui.showToast(existingComment ? 'Yorum güncellendi.' : 'Yorum kaydedildi.', 'success');
     }
 
     syncFilterControls() {
@@ -1147,6 +1391,8 @@ class CommentManager {
     render() {
         const container = document.getElementById('commentsList');
         const comments = this.getFilteredComments();
+
+        this.renderQuickWorkflowStudents();
 
         if (comments.length === 0) {
             container.innerHTML = this.renderEmptyState();

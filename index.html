@@ -655,6 +655,58 @@
                 </button>
             </div>
 
+            <section id="quickWorkflowPanel" class="mb-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/85 dark:bg-slate-900/65 backdrop-blur p-4 md:p-5 shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                            <i class="fas fa-bolt text-amber-500"></i>
+                            Hızlı Akış Modu
+                        </h3>
+                        <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400">Öğrenci seç, şablon uygula ve yorumu kaydet.</p>
+                    </div>
+                    <button id="toggleQuickWorkflowBtn" class="text-sm font-semibold px-3 py-2 rounded-lg bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-100">
+                        Daralt
+                    </button>
+                </div>
+
+                <div id="quickWorkflowBody" class="grid grid-cols-1 xl:grid-cols-3 gap-4">
+                    <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-800/40 p-3 space-y-3">
+                        <h4 class="font-semibold text-slate-800 dark:text-slate-100">1. Öğrenci Seç</h4>
+                        <select id="quickWorkflowStudentSelect" class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm"></select>
+                        <div class="grid grid-cols-2 gap-2">
+                            <select id="quickWorkflowPeriod" class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm">
+                                <option value="1">1. Dönem</option>
+                                <option value="2">2. Dönem</option>
+                            </select>
+                            <select id="quickWorkflowTone" class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm">
+                                <option value="olumlu">Olumlu</option>
+                                <option value="notr">Nötr</option>
+                                <option value="olumsuz">Olumsuz</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-800/40 p-3 space-y-3">
+                        <h4 class="font-semibold text-slate-800 dark:text-slate-100">2. Şablon Seç</h4>
+                        <input id="quickWorkflowTemplateSearch" type="text" placeholder="Şablon ara..." class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm">
+                        <select id="quickWorkflowTemplateSelect" class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm h-44" size="8"></select>
+                        <button id="quickWorkflowApplyTemplateBtn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-semibold text-sm">
+                            <i class="fas fa-magic mr-2"></i>
+                            Şablonu Editöre Uygula
+                        </button>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-800/40 p-3 space-y-3">
+                        <h4 class="font-semibold text-slate-800 dark:text-slate-100">3. Düzenle ve Kaydet</h4>
+                        <textarea id="quickWorkflowEditor" class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm h-44" placeholder="Yorum içeriği buraya gelecek..."></textarea>
+                        <button id="quickWorkflowSaveBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg font-semibold text-sm">
+                            <i class="fas fa-save mr-2"></i>
+                            Yorumu Kaydet
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             <!-- Comments List -->
             <div class="space-y-4" id="commentsList">
                 <!-- Dynamic content will be loaded here -->
