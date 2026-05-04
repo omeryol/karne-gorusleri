@@ -910,6 +910,41 @@ body[data-page-theme="templates"] .ambient-geometry {
   box-shadow: 0 4px 12px rgba(2, 6, 23, 0.3);
 }
 
+@keyframes templateCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.template-card-reveal {
+  opacity: 0;
+  animation: templateCardReveal 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes counterPop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.counter-pop {
+  display: inline-block;
+  animation: counterPop 0.24s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .template-card-reveal,
+  .counter-pop {
+    animation: none !important;
+  }
+}
+
 .hero-action:hover,
 .dashboard-shortcut:hover {
   transform: translateY(-2px);

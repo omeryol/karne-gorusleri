@@ -22,6 +22,8 @@ class TemplateManager {
         this.aiSuggestionsVisibleCount = 20;
         this.aiSuggestionsStep = 20;
         this.isMobileFilterSheetOpen = false;
+        this.templateCounterValue = 0;
+        this.templateCounterAnimationFrame = null;
         this.filterHistory = [];
         this.filterHistoryLimit = 10;
         this.isApplyingHistory = false;
@@ -911,13 +913,43 @@ class TemplateManager {
             return;
         }
 
-        grid.innerHTML = templates.map(template => this.renderTemplateCard(template)).join('');
+        grid.innerHTML = templates.map((template, index) => this.renderTemplateCard(template, index)).join('');
     }
 
     updateTemplateCount(count) {
         const counter = document.getElementById('templateCounter');
         if (counter) {
-            counter.textContent = count;
+            const startValue = Number(counter.textContent || 0);
+            if (startValue === count) {
+                counter.textContent = String(count);
+                return;
+            }
+
+            if (this.templateCounterAnimationFrame) {
+                cancelAnimationFrame(this.templateCounterAnimationFrame);
+            }
+
+            const startTime = performance.now();
+            const duration = 280;
+
+            const animate = (now) => {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = Math.round(startValue + (count - startValue) * eased);
+                counter.textContent = String(value);
+
+                if (progress < 1) {
+                    this.templateCounterAnimationFrame = requestAnimationFrame(animate);
+                } else {
+                    this.templateCounterAnimationFrame = null;
+                    this.templateCounterValue = count;
+                    counter.classList.remove('counter-pop');
+                    void counter.offsetWidth;
+                    counter.classList.add('counter-pop');
+                }
+            };
+
+            this.templateCounterAnimationFrame = requestAnimationFrame(animate);
         }
     }
 
@@ -996,7 +1028,7 @@ class TemplateManager {
         this.updateMobileFilterTrigger();
     }
 
-    renderTemplateCard(template) {
+    renderTemplateCard(template, index = 0) {
         // Veri kontrolü
         const templateContent = template.icerik || template.content || 'İçerik bulunamadı';
         const templateTone = template.ton || template.tone || 'olumlu';
@@ -1031,7 +1063,7 @@ class TemplateManager {
         ` : '';
 
         return `
-            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in cursor-pointer relative group" onclick="window.templates.useTemplate('${templateId}')">
+            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in cursor-pointer relative group template-card-reveal" style="animation-delay: ${Math.min(index * 35, 280)}ms" onclick="window.templates.useTemplate('${templateId}')">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex gap-2">
                         <span class="${toneColor} text-white px-3 py-1 rounded-full text-sm font-medium">${toneText}</span>
