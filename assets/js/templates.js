@@ -34,6 +34,7 @@ class TemplateManager {
         await this.loadTemplates();
         // İlk yükleme için tüm tonları göster
         this.currentToneFilter = 'all';
+        this.syncMainToneFilterButtons();
         this.render();
     }
 
@@ -255,7 +256,12 @@ class TemplateManager {
         return 'notr';
     }
 
-    filterTemplatesByTone(templates, tone) {
+    hasExplicitNeutralTemplates(templates) {
+        return templates.some((template) => this.normalizeTone(template.tone || template.ton) === 'notr');
+    }
+
+    filterTemplatesByTone(templates, tone, options = {}) {
+        const { enableNeutralFallback = true } = options;
         const normalizedTone = this.normalizeTone(tone || 'all');
         if (normalizedTone === 'all') {
             return templates;
@@ -267,7 +273,7 @@ class TemplateManager {
 
         // Veri setinde acik notr kayit yoksa notr seciminde bos ekran gostermek yerine
         // olumlu + olumsuzdan dengeli bir havuz goster.
-        if (normalizedTone === 'notr' && filtered.length === 0) {
+        if (normalizedTone === 'notr' && enableNeutralFallback && filtered.length === 0 && !this.hasExplicitNeutralTemplates(templates)) {
             return templates.filter((template) => {
                 const templateTone = this.normalizeTone(template.tone || template.ton);
                 return templateTone === 'olumlu' || templateTone === 'olumsuz';
@@ -275,6 +281,19 @@ class TemplateManager {
         }
 
         return filtered;
+    }
+
+    getTemplatesBySelectionWithTone({ grade = 'all', term = 'all', length = 'all', tone = 'all', enableNeutralFallback = true } = {}) {
+        const selectedTemplates = this.getTemplatesBySelection(grade, term, length);
+        return this.filterTemplatesByTone(selectedTemplates, tone, { enableNeutralFallback });
+    }
+
+    syncMainToneFilterButtons() {
+        const normalizedCurrent = this.normalizeTone(this.currentToneFilter);
+        document.querySelectorAll('.tone-filter').forEach((btn) => {
+            const buttonTone = this.normalizeTone(btn?.dataset?.tone || 'all');
+            btn.classList.toggle('active', buttonTone === normalizedCurrent);
+        });
     }
 
     normalizeLengthType(lengthType) {
@@ -447,13 +466,7 @@ class TemplateManager {
             lengthFilter.value = 'all';
         }
 
-        document.querySelectorAll('.tone-filter').forEach((btn) => {
-            if (btn.dataset.tone === 'all') {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
+        this.syncMainToneFilterButtons();
         this.render();
     }
 
@@ -1401,13 +1414,12 @@ class TemplateManager {
     // Seçilen sınıf ve dönemdeki şablonların etiketlerini getir
     getTagsForCurrentSelection() {
         const tags = new Set();
-        const filteredTemplates = this.getTemplatesBySelection(
-            this.selectedGrade || 'all',
-            this.selectedTerm || 'all',
-            this.selectedLength || 'all'
-        ).filter((template) => {
-            if (this.aiModalToneFilter === 'all') return true;
-            return this.filterTemplatesByTone([template], this.aiModalToneFilter).length > 0;
+        const filteredTemplates = this.getTemplatesBySelectionWithTone({
+            grade: this.selectedGrade || 'all',
+            term: this.selectedTerm || 'all',
+            length: this.selectedLength || 'all',
+            tone: this.aiModalToneFilter || 'all',
+            enableNeutralFallback: true,
         })
          .filter((template) => {
              if (!this.searchTerm) return true;
@@ -1428,13 +1440,12 @@ class TemplateManager {
     }
 
     getTemplateCountForTag(tag) {
-        const baseTemplates = this.getTemplatesBySelection(
-            this.selectedGrade || 'all',
-            this.selectedTerm || 'all',
-            this.selectedLength || 'all'
-        ).filter((template) => {
-            if (this.aiModalToneFilter === 'all') return true;
-            return this.filterTemplatesByTone([template], this.aiModalToneFilter).length > 0;
+        const baseTemplates = this.getTemplatesBySelectionWithTone({
+            grade: this.selectedGrade || 'all',
+            term: this.selectedTerm || 'all',
+            length: this.selectedLength || 'all',
+            tone: this.aiModalToneFilter || 'all',
+            enableNeutralFallback: true,
         })
          .filter((template) => {
              if (!this.searchTerm) return true;
