@@ -295,10 +295,33 @@ class TemplateManager {
 
         const fallback = [];
         for (let i = 0; i < pairCount; i += 1) {
-            fallback.push(olumluTemplates[i], olumsuzTemplates[i]);
+            fallback.push(
+                this.createNeutralFallbackTemplate(olumluTemplates[i]),
+                this.createNeutralFallbackTemplate(olumsuzTemplates[i])
+            );
         }
 
         return fallback;
+    }
+
+    createNeutralFallbackTemplate(template) {
+        const existingTags = Array.isArray(template.etiketler || template.tags)
+            ? (template.etiketler || template.tags)
+            : [];
+        const normalizedTags = existingTags.map((tag) => String(tag || '').trim()).filter(Boolean);
+
+        if (!normalizedTags.some((tag) => this.normalizeTagForMatch(tag) === 'notr')) {
+            normalizedTags.unshift('nötr');
+        }
+
+        return {
+            ...template,
+            tone: 'notr',
+            ton: 'notr',
+            etiketler: normalizedTags,
+            tags: normalizedTags,
+            isNeutralFallback: true,
+        };
     }
 
     applyTemplateSearchFilter(templates, searchTerm = '') {
@@ -1820,7 +1843,9 @@ class TemplateManager {
 
             const toneSelect = document.querySelector('#commentEditForm select[name="tone"]');
             if (toneSelect) {
-                toneSelect.value = suggestion.tone || suggestion.ton;
+                toneSelect.value = this.aiModalToneFilter === 'notr'
+                    ? 'notr'
+                    : (suggestion.tone || suggestion.ton);
             }
 
             if ((suggestion.tags || suggestion.etiketler) && (suggestion.tags || suggestion.etiketler).length > 0) {
@@ -1932,7 +1957,7 @@ class TemplateManager {
 
             const toneSelect = document.querySelector('#commentEditForm select[name="tone"]');
             if (toneSelect) {
-                toneSelect.value = templateTone;
+                toneSelect.value = this.currentToneFilter === 'notr' ? 'notr' : templateTone;
             }
 
             if (templateTags && templateTags.length > 0) {
