@@ -1320,7 +1320,13 @@
                     }
 
                     hasRefreshedForNewWorker = true;
-                    window.location.reload();
+                    try {
+                        if (window.self === window.top) {
+                            window.location.reload();
+                        }
+                    } catch (error) {
+                        console.warn('Controller change reload skipped in frame context:', error);
+                    }
                 });
             });
         }

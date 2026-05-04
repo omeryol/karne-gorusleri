@@ -676,11 +676,12 @@ class TemplateManager {
 
         const tone = this.normalizeTone(template.tone || template.ton);
         const lengthType = this.normalizeLengthType(template.lengthType || template.length || template.tip || template.variant);
-        const tags = Array.isArray(template.etiketler || template.tags)
+        const rawTags = Array.isArray(template.etiketler || template.tags)
             ? (template.etiketler || template.tags)
                 .map((tag) => String(tag).trim())
                 .filter((tag) => tag.length > 0)
             : [];
+        const tags = rawTags.filter((tag) => !this.isRedundantStyleTag(tag));
 
         const templateId = `${grade}_${term}_${template.id || index + 1}`;
 
@@ -696,6 +697,22 @@ class TemplateManager {
             term,
             lengthType,
         };
+    }
+
+    isRedundantStyleTag(tag) {
+        const normalized = this.normalizeTagForMatch(tag);
+        const redundantStyleTags = new Set([
+            'samimi',
+            'hafif-esprili',
+            'hafif esprili',
+            'esprili',
+            'babacan',
+            'sefkatli',
+            'sefkatli',
+            'uyarici',
+            'uyarici',
+        ]);
+        return redundantStyleTags.has(normalized);
     }
 
     normalizeTone(tone) {
@@ -1568,23 +1585,28 @@ class TemplateManager {
         ];
 
         const availableTags = new Set(this.getTagsForCurrentSelection());
+        const availableStyleTags = styleTags.filter(({ tag }) => availableTags.has(tag));
+
+        if (availableStyleTags.length === 0) {
+            container.innerHTML = `
+                <div class="text-[11px] text-slate-500 dark:text-slate-400 px-1 py-1">
+                    Stil etiketleri bu veri setinde sabit oldugu icin gizlendi.
+                </div>
+            `;
+            return;
+        }
 
         container.innerHTML = `
             <div class="flex flex-wrap gap-1">
-                ${styleTags.map(({ tag, label }) => {
+                ${availableStyleTags.map(({ tag, label }) => {
                     const selected = this.selectedTags.includes(tag);
-                    const available = availableTags.has(tag);
                     const baseClass = selected
                         ? 'bg-fuchsia-600 text-white ring-1 ring-fuchsia-400/70'
                         : 'bg-fuchsia-100 dark:bg-fuchsia-900 text-fuchsia-800 dark:text-fuchsia-200';
-                    const disabledClass = available
-                        ? 'hover:bg-fuchsia-200 dark:hover:bg-fuchsia-800 cursor-pointer'
-                        : 'opacity-50 cursor-not-allowed';
                     return `
                         <button
-                            class="style-filter-btn px-2 py-1 rounded text-xs transition-colors duration-200 ${baseClass} ${disabledClass}"
+                            class="style-filter-btn px-2 py-1 rounded text-xs transition-colors duration-200 ${baseClass} hover:bg-fuchsia-200 dark:hover:bg-fuchsia-800 cursor-pointer"
                             data-tag="${tag}"
-                            ${available ? '' : 'disabled'}
                             title="${label}"
                         >
                             ${label}
