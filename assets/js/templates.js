@@ -243,7 +243,7 @@ class TemplateManager {
     }
 
     normalizeTone(tone) {
-        const normalized = String(tone || 'notr').toLowerCase();
+        const normalized = String(tone || 'notr').trim().toLowerCase();
         if (normalized === 'all') {
             return 'all';
         }
@@ -256,13 +256,10 @@ class TemplateManager {
         return 'notr';
     }
 
-    hasExplicitNeutralTemplates(templates) {
-        return templates.some((template) => this.normalizeTone(template.tone || template.ton) === 'notr');
-    }
-
     filterTemplatesByTone(templates, tone, options = {}) {
         const { enableNeutralFallback = true } = options;
         const normalizedTone = this.normalizeTone(tone || 'all');
+
         if (normalizedTone === 'all') {
             return templates;
         }
@@ -271,21 +268,96 @@ class TemplateManager {
             this.normalizeTone(template.tone || template.ton) === normalizedTone
         );
 
-        // Veri setinde acik notr kayit yoksa notr seciminde bos ekran gostermek yerine
-        // olumlu + olumsuzdan dengeli bir havuz goster.
-        if (normalizedTone === 'notr' && enableNeutralFallback && filtered.length === 0 && !this.hasExplicitNeutralTemplates(templates)) {
-            return templates.filter((template) => {
-                const templateTone = this.normalizeTone(template.tone || template.ton);
-                return templateTone === 'olumlu' || templateTone === 'olumsuz';
-            });
+        if (normalizedTone !== 'notr' || filtered.length > 0 || !enableNeutralFallback) {
+            return filtered;
         }
 
-        return filtered;
+        return this.buildNeutralFallbackPool(templates);
     }
 
-    getTemplatesBySelectionWithTone({ grade = 'all', term = 'all', length = 'all', tone = 'all', enableNeutralFallback = true } = {}) {
-        const selectedTemplates = this.getTemplatesBySelection(grade, term, length);
-        return this.filterTemplatesByTone(selectedTemplates, tone, { enableNeutralFallback });
+    buildNeutralFallbackPool(templates) {
+        const olumluTemplates = [];
+        const olumsuzTemplates = [];
+
+        templates.forEach((template) => {
+            const templateTone = this.normalizeTone(template.tone || template.ton);
+            if (templateTone === 'olumlu') {
+                olumluTemplates.push(template);
+            } else if (templateTone === 'olumsuz') {
+                olumsuzTemplates.push(template);
+            }
+        });
+
+        const pairCount = Math.min(olumluTemplates.length, olumsuzTemplates.length);
+        if (pairCount === 0) {
+            return [];
+        }
+
+        const fallback = [];
+        for (let i = 0; i < pairCount; i += 1) {
+            fallback.push(olumluTemplates[i], olumsuzTemplates[i]);
+        }
+
+        return fallback;
+    }
+
+    applyTemplateSearchFilter(templates, searchTerm = '') {
+        const normalizedSearchTerm = String(searchTerm || '').toLowerCase().trim();
+        if (!normalizedSearchTerm) {
+            return templates;
+        }
+
+        return templates.filter((template) => {
+            const content = String(template.content || template.icerik || '').toLowerCase();
+            const tags = Array.isArray(template.etiketler || template.tags) ? (template.etiketler || template.tags) : [];
+            const tagString = tags.join(' ').toLowerCase();
+            return content.includes(normalizedSearchTerm) || tagString.includes(normalizedSearchTerm);
+        });
+    }
+
+    applyTemplateFilters(filters = {}, options = {}) {
+        const {
+            sourceTemplates = this.getAllTemplates(),
+            grade = 'all',
+            term = 'all',
+            length = 'all',
+            tone = 'all',
+            searchTerm = '',
+        } = filters;
+        const { enableNeutralFallback = true } = options;
+
+        let filteredTemplates = Array.isArray(sourceTemplates) ? sourceTemplates.slice() : [];
+
+        if (String(grade) !== 'all') {
+            filteredTemplates = filteredTemplates.filter((template) => template.grade === String(grade));
+        }
+
+        if (String(term) !== 'all') {
+            filteredTemplates = filteredTemplates.filter((template) => template.term === String(term));
+        }
+
+        const normalizedLength = String(length || 'all').toLowerCase();
+        if (normalizedLength !== 'all') {
+            filteredTemplates = filteredTemplates.filter((template) => this.normalizeLengthType(template.lengthType || 'uzun') === normalizedLength);
+        }
+
+        filteredTemplates = this.filterTemplatesByTone(filteredTemplates, tone, { enableNeutralFallback });
+        filteredTemplates = this.applyTemplateSearchFilter(filteredTemplates, searchTerm);
+
+        return filteredTemplates;
+    }
+
+    getTemplatesBySelectionWithTone({ grade = 'all', term = 'all', length = 'all', tone = 'all', searchTerm = '', enableNeutralFallback = true } = {}) {
+        return this.applyTemplateFilters(
+            {
+                grade,
+                term,
+                length,
+                tone,
+                searchTerm,
+            },
+            { enableNeutralFallback }
+        );
     }
 
     syncMainToneFilterButtons() {
@@ -309,39 +381,20 @@ class TemplateManager {
         const tone = target?.dataset?.tone;
         if (!tone) return;
 
-        // Aktif filtreyi güncelle
-        document.querySelectorAll('.tone-filter').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        if (target.classList) {
-            target.classList.add('active');
-        }
-
-        this.currentToneFilter = tone;
+        this.currentToneFilter = this.normalizeTone(tone);
+        this.syncMainToneFilterButtons();
         this.render();
     }
 
     getFilteredTemplates() {
-        let filteredTemplates = this.getAllTemplates();
-
-        if (this.mainGradeFilter !== 'all') {
-            filteredTemplates = filteredTemplates.filter((template) => template.grade === String(this.mainGradeFilter));
-        }
-
-        if (this.mainTermFilter !== 'all') {
-            filteredTemplates = filteredTemplates.filter((template) => template.term === String(this.mainTermFilter));
-        }
-
-        if (this.mainLengthFilter !== 'all') {
-            filteredTemplates = filteredTemplates.filter((template) => (template.lengthType || 'uzun') === this.mainLengthFilter);
-        }
-
-        // Ton filtresini uygula
-        if (this.currentToneFilter !== 'all') {
-            filteredTemplates = this.filterTemplatesByTone(filteredTemplates, this.currentToneFilter);
-        }
-
-        return filteredTemplates;
+        return this.applyTemplateFilters({
+            grade: this.mainGradeFilter,
+            term: this.mainTermFilter,
+            length: this.mainLengthFilter,
+            tone: this.currentToneFilter,
+        }, {
+            enableNeutralFallback: true,
+        });
     }
 
     getAllTemplates() {
@@ -1099,28 +1152,14 @@ class TemplateManager {
     getFilteredSuggestions(options = {}) {
         const { applyLimit = true } = options;
 
-        let allTemplates = this.getTemplatesBySelection(
-            this.selectedGrade || 'all',
-            this.selectedTerm || 'all',
-            this.selectedLength || 'all'
-        );
-
-        // Ton filtresini uygula
-        if (this.aiModalToneFilter && this.aiModalToneFilter !== 'all') {
-            allTemplates = this.filterTemplatesByTone(allTemplates, this.aiModalToneFilter);
-        }
-
-        // Arama terimi filtresi uygula
-        if (this.searchTerm) {
-            allTemplates = allTemplates.filter(template => {
-                const content = (template.content || template.icerik || '').toLowerCase();
-                const tags = template.etiketler || template.tags || [];
-                const tagString = tags.join(' ').toLowerCase();
-                
-                return content.includes(this.searchTerm) || 
-                       tagString.includes(this.searchTerm);
-            });
-        }
+        const allTemplates = this.getTemplatesBySelectionWithTone({
+            grade: this.selectedGrade || 'all',
+            term: this.selectedTerm || 'all',
+            length: this.selectedLength || 'all',
+            tone: this.aiModalToneFilter || 'all',
+            searchTerm: this.searchTerm,
+            enableNeutralFallback: true,
+        });
 
         const isTagFocusedMode = this.aiSuggestionMode === 'tag-focused';
         let rankedTemplates;
@@ -1419,15 +1458,9 @@ class TemplateManager {
             term: this.selectedTerm || 'all',
             length: this.selectedLength || 'all',
             tone: this.aiModalToneFilter || 'all',
+            searchTerm: this.searchTerm,
             enableNeutralFallback: true,
-        })
-         .filter((template) => {
-             if (!this.searchTerm) return true;
-             const content = (template.content || template.icerik || '').toLowerCase();
-             const templateTags = template.etiketler || template.tags || [];
-             const tagString = templateTags.join(' ').toLowerCase();
-             return content.includes(this.searchTerm) || tagString.includes(this.searchTerm);
-         });
+        });
 
         filteredTemplates.forEach((template) => {
             const templateTags = template.etiketler || template.tags;
@@ -1445,15 +1478,9 @@ class TemplateManager {
             term: this.selectedTerm || 'all',
             length: this.selectedLength || 'all',
             tone: this.aiModalToneFilter || 'all',
+            searchTerm: this.searchTerm,
             enableNeutralFallback: true,
-        })
-         .filter((template) => {
-             if (!this.searchTerm) return true;
-             const content = (template.content || template.icerik || '').toLowerCase();
-             const tags = template.etiketler || template.tags || [];
-             const tagString = tags.join(' ').toLowerCase();
-             return content.includes(this.searchTerm) || tagString.includes(this.searchTerm);
-         });
+        });
 
         // Mevcut secili etiketler varsa, sayimlari aktif filtre mantigina gore daralt
         const filteredTemplates = this.selectedTags.length === 0
@@ -1975,7 +2002,7 @@ class TemplateManager {
 
     getTemplatesByTone(tone) {
         const allTemplates = this.getFilteredTemplates();
-        return allTemplates.filter(template => (template.ton || template.tone) === tone);
+        return this.filterTemplatesByTone(allTemplates, tone, { enableNeutralFallback: false });
     }
 
     getToneBackgroundColor(tone) {
