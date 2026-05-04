@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'karne-static-v4';
-const RUNTIME_CACHE = 'karne-runtime-v4';
+const STATIC_CACHE = 'karne-static-v5';
+const RUNTIME_CACHE = 'karne-runtime-v5';
 
 const precacheUrls = [
     './',
@@ -10,6 +10,7 @@ const precacheUrls = [
     './assets/js/storage.js',
     './assets/js/students.js',
     './assets/js/comments.js',
+    './assets/js/template-data.js',
     './assets/js/templates.js',
     './assets/js/ui.js',
     './yorumlar/5_1.json',
