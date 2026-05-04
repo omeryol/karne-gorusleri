@@ -32,6 +32,29 @@ npm run local
 
 Sonra tarayicidan `http://localhost:5000` adresine gidin.
 
+## Script Duzeni
+
+Kod daginikligini azaltmak icin scriptler iki ana klasore ayrildi:
+
+- `scripts/core`: Uygulamayi calistirmak ve paket veriyi uretmek icin zorunlu scriptler
+	- `build-template-data.mjs`
+	- `local-static-server.mjs`
+- `scripts/optional`: Veri iyilestirme ve raporlama odakli opsiyonel scriptler
+	- `comment-tools.mjs` (tek giris noktasi)
+	- `analyze-template-quality.mjs`
+	- `generate-comment-candidates.mjs`
+	- `apply-comment-candidates.mjs`
+	- `deduplicate-short-comments.mjs`
+
+Opsiyonel islemler tek komut catisi altinda toplanmistir:
+
+- `npm run analyze:templates`
+- `npm run suggest:comments`
+- `npm run suggest:apply:dry`
+- `npm run suggest:apply`
+- `npm run dedupe:short`
+- `npm run dedupe:short:global`
+
 ### Secenek 1 (VS Code Live Server)
 
 1. Klasoru VS Code ile acin.

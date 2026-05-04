@@ -1,121 +1,87 @@
 {
-  "generatedAt": "2026-05-03T18:22:46.888Z",
+  "generatedAt": "2026-05-04T16:17:04.666Z",
   "totals": {
-    "entryCount": 3200,
-    "combinationCount": 184,
-    "duplicateCount": 2645
+    "entryCount": 6400,
+    "combinationCount": 96,
+    "duplicateCount": 1713
   },
   "targetScoreAverages": [
     {
-      "key": "notr_kisa",
-      "average": 1.97,
-      "sampleSize": 627
-    },
-    {
-      "key": "notr_uzun",
-      "average": 2.69,
-      "sampleSize": 627
-    },
-    {
       "key": "olumlu_kisa",
-      "average": 1.77,
-      "sampleSize": 618
+      "average": 2.04,
+      "sampleSize": 928
     },
     {
       "key": "olumlu_uzun",
-      "average": 2.58,
-      "sampleSize": 618
+      "average": 2.49,
+      "sampleSize": 928
     },
     {
       "key": "olumsuz_kisa",
-      "average": 2.93,
-      "sampleSize": 355
+      "average": 1.91,
+      "sampleSize": 1552
     },
     {
       "key": "olumsuz_uzun",
-      "average": 2.94,
-      "sampleSize": 355
+      "average": 2.16,
+      "sampleSize": 2992
     }
   ],
   "sparseCoverage": [
     {
-      "key": "5_1_olumsuz_uzun_gelisim",
-      "count": 5
+      "key": "6_2_olumsuz_kisa_akademik",
+      "count": 1
     },
     {
-      "key": "5_1_olumlu_uzun_genel",
-      "count": 5
+      "key": "6_1_olumsuz_kisa_akademik",
+      "count": 2
     },
     {
-      "key": "5_1_olumsuz_uzun_sosyal",
-      "count": 5
+      "key": "8_2_olumsuz_kisa_gelisim",
+      "count": 2
     },
     {
       "key": "5_1_olumsuz_kisa_gelisim",
-      "count": 5
+      "count": 3
     },
     {
-      "key": "5_1_olumlu_kisa_genel",
-      "count": 5
-    },
-    {
-      "key": "5_1_olumsuz_kisa_sosyal",
-      "count": 5
-    },
-    {
-      "key": "5_2_notr_uzun_genel",
-      "count": 5
-    },
-    {
-      "key": "5_2_olumlu_uzun_davranis",
-      "count": 5
-    },
-    {
-      "key": "5_2_olumsuz_uzun_sosyal",
-      "count": 5
-    },
-    {
-      "key": "5_2_notr_kisa_genel",
-      "count": 5
-    },
-    {
-      "key": "5_2_olumlu_kisa_davranis",
-      "count": 5
-    },
-    {
-      "key": "5_2_olumsuz_kisa_sosyal",
-      "count": 5
-    },
-    {
-      "key": "6_1_olumsuz_uzun_gelisim",
-      "count": 5
+      "key": "5_2_olumsuz_kisa_gelisim",
+      "count": 3
     },
     {
       "key": "6_1_olumsuz_kisa_gelisim",
+      "count": 3
+    },
+    {
+      "key": "6_2_olumsuz_kisa_gelisim",
+      "count": 3
+    },
+    {
+      "key": "7_1_olumsuz_kisa_akademik",
+      "count": 3
+    },
+    {
+      "key": "7_2_olumsuz_kisa_akademik",
+      "count": 3
+    },
+    {
+      "key": "8_1_olumsuz_kisa_akademik",
+      "count": 3
+    },
+    {
+      "key": "5_2_olumsuz_kisa_akademik",
+      "count": 4
+    },
+    {
+      "key": "7_2_olumsuz_kisa_gelisim",
+      "count": 4
+    },
+    {
+      "key": "5_1_olumsuz_kisa_akademik",
       "count": 5
     },
     {
-      "key": "6_2_olumlu_uzun_akademik",
-      "count": 5
-    },
-    {
-      "key": "6_2_olumlu_kisa_akademik",
-      "count": 5
-    },
-    {
-      "key": "8_1_olumlu_uzun_sosyal",
-      "count": 5
-    },
-    {
-      "key": "8_1_olumsuz_uzun_gelisim",
-      "count": 5
-    },
-    {
-      "key": "8_1_olumsuz_uzun_genel",
-      "count": 5
-    },
-    {
-      "key": "8_1_olumlu_kisa_sosyal",
+      "key": "7_1_olumsuz_kisa_gelisim",
       "count": 5
     },
     {
@@ -123,111 +89,7 @@
       "count": 5
     },
     {
-      "key": "8_1_olumsuz_kisa_genel",
-      "count": 5
-    },
-    {
-      "key": "6_1_olumlu_uzun_sosyal",
-      "count": 6
-    },
-    {
-      "key": "6_1_olumlu_uzun_davranis",
-      "count": 6
-    },
-    {
-      "key": "6_1_notr_uzun_davranis",
-      "count": 6
-    },
-    {
-      "key": "6_1_olumlu_kisa_sosyal",
-      "count": 6
-    },
-    {
-      "key": "6_1_olumlu_kisa_davranis",
-      "count": 6
-    },
-    {
-      "key": "6_1_notr_kisa_davranis",
-      "count": 6
-    },
-    {
-      "key": "6_2_olumlu_uzun_gelisim",
-      "count": 6
-    },
-    {
-      "key": "6_2_olumsuz_uzun_akademik",
-      "count": 6
-    },
-    {
-      "key": "6_2_olumsuz_uzun_genel",
-      "count": 6
-    },
-    {
-      "key": "6_2_olumlu_kisa_gelisim",
-      "count": 6
-    },
-    {
-      "key": "6_2_olumsuz_kisa_akademik",
-      "count": 6
-    },
-    {
-      "key": "6_2_olumsuz_kisa_genel",
-      "count": 6
-    },
-    {
-      "key": "7_2_olumlu_uzun_akademik",
-      "count": 6
-    },
-    {
-      "key": "7_2_olumlu_kisa_akademik",
-      "count": 6
-    },
-    {
-      "key": "8_1_olumlu_uzun_davranis",
-      "count": 6
-    },
-    {
-      "key": "8_1_olumlu_uzun_gelisim",
-      "count": 6
-    },
-    {
-      "key": "8_1_olumlu_kisa_davranis",
-      "count": 6
-    },
-    {
-      "key": "8_1_olumlu_kisa_gelisim",
-      "count": 6
-    },
-    {
-      "key": "8_2_olumlu_uzun_gelisim",
-      "count": 6
-    },
-    {
-      "key": "8_2_olumlu_kisa_gelisim",
-      "count": 6
-    },
-    {
-      "key": "7_1_notr_uzun_davranis",
-      "count": 7
-    },
-    {
-      "key": "7_1_notr_kisa_davranis",
-      "count": 7
-    },
-    {
-      "key": "8_2_olumlu_uzun_davranis",
-      "count": 7
-    },
-    {
-      "key": "8_2_notr_uzun_sosyal",
-      "count": 7
-    },
-    {
-      "key": "8_2_olumlu_kisa_davranis",
-      "count": 7
-    },
-    {
-      "key": "8_2_notr_kisa_sosyal",
+      "key": "8_2_olumsuz_kisa_akademik",
       "count": 7
     }
   ],
@@ -235,55 +97,55 @@
     "targetPerCombination": 10,
     "topDeficits": [
       {
-        "combinationKey": "5_1_olumsuz_uzun_gelisim",
-        "grade": "5",
-        "term": "1",
+        "combinationKey": "6_2_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "2",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "currentCount": 5,
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "currentCount": 1,
         "targetCount": 10,
-        "deficit": 5,
+        "deficit": 9,
         "suggestions": {
           "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+        },
+        "promptSeed": "6. sinif 2. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "6_1_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "currentCount": 2,
+        "targetCount": 10,
+        "deficit": 8,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+        },
+        "promptSeed": "6. sinif 1. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "8_2_olumsuz_kisa_gelisim",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "currentCount": 2,
+        "targetCount": 10,
+        "deficit": 8,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
           "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
         },
-        "promptSeed": "5. sinif 1. donem, olumsuz ton, uzun yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_1_olumlu_uzun_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "5. sinif 1. donem, olumlu ton, uzun yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_1_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "5. sinif 1. donem, olumsuz ton, uzun yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+        "promptSeed": "8. sinif 2. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
         "combinationKey": "5_1_olumsuz_kisa_gelisim",
@@ -292,9 +154,9 @@
         "tone": "olumsuz",
         "lengthType": "kisa",
         "focus": "gelisim",
-        "currentCount": 5,
+        "currentCount": 3,
         "targetCount": 10,
-        "deficit": 5,
+        "deficit": 7,
         "suggestions": {
           "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
           "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
@@ -303,157 +165,21 @@
         "promptSeed": "5. sinif 1. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
-        "combinationKey": "5_1_olumlu_kisa_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "5. sinif 1. donem, olumlu ton, kisa yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_1_olumsuz_kisa_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "5. sinif 1. donem, olumsuz ton, kisa yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_2_notr_uzun_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "5. sinif 2. donem, notr ton, uzun yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_2_olumlu_uzun_davranis",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "5. sinif 2. donem, olumlu ton, uzun yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_2_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "5. sinif 2. donem, olumsuz ton, uzun yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_2_notr_kisa_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "5. sinif 2. donem, notr ton, kisa yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_2_olumlu_kisa_davranis",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "davranis",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "5. sinif 2. donem, olumlu ton, kisa yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "5_2_olumsuz_kisa_sosyal",
+        "combinationKey": "5_2_olumsuz_kisa_gelisim",
         "grade": "5",
         "term": "2",
         "tone": "olumsuz",
         "lengthType": "kisa",
-        "focus": "sosyal",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "5. sinif 2. donem, olumsuz ton, kisa yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_olumsuz_uzun_gelisim",
-        "grade": "6",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
         "focus": "gelisim",
-        "currentCount": 5,
+        "currentCount": 3,
         "targetCount": 10,
-        "deficit": 5,
+        "deficit": 7,
         "suggestions": {
           "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
           "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
         },
-        "promptSeed": "6. sinif 1. donem, olumsuz ton, uzun yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+        "promptSeed": "5. sinif 2. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
         "combinationKey": "6_1_olumsuz_kisa_gelisim",
@@ -462,9 +188,9 @@
         "tone": "olumsuz",
         "lengthType": "kisa",
         "focus": "gelisim",
-        "currentCount": 5,
+        "currentCount": 3,
         "targetCount": 10,
-        "deficit": 5,
+        "deficit": 7,
         "suggestions": {
           "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
           "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
@@ -473,106 +199,140 @@
         "promptSeed": "6. sinif 1. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
-        "combinationKey": "6_2_olumlu_uzun_akademik",
+        "combinationKey": "6_2_olumsuz_kisa_gelisim",
         "grade": "6",
         "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "akademik",
-        "currentCount": 5,
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "currentCount": 3,
         "targetCount": 10,
-        "deficit": 5,
+        "deficit": 7,
         "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
         },
-        "promptSeed": "6. sinif 2. donem, olumlu ton, uzun yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+        "promptSeed": "6. sinif 2. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
-        "combinationKey": "6_2_olumlu_kisa_akademik",
-        "grade": "6",
+        "combinationKey": "7_1_olumsuz_kisa_akademik",
+        "grade": "7",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "currentCount": 3,
+        "targetCount": 10,
+        "deficit": 7,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+        },
+        "promptSeed": "7. sinif 1. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "7_2_olumsuz_kisa_akademik",
+        "grade": "7",
         "term": "2",
-        "tone": "olumlu",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "currentCount": 3,
+        "targetCount": 10,
+        "deficit": 7,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+        },
+        "promptSeed": "7. sinif 2. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "8_1_olumsuz_kisa_akademik",
+        "grade": "8",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "currentCount": 3,
+        "targetCount": 10,
+        "deficit": 7,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+        },
+        "promptSeed": "8. sinif 1. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "5_2_olumsuz_kisa_akademik",
+        "grade": "5",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "currentCount": 4,
+        "targetCount": 10,
+        "deficit": 6,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
+        },
+        "promptSeed": "5. sinif 2. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "7_2_olumsuz_kisa_gelisim",
+        "grade": "7",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "currentCount": 4,
+        "targetCount": 10,
+        "deficit": 6,
+        "suggestions": {
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
+          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
+        },
+        "promptSeed": "7. sinif 2. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+      },
+      {
+        "combinationKey": "5_1_olumsuz_kisa_akademik",
+        "grade": "5",
+        "term": "1",
+        "tone": "olumsuz",
         "lengthType": "kisa",
         "focus": "akademik",
         "currentCount": 5,
         "targetCount": 10,
         "deficit": 5,
         "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
+          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
           "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
           "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
         },
-        "promptSeed": "6. sinif 2. donem, olumlu ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+        "promptSeed": "5. sinif 1. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
-        "combinationKey": "8_1_olumlu_uzun_sosyal",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "8. sinif 1. donem, olumlu ton, uzun yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumsuz_uzun_gelisim",
-        "grade": "8",
+        "combinationKey": "7_1_olumsuz_kisa_gelisim",
+        "grade": "7",
         "term": "1",
         "tone": "olumsuz",
-        "lengthType": "uzun",
+        "lengthType": "kisa",
         "focus": "gelisim",
         "currentCount": 5,
         "targetCount": 10,
         "deficit": 5,
         "suggestions": {
           "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
+          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
           "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
         },
-        "promptSeed": "8. sinif 1. donem, olumsuz ton, uzun yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumsuz_uzun_genel",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "8. sinif 1. donem, olumsuz ton, uzun yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumlu_kisa_sosyal",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "8. sinif 1. donem, olumlu ton, kisa yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+        "promptSeed": "7. sinif 1. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
         "combinationKey": "8_1_olumsuz_kisa_gelisim",
@@ -592,463 +352,21 @@
         "promptSeed": "8. sinif 1. donem, olumsuz ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       },
       {
-        "combinationKey": "8_1_olumsuz_kisa_genel",
+        "combinationKey": "8_2_olumsuz_kisa_akademik",
         "grade": "8",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "currentCount": 5,
-        "targetCount": 10,
-        "deficit": 5,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "8. sinif 1. donem, olumsuz ton, kisa yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_olumlu_uzun_sosyal",
-        "grade": "6",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "6. sinif 1. donem, olumlu ton, uzun yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_olumlu_uzun_davranis",
-        "grade": "6",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "6. sinif 1. donem, olumlu ton, uzun yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_notr_uzun_davranis",
-        "grade": "6",
-        "term": "1",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "6. sinif 1. donem, notr ton, uzun yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_olumlu_kisa_sosyal",
-        "grade": "6",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "6. sinif 1. donem, olumlu ton, kisa yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_olumlu_kisa_davranis",
-        "grade": "6",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "davranis",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "6. sinif 1. donem, olumlu ton, kisa yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_1_notr_kisa_davranis",
-        "grade": "6",
-        "term": "1",
-        "tone": "notr",
-        "lengthType": "kisa",
-        "focus": "davranis",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "6. sinif 1. donem, notr ton, kisa yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_2_olumlu_uzun_gelisim",
-        "grade": "6",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
-        },
-        "promptSeed": "6. sinif 2. donem, olumlu ton, uzun yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_2_olumsuz_uzun_akademik",
-        "grade": "6",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "akademik",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
-        },
-        "promptSeed": "6. sinif 2. donem, olumsuz ton, uzun yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_2_olumsuz_uzun_genel",
-        "grade": "6",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "6. sinif 2. donem, olumsuz ton, uzun yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_2_olumlu_kisa_gelisim",
-        "grade": "6",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "gelisim",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
-        },
-        "promptSeed": "6. sinif 2. donem, olumlu ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_2_olumsuz_kisa_akademik",
-        "grade": "6",
         "term": "2",
         "tone": "olumsuz",
         "lengthType": "kisa",
         "focus": "akademik",
-        "currentCount": 6,
+        "currentCount": 7,
         "targetCount": 10,
-        "deficit": 4,
+        "deficit": 3,
         "suggestions": {
           "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
           "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
           "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
         },
-        "promptSeed": "6. sinif 2. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "6_2_olumsuz_kisa_genel",
-        "grade": "6",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Yargilayici dilden kac, duzenli takip + uygulanabilir mini hedef oner.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Genel ifade yerine olculenebilir sinif ici gozlemle netlestir."
-        },
-        "promptSeed": "6. sinif 2. donem, olumsuz ton, kisa yorum, genel odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "7_2_olumlu_uzun_akademik",
-        "grade": "7",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "akademik",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
-        },
-        "promptSeed": "7. sinif 2. donem, olumlu ton, uzun yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "7_2_olumlu_kisa_akademik",
-        "grade": "7",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "akademik",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Ders ici performans, odev duzeni, tekrar rutini odakli yaz."
-        },
-        "promptSeed": "7. sinif 2. donem, olumlu ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumlu_uzun_davranis",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "8. sinif 1. donem, olumlu ton, uzun yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumlu_uzun_gelisim",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
-        },
-        "promptSeed": "8. sinif 1. donem, olumlu ton, uzun yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumlu_kisa_davranis",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "davranis",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "8. sinif 1. donem, olumlu ton, kisa yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_1_olumlu_kisa_gelisim",
-        "grade": "8",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "gelisim",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
-        },
-        "promptSeed": "8. sinif 1. donem, olumlu ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_2_olumlu_uzun_gelisim",
-        "grade": "8",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
-        },
-        "promptSeed": "8. sinif 2. donem, olumlu ton, uzun yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_2_olumlu_kisa_gelisim",
-        "grade": "8",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "gelisim",
-        "currentCount": 6,
-        "targetCount": 10,
-        "deficit": 4,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Dikkat, motivasyon, ozduzenleme ve surec takibi odakli yaz."
-        },
-        "promptSeed": "8. sinif 2. donem, olumlu ton, kisa yorum, gelisim odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "7_1_notr_uzun_davranis",
-        "grade": "7",
-        "term": "1",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "currentCount": 7,
-        "targetCount": 10,
-        "deficit": 3,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "7. sinif 1. donem, notr ton, uzun yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "7_1_notr_kisa_davranis",
-        "grade": "7",
-        "term": "1",
-        "tone": "notr",
-        "lengthType": "kisa",
-        "focus": "davranis",
-        "currentCount": 7,
-        "targetCount": 10,
-        "deficit": 3,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "7. sinif 1. donem, notr ton, kisa yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_2_olumlu_uzun_davranis",
-        "grade": "8",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "currentCount": 7,
-        "targetCount": 10,
-        "deficit": 3,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "8. sinif 2. donem, olumlu ton, uzun yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_2_notr_uzun_sosyal",
-        "grade": "8",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "currentCount": 7,
-        "targetCount": 10,
-        "deficit": 3,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "4-7 cumlede: baglam, gozlem, etkisi ve takip adimi yapisini koru.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "8. sinif 2. donem, notr ton, uzun yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_2_olumlu_kisa_davranis",
-        "grade": "8",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "davranis",
-        "currentCount": 7,
-        "targetCount": 10,
-        "deficit": 3,
-        "suggestions": {
-          "tone": "Gozlemlenen guclu yonleri netlestir, sureklilik icin somut bir adim ekle.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Sinif kurallari, sorumluluk ve tutum odakli somut gozlem kullan."
-        },
-        "promptSeed": "8. sinif 2. donem, olumlu ton, kisa yorum, davranis odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
-      },
-      {
-        "combinationKey": "8_2_notr_kisa_sosyal",
-        "grade": "8",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "currentCount": 7,
-        "targetCount": 10,
-        "deficit": 3,
-        "suggestions": {
-          "tone": "Dengeyi koru: bir guclu yan + bir gelisim adimi ver.",
-          "length": "En fazla 2 cumlede: (1) ana gozlem, (2) uygulanabilir takip adimi.",
-          "focus": "Akran iliskileri, iletisim ve grup calismasi odakli ifade kur."
-        },
-        "promptSeed": "8. sinif 2. donem, notr ton, kisa yorum, sosyal odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
+        "promptSeed": "8. sinif 2. donem, olumsuz ton, kisa yorum, akademik odagi: sinif ogretmeninin gozlemine dayali yeni varyantlar uret."
       }
     ]
   }

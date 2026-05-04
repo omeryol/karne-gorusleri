@@ -1,369 +1,639 @@
 {
-  "generatedAt": "2026-05-03T18:26:32.683Z",
-  "mode": "apply",
+  "generatedAt": "2026-05-04T16:17:10.584Z",
+  "mode": "dry-run",
   "limit": 50,
   "selectedCandidates": 50,
-  "plannedChanges": 50,
-  "skipped": 0,
+  "plannedChanges": 30,
+  "skipped": 20,
   "operations": [
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_gelisim",
-        "grade": "5",
-        "term": "1",
+        "combinationKey": "6_2_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "2",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "targetFile": "5_1.json",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_2.json",
         "etiketler": [
-          "gelişim",
-          "dikkat",
-          "motivasyon",
-          "özdüzenleme"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
         "_order": 0
       },
-      "targetId": 172,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde belirgin güçlükler yaşıyor. Derslerde dikkatini toplayamıyor, sık sık başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir direnç sergiliyor. Bu durum, akademik ilerlemesini belirgin şekilde yavaşlatıyor. Öncelikle düzenli bireysel çalışmaya ve düzenli öğretmen-aile takibine ihtiyacımız var. Evde yapılacak düzenli takip bu süreci belirgin şekilde güçlendirir. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu yorumu sınıf içindeki gözlemlerime, özellikle ödev takibi ve derse katılımına göre yazdım.",
-      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 5
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_gelisim",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "gelişim",
-          "dikkat",
-          "motivasyon",
-          "özdüzenleme"
-        ],
-        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 1
-      },
-      "targetId": 132,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde belirgin güçlükler yaşıyor. Derslerde dikkatini toplayamıyor, sık sık başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir direnç sergiliyor. Bu durum, akademik ilerlemesini belirgin şekilde yavaşlatıyor. Öncelikle düzenli bireysel çalışmaya ve düzenli öğretmen-aile takibine ihtiyacımız var. Evde yapılacak düzenli takip bu süreci belirgin şekilde güçlendirir. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu yorumu sınıf içindeki gözlemlerime, özellikle ödev takibi ve derse katılımına göre yazdım.",
-      "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 4
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_gelisim",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "gelişim",
-          "dikkat",
-          "motivasyon",
-          "özdüzenleme"
-        ],
-        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 2
-      },
-      "targetId": 92,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde belirgin güçlükler yaşıyor. Derslerde dikkatini toplayamıyor, sık sık başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir direnç sergiliyor. Bu durum, akademik ilerlemesini belirgin şekilde yavaşlatıyor. Öncelikle düzenli bireysel çalışmaya ve düzenli öğretmen-aile takibine ihtiyacımız var. Evde yapılacak düzenli takip bu süreci belirgin şekilde güçlendirir. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu yorumu sınıf içindeki gözlemlerime, özellikle ödev takibi ve derse katılımına göre yazdım.",
-      "newContent": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 3
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_gelisim",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "gelişim",
-          "dikkat",
-          "motivasyon",
-          "özdüzenleme"
-        ],
-        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
-        "_order": 3
-      },
-      "targetId": 52,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde belirgin güçlükler yaşıyor. Derslerde dikkatini toplayamıyor, sık sık başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir direnç sergiliyor. Bu durum, akademik ilerlemesini belirgin şekilde yavaşlatıyor. Öncelikle düzenli bireysel çalışmaya ve düzenli öğretmen-aile takibine ihtiyacımız var. Evde yapılacak düzenli takip bu süreci belirgin şekilde güçlendirir. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu yorumu sınıf içindeki gözlemlerime, özellikle ödev takibi ve derse katılımına göre yazdım.",
-      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
-      "previousFrequency": 2
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_gelisim",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "gelisim",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "gelişim",
-          "dikkat",
-          "motivasyon",
-          "özdüzenleme"
-        ],
-        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-        "_order": 4
-      },
-      "targetId": 12,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Özellikle okuma-yazma ve temel matematik işlemlerinde belirgin güçlükler yaşıyor. Derslerde dikkatini toplayamıyor, sık sık başka şeylerle ilgileniyor ve öğrenmeye karşı belirgin bir direnç sergiliyor. Bu durum, akademik ilerlemesini belirgin şekilde yavaşlatıyor. Öncelikle düzenli bireysel çalışmaya ve düzenli öğretmen-aile takibine ihtiyacımız var. Evde yapılacak düzenli takip bu süreci belirgin şekilde güçlendirir. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu yorumu sınıf içindeki gözlemlerime, özellikle ödev takibi ve derse katılımına göre yazdım.",
-      "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
+      "targetId": 210,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Doğru takip ile daha iyi bir döneme geçiş yapabilir.",
+      "newContent": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
       "previousFrequency": 1
     },
     {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_2_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+        "_order": 1
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_2_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+        "_order": 2
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_2_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+        "_order": 3
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_2_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
+        "_order": 4
+      }
+    },
+    {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumlu_uzun_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_1.json",
+        "combinationKey": "6_2_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_2.json",
         "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
         "_order": 5
       },
-      "targetId": 178,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Özellikle Fen Bilgisi dersini çok seviyor ve derslerde yapılan deneylere büyük bir ilgi ve hevesle yaklaşıyor. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli. Bu yardımsever ve sorumlu tutumuyla sınıfımıza gerçekten değer katıyor. Onun bu pozitif enerjisi hepimize ilham veriyor. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-      "previousFrequency": 5
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_uzun_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-        "_order": 6
-      },
-      "targetId": 138,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Özellikle Fen Bilgisi dersini çok seviyor ve derslerde yapılan deneylere büyük bir ilgi ve hevesle yaklaşıyor. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli. Bu yardımsever ve sorumlu tutumuyla sınıfımıza gerçekten değer katıyor. Onun bu pozitif enerjisi hepimize ilham veriyor. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-      "previousFrequency": 4
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_uzun_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Mevcut olumlu yönlerini sürdürmesi, sınıf içi dengesini destekleyecektir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-        "_order": 7
-      },
-      "targetId": 98,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Özellikle Fen Bilgisi dersini çok seviyor ve derslerde yapılan deneylere büyük bir ilgi ve hevesle yaklaşıyor. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli. Bu yardımsever ve sorumlu tutumuyla sınıfımıza gerçekten değer katıyor. Onun bu pozitif enerjisi hepimize ilham veriyor. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Mevcut olumlu yönlerini sürdürmesi, sınıf içi dengesini destekleyecektir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-      "previousFrequency": 3
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_uzun_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-        "_order": 8
-      },
-      "targetId": 58,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Özellikle Fen Bilgisi dersini çok seviyor ve derslerde yapılan deneylere büyük bir ilgi ve hevesle yaklaşıyor. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli. Bu yardımsever ve sorumlu tutumuyla sınıfımıza gerçekten değer katıyor. Onun bu pozitif enerjisi hepimize ilham veriyor. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-      "previousFrequency": 2
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_uzun_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
-        "_order": 9
-      },
-      "targetId": 18,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Özellikle Fen Bilgisi dersini çok seviyor ve derslerde yapılan deneylere büyük bir ilgi ve hevesle yaklaşıyor. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli. Bu yardımsever ve sorumlu tutumuyla sınıfımıza gerçekten değer katıyor. Onun bu pozitif enerjisi hepimize ilham veriyor. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
+      "targetId": 209,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
       "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "1",
+        "combinationKey": "6_2_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "2",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_2.json",
         "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 10
+        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
+        "_order": 6
       },
-      "targetId": 194,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını çoğu zaman reddettiği ve arkadaşlarıyla çalışmayı istemediği gözlemlendi. Bu durum, hem akademik hem de sosyal gelişimini olumsuz yönde etkileyebiliyor. Öğrenme motivasyonunu artırmak için özel bir yaklaşım belirlememiz gerekiyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 5
+      "targetId": 205,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+      "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "1",
+        "combinationKey": "6_2_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "2",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_2.json",
         "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 11
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+        "_order": 7
       },
-      "targetId": 154,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını çoğu zaman reddettiği ve arkadaşlarıyla çalışmayı istemediği gözlemlendi. Bu durum, hem akademik hem de sosyal gelişimini olumsuz yönde etkileyebiliyor. Öğrenme motivasyonunu artırmak için özel bir yaklaşım belirlememiz gerekiyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 4
+      "targetId": 202,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Doğru takip ile daha iyi bir döneme geçiş yapabilir.",
+      "newContent": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_2_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
+        "_order": 8
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_2_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
+        "_order": 9
+      }
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_sosyal",
-        "grade": "5",
+        "combinationKey": "6_1_olumsuz_kisa_akademik",
+        "grade": "6",
         "term": "1",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_1.json",
         "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 12
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+        "_order": 0
       },
-      "targetId": 114,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını çoğu zaman reddettiği ve arkadaşlarıyla çalışmayı istemediği gözlemlendi. Bu durum, hem akademik hem de sosyal gelişimini olumsuz yönde etkileyebiliyor. Öğrenme motivasyonunu artırmak için özel bir yaklaşım belirlememiz gerekiyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 3
+      "targetId": 210,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Doğru takip ile daha iyi bir döneme geçiş yapabilir.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_sosyal",
-        "grade": "5",
+        "combinationKey": "6_1_olumsuz_kisa_akademik",
+        "grade": "6",
         "term": "1",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_1.json",
         "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
-        "_order": 13
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+        "_order": 1
       },
-      "targetId": 74,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını çoğu zaman reddettiği ve arkadaşlarıyla çalışmayı istemediği gözlemlendi. Bu durum, hem akademik hem de sosyal gelişimini olumsuz yönde etkileyebiliyor. Öğrenme motivasyonunu artırmak için özel bir yaklaşım belirlememiz gerekiyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
-      "previousFrequency": 2
+      "targetId": 207,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kısa tekrarları atladığında konular üst üste birikti. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+      "newContent": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
+        "_order": 2
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
+        "_order": 3
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_akademik",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
+        "_order": 4
+      }
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_1_olumsuz_uzun_sosyal",
-        "grade": "5",
+        "combinationKey": "6_1_olumsuz_kisa_gelisim",
+        "grade": "6",
         "term": "1",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_1.json",
         "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
-        "_order": 14
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+        "_order": 5
       },
-      "targetId": 34,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Harita okuma ve tarih bilgisi çok zayıf. Grup çalışmalarını çoğu zaman reddettiği ve arkadaşlarıyla çalışmayı istemediği gözlemlendi. Bu durum, hem akademik hem de sosyal gelişimini olumsuz yönde etkileyebiliyor. Öğrenme motivasyonunu artırmak için özel bir yaklaşım belirlememiz gerekiyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+      "targetId": 212,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
+      "newContent": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
+        "_order": 6
+      },
+      "targetId": 209,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
+        "_order": 7
+      },
+      "targetId": 205,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Derse hazırlıksız geldiği günlerde kopmalar arttı. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+      "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+        "_order": 8
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "6_1_olumsuz_kisa_gelisim",
+        "grade": "6",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "6_1.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
+        "_order": 9
+      }
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_gelisim",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+        "_order": 0
+      },
+      "targetId": 209,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+      "newContent": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_gelisim",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
+        "_order": 1
+      },
+      "targetId": 203,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kısa tekrarları atladığında konular üst üste birikti. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Adım adım gidersek rahatça toparlar.",
+      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_gelisim",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
+        "_order": 2
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_gelisim",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
+        "_order": 3
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_gelisim",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+        "_order": 4
+      }
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_akademik",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
+        "_order": 5
+      },
+      "targetId": 220,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+      "newContent": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_akademik",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+        "_order": 6
+      },
+      "targetId": 216,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Sabırlı ve kararlı gidersek güzel bir ilerleme göreceğiz.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "8_2_olumsuz_kisa_akademik",
+        "grade": "8",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "8_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+        "_order": 7
+      },
+      "targetId": 215,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde toparlanmak için daha net bir plana ihtiyaç duydu. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+      "newContent": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
       "previousFrequency": 1
     },
     {
@@ -383,12 +653,12 @@
           "özdüzenleme"
         ],
         "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
-        "_order": 15
+        "_order": 0
       },
-      "targetId": 372,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
+      "targetId": 212,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
       "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
-      "previousFrequency": 5
+      "previousFrequency": 1
     },
     {
       "status": "planned",
@@ -407,15 +677,16 @@
           "özdüzenleme"
         ],
         "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
-        "_order": 16
+        "_order": 1
       },
-      "targetId": 332,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
+      "targetId": 210,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde istediğimiz düzeye henüz yaklaşamadı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Doğru takip ile daha iyi bir döneme geçiş yapabilir.",
       "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
-      "previousFrequency": 4
+      "previousFrequency": 1
     },
     {
-      "status": "planned",
+      "status": "skipped",
+      "reason": "no-available-slot",
       "candidate": {
         "combinationKey": "5_1_olumsuz_kisa_gelisim",
         "grade": "5",
@@ -431,15 +702,12 @@
           "özdüzenleme"
         ],
         "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
-        "_order": 17
-      },
-      "targetId": 292,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
-      "previousFrequency": 3
+        "_order": 2
+      }
     },
     {
-      "status": "planned",
+      "status": "skipped",
+      "reason": "no-available-slot",
       "candidate": {
         "combinationKey": "5_1_olumsuz_kisa_gelisim",
         "grade": "5",
@@ -455,15 +723,12 @@
           "özdüzenleme"
         ],
         "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-        "_order": 18
-      },
-      "targetId": 252,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-      "previousFrequency": 2
+        "_order": 3
+      }
     },
     {
-      "status": "planned",
+      "status": "skipped",
+      "reason": "no-available-slot",
       "candidate": {
         "combinationKey": "5_1_olumsuz_kisa_gelisim",
         "grade": "5",
@@ -479,731 +744,406 @@
           "özdüzenleme"
         ],
         "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-        "_order": 19
-      },
-      "targetId": 212,
-      "previousContent": "[Öğrenci Adı] temel akademik becerilerde beklenen düzeyin altında kaldı. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-      "previousFrequency": 1
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_kisa_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir.",
-        "_order": 20
-      },
-      "targetId": 378,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir.",
-      "previousFrequency": 5
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_kisa_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum.",
-        "_order": 21
-      },
-      "targetId": 338,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli.",
-      "newContent": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum.",
-      "previousFrequency": 4
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_kisa_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Mevcut olumlu yönlerini sürdürmesi, sınıf içi dengesini destekleyecektir.",
-        "_order": 22
-      },
-      "targetId": 298,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Mevcut olumlu yönlerini sürdürmesi, sınıf içi dengesini destekleyecektir.",
-      "previousFrequency": 3
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_kisa_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
-        "_order": 23
-      },
-      "targetId": 258,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
-      "previousFrequency": 2
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumlu_kisa_genel",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumlu",
-        "lengthType": "kisa",
-        "focus": "genel",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
-        "_order": 24
-      },
-      "targetId": 218,
-      "previousContent": "[Öğrenci Adı] yeni arkadaşlarıyla hemen kaynaştı ve sosyal çevresini hızla genişletti. Sınıf temizliğinde ve düzeninde sorumluluk almaktan çekinmiyor, öğretmenlerine yardım etmek için her zaman istekli.",
-      "newContent": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
-      "previousFrequency": 1
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_kisa_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır.",
-        "_order": 25
-      },
-      "targetId": 394,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır.",
-      "previousFrequency": 5
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_kisa_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur.",
-        "_order": 26
-      },
-      "targetId": 354,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur.",
-      "previousFrequency": 4
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_kisa_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor. İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir.",
-        "_order": 27
-      },
-      "targetId": 314,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor. İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir.",
-      "previousFrequency": 3
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_kisa_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
-        "_order": 28
-      },
-      "targetId": 274,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
-      "previousFrequency": 2
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_1_olumsuz_kisa_sosyal",
-        "grade": "5",
-        "term": "1",
-        "tone": "olumsuz",
-        "lengthType": "kisa",
-        "focus": "sosyal",
-        "targetFile": "5_1.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-        "_order": 29
-      },
-      "targetId": 234,
-      "previousContent": "[Öğrenci Adı] sosyal bilgiler dersinde beklenen düzeyde konuyu öğrenmekte zorlanıyor ve derse karşı belirgin bir direnç sergiliyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum.",
-      "newContent": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-      "previousFrequency": 1
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_notr_uzun_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.",
-        "_order": 0
-      },
-      "targetId": 166,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili faydalı aktivitelere yönelmesi, 6. Sınıfa daha bilinçli ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.",
-      "previousFrequency": 5
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_notr_uzun_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.",
-        "_order": 1
-      },
-      "targetId": 126,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili faydalı aktivitelere yönelmesi, 6. Sınıfa daha bilinçli ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.",
-      "previousFrequency": 4
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_notr_uzun_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Kademeli ve takip edilebilir bir planla daha dengeli bir ilerleme bekliyorum. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.",
-        "_order": 2
-      },
-      "targetId": 86,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili faydalı aktivitelere yönelmesi, 6. Sınıfa daha bilinçli ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Kademeli ve takip edilebilir bir planla daha dengeli bir ilerleme bekliyorum. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.",
-      "previousFrequency": 3
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_notr_uzun_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-        "_order": 3
-      },
-      "targetId": 46,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili faydalı aktivitelere yönelmesi, 6. Sınıfa daha bilinçli ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-      "previousFrequency": 2
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_notr_uzun_genel",
-        "grade": "5",
-        "term": "2",
-        "tone": "notr",
-        "lengthType": "uzun",
-        "focus": "genel",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
-        ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
         "_order": 4
-      },
-      "targetId": 6,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Bu ilgisini akademik alanlara da yansıtma potansiyeli yüksektir. Yaz tatilinde kodlama, robotik veya bilimsel belgeseller izleme gibi teknolojiyle ilgili faydalı aktivitelere yönelmesi, 6. Sınıfa daha bilinçli ve bilgili başlamasını sağlayacaktır. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır. Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
-      "previousFrequency": 1
+      }
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_olumlu_uzun_davranis",
+        "combinationKey": "5_1_olumsuz_kisa_akademik",
         "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "targetFile": "5_2.json",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_1.json",
         "etiketler": [
-          "davranış",
-          "kural",
-          "sorumluluk",
-          "uyum"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki tutumu günlere göre değişse de takip edilebilir bir çizgide. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı çizgide devam etmesi hem kendisine hem sınıf ortamına katkı sağlar. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
         "_order": 5
       },
-      "targetId": 169,
-      "previousContent": "[Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda önemli bir gelişim göstermiştir. Davranışlarındaki düzen ve sorumluluk bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. Sınıfa daha organize bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki tutumu günlere göre değişse de takip edilebilir bir çizgide. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı çizgide devam etmesi hem kendisine hem sınıf ortamına katkı sağlar. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-      "previousFrequency": 5
+      "targetId": 220,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
+      "newContent": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_olumlu_uzun_davranis",
+        "combinationKey": "5_1_olumsuz_kisa_akademik",
         "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "targetFile": "5_2.json",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_1.json",
         "etiketler": [
-          "davranış",
-          "kural",
-          "sorumluluk",
-          "uyum"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Kurallara uyum ve sınıf düzenine katkı konusunda belirgin sinyaller veriyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu olumlu tutumu koruduğunda sınıf içi uyumunun daha da güçleneceğini öngörüyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
         "_order": 6
       },
-      "targetId": 129,
-      "previousContent": "[Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda önemli bir gelişim göstermiştir. Davranışlarındaki düzen ve sorumluluk bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. Sınıfa daha organize bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Kurallara uyum ve sınıf düzenine katkı konusunda belirgin sinyaller veriyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu olumlu tutumu koruduğunda sınıf içi uyumunun daha da güçleneceğini öngörüyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-      "previousFrequency": 4
+      "targetId": 219,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Adım adım gidersek rahatça toparlar.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_olumlu_uzun_davranis",
+        "combinationKey": "5_1_olumsuz_kisa_akademik",
         "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "targetFile": "5_2.json",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_1.json",
         "etiketler": [
-          "davranış",
-          "kural",
-          "sorumluluk",
-          "uyum"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Sınıf kuralları ve sorumluluk alma konusunda gözle görülür bir süreç yaşıyor. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Sorumluluk alma davranışını sürdürmesi, dönem sürecini daha verimli hale getirir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
         "_order": 7
       },
-      "targetId": 89,
-      "previousContent": "[Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda önemli bir gelişim göstermiştir. Davranışlarındaki düzen ve sorumluluk bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. Sınıfa daha organize bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Sınıf kuralları ve sorumluluk alma konusunda gözle görülür bir süreç yaşıyor. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Sorumluluk alma davranışını sürdürmesi, dönem sürecini daha verimli hale getirir. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.",
-      "previousFrequency": 3
+      "targetId": 216,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde toparlanmak için daha net bir plana ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+      "newContent": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_olumlu_uzun_davranis",
+        "combinationKey": "5_1_olumsuz_kisa_akademik",
         "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "targetFile": "5_2.json",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_1.json",
         "etiketler": [
-          "davranış",
-          "kural",
-          "sorumluluk",
-          "uyum"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki tutumu günlere göre değişse de takip edilebilir bir çizgide. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı çizgide devam etmesi hem kendisine hem sınıf ortamına katkı sağlar. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
         "_order": 8
       },
-      "targetId": 49,
-      "previousContent": "[Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda önemli bir gelişim göstermiştir. Davranışlarındaki düzen ve sorumluluk bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. Sınıfa daha organize bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki tutumu günlere göre değişse de takip edilebilir bir çizgide. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. Aynı çizgide devam etmesi hem kendisine hem sınıf ortamına katkı sağlar. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
-      "previousFrequency": 2
+      "targetId": 204,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde toparlanmak için daha net bir plana ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+      "newContent": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_olumlu_uzun_davranis",
+        "combinationKey": "5_1_olumsuz_kisa_akademik",
         "grade": "5",
-        "term": "2",
-        "tone": "olumlu",
-        "lengthType": "uzun",
-        "focus": "davranis",
-        "targetFile": "5_2.json",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_1.json",
         "etiketler": [
-          "davranış",
-          "kural",
-          "sorumluluk",
-          "uyum"
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Kurallara uyum ve sınıf düzenine katkı konusunda belirgin sinyaller veriyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu olumlu tutumu koruduğunda sınıf içi uyumunun daha da güçleneceğini öngörüyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
         "_order": 9
       },
-      "targetId": 9,
-      "previousContent": "[Öğrenci Adı], yıl boyunca okul kurallarına uyum konusunda önemli bir gelişim göstermiştir. Davranışlarındaki düzen ve sorumluluk bilinci artmıştır. Yaz tatilinde günlük rutinler oluşturarak ve küçük sorumluluklar alarak disiplin becerilerini pekiştirmesi, 6. Sınıfa daha organize bir başlangıç yapmasını sağlayacaktır. Kurallara uyumun, başarısının anahtarı olduğunu kavramaya başladı. Bu değerlendirme, sınıf içindeki günlük iletişimi ve girdiğim derslerdeki performansını temel alır.",
-      "newContent": "[Öğrenci Adı] için Kurallara uyum ve sınıf düzenine katkı konusunda belirgin sinyaller veriyor. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Bu olumlu tutumu koruduğunda sınıf içi uyumunun daha da güçleneceğini öngörüyorum. Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+      "targetId": 203,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Adım adım gidersek rahatça toparlar.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
       "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_olumsuz_uzun_sosyal",
+        "combinationKey": "5_2_olumsuz_kisa_gelisim",
         "grade": "5",
         "term": "2",
         "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
+        "lengthType": "kisa",
+        "focus": "gelisim",
         "targetFile": "5_2.json",
         "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 10
+        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
+        "_order": 0
       },
-      "targetId": 197,
-      "previousContent": "[Öğrenci Adı] sosyal ilişkilerinde kopuk bir hal sergiliyor. Hiç kimseyle oynamak veya iletişim kurmak istemiyor, kendini belirgin şekilde geri çekiyor. Sosyal aktivitelere katılmayı reddettiği gözlemlendi. Bu durum, onun akranlarıyla sağlıklı bağlar kurmasını engelliyor ve sosyal gelişimini ciddi şekilde aksatıyor. Gerekirse okul ile genel bir görüşme planlanabilir. Bu izole durumu bizi endişelendiriyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 5
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 11
-      },
-      "targetId": 157,
-      "previousContent": "[Öğrenci Adı] sosyal ilişkilerinde kopuk bir hal sergiliyor. Hiç kimseyle oynamak veya iletişim kurmak istemiyor, kendini belirgin şekilde geri çekiyor. Sosyal aktivitelere katılmayı reddettiği gözlemlendi. Bu durum, onun akranlarıyla sağlıklı bağlar kurmasını engelliyor ve sosyal gelişimini ciddi şekilde aksatıyor. Gerekirse okul ile genel bir görüşme planlanabilir. Bu izole durumu bizi endişelendiriyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 4
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-        "_order": 12
-      },
-      "targetId": 117,
-      "previousContent": "[Öğrenci Adı] sosyal ilişkilerinde kopuk bir hal sergiliyor. Hiç kimseyle oynamak veya iletişim kurmak istemiyor, kendini belirgin şekilde geri çekiyor. Sosyal aktivitelere katılmayı reddettiği gözlemlendi. Bu durum, onun akranlarıyla sağlıklı bağlar kurmasını engelliyor ve sosyal gelişimini ciddi şekilde aksatıyor. Gerekirse okul ile genel bir görüşme planlanabilir. Bu izole durumu bizi endişelendiriyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor. Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum. İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.",
-      "previousFrequency": 3
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-        "_order": 13
-      },
-      "targetId": 77,
-      "previousContent": "[Öğrenci Adı] sosyal ilişkilerinde kopuk bir hal sergiliyor. Hiç kimseyle oynamak veya iletişim kurmak istemiyor, kendini belirgin şekilde geri çekiyor. Sosyal aktivitelere katılmayı reddettiği gözlemlendi. Bu durum, onun akranlarıyla sağlıklı bağlar kurmasını engelliyor ve sosyal gelişimini ciddi şekilde aksatıyor. Gerekirse okul ile genel bir görüşme planlanabilir. Bu izole durumu bizi endişelendiriyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var. Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum. Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
-      "previousFrequency": 2
-    },
-    {
-      "status": "planned",
-      "candidate": {
-        "combinationKey": "5_2_olumsuz_uzun_sosyal",
-        "grade": "5",
-        "term": "2",
-        "tone": "olumsuz",
-        "lengthType": "uzun",
-        "focus": "sosyal",
-        "targetFile": "5_2.json",
-        "etiketler": [
-          "sosyal",
-          "iletişim",
-          "arkadaş",
-          "işbirliği"
-        ],
-        "content": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
-        "_order": 14
-      },
-      "targetId": 37,
-      "previousContent": "[Öğrenci Adı] sosyal ilişkilerinde kopuk bir hal sergiliyor. Hiç kimseyle oynamak veya iletişim kurmak istemiyor, kendini belirgin şekilde geri çekiyor. Sosyal aktivitelere katılmayı reddettiği gözlemlendi. Bu durum, onun akranlarıyla sağlıklı bağlar kurmasını engelliyor ve sosyal gelişimini ciddi şekilde aksatıyor. Gerekirse okul ile genel bir görüşme planlanabilir. Bu izole durumu bizi endişelendiriyor. Evde yapılacak düzenli takip ve sınıf içi çalışmalarla bu alanda ilerleme bekliyorum. Değerlendirmeyi sınıf içi süreçte gördüğüm defter düzeni, ödev tamamlama ve derse hazırlık durumuna göre yaptım.",
-      "newContent": "[Öğrenci Adı] için Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum. Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum. Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur. Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum. Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.",
+      "targetId": 219,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Adım adım gidersek rahatça toparlar.",
+      "newContent": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.",
       "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_notr_kisa_genel",
+        "combinationKey": "5_2_olumsuz_kisa_gelisim",
         "grade": "5",
         "term": "2",
-        "tone": "notr",
+        "tone": "olumsuz",
         "lengthType": "kisa",
-        "focus": "genel",
+        "focus": "gelisim",
         "targetFile": "5_2.json",
         "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum.",
-        "_order": 15
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+        "_order": 1
       },
-      "targetId": 366,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum.",
-      "previousFrequency": 5
+      "targetId": 207,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+      "newContent": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_notr_kisa_genel",
+        "combinationKey": "5_2_olumsuz_kisa_gelisim",
         "grade": "5",
         "term": "2",
-        "tone": "notr",
+        "tone": "olumsuz",
         "lengthType": "kisa",
-        "focus": "genel",
+        "focus": "gelisim",
         "targetFile": "5_2.json",
         "etiketler": [
-          "genel",
-          "takip",
-          "katılım",
-          "gelişim"
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
         ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır.",
-        "_order": 16
+        "content": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
+        "_order": 2
       },
-      "targetId": 326,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır.",
-      "previousFrequency": 4
+      "targetId": 203,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Adım adım gidersek rahatça toparlar.",
+      "newContent": "[Öğrenci Adı] için Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum. Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "5_2_olumsuz_kisa_gelisim",
+        "grade": "5",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "5_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı. Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
+        "_order": 3
+      }
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "5_2_olumsuz_kisa_gelisim",
+        "grade": "5",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "gelisim",
+        "targetFile": "5_2.json",
+        "etiketler": [
+          "gelişim",
+          "dikkat",
+          "motivasyon",
+          "özdüzenleme"
+        ],
+        "content": "[Öğrenci Adı] için Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte. Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
+        "_order": 4
+      }
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_notr_kisa_genel",
+        "combinationKey": "5_2_olumsuz_kisa_akademik",
         "grade": "5",
         "term": "2",
-        "tone": "notr",
+        "tone": "olumsuz",
         "lengthType": "kisa",
-        "focus": "genel",
+        "focus": "akademik",
         "targetFile": "5_2.json",
         "etiketler": [
-          "genel",
-          "takip",
+          "akademik",
+          "ödev",
           "katılım",
-          "gelişim"
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Kademeli ve takip edilebilir bir planla daha dengeli bir ilerleme bekliyorum.",
-        "_order": 17
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+        "_order": 5
       },
-      "targetId": 286,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
-      "newContent": "[Öğrenci Adı] için Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor. Kademeli ve takip edilebilir bir planla daha dengeli bir ilerleme bekliyorum.",
-      "previousFrequency": 3
+      "targetId": 220,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde istediğimiz düzeye henüz yaklaşamadı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_notr_kisa_genel",
+        "combinationKey": "5_2_olumsuz_kisa_akademik",
         "grade": "5",
         "term": "2",
-        "tone": "notr",
+        "tone": "olumsuz",
         "lengthType": "kisa",
-        "focus": "genel",
+        "focus": "akademik",
         "targetFile": "5_2.json",
         "etiketler": [
-          "genel",
-          "takip",
+          "akademik",
+          "ödev",
           "katılım",
-          "gelişim"
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
-        "_order": 18
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+        "_order": 6
       },
-      "targetId": 246,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
-      "newContent": "[Öğrenci Adı] için Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum. Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum. Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.",
-      "previousFrequency": 2
+      "targetId": 217,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+      "newContent": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+      "previousFrequency": 1
     },
     {
       "status": "planned",
       "candidate": {
-        "combinationKey": "5_2_notr_kisa_genel",
+        "combinationKey": "5_2_olumsuz_kisa_akademik",
         "grade": "5",
         "term": "2",
-        "tone": "notr",
+        "tone": "olumsuz",
         "lengthType": "kisa",
-        "focus": "genel",
+        "focus": "akademik",
         "targetFile": "5_2.json",
         "etiketler": [
-          "genel",
-          "takip",
+          "akademik",
+          "ödev",
           "katılım",
-          "gelişim"
+          "tekrar"
         ],
-        "content": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
-        "_order": 19
+        "content": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
+        "_order": 7
+      },
+      "targetId": 212,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde istediğimiz düzeye henüz yaklaşamadı. Kısa tekrarları atladığında konular üst üste birikti. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
+      "newContent": "[Öğrenci Adı] için Ders içi katılımında düzenli bir çizgi gözlemliyorum. Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "5_2_olumsuz_kisa_akademik",
+        "grade": "5",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+        "_order": 8
+      },
+      "targetId": 204,
+      "previousContent": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır. Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "skipped",
+      "reason": "no-available-slot",
+      "candidate": {
+        "combinationKey": "5_2_olumsuz_kisa_akademik",
+        "grade": "5",
+        "term": "2",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "5_2.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir. Bu surecin planli yurutulmesi hedef isabetini guclendirir.",
+        "_order": 9
+      }
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "7_1_olumsuz_kisa_akademik",
+        "grade": "7",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "7_1.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+        "_order": 0
+      },
+      "targetId": 218,
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde istediğimiz düzeye henüz yaklaşamadı. Ödev ve ders takibinde düzen sağlayamadı. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Doğru takip ile daha iyi bir döneme geçiş yapabilir.",
+      "newContent": "[Öğrenci Adı] için Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu. Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.",
+      "previousFrequency": 1
+    },
+    {
+      "status": "planned",
+      "candidate": {
+        "combinationKey": "7_1_olumsuz_kisa_akademik",
+        "grade": "7",
+        "term": "1",
+        "tone": "olumsuz",
+        "lengthType": "kisa",
+        "focus": "akademik",
+        "targetFile": "7_1.json",
+        "etiketler": [
+          "akademik",
+          "ödev",
+          "katılım",
+          "tekrar"
+        ],
+        "content": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
+        "_order": 1
       },
       "targetId": 206,
-      "previousContent": "[Öğrenci Adı], yıl boyunca teknolojiye olan ilgisini korumuştur. Ekran süresi dengesini kurmaya devam etmesi de gelişimini destekleyecektir.",
-      "newContent": "[Öğrenci Adı] için Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti. Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır. Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.",
+      "previousContent": "[Öğrenci Adı] bu ilk dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Sakin ama düzenli bir programla çok daha iyi bir noktaya gelir.",
+      "newContent": "[Öğrenci Adı] için Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum. Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.",
       "previousFrequency": 1
     }
   ]
