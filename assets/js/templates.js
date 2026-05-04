@@ -466,6 +466,11 @@ class TemplateManager {
         window.addEventListener('resize', () => {
             if (!this.isMobileViewport()) {
                 this.closeMobileFilterSheet();
+                return;
+            }
+
+            if (this.isMobileFilterSheetOpen) {
+                this.syncMobileFilterSheetViewportBounds();
             }
         });
 
@@ -519,6 +524,21 @@ class TemplateManager {
         return window.matchMedia('(max-width: 639px)').matches;
     }
 
+    syncMobileFilterSheetViewportBounds() {
+        const panel = document.getElementById('templateFilterPanel');
+        if (!panel || !this.isMobileViewport()) return;
+
+        const hostRect = panel.parentElement?.getBoundingClientRect();
+        const headerRect = document.querySelector('.app-header')?.getBoundingClientRect();
+        const desiredTopInViewport = Math.max((headerRect?.bottom || 0) + 8, 8);
+        const hostTop = hostRect?.top || 0;
+        const topWithinHost = desiredTopInViewport - hostTop;
+        const availableHeight = Math.max(window.innerHeight - desiredTopInViewport - 8, 220);
+
+        panel.style.top = `${topWithinHost}px`;
+        panel.style.height = `${availableHeight}px`;
+    }
+
     openMobileFilterSheet() {
         if (!this.isMobileViewport()) return;
 
@@ -526,6 +546,8 @@ class TemplateManager {
         const backdrop = document.getElementById('templateFilterBackdrop');
         const openBtn = document.getElementById('openTemplateFiltersBtn');
         if (!panel || !backdrop) return;
+
+        this.syncMobileFilterSheetViewportBounds();
 
         panel.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -545,6 +567,8 @@ class TemplateManager {
         if (panel) {
             panel.classList.remove('is-open');
             panel.setAttribute('aria-hidden', this.isMobileViewport() ? 'true' : 'false');
+            panel.style.removeProperty('top');
+            panel.style.removeProperty('height');
         }
         if (backdrop) {
             backdrop.classList.remove('is-open');
