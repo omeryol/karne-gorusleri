@@ -594,21 +594,71 @@ class TemplateManager {
     }
 
     renderEmptyState() {
+        const hasFiltersApplied = this.currentToneFilter !== 'all' ||
+            this.mainGradeFilter !== 'all' ||
+            this.mainTermFilter !== 'all' ||
+            this.mainLengthFilter !== 'all';
+
+        const message = hasFiltersApplied
+            ? 'Seçili filtrelere uygun şablon bulunamadı'
+            : 'Henüz şablon yüklenmemiş';
+
+        const subtitle = hasFiltersApplied
+            ? 'Filtreleri değiştirerek farklı şablonları görüntüleyebilirsiniz'
+            : 'Şablonlar yükleniyor. Lütfen bekleyin...';
+
         return `
-            <div class="col-span-full text-center py-12">
-                <div class="mx-auto w-24 h-24 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-4">
-                    <i class="fas fa-file-text text-gray-400 text-3xl"></i>
+            <div class="col-span-full text-center py-16">
+                <div class="mx-auto mb-6 relative">
+                    <div class="w-32 h-32 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 rounded-full flex items-center justify-center shadow-lg relative z-10">
+                        <i class="fas fa-inbox text-slate-400 dark:text-slate-500 text-5xl"></i>
+                    </div>
+                    <div class="absolute inset-0 w-32 h-32 bg-blue-500/10 rounded-full animate-pulse" style="animation-duration: 2s;"></div>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Şablon bulunamadı</h3>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">
-                    ${this.currentToneFilter !== 'all' || this.mainGradeFilter !== 'all' || this.mainTermFilter !== 'all' || this.mainLengthFilter !== 'all'
-                        ? 'Secili filtrelere uygun sablon bulunamadi'
-                        : 'Henüz şablon yüklenmemiş'}
-                </p>
-                <button onclick="window.templates.resetMainFilters()" class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
-                    <i class="fas fa-filter mr-2"></i>
-                    Filtreleri Temizle
-                </button>
+
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">${message}</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto">${subtitle}</p>
+
+                ${hasFiltersApplied ? `
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center items-center flex-wrap mb-8">
+                        <button onclick="event.preventDefault(); window.templates.handleShowAllAction()"
+                                class="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center gap-2">
+                            <i class="fas fa-eye group-hover:scale-110 transition-transform"></i>
+                            Tümünü Göster
+                        </button>
+
+                        <button onclick="event.preventDefault(); window.templates.resetMainFilters()"
+                                class="group bg-gradient-to-r from-slate-500 to-slate-600 hover:from-slate-600 hover:to-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center gap-2">
+                            <i class="fas fa-redo group-hover:rotate-180 transition-transform duration-300"></i>
+                            Filtreleri Sıfırla
+                        </button>
+
+                        <button onclick="event.preventDefault(); window.templates.showSmartSuggestions()"
+                                class="group bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center gap-2">
+                            <i class="fas fa-lightbulb group-hover:scale-110 transition-transform"></i>
+                            İpuçları
+                        </button>
+                    </div>
+
+                    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 max-w-md mx-auto text-left">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-info-circle text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-1">İpucu:</p>
+                                <p class="text-sm text-blue-800 dark:text-blue-200">
+                                    ${this.getSmartEmptyStateTip()}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="inline-flex flex-col items-center">
+                        <div class="animate-spin text-blue-500 mb-4">
+                            <i class="fas fa-spinner text-3xl"></i>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Şablonlar yükleniyor...</p>
+                    </div>
+                `}
             </div>
         `;
     }
@@ -636,6 +686,64 @@ class TemplateManager {
 
         this.syncMainToneFilterButtons();
         this.render();
+    }
+
+    getSmartEmptyStateTip() {
+        if (this.currentToneFilter !== 'all') {
+            return `Farklı bir ton (${this.currentToneFilter === 'notr' ? 'Nötr, Olumlu veya Olumsuz' : 'ton'}) seçerek sonuç bulabilirsiniz.`;
+        }
+        if (this.mainGradeFilter !== 'all') {
+            return 'Sınıf filtresini değiştirerek başka sınıflara ait şablonları görebilirsiniz.';
+        }
+        if (this.mainTermFilter !== 'all') {
+            return 'Dönem filtresini değiştirerek farklı dönemlere ait şablonları görüntüleyebilirsiniz.';
+        }
+        if (this.mainLengthFilter !== 'all') {
+            return 'Uzunluk filtresini değiştirerek daha kısa veya daha uzun şablonları bulabilirsiniz.';
+        }
+        return 'Filtrelerinizi ayarlayarak size uygun şablonları bulunuz.';
+    }
+
+    handleShowAllAction() {
+        this.currentToneFilter = 'all';
+
+        const toneButtons = document.querySelectorAll('.tone-filter');
+        toneButtons.forEach(btn => btn.classList.remove('active'));
+        document.querySelector('.tone-filter[data-tone="all"]')?.classList.add('active');
+
+        this.render();
+
+        if (window.ui && window.ui.showToast) {
+            window.ui.showToast('Tüm şablonlar gösteriliyor!', 'success');
+        }
+    }
+
+    showSmartSuggestions() {
+        const suggestions = [];
+
+        if (this.currentToneFilter !== 'all') {
+            suggestions.push(`• Ton: ${this.getToneText(this.currentToneFilter)} (Değiştirmek için başka tona tıklayın)`);
+        }
+        if (this.mainGradeFilter !== 'all') {
+            suggestions.push(`• Sınıf: ${this.mainGradeFilter}. Sınıf (Tüm Sınıflar'ı seçin)`);
+        }
+        if (this.mainTermFilter !== 'all') {
+            suggestions.push(`• Dönem: ${this.mainTermFilter}. Dönem (Tüm Dönemler'i seçin)`);
+        }
+        if (this.mainLengthFilter !== 'all') {
+            const lengthText = this.mainLengthFilter === 'kisa' ? 'Kısa' : 'Uzun';
+            suggestions.push(`• Uzunluk: ${lengthText} (Kısa + Uzun'u seçin)`);
+        }
+
+        const message = suggestions.length > 0
+            ? `Aktif filtreler:\n${suggestions.join('\n')}\n\nBu filtreleri değiştirerek şablon bulabilirsiniz.`
+            : 'Lütfen en az bir filtreyi değiştirin.';
+
+        if (window.ui && window.ui.showAlert) {
+            window.ui.showAlert(message, 'İpuçları');
+        } else {
+            alert(message);
+        }
     }
 
     handleAIToneFilterChange(e) {
