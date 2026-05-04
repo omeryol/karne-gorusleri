@@ -658,6 +658,8 @@ class TemplateManager {
         // Sınıf ve dönem bilgisini bul
         const gradeTermInfo = this.getGradeTermFromTemplate(template);
         const templateId = template.id;
+        const templateLength = templateContent.length;
+        const templateTagCount = templateTags.length;
 
         // Check if this is a neutral fallback template
         const isNeutralFallback = template.isNeutralFallback === true;
@@ -675,7 +677,7 @@ class TemplateManager {
         ` : '';
 
         return `
-            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in cursor-pointer relative" onclick="window.templates.useTemplate('${templateId}')">
+            <div class="${toneBgColor} rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in cursor-pointer relative group" onclick="window.templates.useTemplate('${templateId}')">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex gap-2">
                         <span class="${toneColor} text-white px-3 py-1 rounded-full text-sm font-medium">${toneText}</span>
@@ -685,24 +687,44 @@ class TemplateManager {
                         ` : ''}
                         <span class="${lengthBadgeClass} text-white px-2 py-1 rounded-full text-xs font-medium">${lengthText}</span>
                     </div>
-                    <div class="flex space-x-2 items-center">
+                    <div class="flex items-center">
                         ${fallbackBadgeHTML}
-                        <button onclick="event.stopPropagation(); window.templates.copyTemplate('${templateId}')" class="text-gray-400 hover:text-primary transition-colors duration-200" title="Kopyala">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                        <button onclick="event.stopPropagation(); window.templates.useTemplate('${templateId}')" class="text-gray-400 hover:text-primary transition-colors duration-200" title="Kullan">
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
                     </div>
                 </div>
-                <p class="text-gray-700 dark:text-gray-300 mb-4">${templateContent}</p>
+                <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">${templateContent}</p>
                 ${templateTags && templateTags.length > 0 ? `
-                    <div class="flex flex-wrap gap-1">
+                    <div class="flex flex-wrap gap-1.5">
                         ${templateTags.map(tag => `
-                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs">${tag}</span>
+                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2.5 py-1 rounded-full text-xs font-medium">${tag}</span>
                         `).join('')}
                     </div>
                 ` : ''}
+
+                <div class="mt-4 pt-3 border-t border-gray-200/70 dark:border-gray-700/70 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-300">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/70 dark:bg-slate-800/70 rounded-full border border-gray-200 dark:border-gray-700">
+                        <i class="fas fa-text-width"></i>
+                        ${templateLength} karakter
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/70 dark:bg-slate-800/70 rounded-full border border-gray-200 dark:border-gray-700">
+                        <i class="fas fa-tags"></i>
+                        ${templateTagCount} etiket
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/70 dark:bg-slate-800/70 rounded-full border border-gray-200 dark:border-gray-700">
+                        <i class="fas fa-wave-square"></i>
+                        ${toneText}
+                    </span>
+                </div>
+
+                <div class="mt-3 grid grid-cols-2 gap-2">
+                    <button onclick="event.stopPropagation(); window.templates.copyTemplate('${templateId}')" class="inline-flex items-center justify-center gap-2 bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-200" title="Kopyala">
+                        <i class="fas fa-copy"></i>
+                        Kopyala
+                    </button>
+                    <button onclick="event.stopPropagation(); window.templates.useTemplate('${templateId}')" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-purple-700 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-200" title="Kullan">
+                        <i class="fas fa-arrow-right"></i>
+                        Kullan
+                    </button>
+                </div>
             </div>
         `;
     }
