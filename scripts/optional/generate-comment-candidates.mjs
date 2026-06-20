@@ -28,122 +28,122 @@ const focusTagMap = {
 
 const observationPool = {
   akademik: [
-    'Ders içi katılımında düzenli bir çizgi gözlemliyorum',
-    'Ödev takibi ve konu tekrarında dönem boyunca net bir tablo oluştu',
-    'Girdiğim derslerde konuyu kavrama hızının dengeli ilerlediğini görüyorum',
+    'Derslerde katılımı gayet güzel, anladığını ve anlamadığını belli ediyor',
+    'Ödevlerini yaparken düzenli bir çalışma temposu var, bu çok değerli',
+    'Derslerde konuları kavrama şekli gayet yerinde, takip edebiliyorum',
   ],
   davranis: [
-    'Sınıf kuralları ve sorumluluk alma konusunda gözle görülür bir süreç yaşıyor',
-    'Sınıf içindeki tutumu günlere göre değişse de takip edilebilir bir çizgide',
-    'Kurallara uyum ve sınıf düzenine katkı konusunda belirgin sinyaller veriyor',
+    'Sınıf kurallarına uyma konusunda zaman zaman hatırlatmaya ihtiyacı oluyor',
+    'Sınıf içindeki hali günden güne değişiyor, bazen çok sakin bazen hareketli',
+    'Kuralları benimseme ve sınıf düzenine katkı sağlama konusunda çaba gösteriyor',
   ],
   sosyal: [
-    'Akran iletişiminde dönem boyunca farklı durumlara verdiği tepkileri izliyorum',
-    'Grup çalışmalarında iletişim kurma biçimi sınıf içi süreci doğrudan etkiliyor',
-    'Arkadaş ilişkilerinde zaman zaman güçlü, zaman zaman destek gerektiren bir tablo var',
+    'Arkadaşlarıyla iletişimi genelde iyi, ama bazen anlaşmazlıklar yaşanabiliyor',
+    'Grup çalışmalarında arkadaşlarıyla iletişim kurma şekli sınıf ortamını etkiliyor',
+    'Arkadaşlık ilişkileri kimi zaman çok güzel, kimi zaman biraz desteğe ihtiyaç duyuyor',
   ],
   gelisim: [
-    'Dikkat ve öz düzenleme alanında küçük ama anlamlı adımlar gözlemliyorum',
-    'Motivasyonunu koruma ve sürdürme konusunda dönem içinde dalgalanmalar yaşadı',
-    'Öz güven ve derse odaklanma tarafında düzenli takip gerektiren bir süreçte',
+    'Dikkat ve odaklanma konusunda küçük de olsa ilerlemeler var, bu sevindirici',
+    'Motivasyonu dönem içinde bir gelip bir gidiyor, sürekli yüksek tutmakta zorlanıyor',
+    'Kendine güven ve derse odaklanma konusunda biraz destek gerekiyor',
   ],
   genel: [
-    'Sınıf içindeki genel performansında takip edilebilir bir ilerleme görüyorum',
-    'Dönem sürecinde güçlü yönleriyle birlikte gelişime açık alanları netleşti',
-    'Genel tutumunda ders ve iletişim dengesini kurma çabası dikkat çekiyor',
+    'Sınıftaki haline bakınca ilerleme kaydettiğini söyleyebilirim',
+    'Güçlü yönleri olduğu kadar geliştirmesi gereken yönleri de var',
+    'Genel olarak ders ve arkadaşlarıyla iletişim dengesini kurmaya çalışıyor',
   ],
 };
 
 const positiveActionPool = {
   akademik: [
-    'Bu düzeni sürdürürse dönem sonunda daha güçlü bir akademik sonuç alacağını düşünüyorum.',
-    'Aynı çalışma ritmini koruması, başarı çizgisini kalıcı hale getirecektir.',
-    'Düzenli tekrar alışkanlığını devam ettirmesi önemli bir avantaj sağlayacaktır.',
+    'Böyle devam ederse çok daha iyi yerlere geleceğine eminim.',
+    'Aynı çalışma şeklini korursa başarısı daha da artacaktır.',
+    'Düzenli tekrara devam ederse bu onun için büyük avantaj olacak.',
   ],
   davranis: [
-    'Bu olumlu tutumu koruduğunda sınıf içi uyumunun daha da güçleneceğini öngörüyorum.',
-    'Sorumluluk alma davranışını sürdürmesi, dönem sürecini daha verimli hale getirir.',
-    'Aynı çizgide devam etmesi hem kendisine hem sınıf ortamına katkı sağlar.',
+    'Bu güzel halini korursa sınıftaki uyumu daha da güçlenecek.',
+    'Sorumluluklarını böyle güzel yerine getirmeye devam etmeli.',
+    'Aynı çizgide devam etmesi hem kendisi hem de sınıf için çok iyi olacak.',
   ],
   sosyal: [
-    'İletişim tarafındaki bu yaklaşımını sürdürmesi sosyal dengesini daha da güçlendirecektir.',
-    'Akran ilişkilerinde bu yapıcı tutumu koruması önemli bir kazanım olur.',
-    'Grup içindeki dengeli iletişimi devam ettirmesi, sınıf iklimine olumlu yansır.',
+    'Arkadaşlarıyla olan bu güzel iletişimini sürdürmesi çok önemli.',
+    'Arkadaşlıklarında bu yapıcı tavrını koruması büyük kazanç.',
+    'Grup içinde bu dengeli halini devam ettirmesi sınıfa da olumlu yansıyor.',
   ],
   gelisim: [
-    'Bu adımları aynı istikrarla sürdürdüğünde gelişimi daha görünür hale gelecektir.',
-    'Düzenli takip ve küçük hedeflerle bu süreci güçlü şekilde sürdürebilir.',
-    'Kendi ritmini koruduğunda dönem sonunda daha dengeli bir tablo bekliyorum.',
+    'Bu şekilde devam ederse gelişimi daha da belirgin hale gelecek.',
+    'Küçük adımlarla da olsa ilerlemeye devam etmesi çok değerli.',
+    'Kendi temposunu bulursa çok daha iyi bir noktaya gelecek.',
   ],
   genel: [
-    'Bu çizgiyi koruması halinde dönem sonunda daha güçlü bir genel performans bekliyorum.',
-    'Mevcut olumlu yönlerini sürdürmesi, sınıf içi dengesini destekleyecektir.',
-    'Aynı istikrarla devam etmesi bu gelişimi kalıcı hale getirebilir.',
+    'Bu çizgisini korursa çok güzel bir dönem geçireceğine eminim.',
+    'İyi yönlerini koruması, onun sınıftaki dengesini destekleyecek.',
+    'Aynı kararlılıkla devam ederse bu gelişim kalıcı olacak.',
   ],
 };
 
 const neutralActionPool = {
   akademik: [
-    'Ödev takibi ve düzenli tekrar planı ile gelişimini daha net görebileceğimizi düşünüyorum.',
-    'Kısa ama düzenli çalışma adımları, akademik çizgisini yukarı taşıyacaktır.',
-    'Ders tekrarını günlük küçük parçalara bölmesi faydalı olacaktır.',
+    'Ödevlerini düzenli yapıp tekrar ederse daha iyi olacağını düşünüyorum.',
+    'Kısa ama düzenli çalışarak derslerini daha iyi hale getirebilir.',
+    'Ders tekrarlarını günlük küçük parçalara bölmesi işini kolaylaştıracak.',
   ],
   davranis: [
-    'Sınıf kuralları konusunda günlük küçük hatırlatmalarla daha dengeli bir süreç ilerleyebilir.',
-    'Sorumluluk alanlarını netleştirip düzenli takip etmek bu tabloyu iyileştirecektir.',
-    'Davranış tarafında tutarlı geri bildirimle daha hızlı ilerleme bekliyorum.',
+    'Sınıf kurallarını her gün ufak ufak hatırlatarak daha dengeli ilerleyebiliriz.',
+    'Sorumluluklarını netleştirip düzenli takip edersek işler daha iyiye gidecek.',
+    'Davranışlarıyla ilgili düzenli geri bildirim verirsek daha hızlı ilerler.',
   ],
   sosyal: [
-    'Akran iletişiminde küçük ve somut hedeflerle ilerlemek süreci olumlu etkileyebilir.',
-    'Grup içinde rol paylaşımını netleştirmek sosyal uyumu destekleyecektir.',
-    'İletişim dilini düzenli geri bildirimle güçlendirmek faydalı olur.',
+    'Arkadaşlarıyla iletişiminde küçük hedeflerle ilerlemek iyi olabilir.',
+    'Grup içinde rollerini netleştirirse arkadaşlarıyla uyumu artacak.',
+    'İletişim şeklini konuşarak ve hatırlatarak güçlendirebiliriz.',
   ],
   gelisim: [
-    'Dikkat ve motivasyon için kısa hedeflerle düzenli takip, süreci daha görünür kılacaktır.',
-    'Öz düzenleme becerisini günlük rutinlerle desteklemek olumlu sonuç verebilir.',
-    'Küçük ama sürekliliği olan adımlar bu alanda belirgin katkı sağlar.',
+    'Dikkat ve motivasyon için küçük hedeflerle düzenli takip iyi gelecek.',
+    'Kendini toparlaması için günlük ufak rutinler oluşturması faydalı olur.',
+    'Küçük ama sürekli adımlarla bu alanda ilerleme kaydedebilir.',
   ],
   genel: [
-    'Genel tabloyu güçlendirmek için düzenli takip ve net mini hedefler öneriyorum.',
-    'Ders ve sınıf içi sorumluluk dengesini planlı sürdürmesi faydalı olacaktır.',
-    'Kademeli ve takip edilebilir bir planla daha dengeli bir ilerleme bekliyorum.',
+    'Toparlanması için düzenli takip ve net hedefler iyi bir yol olacak.',
+    'Ders ve sınıf içi sorumluluklarını dengeli götürmesi önemli.',
+    'Adım adım ilerleyecek bir planla daha dengeli olacağını düşünüyorum.',
   ],
 };
 
 const negativeActionPool = {
   akademik: [
-    'Ders ve ödev düzenini günlük takip ederek küçük hedeflerle ilerlemesi bu tabloyu toparlayacaktır.',
-    'Temel kazanımları parçalara bölerek düzenli takip etmek, akademik dengeyi güçlendirebilir.',
-    'Düzenli geri bildirim ve kısa tekrar planı bu alandaki zorlanmayı azaltacaktır.',
+    'Ders ve ödev düzenini her gün takip edip küçük hedeflerle ilerlersek toparlar.',
+    'Konuları küçük parçalara bölüp düzenli tekrar edersek daha iyi olacak.',
+    'Düzenli geri bildirim ve kısa tekrarlarla bu zorluğu aşabiliriz.',
   ],
   davranis: [
-    'Sınıf kuralları için net sınır ve düzenli takip yaklaşımıyla daha olumlu bir süreç bekliyorum.',
-    'Sorumluluk alanlarını günlük kontrolle takip etmek davranış dengesini destekler.',
-    'Tutarlı geri bildirim ve kararlı takip ile bu alanda toparlanma sağlanabilir.',
+    'Sınıf kuralları konusunda net sınırlar ve düzenli takiple daha iyi bir süreç bekliyorum.',
+    'Sorumluluklarını her gün ufak ufak kontrol ederek takip edersek düzelir.',
+    'Tutarlı geri bildirim ve kararlı takiple bu konuda toparlanabilir.',
   ],
   sosyal: [
-    'İletişim tarafında küçük ve uygulanabilir hedeflerle düzenli takip bu süreci iyileştirebilir.',
-    'Akran ilişkilerinde kısa geri bildirim döngüleri kurmak sosyal uyumu artıracaktır.',
-    'Grup içinde net rol ve sınırlarla ilerlemek çatışmaları azaltmaya yardımcı olur.',
+    'Arkadaşlarıyla iletişiminde küçük ve uygulanabilir hedeflerle takip edersek düzelebilir.',
+    'Arkadaşlık ilişkilerinde kısa geri bildirimlerle sosyal uyumu artırabiliriz.',
+    'Grup içinde rollerini ve sınırlarını netleştirirsek sorunlar azalabilir.',
   ],
   gelisim: [
-    'Dikkat ve motivasyon alanını kısa hedeflerle düzenli takip etmek bu tabloyu dengeleyecektir.',
-    'Öz düzenleme becerileri için günlük mini rutinler oluşturulması faydalı olur.',
-    'Süreç odaklı ve kararlı takip ile bu alanda adım adım ilerleme bekliyorum.',
+    'Dikkat ve motivasyon için küçük hedeflerle düzenli takip iyi bir yol olacak.',
+    'Kendini toplaması için günlük ufak rutinler oluşturması faydalı olur.',
+    'Kararlı ve düzenli takiple bu alanda adım adım ilerleme bekliyorum.',
   ],
   genel: [
-    'Genel performans için kısa hedef + düzenli takip yaklaşımıyla daha olumlu bir tablo kurulabilir.',
-    'Sınıf içi sorumlulukları netleştirip günlük izlemek toparlanmayı destekler.',
-    'Aşamalı ve kararlı takip, genel süreçte belirgin iyileşme sağlayacaktır.',
+    'Küçük hedefler ve düzenli takiple daha iyi bir tablo göreceğimize inanıyorum.',
+    'Sınıf içi sorumluluklarını netleştirip her gün takip edersek toparlanır.',
+    'Adım adım ve kararlı takiple genel durumunda iyileşme göreceğiz.',
   ],
 };
 
 const variationPool = [
-  'Bu adimlarin duzenli izlenmesi surecin kalitesini artirir.',
-  'Ders ici takipte tutarlilik saglandiginda gelisim daha net gorulur.',
-  'Kucuk ama surekli uygulamalarla daha kalici sonuc alinabilir.',
-  'Sinif ici geri bildirimlerin duzenli olmasi ilerlemeyi hizlandirabilir.',
-  'Bu surecin planli yurutulmesi hedef isabetini guclendirir.',
+  'Bu adımları düzenli takip edersek işler daha güzel olacak.',
+  'Derste düzenli takip sağlarsak gelişim daha net görülür.',
+  'Küçük ama düzenli çalışmalarla daha kalıcı sonuç alabiliriz.',
+  'Sınıfta düzenli geri bildirim vermek ilerlemeyi hızlandırabilir.',
+  'Bu süreci planlı götürmek işleri kolaylaştıracak.',
 ];
 
 function pick(list, index) {
@@ -170,16 +170,16 @@ function buildContent({ tone, lengthType, focus, index }) {
   }
 
   const support = [
-    'Bu değerlendirmeyi sınıf içindeki günlük gözlem ve derse katılımına göre yapıyorum.',
-    'Süreçte özellikle ders düzeni, sorumluluk takibi ve sınıf içi etkileşimi dikkate alıyorum.',
-    'Takipte somut ve uygulanabilir adımlara odaklanmayı önemsiyorum.',
+    'Bunu sınıfta yaptığım gözlemlere ve derse katılımına göre söylüyorum.',
+    'Özellikle ders düzeni, sorumluluk takibi ve arkadaşlarıyla iletişimini göz önüne alıyorum.',
+    'Takipte küçük ve uygulanabilir adımlara odaklanmayı önemsiyorum.',
   ];
 
   const closing = tone === 'olumlu'
-    ? 'Bu istikrarı koruması dönem genelinde güçlü bir sonuç getirecektir.'
+    ? 'Bunu böyle devam ettirirse dönem sonunda çok güzel sonuçlar alacağız.'
     : tone === 'olumsuz'
-      ? 'Düzenli takip ve net adımlarla bu alanın daha dengeli ilerlemesini bekliyorum.'
-      : 'Küçük ama düzenli adımlarla bu süreci daha verimli hale getirebilir.';
+      ? 'Düzenli takip ve net adımlarla bu konuda daha iyiye gideceğimizi düşünüyorum.'
+      : 'Küçük ama düzenli adımlarla bu süreci daha iyi hale getirebiliriz.';
 
   return `${firstSentence} ${pick(support, index + 4)} ${action} ${closing}`;
 }
