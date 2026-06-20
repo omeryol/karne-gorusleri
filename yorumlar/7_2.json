@@ -4647,7 +4647,7 @@
   },
   {
     "id": 203,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Günlük küçük adımlarla sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sorumlu",
@@ -4666,11 +4666,12 @@
       "şefkatli",
       "uyarici"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Günlük küçük adımlarla sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 204,
-    "content": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Doğru planla kısa sürede daha güvenli bir ritim yakalar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Ders sürecinde gelişim adımlarının sürekliliği başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "gelişim",
@@ -4689,7 +4690,8 @@
       "şefkatli",
       "uyarici"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde dikkat ve ödev takibinde sıkıntı yaşadı. Ders sürecinde gelişim adımlarının sürekliliği başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 205,
@@ -4785,7 +4787,7 @@
   },
   {
     "id": 209,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi takipte kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "kural",
@@ -4804,7 +4806,8 @@
       "şefkatli",
       "uyarici"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi takipte kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 210,
@@ -4877,7 +4880,7 @@
   },
   {
     "id": 213,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu gelişim çizgisinde kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "düzenli",
@@ -4896,7 +4899,8 @@
       "şefkatli",
       "uyarici"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu gelişim çizgisinde kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 214,
@@ -4969,7 +4973,7 @@
   },
   {
     "id": 217,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi takipte öz güven ve süreç takibi sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "çözüm odaklı",
@@ -4988,7 +4992,8 @@
       "şefkatli",
       "uyarici"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi takipte öz güven ve süreç takibi sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 218,
@@ -5099,7 +5104,7 @@
   },
   {
     "id": 223,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5114,7 +5119,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 224,
@@ -5137,7 +5143,7 @@
   },
   {
     "id": 225,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Derse hazırlıksız geldiği günlerde kopmalar arttı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi takipte kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5152,7 +5158,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi takipte kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 226,
@@ -5213,7 +5220,7 @@
   },
   {
     "id": 229,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Dikkatini toplamakta zorlandığı için ders akışından koptu. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Bu gelişim çizgisinde süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5228,7 +5235,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Bu gelişim çizgisinde süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 230,
@@ -5251,7 +5259,7 @@
   },
   {
     "id": 231,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5266,7 +5274,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 232,
@@ -5289,7 +5298,7 @@
   },
   {
     "id": 233,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5304,7 +5313,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 234,
@@ -5327,7 +5337,7 @@
   },
   {
     "id": 235,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Günlük küçük adımlarla sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5342,7 +5352,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Günlük küçük adımlarla sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 236,
@@ -5365,7 +5376,7 @@
   },
   {
     "id": 237,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu gelişim çizgisinde sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5380,7 +5391,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu gelişim çizgisinde sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 238,
@@ -5441,7 +5453,7 @@
   },
   {
     "id": 241,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli çalıştığı haftalarda çok net fark yarattı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5456,7 +5468,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 242,
@@ -5479,7 +5492,7 @@
   },
   {
     "id": 243,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ödevlerini çoğunlukla zamanında tamamladı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5494,7 +5507,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 244,
@@ -5555,7 +5569,7 @@
   },
   {
     "id": 247,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu dönemde akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5570,7 +5584,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu dönemde akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 248,
@@ -5631,7 +5646,7 @@
   },
   {
     "id": 251,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Yanlış yaptığında hızla toparlayıp devam etti. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5646,7 +5661,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 252,
@@ -5669,7 +5685,7 @@
   },
   {
     "id": 253,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5684,7 +5700,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 254,
@@ -5707,7 +5724,7 @@
   },
   {
     "id": 255,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu dönemde sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5722,7 +5739,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Bu dönemde sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 256,
@@ -5745,7 +5763,7 @@
   },
   {
     "id": 257,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Derse hazırlıksız geldiği günlerde kopmalar arttı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5760,7 +5778,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 258,
@@ -5783,7 +5802,7 @@
   },
   {
     "id": 259,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Günlük küçük adımlarla genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5798,7 +5817,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Günlük küçük adımlarla genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 260,
@@ -5821,7 +5841,7 @@
   },
   {
     "id": 261,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ödevlerini çoğunlukla zamanında tamamladı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5836,7 +5856,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 262,
@@ -5859,7 +5880,7 @@
   },
   {
     "id": 263,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -5874,7 +5895,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 264,
@@ -5897,7 +5919,7 @@
   },
   {
     "id": 265,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5912,7 +5934,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 266,
@@ -5935,7 +5958,7 @@
   },
   {
     "id": 267,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Günlük küçük adımlarla akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5950,7 +5973,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Günlük küçük adımlarla akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 268,
@@ -5973,7 +5997,7 @@
   },
   {
     "id": 269,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kademeli ilerlemeyle ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -5988,7 +6012,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kademeli ilerlemeyle ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 270,
@@ -6011,7 +6036,7 @@
   },
   {
     "id": 271,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6026,7 +6051,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 272,
@@ -6049,7 +6075,7 @@
   },
   {
     "id": 273,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6064,7 +6090,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 274,
@@ -6087,7 +6114,7 @@
   },
   {
     "id": 275,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6102,7 +6129,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 276,
@@ -6125,7 +6153,7 @@
   },
   {
     "id": 277,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6140,7 +6168,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 278,
@@ -6201,7 +6230,7 @@
   },
   {
     "id": 281,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Katılımı arttıkça derslerdeki rahatlığı da arttı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6216,7 +6245,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 282,
@@ -6239,7 +6269,7 @@
   },
   {
     "id": 283,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli çalıştığı haftalarda çok net fark yarattı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6254,7 +6284,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 284,
@@ -6315,7 +6346,7 @@
   },
   {
     "id": 287,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Dikkatini toplamakta zorlandığı için ders akışından koptu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6330,7 +6361,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 288,
@@ -6353,7 +6385,7 @@
   },
   {
     "id": 289,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Dikkatini toplamakta zorlandığı için ders akışından koptu. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Sınıf içi takipte süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6368,7 +6400,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Sınıf içi takipte süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 290,
@@ -6391,7 +6424,7 @@
   },
   {
     "id": 291,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6406,7 +6439,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 292,
@@ -6429,7 +6463,7 @@
   },
   {
     "id": 293,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6444,7 +6478,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 294,
@@ -6467,7 +6502,7 @@
   },
   {
     "id": 295,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6482,7 +6517,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 296,
@@ -6505,7 +6541,7 @@
   },
   {
     "id": 297,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi takipte sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6520,7 +6556,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi takipte sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 298,
@@ -6581,7 +6618,7 @@
   },
   {
     "id": 301,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6596,7 +6633,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 302,
@@ -6657,7 +6695,7 @@
   },
   {
     "id": 305,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6672,7 +6710,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 306,
@@ -6695,7 +6734,7 @@
   },
   {
     "id": 307,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Günlük küçük adımlarla akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6710,7 +6749,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Günlük küçük adımlarla akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 308,
@@ -6733,7 +6773,7 @@
   },
   {
     "id": 309,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Bu gelişim çizgisinde süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6748,7 +6788,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Bu gelişim çizgisinde süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 310,
@@ -6771,7 +6812,7 @@
   },
   {
     "id": 311,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6786,7 +6827,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 312,
@@ -6847,7 +6889,7 @@
   },
   {
     "id": 315,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu gelişim çizgisinde kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -6862,7 +6904,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu gelişim çizgisinde kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 316,
@@ -6961,7 +7004,7 @@
   },
   {
     "id": 321,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli çalıştığı haftalarda çok net fark yarattı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -6976,7 +7019,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 322,
@@ -6999,7 +7043,7 @@
   },
   {
     "id": 323,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7014,7 +7058,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Bu gelişim çizgisinde akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 324,
@@ -7037,7 +7082,7 @@
   },
   {
     "id": 325,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7052,7 +7097,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 326,
@@ -7075,7 +7121,7 @@
   },
   {
     "id": 327,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi takipte sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7090,7 +7136,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi takipte sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 328,
@@ -7113,7 +7160,7 @@
   },
   {
     "id": 329,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kısa tekrarları atladığında konular üst üste birikti. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7128,7 +7175,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 330,
@@ -7151,7 +7199,7 @@
   },
   {
     "id": 331,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7166,7 +7214,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 332,
@@ -7189,7 +7238,7 @@
   },
   {
     "id": 333,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Verilen geri bildirimleri hızlıca uygulamaya aldı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7204,7 +7253,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 334,
@@ -7227,7 +7277,7 @@
   },
   {
     "id": 335,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu dönemde sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7242,7 +7292,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu dönemde sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 336,
@@ -7265,7 +7316,7 @@
   },
   {
     "id": 337,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7280,7 +7331,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 338,
@@ -7303,7 +7355,7 @@
   },
   {
     "id": 339,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kısa tekrarları atladığında konular üst üste birikti. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Günlük küçük adımlarla genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7318,7 +7370,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Günlük küçük adımlarla genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 340,
@@ -7341,7 +7394,7 @@
   },
   {
     "id": 341,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7356,7 +7409,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 342,
@@ -7455,7 +7509,7 @@
   },
   {
     "id": 347,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7470,7 +7524,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 348,
@@ -7531,7 +7586,7 @@
   },
   {
     "id": 351,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ödevlerini çoğunlukla zamanında tamamladı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7546,7 +7601,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 352,
@@ -7569,7 +7625,7 @@
   },
   {
     "id": 353,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7584,7 +7640,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 354,
@@ -7607,7 +7664,7 @@
   },
   {
     "id": 355,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7622,7 +7679,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 356,
@@ -7721,7 +7779,7 @@
   },
   {
     "id": 361,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7736,7 +7794,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 362,
@@ -7759,7 +7818,7 @@
   },
   {
     "id": 363,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7774,7 +7833,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 364,
@@ -7797,7 +7857,7 @@
   },
   {
     "id": 365,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7812,7 +7872,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 366,
@@ -7835,7 +7896,7 @@
   },
   {
     "id": 367,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -7850,7 +7911,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 368,
@@ -7911,7 +7973,7 @@
   },
   {
     "id": 371,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7926,7 +7988,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 372,
@@ -7949,7 +8012,7 @@
   },
   {
     "id": 373,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli çalıştığı haftalarda çok net fark yarattı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -7964,7 +8027,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 374,
@@ -8025,7 +8089,7 @@
   },
   {
     "id": 377,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8040,7 +8104,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 378,
@@ -8101,7 +8166,7 @@
   },
   {
     "id": 381,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8116,7 +8181,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 382,
@@ -8139,7 +8205,7 @@
   },
   {
     "id": 383,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ödevlerini çoğunlukla zamanında tamamladı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8154,7 +8220,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 384,
@@ -8215,7 +8282,7 @@
   },
   {
     "id": 387,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8230,7 +8297,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 388,
@@ -8253,7 +8321,7 @@
   },
   {
     "id": 389,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kademeli ilerlemeyle ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8268,7 +8336,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kademeli ilerlemeyle ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 390,
@@ -8291,7 +8360,7 @@
   },
   {
     "id": 391,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8306,7 +8375,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 392,
@@ -8329,7 +8399,7 @@
   },
   {
     "id": 393,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ödevlerini çoğunlukla zamanında tamamladı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8344,7 +8414,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 394,
@@ -8405,7 +8476,7 @@
   },
   {
     "id": 397,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8420,7 +8491,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 398,
@@ -8519,7 +8591,7 @@
   },
   {
     "id": 403,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Verilen geri bildirimleri hızlıca uygulamaya aldı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8534,7 +8606,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Günlük küçük adımlarla ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 404,
@@ -8557,7 +8630,7 @@
   },
   {
     "id": 405,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8572,7 +8645,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 406,
@@ -8595,7 +8669,7 @@
   },
   {
     "id": 407,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu dönemde akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8610,7 +8684,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu dönemde akran iletişimi ve grup uyumu tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 408,
@@ -8633,7 +8708,7 @@
   },
   {
     "id": 409,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Sınıf içi takipte süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8648,7 +8723,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Sınıf içi takipte süreç takibi ve katılım sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 410,
@@ -8671,7 +8747,7 @@
   },
   {
     "id": 411,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Yanlış yaptığında hızla toparlayıp devam etti. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8686,7 +8762,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 412,
@@ -8709,7 +8786,7 @@
   },
   {
     "id": 413,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8724,7 +8801,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 414,
@@ -8747,7 +8825,7 @@
   },
   {
     "id": 415,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8762,7 +8840,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 416,
@@ -8785,7 +8864,7 @@
   },
   {
     "id": 417,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8800,7 +8879,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 418,
@@ -8861,7 +8941,7 @@
   },
   {
     "id": 421,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8876,7 +8956,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 422,
@@ -8899,7 +8980,7 @@
   },
   {
     "id": 423,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -8914,7 +8995,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Bu dönemde ödev düzeni ve ders katılımı tarafında güçlü bir devamlılık sağlayacaktır."
   },
   {
     "id": 424,
@@ -8937,7 +9019,7 @@
   },
   {
     "id": 425,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8952,7 +9034,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 426,
@@ -8975,7 +9058,7 @@
   },
   {
     "id": 427,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -8990,7 +9073,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 428,
@@ -9051,7 +9135,7 @@
   },
   {
     "id": 431,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ödevlerini çoğunlukla zamanında tamamladı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9066,7 +9150,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 432,
@@ -9089,7 +9174,7 @@
   },
   {
     "id": 433,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9104,7 +9189,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 434,
@@ -9241,7 +9327,7 @@
   },
   {
     "id": 441,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9256,7 +9342,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 442,
@@ -9279,7 +9366,7 @@
   },
   {
     "id": 443,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9294,7 +9381,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 444,
@@ -9317,7 +9405,7 @@
   },
   {
     "id": 445,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9332,7 +9420,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 446,
@@ -9431,7 +9520,7 @@
   },
   {
     "id": 451,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Yanlış yaptığında hızla toparlayıp devam etti. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9446,7 +9535,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 452,
@@ -9469,7 +9559,7 @@
   },
   {
     "id": 453,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9484,7 +9574,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 454,
@@ -9507,7 +9598,7 @@
   },
   {
     "id": 455,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9522,7 +9613,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 456,
@@ -9545,7 +9637,7 @@
   },
   {
     "id": 457,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9560,7 +9652,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 458,
@@ -9621,7 +9714,7 @@
   },
   {
     "id": 461,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9636,7 +9729,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 462,
@@ -9659,7 +9753,7 @@
   },
   {
     "id": 463,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli çalıştığı haftalarda çok net fark yarattı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9674,7 +9768,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 464,
@@ -9697,7 +9792,7 @@
   },
   {
     "id": 465,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Günlük küçük adımlarla sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9712,7 +9807,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Günlük küçük adımlarla sınıf kuralları ve sorumluluk alma tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 466,
@@ -9735,7 +9831,7 @@
   },
   {
     "id": 467,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kısa tekrarları atladığında konular üst üste birikti. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9750,7 +9846,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 468,
@@ -9773,7 +9870,7 @@
   },
   {
     "id": 469,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Bu dönemde genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9788,7 +9885,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Bu dönemde genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 470,
@@ -9811,7 +9909,7 @@
   },
   {
     "id": 471,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Verilen geri bildirimleri hızlıca uygulamaya aldı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9826,7 +9924,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 472,
@@ -9849,7 +9948,7 @@
   },
   {
     "id": 473,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -9864,7 +9963,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 474,
@@ -9887,7 +9987,7 @@
   },
   {
     "id": 475,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9902,7 +10002,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 476,
@@ -9925,7 +10026,7 @@
   },
   {
     "id": 477,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kısa tekrarları atladığında konular üst üste birikti. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -9940,7 +10041,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 478,
@@ -10001,7 +10103,7 @@
   },
   {
     "id": 481,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10016,7 +10118,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 482,
@@ -10039,7 +10142,7 @@
   },
   {
     "id": 483,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10054,7 +10157,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 484,
@@ -10077,7 +10181,7 @@
   },
   {
     "id": 485,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10092,7 +10196,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 486,
@@ -10115,7 +10220,7 @@
   },
   {
     "id": 487,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10130,7 +10235,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 488,
@@ -10191,7 +10297,7 @@
   },
   {
     "id": 491,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ödevlerini çoğunlukla zamanında tamamladı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10206,7 +10312,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 492,
@@ -10229,7 +10336,7 @@
   },
   {
     "id": 493,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10244,7 +10351,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 494,
@@ -10305,7 +10413,7 @@
   },
   {
     "id": 497,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu gelişim çizgisinde sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10320,7 +10428,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu gelişim çizgisinde sosyal iletişim ve sınıf etkileşimi sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 498,
@@ -10381,7 +10490,7 @@
   },
   {
     "id": 501,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10396,7 +10505,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 502,
@@ -10457,7 +10567,7 @@
   },
   {
     "id": 505,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10472,7 +10582,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 506,
@@ -10495,7 +10606,7 @@
   },
   {
     "id": 507,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Derse hazırlıksız geldiği günlerde kopmalar arttı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10510,7 +10621,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 508,
@@ -10571,7 +10683,7 @@
   },
   {
     "id": 511,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Yanlış yaptığında hızla toparlayıp devam etti. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10586,7 +10698,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 512,
@@ -10609,7 +10722,7 @@
   },
   {
     "id": 513,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10624,7 +10737,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 514,
@@ -10647,7 +10761,7 @@
   },
   {
     "id": 515,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10662,7 +10776,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 516,
@@ -10761,7 +10876,7 @@
   },
   {
     "id": 521,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10776,7 +10891,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 522,
@@ -10799,7 +10915,7 @@
   },
   {
     "id": 523,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10814,7 +10930,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 524,
@@ -10837,7 +10954,7 @@
   },
   {
     "id": 525,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10852,7 +10969,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 526,
@@ -10875,7 +10993,7 @@
   },
   {
     "id": 527,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10890,7 +11008,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 528,
@@ -10913,7 +11032,7 @@
   },
   {
     "id": 529,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Derse hazırlıksız geldiği günlerde kopmalar arttı. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -10928,7 +11047,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 530,
@@ -10951,7 +11071,7 @@
   },
   {
     "id": 531,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli çalıştığı haftalarda çok net fark yarattı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -10966,7 +11086,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 532,
@@ -10989,7 +11110,7 @@
   },
   {
     "id": 533,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ödevlerini çoğunlukla zamanında tamamladı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11004,7 +11125,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 534,
@@ -11027,7 +11149,7 @@
   },
   {
     "id": 535,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11042,7 +11164,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 536,
@@ -11065,7 +11188,7 @@
   },
   {
     "id": 537,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11080,7 +11203,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 538,
@@ -11141,7 +11265,7 @@
   },
   {
     "id": 541,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11156,7 +11280,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 542,
@@ -11179,7 +11304,7 @@
   },
   {
     "id": 543,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11194,7 +11319,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 544,
@@ -11217,7 +11343,7 @@
   },
   {
     "id": 545,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11232,7 +11358,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 546,
@@ -11255,7 +11382,7 @@
   },
   {
     "id": 547,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11270,7 +11397,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 548,
@@ -11293,7 +11421,7 @@
   },
   {
     "id": 549,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Bu dönemde genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11308,7 +11436,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Bu dönemde genel sınıf içi performans tarafında daha dengeli bir sürece katkı sağlayacaktır."
   },
   {
     "id": 550,
@@ -11331,7 +11460,7 @@
   },
   {
     "id": 551,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11346,7 +11475,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 552,
@@ -11369,7 +11499,7 @@
   },
   {
     "id": 553,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11384,7 +11514,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 554,
@@ -11407,7 +11538,7 @@
   },
   {
     "id": 555,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11422,7 +11553,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 556,
@@ -11521,7 +11653,7 @@
   },
   {
     "id": 561,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11536,7 +11668,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 562,
@@ -11559,7 +11692,7 @@
   },
   {
     "id": 563,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli çalıştığı haftalarda çok net fark yarattı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11574,7 +11707,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 564,
@@ -11711,7 +11845,7 @@
   },
   {
     "id": 571,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11726,7 +11860,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 572,
@@ -11749,7 +11884,7 @@
   },
   {
     "id": 573,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11764,7 +11899,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 574,
@@ -11787,7 +11923,7 @@
   },
   {
     "id": 575,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11802,7 +11938,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 576,
@@ -11825,7 +11962,7 @@
   },
   {
     "id": 577,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sınıf içi görevleri zamanında tamamlamakta zorlandı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11840,7 +11977,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 578,
@@ -11901,7 +12039,7 @@
   },
   {
     "id": 581,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ödevlerini çoğunlukla zamanında tamamladı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11916,7 +12054,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 582,
@@ -11939,7 +12078,7 @@
   },
   {
     "id": 583,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -11954,7 +12093,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 584,
@@ -11977,7 +12117,7 @@
   },
   {
     "id": 585,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -11992,7 +12132,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 586,
@@ -12015,7 +12156,7 @@
   },
   {
     "id": 587,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12030,7 +12171,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 588,
@@ -12053,7 +12195,7 @@
   },
   {
     "id": 589,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Önümüzdeki süreçte genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12068,7 +12210,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Önümüzdeki süreçte genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 590,
@@ -12091,7 +12234,7 @@
   },
   {
     "id": 591,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12106,7 +12249,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 592,
@@ -12129,7 +12273,7 @@
   },
   {
     "id": 593,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12144,7 +12288,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 594,
@@ -12167,7 +12312,7 @@
   },
   {
     "id": 595,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12182,7 +12327,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 596,
@@ -12281,7 +12427,7 @@
   },
   {
     "id": 601,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ödevlerini çoğunlukla zamanında tamamladı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12296,7 +12442,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 602,
@@ -12319,7 +12466,7 @@
   },
   {
     "id": 603,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Yanlış yaptığında hızla toparlayıp devam etti. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12334,7 +12481,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 604,
@@ -12357,7 +12505,7 @@
   },
   {
     "id": 605,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12372,7 +12520,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 606,
@@ -12395,7 +12544,7 @@
   },
   {
     "id": 607,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kısa tekrarları atladığında konular üst üste birikti. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12410,7 +12559,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 608,
@@ -12433,7 +12583,7 @@
   },
   {
     "id": 609,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kısa tekrarları atladığında konular üst üste birikti. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Ders sürecinde genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12448,7 +12598,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Ders sürecinde genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 610,
@@ -12471,7 +12622,7 @@
   },
   {
     "id": 611,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Verilen geri bildirimleri hızlıca uygulamaya aldı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12486,7 +12637,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 612,
@@ -12509,7 +12661,7 @@
   },
   {
     "id": 613,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12524,7 +12676,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 614,
@@ -12547,7 +12700,7 @@
   },
   {
     "id": 615,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12562,7 +12715,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 616,
@@ -12585,7 +12739,7 @@
   },
   {
     "id": 617,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12600,7 +12754,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 618,
@@ -12661,7 +12816,7 @@
   },
   {
     "id": 621,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12676,7 +12831,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 622,
@@ -12699,7 +12855,7 @@
   },
   {
     "id": 623,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12714,7 +12870,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 624,
@@ -12737,7 +12894,7 @@
   },
   {
     "id": 625,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Dikkatini toplamakta zorlandığı için ders akışından koptu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12752,7 +12909,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 626,
@@ -12775,7 +12933,7 @@
   },
   {
     "id": 627,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12790,7 +12948,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 628,
@@ -12813,7 +12972,7 @@
   },
   {
     "id": 629,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -12828,7 +12987,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 630,
@@ -12851,7 +13011,7 @@
   },
   {
     "id": 631,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12866,7 +13026,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 632,
@@ -12889,7 +13050,7 @@
   },
   {
     "id": 633,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Verilen geri bildirimleri hızlıca uygulamaya aldı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -12904,7 +13065,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 634,
@@ -13003,7 +13165,7 @@
   },
   {
     "id": 639,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Önümüzdeki süreçte genel gelişim çizgisi başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13018,7 +13180,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Önümüzdeki süreçte genel gelişim çizgisi başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 640,
@@ -13041,7 +13204,7 @@
   },
   {
     "id": 641,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13056,7 +13219,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 642,
@@ -13079,7 +13243,7 @@
   },
   {
     "id": 643,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Yanlış yaptığında hızla toparlayıp devam etti. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13094,7 +13258,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 644,
@@ -13155,7 +13320,7 @@
   },
   {
     "id": 647,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13170,7 +13335,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 648,
@@ -13307,7 +13473,7 @@
   },
   {
     "id": 655,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13322,7 +13488,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 656,
@@ -13345,7 +13512,7 @@
   },
   {
     "id": 657,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13360,7 +13527,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 658,
@@ -13421,7 +13589,7 @@
   },
   {
     "id": 661,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13436,7 +13604,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 662,
@@ -13459,7 +13628,7 @@
   },
   {
     "id": 663,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13474,7 +13643,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 664,
@@ -13497,7 +13667,7 @@
   },
   {
     "id": 665,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13512,7 +13682,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 666,
@@ -13535,7 +13706,7 @@
   },
   {
     "id": 667,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Derse hazırlıksız geldiği günlerde kopmalar arttı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13550,7 +13721,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 668,
@@ -13573,7 +13745,7 @@
   },
   {
     "id": 669,
-    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Ders sürecinde genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13588,7 +13760,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde düzen kurmakta zorlandığı bir dönem geçirdi. Ders sürecinde genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 670,
@@ -13611,7 +13784,7 @@
   },
   {
     "id": 671,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Yanlış yaptığında hızla toparlayıp devam etti. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13626,7 +13799,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 672,
@@ -13649,7 +13823,7 @@
   },
   {
     "id": 673,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13664,7 +13838,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 674,
@@ -13687,7 +13862,7 @@
   },
   {
     "id": 675,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13702,7 +13877,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 676,
@@ -13801,7 +13977,7 @@
   },
   {
     "id": 681,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13816,7 +13992,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 682,
@@ -13839,7 +14016,7 @@
   },
   {
     "id": 683,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -13854,7 +14031,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 684,
@@ -13915,7 +14093,7 @@
   },
   {
     "id": 687,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kısa tekrarları atladığında konular üst üste birikti. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13930,7 +14108,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 688,
@@ -13953,7 +14132,7 @@
   },
   {
     "id": 689,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kısa tekrarları atladığında konular üst üste birikti. Kısa hedefler ve net takip, süreci daha yönetilebilir hale getirir. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kademeli ilerlemeyle ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -13968,7 +14147,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Kademeli ilerlemeyle ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 690,
@@ -13991,7 +14171,7 @@
   },
   {
     "id": 691,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14006,7 +14186,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 692,
@@ -14029,7 +14210,7 @@
   },
   {
     "id": 693,
-    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14044,7 +14225,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde gayet iyi bir çizgideydi. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 694,
@@ -14067,7 +14249,7 @@
   },
   {
     "id": 695,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14082,7 +14264,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 696,
@@ -14105,7 +14288,7 @@
   },
   {
     "id": 697,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14120,7 +14303,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 698,
@@ -14181,7 +14365,7 @@
   },
   {
     "id": 701,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli çalıştığı haftalarda çok net fark yarattı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14196,7 +14380,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 702,
@@ -14295,7 +14480,7 @@
   },
   {
     "id": 707,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14310,7 +14495,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir."
   },
   {
     "id": 708,
@@ -14333,7 +14519,7 @@
   },
   {
     "id": 709,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Haftalık kontrol listesi ile unutmaların önüne geçebiliriz. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Önümüzdeki süreçte genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14348,7 +14534,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Önümüzdeki süreçte genel gelişim çizgisi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 710,
@@ -14371,7 +14558,7 @@
   },
   {
     "id": 711,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14386,7 +14573,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 712,
@@ -14409,7 +14597,7 @@
   },
   {
     "id": 713,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ödevlerini çoğunlukla zamanında tamamladı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14424,7 +14612,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 714,
@@ -14447,7 +14636,7 @@
   },
   {
     "id": 715,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14462,7 +14651,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Düzenli takip ile davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 716,
@@ -14485,7 +14675,7 @@
   },
   {
     "id": 717,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14500,7 +14690,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 718,
@@ -14561,7 +14752,7 @@
   },
   {
     "id": 721,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14576,7 +14767,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 722,
@@ -14599,7 +14791,7 @@
   },
   {
     "id": 723,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14614,7 +14806,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 724,
@@ -14637,7 +14830,7 @@
   },
   {
     "id": 725,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14652,7 +14845,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 726,
@@ -14675,7 +14869,7 @@
   },
   {
     "id": 727,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kuralları ve sınıf düzenini sürdürme konusunda desteğe ihtiyaç duydu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14690,7 +14884,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Önümüzdeki süreçte grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 728,
@@ -14713,7 +14908,7 @@
   },
   {
     "id": 729,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Dikkatini toplamakta zorlandığı için ders akışından koptu. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14728,7 +14923,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 730,
@@ -14751,7 +14947,7 @@
   },
   {
     "id": 731,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ödevlerini çoğunlukla zamanında tamamladı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14766,7 +14962,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 732,
@@ -14789,7 +14986,7 @@
   },
   {
     "id": 733,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Arkadaşlarıyla uyumlu olması sınıf içi çalışmaları kolaylaştırdı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14804,7 +15001,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Gunluk mini hedefler surekliligi guclendirecektir."
   },
   {
     "id": 734,
@@ -14827,7 +15025,7 @@
   },
   {
     "id": 735,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Sorumluluklarını ertelediğinde öğrenme temposu düştü. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -14842,7 +15040,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 736,
@@ -14941,7 +15140,7 @@
   },
   {
     "id": 741,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14956,7 +15155,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 742,
@@ -14979,7 +15179,7 @@
   },
   {
     "id": 743,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -14994,7 +15194,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 744,
@@ -15017,7 +15218,7 @@
   },
   {
     "id": 745,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kısa tekrarları atladığında konular üst üste birikti. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Birlikte aynı çizgide kaldığımızda sonuçlar hızla iyileşir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15032,7 +15233,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 746,
@@ -15093,7 +15295,7 @@
   },
   {
     "id": 749,
-    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Günlük kısa çalışma planı ve düzenli kontrol şart görünüyor. İstikrarlı takip olursa gelişimi gözle görülür hale gelir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15108,7 +15310,8 @@
       "zaman yönetimi",
       "katılım"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde ders sürecinde sık sık zorlayıcı anlar yaşadı. Düzenli takip ile ders ve sorumluluk dengesi alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 750,
@@ -15131,7 +15334,7 @@
   },
   {
     "id": 751,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Derse hazırlıklı geldiği günlerde farkını açıkça gösterdi. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15146,7 +15349,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 752,
@@ -15207,7 +15411,7 @@
   },
   {
     "id": 755,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Önce ödev düzenini kurup sonra ders hızını artırmak daha doğru olur. Adım adım gidersek rahatça toparlar.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15222,7 +15426,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir. Asamali takip bu alanda kalici ilerleme getirir."
   },
   {
     "id": 756,
@@ -15321,7 +15526,7 @@
   },
   {
     "id": 761,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15336,7 +15541,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 762,
@@ -15359,7 +15565,7 @@
   },
   {
     "id": 763,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Verilen geri bildirimleri hızlıca uygulamaya aldı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15374,7 +15580,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 764,
@@ -15397,7 +15604,7 @@
   },
   {
     "id": 765,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Dikkatini toplamakta zorlandığı için ders akışından koptu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15412,7 +15619,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle davranış takibi ve sınıf uyumu alanında toparlanmayı destekleyecektir."
   },
   {
     "id": 766,
@@ -15435,7 +15643,7 @@
   },
   {
     "id": 767,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Plansız ilerlediğinde ders yükü daha da zorlayıcı hale geldi. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur. Düzenli destekle bunu toparlayabileceğine inanıyoruz.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15450,7 +15658,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Düzenli takip ile arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 768,
@@ -15511,7 +15720,7 @@
   },
   {
     "id": 771,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15526,7 +15735,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Ders sürecinde ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 772,
@@ -15549,7 +15759,7 @@
   },
   {
     "id": 773,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli çalıştığı haftalarda çok net fark yarattı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15564,7 +15774,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Kademeli ilerlemeyle konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 774,
@@ -15587,7 +15798,7 @@
   },
   {
     "id": 775,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Kısa tekrarları atladığında konular üst üste birikti. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15602,7 +15813,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Önümüzdeki süreçte sınıf içi tutum dengesi başlığında kademeli iyileşme getirecektir. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 776,
@@ -15625,7 +15837,7 @@
   },
   {
     "id": 777,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15640,7 +15852,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 778,
@@ -15701,7 +15914,7 @@
   },
   {
     "id": 781,
-    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Soru sormaktan çekinmediği için konuları daha hızlı kavradı. Düzenli bir haftalık planla bu ivmeyi uzun süre koruyabilir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15716,7 +15929,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde emek verdi ve karşılığını aldı. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır. Kisa ve net adimlarla surec daha verimli ilerler."
   },
   {
     "id": 782,
@@ -15739,7 +15953,7 @@
   },
   {
     "id": 783,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içindeki uyumu ve saygılı tavrı olumlu yansıdı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15754,7 +15968,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Sınıf içi takipte akademik takip ve çalışma düzeni sürecinde mevcut başarısını destekleyecektir."
   },
   {
     "id": 784,
@@ -15815,7 +16030,7 @@
   },
   {
     "id": 787,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ödev ve ders takibinde düzen sağlayamadı. Önce temel düzeni kurup sonra adım adım ilerlemek en doğru yol olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15830,7 +16045,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Ders sürecinde grup içi iletişim dengesi başlığında kademeli iyileşme getirecektir. Duzenli sinif ici geri bildirim sureci hizlandirir."
   },
   {
     "id": 788,
@@ -15891,7 +16107,7 @@
   },
   {
     "id": 791,
-    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Katılımı arttıkça derslerdeki rahatlığı da arttı. Bu güzel çizgiyi korumak için evde kısa tekrarlar devam ederse çok iyi olur.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15906,7 +16122,8 @@
       "ödev takibi",
       "planlama"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde adım adım ama sağlam ilerledi. Önümüzdeki süreçte ders odaklı sorumluluklar başlığında olumlu tabloyu koruyacaktır."
   },
   {
     "id": 792,
@@ -15929,7 +16146,7 @@
   },
   {
     "id": 793,
-    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli çalıştığı haftalarda çok net fark yarattı. Kısa ama düzenli çalışma alışkanlığı bu başarıyı kalıcı hale getirir.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum.",
     "tone": "olumlu",
     "etiketler": [
       "sinif-7",
@@ -15944,7 +16161,8 @@
       "özgüven",
       "okuma alışkanlığı"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde derse sıcak yaklaştı. Düzenli takip ile konu tekrarı ve sınıf içi performans alanında istikrarlı bir ilerleme bekliyorum."
   },
   {
     "id": 794,
@@ -15967,7 +16185,7 @@
   },
   {
     "id": 795,
-    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Ödev ve ders takibinde düzen sağlayamadı. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu gelişim çizgisinde kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -15982,7 +16200,8 @@
       "sorumluluk",
       "iş birliği"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde desteğe daha çok ihtiyaç duydu. Bu gelişim çizgisinde kurallara uyum ve tutarlı davranış sürecinde riskleri azaltmaya yardımcı olacaktır."
   },
   {
     "id": 796,
@@ -16005,7 +16224,7 @@
   },
   {
     "id": 797,
-    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Not tutma ve düzen tarafında daha sık destek ihtiyacı oldu. Bu noktada ev-okul aynı çizgide ilerlerse toparlanma hızlanır.",
+    "content": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir.",
     "tone": "olumsuz",
     "etiketler": [
       "sinif-7",
@@ -16020,7 +16239,8 @@
       "iletişim",
       "dikkat"
     ],
-    "lengthType": "kisa"
+    "lengthType": "kisa",
+    "icerik": "[Öğrenci Adı] bu ikinci dönemde beklediğimiz seviyenin altında kaldı. Kademeli ilerlemeyle arkadaş ilişkileri ve işbirliği alanında toparlanmayı destekleyecektir. Haftalik takip planiyla ilerleme daha net gorulecektir."
   },
   {
     "id": 798,

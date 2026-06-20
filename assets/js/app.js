@@ -588,9 +588,9 @@ class App {
             {
                 id: 'switch-templates',
                 title: 'Sablonlar sekmesine git',
-                subtitle: 'Hazir metinler ve AI onerileri',
+                subtitle: 'Hazır metinler ve şablon önerileri',
                 icon: 'fa-file-lines',
-                keywords: ['sablon', 'template', 'ai'],
+                keywords: ['sablon', 'template', 'oneriler'],
                 run: () => this.tabs.switchTo('templates')
             },
             {

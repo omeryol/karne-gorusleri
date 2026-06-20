@@ -4,6 +4,7 @@ class StudentManager {
         debugLog('StudentManager constructor called');
         this.storage = storage;
         this.currentFilter = 'all';
+        this.currentSectionFilter = 'all';
         this.selectedStudents = new Set();
         this.isSelectionMode = false;
         this.bulkCommentDrafts = [];
@@ -51,6 +52,13 @@ class StudentManager {
         document.querySelectorAll('.student-grade-filter').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 this.handleFilterChange(e);
+            });
+        });
+
+        // Şube filtreleri
+        document.querySelectorAll('.student-section-filter').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                this.handleSectionFilterChange(e);
             });
         });
 
@@ -200,6 +208,24 @@ class StudentManager {
         this.render();
     }
 
+    handleSectionFilterChange(e) {
+        const target = e.currentTarget || e.target;
+        const section = target?.dataset?.section;
+        if (!section) {
+            return;
+        }
+
+        document.querySelectorAll('.student-section-filter').forEach(btn => {
+            btn.classList.remove('active', 'bg-primary', 'text-white');
+            btn.classList.add('bg-transparent', 'text-slate-700', 'dark:text-slate-300');
+        });
+        target.classList.add('active', 'bg-primary', 'text-white');
+        target.classList.remove('bg-transparent', 'text-slate-700', 'dark:text-slate-300');
+
+        this.currentSectionFilter = section;
+        this.render();
+    }
+
     setGradeFilter(grade) {
         const normalizedGrade = grade && ['5', '6', '7', '8', 'all'].includes(String(grade))
             ? String(grade)
@@ -215,13 +241,17 @@ class StudentManager {
     }
 
     getFilteredStudents() {
-        const students = this.storage.getStudents();
+        let students = this.storage.getStudents();
 
-        if (this.currentFilter === 'all') {
-            return students;
+        if (this.currentFilter !== 'all') {
+            students = students.filter(student => student.grade === this.currentFilter);
         }
 
-        return students.filter(student => student.grade === this.currentFilter);
+        if (this.currentSectionFilter !== 'all') {
+            students = students.filter(student => student.section === this.currentSectionFilter);
+        }
+
+        return students;
     }
 
     render() {
@@ -864,10 +894,7 @@ class StudentManager {
             return null;
         }
 
-        const rotatedTemplate = pool[index % pool.length];
-        const firstName = student.name.split(' ')[0];
-        const baseContent = String(rotatedTemplate.content || rotatedTemplate.icerik || '')
-            .replace(/\[Öğrenci Adı\]/g, firstName);
+        const baseContent = window.replaceStudentName(String(rotatedTemplate.content || rotatedTemplate.icerik || ''), student.name);
         const shouldVary = usedContents.has(baseContent);
         usedContents.add(baseContent);
         const variedContent = this.applyVariationToComment(baseContent, options, index, shouldVary);

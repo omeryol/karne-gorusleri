@@ -351,8 +351,7 @@ class CommentManager {
         }
 
         const student = this.storage.getStudentById(studentSelect.value);
-        const firstName = student ? String(student.name || '').split(' ')[0] : '[Öğrenci Adı]';
-        editor.value = template.content.replace(/\[Öğrenci Adı\]/g, firstName || '[Öğrenci Adı]');
+        editor.value = window.replaceStudentName(template.content, student ? student.name : '');
         toneSelect.value = template.tone || toneSelect.value;
         window.ui.showToast('Şablon editöre eklendi.', 'success');
     }
@@ -730,8 +729,7 @@ class CommentManager {
         );
         
         if (student) {
-            const firstName = student.name.split(' ')[0];
-            commentData.content = commentData.content.replace(/\[Öğrenci Adı\]/g, firstName);
+            commentData.content = window.replaceStudentName(commentData.content, student.name);
         }
 
         if (this.validateComment(commentData)) {
@@ -1188,8 +1186,7 @@ class CommentManager {
             return false;
         }
 
-        const firstName = this.currentEditStudent.name.split(' ')[0];
-        commentData.content = commentData.content.replace(/\[Öğrenci Adı\]/g, firstName);
+        commentData.content = window.replaceStudentName(commentData.content, this.currentEditStudent.name);
 
         let saveResult = false;
         if (this.currentEditingId) {
@@ -1312,8 +1309,7 @@ class CommentManager {
 
             // [Öğrenci Adı] placeholder'ını değiştir
             if (this.currentEditStudent) {
-                const firstName = this.currentEditStudent.name.split(' ')[0];
-                commentData.content = commentData.content.replace(/\[Öğrenci Adı\]/g, firstName);
+                commentData.content = window.replaceStudentName(commentData.content, this.currentEditStudent.name);
             }
 
             if (this.currentEditingId) {

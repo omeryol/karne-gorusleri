@@ -1901,8 +1901,7 @@ class TemplateManager {
         // Seçili öğrenci varsa ismi uygula
         let content = suggestion.content || suggestion.icerik;
         if (this.currentStudent) {
-            const firstName = this.currentStudent.name.split(' ')[0];
-            content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+            content = window.replaceStudentName(content, this.currentStudent.name);
         }
 
         // Sınıf ve dönem bilgisini bul
@@ -2577,8 +2576,7 @@ class TemplateManager {
 
             // Seçili öğrenci varsa ismi uygula
             if (this.currentStudent) {
-                const firstName = this.currentStudent.name.split(' ')[0];
-                content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                content = window.replaceStudentName(content, this.currentStudent.name);
             }
 
             navigator.clipboard.writeText(content).then(() => {
@@ -2609,8 +2607,7 @@ class TemplateManager {
 
             // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
             if (this.currentStudent) {
-                const firstName = this.currentStudent.name.split(' ')[0];
-                content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                content = window.replaceStudentName(content, this.currentStudent.name);
             }
 
             editTextarea.value = content;
@@ -2655,8 +2652,7 @@ class TemplateManager {
 
             // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
             if (this.currentStudent) {
-                const firstName = this.currentStudent.name.split(' ')[0];
-                content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                content = window.replaceStudentName(content, this.currentStudent.name);
             }
 
             textarea.value = content;
@@ -2685,8 +2681,7 @@ class TemplateManager {
 
             // Seçili öğrenci varsa ismi uygula
             if (this.currentStudent) {
-                const firstName = this.currentStudent.name.split(' ')[0];
-                content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                content = window.replaceStudentName(content, this.currentStudent.name);
             }
 
             navigator.clipboard.writeText(content).then(() => {
@@ -2723,8 +2718,7 @@ class TemplateManager {
 
             // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
             if (this.currentStudent) {
-                const firstName = this.currentStudent.name.split(' ')[0];
-                content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                content = window.replaceStudentName(content, this.currentStudent.name);
             }
 
             editTextarea.value = content;
@@ -2759,8 +2753,7 @@ class TemplateManager {
 
             // [Öğrenci Adı] yer tutucusunu otomatik olarak değiştir
             if (this.currentStudent) {
-                const firstName = this.currentStudent.name.split(' ')[0];
-                content = content.replace(/\[Öğrenci Adı\]/g, firstName);
+                content = window.replaceStudentName(content, this.currentStudent.name);
             }
 
             textarea.value = content;

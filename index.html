@@ -29,7 +29,7 @@
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Karne Asistanı - Öğretmen Değerlendirme Sistemi">
-    <meta property="og:description" content="Türk ortaokul öğretmenleri için offline çalışan, AI destekli karne yorum sistemi.">
+    <meta property="og:description" content="Türk ortaokul öğretmenleri için offline çalışan, zengin şablon destekli karne yorum sistemi.">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
@@ -161,13 +161,13 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2: AI Önerileri -->
+                    <!-- Slide 2: Şablon Önerileri -->
                     <div class="w-full flex-shrink-0 bg-gradient-to-br from-purple-50/80 to-pink-50/80 dark:from-purple-900/30 dark:to-pink-900/30 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                         <div class="text-center">
                             <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                                <i class="fas fa-robot text-white text-3xl"></i>
+                                <i class="fas fa-comments text-white text-3xl"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">AI Destekli Yorum Sistemi</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Zengin Şablon Sistemi</h3>
                             <div class="space-y-4 text-left">
                                 <div class="flex items-start space-x-3">
                                     <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -401,7 +401,7 @@
                             </li>
                             <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
                                 <i class="fas fa-circle text-purple-500 text-xs mt-2 mr-3 animate-pulse"></i>
-                                <span><strong>AI Önerileri:</strong> Yapay zeka destekli şablon önerileri</span>
+                                <span><strong>Şablon Önerileri:</strong> Sınıf ve döneme göre hazır şablonlar</span>
                             </li>
                             <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
                                 <i class="fas fa-circle text-purple-500 text-xs mt-2 mr-3 animate-pulse"></i>
@@ -431,7 +431,7 @@
                             </li>
                             <li class="flex items-start transform hover:scale-105 transition-transform duration-200">
                                 <i class="fas fa-circle text-orange-500 text-xs mt-2 mr-3 animate-pulse"></i>
-                                <span><strong>Otomatik Öneriler:</strong> AI tabanlı içerik önerileri</span>
+                                <span><strong>Zengin Öneriler:</strong> Kriterlerinize uygun zengin şablon havuzu</span>
                             </li>
                         </ul>
                     </div>
@@ -598,14 +598,25 @@
 
         <!-- Students Tab -->
         <div id="students-tab" class="tab-content hidden">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                <div class="flex flex-wrap gap-2">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
+                <div class="flex flex-col sm:flex-row gap-3 flex-wrap">
                     <!-- Grade Filters -->
-                    <button class="student-grade-filter active bg-grade-5 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="5">5. Sınıf</button>
-                    <button class="student-grade-filter bg-grade-6 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="6">6. Sınıf</button>
-                    <button class="student-grade-filter bg-grade-7 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="7">7. Sınıf</button>
-                    <button class="student-grade-filter bg-grade-8 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="8">8. Sınıf</button>
-                    <button class="student-grade-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="all">Tümü</button>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="student-grade-filter active bg-grade-5 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="5">5. Sınıf</button>
+                        <button class="student-grade-filter bg-grade-6 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="6">6. Sınıf</button>
+                        <button class="student-grade-filter bg-grade-7 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="7">7. Sınıf</button>
+                        <button class="student-grade-filter bg-grade-8 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="8">8. Sınıf</button>
+                        <button class="student-grade-filter bg-gray-500 text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-grade="all">Tümü</button>
+                    </div>
+                    <!-- Section Filters -->
+                    <div class="flex flex-wrap gap-1.5 bg-slate-100 dark:bg-slate-800/80 p-1 rounded-xl" id="studentSectionFilters">
+                        <button class="student-section-filter active bg-primary text-white px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-section="all">Tüm Şubeler</button>
+                        <button class="student-section-filter bg-transparent text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-section="A">A</button>
+                        <button class="student-section-filter bg-transparent text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-section="B">B</button>
+                        <button class="student-section-filter bg-transparent text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-section="C">C</button>
+                        <button class="student-section-filter bg-transparent text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-section="D">D</button>
+                        <button class="student-section-filter bg-transparent text-slate-700 dark:text-slate-300 px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105" data-section="E">E</button>
+                    </div>
                 </div>
 
                 <button id="addStudentBtn" class="bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 flex items-center shadow-lg hover:shadow-xl">
@@ -795,8 +806,8 @@
                             Geri Al
                         </button>
                         <button id="aiSuggestionsBtn" class="flex-1 sm:flex-none bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 flex items-center justify-center">
-                            <i class="fas fa-brain mr-2"></i>
-                            AI Önerileri
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Şablon Önerileri
                         </button>
                     </div>
                 </div>
@@ -1001,8 +1012,8 @@
                         </span>
                         <div class="flex gap-3">
                             <button type="button" id="editAISuggestionsBtn" class="comment-modal-tool-btn bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-blue-500/25 transform hover:scale-105">
-                                <i class="fas fa-robot"></i>
-                                AI Önerileri
+                                <i class="fas fa-lightbulb"></i>
+                                Şablon Önerileri
                             </button>
                             <button type="button" id="editPlaceholderBtn" class="comment-modal-tool-btn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-red-500/25 transform hover:scale-105" title="[Öğrenci Adı] yer tutucusunu kaldır">
                                 <i class="fas fa-eraser"></i>
@@ -1070,10 +1081,10 @@
             <div class="flex justify-between items-center mb-3 md:mb-5">
                 <h2 class="text-base md:text-2xl font-display font-bold text-gray-900 dark:text-white flex items-center">
                     <div class="bg-gradient-to-r from-primary to-purple-600 p-1.5 md:p-2.5 rounded-xl md:rounded-2xl mr-2 md:mr-3 shadow-lg">
-                        <i class="fas fa-robot text-white text-xs md:text-lg"></i>
+                        <i class="fas fa-lightbulb text-white text-xs md:text-lg"></i>
                     </div>
-                    <span class="hidden sm:inline">AI Yorum Önerileri</span>
-                    <span class="sm:hidden">AI Önerileri</span>
+                    <span class="hidden sm:inline">Şablon Öneri Havuzu</span>
+                    <span class="sm:hidden">Şablon Önerileri</span>
                 </h2>
                 <button id="aiSuggestionsCloseBtn" class="text-gray-400 hover:text-red-500 transition-all duration-200 p-2 md:p-3 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20">
                     <i class="fas fa-times text-lg md:text-2xl"></i>
@@ -1164,7 +1175,7 @@
 
                         <!-- Suggestions Counter -->
                         <div class="flex items-center justify-between mb-3">
-                            <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">AI Önerileri</h4>
+                            <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">Şablon Önerileri</h4>
                             <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                                 <span id="suggestionsCounter">0</span> öneri
                             </span>

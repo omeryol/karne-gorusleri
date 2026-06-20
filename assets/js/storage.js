@@ -1,3 +1,86 @@
+// Türkçe ünlü uyumu ve çekim ekleri hesaplayıcı yardımcı fonksiyonları
+window.getTurkishSuffix = function(name, caseType) {
+    if (!name) return '';
+    const firstName = name.split(' ')[0];
+    if (!firstName) return '';
+
+    const vowels = 'aıoueiöüAIOUEİÖÜ';
+    let lastVowel = '';
+    for (let i = firstName.length - 1; i >= 0; i--) {
+        if (vowels.includes(firstName[i])) {
+            lastVowel = firstName[i].toLowerCase();
+            break;
+        }
+    }
+    if (!lastVowel) lastVowel = 'a';
+
+    const isBack = 'aıou'.includes(lastVowel);
+    let vowel4 = 'i';
+    if ('aı'.includes(lastVowel)) vowel4 = 'ı';
+    else if ('ei'.includes(lastVowel)) vowel4 = 'i';
+    else if ('ou'.includes(lastVowel)) vowel4 = 'u';
+    else if ('öü'.includes(lastVowel)) vowel4 = 'ü';
+
+    const vowel2 = isBack ? 'a' : 'e';
+    const lastLetter = firstName[firstName.length - 1].toLowerCase();
+    const isVowel = vowels.toLowerCase().includes(lastLetter);
+    const isVoiceless = 'fstkçşhp'.includes(lastLetter);
+
+    switch (caseType) {
+        case 'GENITIVE': // -nın, -nin, -nun, -nün / -ın, -in, -un, -ün
+            return isVowel ? `'n${vowel4}n` : `'${vowel4}n`;
+        case 'DATIVE': // -ya, -ye / -a, -e
+            return isVowel ? `'y${vowel2}` : `'${vowel2}`;
+        case 'ACCUSATIVE': // -yı, -yi, -yu, -yü / -ı, -i, -u, -ü
+            return isVowel ? `'y${vowel4}` : `'${vowel4}`;
+        case 'LOCATIVE': // -da, -de / -ta, -te
+            return isVoiceless ? `'t${vowel2}` : `'d${vowel2}`;
+        case 'ABLATIVE': // -dan, -den / -tan, -ten
+            return isVoiceless ? `'t${vowel2}n` : `'d${vowel2}n`;
+        case 'INSTRUMENTAL': // -yla, -yle / -la, -le
+            return isVowel ? `'yl${vowel2}` : `'l${vowel2}`;
+        default:
+            return '';
+    }
+};
+
+window.replaceStudentName = function(text, studentName) {
+    if (!text) return '';
+    if (!studentName) {
+        return text;
+    }
+    const firstName = studentName.split(' ')[0];
+    
+    // Çekim eki alan yer tutucuları yakalamak için düzenli ifade
+    // [Öğrenci Adı]'nın, [Öğrenci Adı]'a, [Öğrenci Adı]'e vb.
+    const suffixRegex = /\[Öğrenci\s+Adı\]'([nN][ıIiıuUüÜ][nN]|[ıIiıuUüÜ][nN]|[eEaA]|[yY][eEaA]|[ıIiıuUüÜ]|[yY][ıIiıuUüÜ]|[dD][eEaA]|[tT][eEaA]|[dD][eEaA][nN]|[tT][eEaA][nN]|[lL][eEaA]|[yY][lL][eEaA])/gi;
+    
+    let resolvedText = text.replace(suffixRegex, (match, suffix) => {
+        const lowerSuffix = suffix.toLowerCase();
+        let caseType = '';
+        if (lowerSuffix.startsWith('n') && lowerSuffix.endsWith('n') && lowerSuffix.length === 3) caseType = 'GENITIVE';
+        else if (lowerSuffix.endsWith('n') && lowerSuffix.length === 2) caseType = 'GENITIVE';
+        else if (lowerSuffix.startsWith('y') && (lowerSuffix.endsWith('a') || lowerSuffix.endsWith('e')) && lowerSuffix.length === 2) caseType = 'DATIVE';
+        else if (lowerSuffix === 'a' || lowerSuffix === 'e') caseType = 'DATIVE';
+        else if (lowerSuffix.startsWith('y') && lowerSuffix.length === 2) caseType = 'ACCUSATIVE';
+        else if (lowerSuffix === 'ı' || lowerSuffix === 'i' || lowerSuffix === 'u' || lowerSuffix === 'ü') caseType = 'ACCUSATIVE';
+        else if ((lowerSuffix.startsWith('d') || lowerSuffix.startsWith('t')) && (lowerSuffix.endsWith('a') || lowerSuffix.endsWith('e')) && lowerSuffix.length === 2) caseType = 'LOCATIVE';
+        else if ((lowerSuffix.startsWith('d') || lowerSuffix.startsWith('t')) && (lowerSuffix.endsWith('an') || lowerSuffix.endsWith('en')) && lowerSuffix.length === 3) caseType = 'ABLATIVE';
+        else if (lowerSuffix.startsWith('y') && lowerSuffix.length === 3) caseType = 'INSTRUMENTAL';
+        else if (lowerSuffix.startsWith('l') && lowerSuffix.length === 2) caseType = 'INSTRUMENTAL';
+        
+        if (caseType) {
+            const suffixResult = window.getTurkishSuffix(firstName, caseType);
+            return firstName + suffixResult;
+        }
+        return firstName + "'" + suffix;
+    });
+
+    // Çekim eki almayan standart yer tutucuları değiştir
+    resolvedText = resolvedText.replace(/\[Öğrenci\s+Adı\]/gi, firstName);
+    return resolvedText;
+};
+
 // LocalStorage yönetimi için ana sınıf
 class Storage {
     constructor() {
