@@ -175,6 +175,11 @@ const positiveOpenings = [
   "[Öğrenci Adı] bu dönem kendini gerçekten çok geliştirdi, ilk günden bugüne büyük yol kat etti.",
   "[Öğrenci Adı]'nın derslere katılımı ve ödevlerine gösterdiği özen her zaman takdir edilesiydi.",
   "[Öğrenci Adı] ile bu dönem çalışmak bir öğretmen olarak bana da keyif verdi, gerçekten hep hazırdı.",
+  "[Öğrenci Adı]'nın bu dönemki duruşu, çalışkanlığı ve ahlakıyla sınıfına örnek olduğunu rahatlıkla söyleyebilirim.",
+  "[Öğrenci Adı] sadece başarılı bir öğrenci değil, aynı zamanda iyi kalpli, saygılı ve çalışkan bir birey olduğunu kanıtladı.",
+  "[Öğrenci Adı]'na bakarken, bir öğretmen olarak 'işte bu yüzden öğretmenim' dedirten öğrencilerden biri oldu bu dönem.",
+  "[Öğrenci Adı]'nın bu dönemde ortaya koyduğu tablo, onun ne kadar özel bir öğrenci olduğunu bir kez daha gösterdi.",
+  "[Öğrenci Adı] ile geçirdiğimiz bu dönem, onun hem akademik hem de kişisel olarak ne kadar olgunlaştığını göstermesi açısından çok kıymetliydi.",
 ];
 
 const positiveMiddles = [
@@ -193,6 +198,11 @@ const positiveMiddles = [
   "Sorumluluk bilinci o kadar yüksekti ki hiçbir zaman hatırlatmaya ihtiyaç duymadık.",
   "Eleştirilere açık olması ve hatalarından ders çıkarması onu sürekli ileriye taşıdı.",
   "Özellikle sözlü ifade gerektiren durumlarda çok başarılıydı, düşüncelerini rahatlıkla ifade ediyordu.",
+  "Derslerde gösterdiği özen ve titizlik, her sayfasında ayrı bir güzellik barındıran bir defter gibiydi.",
+  "O kadar içten ve çalışkandı ki onunla ders işlemek, su gibi akan bir nehrin keyfini çıkarmak gibiydi.",
+  "Her sabah sınıfa güler yüzle gelmesi ve derse hevesle katılması, sınıftaki herkese enerji veriyordu.",
+  "Düşüncelerindeki olgunluk ve ifade ediş biçimi, yaşıtlarına göre ne kadar ileride olduğunu gösterdi.",
+  "Öğrenmeye olan açlığı ve doyumsuz merakı, onu sürekli daha iyiye taşıyan en büyük gücüydü.",
 ];
 
 const positiveClosings = [
@@ -208,6 +218,12 @@ const positiveClosings = [
   "Onun gibi çalışkan ve saygılı öğrenciler yetiştirmek en büyük öğretmen mutluluğu.",
   "Başarılarının devamını diliyorum, kendisiyle gurur duyuyorum.",
   "Özverili çalışması ve güzel ahlakıyla her zaman takdiri hak etti.",
+  "Böylesine parlak bir öğrenciyle çalışmak, bir öğretmen olarak bana da ilham verdi.",
+  "Onun gibi öğrenciler, bu mesleği ne kadar güzel bir hale getiriyor. Emeğine sağlık.",
+  "Sadece akademik başarısıyla değil, duruşu ve kişiliğiyle de hepimizin takdirini kazandı.",
+  "Kendisiyle tanıştığımız ilk günden bu yana gösterdiği gelişim, gerçekten gurur verici.",
+  "Bu dönemi büyük bir başarıyla tamamlayan [Öğrenci Adı]'nın önünde aydınlık bir gelecek var.",
+  "Derslerdeki başarısı kadar iyi kalbi ve saygılı tavırlarıyla da gönülleri fethetti.",
 ];
 
 // ============================================================
@@ -234,6 +250,32 @@ const grade8ClosingsNegative = [
 ];
 
 // ============================================================
+// 2. DÖNEM (5-6-7. SINIF) YIL SONU KAPANIŞLARI
+// ============================================================
+
+const semester2ClosingsPositive = [
+  "Bu yılı başarıyla tamamladı, yaz tatilinde dinlenip seneye kaldığı yerden devam edecek.",
+  "Yıl boyunca gösterdiği bu güzel tablo, gelecek sene için de umut verici.",
+  "Tatilde biraz dinlenip enerji topladıktan sonra seneye yine aynı başarıyla devam edeceğine eminim.",
+  "Bu seneyi başarıyla kapatırken, önümüzdeki yıl için de çok güzel bir temel oluşturdu.",
+  "Yaz tatili boyunca kitap okumayı ihmal etmezse, seneye çok daha güçlü bir dönüş yapacak.",
+  "Dönem boyunca gösterdiği gayret takdire şayandı, seneye de aynı şevkle devam edeceğine inanıyorum.",
+  "Bu yılı sağlam bir şekilde tamamlayan [Öğrenci Adı], gelecek sınıfta da aynı başarıyı sürdürecektir.",
+  "Yıl sonu değerlendirmesinde alnının akıyla çıktı, izin verirsek seneye de aynı kararlılıkla gelir.",
+];
+
+const semester2ClosingsNegative = [
+  "Yıl sonu geldi çattı, önümüzde yaz tatili var. Dinlenirken eksikleri kapatmak için de fırsat var.",
+  "Bu yıl biraz zorlandı ama önümüzdeki sene yeni bir başlangıç yapma şansı var.",
+  "Yaz tatilinde biraz dinlenip gelecek yıl daha planlı başlamak en güzeli olacak.",
+  "Seneye aynı sınıfta kaldığımız yerden devam edeceğiz, bu eksikleri telafi etmek için hâlâ vaktimiz var.",
+  "Yıl sonu geldi, önümüzde yepyeni bir dönem var. Şimdiden seneye hazırlanmaya başlayabiliriz.",
+  "Bu yılın muhasebesini yapıp, gelecek yıl aynı hataları tekrarlamamak için bir plan yapabiliriz.",
+  "Okullar kapanıyor ama öğrenme hiç bitmez. Tatilde ara sıra kitap okumak bile büyük fark yaratır.",
+  "Belki bu dönem istediğimiz gibi geçmedi ama yeni bir yıl, yeni bir fırsat demek.",
+];
+
+// ============================================================
 // YORUM ÜRETME
 // ============================================================
 
@@ -241,6 +283,7 @@ function generateUniqueComment(id, fileSeed, tone, fileName) {
   const seed = fileSeed + id * 31;
   const isPositive = tone === 'olumlu';
   const isGrade8 = fileName.startsWith('8_');
+  const isSemester2 = fileName.endsWith('_2.json');
   
   const useOpenings = isPositive ? positiveOpenings : openings;
   const useMiddles = isPositive ? positiveMiddles : middles;
@@ -255,9 +298,21 @@ function generateUniqueComment(id, fileSeed, tone, fileName) {
   // Select closing based on context
   let useClosings;
   if (isPositive) {
-    useClosings = isGrade8 ? [...positiveClosings, ...grade8Closings] : positiveClosings;
+    if (isGrade8) {
+      useClosings = [...positiveClosings, ...grade8Closings];
+    } else if (isSemester2) {
+      useClosings = [...positiveClosings, ...semester2ClosingsPositive];
+    } else {
+      useClosings = positiveClosings;
+    }
   } else {
-    useClosings = isGrade8 ? [...closings, ...grade8ClosingsNegative] : closings;
+    if (isGrade8) {
+      useClosings = [...closings, ...grade8ClosingsNegative];
+    } else if (isSemester2) {
+      useClosings = [...closings, ...semester2ClosingsNegative];
+    } else {
+      useClosings = closings;
+    }
   }
   const closeIdx = Math.abs((seed * 29 + 11)) % useClosings.length;
   
